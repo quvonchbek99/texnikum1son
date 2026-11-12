@@ -1,0 +1,51 @@
+    // ===================== texnikum1son.uz — Toshkent tuman 1-son texnikumi e-bazasi =====================
+    // Bu blokni Firebase konsoli → Firestore → Rules dagi mavjud qoidalar ichiga,
+    // eng oxirgi ikkita yopuvchi qavs "  }\n}" dan OLDIN qo'shing (isAdmin(), signedIn(), str() funksiyalari allaqachon bor).
+    function t1Tasdiq() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/t1_oqituvchilar/$(request.auth.uid))
+        && get(/databases/$(database)/documents/t1_oqituvchilar/$(request.auth.uid)).data.holat == 'tasdiqlangan';
+    }
+    function t1Egasi(key) {
+      return signedIn() && get(/databases/$(database)/documents/t1_materiallar/$(key)).data.uid == request.auth.uid;
+    }
+    function t1Ochiq(key) {
+      return get(/databases/$(database)/documents/t1_materiallar/$(key)).data.holat == 'joylangan';
+    }
+    // Umumiy sozlamalar (Drive manzili): hamma o'qiydi, faqat admin yozadi
+    match /t1_sozlama/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    // O'qituvchilar: o'zi ariza yozadi (holat faqat "kutilmoqda"), tasdiqlash faqat adminda
+    match /t1_oqituvchilar/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || isAdmin());
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['fio', 'email', 'telefon', 'fanlar_izoh', 'holat', 'yaratildi'])
+        && request.resource.data.holat == 'kutilmoqda'
+        && str(request.resource.data.fio, 80)
+        && request.resource.data.telefon is string && request.resource.data.telefon.size() <= 20
+        && request.resource.data.fanlar_izoh is string && request.resource.data.fanlar_izoh.size() <= 300;
+      allow update: if isAdmin()
+        || (signedIn() && request.auth.uid == uid && request.resource.data.holat == resource.data.holat
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['fio', 'telefon', 'fanlar_izoh']));
+      allow delete: if isAdmin();
+    }
+    // Materiallar: hamma "joylangan"larini o'qiydi; tasdiqlangan o'qituvchi faqat o'zinikini yozadi
+    match /t1_materiallar/{key} {
+      allow read: if resource == null || resource.data.holat == 'joylangan' || isAdmin()
+        || (signedIn() && resource.data.uid == request.auth.uid);
+      allow create: if isAdmin()
+        || (t1Tasdiq() && request.resource.data.uid == request.auth.uid && request.resource.data.holat == 'joylangan'
+            && key.matches('.*__' + request.auth.uid + '$'));
+      allow update: if isAdmin()
+        || (t1Tasdiq() && resource.data.uid == request.auth.uid && request.resource.data.uid == request.auth.uid
+            && request.resource.data.holat == resource.data.holat);
+      allow delete: if isAdmin() || (signedIn() && resource.data.uid == request.auth.uid);
+      match /{sub}/{id} {
+        allow read: if sub in ['hujjatlar', 'matnlar'] && (t1Ochiq(key) || isAdmin() || t1Egasi(key));
+        allow create, update: if sub in ['hujjatlar', 'matnlar'] && (isAdmin() || (t1Tasdiq() && t1Egasi(key)));
+        allow delete: if sub in ['hujjatlar', 'matnlar'] && (isAdmin() || t1Egasi(key));
+      }
+    }
+    // ===================== /texnikum1son.uz =====================

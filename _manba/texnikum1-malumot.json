@@ -1,0 +1,4077 @@
+{
+ "manba": "kasb-emis.edu.uz — uzoq muddatli guruhlar, o'quv rejalar, tarifikatsiya (O'quv reja, 15.10.2026); olingan sana 05.11.2026",
+ "texnikum": {
+  "nomi": "Toshkent tuman 1-son texnikumi",
+  "sayt_nomi": "Toshkent tuman 1-son texnikumi e-bazasi",
+  "domen": "texnikum1.uz",
+  "bog'liq_sayt": "kuvonch.uz"
+ },
+ "qoidalar": {
+  "soat": "jami_soat = kasb-emis 'Jami soat' (auditoriya + mustaqil ish)",
+  "auditoriya": "27 ga karrali soatlarda auditoriya = jami×20/27 (01-26 o'quv rejasida tekshirilgan); null = kasb-emis'dan aniqlash kerak",
+  "dars": "1 dars = 1 juftlik = 2 akademik soat (80 daqiqa)",
+  "toifa": {
+   "kasbiy": "umumkasbiy, maxsus, mutaxassislik fanlari, maxsus kurs, professional va tanlov modullari",
+   "amaliyot": "o'quv, ishlab chiqarish va kvalifikatsion amaliyot",
+   "umumtalim": "umumiy ta'lim va tabiiy-gumanitar fanlar (chet tili, rus tili, tarbiya, ChQBT ham)"
+  }
+ },
+ "guruhlar": [
+  {
+   "guruh": "01-25",
+   "kasb_emis_guruh_id": 35184,
+   "oquvchilar_soni_05_11_2026": 31,
+   "yonalish_id": "kompyuter-grafikasi-dizayn-operatori"
+  },
+  {
+   "guruh": "02-25",
+   "kasb_emis_guruh_id": 35185,
+   "oquvchilar_soni_05_11_2026": 32,
+   "yonalish_id": "kompyuter-grafikasi-dizayn-operatori"
+  },
+  {
+   "guruh": "03-25",
+   "kasb_emis_guruh_id": 35186,
+   "oquvchilar_soni_05_11_2026": 31,
+   "yonalish_id": "avto-tamirlash-or0006"
+  },
+  {
+   "guruh": "04-25",
+   "kasb_emis_guruh_id": 35187,
+   "oquvchilar_soni_05_11_2026": 30,
+   "yonalish_id": "avto-tamirlash-or0006"
+  },
+  {
+   "guruh": "05-25",
+   "kasb_emis_guruh_id": 35188,
+   "oquvchilar_soni_05_11_2026": 31,
+   "yonalish_id": "avto-tamirlash-or0005"
+  },
+  {
+   "guruh": "06-25",
+   "kasb_emis_guruh_id": 35189,
+   "oquvchilar_soni_05_11_2026": 31,
+   "yonalish_id": "avto-tamirlash-or0005"
+  },
+  {
+   "guruh": "07-25",
+   "kasb_emis_guruh_id": 35190,
+   "oquvchilar_soni_05_11_2026": 25,
+   "yonalish_id": "tikuvchilik-mahsulotlari-dizayneri"
+  },
+  {
+   "guruh": "08-25",
+   "kasb_emis_guruh_id": 35191,
+   "oquvchilar_soni_05_11_2026": 29,
+   "yonalish_id": "oshpaz"
+  },
+  {
+   "guruh": "09-25",
+   "kasb_emis_guruh_id": 35192,
+   "oquvchilar_soni_05_11_2026": 29,
+   "yonalish_id": "oshpaz"
+  },
+  {
+   "guruh": "10-25",
+   "kasb_emis_guruh_id": 35193,
+   "oquvchilar_soni_05_11_2026": 23,
+   "yonalish_id": "ot-ochiruvchi"
+  },
+  {
+   "guruh": "01-26",
+   "kasb_emis_guruh_id": 46497,
+   "oquvchilar_soni_05_11_2026": 27,
+   "yonalish_id": "zargarlik"
+  },
+  {
+   "guruh": "02-26",
+   "kasb_emis_guruh_id": 46583,
+   "oquvchilar_soni_05_11_2026": 29,
+   "yonalish_id": "grafik-dizayn-texnologiyasi"
+  },
+  {
+   "guruh": "03-26",
+   "kasb_emis_guruh_id": 46584,
+   "oquvchilar_soni_05_11_2026": 30,
+   "yonalish_id": "kompyuter-tarmoqlari-it-servis"
+  },
+  {
+   "guruh": "04-26",
+   "kasb_emis_guruh_id": 46585,
+   "oquvchilar_soni_05_11_2026": 30,
+   "yonalish_id": "kompyuter-tarmoqlari-it-servis"
+  },
+  {
+   "guruh": "05-26",
+   "kasb_emis_guruh_id": 46586,
+   "oquvchilar_soni_05_11_2026": 29,
+   "yonalish_id": "avtomobillar-servisi"
+  },
+  {
+   "guruh": "06-26",
+   "kasb_emis_guruh_id": 46587,
+   "oquvchilar_soni_05_11_2026": 28,
+   "yonalish_id": "avtomobillar-servisi"
+  },
+  {
+   "guruh": "07-26",
+   "kasb_emis_guruh_id": 50210,
+   "oquvchilar_soni_05_11_2026": 32,
+   "yonalish_id": "elektromontyor"
+  },
+  {
+   "guruh": "08-26",
+   "kasb_emis_guruh_id": 50208,
+   "oquvchilar_soni_05_11_2026": 31,
+   "yonalish_id": "moda-tikuv-texnologiyasi"
+  },
+  {
+   "guruh": "09-26",
+   "kasb_emis_guruh_id": 49918,
+   "oquvchilar_soni_05_11_2026": 29,
+   "yonalish_id": "sartarosh-modeler"
+  },
+  {
+   "guruh": "10-26",
+   "kasb_emis_guruh_id": 49734,
+   "oquvchilar_soni_05_11_2026": 26,
+   "yonalish_id": "metallga-qayta-ishlov"
+  }
+ ],
+ "yonalishlar": [
+  {
+   "id": "kompyuter-grafikasi-dizayn-operatori",
+   "mutaxassislik": "Kompyuter grafikasi va dizayn operatori",
+   "kod": "30610104",
+   "talim_yonalishi": "Axborot tizimlari va texnologiyalari",
+   "oquv_reja": {
+    "raqam": "OR-2025-154-0007",
+    "kasb_emis_id": 24946,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/24946"
+   },
+   "talim_shakli": "Kunduzgi",
+   "oquv_yili": "2025-2027",
+   "hozirgi_kurs": 2,
+   "guruhlar": [
+    "01-25",
+    "02-25"
+   ],
+   "kiritilgan_semestrlar": [
+    1,
+    2,
+    3
+   ],
+   "kiritilmagan_semestrlar": [
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "03.09.2025–31.01.2026",
+    "3": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "elektrotexnika-va-elektronika-asoslari",
+     "nomi": "Elektrotexnika va elektronika asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "media-va-axborot-savodxonligi",
+     "nomi": "Media va axborot savodxonligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "axborot-texnologiyalari-asoslari",
+     "nomi": "Axborot texnologiyalari asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "uch-olchovli-modellashtirish-va-multiplikatsiyalash-asoslari",
+     "nomi": "Uch o‘lchovli modellashtirish va multiplikatsiyalash asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "2": 27,
+      "3": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": 20,
+      "3": 80
+     }
+    },
+    {
+     "id": "rastr-va-vektor-grafikasi-asoslari",
+     "nomi": "Rastr va vektor grafikasi asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "2": 27,
+      "3": 135
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": 20,
+      "3": 100
+     }
+    },
+    {
+     "id": "axborot-xavfsizligi",
+     "nomi": "Axborot xavfsizligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 60
+     }
+    },
+    {
+     "id": "kompyuter-grafikasi-va-dizayn-oquv-amaliyoti",
+     "nomi": "Kompyuter grafikasi va dizayn (o‘quv amaliyoti)",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "1": 162,
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 120,
+      "3": 60
+     }
+    },
+    {
+     "id": "ishlab-chiqarish-amaliyoti",
+     "nomi": "Ishlab chiqarish amaliyoti",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 486
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "kompyuter-grafikasi-va-dizayn",
+     "nomi": "Kompyuter grafikasi va dizayn",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 27,
+      "3": 135
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": 20,
+      "3": 100
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27,
+      "2": 27,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20,
+      "2": 20,
+      "3": 20
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20,
+      "3": 40
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108,
+      "2": 27,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80,
+      "2": 20,
+      "3": 40
+     }
+    },
+    {
+     "id": "tarbiya",
+     "nomi": "Tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20,
+      "3": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 243,
+      "2": 162,
+      "3": 243
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 180,
+      "2": 120,
+      "3": 180
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "chaqiruvga-qadar-boshlangich-tayyorgarlik",
+     "nomi": "Chaqiruvga qadar boshlang‘ich tayyorgarlik",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "2": 27,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": 20,
+      "3": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "avto-tamirlash-or0006",
+   "mutaxassislik": "Avtomobillarni ta'mirlash va ularga xizmat ko'rsatish (o'quv reja 0006)",
+   "kod": "30711601",
+   "talim_yonalishi": "Mexanika muhandisligi",
+   "oquv_reja": {
+    "raqam": "OR-2025-154-0006",
+    "kasb_emis_id": 24938,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/24938"
+   },
+   "talim_shakli": "Dual",
+   "oquv_yili": "2025-2027",
+   "hozirgi_kurs": 2,
+   "guruhlar": [
+    "03-25",
+    "04-25"
+   ],
+   "kiritilgan_semestrlar": [
+    1,
+    2,
+    3
+   ],
+   "kiritilmagan_semestrlar": [
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "03.09.2025–31.01.2026",
+    "3": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "diagnostika-apparatlarini-tuzilishi-va-ishlash-prinsiplari",
+     "nomi": "Diagnostika apparatlarini tuzilishi va ishlash prinsiplari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "avtomobil-elektr-va-elektron-jihozlari-tuzilishi-ularga-texnik-x",
+     "nomi": "Avtomobil elektr va elektron jihozlari tuzilishi, ularga texnik xizmat ko'rsatish va ta'mirlash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 94
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "avtomobil-tuzilishi",
+     "nomi": "Avtomobil tuzilishi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     },
+     "nomi_kasb_emis": "Avtomobil tuzulishi"
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "karyerani-rivojlantirish",
+     "nomi": "Karyerani rivojlantirish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "2": 11
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "tashishlarni-tashkil-etish",
+     "nomi": "Tashishlarni tashkil etish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 30
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": null
+     }
+    },
+    {
+     "id": "b-va-c-toifadagi-avtotransport-vositalarining-tuzilishi-va-ularg",
+     "nomi": "\"B\" va \"C\" toifadagi avtotransport vositalarining tuzilishi va ularga servis xizmat ko‘rsatish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 80
+     }
+    },
+    {
+     "id": "yol-harakati-qoidalari-va-harakat-xavfsizligi",
+     "nomi": "Yo'l harakati qoidalari va harakat xavfsizligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 283
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": null
+     }
+    },
+    {
+     "id": "avtomobil-elektr-va-elektron-jihozlari-tuzilishi-ularga-texnik-x-oquv-amaliyoti",
+     "nomi": "Avtomobil elektr va elektron jihozlari tuzilishi, ularga texnik xizmat ko'rsatish va ta'mirlash (o‘quv amaliyoti)",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 2
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "kvalifikatsion-amaliyot",
+     "nomi": "Kvalifikatsion amaliyot",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 972
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 40
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 60
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108,
+      "3": 135
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80,
+      "3": 100
+     }
+    },
+    {
+     "id": "tarbiya",
+     "nomi": "Tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108,
+      "3": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80,
+      "3": 80
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 40
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 40
+     }
+    },
+    {
+     "id": "chaqiruvga-qadar-boshlangich-tayyorgarlik",
+     "nomi": "Chaqiruvga qadar boshlang‘ich tayyorgarlik",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "avto-tamirlash-or0005",
+   "mutaxassislik": "Avtomobillarni ta'mirlash va ularga xizmat ko'rsatish (o'quv reja 0005)",
+   "kod": "30711601",
+   "talim_yonalishi": "Mexanika muhandisligi",
+   "oquv_reja": {
+    "raqam": "OR-2025-154-0005",
+    "kasb_emis_id": 24937,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/24937"
+   },
+   "talim_shakli": "Dual",
+   "oquv_yili": "2025-2027",
+   "hozirgi_kurs": 2,
+   "guruhlar": [
+    "05-25",
+    "06-25"
+   ],
+   "kiritilgan_semestrlar": [
+    1,
+    2,
+    3
+   ],
+   "kiritilmagan_semestrlar": [
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "03.09.2025–31.01.2026",
+    "3": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "yonilgi-taminlash-tizimiga-servis-xizmat-korsatish-va-tamirlash",
+     "nomi": "Yonilg'i ta'minlash tizimiga servis xizmat ko'rsatish va ta'mirlash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     },
+     "nomi_kasb_emis": "Yonilg'i ta'milash tizimini servis xizmat ko'rsatish va ta'mirlash"
+    },
+    {
+     "id": "avtomobil-elektr-va-elektron-jihozlari-tuzilishi-ularga-texnik-x",
+     "nomi": "Avtomobil elektr va elektron jihozlari tuzilishi, ularga texnik xizmat ko'rsatish va ta'mirlash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "avtomobil-dvigatellariga-servis-xizmat-korsatish-va-tamirlash",
+     "nomi": "Avtomobil dvigatellariga servis xizmat ko‘rsatish va ta’mirlash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 68
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "avtomobil-tuzilishi",
+     "nomi": "Avtomobil tuzilishi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     },
+     "nomi_kasb_emis": "Avtomobil tuzulishi"
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "karyerani-rivojlantirish",
+     "nomi": "Karyerani rivojlantirish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "2": 4
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "avtotransportda-qonunchilik-asoslari",
+     "nomi": "Avtotransportda qonunchilik asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "2": 6
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "biznes-asoslari",
+     "nomi": "Biznes asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 60
+     }
+    },
+    {
+     "id": "tashishlarni-tashkil-etish",
+     "nomi": "Tashishlarni tashkil etish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 30
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": null
+     }
+    },
+    {
+     "id": "b-va-c-toifadagi-avtotransport-vositalarining-tuzilishi-va-ularg",
+     "nomi": "\"B\" va \"C\" toifadagi avtotransport vositalarining tuzilishi va ularga servis xizmat ko‘rsatish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 80
+     }
+    },
+    {
+     "id": "yol-harakati-qoidalari-va-harakat-xavfsizligi",
+     "nomi": "Yo'l harakati qoidalari va harakat xavfsizligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 283
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": null
+     }
+    },
+    {
+     "id": "kvalifikatsion-amaliyot",
+     "nomi": "Kvalifikatsion amaliyot",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 972
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 40
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 60
+     }
+    },
+    {
+     "id": "tarbiya",
+     "nomi": "Tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108,
+      "3": 135
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80,
+      "3": 100
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108,
+      "3": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80,
+      "3": 80
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 40
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 40
+     }
+    },
+    {
+     "id": "chaqiruvga-qadar-boshlangich-tayyorgarlik",
+     "nomi": "Chaqiruvga qadar boshlang‘ich tayyorgarlik",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 40
+     }
+    }
+   ],
+   "izoh": "06-25 buyurtmachi hujjatlarida «Avtomobil dvigatellarini tashxislash va ta'mirlash» deb yuritiladi"
+  },
+  {
+   "id": "tikuvchilik-mahsulotlari-dizayneri",
+   "mutaxassislik": "Tikuvchilik mahsulotlari dizayneri",
+   "kod": "30720423",
+   "talim_yonalishi": "Dizayn (turlari bo'yicha)",
+   "oquv_reja": {
+    "raqam": "OR-2025-154-0002",
+    "kasb_emis_id": 24930,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/24930"
+   },
+   "talim_shakli": "Kunduzgi",
+   "oquv_yili": "2025-2027",
+   "hozirgi_kurs": 2,
+   "guruhlar": [
+    "07-25"
+   ],
+   "kiritilgan_semestrlar": [
+    1,
+    2,
+    3
+   ],
+   "kiritilmagan_semestrlar": [
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "03.09.2025–31.01.2026",
+    "3": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "tikuv-buyumlarini-tikish-texnologiyasi",
+     "nomi": "Tikuv buyumlarini tikish texnologiyasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "tikuvchilik-mahsulotlarini-konstruksiyalash-va-modellashtirish",
+     "nomi": "Tikuvchilik mahsulotlarini konstruksiyalash va modellashtirish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "tikuvchilik-jihozlari",
+     "nomi": "Tikuvchilik jihozlari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "rasm-va-badiiy-grafika",
+     "nomi": "Rasm va badiiy grafika",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54,
+      "2": 27,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20,
+      "3": 40
+     }
+    },
+    {
+     "id": "tikuvchilik-materialshunosligi",
+     "nomi": "Tikuvchilik materialshunosligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "loyihalash",
+     "nomi": "Loyihalash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "2": 54,
+      "3": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": 40,
+      "3": 80
+     }
+    },
+    {
+     "id": "tikuv-buyumlarini-badiiy-bezash",
+     "nomi": "Tikuv buyumlarini badiiy bezash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 80
+     }
+    },
+    {
+     "id": "biznes-asoslari",
+     "nomi": "Biznes asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 60
+     }
+    },
+    {
+     "id": "ishlab-chiqarish-amaliyoti",
+     "nomi": "Ishlab chiqarish amaliyoti",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 389
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "tikuvchilik-mahsulotlarini-tikish-va-badiiy-bezash-ishlari-oquv-amaliyoti",
+     "nomi": "Tikuvchilik mahsulotlarini tikish va badiiy bezash ishlari (o'quv amaliyoti)",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 81,
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": 60,
+      "3": 60
+     }
+    },
+    {
+     "id": "eskiz-asosida-tikuvchilik-mahsulotlarini-tayyorlash-oquv-amaliyoti",
+     "nomi": "Eskiz asosida tikuvchilik mahsulotlarini tayyorlash (o'quv amaliyoti)",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 60
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27,
+      "2": 27,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20,
+      "2": 20,
+      "3": 20
+     }
+    },
+    {
+     "id": "kimyo",
+     "nomi": "Kimyo",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20,
+      "3": 20
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "2": 27,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "2": 20,
+      "3": 40
+     }
+    },
+    {
+     "id": "tarbiya",
+     "nomi": "Tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20,
+      "3": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 243,
+      "2": 162,
+      "3": 243
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 180,
+      "2": 120,
+      "3": 180
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "chaqiruvga-qadar-boshlangich-tayyorgarlik",
+     "nomi": "Chaqiruvga qadar boshlang‘ich tayyorgarlik",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "2": 27,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": 20,
+      "3": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "oshpaz",
+   "mutaxassislik": "Oshpaz",
+   "kod": "31010303",
+   "talim_yonalishi": "Turizm sohasida xizmatlar texnologiyasi va ularni tashkil etish",
+   "oquv_reja": {
+    "raqam": "OR-2025-154-0004",
+    "kasb_emis_id": 24935,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/24935"
+   },
+   "talim_shakli": "Dual",
+   "oquv_yili": "2025-2027",
+   "hozirgi_kurs": 2,
+   "guruhlar": [
+    "08-25",
+    "09-25"
+   ],
+   "kiritilgan_semestrlar": [
+    1,
+    2,
+    3
+   ],
+   "kiritilmagan_semestrlar": [
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "03.09.2025–31.01.2026",
+    "3": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "ozbek-milliy-pazandachilik-texnologiyasi",
+     "nomi": "O'zbek milliy pazandachilik texnologiyasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "oziq-ovqat-mahsulotlari-tovarshunosligi",
+     "nomi": "Oziq-ovqat mahsulotlari tovarshunosligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "umumiy-ovqatlanish-korxonalarida-texnologik-jihozlar",
+     "nomi": "Umumiy ovqatlanish korxonalarida texnologik jihozlar",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "umumiy-ovqatlanish-korxonalarida-sanitariya-gigiyena-va-ovqatlan",
+     "nomi": "Umumiy ovqatlanish korxonalarida sanitariya, gigiyena va ovqatlanish fiziologiyasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "oshpazlik-taomlarini-tayyorlash-texnologiyasi",
+     "nomi": "Oshpazlik taomlarini tayyorlash texnologiyasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "2": 130
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     },
+     "nomi_kasb_emis": "Oshpazlik taomlarini tayyorlash texnalogiyasi"
+    },
+    {
+     "id": "qandolatchilik-mahsulotlarini-tayyorlash-texnologiyasi",
+     "nomi": "Qandolatchilik mahsulotlarini tayyorlash texnologiyasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 60
+     },
+     "nomi_kasb_emis": "Qandolatchilik mahsulotlarini tayyorlash texnalogiyasi"
+    },
+    {
+     "id": "milliy-va-sharq-shirinliklari-qandolatchiligi",
+     "nomi": "Milliy va sharq shirinliklari qandolatchiligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 40
+     }
+    },
+    {
+     "id": "biznes-asoslari",
+     "nomi": "Biznes asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 60
+     }
+    },
+    {
+     "id": "kvalifikatsion-amaliyot",
+     "nomi": "Kvalifikatsion amaliyot",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 810,
+      "3": 612
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null,
+      "3": null
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 40
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 60
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108,
+      "3": 162
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80,
+      "3": 120
+     }
+    },
+    {
+     "id": "tarbiya",
+     "nomi": "Tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108,
+      "3": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80,
+      "3": 80
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 60
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "3": 60
+     }
+    },
+    {
+     "id": "chaqiruvga-qadar-boshlangich-tayyorgarlik",
+     "nomi": "Chaqiruvga qadar boshlang‘ich tayyorgarlik",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 60
+     }
+    }
+   ]
+  },
+  {
+   "id": "ot-ochiruvchi",
+   "mutaxassislik": "O't o'chiruvchi",
+   "kod": "31030101",
+   "talim_yonalishi": "Ijtimoiy ish (faoliyatning turli sohalari bo'yicha)",
+   "oquv_reja": {
+    "raqam": "OR-2025-154-0003",
+    "kasb_emis_id": 24934,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/24934"
+   },
+   "talim_shakli": "Kunduzgi",
+   "oquv_yili": "2025-2027",
+   "hozirgi_kurs": 2,
+   "guruhlar": [
+    "10-25"
+   ],
+   "kiritilgan_semestrlar": [
+    1,
+    2,
+    3
+   ],
+   "kiritilmagan_semestrlar": [
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "03.09.2025–31.01.2026",
+    "3": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "yongin-avariya-qutqaruv-taktikasi",
+     "nomi": "Yong‘in avariya-qutqaruv taktikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 108,
+      "2": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80,
+      "2": 60
+     }
+    },
+    {
+     "id": "favqulodda-vaziyatlardan-jabrlanganlarga-birinchi-tibbiy-yordam",
+     "nomi": "Favqulodda vaziyatlardan jabrlanganlarga birinchi tibbiy yordam ko'rsatish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 20
+     }
+    },
+    {
+     "id": "jangovor-va-maxsus-taktik-tayyorgarlik",
+     "nomi": "Jangovor va maxsus taktik tayyorgarlik",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 162
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 120
+     }
+    },
+    {
+     "id": "biznes-asoslari",
+     "nomi": "Biznes asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 60
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 40
+     }
+    },
+    {
+     "id": "aholi-va-hududlarni-favqulodda-vaziyatlardan-muhofaza-qilishning",
+     "nomi": "Aholi va hududlarni favqulodda vaziyatlardan muhofaza qilishning huquqiy asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 40
+     }
+    },
+    {
+     "id": "ot-ochiruvchi-ishi-oquv-amaliyoti",
+     "nomi": "O't o'chiruvchi ishi (o‘quv amaliyoti)",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "1": 162,
+      "2": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 120,
+      "2": 60
+     }
+    },
+    {
+     "id": "ishlab-chiqarish-amaliyoti",
+     "nomi": "Ishlab chiqarish amaliyoti",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "2": 470
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": null
+     }
+    },
+    {
+     "id": "qutqaruvchi-ishlari-oquv-amaliyoti",
+     "nomi": "Qutqaruvchi ishlari (o‘quv amaliyoti)",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "3": 162
+     },
+     "auditoriya_soat_taxminiy": {
+      "3": 120
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20,
+      "2": 20
+     }
+    },
+    {
+     "id": "kimyo",
+     "nomi": "Kimyo",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20,
+      "3": 20
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "3": 20
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81,
+      "2": 27,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60,
+      "2": 20,
+      "3": 20
+     }
+    },
+    {
+     "id": "tarbiya",
+     "nomi": "Tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27,
+      "3": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20,
+      "3": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 243,
+      "2": 162,
+      "3": 243
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 180,
+      "2": 120,
+      "3": 180
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54,
+      "2": 27,
+      "3": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40,
+      "2": 20,
+      "3": 60
+     }
+    },
+    {
+     "id": "chaqiruvga-qadar-boshlangich-tayyorgarlik",
+     "nomi": "Chaqiruvga qadar boshlang‘ich tayyorgarlik",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "2": 27,
+      "3": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "2": 20,
+      "3": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "zargarlik",
+   "mutaxassislik": "Zargarlik",
+   "kod": "31010803",
+   "talim_yonalishi": "Zargarlik ishi",
+   "oquv_reja": {
+    "raqam": "OR-2026-154-0001",
+    "kasb_emis_id": 48964,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/48964"
+   },
+   "talim_shakli": "Dual",
+   "oquv_yili": "2026-2028",
+   "hozirgi_kurs": 1,
+   "guruhlar": [
+    "01-26"
+   ],
+   "kiritilgan_semestrlar": [
+    1
+   ],
+   "kiritilmagan_semestrlar": [
+    2,
+    3,
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "rangtasvir",
+     "nomi": "Rangtasvir",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "chizmageometriya-soyalar-nazariyasi-nuqtai-nazar",
+     "nomi": "Chizmageometriya, soyalar nazariyasi, nuqtai nazar",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "kompozitsiya-va-dizayn-asoslari",
+     "nomi": "Kompozitsiya va dizayn asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "materialshunoslik",
+     "nomi": "Materialshunoslik",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "fizika",
+     "nomi": "Fizika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 135
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 100
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     }
+    }
+   ],
+   "kvalifikatsiyalar": [
+    "Zargar-blaguzukchi (o'rnatuvchi, zanjir yasovchi)",
+    "Zargar (modelyer)",
+    "Zargarlik mahsulotlari sotuvchisi"
+   ]
+  },
+  {
+   "id": "grafik-dizayn-texnologiyasi",
+   "mutaxassislik": "Grafik va dizayn texnologiyasi",
+   "kod": "30610105",
+   "talim_yonalishi": "Axborot tizimlari va texnologiyalari",
+   "oquv_reja": {
+    "raqam": "OR-2026-154-0002",
+    "kasb_emis_id": 49030,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/49030"
+   },
+   "talim_shakli": "Kunduzgi",
+   "oquv_yili": "2026-2028",
+   "hozirgi_kurs": 1,
+   "guruhlar": [
+    "02-26"
+   ],
+   "kiritilgan_semestrlar": [
+    1
+   ],
+   "kiritilmagan_semestrlar": [
+    2,
+    3,
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "veb-dizayn-va-ui-ux",
+     "nomi": "Veb dizayn va UI/UX",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "multimedia-va-animatsiya-texnologiyalari",
+     "nomi": "Multimedia va animatsiya texnologiyalari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "elektrotexnika-va-elektronika-asoslari",
+     "nomi": "Elektrotexnika va elektronika asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "media-va-axborot-savodxonligi",
+     "nomi": "Media va axborot savodxonligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "axborot-texnologiyalari-asoslari",
+     "nomi": "Axborot texnologiyalari asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "kompyuter-grafikasi-va-dizayn",
+     "nomi": "Kompyuter grafikasi va dizayn",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "1": 189
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 140
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 243
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 180
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "kompyuter-tarmoqlari-it-servis",
+   "mutaxassislik": "Kompyuter tarmoqlari va IT-servis",
+   "kod": "30610403",
+   "talim_yonalishi": "Kompyuter injiniringi («Kompyuter injiniringi», «AT-Servis», «Axborot xavfsizligi», «Multimedia texnologiyalari»)",
+   "oquv_reja": {
+    "raqam": "OR-2026-154-0003",
+    "kasb_emis_id": 49031,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/49031"
+   },
+   "talim_shakli": "Kunduzgi",
+   "oquv_yili": "2026-2028",
+   "hozirgi_kurs": 1,
+   "guruhlar": [
+    "03-26",
+    "04-26"
+   ],
+   "kiritilgan_semestrlar": [
+    1
+   ],
+   "kiritilmagan_semestrlar": [
+    2,
+    3,
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "axborot-xavfsizligi",
+     "nomi": "Axborot xavfsizligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 135
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 100
+     }
+    },
+    {
+     "id": "elementar-dasturlash",
+     "nomi": "Elementar dasturlash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "elektrotexnika-va-elektronika-asoslari",
+     "nomi": "Elektrotexnika va elektronika asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "media-va-axborot-savodxonligi",
+     "nomi": "Media va axborot savodxonligi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "kompyuter-tizimlari",
+     "nomi": "Kompyuter tizimlari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 95
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "axborot-texnologiyalari-asoslari",
+     "nomi": "Axborot texnologiyalari asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 243
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 180
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "avtomobillar-servisi",
+   "mutaxassislik": "Avtomobillar servisi",
+   "kod": "30711605",
+   "talim_yonalishi": "Mexanika muhandisligi",
+   "oquv_reja": {
+    "raqam": "OR-2026-154-0004",
+    "kasb_emis_id": 49033,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/49033"
+   },
+   "talim_shakli": "Dual",
+   "oquv_yili": "2026-2028",
+   "hozirgi_kurs": 1,
+   "guruhlar": [
+    "05-26",
+    "06-26"
+   ],
+   "kiritilgan_semestrlar": [
+    1
+   ],
+   "kiritilmagan_semestrlar": [
+    2,
+    3,
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "avtomobil-dvigatellarini-tashxislash",
+     "nomi": "Avtomobil dvigatellarini tashxislash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 151
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "avtomobil-tuzilishi",
+     "nomi": "Avtomobil tuzilishi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 230
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     },
+     "nomi_kasb_emis": "Avtomobil tuzulishi"
+    },
+    {
+     "id": "texnikaviy-chizmachilik-va-cad-cam-cae",
+     "nomi": "Texnikaviy chizmachilik va CAD/CAM/CAE",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 41
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 41
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 41
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 41
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 41
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 41
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    }
+   ],
+   "izoh": "buyurtmachi hujjatlarida 05-26 «Avtomobillar servisi (avtodvigatel) (dual)»"
+  },
+  {
+   "id": "elektromontyor",
+   "mutaxassislik": "Elektromontyor",
+   "kod": "30710303",
+   "talim_yonalishi": null,
+   "oquv_reja": {
+    "raqam": "OR-2026-154-0005",
+    "kasb_emis_id": 49036,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/49036"
+   },
+   "talim_shakli": "Dual",
+   "oquv_yili": "2026-2028",
+   "hozirgi_kurs": 1,
+   "guruhlar": [
+    "07-26"
+   ],
+   "kiritilgan_semestrlar": [
+    1
+   ],
+   "kiritilmagan_semestrlar": [
+    2,
+    3,
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "elektr-mashinalari-va-transformatorlar",
+     "nomi": "Elektr mashinalari va transformatorlar",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "elektr-stansiya-elektr-jihozlari",
+     "nomi": "Elektr stansiya elektr jihozlari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     }
+    },
+    {
+     "id": "elektr-olchash-asboblari-va-elektr-olchashlar",
+     "nomi": "Elektr o'lchash asboblari va elektr o'lchashlar",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "texnikaviy-chizmachilik",
+     "nomi": "Texnikaviy chizmachilik",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "elektrotexnika-va-elektronika-asoslari",
+     "nomi": "Elektrotexnika va elektronika asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 135
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 100
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    }
+   ],
+   "izoh_yonalish": "Tarifikatsiya kontingentida ko'rsatilmagan — foydalanuvchidan aniqlansin"
+  },
+  {
+   "id": "moda-tikuv-texnologiyasi",
+   "mutaxassislik": "Moda va tikuv ishlab chiqarish texnologiyasi",
+   "kod": "30720436",
+   "talim_yonalishi": null,
+   "oquv_reja": {
+    "raqam": "OR-2026-154-0006",
+    "kasb_emis_id": 49037,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/49037"
+   },
+   "talim_shakli": "Dual",
+   "oquv_yili": "2026-2028",
+   "hozirgi_kurs": 1,
+   "guruhlar": [
+    "08-26"
+   ],
+   "kiritilgan_semestrlar": [
+    1
+   ],
+   "kiritilmagan_semestrlar": [
+    2,
+    3,
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "zamonaviy-tikuv-jihozlari",
+     "nomi": "Zamonaviy tikuv jihozlari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "kiyim-dizaynini-yaratish",
+     "nomi": "Kiyim dizaynini yaratish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "tikuv-mahsulotlari-uchun-tekstil-materiallarini-tanlash",
+     "nomi": "Tikuv mahsulotlari uchun tekstil materiallarini tanlash",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "keng-assortimentdagi-kiyimlarni-konstruksiyalash-va-modellashtir",
+     "nomi": "Keng assortimentdagi kiyimlarni konstruksiyalash va modellashtirish",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 108
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 80
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "informatika-va-axborot-texnologiyalari",
+     "nomi": "Informatika va axborot texnologiyalari",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    }
+   ],
+   "izoh_yonalish": "Tarifikatsiya kontingentida ko'rsatilmagan — foydalanuvchidan aniqlansin"
+  },
+  {
+   "id": "sartarosh-modeler",
+   "mutaxassislik": "Sartarosh (modeler)",
+   "kod": "31010202",
+   "talim_yonalishi": "Sartaroshlik va kosmetologiya xizmatlari",
+   "oquv_reja": {
+    "raqam": "OR-2026-154-0007",
+    "kasb_emis_id": 49038,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/49038"
+   },
+   "talim_shakli": "Kunduzgi",
+   "oquv_yili": "2026-2028",
+   "hozirgi_kurs": 1,
+   "guruhlar": [
+    "09-26"
+   ],
+   "kiritilgan_semestrlar": [
+    1
+   ],
+   "kiritilmagan_semestrlar": [
+    2,
+    3,
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "koloristika",
+     "nomi": "Koloristika",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "erkaklar-va-ayollar-sartaroshi",
+     "nomi": "Erkaklar va ayollar sartaroshi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "sartaroshlik-ishlari-materiallari-va-asbob-uskunalari",
+     "nomi": "Sartaroshlik ishlari materiallari va asbob-uskunalari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "rang-tasvir",
+     "nomi": "Rang tasvir",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "sartaroshlik-asoslari",
+     "nomi": "Sartaroshlik asoslari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "kasb-etikasi-va-psixologiyasi",
+     "nomi": "Kasb etikasi va psixologiyasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "kasbiy-faoliyatda-xorijiy-til-rus-tili",
+     "nomi": "Kasbiy faoliyatda xorijiy til (rus tili)",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 81
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 60
+     }
+    },
+    {
+     "id": "plastik-anatomiya-va-fiziologiya",
+     "nomi": "Plastik anatomiya va fiziologiya",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "manikyur-va-pedikyur-ishlari",
+     "nomi": "Manikyur va pedikyur ishlari",
+     "toifa": "amaliyot",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 243
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 180
+     }
+    },
+    {
+     "id": "rus-tili-ozb-sinf",
+     "nomi": "Rus tili (o‘zb sinf)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "metallga-qayta-ishlov",
+   "mutaxassislik": "Metallga qayta ishlov berish",
+   "kod": "30711307",
+   "talim_yonalishi": "Metallar texnologiyalari",
+   "oquv_reja": {
+    "raqam": "OR-2026-154-0008",
+    "kasb_emis_id": 49039,
+    "url": "https://kasb-emis.edu.uz/admin/long-term/study-plans/49039"
+   },
+   "talim_shakli": "Dual",
+   "oquv_yili": "2026-2028",
+   "hozirgi_kurs": 1,
+   "guruhlar": [
+    "10-26"
+   ],
+   "kiritilgan_semestrlar": [
+    1
+   ],
+   "kiritilmagan_semestrlar": [
+    2,
+    3,
+    4
+   ],
+   "semestr_sanalari": {
+    "1": "02.09.2026–30.01.2027"
+   },
+   "fanlar": [
+    {
+     "id": "konstruksion-materiallar",
+     "nomi": "Konstruksion materiallar",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 216
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 160
+     }
+    },
+    {
+     "id": "chilangarlik-ishi",
+     "nomi": "Chilangarlik ishi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 230
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "qolda-yoyli-payvandlash-ishlari",
+     "nomi": "Qo'lda yoyli payvandlash ishlari",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 122
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     },
+     "nomi_kasb_emis": "Qo`lda yoyli payvandlash ishlari"
+    },
+    {
+     "id": "texnikaviy-chizmachilik",
+     "nomi": "Texnikaviy chizmachilik",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 203
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": null
+     }
+    },
+    {
+     "id": "mehnat-muhofazasi-va-xavfsizlik-texnikasi",
+     "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+     "toifa": "kasbiy",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "matematika",
+     "nomi": "Matematika",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "jismoniy-tarbiya",
+     "nomi": "Jismoniy tarbiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 27
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 20
+     }
+    },
+    {
+     "id": "fizika-va-astronomiya",
+     "nomi": "Fizika va astronomiya",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "tarix",
+     "nomi": "Tarix",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "chet-tili-ingliz-tili",
+     "nomi": "Chet tili (ingliz tili)",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    },
+    {
+     "id": "ona-tili-va-adabiyoti",
+     "nomi": "Ona tili va adabiyoti",
+     "toifa": "umumtalim",
+     "jami_soat": {
+      "1": 54
+     },
+     "auditoriya_soat_taxminiy": {
+      "1": 40
+     }
+    }
+   ]
+  }
+ ],
+ "fanlar_umumiy_royxat": {
+  "aholi-va-hududlarni-favqulodda-vaziyatlardan-muhofaza-qilishning": {
+   "nomi": "Aholi va hududlarni favqulodda vaziyatlardan muhofaza qilishning huquqiy asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "ot-ochiruvchi"
+   ]
+  },
+  "avtomobil-dvigatellariga-servis-xizmat-korsatish-va-tamirlash": {
+   "nomi": "Avtomobil dvigatellariga servis xizmat ko‘rsatish va ta’mirlash",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0005"
+   ]
+  },
+  "avtomobil-dvigatellarini-tashxislash": {
+   "nomi": "Avtomobil dvigatellarini tashxislash",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avtomobillar-servisi"
+   ]
+  },
+  "avtomobil-elektr-va-elektron-jihozlari-tuzilishi-ularga-texnik-x": {
+   "nomi": "Avtomobil elektr va elektron jihozlari tuzilishi, ularga texnik xizmat ko'rsatish va ta'mirlash",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005"
+   ]
+  },
+  "avtomobil-elektr-va-elektron-jihozlari-tuzilishi-ularga-texnik-x-oquv-amaliyoti": {
+   "nomi": "Avtomobil elektr va elektron jihozlari tuzilishi, ularga texnik xizmat ko'rsatish va ta'mirlash (o‘quv amaliyoti)",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "avto-tamirlash-or0006"
+   ]
+  },
+  "avtomobil-tuzilishi": {
+   "nomi": "Avtomobil tuzilishi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "avtomobillar-servisi"
+   ]
+  },
+  "avtotransportda-qonunchilik-asoslari": {
+   "nomi": "Avtotransportda qonunchilik asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0005"
+   ]
+  },
+  "axborot-texnologiyalari-asoslari": {
+   "nomi": "Axborot texnologiyalari asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis"
+   ]
+  },
+  "axborot-xavfsizligi": {
+   "nomi": "Axborot xavfsizligi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "kompyuter-tarmoqlari-it-servis"
+   ]
+  },
+  "b-va-c-toifadagi-avtotransport-vositalarining-tuzilishi-va-ularg": {
+   "nomi": "\"B\" va \"C\" toifadagi avtotransport vositalarining tuzilishi va ularga servis xizmat ko‘rsatish",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005"
+   ]
+  },
+  "biznes-asoslari": {
+   "nomi": "Biznes asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi"
+   ]
+  },
+  "chaqiruvga-qadar-boshlangich-tayyorgarlik": {
+   "nomi": "Chaqiruvga qadar boshlang‘ich tayyorgarlik",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi"
+   ]
+  },
+  "chet-tili-ingliz-tili": {
+   "nomi": "Chet tili (ingliz tili)",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "zargarlik",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi",
+    "sartarosh-modeler",
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "chilangarlik-ishi": {
+   "nomi": "Chilangarlik ishi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "chizmageometriya-soyalar-nazariyasi-nuqtai-nazar": {
+   "nomi": "Chizmageometriya, soyalar nazariyasi, nuqtai nazar",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "zargarlik"
+   ]
+  },
+  "diagnostika-apparatlarini-tuzilishi-va-ishlash-prinsiplari": {
+   "nomi": "Diagnostika apparatlarini tuzilishi va ishlash prinsiplari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0006"
+   ]
+  },
+  "elektr-mashinalari-va-transformatorlar": {
+   "nomi": "Elektr mashinalari va transformatorlar",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "elektromontyor"
+   ]
+  },
+  "elektr-olchash-asboblari-va-elektr-olchashlar": {
+   "nomi": "Elektr o'lchash asboblari va elektr o'lchashlar",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "elektromontyor"
+   ]
+  },
+  "elektr-stansiya-elektr-jihozlari": {
+   "nomi": "Elektr stansiya elektr jihozlari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "elektromontyor"
+   ]
+  },
+  "elektrotexnika-va-elektronika-asoslari": {
+   "nomi": "Elektrotexnika va elektronika asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "elektromontyor"
+   ]
+  },
+  "elementar-dasturlash": {
+   "nomi": "Elementar dasturlash",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-tarmoqlari-it-servis"
+   ]
+  },
+  "erkaklar-va-ayollar-sartaroshi": {
+   "nomi": "Erkaklar va ayollar sartaroshi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "eskiz-asosida-tikuvchilik-mahsulotlarini-tayyorlash-oquv-amaliyoti": {
+   "nomi": "Eskiz asosida tikuvchilik mahsulotlarini tayyorlash (o'quv amaliyoti)",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "favqulodda-vaziyatlardan-jabrlanganlarga-birinchi-tibbiy-yordam": {
+   "nomi": "Favqulodda vaziyatlardan jabrlanganlarga birinchi tibbiy yordam ko'rsatish",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "ot-ochiruvchi"
+   ]
+  },
+  "fizika": {
+   "nomi": "Fizika",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "zargarlik"
+   ]
+  },
+  "fizika-va-astronomiya": {
+   "nomi": "Fizika va astronomiya",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi",
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "informatika-va-axborot-texnologiyalari": {
+   "nomi": "Informatika va axborot texnologiyalari",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "zargarlik",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi"
+   ]
+  },
+  "ishlab-chiqarish-amaliyoti": {
+   "nomi": "Ishlab chiqarish amaliyoti",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "ot-ochiruvchi"
+   ]
+  },
+  "jangovor-va-maxsus-taktik-tayyorgarlik": {
+   "nomi": "Jangovor va maxsus taktik tayyorgarlik",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "ot-ochiruvchi"
+   ]
+  },
+  "jismoniy-tarbiya": {
+   "nomi": "Jismoniy tarbiya",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "zargarlik",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi",
+    "sartarosh-modeler",
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "karyerani-rivojlantirish": {
+   "nomi": "Karyerani rivojlantirish",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005"
+   ]
+  },
+  "kasb-etikasi-va-psixologiyasi": {
+   "nomi": "Kasb etikasi va psixologiyasi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "kasbiy-faoliyatda-xorijiy-til-rus-tili": {
+   "nomi": "Kasbiy faoliyatda xorijiy til (rus tili)",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "keng-assortimentdagi-kiyimlarni-konstruksiyalash-va-modellashtir": {
+   "nomi": "Keng assortimentdagi kiyimlarni konstruksiyalash va modellashtirish",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "moda-tikuv-texnologiyasi"
+   ]
+  },
+  "kimyo": {
+   "nomi": "Kimyo",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "ot-ochiruvchi"
+   ]
+  },
+  "kiyim-dizaynini-yaratish": {
+   "nomi": "Kiyim dizaynini yaratish",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "moda-tikuv-texnologiyasi"
+   ]
+  },
+  "koloristika": {
+   "nomi": "Koloristika",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "kompozitsiya-va-dizayn-asoslari": {
+   "nomi": "Kompozitsiya va dizayn asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "zargarlik"
+   ]
+  },
+  "kompyuter-grafikasi-va-dizayn": {
+   "nomi": "Kompyuter grafikasi va dizayn",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "grafik-dizayn-texnologiyasi"
+   ]
+  },
+  "kompyuter-grafikasi-va-dizayn-oquv-amaliyoti": {
+   "nomi": "Kompyuter grafikasi va dizayn (o‘quv amaliyoti)",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori"
+   ]
+  },
+  "kompyuter-tizimlari": {
+   "nomi": "Kompyuter tizimlari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-tarmoqlari-it-servis"
+   ]
+  },
+  "konstruksion-materiallar": {
+   "nomi": "Konstruksion materiallar",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "kvalifikatsion-amaliyot": {
+   "nomi": "Kvalifikatsion amaliyot",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "oshpaz"
+   ]
+  },
+  "loyihalash": {
+   "nomi": "Loyihalash",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "manikyur-va-pedikyur-ishlari": {
+   "nomi": "Manikyur va pedikyur ishlari",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "matematika": {
+   "nomi": "Matematika",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "zargarlik",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi",
+    "sartarosh-modeler",
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "materialshunoslik": {
+   "nomi": "Materialshunoslik",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "zargarlik"
+   ]
+  },
+  "media-va-axborot-savodxonligi": {
+   "nomi": "Media va axborot savodxonligi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis"
+   ]
+  },
+  "mehnat-muhofazasi-va-xavfsizlik-texnikasi": {
+   "nomi": "Mehnat muhofazasi va xavfsizlik texnikasi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "zargarlik",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi",
+    "sartarosh-modeler",
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "milliy-va-sharq-shirinliklari-qandolatchiligi": {
+   "nomi": "Milliy va sharq shirinliklari qandolatchiligi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "oshpaz"
+   ]
+  },
+  "multimedia-va-animatsiya-texnologiyalari": {
+   "nomi": "Multimedia va animatsiya texnologiyalari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "grafik-dizayn-texnologiyasi"
+   ]
+  },
+  "ona-tili-va-adabiyoti": {
+   "nomi": "Ona tili va adabiyoti",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "zargarlik",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi",
+    "sartarosh-modeler",
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "oshpazlik-taomlarini-tayyorlash-texnologiyasi": {
+   "nomi": "Oshpazlik taomlarini tayyorlash texnologiyasi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "oshpaz"
+   ]
+  },
+  "ot-ochiruvchi-ishi-oquv-amaliyoti": {
+   "nomi": "O't o'chiruvchi ishi (o‘quv amaliyoti)",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "ot-ochiruvchi"
+   ]
+  },
+  "ozbek-milliy-pazandachilik-texnologiyasi": {
+   "nomi": "O'zbek milliy pazandachilik texnologiyasi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "oshpaz"
+   ]
+  },
+  "oziq-ovqat-mahsulotlari-tovarshunosligi": {
+   "nomi": "Oziq-ovqat mahsulotlari tovarshunosligi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "oshpaz"
+   ]
+  },
+  "plastik-anatomiya-va-fiziologiya": {
+   "nomi": "Plastik anatomiya va fiziologiya",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "qandolatchilik-mahsulotlarini-tayyorlash-texnologiyasi": {
+   "nomi": "Qandolatchilik mahsulotlarini tayyorlash texnologiyasi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "oshpaz"
+   ]
+  },
+  "qolda-yoyli-payvandlash-ishlari": {
+   "nomi": "Qo'lda yoyli payvandlash ishlari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "qutqaruvchi-ishlari-oquv-amaliyoti": {
+   "nomi": "Qutqaruvchi ishlari (o‘quv amaliyoti)",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "ot-ochiruvchi"
+   ]
+  },
+  "rang-tasvir": {
+   "nomi": "Rang tasvir",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "rangtasvir": {
+   "nomi": "Rangtasvir",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "zargarlik"
+   ]
+  },
+  "rasm-va-badiiy-grafika": {
+   "nomi": "Rasm va badiiy grafika",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "rastr-va-vektor-grafikasi-asoslari": {
+   "nomi": "Rastr va vektor grafikasi asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori"
+   ]
+  },
+  "rus-tili-ozb-sinf": {
+   "nomi": "Rus tili (o‘zb sinf)",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "zargarlik",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi",
+    "sartarosh-modeler"
+   ]
+  },
+  "sartaroshlik-asoslari": {
+   "nomi": "Sartaroshlik asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "sartaroshlik-ishlari-materiallari-va-asbob-uskunalari": {
+   "nomi": "Sartaroshlik ishlari materiallari va asbob-uskunalari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "sartarosh-modeler"
+   ]
+  },
+  "tarbiya": {
+   "nomi": "Tarbiya",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi"
+   ]
+  },
+  "tarix": {
+   "nomi": "Tarix",
+   "toifa": "umumtalim",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori",
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005",
+    "tikuvchilik-mahsulotlari-dizayneri",
+    "oshpaz",
+    "ot-ochiruvchi",
+    "zargarlik",
+    "grafik-dizayn-texnologiyasi",
+    "kompyuter-tarmoqlari-it-servis",
+    "avtomobillar-servisi",
+    "elektromontyor",
+    "moda-tikuv-texnologiyasi",
+    "sartarosh-modeler",
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "tashishlarni-tashkil-etish": {
+   "nomi": "Tashishlarni tashkil etish",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005"
+   ]
+  },
+  "texnikaviy-chizmachilik": {
+   "nomi": "Texnikaviy chizmachilik",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "elektromontyor",
+    "metallga-qayta-ishlov"
+   ]
+  },
+  "texnikaviy-chizmachilik-va-cad-cam-cae": {
+   "nomi": "Texnikaviy chizmachilik va CAD/CAM/CAE",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avtomobillar-servisi"
+   ]
+  },
+  "tikuv-buyumlarini-badiiy-bezash": {
+   "nomi": "Tikuv buyumlarini badiiy bezash",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "tikuv-buyumlarini-tikish-texnologiyasi": {
+   "nomi": "Tikuv buyumlarini tikish texnologiyasi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "tikuv-mahsulotlari-uchun-tekstil-materiallarini-tanlash": {
+   "nomi": "Tikuv mahsulotlari uchun tekstil materiallarini tanlash",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "moda-tikuv-texnologiyasi"
+   ]
+  },
+  "tikuvchilik-jihozlari": {
+   "nomi": "Tikuvchilik jihozlari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "tikuvchilik-mahsulotlarini-konstruksiyalash-va-modellashtirish": {
+   "nomi": "Tikuvchilik mahsulotlarini konstruksiyalash va modellashtirish",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "tikuvchilik-mahsulotlarini-tikish-va-badiiy-bezash-ishlari-oquv-amaliyoti": {
+   "nomi": "Tikuvchilik mahsulotlarini tikish va badiiy bezash ishlari (o'quv amaliyoti)",
+   "toifa": "amaliyot",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "tikuvchilik-materialshunosligi": {
+   "nomi": "Tikuvchilik materialshunosligi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "tikuvchilik-mahsulotlari-dizayneri"
+   ]
+  },
+  "uch-olchovli-modellashtirish-va-multiplikatsiyalash-asoslari": {
+   "nomi": "Uch o‘lchovli modellashtirish va multiplikatsiyalash asoslari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "kompyuter-grafikasi-dizayn-operatori"
+   ]
+  },
+  "umumiy-ovqatlanish-korxonalarida-sanitariya-gigiyena-va-ovqatlan": {
+   "nomi": "Umumiy ovqatlanish korxonalarida sanitariya, gigiyena va ovqatlanish fiziologiyasi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "oshpaz"
+   ]
+  },
+  "umumiy-ovqatlanish-korxonalarida-texnologik-jihozlar": {
+   "nomi": "Umumiy ovqatlanish korxonalarida texnologik jihozlar",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "oshpaz"
+   ]
+  },
+  "veb-dizayn-va-ui-ux": {
+   "nomi": "Veb dizayn va UI/UX",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "grafik-dizayn-texnologiyasi"
+   ]
+  },
+  "yol-harakati-qoidalari-va-harakat-xavfsizligi": {
+   "nomi": "Yo'l harakati qoidalari va harakat xavfsizligi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0006",
+    "avto-tamirlash-or0005"
+   ]
+  },
+  "yongin-avariya-qutqaruv-taktikasi": {
+   "nomi": "Yong‘in avariya-qutqaruv taktikasi",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "ot-ochiruvchi"
+   ]
+  },
+  "yonilgi-taminlash-tizimiga-servis-xizmat-korsatish-va-tamirlash": {
+   "nomi": "Yonilg'i ta'minlash tizimiga servis xizmat ko'rsatish va ta'mirlash",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "avto-tamirlash-or0005"
+   ]
+  },
+  "zamonaviy-tikuv-jihozlari": {
+   "nomi": "Zamonaviy tikuv jihozlari",
+   "toifa": "kasbiy",
+   "yonalishlar": [
+    "moda-tikuv-texnologiyasi"
+   ]
+  }
+ },
+ "manba_farqlari": [
+  "05-25, 06-25 3-semestr: «Biznes asoslari» 81 soat o'quv rejada bor, tarifikatsiyada (15.10.2026) yo'q — o'quv reja bo'yicha qoldirildi",
+  "08-25, 09-25 3-semestr: «Kvalifikatsion amaliyot» 612 soat o'quv rejada bor, tarifikatsiyada yo'q — o'quv reja bo'yicha qoldirildi",
+  "07-26, 08-26 tarifikatsiyada yo'q — ta'lim yo'nalishi noma'lum, toifalar fan nomiga qarab berildi",
+  "03-26: buyurtmachining ba'zi hujjatlarida «Grafik va dizayn texnologiyasi», kasb-emis'da «Kompyuter tarmoqlari va IT-servis» — buyurtmachidan tasdiqlansin"
+ ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /kabinet/
+Disallow: /admin/
+Sitemap: https://texnikum1son.uz/sitemap.xml
