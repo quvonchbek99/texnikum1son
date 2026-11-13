@@ -347,6 +347,19 @@ def qoidalar_bilan(toc, sahifalar):
     return qism
 
 
+def json_ol(t):
+    """AI javobidan JSON: ```json …``` o'ramlari va atrofdagi matn olib tashlanadi."""
+    t = (t or "").strip()
+    t = re.sub(r"^```(?:json)?\s*|\s*```$", "", t)
+    try:
+        return json.loads(t)
+    except Exception:
+        a, b = t.find("{"), t.rfind("}")
+        if a >= 0 and b > a:
+            return json.loads(t[a:b + 1])
+        raise ValueError("JSON emas: " + t[:120].replace("\n", " "))
+
+
 def ai_sorov(matn, tizim):
     """Gemini (GEMINI_API_KEY) → GitHub Models (GITHUB_TOKEN). JSON qaytaradi yoki None."""
     gk = os.environ.get("GEMINI_API_KEY", "").strip()
@@ -359,8 +372,7 @@ def ai_sorov(matn, tizim):
                                              data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
                 with urllib.request.urlopen(req, timeout=240) as r:
                     j = json.loads(r.read().decode())
-                t = j["candidates"][0]["content"]["parts"][0]["text"]
-                return json.loads(re.sub(r"^```(?:json)?|```$", "", t.strip()))
+                return json_ol(j["candidates"][0]["content"]["parts"][0]["text"])
             except Exception as e:
                 log("  Gemini", model, "xato:", str(e)[:200])
     gt = os.environ.get("GITHUB_TOKEN", "").strip()
@@ -373,7 +385,7 @@ def ai_sorov(matn, tizim):
                                              headers={"Content-Type": "application/json", "Authorization": "Bearer " + gt, "Accept": "application/json"})
                 with urllib.request.urlopen(req, timeout=240) as r:
                     j = json.loads(r.read().decode())
-                return json.loads(j["choices"][0]["message"]["content"])
+                return json_ol(j["choices"][0]["message"]["content"])
             except Exception as e:
                 log("  GitHub Models", model, "xato:", str(e)[:200])
     return None
