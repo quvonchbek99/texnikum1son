@@ -34,6 +34,7 @@ function doPost(e) {
     if (d.amal === 'ochir') return javob(ochir(d, u));
     if (d.amal === 'boshla') return javob(boshla(d, u));
     if (d.amal === 'bolak') return javob(bolak(d, u));
+    if (d.amal === 'agent') return javob(agentIshga(d, u));
     return javob({ ok: false, xato: "Noma'lum amal" });
   } catch (err) {
     return javob({ ok: false, xato: String((err && err.message) || err) });
@@ -119,6 +120,28 @@ function bolak(d, u) {
     return { ok: true, tugadi: true, id: id, url: fayl.getUrl(), nom: fayl.getName(), hajm: s.hajm };
   }
   throw new Error("Bo'lak yuklanmadi (" + c + '): ' + r.getContentText().slice(0, 200));
+}
+
+/**
+ * Kuvi agentni darhol ishga tushirish (GitHub Actions workflow_dispatch) — majmua navbatga qo'yilgach kabinet chaqiradi.
+ * Sozlash: Loyiha sozlamalari (Project Settings) → Script Properties → GITHUB_TOKEN = fine-grained token
+ * (faqat quvonchbek99/texnikum1son repozitoriysi, ruxsat: Actions — Read and write). Token faqat shu skriptda turadi.
+ * Token bo'lmasa — hech narsa buzilmaydi, agent GitHub jadvali bo'yicha ishga tushadi.
+ */
+var GH_REPO = 'quvonchbek99/texnikum1son', GH_WF = 'kuvi-agent.yml';
+function agentIshga(d, u) {
+  var tok = PropertiesService.getScriptProperties().getProperty('GITHUB_TOKEN');
+  if (!tok) return { ok: true, ishga: false, sabab: 'GITHUB_TOKEN sozlanmagan' };
+  var kesh = CacheService.getScriptCache();
+  if (kesh.get('ag_dispatch')) return { ok: true, ishga: false, sabab: 'yaqinda ishga tushirilgan' };
+  var r = UrlFetchApp.fetch('https://api.github.com/repos/' + GH_REPO + '/actions/workflows/' + GH_WF + '/dispatches', {
+    method: 'post', contentType: 'application/json', muteHttpExceptions: true, payload: JSON.stringify({ ref: 'main' }),
+    headers: { Authorization: 'Bearer ' + tok, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
+  });
+  var c = r.getResponseCode();
+  if (c !== 204) return { ok: false, xato: 'GitHub agentni ishga tushirmadi (' + c + ')' };
+  kesh.put('ag_dispatch', '1', 60);
+  return { ok: true, ishga: true };
 }
 
 function ochir(d, u) {

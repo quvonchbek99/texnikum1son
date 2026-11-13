@@ -481,6 +481,8 @@
       });
     }, Promise.resolve()).then(function () {
       holat("✓ Yuklandi va agent navbatiga qo‘yildi. Kuvi agent 10–20 daqiqada bo‘laklab, fan sahifasiga joylaydi — holatini quyida ko‘rasiz.", 1);
+      // Agentni darhol uyg‘otish (Apps Script → GitHub). Sozlanmagan bo‘lsa jim o‘tadi — agent jadval bo‘yicha ishlaydi.
+      USER.getIdToken().then(function (t) { return agPost({ amal: "agent", token: t }); })["catch"](function () { });
       agentRoyxat();
     })["catch"](function (e) { holat('<span class="bad">Xato: ' + esc(xato(e)) + "</span>"); });
   }
