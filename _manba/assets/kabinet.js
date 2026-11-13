@@ -119,6 +119,7 @@
   function tikla(em, m, inp) {
     if (!em) { msg(m, "Avval email manzilingizni yozing — tiklash havolasi o‘sha manzilga yuboriladi.", "bad"); if (inp) inp.focus(); return; }
     msg(m, "Yuborilmoqda…");
+    try { B.auth.languageCode = "uz"; } catch (e) {}
     B.A.sendPasswordResetEmail(B.auth, em, { url: location.origin + location.pathname }).then(function () {
       msg(m, "Parolni tiklash havolasi <b>" + esc(em) + "</b> manziliga yuborildi. Pochtangizni oching (Gmail’da «Spam» va «Promotions» papkalarini ham tekshiring), havolani bosib yangi parol qo‘ying va shu yerdan qayta kiring.", "ok");
     })["catch"](function (er) { msg(m, esc(xato(er)), "bad"); });
