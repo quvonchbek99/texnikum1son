@@ -5,7 +5,7 @@ name: Kuvi agent
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "3-59/10 * * * *"   # :00 dan qochib (GitHub navbati band), har 10 daqiqada
   workflow_dispatch:
     inputs:
       sinov_url:
