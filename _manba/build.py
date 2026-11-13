@@ -67,9 +67,9 @@ if sys.argv[2] != "none":
 RTR_TIKUV = json.load(open(os.path.join(sys.argv[2], "zamonaviy-tikuv-jihozlari.json"), encoding="utf-8")) if sys.argv[2] != "none" else None
 
 # ---------- Sahifa qolipi ----------
-NAV = [("", "Fanlar"), ("eski/", "Eski versiya")]
+NAV = [("", "Fanlar"), ("oyinlar/", "Sinf o‘yinlari"), ("eski/", "Eski versiya")]
 
-def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_root=False):
+def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_root=False, body_cls=""):
     depth = path.count("/")
     R = "/" if abs_root else "../" * depth
     nav = "".join(f'<a href="{R}{u}"{" aria-current=page" if active == u else ""}>{t}</a>' for u, t in NAV)
@@ -95,7 +95,7 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
 <link rel="stylesheet" href="{R}assets/sayt.css?v=2">
 <script>(function(){{var m=new Date(Date.now()+(new Date().getTimezoneOffset()+300)*6e4).getMonth(),q=new URLSearchParams(location.search).get('fasl');document.documentElement.setAttribute('data-fasl',/^(kuz|qish|bahor|yoz)$/.test(q||'')?q:(m==11||m<2?'qish':m<5?'bahor':m<8?'yoz':'kuz'));}})();</script>
 </head>
-<body data-root="{R}">
+<body data-root="{R}"{f' class="{body_cls}"' if body_cls else ""}>
 <a class="sr" href="#asosiy">Asosiy qismga o‘tish</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="{R}" aria-label="Fanlar — bosh sahifa">{LOGO}<span><b>{NOM}</b><span>Fanlar e-bazasi</span></span></a>
@@ -170,6 +170,60 @@ def fk_card(yid, f, R, meta):
             f'<span class="fk-t"><span class="tag {c}">{nom.replace(" fanlari", "").replace(" fanlar", "").replace(" (spes)", "")}</span><span class="tag ok" data-mat{"" if ok else " hidden"}>material bor</span></span>'
             f'<h3>{e(f["nomi"])}</h3><span class="meta">{meta}</span></a>')
 
+# ---------- kuvonch.uz sinf o'yinlari (Jonli viktorina, Arqon tortish…) — jonli ulanadi, u yerda yangilansa bu yerda ham yangilanadi ----------
+KUV = "https://kuvonch.uz/"
+KFAN = json.load(open(os.path.join(SRC, "kuvonch-oyinlar.json"), encoding="utf-8"))   # kuvonch.uz viktorina fanlari va arqon mavzu ID lari
+FANMOS = [("chqbt", r"chaqiruv|chqbt|harbiy|favqulodda|fuqaro muhofaza|birinchi tibbiy"), ("sport", r"jismoniy tarbiya"), ("tarbiya", r"^tarbiya"), ("mat", r"matematika|algebra|geometriya"),
+          ("fizika", r"fizika|elektrotexnika|elektr "), ("kimyo", r"kimyo"), ("biologiya", r"biolog|sanitariya|gigiyena"), ("geografiya", r"geografiya"),
+          ("tarix", r"tarix"), ("informatika", r"informatika|kompyuter|axborot|dasturlash|tarmoq|veb|it-servis|raqamli"), ("ona", r"ona tili"),
+          ("adabiyot", r"adabiyot"), ("rus", r"rus tili"), ("ingliz", r"ingliz|chet tili"), ("huquq", r"huquq|qonunchilik"),
+          ("iqtisod", r"biznes|iqtisod|tadbirkor|marketing|menejment"), ("chizma", r"chizma"), ("ekologiya", r"ekolog"),
+          ("avto", r"yo.?l harakati|haydovchi|avtotransport|toifadagi"), ("astronomiya", r"astronom")]
+def kfan(nomi):
+    n = norm(nomi)
+    for k, rx in FANMOS:
+        if k in KFAN and re.search(rx, n):
+            return k
+    return None
+OYINLAR = [("viktorina", "Jonli viktorina", "Kahoot uslubida: savollar doskada, o‘quvchilar telefondan javob beradi. Shohsupa, reyting va natijalarni yuklab olish."),
+           ("arqon", "Arqon tortish", "1–10 jamoa bellashadi: to‘g‘ri javob arqonni o‘z tomoniga tortadi. Doska, telefon yoki aqlli doskada."),
+           ("jamoa", "Jamoaviy o‘yin", "Har bir o‘yin uchun xona kodi bilan 2–4 jamoa: o‘quvchilar o‘z telefonlaridan qo‘shiladi."),
+           ("sinf", "Sinf o‘yinlari markazi", "Arqon tortish va jonli viktorina haqida qo‘llanma va sozlamalar."),
+           ("barcha", "Barcha o‘yinlar", "Kuvonch Academy’dagi barcha ta’limiy o‘yinlar: mantiq, xotira, milliy o‘yinlar va boshqalar.")]
+OYIN_FAYL = {"viktorina": "viktorina.html", "arqon": "arqon.html", "jamoa": "jamoa.html", "sinf": "sinf-oyinlari.html", "barcha": "oyinlar.html"}
+def kuv_url(o, fan=None):
+    """O'yin kuvonch.uz'ning o'zida ochiladi (u yerdagi himoya va yangilanishlar saqlanadi); fan/mavzu oldindan tanlanadi."""
+    u = KUV + OYIN_FAYL[o]
+    if fan and o == "viktorina":
+        u += "?fan=" + fan
+    elif fan and o == "arqon" and 0 < len(KFAN[fan]["a"]) <= 30:
+        u += "?mavzu=" + ",".join(KFAN[fan]["a"])
+    return u
+def oyin_qator(R, nomi):
+    k = kfan(nomi)
+    if k:
+        return (f'<div class="oyin-q"><span class="oyin-q-t">Sinf o‘yini · <b>{e(KFAN[k]["nom"])}</b> <span class="muted small">(kuvonch.uz, yangi oynada)</span></span>'
+                f'<a class="btn sm" target="_blank" rel="noopener" href="{e(kuv_url("viktorina", k))}">Jonli viktorina</a>'
+                f'<a class="btn ghost sm" target="_blank" rel="noopener" href="{e(kuv_url("arqon", k))}">Arqon tortish</a>'
+                f'<a class="kv-l" href="{R}oyinlar/">Boshqa o‘yinlar</a></div>')
+    return f'<div class="oyin-q"><span class="oyin-q-t">Sinf o‘yinlari — jonli viktorina, arqon tortish</span><a class="btn ghost sm" href="{R}oyinlar/">O‘yinni tanlash</a></div>'
+
+def oyinlar():
+    R = "../"
+    opts = '<option value="">Fan tanlanmagan (o‘yin ichida tanlanadi)</option>' + "".join(f'<option value="{k}">{e(v["nom"])}</option>' for k, v in sorted(KFAN.items(), key=lambda kv: norm(kv[1]["nom"])))
+    cards = "".join(f'<div class="card oyin-k"><span class="oyin-i">{i + 1:02d}</span><h3>{t}</h3><p class="muted small">{d}</p><a class="btn sm" data-o="{o}" target="_blank" rel="noopener" href="{e(kuv_url(o))}">Boshlash ↗</a></div>' for i, (o, t, d) in enumerate(OYINLAR))
+    cfg = {"kuv": KUV, "f": OYIN_FAYL, "a": {k: v["a"] for k, v in KFAN.items() if 0 < len(v["a"]) <= 30}}
+    b = hero("", "Sinf o‘yinlari", "Kuvonch Academy (kuvonch.uz) o‘yinlari — butun sinf bilan, doskada va telefonlarda. O‘yinlar kuvonch.uz’ning o‘zida yangi oynada ochiladi: u yerda kuchaytirilsa yoki yangi savollar qo‘shilsa, shu yerdan ham darhol yangisi ochiladi.", crumbs=[("Fanlar", R), ("Sinf o‘yinlari", None)])
+    b += f"""<section class="blk"><div class="wrap">
+<div class="fbar"><label class="fsel"><span class="sr">Fan</span><select id="oyin-fan">{opts}</select></label><span class="muted small">Fanni tanlasangiz, viktorina va arqon tortish shu fan savollari bilan ochiladi.</span></div>
+<div class="grid g3" style="margin-top:14px">{cards}</div>
+<p class="small muted" style="margin-top:18px">Har bir fan sahifasida ham shu fanga mos «Jonli viktorina» va «Arqon tortish» tugmalari bor.</p>
+</div></section>
+<script>(function(){{var C={json.dumps(cfg, ensure_ascii=False)},s=document.getElementById('oyin-fan');
+function u(o,f){{var x=C.kuv+C.f[o];if(f&&o==='viktorina')x+='?fan='+f;else if(f&&o==='arqon'&&C.a[f])x+='?mavzu='+C.a[f].join(',');return x;}}
+s.addEventListener('change',function(){{Array.prototype.forEach.call(document.querySelectorAll('[data-o]'),function(a){{a.href=u(a.getAttribute('data-o'),s.value);}});}});}})();</script>"""
+    page("oyinlar/index.html", "Sinf o‘yinlari", "Jonli viktorina, arqon tortish va boshqa sinf o‘yinlari (Kuvonch Academy) — fanlar bo‘yicha.", b, active="oyinlar/")
+
 # ---------- Bosh sahifa: fanlar katalogi ----------
 def bosh():
     R = ""
@@ -240,6 +294,7 @@ def fan_page(y, f, cur=None, um=None):
         soat_jad = (f'<details class="mv" style="margin-top:22px"><summary>Soatlar mutaxassisliklar bo‘yicha</summary><div class="ic"><p class="small muted">Yuqoridagi soatlar — ko‘pchilik mutaxassisliklardagi qiymat. Ayrim o‘quv rejalarda farq qiladi:</p>'
                     f'<div class="tbl-w"><table><thead><tr><th>Mutaxassislik</th>' + "".join(f"<th class=n>{s}-sem</th>" for s in sems) + f"</tr></thead><tbody>{rows}</tbody></table></div></div></details>")
     b += f"""<section class="blk"><div class="wrap">
+{oyin_qator(R, f["nomi"])}
 <div id="fan" data-y="{y['id']}" data-f="{f['id']}" data-fan="{e(f['nomi'])}" data-yn="{e(ynom(y) if not um else 'Umumta’lim (barcha mutaxassisliklar)')}" data-toifa="{f['toifa']}" data-def="{cur}" data-plan='{e(json.dumps(plan_of(f)))}' data-rtr='{e(json.dumps(rtr, ensure_ascii=False))}'>
 {semtabs}
 <p class="note" data-soat style="margin-bottom:18px"></p>
@@ -314,7 +369,7 @@ def data_files():
         json.dump(RTR_TIKUV, open(os.path.join(OUT, "data", "rtr", "zamonaviy-tikuv-jihozlari.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 def extras():
-    urls = [""] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
+    urls = ["", "oyinlar/"] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{DOMEN}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nDisallow: /eski/\nSitemap: {DOMEN}/sitemap.xml\n")
     open(os.path.join(OUT, "CNAME"), "w").write("texnikum1son.uz\n")
@@ -324,7 +379,7 @@ def extras():
         shutil.copy(os.path.join(SRC, "assets", fn), os.path.join(OUT, "assets", fn))
     open(os.path.join(OUT, "assets", "logo.svg"), "w", encoding="utf-8").write(LOGO.replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"').replace("var(--a)", "#b5541b"))
 
-bosh(); yonaltirish(); kabinet(); admin(); xato404()
+bosh(); oyinlar(); yonaltirish(); kabinet(); admin(); xato404()
 for y in Y:
     for f in y["fanlar"]:
         if f["toifa"] != "umumtalim":

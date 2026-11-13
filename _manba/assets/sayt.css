@@ -399,3 +399,11 @@ html.pv-ochiq .kv-fab, html.pv-ochiq .kv-tip { display: none; }
 .kv-m a.kv-bet { font-weight: 700; color: var(--a); text-decoration: underline; cursor: pointer; }
 .kv-m.u a.kv-bet { color: #fff; }
 @media print { .pv-mini, dialog.pv-dlg, .pv-kut { display: none !important; } }
+
+/* ---------- Sinf o'yinlari (kuvonch.uz) ---------- */
+.oyin-q { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 10px 14px; margin-bottom: 18px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--a2); border-radius: 0 var(--r-s) var(--r-s) 0; }
+.oyin-q-t { font-size: 14.5px; margin-right: auto; }
+.oyin-k { display: flex; flex-direction: column; gap: 6px; position: relative; overflow: hidden; }
+.oyin-k .btn { align-self: flex-start; margin-top: auto; }
+.oyin-i { font: 700 13px var(--mono); color: var(--a); }
+.oyin-k::after { content: ""; position: absolute; right: -16px; top: -16px; width: 56px; height: 56px; background: var(--tint); -webkit-mask: var(--yulduz) center / contain no-repeat; mask: var(--yulduz) center / contain no-repeat; }
