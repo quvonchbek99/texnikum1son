@@ -51,4 +51,15 @@
         allow delete: if sub in ['hujjatlar', 'matnlar'] && (isAdmin() || t1Egasi(key));
       }
     }
+    // Kuvi agent navbati: o'qituvchi katta majmuani yuboradi; agent (GitHub Actions) ochiq o'qiydi; egasi yoki admin o'chiradi
+    match /t1_navbat/{id} {
+      allow read: if true;
+      allow create: if (isAdmin() || t1Tasdiq()) && request.resource.data.uid == request.auth.uid
+        && request.resource.data.keys().hasOnly(['yonalish', 'fan', 'sem', 'nom', 'ext', 'hajm', 'drive_id', 'uid', 'oqituvchi', 'yonalish_nomi', 'fan_nomi', 'yaratildi'])
+        && str(request.resource.data.drive_id, 100) && str(request.resource.data.nom, 200)
+        && str(request.resource.data.yonalish, 80) && str(request.resource.data.fan, 120)
+        && request.resource.data.hajm is int && request.resource.data.hajm <= 419430400;
+      allow update: if false;
+      allow delete: if isAdmin() || (signedIn() && resource.data.uid == request.auth.uid);
+    }
     // ===================== /texnikum1son.uz =====================

@@ -12,11 +12,15 @@
  * Xavfsizlik: har bir yuklash o'qituvchining Firebase kirish tokeni bilan tekshiriladi —
  * faqat admin tasdiqlagan o'qituvchilar (t1_oqituvchilar/{uid}.holat == "tasdiqlangan") yoki adminlar fayl yuklay oladi.
  * Fayllar «havolasi borlar ko'ra oladi» rejimida saqlanadi (saytda ko'rsatish uchun).
+ *
+ * Katta fayllar (800 betlik majmualar, 400 MB gacha): «boshla» → Drive'da davom ettiriladigan (resumable) yuklash
+ * sessiyasi ochiladi; «bolak» → fayl 8 MB lik bo'laklarda yuboriladi. Sessiya manzili faqat shu skriptda saqlanadi.
  */
 var API_KEY = 'AIzaSyAw1lBVzTYqbMfkXeWv5fzKX-ORgsGCXtc';   // Firebase veb kaliti (ochiq kalit)
 var LOYIHA = 'kuvonch-academy';                            // Firebase loyiha ID
 var ILDIZ_NOMI = 'texnikum1son — e-baza fayllari';         // Drive'dagi asosiy papka
 var MAX_BAYT = 26 * 1024 * 1024;
+var MAX_KATTA = 400 * 1024 * 1024;   // bo'laklab yuklanadigan eng katta fayl
 
 function doGet() {
   return javob({ ok: true, xizmat: 'texnikum1son drive', papka: ildiz().getName(), vaqt: new Date().toISOString() });
@@ -28,6 +32,8 @@ function doPost(e) {
     var u = tekshir(d.token);
     if (d.amal === 'yukla') return javob(yukla(d, u));
     if (d.amal === 'ochir') return javob(ochir(d, u));
+    if (d.amal === 'boshla') return javob(boshla(d, u));
+    if (d.amal === 'bolak') return javob(bolak(d, u));
     return javob({ ok: false, xato: "Noma'lum amal" });
   } catch (err) {
     return javob({ ok: false, xato: String((err && err.message) || err) });
@@ -73,6 +79,46 @@ function yukla(d, u) {
   fayl.setDescription('uid:' + u.uid + ' | ' + (d.oqituvchi || '') + ' | ' + (d.yol || d.nom || ''));
   fayl.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
   return { ok: true, id: fayl.getId(), url: fayl.getUrl(), nom: fayl.getName(), hajm: bayt.length };
+}
+
+/** Katta fayl: Drive API resumable yuklash sessiyasini ochadi */
+function boshla(d, u) {
+  var hajm = Number(d.hajm) || 0;
+  if (hajm <= 0 || hajm > MAX_KATTA) throw new Error('Fayl hajmi 400 MB gacha bo‘lishi kerak');
+  var papka = ichkari(ichkari(ichkari(ildiz(), toza(d.yonalish || 'Yonalish')), toza(d.fan || 'Fan')), (d.sem || '1') + '-semestr');
+  var meta = { name: toza(d.nom || 'fayl'), parents: [papka.getId()], description: 'uid:' + u.uid + ' | ' + (d.oqituvchi || '') + ' | ' + (d.nom || '') };
+  var r = UrlFetchApp.fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable&fields=id', {
+    method: 'post', contentType: 'application/json; charset=UTF-8', payload: JSON.stringify(meta), muteHttpExceptions: true,
+    headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken(), 'X-Upload-Content-Type': d.mime || 'application/octet-stream', 'X-Upload-Content-Length': String(hajm) }
+  });
+  if (r.getResponseCode() !== 200) throw new Error('Drive sessiyasi ochilmadi (' + r.getResponseCode() + ')');
+  var h = r.getAllHeaders(), loc = h.Location || h.location;
+  if (!loc) throw new Error('Drive sessiya manzilini bermadi');
+  var kalit = Utilities.getUuid();
+  CacheService.getScriptCache().put('s_' + kalit, JSON.stringify({ loc: loc, uid: u.uid, hajm: hajm }), 21600);
+  return { ok: true, sessiya: kalit, bolak: 8 * 1024 * 1024 };
+}
+
+/** Katta fayl: navbatdagi bo'lak (base64). Oxirgi bo'lakdan keyin fayl ID qaytadi */
+function bolak(d, u) {
+  var s = JSON.parse(CacheService.getScriptCache().get('s_' + d.sessiya) || 'null');
+  if (!s || s.uid !== u.uid) throw new Error('Yuklash sessiyasi topilmadi yoki muddati tugagan — qaytadan boshlang');
+  var bayt = Utilities.base64Decode(d.b64 || ''), bosh = Number(d.bosh) || 0;
+  if (!bayt.length) throw new Error("Bo'lak bo'sh");
+  var oxir = bosh + bayt.length - 1;
+  var r = UrlFetchApp.fetch(s.loc, {
+    method: 'put', payload: bayt, contentType: 'application/octet-stream', muteHttpExceptions: true, followRedirects: false,
+    headers: { 'Content-Range': 'bytes ' + bosh + '-' + oxir + '/' + s.hajm }
+  });
+  var c = r.getResponseCode();
+  if (c === 308) return { ok: true, tugadi: false, keyingi: oxir + 1 };
+  if (c === 200 || c === 201) {
+    var id = JSON.parse(r.getContentText()).id, fayl = DriveApp.getFileById(id);
+    fayl.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+    CacheService.getScriptCache().remove('s_' + d.sessiya);
+    return { ok: true, tugadi: true, id: id, url: fayl.getUrl(), nom: fayl.getName(), hajm: s.hajm };
+  }
+  throw new Error("Bo'lak yuklanmadi (" + c + '): ' + r.getContentText().slice(0, 200));
 }
 
 function ochir(d, u) {

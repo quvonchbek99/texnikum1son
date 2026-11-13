@@ -12,6 +12,23 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
 - **1-versiya (eski):** `/eski/` papkasida muzlatilgan nusxa (noindex); manbasi `_manba/eski/build_v1.py`, git tegi `v1-eski`, `eski-versiya` tarmog‘i.
   Eski manzillar (`/yonalish/<id>/`, `/guruh/<g>/`, `/haqida/`, `/joylashuv/`…) yangi katalogga yoki `/eski/` ga yo‘naltiriladi.
 
+
+## Kuvi agent — katta majmualarni avtomatik bo'laklash (13.11.2026)
+
+1. O'qituvchi kabinetda **«Katta majmua — Kuvi AI agent»** bo'limiga fayl tashlaydi (Word, PDF, PowerPoint, ZIP; 400 MB gacha).
+   Fayl 8 MB lik bo'laklarda Apps Script orqali Google Drive'ga yuklanadi (`boshla` / `bolak`), so'ng Firestore `t1_navbat` ga yoziladi.
+2. GitHub Actions (`.github/workflows/kuvi-agent.yml`, har 10 daqiqada) `_manba/agent/ishla.py` ni ishga tushiradi:
+   Drive'dan yuklab oladi → LibreOffice bilan PDF → `qpdf --linearize` → mundarija va bet sarlavhalari bo'yicha qismlar
+   (Gemini — `GEMINI_API_KEY` Secrets'da bo'lsa; bo'lmasa GitHub Models; bo'lmasa qoidalar) → natijani commit qiladi:
+   `fayl/<id>.pdf`, `agent/m/<id>.json` (qismlar), `agent/k/<id>.json` (Kuvi uchun matn), `agent/index.json`, `agent/holat.json`.
+3. Fan sahifasi (`assets/fan.js` + `assets/korinish.js`): qismlar o'z bo'limlarida; PDF.js betlarni faqat kerak bo'lganda (HTTP Range) yuklaydi.
+   O'UM bo'limida to'liq majmua va qismlardan bitta PDF yoki ZIP (pdf-lib). Kuvi AI (`assets/t1-kuvi.js`) majmua matnidan
+   mos parchalarni topib javob beradi, «N-bet» havolasi ko'ruvchida o'sha betni ochadi.
+4. Navbatdan o'chirilgan majmuani agent fayl/ va agent/ dan ham o'chiradi. `fayl/` umumiy chegarasi ~850 MB (GitHub Pages 1 GB).
+
+Muhim: saytni qayta yig'ishda (`build.py`) `agent/`, `fayl/`, `eski/`, `materiallar/` papkalariga tegilmaydi; push qilishdan oldin
+`git pull --rebase` (agent ham commit qiladi). Qo'lda sinov: Actions → «Kuvi agent» → Run workflow → `sinov_url`.
+
 ## Tuzilma
 | Joy | Nima |
 | --- | --- |

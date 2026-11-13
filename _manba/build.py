@@ -248,7 +248,7 @@ def fan_page(y, f, cur=None, um=None):
 </div></div></section>"""
     page(f"yonalish/{y['id']}/fan/{f['id']}/index.html", f"{f['nomi']}" + ("" if um else f" — {ynom(y)}"),
          f"«{f['nomi']}» fani" + (" (umumta’lim, barcha mutaxassisliklar)" if um else f" ({ynom(y)})") + ": TMR, texnologik xaritalar, ma’ruzalar, amaliy ishlar, nazorat va O‘UM.",
-         b, active="", scripts=("rtr.js", "bulut.js", "fan.js", "t1-kuvi.js"))
+         b, active="", scripts=("rtr.js", "bulut.js", "korinish.js", "fan.js", "t1-kuvi.js"))
 
 # ---------- Eski manzillar: yangi katalogga yoki /eski/ ga yo'naltirish ----------
 def redir(path, target, title):

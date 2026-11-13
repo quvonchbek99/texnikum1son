@@ -367,3 +367,35 @@ a.card.fk:hover::after { transform: rotate(45deg); background: var(--a2); }
   #chop .titul { break-after: page; }
 }
 @media (max-width: 430px) { .seg button span { display: none; } .seg button { padding: 8px 10px; } }
+
+/* ---------- PDF ko'ruvchi (katta majmualar) ---------- */
+.pv { position: relative; }
+.pv-s { overflow: auto; height: 100%; background: #e9e6e0; border-radius: 12px; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.pv-i { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 12px; }
+.pv-p { position: relative; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.18), 0 6px 18px rgba(0,0,0,.08); flex: none; max-width: 100%; }
+.pv-p canvas { display: block; }
+.pv-p:not([data-ok])::after { content: ""; position: absolute; inset: 28% 30%; border-radius: 8px; background: linear-gradient(90deg, #f1eee8 25%, #e7e3db 50%, #f1eee8 75%); background-size: 200% 100%; animation: pvy 1.2s infinite linear; }
+@keyframes pvy { to { background-position: -200% 0; } }
+.pv-n { position: absolute; right: 6px; bottom: 6px; z-index: 1; font: 600 11px var(--body); color: #555; background: rgba(255,255,255,.85); padding: 1px 6px; border-radius: 6px; }
+.pv-yuk { padding: 40px; color: var(--muted); }
+.pv-mini { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+.pv-sp { flex: 1; }
+.pv-kut { height: min(78vh, 900px); }
+.pv-kut .pv-s { height: 100%; }
+dialog.pv-dlg { width: 100vw; max-width: 100vw; height: 100vh; height: 100dvh; max-height: none; margin: 0; padding: 0; border-radius: 0; background: #2b2d31; display: flex; flex-direction: column; }
+dialog.pv-dlg:not([open]) { display: none; }
+.pv-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 10px; background: var(--hero1); color: #fff; position: relative; }
+.pv-bar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 3px; background: var(--atlas) repeat-x; background-size: 24px 3px; }
+.pv-t { font: 600 14px var(--display); max-width: 40vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pv-b { min-width: 36px; height: 36px; border-radius: 9px; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.1); color: #fff; font: 600 15px var(--body); cursor: pointer; padding: 0 10px; }
+.pv-b:hover { background: rgba(255,255,255,.22); }
+.pv-b.pv-w { font-size: 13px; }
+.pv-bet { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; }
+.pv-bet input { width: 64px; padding: 5px 6px; font-size: 14px; text-align: center; border-radius: 8px; border: 0; }
+.pv-joy { flex: 1; min-height: 0; }
+.pv-joy .pv-s { border-radius: 0; background: #3a3c41; }
+html.pv-ochiq .kv-fab, html.pv-ochiq .kv-tip { display: none; }
+@media (max-width: 640px) { .pv-t { max-width: 100%; flex-basis: 100%; } .pv-b.pv-w { font-size: 12px; padding: 0 8px; } .pv-i { padding: 6px; gap: 8px; } }
+.kv-m a.kv-bet { font-weight: 700; color: var(--a); text-decoration: underline; cursor: pointer; }
+.kv-m.u a.kv-bet { color: #fff; }
+@media print { .pv-mini, dialog.pv-dlg, .pv-kut { display: none !important; } }

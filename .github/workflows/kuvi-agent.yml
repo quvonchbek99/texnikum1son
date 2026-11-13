@@ -1,0 +1,70 @@
+# Kuvi agent — o'qituvchilar yuklagan majmualarni (800+ bet) PDF'ga aylantiradi, bo'limlarga ajratadi va saytga joylaydi.
+# Navbat: Firestore t1_navbat (kabinetdagi «AI agentga yuborish»). Natija: fayl/ va agent/ papkalari (GitHub Pages orqali).
+# AI: GEMINI_API_KEY (repo Secrets, ixtiyoriy) → bo'lmasa GitHub Models (GITHUB_TOKEN) → bo'lmasa qoidalar.
+name: Kuvi agent
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      sinov_url:
+        description: "Sinov: ochiq havoladagi faylni qayta ishlash (ixtiyoriy)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: kuvi-agent
+  cancel-in-progress: false
+
+jobs:
+  ishla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Navbatni tekshirish
+        id: n
+        env:
+          SINOV_URL: ${{ github.event.inputs.sinov_url }}
+        run: |
+          if [ -n "$SINOV_URL" ]; then echo "bor=1" >> "$GITHUB_OUTPUT"; else python3 _manba/agent/ishla.py --tekshir; fi
+
+      - name: LibreOffice va qpdf o'rnatish
+        if: steps.n.outputs.bor == '1'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends libreoffice-writer libreoffice-impress libreoffice-calc \
+            fonts-liberation fonts-crosextra-carlito fonts-crosextra-caladea fonts-dejavu qpdf > /dev/null
+
+      - name: Python kutubxonalari
+        if: steps.n.outputs.bor == '1'
+        run: pip install -q "pymupdf>=1.24,<2"
+
+      - name: Majmualarni qayta ishlash
+        if: steps.n.outputs.bor == '1'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SINOV_URL: ${{ github.event.inputs.sinov_url }}
+        run: |
+          if [ -n "$SINOV_URL" ]; then
+            python3 _manba/agent/ishla.py --url "$SINOV_URL" --yonalish sinov --fan sinov --sem 1 --id sinov-actions
+          else
+            python3 _manba/agent/ishla.py
+          fi
+
+      - name: Natijani saytga joylash
+        if: steps.n.outputs.bor == '1'
+        run: |
+          git config user.name "Kuvi agent"
+          git config user.email "kuvi-agent@users.noreply.github.com"
+          git add -A agent fayl
+          if git diff --cached --quiet; then echo "O'zgarish yo'q"; exit 0; fi
+          git commit -q -m "Kuvi agent: majmualar yangilandi"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done

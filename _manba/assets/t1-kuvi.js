@@ -24,11 +24,49 @@
       ? "Foydalanuvchi o‘qituvchi kabinetida — fan materiallarini (TMR, xarita, ma’ruza, ZIP) yuklamoqda."
       : "Foydalanuvchi fanlar katalogida (kasbiy fanlar mutaxassisliklar bo‘yicha, umumta’lim fanlari hammasi uchun bitta).";
     var p = Object.keys(CTX.plan).map(function (s) { var x = CTX.plan[s] || {}; return s + "-semestr: jami " + x.jami + " soat" + (x.auditoriya ? ", auditoriya ~" + x.auditoriya + " soat (" + Math.round(x.auditoriya / 2) + " juftlik)" : ""); }).join("; ");
-    return "Foydalanuvchi «" + CTX.fan + "» fani sahifasida: " + (TOIFA[CTX.toifa] || "fan") + ", " + CTX.yn + ". O‘quv reja: " + (p || "—") + ".";
+    var M = window.t1Majmua || [];
+    return "Foydalanuvchi «" + CTX.fan + "» fani sahifasida: " + (TOIFA[CTX.toifa] || "fan") + ", " + CTX.yn + ". O‘quv reja: " + (p || "—") + "." +
+      (M.length ? " Bu fan bo‘yicha o‘qituvchi joylagan majmua(lar): " + M.map(function (m) { return "«" + m.nom + "» (" + m.betlar + " bet)"; }).join(", ") + "." : "");
   }
 
+  /* ---------- Majmua matnidan qidiruv (BM25, o'zbekcha qo'shimchalarga chidamli: so'z o'zagi ~6 harf) ---------- */
+  var KC = {}, STOP = {};
+  "va bilan uchun ham bu shu u ular bir esa yoki agar qanday nima nega qachon qaysi kabi bo‘yicha boyicha dan da ga ni ning lar bo‘ladi boladi deb hamda biz siz men sen ushbu shuning har barcha".split(" ").forEach(function (w) { STOP[w.replace(/[‘’ʻʼ']/g, "")] = 1; });
+  function sozlar(t) {
+    return String(t || "").toLowerCase().replace(/[‘’ʻʼ`´']/g, "").split(/[^a-zа-яёўқғҳ0-9]+/i)
+      .filter(function (w) { return w.length > 2 && !STOP[w]; }).map(function (w) { return w.length > 6 ? w.slice(0, 6) : w; });
+  }
+  function bolaklar(m) {
+    if (!KC[m.id]) KC[m.id] = fetch(m.k).then(function (r) { return r.json(); }).then(function (j) {
+      return j.b.map(function (x) { var w = sozlar(x.t), tf = {}; w.forEach(function (s) { tf[s] = (tf[s] || 0) + 1; }); return { b: x.b, t: x.t, m: m, tf: tf, n: w.length }; });
+    });
+    KC[m.id]["catch"](function () { delete KC[m.id]; });
+    return KC[m.id];
+  }
+  function parchalar(savol) {
+    var M = window.t1Majmua || []; if (!M.length) return Promise.resolve(null);
+    return Promise.all(M.map(bolaklar)).then(function (ALL) {
+      var L = [].concat.apply([], ALL); if (!L.length) return null;
+      var q = sozlar(savol).filter(function (w, i, a) { return a.indexOf(w) === i; }), N = L.length, avg = L.reduce(function (a, x) { return a + x.n; }, 0) / N;
+      var df = {}; q.forEach(function (w) { df[w] = L.filter(function (x) { return x.tf[w]; }).length; });
+      L.forEach(function (x) {
+        var sc = 0; q.forEach(function (w) { var f = x.tf[w] || 0; if (!f) return; var idf = Math.log(1 + (N - df[w] + 0.5) / (df[w] + 0.5)); sc += idf * f * 2.2 / (f + 1.2 * (0.25 + 0.75 * x.n / avg)); });
+        x.sc = sc;
+      });
+      var tanlov = [], dm = /(\d{1,3})\s*[-–.]?\s*(mavzu|dars|ma.?ruza|amaliy)/i.exec(savol), mavzuBet = {};
+      if (dm) M.forEach(function (m) { (m.qismlar || []).forEach(function (qq) { if (String(qq.dars) === dm[1] && /maruza|amaliy|xarita/.test(qq.turi)) for (var b = qq.bet_bosh; b <= Math.min(qq.bet_oxir, qq.bet_bosh + 3); b++) mavzuBet[m.id + ":" + b] = 1; }); });
+      L.forEach(function (x) { if (mavzuBet[x.m.id + ":" + x.b]) x.sc += 6; });
+      L.slice().sort(function (a, b) { return b.sc - a.sc; }).some(function (x) { if (x.sc <= 0) return true; tanlov.push(x); return tanlov.reduce(function (a, y) { return a + y.t.length; }, 0) > 9000; });
+      if (!tanlov.length) return null;
+      tanlov.sort(function (a, b) { return a.m === b.m ? a.b - b.b : 0; });
+      return tanlov;
+    });
+  }
+  var BETMAP = {};
+
   /* ---------- Rejimlar ---------- */
-  var UMUMIY = "Faqat o‘zbek tilida (lotin yozuvi) yoz. Faktlar, raqamlar, me’yoriy hujjat raqamlari yoki manbalarni to‘qima — aniq bilmasang, ochiq ayt. " +
+  var MANBA = "Agar xabarda «Majmua parchalari» berilgan bo‘lsa, javobni avvalo shu parchalarga asosla va har asosiy fikrdan keyin manba betini qavs ichida «(12-bet)» ko‘rinishida yoz. Parchalarda javob bo‘lmasa, buni ochiq ayt va umumiy bilim bilan qisqa javob ber. ";
+  var UMUMIY = MANBA + "Faqat o‘zbek tilida (lotin yozuvi) yoz. Faktlar, raqamlar, me’yoriy hujjat raqamlari yoki manbalarni to‘qima — aniq bilmasang, ochiq ayt. " +
     "Javobni aynan bitta kayfiyat tegi bilan boshla: [happy], [think], [wow], [love], [wink] yoki [neutral] — teg yuz ifodasini o‘zgartiradi va foydalanuvchiga ko‘rinmaydi.";
   var R = {
     m: { nom: "Maslahatchi", kim: "o‘qituvchilar uchun", salom: "Assalomu alaykum, ustoz! Men Kuvi — o‘quv-uslubiy maslahatchiman. TMR, texnologik xarita, dars ishlanma yoki nazorat savollari kerakmi? Yozing — birga tayyorlaymiz.",
@@ -83,6 +121,10 @@
     }
     return out.join("");
   }
+  function betlar(h) {
+    if (!(window.t1Majmua || []).length) return h;
+    return h.replace(/(\d{1,4})\s*[-–]\s*bet(lar)?\b/g, function (a, n) { return '<a href="#" class="kv-bet" data-bet="' + n + '">' + a + "</a>"; });
+  }
   var MOODS = /^\s*\[(neutral|happy|love|think|strict|jealous|sad|wow|laugh|cry|shy|wink|sleepy)\]\s*/i;
   function tegsiz(t) { var m = MOODS.exec(t || ""); return { mood: m ? m[1].toLowerCase() : "neutral", t: String(t || "").replace(MOODS, "").replace(/\[(neutral|happy|love|think|wow|wink|laugh|sad|shy)\]/gi, "") }; }
 
@@ -115,6 +157,12 @@
     document.body.appendChild(pan);
     log = pan.querySelector(".kv-log"); ta = pan.querySelector("textarea"); tez = pan.querySelector(".kv-tez"); ctxEl = pan.querySelector(".kv-ctx"); face = pan.querySelector(".kv-face");
     pan.querySelector(".kv-x").addEventListener("click", yop);
+    log.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("[data-bet]"); if (!a) return;
+      e.preventDefault();
+      var n = +a.getAttribute("data-bet"), m = BETMAP[n] || (window.t1Majmua || [])[0];
+      if (m && window.t1PDF) t1PDF.och(m.pdf, { bet: n, sarlavha: m.nom, nom: m.nom });
+    });
     Array.prototype.forEach.call(pan.querySelectorAll(".kv-seg button"), function (b) { b.addEventListener("click", function () { rejim = b.getAttribute("data-r"); ls("t1.kuvi.r", rejim); chiz(); ta.focus(); }); });
     pan.querySelector("form").addEventListener("submit", function (e) { e.preventDefault(); yubor(ta.value); });
     ta.addEventListener("keydown", function (e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); yubor(ta.value); } });
@@ -131,10 +179,12 @@
   function setFace(m) { if (face) face.innerHTML = yuz(m || "neutral"); }
   function chiz() {
     Array.prototype.forEach.call(pan.querySelectorAll(".kv-seg button"), function (b) { b.setAttribute("aria-selected", b.getAttribute("data-r") === rejim ? "true" : "false"); });
-    ctxEl.innerHTML = CTX.fan ? "Fan: <b>" + esc(CTX.fan) + "</b> · " + esc(CTX.yn) : (rejim === "m" ? "Istalgan fan bo‘yicha o‘quv-uslubiy savol bering" : "Istalgan fan bo‘yicha savol bering");
+    var MJ = window.t1Majmua || [];
+    ctxEl.innerHTML = CTX.fan ? "Fan: <b>" + esc(CTX.fan) + "</b> · " + esc(CTX.yn) + (MJ.length ? " · majmua: " + MJ.map(function (m) { return m.betlar + " bet"; }).join(", ") : "") : (rejim === "m" ? "Istalgan fan bo‘yicha o‘quv-uslubiy savol bering" : "Istalgan fan bo‘yicha savol bering");
     var H = ss(KEY()) || [];
-    log.innerHTML = '<div class="kv-m k">' + md(R[rejim].salom) + "</div>" + H.map(function (x) { return '<div class="kv-m ' + x.r + '">' + (x.r === "k" ? md(x.t) : esc(x.t).replace(/\n/g, "<br>")) + "</div>"; }).join("");
-    tez.innerHTML = R[rejim].tez.map(function (t) { return '<button type="button">' + esc(t) + "</button>"; }).join("");
+    log.innerHTML = '<div class="kv-m k">' + md(R[rejim].salom) + "</div>" + H.map(function (x) { return '<div class="kv-m ' + x.r + '">' + (x.r === "k" ? betlar(md(x.t)) : esc(x.t).replace(/\n/g, "<br>")) + "</div>"; }).join("");
+    var MT = (window.t1Majmua || []).length ? (rejim === "m" ? ["Majmua asosida 10 ta test tuz", "1-mavzuning texnologik xaritasini tahlil qil"] : ["1-mavzuni qisqacha tushuntir", "Majmuadagi asosiy atamalar"]) : [];
+    tez.innerHTML = MT.concat(R[rejim].tez).map(function (t) { return '<button type="button">' + esc(t) + "</button>"; }).join("");
     Array.prototype.forEach.call(tez.querySelectorAll("button"), function (b) { b.addEventListener("click", function () { yubor(b.textContent); }); });
     tez.hidden = H.length > 0;
     setFace(H.length ? (H[H.length - 1].m || "neutral") : "happy");
@@ -147,11 +197,18 @@
     log.insertAdjacentHTML("beforeend", '<div class="kv-m u">' + esc(t).replace(/\n/g, "<br>") + '</div><div class="kv-m k kv-w"><span></span><span></span><span></span></div>');
     log.scrollTop = log.scrollHeight; setFace("think"); band = true;
     var tarix = H.slice(-9, -1).map(function (x) { return (x.r === "u" ? (rejim === "m" ? "O‘qituvchi" : "O‘quvchi") : "Kuvi") + ": " + x.t; }).join("\n\n");
-    var prompt = "Kontekst: " + ctxMatn() + (tarix ? "\n\nOldingi suhbat:\n" + tarix : "") + "\n\nYangi xabar: " + t;
-    var ai = window.t1Bulut ? t1Bulut.ai(prompt, { sys: R[rejim].sys }) : Promise.reject(new Error("bulut moduli yuklanmadi"));
+    var ai = parchalar(t + " " + (H.length > 2 ? H[H.length - 3].t : ""))["catch"](function () { return null; }).then(function (P) {
+      var pr = "";
+      if (P) {
+        BETMAP = {};
+        pr = "\n\nMajmua parchalari (o‘qituvchi joylagan majmuadan, bet raqamlari bilan):\n" + P.map(function (x) { BETMAP[x.b] = BETMAP[x.b] || x.m; return "[" + x.b + "-bet] " + x.t.replace(/\s+/g, " ").trim(); }).join("\n");
+      }
+      var prompt = "Kontekst: " + ctxMatn() + (tarix ? "\n\nOldingi suhbat:\n" + tarix : "") + pr + "\n\nYangi xabar: " + t;
+      return window.t1Bulut ? t1Bulut.ai(prompt, { sys: R[rejim].sys }) : Promise.reject(new Error("bulut moduli yuklanmadi"));
+    });
     ai.then(function (javob) {
       var x = tegsiz(javob); H = ss(KEY()) || []; H.push({ r: "k", t: x.t.trim(), m: x.mood }); ss(KEY(), H.slice(-24));
-      var w = log.querySelector(".kv-w"); if (w) w.outerHTML = '<div class="kv-m k">' + md(x.t) + "</div>";
+      var w = log.querySelector(".kv-w"); if (w) w.outerHTML = '<div class="kv-m k">' + betlar(md(x.t)) + "</div>";
       setFace(x.mood); gapir(x.t);
     })["catch"](function (e) {
       var w = log.querySelector(".kv-w"), m = window.t1Bulut ? t1Bulut.uzXato(e) : String(e && e.message || e);
@@ -169,6 +226,7 @@
     } catch (e) {}
   }
 
+  document.addEventListener("t1-majmua", function () { if (pan && !pan.hidden) chiz(); });
   function go() {
     if (window.kaYuz) return boot();
     var s = document.createElement("script"); s.src = KUVI_JS; s.async = true;

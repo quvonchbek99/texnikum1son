@@ -144,10 +144,17 @@
       '<p><b>Fayllarni shu yerga tashlang</b> yoki bosib tanlang</p><p class="small muted">ZIP arxiv, .docx, .pdf, .pptx, .xlsx, .html (RTR), rasm va video. Bitta fayl Drive’ga 25 MB gacha.</p>' +
       '<input type="file" id="fi" multiple hidden accept=".zip,.docx,.doc,.pdf,.pptx,.ppt,.xlsx,.xls,.txt,.md,.csv,.html,.htm,.jpg,.jpeg,.png,.svg,.webp,.gif,.mp4,.webm,.mp3"></label>' +
       '<div id="jar" style="margin-top:14px" hidden><div class="prog"><i></i></div><div class="log" style="margin-top:10px"></div></div></section>' +
+      '<section class="card" id="s-ag" style="margin-top:16px"><h2>Katta majmua — Kuvi AI agent</h2>' +
+      '<p class="small muted">To‘liq o‘quv-uslubiy majmuani (800 betgacha, 400 MB gacha) bitta faylda yuklang: Word, PDF, PowerPoint yoki ZIP. Kuvi agent uni PDF’ga aylantiradi, TMR, texnologik xaritalar, ma’ruzalar, amaliy ishlar va testlarga ajratadi hamda yuqorida tanlangan fan sahifasiga joylaydi. Odatda 10–20 daqiqada tayyor bo‘ladi; sahifada xuddi PDF kabi betma-bet ochiladi, Kuvi AI esa shu majmua bo‘yicha savollarga javob beradi.</p>' +
+      '<label class="drop" id="ag-drop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg>' +
+      '<p><b>Majmua faylini shu yerga tashlang</b> yoki bosib tanlang</p><p class="small muted">.docx, .pdf, .pptx, .zip … · 400 MB gacha · fayl bo‘laklab yuklanadi</p>' +
+      '<input type="file" id="ag-fi" multiple hidden accept=".docx,.doc,.pdf,.pptx,.ppt,.odt,.odp,.rtf,.xlsx,.xls,.zip"></label>' +
+      '<div id="ag-jar" style="margin-top:12px" hidden><div class="prog"><i></i></div><p class="small" data-agm style="margin-top:6px"></p></div>' +
+      '<h3 style="margin-top:18px">Agent navbati</h3><div id="ag-list"><p class="muted">Yuklanmoqda…</p></div></section>' +
       '<section class="card" id="s3" style="margin-top:16px" hidden></section>' +
       '<section class="card" id="s4" style="margin-top:16px"><h2>Mening materiallarim</h2><div id="mening"><p class="muted">Yuklanmoqda…</p></div></section>';
     $("#chiq").addEventListener("click", chiqish);
-    tanlov(); dropzona(); mening();
+    tanlov(); dropzona(); mening(); agentBolim();
   }
 
   function tanlov() {
@@ -417,6 +424,95 @@
       return fetch(SOZ.drive_url, { method: "POST", body: JSON.stringify({ amal: "yukla", token: token, yonalish: meta.yn, fan: meta.fn, sem: meta.sem, oqituvchi: meta.fio, nom: x.nom, yol: x.yol, mime: x.blob.type || "", b64: d }) });
     }).then(function (r) { return r.json(); }).then(function (j) { if (!j.ok) throw new Error(j.xato || "Drive xatosi"); return j.id; });
   }
+
+  /* ================= Katta majmua: bo'laklab Drive'ga yuklash → t1_navbat → Kuvi agent (GitHub Actions) ================= */
+  var AG_MAX = 400 * 1024 * 1024, agTm = 0;
+  function agPost(o) {
+    return fetch(SOZ.drive_url, { method: "POST", body: JSON.stringify(o) }).then(function (r) { return r.json(); })
+      .then(function (j) { if (!j.ok) throw new Error(j.xato || "Drive xatosi"); return j; });
+  }
+  function agentBolim() {
+    var d = $("#ag-drop"), fi = $("#ag-fi"); if (!d) return;
+    ["dragenter", "dragover"].forEach(function (ev) { d.addEventListener(ev, function (e) { e.preventDefault(); d.classList.add("over"); }); });
+    ["dragleave", "drop"].forEach(function (ev) { d.addEventListener(ev, function (e) { e.preventDefault(); d.classList.remove("over"); }); });
+    d.addEventListener("drop", function (e) { if (e.dataTransfer.files.length) agentYukla(e.dataTransfer.files); });
+    fi.addEventListener("change", function () { if (fi.files.length) agentYukla(fi.files); fi.value = ""; });
+    agentRoyxat();
+  }
+  function agentYukla(list) {
+    var jar = $("#ag-jar"), m = $("[data-agm]", jar), bar = $(".prog i", jar);
+    function holat(t, p) { jar.hidden = false; m.innerHTML = t; if (p != null) bar.style.width = Math.round(p * 100) + "%"; }
+    if (!SOZ.drive_url) { holat('<span class="bad">Fayllar ombori (Google Drive) hali ulanmagan — admin «Admin panel»da sozlashi kerak.</span>', 0); return; }
+    var y = yon(), f = fan(), sem = $("#s").value, fio = (PROF && PROF.fio) || USER.displayName || USER.email;
+    var arr = Array.prototype.slice.call(list), F = B.F;
+    arr.reduce(function (p, file, k) {
+      return p.then(function () {
+        var tag = (arr.length > 1 ? (k + 1) + "/" + arr.length + ": " : "") + esc(file.name);
+        if (file.size > AG_MAX) throw new Error(file.name + " — 400 MB dan katta");
+        holat(tag + " — Drive’da joy ochilmoqda…", 0);
+        return USER.getIdToken().then(function (token) {
+          return agPost({ amal: "boshla", token: token, yonalish: y.qisqa, fan: f.nomi, sem: sem, oqituvchi: fio, nom: file.name, mime: file.type || "application/octet-stream", hajm: file.size });
+        }).then(function (j) {
+          var BO = j.bolak || 8388608, bosh = 0, t0 = Date.now();
+          function navbatdagi(urinish) {
+            var qism = file.slice(bosh, Math.min(bosh + BO, file.size));
+            return Promise.all([b64(qism), USER.getIdToken()]).then(function (r) {
+              return agPost({ amal: "bolak", token: r[1], sessiya: j.sessiya, bosh: bosh, b64: r[0] });
+            }).then(function (x) {
+              bosh += qism.size;
+              var tz = (Date.now() - t0) / 1000, tezlik = bosh / Math.max(1, tz), qoldi = (file.size - bosh) / Math.max(1, tezlik);
+              holat(tag + " — yuklanmoqda: " + kb(bosh) + " / " + kb(file.size) + (bosh < file.size ? " · ~" + Math.ceil(qoldi / 60) + " daq qoldi" : ""), bosh / file.size);
+              if (x.tugadi) return x;
+              return navbatdagi(0);
+            }, function (e) {
+              if (urinish < 3 && !/sessiya/i.test(String(e && e.message))) return new Promise(function (ok) { setTimeout(ok, 2000 * (urinish + 1)); }).then(function () { return navbatdagi(urinish + 1); });
+              throw e;
+            });
+          }
+          return navbatdagi(0);
+        }).then(function (x) {
+          holat(tag + " — agent navbatiga yozilmoqda…", 1);
+          var ext = (/\.([a-z0-9]+)$/i.exec(file.name) || [])[1] || "";
+          return F.addDoc(F.collection(B.db, "t1_navbat"), {
+            yonalish: y.id, fan: f.id, sem: String(sem), nom: file.name.slice(0, 200), ext: ext.toLowerCase(), hajm: file.size, drive_id: x.id,
+            uid: USER.uid, oqituvchi: String(fio).slice(0, 80), yonalish_nomi: String(y.qisqa || "").slice(0, 120), fan_nomi: String(f.nomi || "").slice(0, 160), yaratildi: F.serverTimestamp()
+          });
+        });
+      });
+    }, Promise.resolve()).then(function () {
+      holat("✓ Yuklandi va agent navbatiga qo‘yildi. Kuvi agent 10–20 daqiqada bo‘laklab, fan sahifasiga joylaydi — holatini quyida ko‘rasiz.", 1);
+      agentRoyxat();
+    })["catch"](function (e) { holat('<span class="bad">Xato: ' + esc(xato(e)) + "</span>"); });
+  }
+  function agentRoyxat() {
+    var box = $("#ag-list"), F = B.F; if (!box) return;
+    clearTimeout(agTm);
+    Promise.all([
+      F.getDocs(F.query(F.collection(B.db, "t1_navbat"), F.where("uid", "==", USER.uid))),
+      fetch(ROOT + "agent/holat.json?t=" + Date.now()).then(function (r) { return r.ok ? r.json() : {}; })["catch"](function () { return {}; })
+    ]).then(function (r) {
+      var a = [], H = r[1], kutish = false; r[0].forEach(function (d) { var x = d.data(); x.id = d.id; a.push(x); });
+      a.sort(function (p, q) { return ((q.yaratildi && q.yaratildi.seconds) || 0) - ((p.yaratildi && p.yaratildi.seconds) || 0); });
+      if (!a.length) { box.innerHTML = '<p class="muted">Hali katta majmua yuborilmagan.</p>'; return; }
+      box.innerHTML = '<div class="tbl-w"><table><thead><tr><th>Fayl</th><th>Fan</th><th>Holat</th><th></th></tr></thead><tbody>' + a.map(function (x) {
+        var h = H[x.id], url = ROOT + "yonalish/" + x.yonalish + "/fan/" + x.fan + "/?sem=" + x.sem + "#oum", t;
+        if (!h) { kutish = true; t = '<span class="tag w">navbatda</span> <span class="small muted">agent 10 daqiqada bir tekshiradi</span>'; }
+        else if (h.holat === "tayyor") t = '<span class="tag ok">tayyor</span> <span class="small">' + h.betlar + " bet, " + h.qismlar + ' qism · <a href="' + url + '" target="_blank">fan sahifasida ochish</a></span>';
+        else t = '<span class="tag">xato</span> <span class="small">' + esc(h.xabar || "") + "</span>";
+        return "<tr><td>" + esc(x.nom) + ' <span class="small muted">' + kb(x.hajm) + "</span></td><td>" + esc(x.fan_nomi || x.fan) + ' <span class="small muted">' + esc(x.sem) + "-sem.</span></td><td>" + t +
+          '</td><td><button class="btn ghost sm" data-agx="' + x.id + '">O‘chirish</button></td></tr>';
+      }).join("") + "</tbody></table></div>" + '<p class="small muted" style="margin-top:8px">O‘chirsangiz, agent bu majmuani fan sahifasidan ham olib tashlaydi.</p>';
+      $$("[data-agx]", box).forEach(function (b) {
+        b.addEventListener("click", function () {
+          if (!confirm("Bu majmua navbatdan va fan sahifasidan o‘chirilsinmi?")) return;
+          b.disabled = true;
+          F.deleteDoc(F.doc(B.db, "t1_navbat", b.getAttribute("data-agx"))).then(agentRoyxat)["catch"](function (e) { alert(xato(e)); b.disabled = false; });
+        });
+      });
+      if (kutish) agTm = setTimeout(agentRoyxat, 60000);
+    })["catch"](function (e) { box.innerHTML = '<p class="note bad">' + esc(xato(e)) + "</p>"; });
+  }
+
   function joyla() {
     var btn = $("#joyla"), h = $("#joy-holat"), F = B.F, y = yon(), f = fan(), sem = $("#s").value, fio = (PROF && PROF.fio) || USER.displayName || USER.email;
     var L = ISH.fayllar.filter(function (x) { return x.joyla && x.turi !== "rtr"; });
