@@ -17,18 +17,21 @@
       allow read: if true;
       allow write: if isAdmin();
     }
-    // O'qituvchilar: o'zi ariza yozadi (holat faqat "kutilmoqda"), tasdiqlash faqat adminda
+    // O'qituvchilar: avtomatik ro'yxat — kirgan foydalanuvchi o'z profilini darhol "tasdiqlangan" holatda ochadi;
+    // admin bloklashi mumkin ("rad") va bloklangan foydalanuvchi holatini o'zi o'zgartira olmaydi.
     match /t1_oqituvchilar/{uid} {
       allow read: if signedIn() && (request.auth.uid == uid || isAdmin());
       allow create: if signedIn() && request.auth.uid == uid
         && request.resource.data.keys().hasOnly(['fio', 'email', 'telefon', 'fanlar_izoh', 'holat', 'yaratildi'])
-        && request.resource.data.holat == 'kutilmoqda'
+        && request.resource.data.holat in ['kutilmoqda', 'tasdiqlangan']
         && str(request.resource.data.fio, 80)
         && request.resource.data.telefon is string && request.resource.data.telefon.size() <= 20
         && request.resource.data.fanlar_izoh is string && request.resource.data.fanlar_izoh.size() <= 300;
       allow update: if isAdmin()
         || (signedIn() && request.auth.uid == uid && request.resource.data.holat == resource.data.holat
-            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['fio', 'telefon', 'fanlar_izoh']));
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['fio', 'telefon', 'fanlar_izoh']))
+        || (signedIn() && request.auth.uid == uid && resource.data.holat == 'kutilmoqda' && request.resource.data.holat == 'tasdiqlangan'
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['holat']));
       allow delete: if isAdmin();
     }
     // Materiallar: hamma "joylangan"larini o'qiydi; tasdiqlangan o'qituvchi faqat o'zinikini yozadi

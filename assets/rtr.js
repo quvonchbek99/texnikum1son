@@ -26,17 +26,20 @@
   function turi(t) { return /amaliy/i.test(t.turi) ? "A" : /lab/i.test(t.turi) ? "L" : "N"; }
 
   /* ---------- TMR ---------- */
-  function tmr(D, plan) {
-    var T = D.topics || [], M = D.mustaqil || [], sum = 0, nz = 0, am = 0;
-    var rows = T.map(function (t, i) {
+  function tmr(D, plan, sel) {
+    var T0 = D.topics || [], hammasi = !sel || sel.length === T0.length, sum = 0, nz = 0, am = 0;
+    var T = hammasi ? T0 : sel.map(function (i) { return T0[i]; }), LOS = {};
+    T.forEach(function (t) { LOS[t.lo] = 1; });
+    var M = (D.mustaqil || []).filter(function (m) { return hammasi || !m.lo || LOS[m.lo]; });
+    var rows = T.map(function (t, k) { var i = hammasi ? k : sel[k];
       var s = +t.soat || 0; sum += s; if (turi(t) === "A") am += s; else nz += s;
       var mi = M.filter(function (m) { return m.lo === t.lo; }).map(function (m) { return m.id; });
       return "<tr><td class=n>" + (i + 1) + "</td><td>" + esc(t.nomi) + '</td><td><span class="tag ' + (turi(t) === "A" ? "a" : "u") + '">' + esc(t.turi) + "</span></td><td class=n>" + s +
         "</td><td>" + esc(t.lo || "") + "</td><td></td><td></td></tr>";
     }).join("");
     var ms = M.reduce(function (a, m) { return a + (+m.soat || 0); }, 0);
-    var aud = plan && plan.auditoriya, ok = aud ? aud === sum : null;
-    var chk = aud ? '<p class="note ' + (ok ? "ok" : "bad") + '">' + (ok ? "✓ Soatlar o‘quv reja bilan mos: " : "✗ Soatlar o‘quv rejaga mos emas: ") +
+    var aud = hammasi && plan && plan.auditoriya, ok = aud ? aud === sum : null;
+    var chk = !hammasi ? '<p class="note">Tanlangan ' + T.length + " ta mavzu: <b>" + sum + "</b> soat (nazariy " + nz + ", amaliy " + am + "). Dars raqamlari to‘liq TMR bo‘yicha.</p>" : aud ? '<p class="note ' + (ok ? "ok" : "bad") + '">' + (ok ? "✓ Soatlar o‘quv reja bilan mos: " : "✗ Soatlar o‘quv rejaga mos emas: ") +
       "TMR — <b>" + sum + "</b> soat (nazariy " + nz + ", amaliy " + am + "), o‘quv rejada auditoriya — <b>" + aud + "</b> soat" + (plan.jami ? ", jami " + plan.jami + " soat" : "") + ".</p>" : "";
     var mrows = M.map(function (m, i) { return "<tr><td class=n>" + (i + 1) + "</td><td>" + esc(m.nomi) + "</td><td>" + esc(m.lo || "") + "</td><td class=n>" + esc(m.soat) + "</td><td>" + esc(m.topshirish_shakli || "") + "</td></tr>"; }).join("");
     return chk + '<div class="tbl-w"><table><thead><tr><th class=n>№</th><th>Mavzu (dars)</th><th>Turi</th><th class=n>Soat</th><th>O‘qitish natijasi</th><th>Reja sanasi</th><th>O‘tilgan sana</th></tr></thead><tbody>' +
@@ -130,25 +133,134 @@
       (D.glossariy || []).map(function (g) { return "<tr data-g=\"" + esc((g.atama + " " + g.izoh).toLowerCase()) + "\"><td><b>" + esc(g.atama) + "</b></td><td>" + md(g.izoh) + "</td><td>" + esc((g.mavzular || []).join(", ")) + "</td></tr>"; }).join("") + "</tbody></table></div>";
   }
 
-  /* ---------- O'UM: hammasi bitta hujjatda ---------- */
-  function oum(D, o) {
-    var m = D.meta || {}, T = D.topics || [], base = o.base || "";
-    var h = '<div style="text-align:center;padding:30mm 0 20mm"><p>' + esc(m.muassasa || "Toshkent tuman 1-son texnikumi") + "</p><h1 style=\"font-size:26pt\">" + esc(m.modul || o.fan || "") +
-      "</h1><p>fanidan</p><h2>O‘QUV-USLUBIY MAJMUA</h2><p>" + esc((m.kasb_kod ? m.kasb_kod + " — " : "") + (m.kasb || o.yonalish || "")) + "</p><p>Tuzuvchi: " + esc(m.muallif || "________________") +
+  /* ---------- O'UM yig'uvchi: bo'limlar va modul/mavzular tanlanadi; bitta hujjat yoki qismlarga bo'lingan ZIP ---------- */
+  var BOLIM = [["titul", "Titul varag‘i"], ["annot", "Annotatsiya"], ["tmr", "Taqvim-mavzu reja (TMR)"], ["xarita", "Texnologik xaritalar"], ["maruza", "Ma’ruza matnlari"],
+    ["amaliy", "Amaliy mashg‘ulotlar"], ["mustaqil", "Mustaqil ta’lim"], ["nazorat", "Mavzu testlari"], ["yakuniy", "Yakuniy nazorat"], ["glossariy", "Glossariy"], ["adab", "Adabiyotlar"]];
+  function oraliq(D, sel) {
+    var T = D.topics || [];
+    if (!sel || sel.length === T.length) return "";
+    return sel.map(function (i) { return T[i].id; }).join(", ");
+  }
+  function titul(D, o, sel) {
+    var m = D.meta || {}, or = oraliq(D, sel);
+    return '<div class="titul" style="text-align:center;padding:30mm 0 20mm"><p>' + esc(m.muassasa || "Toshkent tuman 1-son texnikumi") + "</p><h1 style=\"font-size:26pt\">" + esc(m.modul || o.fan || "") +
+      "</h1><p>fanidan</p><h2>O‘QUV-USLUBIY MAJMUA</h2>" + (or ? "<p>(tanlangan mavzular: " + esc(or) + ")</p>" : "") + "<p>" + esc((m.kasb_kod ? m.kasb_kod + " — " : "") + (m.kasb || o.yonalish || "")) + "</p><p>Tuzuvchi: " + esc(m.muallif || "________________") +
       "</p><p>Ko‘rib chiqildi: metodik birlashma majlisi, bayonnoma № ___ «___» ________ 2026-y.</p><p>Tasdiqlandi: o‘quv ishlari bo‘yicha direktor o‘rinbosari ________</p><p>2026</p></div>";
-    h += "<h2>1. Annotatsiya</h2>" + annot(D);
-    h += "<h2>2. Taqvim-mavzu reja</h2>" + tmr(D, o.plan);
-    h += "<h2>3. Texnologik xaritalar</h2>" + T.map(function (t, i) { return "<h3>" + (i + 1) + ". " + esc(t.nomi) + "</h3>" + xarita(t, T[i - 1], i); }).join("");
-    h += "<h2>4. Ma’ruza matnlari</h2>" + T.filter(function (t) { return turi(t) === "N"; }).map(function (t) { return "<h3>" + esc(t.id) + ". " + esc(t.nomi) + "</h3>" + maruza(t, base); }).join("");
-    h += "<h2>5. Amaliy mashg‘ulotlar</h2>" + T.filter(function (t) { return turi(t) === "A"; }).map(function (t) { return "<h3>" + esc(t.id) + ". " + esc(t.nomi) + "</h3>" + amaliy(t); }).join("");
-    h += "<h2>6. Mustaqil ta’lim</h2>" + (D.mustaqil || []).map(function (x) { return "<h3>" + esc(x.id) + ". " + esc(x.nomi) + "</h3>" + mustaqil(x); }).join("");
-    h += "<h2>7. Nazorat materiallari</h2>" + T.map(function (t) { return "<h3>" + esc(t.id) + " — test</h3>" + test(t.test, false) + "<p class=small><b>Javoblar:</b> " + kalitlar(t.test) + "</p>"; }).join("");
+  }
+  function qism(D, o, key, sel) {
+    var T = D.topics || [], base = o.base || "", I = sel || T.map(function (_, i) { return i; }), hammasi = I.length === T.length;
+    var LOS = {}, IDS = {}; I.forEach(function (i) { LOS[T[i].lo] = 1; IDS[T[i].id] = 1; });
     var Y = D.yakuniy || {};
-    h += "<h3>Yakuniy nazorat — test</h3>" + test(Y.test, false) + "<p class=small><b>Javoblar:</b> " + kalitlar(Y.test) + "</p>";
-    if ((Y.amaliy_biletlar || []).length) h += "<h3>Yakuniy nazorat — amaliy biletlar</h3>" + Y.amaliy_biletlar.map(function (b, k) { return "<p><b>" + (k + 1) + "-bilet (" + esc(b.lo) + ", " + esc(b.vaqt || "") + "):</b> " + md(b.topshiriq) + "</p>" + baho(b.baholash); }).join("");
-    h += "<h2>8. Glossariy</h2>" + tbl(["Atama", "Izoh"], (D.glossariy || []).map(function (g) { return [g.atama, g.izoh]; }));
-    h += "<h2>9. Adabiyotlar</h2>" + adab(D);
+    switch (key) {
+      case "titul": return titul(D, o, sel);
+      case "annot": return annot(D);
+      case "tmr": return I.length ? tmr(D, o.plan, hammasi ? null : I) : "";
+      case "xarita": return I.map(function (i) { return "<h3>" + (i + 1) + "-dars. " + esc(T[i].nomi) + "</h3>" + xarita(T[i], T[i - 1], i); }).join("");
+      case "maruza": return I.filter(function (i) { return turi(T[i]) === "N"; }).map(function (i) { return "<h3>" + esc(T[i].id) + ". " + esc(T[i].nomi) + "</h3>" + maruza(T[i], base); }).join("");
+      case "amaliy": return I.filter(function (i) { return turi(T[i]) === "A"; }).map(function (i) { return "<h3>" + esc(T[i].id) + ". " + esc(T[i].nomi) + "</h3>" + amaliy(T[i]); }).join("");
+      case "mustaqil": return (D.mustaqil || []).filter(function (x) { return hammasi || !x.lo || LOS[x.lo]; }).map(function (x) { return "<h3>" + esc(x.id) + ". " + esc(x.nomi) + "</h3>" + mustaqil(x); }).join("");
+      case "nazorat": return I.filter(function (i) { return (T[i].test || []).length; }).map(function (i) { return "<h3>" + esc(T[i].id) + ". " + esc(T[i].nomi) + " — test</h3>" + test(T[i].test, false) + "<p class=small><b>Javoblar:</b> " + kalitlar(T[i].test) + "</p>"; }).join("");
+      case "yakuniy": return ((Y.test || []).length ? "<h3>Yakuniy nazorat — test</h3>" + test(Y.test, false) + "<p class=small><b>Javoblar:</b> " + kalitlar(Y.test) + "</p>" : "") +
+        ((Y.amaliy_biletlar || []).length ? "<h3>Yakuniy nazorat — amaliy biletlar</h3>" + Y.amaliy_biletlar.map(function (b, k) { return "<p><b>" + (k + 1) + "-bilet (" + esc(b.lo) + ", " + esc(b.vaqt || "") + "):</b> " + md(b.topshiriq) + "</p>" + baho(b.baholash); }).join("") : "");
+      case "glossariy": var G = (D.glossariy || []).filter(function (g) { return hammasi || !(g.mavzular || []).length || g.mavzular.some(function (id) { return IDS[id]; }); });
+        return G.length ? tbl(["Atama", "Izoh"], G.map(function (g) { return [g.atama, g.izoh]; })) : "";
+      case "adab": return adab(D);
+    }
+    return "";
+  }
+  // Bitta umumiy hujjat
+  function oum(D, o, bol, sel) {
+    bol = bol || BOLIM.map(function (b) { return b[0]; });
+    var h = "", n = 0;
+    BOLIM.forEach(function (b) {
+      if (bol.indexOf(b[0]) < 0) return;
+      var x = qism(D, o, b[0], sel); if (!x) return;
+      if (b[0] === "titul") { h += x; return; }
+      n++; h += '<h2 class="yb">' + n + ". " + b[1] + "</h2>" + x;
+    });
     return h;
+  }
+  // Qismlarga bo'lib: [{nom, html}]
+  function qismlar(D, o, bol, sel, rejim) {
+    var T = D.topics || [], I = sel || T.map(function (_, i) { return i; }), out = [], n = 0, fan = (D.meta && D.meta.modul) || o.fan || "Fan";
+    if (rejim === "mavzu") {
+      I.forEach(function (i) {
+        var t = T[i], h = "";
+        if (bol.indexOf("xarita") >= 0) h += "<h2>Texnologik xarita</h2>" + xarita(t, T[i - 1], i);
+        if (bol.indexOf("maruza") >= 0 && turi(t) === "N") h += "<h2>Ma’ruza matni</h2>" + maruza(t, o.base || "");
+        if (bol.indexOf("amaliy") >= 0 && turi(t) === "A") h += "<h2>Amaliy mashg‘ulot</h2>" + amaliy(t);
+        if (bol.indexOf("nazorat") >= 0 && (t.test || []).length) h += "<h2>Test</h2>" + test(t.test, false) + "<p class=small><b>Javoblar:</b> " + kalitlar(t.test) + "</p>";
+        if (h) out.push({ nom: t.id + " " + t.nomi, html: "<p>" + esc(fan) + " · " + (i + 1) + "-dars · " + esc(t.turi) + " · " + esc(t.lo || "") + "</p><h1>" + esc(t.id) + ". " + esc(t.nomi) + "</h1>" + h });
+      });
+      ["titul", "annot", "tmr", "mustaqil", "yakuniy", "glossariy", "adab"].forEach(function (k) {
+        if (bol.indexOf(k) < 0) return; var x = qism(D, o, k, sel); if (!x) return;
+        var nm = BOLIM.filter(function (b) { return b[0] === k; })[0][1];
+        out.push({ nom: "00 " + nm, html: (k === "titul" ? "" : "<h1>" + esc(nm) + "</h1>") + x });
+      });
+      return out;
+    }
+    BOLIM.forEach(function (b) {
+      if (bol.indexOf(b[0]) < 0) return;
+      var x = qism(D, o, b[0], sel); if (!x) return;
+      n++; out.push({ nom: (n < 10 ? "0" : "") + n + " " + b[1], html: (b[0] === "titul" ? "" : "<h1>" + esc(b[1]) + "</h1><p>" + esc(fan) + "</p>") + x });
+    });
+    return out;
+  }
+  function yigUI(D, o) {
+    var T = D.topics || [], m = D.meta || {}, NAT = {}, grp = [], gi = {};
+    (m.natijalar || []).forEach(function (x) { NAT[x.kod] = x.matn; });
+    T.forEach(function (t, i) { var k = t.lo || "Mavzular"; if (!(k in gi)) { gi[k] = grp.length; grp.push({ k: k, L: [] }); } grp[gi[k]].L.push(i); });
+    return '<div class="yig no-print"><div class="yig-h"><h3>Majmuani yig‘ish</h3><p class="small muted">Kerakli bo‘limlar va modul/mavzularni belgilang. «Bitta hujjat» — to‘liq yoki tanlangan qismlardan bitta umumiy majmua; «qismlarga bo‘lib» — har biri alohida Word fayl (ZIP arxivda).</p></div>' +
+      '<div class="yig-g"><fieldset><legend>1. Bo‘limlar</legend><div class="yig-tz"><button type="button" class="kv-l" data-yb="1">Hammasi</button><button type="button" class="kv-l" data-yb="0">Hech biri</button></div>' +
+      BOLIM.map(function (b) { return '<label class="yig-c"><input type="checkbox" data-b="' + b[0] + '" checked> ' + b[1] + "</label>"; }).join("") + "</fieldset>" +
+      '<fieldset><legend>2. Modullar (o‘qitish natijalari) va mavzular</legend><div class="yig-tz"><button type="button" class="kv-l" data-yt="all">Barchasi</button><button type="button" class="kv-l" data-yt="N">Faqat nazariy</button><button type="button" class="kv-l" data-yt="A">Faqat amaliy</button><button type="button" class="kv-l" data-yt="0">Tozalash</button></div>' +
+      grp.map(function (g) {
+        return '<details class="yig-m"><summary><label><input type="checkbox" data-lo="' + esc(g.k) + '" checked> <b>' + esc(g.k) + "</b></label> <span class=\"muted small\">" + (NAT[g.k] ? "— " + esc(NAT[g.k]) + " " : "") + "(" + g.L.length + " ta mavzu)</span></summary><div class=\"yig-ml\">" +
+          g.L.map(function (i) { var t = T[i]; return '<label class="yig-c"><input type="checkbox" data-ti="' + i + '" data-lo-of="' + esc(g.k) + '" data-tt="' + turi(t) + '" checked> <span class="no">' + esc(t.id) + "</span> " + esc(t.nomi) + ' <span class="tag ' + (turi(t) === "A" ? "a" : "u") + '">' + esc(t.turi) + "</span></label>"; }).join("") + "</div></details>";
+      }).join("") + "</fieldset></div>" +
+      '<fieldset class="yig-r"><legend>3. Qanday chiqarilsin</legend><label class="yig-c"><input type="radio" name="yigc" value="bir" checked> Bitta umumiy hujjat</label><label class="yig-c"><input type="radio" name="yigc" value="bolim"> Qismlarga bo‘lib — har bo‘lim alohida fayl (ZIP)</label><label class="yig-c"><input type="radio" name="yigc" value="mavzu"> Mavzular bo‘yicha — har mavzu alohida fayl (ZIP)</label></fieldset>' +
+      '<p class="small" data-ys></p><div class="toolbar"><button type="button" class="btn" data-yw>Yuklab olish</button><button type="button" class="btn ghost" data-yp>Chop etish / PDF</button>' +
+      (o.paket ? '<a class="btn ghost" target="_blank" rel="noopener" href="' + esc(o.paket) + '">Interaktiv resursni ochish</a>' : "") + "</div></div>";
+  }
+  function yigBog(box, D, o) {
+    var T = D.topics || [], $$ = function (q) { return Array.prototype.slice.call(box.querySelectorAll(q)); };
+    function bol() { return $$("[data-b]:checked").map(function (c) { return c.getAttribute("data-b"); }); }
+    function sel() { return $$("[data-ti]:checked").map(function (c) { return +c.getAttribute("data-ti"); }).sort(function (a, b) { return a - b; }); }
+    function rej() { var r = box.querySelector('[name="yigc"]:checked'); return r ? r.value : "bir"; }
+    function yangila() {
+      $$("[data-lo]").forEach(function (g) {
+        var k = g.getAttribute("data-lo"), L = $$('[data-lo-of="' + k.replace(/"/g, "") + '"]'), c = L.filter(function (x) { return x.checked; }).length;
+        g.checked = c === L.length && c > 0; g.indeterminate = c > 0 && c < L.length;
+      });
+      var S = sel(), B = bol(), soat = S.reduce(function (a, i) { return a + (+T[i].soat || 0); }, 0);
+      box.querySelector("[data-ys]").innerHTML = "Tanlandi: <b>" + B.length + "</b> ta bo‘lim, <b>" + S.length + "</b> / " + T.length + " ta mavzu (" + soat + " soat)." +
+        (rej() !== "bir" ? " Chop etishda tanlanganlar bitta hujjat bo‘lib chiqadi." : "");
+      box.querySelector("[data-yw]").textContent = rej() === "bir" ? "Word (.doc) yuklab olish" : "ZIP yuklab olish";
+    }
+    box.addEventListener("change", function (e) {
+      var t = e.target;
+      if (t.hasAttribute("data-lo")) $$('[data-lo-of="' + t.getAttribute("data-lo").replace(/"/g, "") + '"]').forEach(function (x) { x.checked = t.checked; });
+      yangila();
+    });
+    $$("[data-yb]").forEach(function (b) { b.addEventListener("click", function () { var v = b.getAttribute("data-yb") === "1"; $$("[data-b]").forEach(function (c) { c.checked = v; }); yangila(); }); });
+    $$("[data-yt]").forEach(function (b) { b.addEventListener("click", function () { var v = b.getAttribute("data-yt"); $$("[data-ti]").forEach(function (c) { c.checked = v === "all" || c.getAttribute("data-tt") === v; }); yangila(); }); });
+    $$("summary label").forEach(function (l) { l.addEventListener("click", function (e) { e.stopPropagation(); }); });
+    function tek() {
+      if (!bol().length) { alert("Kamida bitta bo‘limni belgilang."); return false; }
+      if (!sel().length && bol().some(function (k) { return /^(tmr|xarita|maruza|amaliy|nazorat)$/.test(k); }) && !bol().some(function (k) { return /^(titul|annot|mustaqil|yakuniy|glossariy|adab)$/.test(k); })) { alert("Kamida bitta mavzuni belgilang."); return false; }
+      return true;
+    }
+    var fan = (D.meta && D.meta.modul) || o.fan || "Fan", qisman = function () { return sel().length < T.length; };
+    box.querySelector("[data-yp]").addEventListener("click", function () { if (tek()) chop(oum(D, o, bol(), sel())); });
+    box.querySelector("[data-yw]").addEventListener("click", function () {
+      if (!tek()) return;
+      var nom = fan + " — O‘UM" + (qisman() ? " (tanlangan qismlar)" : "");
+      if (rej() === "bir") { word(oum(D, o, bol(), sel()), nom); return; }
+      var btn = this, eski = btn.textContent; btn.disabled = true; btn.textContent = "Tayyorlanmoqda…";
+      zipla(qismlar(D, o, bol(), sel(), rej()), nom + (rej() === "mavzu" ? " — mavzular bo‘yicha" : " — qismlar"))["catch"](function (e) { alert("ZIP tayyorlanmadi: " + (e && e.message || e)); })
+        .then(function () { btn.disabled = false; btn.textContent = eski; });
+    });
+    yangila();
   }
 
   function render(D, o) {
@@ -170,13 +282,9 @@
     fill("glossariy", src + gloss(D), (D.glossariy || []).length);
     var g = R.querySelector("[data-gl]");
     if (g) g.addEventListener("input", function () { var v = g.value.toLowerCase().trim(); Array.prototype.forEach.call(R.querySelectorAll("tr[data-g]"), function (tr) { tr.hidden = v && tr.getAttribute("data-g").indexOf(v) < 0; }); });
-    fill("oum", src + annot(D) + "<h3>Adabiyotlar</h3>" + adab(D) +
-      '<div class="toolbar no-print" style="margin-top:18px"><button class="btn" data-oum-print>O‘UMni chop etish / PDF</button><button class="btn ghost" data-oum-word>Word (.doc) yuklab olish</button>' +
-      (o.paket ? '<a class="btn ghost" target="_blank" rel="noopener" href="' + esc(o.paket) + '">Interaktiv resursni ochish</a>' : "") + "</div>" +
+    fill("oum", src + yigUI(D, o) + '<h3 style="margin-top:26px">Annotatsiya</h3>' + annot(D) + "<h3>Adabiyotlar</h3>" + adab(D) +
       '<p class="small muted">O‘UM tarkibi: annotatsiya, TMR, ' + T.length + " ta texnologik xarita, " + N.length + " ta ma’ruza, " + A.length + " ta amaliy ish, " + (D.mustaqil || []).length + " ta mustaqil topshiriq, testlar, glossariy, adabiyotlar.</p>");
-    var pb = R.querySelector("[data-oum-print]"), wb = R.querySelector("[data-oum-word]");
-    if (pb) pb.addEventListener("click", function () { chop(oum(D, o)); });
-    if (wb) wb.addEventListener("click", function () { word(oum(D, o), (o.fan || "fan") + " — O‘UM"); });
+    var yb = R.querySelector(".yig"); if (yb) yigBog(yb, D, o);
     var fb = P("fayllar");
     if (fb && o.paket) {
       var hj = (D.hujjatlar || []).map(function (x) { return "<li>" + esc(x.nomi) + " <span class=\"muted small\">(" + esc(x.ext || "") + (x.izoh ? ", " + esc(x.izoh) : "") + ")</span></li>"; }).join("");
@@ -191,12 +299,32 @@
     c.className = "doc"; c.innerHTML = html; document.body.classList.add("chop-rejim");
     setTimeout(function () { window.print(); setTimeout(function () { document.body.classList.remove("chop-rejim"); c.innerHTML = ""; }, 400); }, 120);
   }
-  function word(html, nom) {
-    var doc = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>' + esc(nom) +
-      "</title><style>body{font-family:'Times New Roman';font-size:14pt;color:#000}table{border-collapse:collapse;width:100%}td,th{border:1px solid #000;padding:4px;vertical-align:top}h1,h2,h3,h4{color:#000}.no-print,video,img,input,details>summary{display:none}.kv{display:block}.kv>div:nth-child(odd){font-weight:bold;margin-top:6pt}</style></head><body>" + html + "</body></html>";
-    var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob(["﻿" + doc], { type: "application/msword" }));
-    a.download = nom.replace(/[\\/:*?"<>|]+/g, " ").trim() + ".doc"; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  function wordDoc(html, nom) {
+    return '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>' + esc(nom) +
+      "</title><style>body{font-family:'Times New Roman';font-size:14pt;color:#000}table{border-collapse:collapse;width:100%}td,th{border:1px solid #000;padding:4px;vertical-align:top}h1,h2,h3,h4{color:#000}h2.yb{page-break-before:always}.titul{page-break-after:always}.no-print,video,img,input,details>summary{display:none}.kv{display:block}.kv>div:nth-child(odd){font-weight:bold;margin-top:6pt}</style></head><body>" + html + "</body></html>";
+  }
+  // Fayl nomi: o'zbekcha tutuq belgilari va tirelar ASCII'ga (ba'zi tizimlar Unicode nomni rad etadi)
+  function fnom(nom) { return String(nom).replace(/[‘’ʻʼ`´]/g, "'").replace(/[—–]/g, "-").replace(/[«»“”]/g, "").replace(/[\\/:*?"<>|]+/g, " ").replace(/\s+/g, " ").trim().slice(0, 120); }
+  function yukla(blob, nom) {
+    var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = nom; document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  }
+  function word(html, nom) { yukla(new Blob(["\ufeff" + wordDoc(html, nom)], { type: "application/msword" }), fnom(nom) + ".doc"); }
+  var JZ = null;
+  function jszip() {
+    if (window.JSZip) return Promise.resolve(window.JSZip);
+    if (!JZ) JZ = new Promise(function (ok, no) { var sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"; sc.onload = function () { ok(window.JSZip); }; sc.onerror = function () { JZ = null; no(new Error("JSZip yuklanmadi")); }; document.head.appendChild(sc); });
+    return JZ;
+  }
+  // [{nom, html}] -> bitta ZIP (har biri .doc)
+  function zipla(parts, nom) {
+    if (!parts.length) return Promise.reject(new Error("tanlangan qismlarda material yo‘q"));
+    return jszip().then(function (Z) {
+      var z = new Z(), papka = z.folder(fnom(nom)), bor = {};
+      parts.forEach(function (p) { var f = fnom(p.nom) || "qism", k = f, j = 2; while (bor[k]) k = f + " (" + (j++) + ")"; bor[k] = 1; papka.file(k + ".doc", "\ufeff" + wordDoc(p.html, p.nom)); });
+      return z.generateAsync({ type: "blob" });
+    }).then(function (b) { yukla(b, fnom(nom) + ".zip"); });
   }
 
-  window.t1RTR = { render: render, oum: oum, chop: chop, word: word, esc: esc, md: md, tbl: tbl };
+  window.t1RTR = { render: render, oum: oum, qismlar: qismlar, chop: chop, word: word, wordDoc: wordDoc, zipla: zipla, esc: esc, md: md, tbl: tbl };
 })();

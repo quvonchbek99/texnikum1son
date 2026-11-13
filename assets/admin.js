@@ -1,4 +1,4 @@
-/* Admin panel: o'qituvchi arizalarini tasdiqlash, Drive manzilini sozlash, materiallarni boshqarish. */
+/* Admin panel: o'qituvchilarni ko'rish va bloklash (ro'yxat avtomatik), Drive manzilini sozlash, materiallarni boshqarish. */
 (function () {
   "use strict";
   var ROOT = (window.t1 && t1.ROOT) || "", APP = document.getElementById("admin"); if (!APP) return;
@@ -50,7 +50,7 @@
       var a = []; qs.forEach(function (d) { var x = d.data(); x.id = d.id; a.push(x); });
       var tar = { kutilmoqda: 0, tasdiqlangan: 1, rad: 2 };
       a.sort(function (p, q) { return (tar[p.holat] || 0) - (tar[q.holat] || 0); });
-      if (!a.length) { box.innerHTML = '<p class="muted">Hali ariza yo‘q.</p>'; return; }
+      if (!a.length) { box.innerHTML = '<p class="muted">Hali o‘qituvchi ro‘yxatdan o‘tmagan.</p>'; return; }
       box.innerHTML = '<div class="tbl-w"><table><thead><tr><th>F.I.O.</th><th>Aloqa</th><th>Fanlari</th><th>Sana</th><th>Holat</th><th></th></tr></thead><tbody>' + a.map(function (x) {
         var t = x.holat === "tasdiqlangan" ? '<span class="tag ok">tasdiqlangan</span>' : x.holat === "rad" ? '<span class="tag">rad etilgan</span>' : '<span class="tag w">kutilmoqda</span>';
         return "<tr><td><b>" + esc(x.fio) + "</b></td><td>" + esc(x.email) + (x.telefon ? "<br>" + esc(x.telefon) : "") + "</td><td>" + esc(x.fanlar_izoh || "") + "</td><td>" + vaqt(x.yaratildi) + "</td><td>" + t + '</td><td style="white-space:nowrap">' +

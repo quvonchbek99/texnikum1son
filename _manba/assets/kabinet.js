@@ -35,81 +35,109 @@
     B.A.onAuthStateChanged(B.auth, function (u) { USER = u; u ? profil() : kirish(); });
   })["catch"](function (e) { APP.innerHTML = '<div class="note bad">Bulut xizmatiga ulanib bo‘lmadi: ' + esc(xato(e)) + ". Internetni tekshirib, sahifani yangilang.</div>"; });
 
+  /* Avtomatik ro'yxat: kirgan har bir foydalanuvchiga (kuvonch.uz akkaunti, Google yoki yangi email) o'qituvchi profili
+     darhol "tasdiqlangan" holatda ochiladi. Admin kerak bo'lsa admin paneldan bloklaydi (holat: "rad"). */
+  var REG = null;
   function profil() {
     var F = B.F;
+    APP.innerHTML = '<p class="muted">Profil tekshirilmoqda…</p>';
     Promise.all([
       F.getDoc(F.doc(B.db, "admins", USER.uid))["catch"](function () { return null; }),
       F.getDoc(F.doc(B.db, "t1_oqituvchilar", USER.uid))["catch"](function () { return null; })
     ]).then(function (r) {
       ADMIN = !!(r[0] && r[0].exists()); PROF = r[1] && r[1].exists() ? r[1].data() : null;
-      if (ADMIN || (PROF && PROF.holat === "tasdiqlangan")) panel();
-      else kutish();
+      if (ADMIN || (PROF && PROF.holat === "tasdiqlangan")) return panel();
+      if (PROF && PROF.holat === "rad") return blok();
+      var ref = F.doc(B.db, "t1_oqituvchilar", USER.uid), fio = ((REG && REG.fio) || USER.displayName || (USER.email || "O‘qituvchi").split("@")[0]).slice(0, 80);
+      var w = PROF ? F.updateDoc(ref, { holat: "tasdiqlangan" })
+        : F.setDoc(ref, { fio: fio, email: USER.email || "", telefon: ((REG && REG.tel) || "").slice(0, 20), fanlar_izoh: ((REG && REG.fanlar) || "").slice(0, 300), holat: "tasdiqlangan", yaratildi: F.serverTimestamp() });
+      return w.then(function () { REG = null; return F.getDoc(ref); }).then(function (d) { PROF = d.data(); panel(true); });
+    })["catch"](function (e) {
+      APP.innerHTML = '<div class="card"><p class="note bad">Profilni ochib bo‘lmadi: ' + esc(xato(e)) + '</p><div class="toolbar"><button class="btn" id="qayta">Qayta urinish</button><button class="btn ghost" id="chiq">Chiqish</button></div></div>';
+      $("#qayta").addEventListener("click", profil); $("#chiq").addEventListener("click", chiqish);
     });
   }
 
   /* ================= Kirish / ro'yxatdan o'tish ================= */
+  var GICO = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6h-4a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>';
   function kirish() {
     APP.innerHTML =
       '<div class="grid g2">' +
-      '<form class="card" id="f-kir"><h2>Kirish</h2><p class="muted small">O‘qituvchi akkauntingiz bilan kiring.</p>' +
+      '<form class="card" id="f-kir"><h2>Kirish</h2><p class="muted small">kuvonch.uz’dagi akkauntingiz bo‘lsa — o‘sha email va parol bilan kiring. Kabinet avtomatik ochiladi, alohida ariza shart emas.</p>' +
+      '<button type="button" class="btn gbtn" id="gkir">' + GICO + ' Google (Gmail) bilan kirish</button>' +
+      '<p class="yoki"><span>yoki email bilan</span></p>' +
       '<label class="f"><span>Email</span><input type="email" name="email" required autocomplete="username"></label>' +
       '<label class="f"><span>Parol</span><input type="password" name="parol" required autocomplete="current-password" minlength="6"></label>' +
       '<div class="toolbar"><button class="btn">Kirish</button><button type="button" class="btn ghost sm" id="unut">Parolni unutdim</button></div><div data-m></div></form>' +
-      '<form class="card" id="f-roy"><h2>Ro‘yxatdan o‘tish</h2><p class="muted small">Faqat texnikum o‘qituvchilari uchun. Arizangizni admin tasdiqlagach, material joylay olasiz.</p>' +
+      '<form class="card" id="f-roy"><h2>Ro‘yxatdan o‘tish</h2><p class="muted small">Akkaunt darhol ochiladi — kutish yo‘q. Gmail bo‘lsa, chapdagi «Google bilan kirish» eng oson yo‘l.</p>' +
       '<label class="f"><span>F.I.O.</span><input type="text" name="fio" required maxlength="80" placeholder="Familiya Ism Otasining ismi"></label>' +
       '<label class="f"><span>Email</span><input type="email" name="email" required autocomplete="email"></label>' +
       '<label class="f"><span>Telefon (ixtiyoriy)</span><input type="tel" name="tel" maxlength="20" placeholder="+998 __ ___ __ __"></label>' +
-      '<label class="f"><span>Qaysi fan(lar)dan dars berasiz?</span><textarea name="fanlar" rows="2" maxlength="300" placeholder="Masalan: Zamonaviy tikuv jihozlari (08-26)"></textarea></label>' +
+      '<label class="f"><span>Qaysi fan(lar)dan dars berasiz? (ixtiyoriy)</span><textarea name="fanlar" rows="2" maxlength="300" placeholder="Masalan: Zamonaviy tikuv jihozlari"></textarea></label>' +
       '<label class="f"><span>Parol (kamida 6 belgi)</span><input type="password" name="parol" required minlength="6" autocomplete="new-password"></label>' +
       '<label class="f"><span>Parolni takrorlang</span><input type="password" name="parol2" required minlength="6" autocomplete="new-password"></label>' +
-      '<button class="btn">Ariza yuborish</button><div data-m></div></form></div>';
-    var fk = $("#f-kir"), fr = $("#f-roy");
+      '<button class="btn">Ro‘yxatdan o‘tish</button><div data-m></div></form></div>';
+    var fk = $("#f-kir"), fr = $("#f-roy"), mk = $("[data-m]", fk), mr = $("[data-m]", fr);
     fk.addEventListener("submit", function (e) {
-      e.preventDefault(); var m = $("[data-m]", fk); msg(m, "Tekshirilmoqda…");
-      B.A.signInWithEmailAndPassword(B.auth, fk.email.value.trim(), fk.parol.value)["catch"](function (er) { msg(m, esc(xato(er)), "bad"); });
+      e.preventDefault(); msg(mk, "Tekshirilmoqda…");
+      B.A.signInWithEmailAndPassword(B.auth, fk.email.value.trim(), fk.parol.value)["catch"](function (er) {
+        msg(mk, esc(xato(er)) + (/credential|password|user-not-found/.test(er && er.code || "") ? " Parolni eslay olmasangiz — «Parolni unutdim» tugmasini bosing, tiklash havolasi emailingizga boradi." : ""), "bad");
+      });
     });
-    $("#unut").addEventListener("click", function () {
-      var m = $("[data-m]", fk), em = fk.email.value.trim();
-      if (!em) { msg(m, "Avval emailingizni yozing.", "bad"); return; }
-      B.A.sendPasswordResetEmail(B.auth, em).then(function () { msg(m, "Parolni tiklash havolasi " + esc(em) + " manziliga yuborildi.", "ok"); })["catch"](function (er) { msg(m, esc(xato(er)), "bad"); });
-    });
+    $("#gkir").addEventListener("click", function () { google(mk); });
+    $("#unut").addEventListener("click", function () { tikla(fk.email.value.trim(), mk, fk.email); });
     fr.addEventListener("submit", function (e) {
-      e.preventDefault(); var m = $("[data-m]", fr);
-      if (fr.parol.value !== fr.parol2.value) { msg(m, "Parollar bir xil emas.", "bad"); return; }
-      msg(m, "Akkaunt yaratilmoqda…");
-      var fio = fr.fio.value.trim();
-      B.A.createUserWithEmailAndPassword(B.auth, fr.email.value.trim(), fr.parol.value).then(function (c) {
-        USER = c.user;
-        return Promise.all([B.A.updateProfile(c.user, { displayName: fio })["catch"](function () {}),
-          B.F.setDoc(B.F.doc(B.db, "t1_oqituvchilar", c.user.uid), { fio: fio, email: c.user.email, telefon: fr.tel.value.trim(), fanlar_izoh: fr.fanlar.value.trim(), holat: "kutilmoqda", yaratildi: B.F.serverTimestamp() })]);
-      }).then(function () { profil(); })["catch"](function (er) { msg(m, esc(xato(er)), "bad"); });
+      e.preventDefault();
+      if (fr.parol.value !== fr.parol2.value) { msg(mr, "Parollar bir xil emas.", "bad"); return; }
+      var em = fr.email.value.trim(), pw = fr.parol.value, fio = fr.fio.value.trim();
+      REG = { fio: fio, tel: fr.tel.value.trim(), fanlar: fr.fanlar.value.trim() };
+      msg(mr, "Akkaunt ochilmoqda…");
+      B.A.createUserWithEmailAndPassword(B.auth, em, pw).then(function (c) {
+        return B.A.updateProfile(c.user, { displayName: fio })["catch"](function () {});
+      })["catch"](function (er) {
+        if (!er || er.code !== "auth/email-already-in-use") { REG = null; msg(mr, esc(xato(er)), "bad"); return; }
+        // Bu email allaqachon ro'yxatdan o'tgan (masalan, kuvonch.uz'da) — shu parol bilan avtomatik kiramiz
+        msg(mr, "Bu email bilan akkaunt bor — kirilmoqda…");
+        return B.A.signInWithEmailAndPassword(B.auth, em, pw)["catch"](function () {
+          REG = null;
+          mr.innerHTML = '<p class="note bad">Bu email bilan akkaunt allaqachon bor, lekin parol mos kelmadi. Parolni eslay olmasangiz, tiklash havolasini emailingizga yuboramiz.</p><button type="button" class="btn sm" id="unut2">Parolni tiklash havolasini yuborish</button>';
+          $("#unut2").addEventListener("click", function () { tikla(em, mr); });
+        });
+      });
     });
   }
-  function chiqish() { B.A.signOut(B.auth); }
-  function kutish() {
-    var h = PROF && PROF.holat === "rad" ? "Arizangiz admin tomonidan rad etilgan. Savollar bo‘lsa, texnikum ma’muriyatiga murojaat qiling."
-      : PROF ? "Arizangiz qabul qilindi va admin tasdiqlashini kutmoqda. Tasdiqlangach, shu sahifada material joylash bo‘limi ochiladi."
-        : "Bu akkaunt uchun o‘qituvchi arizasi topilmadi.";
-    APP.innerHTML = '<div class="card"><h2>Assalomu alaykum' + (PROF ? ", " + esc(PROF.fio) : "") + "!</h2><p>" + h + '</p><div class="toolbar">' +
-      (!PROF ? '<button class="btn" id="ariza">Ariza yuborish</button>' : '<button class="btn ghost" id="yang">Holatni yangilash</button>') + '<button class="btn ghost" id="chiq">Chiqish</button></div></div>';
-    var a = $("#ariza"), y = $("#yang");
-    if (a) a.addEventListener("click", function () {
-      var fio = prompt("F.I.O. ni yozing:", USER.displayName || ""); if (!fio) return;
-      B.F.setDoc(B.F.doc(B.db, "t1_oqituvchilar", USER.uid), { fio: fio.slice(0, 80), email: USER.email, telefon: "", fanlar_izoh: "", holat: "kutilmoqda", yaratildi: B.F.serverTimestamp() }).then(profil)["catch"](function (e) { alert(xato(e)); });
+  function google(m) {
+    var A = B.A, p = new A.GoogleAuthProvider(); p.setCustomParameters({ prompt: "select_account" });
+    msg(m, "Google oynasi ochilmoqda…");
+    A.signInWithPopup(B.auth, p)["catch"](function (er) {
+      var c = (er && er.code) || "";
+      if (/popup-blocked|operation-not-supported-in-this-environment/.test(c)) return A.signInWithRedirect(B.auth, p);
+      if (/popup-closed-by-user|cancelled-popup-request/.test(c)) { msg(m, ""); return; }
+      msg(m, esc(xato(er)), "bad");
     });
-    if (y) y.addEventListener("click", profil);
+  }
+  function tikla(em, m, inp) {
+    if (!em) { msg(m, "Avval email manzilingizni yozing — tiklash havolasi o‘sha manzilga yuboriladi.", "bad"); if (inp) inp.focus(); return; }
+    msg(m, "Yuborilmoqda…");
+    B.A.sendPasswordResetEmail(B.auth, em, { url: location.origin + location.pathname }).then(function () {
+      msg(m, "Parolni tiklash havolasi <b>" + esc(em) + "</b> manziliga yuborildi. Pochtangizni oching (Gmail’da «Spam» va «Promotions» papkalarini ham tekshiring), havolani bosib yangi parol qo‘ying va shu yerdan qayta kiring.", "ok");
+    })["catch"](function (er) { msg(m, esc(xato(er)), "bad"); });
+  }
+  function chiqish() { B.A.signOut(B.auth); }
+  function blok() {
+    APP.innerHTML = '<div class="card"><h2>Assalomu alaykum' + (PROF ? ", " + esc(PROF.fio) : "") + '!</h2><p>Bu akkaunt orqali material joylash admin tomonidan to‘xtatilgan. Savollar bo‘lsa, texnikum ma’muriyatiga murojaat qiling.</p><div class="toolbar"><button class="btn ghost" id="chiq">Chiqish</button></div></div>';
     $("#chiq").addEventListener("click", chiqish);
   }
 
   /* ================= Panel ================= */
-  function panel() {
+  function panel(yangi) {
     var fio = (PROF && PROF.fio) || USER.displayName || USER.email;
     APP.innerHTML =
-      '<div class="toolbar"><div><b>' + esc(fio) + '</b> <span class="tag ok">' + (ADMIN ? "admin" : "tasdiqlangan o‘qituvchi") + "</span></div><span class=sp></span>" +
+      '<div class="toolbar"><div><b>' + esc(fio) + '</b> <span class="tag ok">' + (ADMIN ? "admin" : "o‘qituvchi") + "</span>" + (yangi ? ' <span class="small muted">— kabinetingiz ochildi, xush kelibsiz!</span>' : "") + "</div><span class=sp></span>" +
       (ADMIN ? '<a class="btn ghost sm" href="' + ROOT + 'admin/">Admin panel</a>' : "") + '<button class="btn ghost sm" id="chiq">Chiqish</button></div>' +
       '<div class="steps" style="margin-bottom:22px"><div><b>Fanni tanlang</b><p class="small muted">Yo‘nalish, fan va semestr.</p></div><div><b>Hujjatlarni tashlang</b><p class="small muted">ZIP, Word, PDF, PowerPoint, Excel yoki RTR paketi.</p></div><div><b>AI tayyorlaydi</b><p class="small muted">Turini aniqlaydi, TMR tuzadi, yetishmayotgan xaritalarni qoralama qiladi.</p></div><div><b>Tekshirib, joylang</b><p class="small muted">Hammasi fan sahifasida chiqadi.</p></div></div>' +
       '<section class="card" id="s1"><h2>1. Fan</h2><div class="grid g3">' +
-      '<label class="f"><span>Yo‘nalish (guruhlar)</span><select id="y"></select></label><label class="f"><span>Fan</span><select id="f"></select></label><label class="f"><span>Semestr</span><select id="s"></select></label></div><p class="small" id="plan"></p></section>' +
+      '<label class="f"><span>Mutaxassislik (yoki umumta’lim)</span><select id="y"></select></label><label class="f"><span>Fan</span><select id="f"></select></label><label class="f"><span>Semestr</span><select id="s"></select></label></div><p class="small" id="plan"></p></section>' +
       '<section class="card" id="s2" style="margin-top:16px"><h2>2. Hujjatlar</h2>' +
       '<label class="drop" id="drop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>' +
       '<p><b>Fayllarni shu yerga tashlang</b> yoki bosib tanlang</p><p class="small muted">ZIP arxiv, .docx, .pdf, .pptx, .xlsx, .html (RTR), rasm va video. Bitta fayl Drive’ga 25 MB gacha.</p>' +
@@ -123,7 +151,7 @@
 
   function tanlov() {
     var ys = $("#y"), fs = $("#f"), ss = $("#s");
-    ys.innerHTML = MAL.yonalishlar.map(function (y) { return '<option value="' + y.id + '">' + esc(y.qisqa || y.mutaxassislik) + " (" + y.guruhlar.join(", ") + ")</option>"; }).join("");
+    ys.innerHTML = MAL.yonalishlar.map(function (y) { return '<option value="' + y.id + '">' + esc(y.qisqa || y.mutaxassislik) + "</option>"; }).join("");
     function fanlar() {
       var y = yon(); fs.innerHTML = ["kasbiy", "amaliyot", "umumtalim"].map(function (t) {
         var L = y.fanlar.filter(function (f) { return f.toifa === t; }); if (!L.length) return "";

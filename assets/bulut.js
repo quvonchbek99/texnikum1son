@@ -70,8 +70,13 @@
       "auth/weak-password": "Parol kamida 6 ta belgidan iborat bo‘lsin.", "auth/missing-password": "Parolni kiriting.",
       "auth/too-many-requests": "Juda ko‘p urinish. Birozdan keyin qayta urinib ko‘ring.",
       "auth/network-request-failed": "Internet bilan aloqa yo‘q.", "unavailable": "Internet bilan aloqa yo‘q.",
-      "permission-denied": "Ruxsat yo‘q. Akkauntingiz hali tasdiqlanmagan bo‘lishi yoki Firestore qoidalari yangilanmagan bo‘lishi mumkin.",
-      "auth/operation-not-allowed": "Email/parol bilan kirish Firebase’da yoqilmagan."
+      "permission-denied": "Ruxsat yo‘q (Firestore qoidalari). Sahifani yangilab, qayta urinib ko‘ring.",
+      "auth/operation-not-allowed": "Bu usulda kirish hali yoqilmagan — email va parol bilan kiring.",
+      "auth/popup-blocked": "Brauzer Google oynasini to‘sib qo‘ydi — qalqib chiquvchi oynalarga ruxsat bering.",
+      "auth/account-exists-with-different-credential": "Bu email boshqa usulda ro‘yxatdan o‘tgan — email va parol bilan kiring yoki parolni tiklang.",
+      "auth/unauthorized-domain": "Bu domen Firebase’da ruxsat etilmagan.",
+      "auth/missing-email": "Email manzilini yozing.",
+      "auth/user-disabled": "Bu akkaunt o‘chirilgan."
     };
     if (T[c]) return T[c];
     if (/app.?check|recaptcha|appCheck/i.test(m)) return "AI himoyasi (App Check) bu domenda hali yoqilmagan — fayllar AI’siz, qoidalar bo‘yicha tahlil qilinadi.";

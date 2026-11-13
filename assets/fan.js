@@ -12,10 +12,11 @@
   var TURNOM = { tmr: "TMR", xarita: "Texnologik xarita", maruza: "Ma’ruza", amaliy: "Amaliy ish", mustaqil: "Mustaqil ish", nazorat: "Nazorat", glossariy: "Glossariy", oum: "O‘UM", dastur: "Ishchi dastur", taqdimot: "Taqdimot", media: "Media", boshqa: "Boshqa" };
   var EMPTY = {};
   PANELS.forEach(function (p) { var el = root.querySelector('[data-p="' + p + '"]'); if (el) EMPTY[p] = el.innerHTML; });
-  var CACHE = null, cur = null;
+  var CACHE = null, cur = null, GEN = {};
 
   function sem0() { var s = new URLSearchParams(location.search).get("sem"); return SEMS.indexOf(s) >= 0 ? s : (root.getAttribute("data-def") || SEMS[0]); }
   function reset() {
+    GEN = {};
     PANELS.forEach(function (p) { var el = root.querySelector('[data-p="' + p + '"]'); if (el) el.innerHTML = EMPTY[p]; var c = root.querySelector('[data-t="' + p + '"] .cnt'); if (c) c.textContent = ""; });
   }
   function hours(s) {
@@ -91,10 +92,12 @@
         m.tmr.map(function (r, i) { return "<tr><td class=n>" + (i + 1) + "</td><td>" + esc(r.mavzu) + "</td><td>" + esc(r.tur || "") + "</td><td class=n>" + esc(r.soat) + "</td><td></td><td></td></tr>"; }).join("") +
         '<tr class="jami"><td></td><td>Jami</td><td></td><td class=n>' + sum + "</td><td></td><td></td></tr></tbody></table></div>";
       bump("tmr", m.tmr.length);
+      genQosh(s, { tur: "tmr", sarlavha: "TMR — " + (m.oqituvchi || "o‘qituvchi"), html: w.innerHTML.replace(/<h3[^>]*>.*?<\/h3>/, "") });
     }
     F.getDocs(F.query(F.collection(B.db, "t1_materiallar", m.id, "hujjatlar"), F.orderBy("tartib"))).then(function (qs) {
       var by = {};
       qs.forEach(function (d) { var x = d.data(); x.id = d.id; if (x.turi === "rtr") return; var p = TUR2P[x.turi] || "fayllar"; (by[p] = by[p] || []).push(x); });
+      Object.keys(by).forEach(function (p) { by[p].forEach(function (x) { if (x.html) genQosh(s, { tur: x.turi, dars: x.dars, sarlavha: x.sarlavha || x.nom, B: B, mid: m.id, xid: x.id }); }); });
       Object.keys(by).forEach(function (p) {
         var w = slot(p, "O‘qituvchi joylagan: " + kim);
         by[p].forEach(function (x) {
@@ -121,6 +124,66 @@
         bump(p, by[p].length);
       });
     });
+  }
+
+  /* ---------- O'qituvchi hujjatlaridan majmua yig'ish (RTR bo'lmagan materiallar) ---------- */
+  var GTUR = ["dastur", "tmr", "xarita", "maruza", "amaliy", "mustaqil", "nazorat", "glossariy", "oum", "boshqa"];
+  var gT = 0;
+  function genQosh(s, d) { (GEN[s] = GEN[s] || []).push(d); clearTimeout(gT); gT = setTimeout(function () { if (String(cur) === String(s)) genUI(s); }, 300); }
+  function genUI(s) {
+    var L = (GEN[s] || []).slice().sort(function (a, b) { return GTUR.indexOf(a.tur) - GTUR.indexOf(b.tur) || (+a.dars || 0) - (+b.dars || 0); });
+    var el = root.querySelector('[data-p="oum"]'); if (!el || !L.length) return;
+    if (el.querySelector(".empty")) el.innerHTML = "";
+    var box = el.querySelector(".yig[data-gen]");
+    if (!box) { box = document.createElement("div"); box.className = "yig no-print"; box.setAttribute("data-gen", ""); el.insertBefore(box, el.firstChild); }
+    var turlar = GTUR.filter(function (t) { return L.some(function (d) { return d.tur === t; }); });
+    box.innerHTML = '<div class="yig-h"><h3>Majmuani yig‘ish — o‘qituvchilar joylagan hujjatlardan</h3><p class="small muted">Kerakli hujjatlarni (mavzu/dars bo‘yicha) belgilang: bitta umumiy majmua yoki har biri alohida fayl.</p></div>' +
+      '<fieldset><legend>Hujjatlar</legend><div class="yig-tz"><button type="button" class="kv-l" data-ga="1">Hammasi</button><button type="button" class="kv-l" data-ga="0">Tozalash</button></div>' +
+      turlar.map(function (t) {
+        var D = L.filter(function (d) { return d.tur === t; });
+        return '<details class="yig-m" open><summary><label><input type="checkbox" data-gt="' + t + '" checked> <b>' + esc(TURNOM[t] || t) + '</b></label> <span class="muted small">(' + D.length + ")</span></summary><div class=\"yig-ml\">" +
+          D.map(function (d) { return '<label class="yig-c"><input type="checkbox" data-gi="' + L.indexOf(d) + '" data-gt-of="' + t + '" checked> ' + (d.dars ? '<span class="no">' + esc(d.dars) + "-dars</span> " : "") + esc(d.sarlavha) + "</label>"; }).join("") + "</div></details>";
+      }).join("") + "</fieldset>" +
+      '<fieldset class="yig-r"><legend>Qanday chiqarilsin</legend><label class="yig-c"><input type="radio" name="genc" value="bir" checked> Bitta umumiy hujjat</label><label class="yig-c"><input type="radio" name="genc" value="tur"> Turlar bo‘yicha alohida fayllar (ZIP)</label><label class="yig-c"><input type="radio" name="genc" value="har"> Har hujjat alohida fayl (ZIP)</label></fieldset>' +
+      '<p class="small" data-gs></p><div class="toolbar"><button type="button" class="btn" data-gw>Yuklab olish</button><button type="button" class="btn ghost" data-gp>Chop etish / PDF</button></div>';
+    var $$ = function (q) { return Array.prototype.slice.call(box.querySelectorAll(q)); };
+    function tanl() { return $$("[data-gi]:checked").map(function (c) { return L[+c.getAttribute("data-gi")]; }); }
+    function rej() { return (box.querySelector('[name="genc"]:checked') || {}).value || "bir"; }
+    function yangila() {
+      $$("[data-gt]").forEach(function (g) { var D = $$('[data-gt-of="' + g.getAttribute("data-gt") + '"]'), c = D.filter(function (x) { return x.checked; }).length; g.checked = c === D.length && c > 0; g.indeterminate = c > 0 && c < D.length; });
+      box.querySelector("[data-gs]").innerHTML = "Tanlandi: <b>" + tanl().length + "</b> / " + L.length + " ta hujjat.";
+      box.querySelector("[data-gw]").textContent = rej() === "bir" ? "Word (.doc) yuklab olish" : "ZIP yuklab olish";
+    }
+    box.addEventListener("change", function (e) { var t = e.target; if (t.hasAttribute("data-gt")) $$('[data-gt-of="' + t.getAttribute("data-gt") + '"]').forEach(function (x) { x.checked = t.checked; }); yangila(); });
+    $$("[data-ga]").forEach(function (b) { b.addEventListener("click", function () { var v = b.getAttribute("data-ga") === "1"; $$("[data-gi]").forEach(function (c) { c.checked = v; }); yangila(); }); });
+    $$("summary label").forEach(function (l) { l.addEventListener("click", function (e) { e.stopPropagation(); }); });
+    function matn(d) {
+      if (d.html) return Promise.resolve(d.html);
+      return Promise.all([d.B.F.getDoc(d.B.F.doc(d.B.db, "t1_materiallar", d.mid, "matnlar", d.xid)), purify()]).then(function (r) { d.html = r[0].exists() ? window.DOMPurify.sanitize(r[0].data().html || "") : ""; return d.html; });
+    }
+    function yig(list) { return Promise.all(list.map(matn)).then(function (hs) { return list.map(function (d, i) { return { d: d, h: hs[i] }; }).filter(function (x) { return x.h; }); }); }
+    function bitta(X) {
+      var h = '<div class="titul" style="text-align:center;padding:30mm 0 20mm"><p>Toshkent tuman 1-son texnikumi</p><h1 style="font-size:26pt">' + esc(FAN) + "</h1><p>fanidan</p><h2>O‘QUV-USLUBIY MAJMUA</h2><p>" + esc(YN) + "</p><p>" + esc(cur) + "-semestr</p><p>2026</p></div>", oldT = "", n = 0;
+      X.forEach(function (x) { if (x.d.tur !== oldT) { oldT = x.d.tur; n++; h += '<h2 class="yb">' + n + ". " + esc(TURNOM[oldT] || oldT) + "</h2>"; } h += "<h3>" + (x.d.dars ? esc(x.d.dars) + "-dars. " : "") + esc(x.d.sarlavha) + "</h3>" + x.h; });
+      return h;
+    }
+    function ish(btn, fn) {
+      var L2 = tanl(); if (!L2.length) { alert("Kamida bitta hujjatni belgilang."); return; }
+      var eski = btn.textContent; btn.disabled = true; btn.textContent = "Tayyorlanmoqda…";
+      yig(L2).then(fn)["catch"](function (e) { alert("Tayyorlanmadi: " + (window.t1Bulut ? t1Bulut.uzXato(e) : e)); }).then(function () { btn.disabled = false; btn.textContent = eski; });
+    }
+    box.querySelector("[data-gp]").addEventListener("click", function () { ish(this, function (X) { t1RTR.chop(bitta(X)); }); });
+    box.querySelector("[data-gw]").addEventListener("click", function () {
+      var r = rej(), nom = FAN + " — O‘UM";
+      ish(this, function (X) {
+        if (r === "bir") { t1RTR.word(bitta(X), nom); return; }
+        var parts = [];
+        if (r === "har") X.forEach(function (x, i) { parts.push({ nom: (i < 9 ? "0" : "") + (i + 1) + " " + (TURNOM[x.d.tur] || x.d.tur) + (x.d.dars ? " " + x.d.dars + "-dars" : "") + " — " + x.d.sarlavha, html: "<h1>" + esc(x.d.sarlavha) + "</h1>" + x.h }); });
+        else GTUR.forEach(function (t) { var Y = X.filter(function (x) { return x.d.tur === t; }); if (Y.length) parts.push({ nom: (parts.length < 9 ? "0" : "") + (parts.length + 1) + " " + (TURNOM[t] || t), html: "<h1>" + esc(TURNOM[t] || t) + "</h1><p>" + esc(FAN) + "</p>" + Y.map(function (x) { return "<h3>" + (x.d.dars ? esc(x.d.dars) + "-dars. " : "") + esc(x.d.sarlavha) + "</h3>" + x.h; }).join("") }); });
+        return t1RTR.zipla(parts, nom + (r === "har" ? " — hujjatlar" : " — turlar bo‘yicha"));
+      });
+    });
+    yangila();
   }
   function kb(n) { n = +n || 0; return n > 1048576 ? (n / 1048576).toFixed(1) + " MB" : Math.max(1, Math.round(n / 1024)) + " KB"; }
   var PUR = null;

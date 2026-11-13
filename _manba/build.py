@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""texnikum1son.uz — statik sayt generatori.
+"""texnikum1son.uz — statik sayt generatori (2-versiya: faqat fanlar katalogi; 1-versiya /eski/ papkada, _manba/eski/build_v1.py).
 Ishlatish: python3 build.py <malumot.json> <rtr_json_dir_or_none> <chiqish_papkasi>
 Ma'lumot: kasb-emis.edu.uz (05.11.2026) asosidagi texnikum1-malumot.json."""
 import json, os, re, shutil, sys, html as H
@@ -67,15 +67,15 @@ if sys.argv[2] != "none":
 RTR_TIKUV = json.load(open(os.path.join(sys.argv[2], "zamonaviy-tikuv-jihozlari.json"), encoding="utf-8")) if sys.argv[2] != "none" else None
 
 # ---------- Sahifa qolipi ----------
-NAV = [("", "Bosh sahifa"), ("yonalishlar/", "Yo‘nalishlar"), ("guruhlar/", "Guruhlar"), ("haqida/", "Texnikum haqida"), ("joylashuv/", "Joylashuv"), ("qidiruv/", "Qidiruv")]
+NAV = [("", "Fanlar"), ("eski/", "Eski versiya")]
 
 def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_root=False):
     depth = path.count("/")
     R = "/" if abs_root else "../" * depth
     nav = "".join(f'<a href="{R}{u}"{" aria-current=page" if active == u else ""}>{t}</a>' for u, t in NAV)
-    full_title = f"{title} · {NOM} e-bazasi" if title != NOM else f"{NOM} — elektron o‘quv-uslubiy baza"
+    full_title = f"{title} · {NOM} e-bazasi" if title != NOM else f"Fanlar — {NOM} e-bazasi"
     canon = DOMEN + "/" + re.sub(r"index\.html$", "", path)
-    sc = "".join(f'<script src="{R}assets/{s}?v=1" defer></script>' for s in ("sayt.js",) + tuple(scripts))
+    sc = "".join(f'<script src="{R}assets/{s}?v=2" defer></script>' for s in ("sayt.js",) + tuple(scripts))
     html = f"""<!doctype html>
 <html lang="uz">
 <head>
@@ -92,28 +92,24 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
 <link rel="icon" href="{R}assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="{R}assets/sayt.css?v=1">
+<link rel="stylesheet" href="{R}assets/sayt.css?v=2">
 <script>(function(){{var m=new Date(Date.now()+(new Date().getTimezoneOffset()+300)*6e4).getMonth(),q=new URLSearchParams(location.search).get('fasl');document.documentElement.setAttribute('data-fasl',/^(kuz|qish|bahor|yoz)$/.test(q||'')?q:(m==11||m<2?'qish':m<5?'bahor':m<8?'yoz':'kuz'));}})();</script>
 </head>
 <body data-root="{R}">
 <a class="sr" href="#asosiy">Asosiy qismga o‘tish</a>
 <header class="top"><div class="wrap">
-<a class="brand" href="{R}" aria-label="{NOM} — bosh sahifa">{LOGO}<span><b>{NOM}</b><span>Elektron o‘quv-uslubiy baza</span></span></a>
+<a class="brand" href="{R}" aria-label="Fanlar — bosh sahifa">{LOGO}<span><b>{NOM}</b><span>Fanlar e-bazasi</span></span></a>
 <button class="burger" aria-label="Menyu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <nav class="nav" aria-label="Asosiy menyu">{nav}<a class="btn sm" href="{R}kabinet/">O‘qituvchi kabineti</a></nav>
 </div></header>
 <main id="asosiy">
 {body}
 </main>
-<footer class="foot"><div class="wrap">
-<div class="cols">
-<div><h4>{NOM}</h4><p>{e(MANZIL)}</p><p>Ish vaqti: dushanba–shanba, 08:00–17:00</p></div>
-<div><h4>Bo‘limlar</h4><ul><li><a href="{R}yonalishlar/">Yo‘nalishlar va fanlar</a></li><li><a href="{R}guruhlar/">Guruhlar</a></li><li><a href="{R}haqida/">Texnikum faoliyati</a></li><li><a href="{R}joylashuv/">Joylashuv</a></li></ul></div>
-<div><h4>O‘qituvchilar uchun</h4><ul><li><a href="{R}kabinet/">Kabinetga kirish</a></li><li><a href="{R}kabinet/">Material joylash (AI yordamida)</a></li></ul></div>
-<div><h4>Hamkor loyiha</h4><ul><li><a href="https://kuvonch.uz" rel="noopener">Kuvonch Academy · kuvonch.uz</a></li></ul></div>
-</div>
-<div class="copy"><span>© 2026 {NOM} e-bazasi</span><span>Fan va soatlar: kasb-emis.edu.uz o‘quv rejalari (05.11.2026)</span></div>
-</div></footer>
+<footer class="foot ixcham"><div class="wrap"><div class="copy">
+<span>© 2026 {NOM} e-bazasi</span>
+<span>Fan va soatlar: kasb-emis.edu.uz o‘quv rejalari (05.11.2026)</span>
+<span><a href="{R}eski/">Eski versiya</a> · <a href="{R}kabinet/">O‘qituvchi kabineti</a> · <a href="https://kuvonch.uz" rel="noopener">kuvonch.uz</a></span>
+</div></div></footer>
 {sc}
 </body>
 </html>"""
@@ -128,113 +124,87 @@ def hero(kicker, h1, lead, crumbs=None, extra="", small=True, fasl=False):
         cr = '<nav class="crumbs" aria-label="Yo‘l">' + ' <span aria-hidden="true">/</span> '.join(f'<a href="{u}">{e(t)}</a>' if u else f"<span>{e(t)}</span>" for t, u in crumbs) + "</nav>"
     return (f'<section class="hero{" kichik" if small else ""}"{" data-fasl-hero" if fasl else ""}><canvas aria-hidden="true"></canvas><div class="wrap">{cr}'
             + (f'<span class="kicker" data-fasl-kicker>{kicker}</span>' if kicker else "")
-            + f"<h1>{h1}</h1>" + (f'<p class="lead" data-fasl-matn>{lead}</p>' if lead else "") + extra + f"</div>{HILLS}</section>")
-
-def soat_sum(y, s):
-    return sum(f["jami_soat"].get(s, 0) for f in y["fanlar"])
+            + f"<h1>{h1}</h1>" + (f'<p class="lead">{lead}</p>' if lead else "") + extra + f"</div>{HILLS}</section>")
 
 def plan_of(f):
     return {s: {"jami": f["jami_soat"][s], "auditoriya": f["auditoriya_soat_taxminiy"].get(s)} for s in f["jami_soat"]}
 
-def guruh_chips(gs, R, cls="chip"):
-    return "".join(f'<a class="{cls}" href="{R}guruh/{g["guruh"]}/">{g["guruh"]}</a>' for g in gs)
+def norm(s):
+    return re.sub(r"\s+", " ", re.sub(r"[ʻʼ‘’`´'\"«»“”]", "", str(s).lower())).strip()
 
-# ---------- Bosh sahifa ----------
+def sem_txt(ss):
+    ss = sorted({int(s) for s in ss})
+    return (f"{ss[0]}–{ss[-1]}" if len(ss) > 1 and ss[-1] - ss[0] == len(ss) - 1 else ", ".join(map(str, ss))) + "-semestr"
+
+def ynom(y):
+    # Guruh raqamlarisiz nom; bir mutaxassislikda 2 ta o'quv reja bo'lsa — reja raqami qoladi
+    return y["mutaxassislik"].replace("(o'quv reja ", "(o‘quv reja ") if sum(1 for x in Y if x["qisqa"] == y["qisqa"]) > 1 else y["qisqa"]
+
+# Umumta'lim fanlari — barcha mutaxassisliklar uchun bitta umumiy sahifa (Firestore'da yonalish = "umumtalim")
+UM = {}
+for y in Y:
+    for f in y["fanlar"]:
+        if f["toifa"] == "umumtalim":
+            UM.setdefault(f["id"], {"f": f, "L": []})["L"].append((y, f))
+from collections import Counter
+def um_fan(fid):
+    L = UM[fid]["L"]; f0 = UM[fid]["f"]
+    sems = sorted({s for _, f in L for s in f["jami_soat"]}, key=int)
+    js, au = {}, {}
+    for s in sems:
+        c = Counter((f["jami_soat"][s], f["auditoriya_soat_taxminiy"].get(s)) for _, f in L if s in f["jami_soat"])
+        (j, a), _n = c.most_common(1)[0]; js[s] = j; au[s] = a
+    return {"id": fid, "nomi": f0["nomi"], "toifa": "umumtalim", "jami_soat": js, "auditoriya_soat_taxminiy": au}
+UMF = sorted((um_fan(k) for k in UM), key=lambda f: norm(f["nomi"]))
+UMY = {"id": "umumtalim", "qisqa": "Umumta’lim fanlari", "mutaxassislik": "Umumta’lim fanlari (barcha mutaxassisliklar)", "kod": "", "hozirgi_kurs": 0, "talim_shakli": "", "guruhlar": []}
+YS = sorted(Y, key=lambda y: norm(ynom(y)))
+
+def fan_url(yid, fid, R):
+    return f"{R}yonalish/{yid}/fan/{fid}/"
+
+def fk_card(yid, f, R, meta):
+    ok = any(yi == yid and fi == f["id"] for (yi, fi, s) in STATIK)
+    t = f["toifa"]; nom, c = TOIFA[t]
+    nm = norm(f["nomi"] + " " + (f.get("nomi_kasb_emis") or "") + " " + ("" if yid == "umumtalim" else ynom(YID[yid])))
+    return (f'<a class="card fk" href="{fan_url(yid, f["id"], R)}" data-t="{"umumtalim" if t == "umumtalim" else "kasbiy"}" data-k="{yid}|{f["id"]}" data-n="{e(nm)}">'
+            f'<span class="fk-t"><span class="tag {c}">{nom.replace(" fanlari", "").replace(" fanlar", "").replace(" (spes)", "")}</span><span class="tag ok" data-mat{"" if ok else " hidden"}>material bor</span></span>'
+            f'<h3>{e(f["nomi"])}</h3><span class="meta">{meta}</span></a>')
+
+# ---------- Bosh sahifa: fanlar katalogi ----------
 def bosh():
     R = ""
-    gr25 = [g for g in G if g["guruh"].endswith("-25")]; gr26 = [g for g in G if g["guruh"].endswith("-26")]
-    oquvchi = sum(g["oquvchilar_soni_05_11_2026"] for g in G)
-    mut = len({y["kod"] for y in Y}); fan_n = len(MAL["fanlar_umumiy_royxat"])
-    extra = (f'<div class="bugun" data-bugun></div><div class="cta"><a class="btn" href="#guruh">Guruhingizni tanlang</a><a class="btn light" href="yonalishlar/">Yo‘nalishlar va fanlar</a></div>'
-             f'<div id="guruh" style="margin-top:26px"><p class="small" style="opacity:.85;margin-bottom:8px">2-kurs (2025-yil qabuli)</p><div class="chips">{guruh_chips(gr25, R)}</div>'
-             f'<p class="small" style="opacity:.85;margin:14px 0 8px">1-kurs (2026-yil qabuli)</p><div class="chips">{guruh_chips(gr26, R)}</div></div>')
-    b = hero('<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10z"/></svg> ',
-             f"{NOM}", "Barcha yo‘nalishlar, fanlar va o‘quv-uslubiy materiallar bir joyda.", extra=extra, small=False, fasl=True)
-    b += f"""<section class="blk"><div class="wrap">
-<div class="grid g4">
-<div class="card stat"><b>{mut}</b>mutaxassislik bo‘yicha kadrlar tayyorlanadi</div>
-<div class="card stat"><b>{len(G)}</b>guruh — 1 va 2-kurslar</div>
-<div class="card stat"><b>{oquvchi}</b>o‘quvchi ushbu guruhlarda tahsil oladi</div>
-<div class="card stat"><b>{fan_n}</b>fan va modul e-bazada</div>
-</div><p class="small muted" style="margin-top:10px">Manba: {STAT_SOURCE}.</p></div></section>"""
-    cards = ""
-    for k, t, ids in SOHA:
-        lst = "".join(f'<li><a href="yonalish/{i}/">{e(YID[i]["qisqa"])}</a> <span class="muted small">{", ".join(x["guruh"] for x in GOF[i])}</span></li>' for i in ids)
-        cards += f'<div class="card">{ico(k)}<h3>{t}</h3><ul style="padding-left:1.1em;margin:0">{lst}</ul></div>'
-    b += f"""<section class="blk" style="padding-top:0"><div class="wrap"><div class="blk-h"><div><h2>Yo‘nalishlar</h2><p class="muted">Har bir yo‘nalishning kasbiy fanlari, amaliyoti va umumta’lim fanlari alohida ko‘rsatilgan.</p></div><a class="btn ghost" href="yonalishlar/">Barchasi →</a></div>
-<div class="grid g2">{cards}</div></div></section>"""
-    if RTR_TIKUV:
-        T = RTR_TIKUV["topics"]; tests = sum(len(t["test"]) for t in T) + len(RTR_TIKUV["yakuniy"]["test"])
-        b += f"""<section class="blk" style="padding-top:0"><div class="wrap"><div class="blk-h"><div><h2>Yangi materiallar</h2><p class="muted">O‘qituvchilar tayyorlagan to‘liq fan resurslari.</p></div></div>
-<a class="card" href="yonalish/moda-tikuv-texnologiyasi/fan/zamonaviy-tikuv-jihozlari/" style="display:grid;grid-template-columns:minmax(0,1fr);gap:6px">
-<span class="tag k" style="justify-self:start">Kasbiy fan · 08-26</span><h3 style="font-size:22px">Zamonaviy tikuv jihozlari</h3>
-<p class="muted" style="margin:0">Moda va tikuv ishlab chiqarish texnologiyasi · tuzuvchi: {e(RTR_TIKUV["meta"]["muallif"])}</p>
-<p style="margin:6px 0 0"><b>{len(T)}</b> mavzu · <b>{len(T)}</b> video dars · <b>{tests}</b> test savoli · <b>{len(RTR_TIKUV["glossariy"])}</b> atama · TMR, texnologik xaritalar va O‘UM</p></a></div></section>"""
-    b += f"""<section class="blk" style="padding-top:0"><div class="wrap"><div class="card" style="padding:28px">
-<div class="blk-h"><div>{ico("ai")}<h2>O‘qituvchilar uchun: hujjatlarni yuklang — AI tayyorlaydi</h2><p class="muted">Login va parol bilan kiring, ZIP arxiv yoki Word, PDF, PowerPoint fayllarini tashlang. Sun’iy intellekt har bir faylning turini va dars raqamini aniqlaydi, TMRni tuzadi, soatlarni o‘quv reja bilan solishtiradi va yetishmayotgan texnologik xaritalarning qoralamasini tayyorlaydi.</p></div><a class="btn" href="kabinet/">Kabinetga kirish</a></div>
-<div class="steps"><div><b>Kiring</b><p class="small muted">Admin tasdiqlagan o‘qituvchi akkaunti.</p></div><div><b>Yuklang</b><p class="small muted">ZIP, .docx, .pdf, .pptx, .xlsx yoki RTR paketi.</p></div><div><b>AI tayyorlaydi</b><p class="small muted">Tasniflash, TMR, xarita qoralamalari.</p></div><div><b>Saytda</b><p class="small muted">Fan sahifasida o‘quvchi va hamkasblar uchun ochiq.</p></div></div>
-</div></div></section>"""
-    b += f"""<section class="blk" style="padding-top:0"><div class="wrap"><div class="grid g2">
-<div class="card">{ico("joy")}<h3>Joylashuv</h3><p>{e(MANZIL)}</p><a class="btn ghost sm" href="joylashuv/">Xaritada ko‘rish</a></div>
-<div class="card">{ico("odam")}<h3>Texnikum faoliyati</h3><p>Kunduzgi va dual ta’lim, o‘quv va ishlab chiqarish amaliyoti, kasbiy kvalifikatsiya — batafsil «Texnikum haqida» bo‘limida.</p><a class="btn ghost sm" href="haqida/">Batafsil</a></div>
-</div></div></section>"""
-    page("index.html", NOM, f"{NOM} elektron o‘quv-uslubiy bazasi: yo‘nalishlar, fanlar, TMR, texnologik xaritalar, ma’ruzalar va o‘quv-uslubiy majmualar.", b, active="")
-
-# ---------- Yo'nalishlar ----------
-def yonalish_card(y, R):
-    cnt = {t: sum(1 for f in y["fanlar"] if f["toifa"] == t) for t in TOIFA}
-    return (f'<a class="card" href="{R}yonalish/{y["id"]}/"><h3>{e(y["qisqa"])}</h3><p class="meta">{e(y["kod"])} · {e(y["talim_shakli"])} · {", ".join(y["guruhlar"])}</p>'
-            f'<p class="small" style="margin:8px 0 0"><span class="tag k">{cnt["kasbiy"]} kasbiy</span> <span class="tag a">{cnt["amaliyot"]} amaliyot</span> <span class="tag u">{cnt["umumtalim"]} umumta’lim</span></p></a>')
-
-def yonalishlar():
-    R = "../"
-    b = hero("", "Yo‘nalishlar", "", crumbs=[("Bosh sahifa", R), ("Yo‘nalishlar", None)])
-    for kurs, nom in ((2, "2-kurs · 2025-yil qabuli"), (1, "1-kurs · 2026-yil qabuli")):
-        cards = "".join(yonalish_card(y, R) for y in Y if y["hozirgi_kurs"] == kurs)
-        b += f'<section class="blk"><div class="wrap"><h2>{nom}</h2><div class="grid g3">{cards}</div></div></section>'
-    page("yonalishlar/index.html", "Yo‘nalishlar", f"{NOM}dagi barcha yo‘nalishlar va mutaxassisliklar.", b, active="yonalishlar/")
-
-def fan_table(y, s, R):
-    out = ""
-    for t, (nom, c) in TOIFA.items():
-        L = [f for f in y["fanlar"] if f["toifa"] == t and s in f["jami_soat"]]
-        if not L:
-            continue
-        rows = ""
-        for f in L:
-            a = f["auditoriya_soat_taxminiy"].get(s)
-            mat = '<span class="tag ok">material bor</span>' if (y["id"], f["id"], s) in STATIK else '<span class="muted small" data-mat="' + f["id"] + '">—</span>'
-            rows += (f'<tr><td><a href="{R}yonalish/{y["id"]}/fan/{f["id"]}/?sem={s}">{e(f["nomi"])}</a></td><td class=n>{f["jami_soat"][s]}</td>'
-                     f'<td class=n>{a if a else "—"}</td><td class=n>{a // 2 if a else "—"}</td><td>{mat}</td></tr>')
-        tot = sum(f["jami_soat"][s] for f in L)
-        out += (f'<h3 style="margin-top:22px"><span class="tag {c}">{nom}</span> <span class="muted small">{len(L)} ta · {tot} soat</span></h3>'
-                f'<div class="tbl-w"><table class="ft"><thead><tr><th>Fan / modul</th><th class=n>Jami soat</th><th class=n>Auditoriya</th><th class=n>Darslar</th><th>Materiallar</th></tr></thead><tbody>{rows}</tbody></table></div>')
-    return out
-
-def yonalish(y):
-    R = "../../"
-    gs = GOF[y["id"]]
-    meta = (f'<p class="lead">{e(y["kod"])} · {e(y["talim_yonalishi"] or "ta’lim yo‘nalishi aniqlanmoqda")}<br>{e(y["talim_shakli"])} ta’lim · {e(y["oquv_yili"])} · hozir {y["hozirgi_kurs"]}-kurs</p>'
-            f'<div class="chips" style="margin-top:14px">{guruh_chips(gs, R)}</div>')
-    b = hero("", e(y["qisqa"]), "", crumbs=[("Bosh sahifa", R), ("Yo‘nalishlar", R + "yonalishlar/"), (y["qisqa"], None)], extra=meta)
-    sems = [str(s) for s in y["kiritilgan_semestrlar"]]
-    allsem = sorted(set(sems + [str(s) for s in y["kiritilmagan_semestrlar"]]), key=int)
-    cur = "3" if y["hozirgi_kurs"] == 2 else "1"
-    btns = "".join(f'<button data-sem="{s}"{"" if s in sems else " disabled title=" + chr(34) + "O‘quv rejada hali kiritilmagan" + chr(34)}>{s}-semestr</button>' for s in allsem)
-    pans = "".join(f'<div data-sem-p="{s}"><p class="muted small">{s}-semestr: {soat_sum(y, s)} soat · {sum(1 for f in y["fanlar"] if s in f["jami_soat"])} ta fan/modul{" · " + y["semestr_sanalari"][s] if s in y["semestr_sanalari"] else ""}</p>{fan_table(y, s, R)}</div>' for s in sems)
-    note = ""
-    if y["kiritilmagan_semestrlar"]:
-        note = f'<p class="note" style="margin-top:20px">{", ".join(str(s) for s in y["kiritilmagan_semestrlar"])}-semestr fanlari kasb-emis o‘quv rejasida hali kiritilmagan — kiritilgach shu yerga qo‘shiladi.</p>'
-    kval = ""
-    if y.get("kvalifikatsiyalar"):
-        kval = '<div class="card" style="margin-top:20px"><h3>Beriladigan kvalifikatsiyalar</h3><ul>' + "".join(f"<li>{e(k)}</li>" for k in y["kvalifikatsiyalar"]) + "</ul></div>"
-    b += f"""<section class="blk"><div class="wrap">
-<div class="blk-h"><div><h2>Fanlar</h2><p class="muted">Kasbiy (spes) fanlar, amaliyot va umumta’lim fanlari alohida. «Darslar» — 1 juftlik (80 daqiqa) hisobida.</p></div><a class="btn ghost sm" target="_blank" rel="noopener" href="{e(y["oquv_reja"]["url"])}">O‘quv reja: {e(y["oquv_reja"]["raqam"])}</a></div>
-<div data-sems data-def="{cur}"><div class="sem-tabs" role="tablist">{btns}</div>{pans}</div>{note}{kval}
+    nk = sum(1 for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim")
+    opts = "".join(f'<option value="{y["id"]}">{e(ynom(y))}</option>' for y in YS)
+    extra = (f'<p class="lead">Kasbiy fanlar har bir mutaxassislik bo‘yicha alohida, umumta’lim fanlari esa hammasi uchun bitta. Har bir fan: TMR, texnologik xaritalar, ma’ruzalar va o‘quv-uslubiy majmua.</p>'
+             f'<div class="fq"><label for="fq" class="sr">Fanni qidirish</label>'
+             f'<input type="search" id="fq" class="q-big" placeholder="Fan, mavzu yoki mutaxassislik nomi…" autocomplete="off"></div>')
+    b = hero("", "Fanlar", "", extra=extra, small=False, fasl=True)
+    seg = (f'<button type="button" data-tf="" aria-pressed="true">Hammasi</button>'
+           f'<button type="button" data-tf="kasbiy" aria-pressed="false">Kasbiy fanlar <span>{nk}</span></button>'
+           f'<button type="button" data-tf="umumtalim" aria-pressed="false">Umumta’lim fanlari <span>{len(UMF)}</span></button>')
+    ks = ""
+    for y in YS:
+        L = [f for f in y["fanlar"] if f["toifa"] != "umumtalim"]
+        L.sort(key=lambda f: (f["toifa"] != "kasbiy", norm(f["nomi"])))
+        cards = "".join(fk_card(y["id"], f, R, f'{sem_txt(f["jami_soat"])} · {sum(f["jami_soat"].values())} soat') for f in L)
+        ks += (f'<div class="ys" data-y="{y["id"]}"><div class="ys-h"><h3>{e(ynom(y))}</h3><span class="meta">{e(y["kod"])} · {e(y["talim_shakli"].lower())} ta’lim · {y["hozirgi_kurs"]}-kurs · {len(L)} ta fan</span></div>'
+               f'<div class="grid g3">{cards}</div></div>')
+    us = "".join(fk_card("umumtalim", f, R, f'{sem_txt(f["jami_soat"])} · barcha mutaxassisliklar') for f in UMF)
+    b += f"""<section class="blk katalog"><div class="wrap">
+<div class="fbar">
+<div class="seg" role="group" aria-label="Fan turi">{seg}</div>
+<label class="fsel"><span class="sr">Mutaxassislik</span><select id="fy"><option value="">Barcha mutaxassisliklar</option>{opts}</select></label>
+<label class="chk"><input type="checkbox" id="fm"> Faqat materiali borlar</label>
+</div>
+<p class="muted small" id="fsoni" aria-live="polite"></p>
+<div id="fmav" hidden><h2>Mavzular</h2><div class="q-res"></div></div>
+<section class="fsek" data-sec="kasbiy"><h2>Kasbiy fanlar <span class="muted">mutaxassisliklar bo‘yicha</span></h2>{ks}</section>
+<section class="fsek" data-sec="umumtalim"><h2>Umumta’lim fanlari <span class="muted">barcha mutaxassisliklar uchun bitta</span></h2><div class="grid g3">{us}</div></section>
+<div class="empty" id="fbosh" hidden><p><b>Hech narsa topilmadi.</b></p><p class="muted small">Qidiruv so‘zini qisqartiring yoki filtrni olib tashlang.</p><button type="button" class="btn sm" id="ftoz">Filtrlarni tozalash</button></div>
+<p class="small muted" style="margin-top:22px">Fan va soatlar: kasb-emis.edu.uz o‘quv rejalari, 05.11.2026. Savollar bo‘lsa — pastdagi Kuvi AI’ga yozing.</p>
 </div></section>"""
-    b += f'<span id="yon" data-y="{y["id"]}" hidden></span>'
-    page(f"yonalish/{y['id']}/index.html", y["qisqa"] + " (" + ", ".join(y["guruhlar"]) + ")",
-         f"{y['qisqa']} ({y['kod']}) — {', '.join(y['guruhlar'])} guruhlari: kasbiy fanlar, amaliyot va umumta’lim fanlari, soatlar va o‘quv-uslubiy materiallar.", b, active="yonalishlar/", scripts=("bulut.js", "yon.js"))
+    page("index.html", NOM, f"{NOM} fanlar e-bazasi: kasbiy fanlar va umumta’lim fanlari bo‘yicha TMR, texnologik xaritalar, ma’ruzalar va o‘quv-uslubiy majmualar.",
+         b, active="", scripts=("bulut.js", "fanlar.js", "t1-kuvi.js"))
 
 EMPTY = {
     "tmr": "Taqvim-mavzu reja hali joylanmagan.", "xarita": "Texnologik xaritalar hali joylanmagan.", "maruza": "Ma’ruza matnlari hali joylanmagan.",
@@ -243,125 +213,98 @@ EMPTY = {
 }
 TABS = [("tmr", "TMR"), ("xarita", "Texnologik xaritalar"), ("maruza", "Ma’ruzalar"), ("amaliy", "Amaliy"), ("mustaqil", "Mustaqil ish"), ("nazorat", "Nazorat"), ("glossariy", "Glossariy"), ("oum", "O‘UM"), ("fayllar", "Fayllar")]
 
-def fan_page(y, f):
+def fan_page(y, f, cur=None, um=None):
     R = "../../../../"
-    sems = list(f["jami_soat"].keys())
-    cur = "3" if (y["hozirgi_kurs"] == 2 and "3" in sems) else sems[-1] if y["hozirgi_kurs"] == 2 else sems[0]
+    sems = sorted(f["jami_soat"].keys(), key=int)
+    if cur is None:
+        cur = "3" if (y["hozirgi_kurs"] == 2 and "3" in sems) else sems[-1] if y["hozirgi_kurs"] == 2 else sems[0]
     nom, c = TOIFA[f["toifa"]]
     rtr = {s: {"json": R + v["json"], "base": R + v["base"], "paket": R + v["paket"], "manba": v["manba"]} for (yi, fi, s), v in STATIK.items() if yi == y["id"] and fi == f["id"]}
     kab = f'{R}kabinet/?y={y["id"]}&amp;f={f["id"]}'
-    extra = (f'<p class="lead"><span class="tag {c}" style="background:#fff">{nom}</span> &nbsp;{e(y["qisqa"])} · {", ".join(y["guruhlar"])}</p>'
-             + (f'<p class="small" style="opacity:.8">kasb-emis’dagi nomi: {e(f["nomi_kasb_emis"])}</p>' if f.get("nomi_kasb_emis") else ""))
-    b = hero("", e(f["nomi"]), "", crumbs=[("Bosh sahifa", R), ("Yo‘nalishlar", R + "yonalishlar/"), (y["qisqa"], R + f"yonalish/{y['id']}/"), (f["nomi"], None)], extra=extra)
+    if um:
+        extra = f'<p class="lead"><span class="tag {c}" style="background:#fff">{nom}</span> &nbsp;Barcha mutaxassisliklar uchun umumiy fan</p>'
+        crumbs = [("Fanlar", R), ("Umumta’lim fanlari", R + "?t=umumtalim"), (f["nomi"], None)]
+    else:
+        extra = (f'<p class="lead"><span class="tag {c}" style="background:#fff">{nom}</span> &nbsp;{e(ynom(y))} · {y["hozirgi_kurs"]}-kurs</p>'
+                 + (f'<p class="small" style="opacity:.8">kasb-emis’dagi nomi: {e(f["nomi_kasb_emis"])}</p>' if f.get("nomi_kasb_emis") else ""))
+        crumbs = [("Fanlar", R), (ynom(y), R + "?y=" + y["id"]), (f["nomi"], None)]
+    b = hero("", e(f["nomi"]), "", crumbs=crumbs, extra=extra)
     semtabs = ""
     if len(sems) > 1:
         semtabs = '<div data-sems data-def="' + cur + '"><div class="sem-tabs" role="tablist">' + "".join(f'<button data-sem="{s}">{s}-semestr · {f["jami_soat"][s]} soat</button>' for s in sems) + "</div></div>"
     tb = "".join(f'<button data-t="{k}">{t}<span class="cnt"></span></button>' for k, t in TABS)
     pn = "".join(f'<div data-p="{k}"><div class="empty">{ico("fayl", "x")}<p><b>{EMPTY[k]}</b></p><p class="muted small">Bu fandan dars beradigan o‘qituvchi materiallarni kabinet orqali yuklashi mumkin — AI ularni avtomatik tayyorlaydi.</p><a class="btn sm" href="{kab}">Material joylash</a></div></div>' for k, _ in TABS)
+    soat_jad = ""
+    if um:
+        rows = "".join(f'<tr><td>{e(ynom(yy))}</td>' + "".join(f'<td class=n>{ff["jami_soat"].get(s, "—")}</td>' for s in sems) + "</tr>" for yy, ff in sorted(um, key=lambda t: norm(ynom(t[0]))))
+        soat_jad = (f'<details class="mv" style="margin-top:22px"><summary>Soatlar mutaxassisliklar bo‘yicha</summary><div class="ic"><p class="small muted">Yuqoridagi soatlar — ko‘pchilik mutaxassisliklardagi qiymat. Ayrim o‘quv rejalarda farq qiladi:</p>'
+                    f'<div class="tbl-w"><table><thead><tr><th>Mutaxassislik</th>' + "".join(f"<th class=n>{s}-sem</th>" for s in sems) + f"</tr></thead><tbody>{rows}</tbody></table></div></div></details>")
     b += f"""<section class="blk"><div class="wrap">
-<div id="fan" data-y="{y['id']}" data-f="{f['id']}" data-fan="{e(f['nomi'])}" data-yn="{e(y['qisqa'])}" data-def="{cur}" data-plan='{e(json.dumps(plan_of(f)))}' data-rtr='{e(json.dumps(rtr, ensure_ascii=False))}'>
+<div id="fan" data-y="{y['id']}" data-f="{f['id']}" data-fan="{e(f['nomi'])}" data-yn="{e(ynom(y) if not um else 'Umumta’lim (barcha mutaxassisliklar)')}" data-toifa="{f['toifa']}" data-def="{cur}" data-plan='{e(json.dumps(plan_of(f)))}' data-rtr='{e(json.dumps(rtr, ensure_ascii=False))}'>
 {semtabs}
 <p class="note" data-soat style="margin-bottom:18px"></p>
 <div data-tabs data-hash><div class="tabs" role="tablist">{tb}</div>{pn}</div>
+{soat_jad}
 </div></div></section>"""
-    page(f"yonalish/{y['id']}/fan/{f['id']}/index.html", f"{f['nomi']} — {y['qisqa']}",
-         f"«{f['nomi']}» fani ({y['qisqa']}, {', '.join(y['guruhlar'])}): TMR, texnologik xaritalar, ma’ruzalar, amaliy ishlar, nazorat va O‘UM.",
-         b, active="yonalishlar/", scripts=("rtr.js", "bulut.js", "fan.js"))
+    page(f"yonalish/{y['id']}/fan/{f['id']}/index.html", f"{f['nomi']}" + ("" if um else f" — {ynom(y)}"),
+         f"«{f['nomi']}» fani" + (" (umumta’lim, barcha mutaxassisliklar)" if um else f" ({ynom(y)})") + ": TMR, texnologik xaritalar, ma’ruzalar, amaliy ishlar, nazorat va O‘UM.",
+         b, active="", scripts=("rtr.js", "bulut.js", "fan.js", "t1-kuvi.js"))
 
-# ---------- Guruhlar ----------
-def guruhlar():
-    R = "../"
-    rows = "".join(f'<tr><td><a href="{R}yonalish/{g["yonalish_id"]}/"><b>{g["guruh"]}</b></a></td><td>{e(YID[g["yonalish_id"]]["qisqa"])}</td><td class=n>{YID[g["yonalish_id"]]["hozirgi_kurs"]}</td><td>{e(YID[g["yonalish_id"]]["talim_shakli"])}</td><td class=n>{g["oquvchilar_soni_05_11_2026"]}</td></tr>' for g in G)
-    b = hero("", "Guruhlar", "", crumbs=[("Bosh sahifa", R), ("Guruhlar", None)])
-    b += f'<section class="blk"><div class="wrap"><div class="tbl-w"><table><thead><tr><th>Guruh</th><th>Mutaxassislik</th><th class=n>Kurs</th><th>Ta’lim shakli</th><th class=n>O‘quvchilar</th></tr></thead><tbody>{rows}</tbody></table></div><p class="small muted" style="margin-top:10px">O‘quvchilar soni: {STAT_SOURCE}.</p></div></section>'
-    page("guruhlar/index.html", "Guruhlar", f"{NOM} guruhlari va ularning yo‘nalishlari.", b, active="guruhlar/")
+# ---------- Eski manzillar: yangi katalogga yoki /eski/ ga yo'naltirish ----------
+def redir(path, target, title):
+    fp = os.path.join(OUT, path); os.makedirs(os.path.dirname(fp), exist_ok=True)
+    js = json.dumps(target)
+    open(fp, "w", encoding="utf-8").write(
+        f'<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>{e(title)}</title>'
+        f'<script>var t={js};location.replace(t+(t.indexOf("?")<0?location.search:"")+location.hash);</script>'
+        f'<meta http-equiv="refresh" content="0; url={e(target)}"></head><body><p><a href="{e(target)}">{e(title)}</a></p></body></html>')
+
+def yonaltirish():
+    for y in Y:
+        redir(f"yonalish/{y['id']}/index.html", f"../../?y={y['id']}", f"{y['qisqa']} — fanlar")
     for g in G:
-        y = YID[g["yonalish_id"]]
-        fp = os.path.join(OUT, "guruh", g["guruh"], "index.html"); os.makedirs(os.path.dirname(fp), exist_ok=True)
-        url = f"../../yonalish/{y['id']}/"
-        open(fp, "w", encoding="utf-8").write(f'<!doctype html><html lang="uz"><head><meta charset="utf-8"><title>{g["guruh"]} — {e(y["qisqa"])}</title><meta http-equiv="refresh" content="0; url={url}"><link rel="canonical" href="{DOMEN}/yonalish/{y["id"]}/"></head><body><p><a href="{url}">{g["guruh"]} — {e(y["qisqa"])}</a></p></body></html>')
-
-# ---------- Texnikum haqida (faoliyat) ----------
-def haqida():
-    R = "../"
-    kun = sum(1 for y in Y if y["talim_shakli"] == "Kunduzgi"); dual = sum(1 for y in Y if y["talim_shakli"] == "Dual")
-    soha = ""
-    for k, t, ids in SOHA:
-        lst = "".join(f'<li><a href="{R}yonalish/{i}/">{e(YID[i]["qisqa"])}</a> <span class="muted small">({e(YID[i]["kod"])}, {e(YID[i]["talim_shakli"].lower())})</span></li>' for i in ids)
-        soha += f'<div class="card">{ico(k)}<h3>{t}</h3><ul style="padding-left:1.1em;margin:0">{lst}</ul></div>'
-    b = hero("", "Texnikum haqida", f"{NOM} — Toshkent viloyati Toshkent tumanidagi kasbiy ta’lim muassasasi. Texnikum yoshlarni zamonaviy kasblarga nazariy va amaliy jihatdan tayyorlaydi.",
-             crumbs=[("Bosh sahifa", R), ("Texnikum haqida", None)])
-    b += f"""<section class="blk"><div class="wrap">
-<div class="grid g4" style="margin-bottom:26px">
-<div class="card stat"><b>{len({y["kod"] for y in Y})}</b>mutaxassislik</div><div class="card stat"><b>{len(G)}</b>guruh</div>
-<div class="card stat"><b>{kun} / {dual}</b>o‘quv reja: kunduzgi / dual</div><div class="card stat"><b>4</b>semestr — 2 yillik ta’lim</div></div>
-<h2>Faoliyat yo‘nalishlari</h2><p class="muted">Texnikumda quyidagi sohalar bo‘yicha mutaxassislar tayyorlanadi.</p>
-<div class="grid g2">{soha}</div></div></section>
-<section class="blk" style="padding-top:0"><div class="wrap"><div class="grid g2">
-<div class="card">{ico("kitob")}<h3>Ta’lim jarayoni</h3><p>Ta’lim 2 yil (4 semestr) davom etadi. O‘quv reja uch qismdan iborat:</p><ul>
-<li><b>Kasbiy (spes) fanlar</b> — mutaxassislikning nazariy asoslari va kasbiy modullar;</li><li><b>Amaliyot</b> — o‘quv, ishlab chiqarish va kvalifikatsion amaliyot;</li>
-<li><b>Umumta’lim fanlari</b> — ona tili, matematika, fizika, tarix, chet tillari, informatika va boshqalar.</li></ul>
-<p>Dars — 1 juftlik (80 daqiqa). Har bir fan bo‘yicha oraliq va yakuniy nazorat o‘tkaziladi.</p></div>
-<div class="card">{ico("avto")}<h3>Dual ta’lim va amaliyot</h3><p>{dual} ta o‘quv reja dual shaklda: o‘quvchilar nazariy bilimni texnikumda olib, amaliy ko‘nikmani korxonalarda mustahkamlaydi. Kunduzgi yo‘nalishlarda ham ishlab chiqarish amaliyoti o‘quv rejaning muhim qismi.</p></div>
-<div class="card">{ico("odam")}<h3>Rahbariyat</h3><p>Texnikum direktori: <b>D. Shermuhammedov</b></p><p class="small muted">Texnikumda Yoshlar ittifoqi yetakchisi yoshlar bilan ma’naviy-ma’rifiy, sport va ijodiy tadbirlarni tashkil etadi.</p></div>
-<div class="card">{ico("fayl")}<h3>Elektron baza</h3><p>Ushbu sayt — texnikum o‘qituvchilari va o‘quvchilari uchun yagona o‘quv-uslubiy baza: TMR, texnologik xaritalar, ma’ruzalar va majmualar fanlar kesimida. Materiallarni tasdiqlangan o‘qituvchilar kabinet orqali joylaydi.</p><a class="btn ghost sm" href="{R}kabinet/">O‘qituvchi kabineti</a></div>
-</div>
-<p class="small muted" style="margin-top:18px">Manbalar: yo‘nalishlar, guruhlar va o‘quv rejalar — <a href="https://kasb-emis.edu.uz" rel="noopener">kasb-emis.edu.uz</a> (05.11.2026); manzil va ish vaqti — <a href="https://www.goldenpages.uz/uz/company/?Id=107990" rel="noopener">goldenpages.uz</a>.</p>
-</div></section>"""
-    page("haqida/index.html", "Texnikum haqida", f"{NOM} faoliyati: yo‘nalishlar, ta’lim jarayoni, dual ta’lim va amaliyot.", b, active="haqida/")
-
-def joylashuv():
-    R = "../"
-    q = quote(MANZIL_Q)
-    gmap = f"https://maps.google.com/maps?q={q}&z=15&output=embed"
-    b = hero("", "Joylashuv", "Texnikum Toshkent viloyati Toshkent tumanidagi Ko‘ksaroy shaharchasida joylashgan.", crumbs=[("Bosh sahifa", R), ("Joylashuv", None)])
-    b += f"""<section class="blk"><div class="wrap"><div class="grid g2" style="align-items:start">
-<div><div class="card">{ico("joy")}<h3>Manzil</h3><p style="font-size:18px">{e(MANZIL)}</p>
-<div class="toolbar"><a class="btn sm" target="_blank" rel="noopener" href="https://yandex.uz/maps/?text={q}">Yandex xaritada</a><a class="btn ghost sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query={q}">Google Maps’da</a></div></div>
-<div class="card" style="margin-top:16px">{ico("soat")}<h3>Ish vaqti</h3><div class="kv" style="margin:0"><div>Dushanba–shanba</div><div>08:00–17:00</div><div>Yakshanba</div><div>Dam olish kuni</div></div></div>
-<div class="card" style="margin-top:16px"><h3>Mo‘ljal</h3><p>Jamoat xavfsizligi universitetidan taxminan 2,9 km.</p><p class="small muted" style="margin:0">Manba: <a href="https://www.goldenpages.uz/uz/company/?Id=107990" rel="noopener">goldenpages.uz</a>.</p></div></div>
-<div><button class="map" data-map="{e(gmap)}" style="display:grid;place-items:center;cursor:pointer;border:1px dashed var(--a);font:600 16px var(--body);color:var(--a)">Xaritani ochish</button>
-<p class="small muted" style="margin-top:8px">Xaritadagi belgi manzil bo‘yicha topilgan taxminiy joy.</p></div>
-</div></div></section>"""
-    page("joylashuv/index.html", "Joylashuv", f"{NOM} manzili, xaritasi va ish vaqti.", b, active="joylashuv/")
-
-def qidiruv():
-    R = "../"
-    b = hero("", "Qidiruv", "", crumbs=[("Bosh sahifa", R), ("Qidiruv", None)])
-    b += '<section class="blk"><div class="wrap"><label for="q-input" class="sr">Qidiruv</label><input type="search" id="q-input" class="q-big" placeholder="Fan, mavzu, yo‘nalish yoki guruh…" autofocus><div id="q-res" class="q-res" style="margin-top:18px"></div></div></section>'
-    page("qidiruv/index.html", "Qidiruv", f"{NOM} e-bazasidan qidirish.", b, active="qidiruv/")
+        redir(f"guruh/{g['guruh']}/index.html", f"../../?y={g['yonalish_id']}", f"{g['guruh']} — fanlar")
+    for y in Y:
+        for f in y["fanlar"]:
+            if f["toifa"] == "umumtalim":
+                redir(f"yonalish/{y['id']}/fan/{f['id']}/index.html", f"../../../umumtalim/fan/{f['id']}/", f["nomi"])
+    redir("yonalish/umumtalim/index.html", "../../?t=umumtalim", "Umumta’lim fanlari")
+    redir("yonalishlar/index.html", "../", "Fanlar")
+    redir("guruhlar/index.html", "../", "Fanlar")
+    redir("qidiruv/index.html", "../", "Fanlar")
+    redir("haqida/index.html", "../eski/haqida/", "Texnikum haqida (eski versiya)")
+    redir("joylashuv/index.html", "../eski/joylashuv/", "Joylashuv (eski versiya)")
 
 def kabinet():
     R = "../"
-    b = hero("", "O‘qituvchi kabineti", "Login va parol bilan kiring, fan hujjatlarini yuklang — AI ularni tasniflaydi, TMR tuzadi va e-bazaga tayyorlaydi.", crumbs=[("Bosh sahifa", R), ("O‘qituvchi kabineti", None)])
+    b = hero("", "O‘qituvchi kabineti", "Email yoki Google akkaunt bilan kiring — akkaunt darhol faollashadi. Fan hujjatlarini yuklang: AI ularni tasniflaydi, TMR tuzadi va e-bazaga tayyorlaydi.", crumbs=[("Fanlar", R), ("O‘qituvchi kabineti", None)])
     b += '<section class="blk"><div class="wrap"><div id="kabinet"></div></div></section>'
-    page("kabinet/index.html", "O‘qituvchi kabineti", "O‘qituvchilar uchun kirish va materiallarni joylash.", b, scripts=("bulut.js", "kabinet.js"), noindex=True)
+    page("kabinet/index.html", "O‘qituvchi kabineti", "O‘qituvchilar uchun kirish va materiallarni joylash.", b, scripts=("bulut.js", "kabinet.js", "t1-kuvi.js"), noindex=True)
 
 def admin():
     R = "../"
-    b = hero("", "Admin panel", "", crumbs=[("Bosh sahifa", R), ("Admin panel", None)])
+    b = hero("", "Admin panel", "", crumbs=[("Fanlar", R), ("Admin panel", None)])
     b += '<section class="blk"><div class="wrap"><div id="admin"></div></div></section>'
     page("admin/index.html", "Admin panel", "Boshqaruv.", b, scripts=("bulut.js", "admin.js"), noindex=True)
 
 def xato404():
-    b = hero("", "Sahifa topilmadi", "Bunday sahifa yo‘q yoki ko‘chirilgan.", extra='<div class="cta" style="margin-top:20px"><a class="btn light" href="/">Bosh sahifa</a><a class="btn light" href="/qidiruv/">Qidiruv</a></div>')
+    b = hero("", "Sahifa topilmadi", "Bunday sahifa yo‘q yoki ko‘chirilgan.", extra='<div class="cta" style="margin-top:20px"><a class="btn light" href="/">Fanlar</a><a class="btn light" href="/eski/">Eski versiya</a></div>')
     page("404.html", "Sahifa topilmadi", "Sahifa topilmadi.", b, noindex=True, abs_root=True)
 
 # ---------- Ma'lumot fayllari ----------
 def data_files():
     os.makedirs(os.path.join(OUT, "data"), exist_ok=True)
-    site = {"yonalishlar": [{k: y[k] for k in ("id", "qisqa", "mutaxassislik", "kod", "guruhlar", "hozirgi_kurs", "talim_shakli")} | {"fanlar": [{k: f[k] for k in ("id", "nomi", "toifa", "jami_soat", "auditoriya_soat_taxminiy")} for f in y["fanlar"]]} for y in Y],
-            "guruhlar": G}
+    FK = ("id", "nomi", "toifa", "jami_soat", "auditoriya_soat_taxminiy")
+    site = {"yonalishlar": [dict({k: UMY[k] for k in ("id", "qisqa", "mutaxassislik", "kod", "hozirgi_kurs", "talim_shakli")}, fanlar=[{k: f[k] for k in FK} for f in UMF])]
+            + [dict({k: y[k] for k in ("id", "mutaxassislik", "kod", "hozirgi_kurs", "talim_shakli")}, qisqa=ynom(y), fanlar=[{k: f[k] for k in FK} for f in y["fanlar"] if f["toifa"] != "umumtalim"]) for y in YS]}
     json.dump(site, open(os.path.join(OUT, "data", "malumot.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     Q = []
-    for p, t in (("haqida/", "Texnikum haqida — faoliyat"), ("joylashuv/", "Joylashuv — manzil va xarita"), ("kabinet/", "O‘qituvchi kabineti"), ("guruhlar/", "Guruhlar ro‘yxati")):
-        Q.append({"k": "s", "t": t, "u": p})
-    for y in Y:
-        Q.append({"k": "y", "t": y["qisqa"], "s": f'{y["kod"]} · {", ".join(y["guruhlar"])} · {y["talim_shakli"]}', "u": f'yonalish/{y["id"]}/'})
+    for y in YS:
         for f in y["fanlar"]:
-            Q.append({"k": "f", "t": f["nomi"], "s": f'{y["qisqa"]} · {", ".join(y["guruhlar"])} · {TOIFA[f["toifa"]][0]} · {", ".join(s + "-sem " + str(h) + " soat" for s, h in f["jami_soat"].items())}', "u": f'yonalish/{y["id"]}/fan/{f["id"]}/'})
-    for g in G:
-        Q.append({"k": "g", "t": g["guruh"], "s": YID[g["yonalish_id"]]["qisqa"], "u": f'yonalish/{g["yonalish_id"]}/'})
+            if f["toifa"] != "umumtalim":
+                Q.append({"k": "f", "t": f["nomi"], "s": f'{ynom(y)} · {TOIFA[f["toifa"]][0]}', "u": f'yonalish/{y["id"]}/fan/{f["id"]}/'})
+    for f in UMF:
+        Q.append({"k": "f", "t": f["nomi"], "s": "Umumta’lim fani · barcha mutaxassisliklar", "u": f'yonalish/umumtalim/fan/{f["id"]}/'})
     if RTR_TIKUV:
         for t in RTR_TIKUV["topics"]:
             Q.append({"k": "m", "t": t["nomi"], "s": f'Zamonaviy tikuv jihozlari · {t["id"]} · {t["turi"]}', "u": "yonalish/moda-tikuv-texnologiyasi/fan/zamonaviy-tikuv-jihozlari/#" + ("amaliy" if t["turi"] == "Amaliy" else "maruza")})
@@ -371,9 +314,9 @@ def data_files():
         json.dump(RTR_TIKUV, open(os.path.join(OUT, "data", "rtr", "zamonaviy-tikuv-jihozlari.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 def extras():
-    urls = ["", "yonalishlar/", "guruhlar/", "haqida/", "joylashuv/", "qidiruv/"] + [f'yonalish/{y["id"]}/' for y in Y] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"]]
+    urls = [""] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{DOMEN}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
-    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nSitemap: {DOMEN}/sitemap.xml\n")
+    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nDisallow: /eski/\nSitemap: {DOMEN}/sitemap.xml\n")
     open(os.path.join(OUT, "CNAME"), "w").write("texnikum1son.uz\n")
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
     os.makedirs(os.path.join(OUT, "assets"), exist_ok=True)
@@ -381,10 +324,12 @@ def extras():
         shutil.copy(os.path.join(SRC, "assets", fn), os.path.join(OUT, "assets", fn))
     open(os.path.join(OUT, "assets", "logo.svg"), "w", encoding="utf-8").write(LOGO.replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"').replace("var(--a)", "#b5541b"))
 
-bosh(); yonalishlar(); guruhlar(); haqida(); joylashuv(); qidiruv(); kabinet(); admin(); xato404()
+bosh(); yonaltirish(); kabinet(); admin(); xato404()
 for y in Y:
-    yonalish(y)
     for f in y["fanlar"]:
-        fan_page(y, f)
+        if f["toifa"] != "umumtalim":
+            fan_page(y, f)
+for f in UMF:
+    fan_page(UMY, f, cur="1", um=UM[f["id"]]["L"])
 data_files(); extras()
 print("Sahifalar:", sum(len(fs) for _, _, fs in os.walk(OUT)))
