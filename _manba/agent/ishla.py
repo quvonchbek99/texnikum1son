@@ -360,11 +360,40 @@ def json_ol(t):
         raise ValueError("JSON emas: " + t[:120].replace("\n", " "))
 
 
+_GM = None
+def gemini_modellar(gk):
+    """Kalit qo'llaydigan modellarni Google'dan so'raydi va eng yangi «flash»larni tanlaydi (nomlar eskirsa ham ishlaydi)."""
+    global _GM
+    if _GM is not None:
+        return _GM
+    zaxira = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-flash-latest", "gemini-2.5-flash"]
+    try:
+        L, tok = [], ""
+        while True:
+            with urllib.request.urlopen(f"https://generativelanguage.googleapis.com/v1beta/models?pageSize=200&key={gk}" + (f"&pageToken={tok}" if tok else ""), timeout=60) as r:
+                j = json.loads(r.read().decode())
+            L += j.get("models", []); tok = j.get("nextPageToken")
+            if not tok:
+                break
+        nomlar = [m["name"].split("/", 1)[-1] for m in L if "generateContent" in m.get("supportedGenerationMethods", [])]
+        nomlar = [n for n in nomlar if "flash" in n and not re.search(r"tts|image|live|audio|embed|vision|thinking-exp|preview-\d{2}-\d{2}$", n)]
+        def kalit(n):
+            v = [int(x) for x in re.findall(r"(\d+)(?:\.(\d+))?", n)[0] if x] if re.search(r"\d", n) else [0]
+            return (("latest" in n), v, "lite" not in n, "preview" not in n and "exp" not in n)
+        nomlar.sort(key=kalit, reverse=True)
+        _GM = (nomlar[:4] or zaxira)
+        log("  Gemini modellari:", ", ".join(_GM))
+    except Exception as e:
+        log("  Gemini modellar ro'yxati olinmadi:", str(e)[:150])
+        _GM = zaxira
+    return _GM
+
+
 def ai_sorov(matn, tizim):
     """Gemini (GEMINI_API_KEY) → GitHub Models (GITHUB_TOKEN). JSON qaytaradi yoki None."""
     gk = os.environ.get("GEMINI_API_KEY", "").strip()
     if gk:
-        for model in ("gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash"):
+        for model in gemini_modellar(gk):
             try:
                 body = {"systemInstruction": {"parts": [{"text": tizim}]}, "contents": [{"role": "user", "parts": [{"text": matn}]}],
                         "generationConfig": {"responseMimeType": "application/json", "temperature": 0.1}}
