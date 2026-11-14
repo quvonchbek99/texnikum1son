@@ -1209,5 +1209,13 @@ window.EZOP_MASALLAR = [
     variantlar: ["Birinchisi, chunki u ko'proq dam olgan edi", "Ikkinchisi, chunki u ishni darhol boshlab, tinmay bajargan edi", "Ikkalasi ham bir vaqtda, chunki ish osonroq edi"],
     javob: 1,
     izoh: "Ishni vaqtida boshlash va izchil bajarish natijani tezlashtiradi. Dam olish kerak, lekin ishni keyinga qoldirish oxirida vaqtni yo'qotadi."
+  },
+  {
+    id: "ez-150", mavzu: "ahloq", sarlavha: "O'g'ri va onasi",
+    matn: "Bir yigit bolaligida birinchi marta birovning narsasini o'g'irlab, uyiga olib kelib onasiga ko'rsatdi. Ona uni tanbeh bermay, aksincha, maqtab qo'ya qoldi. Yillar o'tib yigit katta jinoyatchiga aylandi va bir kuni qo'lga tushib, o'lim jazosiga hukm qilindi. Oxirgi marta onasini yoniga chaqirib, undan bir so'z eshitmoqchi bo'lganida, yigit uning quloqlarini tishlab oldi.",
+    savol: "Yigit katta jinoyatchiga aylanishiga nima sabab bo'ldi?",
+    variantlar: ["Uning yoshi katta va kuchli bo'lgani", "Bolaligida xato qilganda onasi uni to'g'rilamagani", "Hukm kuni u qo'lga tushgani uchun o'zini aybdor his qilgani"],
+    javob: 1,
+    izoh: "Kichik xatoni e'tiborsiz qoldirish keyinchalik kattaroq jinoyatga yo'l ochadi. Yomon odatni erta to'xtatish eng oson yo'l."
   }
 ];
