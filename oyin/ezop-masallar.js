@@ -1201,5 +1201,13 @@ window.EZOP_MASALLAR = [
     variantlar: ["Kaptar, chunki u donni uyasida saqlamagan edi", "Sichqon, chunki u topgan donini darhol yeb tugatgan edi", "Ikkalasi ham, chunki qish juda uzoq davom etgan"],
     javob: 1,
     izoh: "Kaptar zaxira qilgani uchun qishda tinch yashadi. Ertangi kunni o'ylagan kishi qiyinchilikka tayyor bo'ladi."
+  },
+  {
+    id: "ez-149", mavzu: "mehnat", sarlavha: "Ikki qo'shchi",
+    matn: "Boy odam ekinzorini o'rish uchun ikki qo'shchini yolladi va ularga bir xil miqdorda ish berdi. Birinchi qo'shchi ishga kech tushib, avval uzoq dam oldi va nonushta qildi, so'ng sekin o'rishga kirishdi. Ikkinchi qo'shchi tong yorishishi bilanoq o'roqni olib, tinmay ishladi. Kech bo'lganda boy dalaga kelib, ikkinchi qo'shchi ishini tugatganini ko'rdi.",
+    savol: "Ikki qo'shchidan qaysi biri ishni vaqtida tugatdi va nega?",
+    variantlar: ["Birinchisi, chunki u ko'proq dam olgan edi", "Ikkinchisi, chunki u ishni darhol boshlab, tinmay bajargan edi", "Ikkalasi ham bir vaqtda, chunki ish osonroq edi"],
+    javob: 1,
+    izoh: "Ishni vaqtida boshlash va izchil bajarish natijani tezlashtiradi. Dam olish kerak, lekin ishni keyinga qoldirish oxirida vaqtni yo'qotadi."
   }
 ];
