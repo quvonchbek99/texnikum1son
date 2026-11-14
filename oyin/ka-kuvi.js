@@ -170,8 +170,10 @@
 
   /* ---------- Erkalash so'zlari (o'g'il / qiz / noma'lum) ---------- */
   var PET = {
-    boy: ["akam", "ukam", "polvonim", "botirim", "chempionim", "yulduzim", "aqllivoy", "poponam", "jonim", "asalim", "qo'zichog'im", "toychog'im", "do'mbog'im", "shunqorim", "kichkina Al-Xorazmiy", "professorim"],
-    girl: ["opajon", "singlim", "kampirim", "malikam", "gulim", "yulduzim", "asalim", "jonim", "poponam", "qo'zichog'im", "aqlli qizim", "kichkina olimam", "do'mbog'im", "chempionim", "shakarim"],
+    boy: ["akam", "ukam", "polvonim", "botirim", "chempionim", "yulduzim", "aqllivoy", "poponam", "jonim", "asalim", "qo'zichog'im", "toychog'im", "do'mbog'im", "shunqorim", "kichkina Al-Xorazmiy", "professorim",
+      "qo'rqmasim", "qo'zivoy", "bahodirim", "arslonim", "o'g'lonim", "mard o'g'lonim"],
+    girl: ["opajon", "singlim", "kampirim", "malikam", "gulim", "yulduzim", "asalim", "jonim", "poponam", "qo'zichog'im", "aqlli qizim", "kichkina olimam", "do'mbog'im", "chempionim", "shakarim",
+      "opajonim", "oppoq qizim", "oyimqiz", "lolam", "farishtam", "kampirjonim"],
     x: ["poponam", "jonim", "asalim", "yulduzim", "do'stim", "chempionim", "aqllim", "qo'zichog'im", "ajoyib bolam", "do'mbog'im", "kichkina daho"]
   };
   // Ingliz va rus tili rejimida — o'sha tildagi erkalash so'zlari (qo'shtirnoq ichida — o'z tilidagi ovozda o'qiladi)
@@ -224,24 +226,47 @@
     cBad: ["Bu savol qiyin bo'ldi. Keling, yechimini birga ko'ramiz.", "Ko'pchilik topa olmadi. Yechimga diqqat qiling!", "Uhu-uhu, ko'pchilik topmadi, yig'lab yuboraman-ku! Yechimni birga ko'ramiz."],
     cBadT: ["Voy, butun sinf qovoq kalla bo'lib qoldimi?! Mayli, yechimni birga ko'ramiz.", "Eshakvoylarim-ey, shunga ham-a? Yechimga qaranglar!", "Oshqovoqlarim-ey, qani, yechimni o'qiylik!", "Xumparlar-ey, uyg'oninglar! Yechimga qarang."]
   };
+  /* Qiz va o'g'il bolalarga alohida — mehrli hazil va pand-nasihat bilan (o'quvchi o'zi belgilagan jinsi bo'yicha) */
+  var LG = {
+    boy: {
+      ok: ["Barakalla, qo'rqmasim! Mard o'g'lon shunday bo'ladi!", "Ofarin, qo'zivoy! Aqlingga qoyil!", "Qoyil-e, bahodirim! To'ppa-to'g'ri!", "Zo'r, arslonim! Shu zayilda davom et!", "Ana, o'g'lonim, uddalading-ku!"],
+      tease: ["Voy tentakvoy-ey!", "Hoy qo'zivoy, qayoqqa qarayapsan?", "Qo'rqmasim-ey, bu safar shoshib qolding-ku!", "Voy tentakvoyim-ey, shunga ham-a?", "Bahodirim, bir o'ylab ko'r-chi!", "Hoy polvon, kuchni miyaga ber-chi!"],
+      timeout: ["Hoy qo'zivoy, uxlab qoldingmi? Vaqt tugadi-ku!", "Tentakvoy, soatga qara-da!", "Qo'rqmasim, mard yigit vaqtni boy bermaydi!"]
+    },
+    girl: {
+      ok: ["Barakalla, opajonim! Aqlli qiz shunday bo'ladi!", "Voy kampirim-ey, aqlingga qoyil!", "Ofarin, oppoq qizim! To'ppa-to'g'ri!", "Qoyil, malikam! Shu zayilda davom et!", "Ana, oyimqiz, uddalading-ku!"],
+      tease: ["Voy kampirim-ey!", "Opajonim-ey, bu safar shoshib qolding-ku!", "Voy oyimqiz-ey, shunga ham-a?", "Kampirjonim, bir o'ylab ko'r-chi!", "Malikam-ey, xayoling qayoqda?", "Voy oppoq qizim-ey, bunisi oson-ku!"],
+      timeout: ["Voy kampirim-ey, vaqt tugadi-ku!", "Opajonim, soatga qara-da!", "Oyimqiz, chaqqon bo'lish ham bir hunar!"]
+    }
+  };
+  // pand-nasihat: xato yoki vaqt tugaganda — mehr bilan maslahat
+  var NAS = ["Sabr tagi — sariq oltin, shoshmasdan o'qi.", "Bilmaganni so'rab o'rgangan — olim, uyalib so'ramagan — o'ziga zolim.", "Yiqilgan kurashga to'ymas — keyingisini albatta topasan!",
+    "Xatodan qo'rqma, xatodan o'rgan.", "O'qigan o'zar, o'qimagan to'zar.", "Ilm — aql chirog'i, yechimni diqqat bilan o'qi.", "Shoshgan ish — chala ish, avval savolni oxirigacha o'qi.",
+    "Mehnatning tagi — rohat, yana bir urinib ko'r.", "Bilim — bitmas boylik, yechimni daftaringga yozib ol.", "Ming eshitgandan bir ko'rgan yaxshi — yechimga bir qara."];
   function tease() { try { var c = JSON.parse(localStorage.getItem("ka.ustoz.cfg") || "{}"); return c.tease !== false; } catch (e) { return true; } }
   var esc = function (s) { return String(s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); };
   function react(kind, o) {
-    o = o || {}; var tz = o.tz == null ? tease() : !!o.tz, n = o.n | 0, t, mood;
+    o = o || {}; var tz = o.tz == null ? tease() : !!o.tz, n = o.n | 0, t, mood, G = LG[o.sg] || null;
     if (kind === "ok") {
       if (n >= 5 && Math.random() < .5) { t = L.streak[3]; mood = "laugh"; }
       else if (n >= 3) { t = pick(L.streak.slice(0, 3)); mood = "love"; }
-      else { t = pick(L.ok); mood = Math.random() < .2 ? "wink" : "happy"; }
+      else { t = G && Math.random() < .55 ? pick(G.ok) : pick(L.ok); mood = Math.random() < .2 ? "wink" : "happy"; }
     }
     else if (kind === "bad") {
-      if (tz && Math.random() < .6) { t = pick(L.tease) + " " + pick(L.bad); mood = Math.random() < .5 ? "jealous" : "strict"; }
+      if (G) { // qiz yoki o'g'il — mehrli hazil (sozlama yoqiq bo'lsa) + pand-nasihat
+        if (tz && Math.random() < .7) { t = pick(G.tease) + " " + pick(NAS); mood = Math.random() < .5 ? "jealous" : "strict"; }
+        else if (Math.random() < .25) { t = pick(L.cry); mood = "cry"; }
+        else { t = pick(L.bad) + " " + pick(NAS); mood = "sad"; }
+      }
+      else if (tz && Math.random() < .6) { t = pick(L.tease) + " " + pick(L.bad); mood = Math.random() < .5 ? "jealous" : "strict"; }
       else if (Math.random() < .3) { t = pick(L.cry); mood = "cry"; }
       else { t = pick(L.bad); mood = "sad"; }
     }
-    else if (kind === "timeout") { t = pick(tz ? L.timeoutT : L.timeout); mood = Math.random() < .3 ? "sleepy" : "wow"; }
+    else if (kind === "timeout") { t = G ? pick(tz ? G.timeout : L.timeout) + " " + pick(NAS) : pick(tz ? L.timeoutT : L.timeout); mood = Math.random() < .3 ? "sleepy" : "wow"; }
     else if (kind === "cGood") { t = pick(L.cGood); mood = Math.random() < .35 ? "laugh" : Math.random() < .5 ? "love" : "happy"; }
     else if (kind === "cMid") { t = pick(L.cMid); mood = "think"; }
     else { t = pick(tz ? L.cBadT : L.cBad); mood = tz ? "jealous" : /Uhu/.test(t) ? "cry" : "strict"; }
+    if (kind === "cBad" || kind === "cMid") t += " " + pick(NAS); // butun sinfga ham pand-nasihat
     t = t.replace(/\{n\}/g, n).replace(/\{p\}/g, pet(o.sg));
     return { mood: mood, text: t, html: '<div class="kvr kvr-' + mood + '">' + svg(mood, "", { outfit: o.outfit, sg: o.sg }) + '<div class="kvq">' + esc(t) + "</div></div>" };
   }
@@ -438,5 +463,5 @@
     "@media (prefers-reduced-motion:reduce){.kuvi .kvo,.kuvi .kvb,.kuvi .kvf path{animation:none}}" + ARTCSS + poseCss() + outCss();
   try { var st = document.createElement("style"); st.id = "ka-kuvi-css"; st.appendChild(document.createTextNode(css)); (document.head || document.documentElement).appendChild(st); } catch (e) {}
 
-  window.kaYuz = { svg: svg, react: react, tease: tease, lines: L, moods: M, art: art, outfitFor: outfitFor, pet: pet, teaseW: teaseW, actOf: actOf, voice: voice, pros: pros, say: say, gender: gOf, nameG: nameG, voiceFor: voiceFor, stop: function () { try { if (window.kaAI) kaAI.stop(); if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) {} } };
+  window.kaYuz = { svg: svg, react: react, tease: tease, lines: L, glines: LG, nasihat: NAS, moods: M, art: art, outfitFor: outfitFor, pet: pet, teaseW: teaseW, actOf: actOf, voice: voice, pros: pros, say: say, gender: gOf, nameG: nameG, voiceFor: voiceFor, stop: function () { try { if (window.kaAI) kaAI.stop(); if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) {} } };
 })();
