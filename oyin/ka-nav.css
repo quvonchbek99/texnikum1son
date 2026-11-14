@@ -1,0 +1,46 @@
+/*! Kuvonch Academy — bo'limlar navigatsiyasi (bosh sahifa, Matematika, O'yinlar) */
+.knav-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:22px 0 14px;border-bottom:1px solid var(--border,#243252)}
+.knav-head .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--text,#eef2ff);text-decoration:none;white-space:nowrap}
+.knav-head .brand-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#5ee6c7,#7c9bff);display:flex;align-items:center;justify-content:center;color:#08131f;font-weight:900}
+.knav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;max-width:100%;padding:2px}
+.knav::-webkit-scrollbar{display:none}
+.knav a{margin:0;flex:0 0 auto;color:var(--text-dim,#9fb0d0);text-decoration:none;font-size:14px;font-weight:600;padding:8px 12px;border-radius:999px;border:1px solid transparent;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+.knav a:hover{color:var(--text,#eef2ff);background:rgba(124,155,255,.1)}
+.knav a[aria-current="page"]{color:#081019;background:linear-gradient(135deg,#5ee6c7,#7c9bff)}
+.knav a.new::after{content:"yangi";margin-left:6px;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#2b1d00;background:#ffd479;border-radius:999px;padding:2px 6px;vertical-align:2px}
+@media (max-width:760px){
+  .knav-head{padding-top:58px}
+  .knav{width:100%;margin:0 -4px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+}
+
+/* kartochkalar (bosh sahifa, o'yinlar) */
+.tile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.tile{position:relative;display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:16px;background:var(--card);border:1px solid var(--border);text-decoration:none;color:var(--text);overflow:hidden;transition:transform .2s,border-color .2s}
+.tile:hover{transform:translateY(-3px);border-color:#5ee6c7}
+.tile .ic{font-size:30px;line-height:1}
+.tile h3{margin:6px 0 0;font-size:17px}
+.tile p{margin:0;color:var(--text-dim);font-size:14px}
+.tile .badge{position:absolute;top:12px;right:12px;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#2b1d00;background:#ffd479;border-radius:999px;padding:3px 8px}
+.tile.hot{background:linear-gradient(160deg,rgba(94,230,199,.12),rgba(124,155,255,.08) 60%,var(--card));}
+.tile .meta{margin-top:auto;padding-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.tile .meta span{font-size:11.5px;font-weight:700;color:var(--text-dim,#9fb0d0);border:1px solid var(--border,#243252);border-radius:999px;padding:3px 8px}
+@media (max-width:520px){
+  .tile-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .tile{padding:14px 12px;border-radius:14px}
+  .tile .ic{font-size:26px}
+  .tile h3{font-size:15px;margin-top:4px}
+  .tile p{font-size:12.5px;line-height:1.4}
+  .tile .badge{top:8px;right:8px;font-size:9.5px;padding:2px 6px}
+  .tile .meta span{font-size:10.5px;padding:2px 6px}
+}
+
+/* rangli nur chizig'i va spektr belgisi (bosh sahifa uslubi bilan bir xil) */
+.knav-head{position:relative;border-bottom-color:transparent}
+.knav-head::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;pointer-events:none;background:linear-gradient(90deg,transparent,#35f0c4 18%,#a27bff 42%,#ff5e8e 66%,#ffc23d 86%,transparent);opacity:.65}
+.knav-head .brand-badge{background:conic-gradient(from 200deg,#35f0c4,#a27bff,#ff5e8e,#ffc23d,#35f0c4)}
+.knav a[aria-current="page"]{background:linear-gradient(120deg,#35f0c4,#a27bff);box-shadow:0 6px 22px -8px rgba(162,123,255,.7)}
+/* "yangi" belgisi CSS ichida — tarjimasi til bo'yicha */
+html[lang=ru] .knav a.new::after{content:"новое"}
+html[lang=en] .knav a.new::after{content:"new"}
+html[lang=kk] .knav a.new::after{content:"жаңа"}
+html[lang=ky] .knav a.new::after{content:"жаңы"}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sinf o'yinlari: Arqon tortish va Jonli viktorina · Texnikum e-bazasi</title>
+<meta name="description" content="Butun sinf bilan o'ynaladigan matematik o'yinlar: Arqon tortish (1–10 jamoa) va Kahoot uslubidagi Jonli viktorina (o'quvchilar telefondan kod bilan). 110 ta mavzuning har biri uchun.">
+<link rel="canonical" href="https://kuvonch.uz/sinf-oyinlari.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kuvonch Academy">
+<meta property="og:title" content="Sinf o'yinlari: Arqon tortish va Jonli viktorina">
+<meta property="og:description" content="110 ta matematika mavzusining har biri uchun sinf o'yinlari — proyektor, aqlli doska va telefonlar bilan.">
+<meta property="og:url" content="https://kuvonch.uz/sinf-oyinlari.html">
+<meta property="og:image" content="https://kuvonch.uz/og-image.jpg">
+<meta name="theme-color" content="#0b1220">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="ka-nav.css">
+<script src="ka-fasl.js"></script>
+<style>
+:root{--bg:#0b1220;--bg-soft:#111a2e;--card:#141f38;--border:#243252;--text:#eef2ff;--text-dim:#9fb0d0;--accent:#5ee6c7;--accent-2:#7c9bff;--gold:#ffd479}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(circle at 20% 0%,#16213f 0%,#0b1220 55%) fixed,#0b1220;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
+a{color:var(--accent-2)}
+button,input{font:inherit;color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px 40px;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.hero{padding:34px 0 10px;text-align:center}
+.kicker{display:inline-block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(94,230,199,.35);background:rgba(94,230,199,.08);padding:5px 12px;border-radius:999px;margin-bottom:12px}
+h1{font-size:clamp(30px,6vw,50px);margin:0 0 10px;letter-spacing:-.02em;line-height:1.1}
+h1 span{background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--text-dim);font-size:17px;max-width:700px;margin:0 auto}
+.big2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+@media (max-width:720px){.big2{grid-template-columns:1fr}}
+.game{position:relative;display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:22px;text-decoration:none;color:var(--text);border:1px solid var(--border);overflow:hidden;min-height:220px;transition:transform .2s,border-color .2s}
+.game:hover{transform:translateY(-3px);border-color:#3a4c78}
+.game.a{background:linear-gradient(150deg,#2a1d12 0%,#141f38 60%)}
+.game.v{background:linear-gradient(150deg,#14254a 0%,#141f38 60%)}
+.game .ic{font-size:46px;line-height:1}
+.game h2{margin:0;font-size:26px}
+.game p{margin:0;color:var(--text-dim)}
+.game .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.game .meta span{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
+.game .go{align-self:flex-start;margin-top:6px;font-weight:900;padding:10px 18px;border-radius:12px;background:linear-gradient(135deg,#ffd479,#ff9f6b);color:#1d1200}
+.game.v .go{background:linear-gradient(135deg,#5ee6c7,#7c9bff);color:#081019}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;margin:14px 0}
+.card h2{margin:0 0 4px;font-size:21px}
+.sub{color:var(--text-dim);font-size:14px;margin:0 0 12px}
+.pinrow{display:flex;gap:10px;flex-wrap:wrap}
+.field{min-height:50px;padding:11px 14px;border-radius:12px;border:1px solid var(--border);background:#0e172b;color:var(--text);outline:none;font-size:16px}
+.field:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(94,230,199,.18)}
+.pin{font:900 24px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.25em;text-transform:uppercase;text-align:center;width:200px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 14px;border-radius:12px;border:1px solid var(--border);background:var(--bg-soft);font-weight:700;text-decoration:none;color:var(--text);white-space:nowrap;cursor:pointer}
+.btn:hover{border-color:#3a4c78}
+.btn.primary{background:linear-gradient(135deg,#5ee6c7,#7c9bff);color:#081019;border-color:transparent;min-height:50px}
+.tsearch{width:100%;margin-bottom:10px}
+.grp{border:1px solid var(--border);border-radius:14px;margin:10px 0;overflow:hidden;background:#0e172b}
+.grp summary{padding:12px 14px;font-weight:800;cursor:pointer;list-style:none;display:flex;gap:8px;align-items:center;background:#0f1a31}
+.grp summary::-webkit-details-marker{display:none}
+.grp summary::before{content:"▸";color:var(--text-dim);transition:transform .2s}
+.grp[open] summary::before{transform:rotate(90deg)}
+.grp summary small{margin-left:auto;color:var(--text-dim);font-weight:600}
+.trow{display:flex;align-items:center;gap:10px;padding:8px 12px;border-top:1px solid rgba(255,255,255,.05);flex-wrap:wrap}
+.trow .t{flex:1 1 260px;min-width:0;font-weight:600}
+.trow .t a{color:var(--text);text-decoration:none}
+.trow .t a:hover{color:var(--accent)}
+.trow .b{display:flex;gap:6px;flex-wrap:wrap}
+.trow .btn{min-height:36px;padding:5px 11px;font-size:14px}
+.trow .btn.ar{border-color:rgba(255,159,107,.5)}
+.trow .btn.vk{border-color:rgba(124,155,255,.55)}
+.how ul{margin:6px 0 0;padding-left:20px;color:var(--text-dim)}
+.how li{margin:5px 0}
+.how b{color:var(--text)}
+.jerr{color:#ff9c9c;font-weight:700;min-height:1.3em;margin-top:6px}
+footer{margin-top:30px;padding:20px 0;border-top:1px solid var(--border);color:var(--text-dim);font-size:14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+footer a{color:var(--text-dim)}
+</style>
+<script async src="statistika.js"></script>
+<style>@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}</style>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/logo-48.png" type="image/png">
+<link rel="stylesheet" href="ebaza.css">
+</head>
+<body>
+<div class="wrap">
+<header class="knav-head eb-head"><a class="brand eb-brand" href="/" title="Fanlar e-bazasi"><img src="/assets/logo-96.png" width="40" height="40" alt=""><span class="eb-nom"><b>Toshkent tuman 1-son texnikumi</b><small>Fanlar e-bazasi · Sinf o‘yinlari</small></span></a><nav class="knav" aria-label="Bo‘limlar"><a href="/">📚 Fanlar</a><a href="sinf-oyinlari.html" aria-current=page>🎯 Sinf o‘yinlari</a><a href="viktorina.html">⚡ Jonli viktorina</a><a href="arqon.html">🪢 Arqon tortish</a><a href="jamoa.html">👥 Jamoaviy o‘yin</a><a href="https://kuvonch.uz/oyinlar.html" target="_blank" rel="noopener">🎮 Boshqa o‘yinlar ↗</a></nav></header>
+<script>(function(){var a=document.querySelector('.knav [aria-current]');if(a){var n=a.parentNode;n.scrollLeft=Math.max(0,a.offsetLeft-n.clientWidth/2+a.offsetWidth/2)}})()</script>
+
+<div class="hero">
+<span class="kicker">🎯 Yangi bo'lim</span>
+<h1>Sinf <span>o'yinlari</span></h1>
+<p class="lead">Butun sinf bilan bir vaqtda o'ynaladigan matematik o'yinlar — proyektor, aqlli doska va o'quvchilarning telefonlari bilan. 110 ta mavzuning har biri uchun, savollar har safar yangi.</p>
+</div>
+
+<div class="big2">
+<a class="game a" href="arqon.html"><span class="ic">🪢</span><h2>Arqon tortish</h2>
+<p>1 kishi robotga qarshi yoki 2 dan 10 tagacha jamoa. To'g'ri javob — arqon sizga tortiladi, xato — yechimi ko'rsatiladi.</p>
+<span class="meta"><span>1–10 jamoa</span><span>3 daraja</span><span>aqlli doska</span><span>bitta qurilma</span></span>
+<span class="go">▶ O'ynash</span></a>
+<a class="game v" href="viktorina.html"><span class="ic">⚡</span><h2>Jonli viktorina</h2>
+<p>Kahoot uslubida, o'zbek tilida: savol katta ekranda, o'quvchilar telefondan kod yoki QR bilan kirib javob beradi. Matematika, mantiq va 9 ta boshqa fan. Oxirida har kimga PDF sertifikat.</p>
+<span class="meta"><span>80 o'quvchigacha</span><span>11 fan</span><span>sertifikat</span><span>CSV natija</span></span>
+<span class="go">▶ Viktorina ochish</span></a>
+</div>
+
+<section class="card" id="cJoin">
+<h2>📱 O'quvchi: viktorinaga kirish</h2>
+<p class="sub">O'qituvchi ekranidagi 5 belgili kodni yozing.</p>
+<div class="pinrow"><input class="field pin" id="pin" maxlength="5" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABCDE" aria-label="Xona kodi"><button type="button" class="btn primary" id="pinGo">Kirish ▶</button></div>
+<div class="jerr" id="pinErr" role="alert"></div>
+</section>
+
+<section class="card">
+<h2>🌐 Fanlar bo'yicha jonli viktorina</h2>
+<p class="sub">Fanni tanlang — viktorina shu fan mavzulari bilan ochiladi, o'qituvchi mavzuni belgilab xona ochadi.</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<a class="btn vk" href="viktorina.html?fan=mantiq">🧠 Mantiq</a><a class="btn vk" href="viktorina.html?fan=ingliz">🇬🇧 Ingliz tili</a><a class="btn vk" href="viktorina.html?fan=rus">🇷🇺 Rus tili</a><a class="btn vk" href="viktorina.html?fan=fizika">⚛️ Fizika</a><a class="btn vk" href="viktorina.html?fan=kimyo">🧪 Kimyo</a><a class="btn vk" href="viktorina.html?fan=biologiya">🧬 Biologiya</a><a class="btn vk" href="viktorina.html?fan=geografiya">🌍 Geografiya</a><a class="btn vk" href="viktorina.html?fan=tarix">📜 Tarix</a><a class="btn vk" href="viktorina.html?fan=informatika">💻 Informatika</a><a class="btn vk" href="viktorina.html?fan=ona">📝 Ona tili</a><a class="btn vk" href="viktorina.html?fan=adabiyot">📖 Adabiyot</a><a class="btn vk" href="viktorina.html?fan=huquq">⚖️ Huquq</a><a class="btn vk" href="viktorina.html?fan=iqtisod">💰 Iqtisodiyot</a><a class="btn vk" href="viktorina.html?fan=astronomiya">🔭 Astronomiya</a><a class="btn vk" href="viktorina.html?fan=chizma">✏️ Chizmachilik</a><a class="btn vk" href="viktorina.html?fan=ekologiya">🌱 Ekologiya</a><a class="btn vk" href="viktorina.html?fan=tarbiya">🤝 Tarbiya</a><a class="btn vk" href="viktorina.html?fan=chqbt">🎖️ ChQBT</a><a class="btn vk" href="viktorina.html?fan=sport">🏃 Jismoniy tarbiya</a><a class="btn vk" href="viktorina.html?aralash=1" style="font-weight:800">🔀 Hamma fandan aralash</a>
+</div>
+</section>
+
+<section class="card">
+<h2>📘 Har bir mavzu uchun</h2>
+<p class="sub">Mavzuni toping va o'yinni tanlang — o'sha mavzu tanlangan holda ochiladi.</p>
+<input class="field tsearch" id="q" type="search" placeholder="🔎 Mavzu qidirish: logarifm, 63, kasr, foiz, vektor…" aria-label="Mavzu qidirish" autocomplete="off">
+<div id="list"></div>
+</section>
+
+<section class="card how">
+<h2>👩‍🏫 Darsda qanday ishlatiladi</h2>
+<ul>
+<li><b>Arqon tortish</b> — bitta kompyuter yoki aqlli doskada. Sinfni 2–10 jamoaga bo'ling; har jamoa o'z savolini yechadi (poyga) yoki navbat bilan javob beradi (proyektor uchun).</li>
+<li><b>Jonli viktorina</b> — o'qituvchi kompyuterida xona ochiladi, ekranda kod va QR chiqadi. O'quvchilar <b>kuvonch.uz/viktorina.html</b> sahifasida kodni yozib kiradi va telefondan javob beradi.</li>
+<li>Ikkala o'yinda ham xato javobdan keyin <b>to'g'ri javob va yechim qadamlari</b> ko'rsatiladi; oxirida xatolar tahlili chiqadi.</li>
+<li>Viktorina natijalarini <b>CSV</b> (Excel) faylda yuklab olish mumkin — jurnalga baho qo'yish uchun qulay.</li>
+</ul>
+</section>
+
+<footer>
+<div>&copy; <span id="year"></span> Kuvonch Academy</div>
+<div><a href="https://kuvonch.uz/oyinlar.html">Barcha o'yinlar</a> · <a href="https://kuvonch.uz/mashqlar.html">Mavzular</a> · <a href="https://kuvonch.uz/donat.html">💛 Qo'llab-quvvatlash</a></div>
+</footer>
+</div>
+<script>
+(function () {
+  "use strict";
+  var TOPICS=[["a1","A1. Qo'shish amali",0],["a2","A2. Ayirish amali",0],["a3","A3. Ko'paytirish amali",0],["a4","A4. Bo'lish amali",0],["a5","A5. Foizlar bilan amallar",0],["a6","A6. Darajaga ko'tarish amali",0],["a7","A7. Ko'paytirish (karra) jadvali",0],["a8","A8. Sonlar",0],["t1","1. Kvadrat funksiya va uning grafigi",1],["t2","2. Kvadrat tengsizlik va uning yechimi",1],["t3","3. Trigonometrik ayniyatlar",1],["t4","4. Arifmetik va geometrik progressiya",1],["t5","5. Funksiya tushunchasi",1],["t6","6. Funksiya xossalari",1],["t7","7. Funksiya grafiklarini sodda almashtirish",1],["t8","8. Chiziqli va kvadratik modellashtirish",1],["t9","9. Loyiha ishi. Munosabatlar va funksiyalar",1],["t10","10. Sodda ratsional tenglamalar",1],["t11","11. Sodda ratsional tenglamalar sistemasi",1],["t12","12. Sodda ratsional tengsizliklar",1],["t13","13. Sodda ratsional tengsizliklar sistemasi",1],["t14","14. Ratsional tenglamalarga doir misollar yechish",1],["t15","15. Sodda irratsional tenglamalar",1],["t16","16. Irratsional tenglamalarga doir misollar yechish",1],["t17","17. Sodda irratsional tenglamalar sistemasi",1],["t18","18. Ratsional va irratsional ifodalarga doir misollar",1],["t19","19. Ko'rsatkichli funksiya",1],["t20","20. Logarifmik funksiya",1],["t21","21. Ko'rsatkichli va logarifmik ifodalarni soddalashtirish",1],["t22","22. Sodda ko'rsatkichli tenglamalar",1],["t23","23. Sodda logarifmik tenglamalar",1],["t24","24. Ko'rsatkichli va logarifmik tenglamalar sistemasi",1],["t25","25. Sodda ko'rsatkichli tengsizliklar",1],["t26","26. Sodda logarifmik tengsizliklar",1],["t27","27. Ko'rsatkichli modellashtirish",1],["t28","28. Ko'rsatkichli va logarifmik ifodalarga doir misollar",1],["t29","29. Trigonometrik funksiyalar",1],["t30","30. Teskari trigonometrik funksiyalar",1],["t31","31. Trigonometrik funksiyalarga doir misollar",1],["t32","32. STEM topshiriq",1],["t33","33. sin x = a, cos x = a trigonometrik tenglamalar",1],["t34","34. tg x = a, ctg x = a trigonometrik tenglamalar",1],["t35","35. Trigonometrik tenglamalarni yechish",1],["t36","36. Eng sodda trigonometrik tengsizliklar",1],["t37","37. Tasodifiy hodisalar",1],["t38","38. Ehtimollikni hisoblashda kombinatorika formulalaridan foydalanish",1],["t39","39. Teng ehtimolli hodisalar",1],["t40","40. Planimetriyaning mantiqiy tuzilishi",1],["t41","41. Geometrik masalalar va ularni yechish usullari",1],["t42","42. Stereometriyaning asosiy tushunchalari",1],["t43","43. Fazoda to'g'ri chiziqlar va tekisliklar",1],["t44","44. Fazoviy geometrik shakllar. Ko'pyoqlar",1],["t45","45. Ko'pyoqlarni tasvirlash va modelini yasash",1],["t46","46. Fazoda to'g'ri chiziqlarning o'zaro joylashuvi",1],["t47","47. Ayqash to'g'ri chiziqlar",1],["t48","48. Fazoda to'g'ri chiziqlar va tekisliklarning o'zaro joylashuvi",1],["t49","49. Fazoda tekisliklarning o'zaro joylashuvi",1],["t50","50. Fazoda parallel proyeksiyalash",1],["t51","51. Qisqa ko'paytirish formulalari",2],["t52","52. Ko'phadni ko'paytuvchilarga ajratish",2],["t53","53. Modulli tenglamalar va tengsizliklar",2],["t54","54. Arifmetik progressiya",2],["t55","55. Geometrik progressiya",2],["t56","56. Nisbat, proporsiya va foizli masalalar",2],["t57","57. O'rta qiymatlar (arifmetik, geometrik, garmonik)",2],["t58","58. Determinantlar va Kramer usuli",2],["t59","59. Funksiyaning limiti asoslari",2],["t60","60. Hosila va uning tatbiqlari (asosiy formulalar)",2],["t61","61. Bo'linish belgilari, EKUB va EKUK",2],["t62","62. Kvadrat ildiz va ratsional ko'rsatkichli daraja",2],["t63","63. Vyet teoremasi",2],["t64","64. Irratsional tenglamalar",2],["t65","65. Funksiyaning aniqlanish sohasi",2],["t66","66. Gorner sxemasi va Bezu teoremasi",2],["t67","67. Logarifm xossalari va sodda logarifmik tenglamalar",2],["t68","68. Asosiy trigonometrik ayniyatlar va keltirish formulalari",2],["t69","69. Sodda trigonometrik tenglamalar (sin x = a, cos x = a)",2],["t70","70. Aniqmas integral asoslari",2],["t71","71. Uchburchak va uning xossalari",3],["t72","72. To'rtburchaklar va ularning xossalari",3],["t73","73. Aylana va doira",3],["t74","74. Muntazam ko'pburchaklar",3],["t75","75. Prizma va parallelepiped",3],["t76","76. Piramida",3],["t77","77. Silindr",3],["t78","78. Konus",3],["t79","79. Shar va sfera",3],["t80","80. Ichki va tashqi chizilgan shakllar",3],["t81","81. Jismlar kombinatsiyasi (shar, silindr, konus, prizma)",3],["t82","82. Dekart koordinatalari (tekislikda)",3],["t83","83. Vektorlar (tekislikda)",3],["t84","84. Fazoda koordinatalar va vektorlar",3],["t85","85. Sinuslar va kosinuslar teoremalari",3],["t86","86. Shakllar o'xshashligi",3],["t87","87. Fazoda burchak va masofalar",3],["t88","88. Jismlarning kesimlari",3],["t89","89. Faktorial",4],["t90","90. Kombinatorikaning asosiy qoidalari",4],["t91","91. O'rin almashtirish, o'rinlashtirish va guruhlash",4],["t92","92. Ehtimollik: klassik ta'rif",4],["t93","93. Ehtimollik qoidalari",4],["t94","94. To'plamlar nazariyasi asoslari",4],["t95","95. Eyler–Venn doiralari va kiritish-chiqarish formulasi",4],["t96","96. Nyuton binomi",4],["t97","97. Fizika uchun matematika: formulalar bilan ishlash",5],["t98","98. O'lchov birliklari va shkala",5],["t99","99. O'rtacha kvadratik chetlanish, tanlanma va xatolik chegarasi",6],["t100","100. Diagrammalar: nuqtali, quti diagrammasi, gistogramma",6],["t101","101. Sochilma diagramma va eng yaxshi moslik chizig'i",6],["t102","102. Kompleks sonlar",6]];
+  var GROUPS = ["🧮 Asosiy amallar", "📘 Mavzular (1–50)", "🎓 Algebra · Milliy sertifikat (51–70)", "📐 Geometriya (71–88)", "🎲 Kombinatorika va ehtimollik (89–96)", "⚛️ Fizika uchun matematika (97–98)", "📊 SAT statistika (99–102)"];
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  var box = document.getElementById("list"), html = "";
+  GROUPS.forEach(function (g, gi) {
+    var rows = TOPICS.filter(function (t) { return t[2] === gi; });
+    html += '<details class="grp"' + (gi === 1 ? " open" : "") + '><summary>' + esc(g) + "<small>" + rows.length + " ta mavzu</small></summary>" +
+      rows.map(function (t) {
+        return '<div class="trow" data-s="' + esc(t[1].toLowerCase()) + '"><span class="t"><a href="https://kuvonch.uz/mashqlar.html#' + t[0] + '">' + esc(t[1]) + '</a></span><span class="b">' +
+          '<a class="btn ar" href="arqon.html?mavzu=' + t[0] + '">🪢 Arqon tortish</a><a class="btn vk" href="viktorina.html?mavzu=' + t[0] + '">⚡ Viktorina</a></span></div>';
+      }).join("") + "</details>";
+  });
+  box.innerHTML = html;
+  document.getElementById("q").addEventListener("input", function () {
+    var q = this.value.trim().toLowerCase().replace(/[ʻʼ‘’`]/g, "'");
+    Array.prototype.forEach.call(box.querySelectorAll(".grp"), function (g) {
+      var any = false;
+      Array.prototype.forEach.call(g.querySelectorAll(".trow"), function (r) { var ok = !q || r.dataset.s.replace(/[ʻʼ‘’`]/g, "'").indexOf(q) > -1; r.style.display = ok ? "" : "none"; if (ok) any = true; });
+      g.style.display = any ? "" : "none"; if (q && any) g.open = true;
+    });
+  });
+  var pin = document.getElementById("pin");
+  pin.addEventListener("input", function () { var v = pin.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 5); if (pin.value !== v) pin.value = v; });
+  function go() {
+    if (pin.value.length !== 5) { document.getElementById("pinErr").textContent = "Kod 5 ta belgidan iborat bo'lishi kerak"; pin.focus(); return; }
+    location.href = "viktorina.html?kod=" + pin.value;
+  }
+  document.getElementById("pinGo").onclick = go;
+  pin.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+<script src="akkount.js"></script>
+<script src="ka-til.js"></script>
+</body>
+</html>

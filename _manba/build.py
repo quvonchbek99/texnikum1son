@@ -88,8 +88,13 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uz_UZ">
-<meta name="theme-color" content="#8a3a12">
-<link rel="icon" href="{R}assets/logo.svg" type="image/svg+xml">
+<meta name="theme-color" content="#142450">
+<link rel="icon" href="{R}assets/logo-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="{R}assets/logo-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="{R}assets/apple-touch-icon.png">
+<meta property="og:image" content="{DOMEN}/assets/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="{R}assets/sayt.css?v=2">
@@ -98,7 +103,7 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
 <body data-root="{R}"{f' class="{body_cls}"' if body_cls else ""}>
 <a class="sr" href="#asosiy">Asosiy qismga o‘tish</a>
 <header class="top"><div class="wrap">
-<a class="brand" href="{R}" aria-label="Fanlar — bosh sahifa">{LOGO}<span><b>{NOM}</b><span>Fanlar e-bazasi</span></span></a>
+<a class="brand" href="{R}" aria-label="Fanlar — bosh sahifa"><picture><source srcset="{R}assets/logo-96.webp" type="image/webp"><img src="{R}assets/logo-96.png" width="44" height="44" alt=""></picture><span><b>{NOM}</b><span>Fanlar e-bazasi</span></span></a>
 <button class="burger" aria-label="Menyu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <nav class="nav" aria-label="Asosiy menyu">{nav}<a class="btn sm" href="{R}kabinet/">O‘qituvchi kabineti</a></nav>
 </div></header>
@@ -191,9 +196,10 @@ OYINLAR = [("viktorina", "Jonli viktorina", "Kahoot uslubida: savollar doskada, 
            ("sinf", "Sinf o‘yinlari markazi", "Arqon tortish va jonli viktorina haqida qo‘llanma va sozlamalar."),
            ("barcha", "Barcha o‘yinlar", "Kuvonch Academy’dagi barcha ta’limiy o‘yinlar: mantiq, xotira, milliy o‘yinlar va boshqalar.")]
 OYIN_FAYL = {"viktorina": "viktorina.html", "arqon": "arqon.html", "jamoa": "jamoa.html", "sinf": "sinf-oyinlari.html", "barcha": "oyinlar.html"}
-def kuv_url(o, fan=None):
-    """O'yin kuvonch.uz'ning o'zida ochiladi (u yerdagi himoya va yangilanishlar saqlanadi); fan/mavzu oldindan tanlanadi."""
-    u = KUV + OYIN_FAYL[o]
+OYIN_DIR = "oyin/"   # kuvonch.uz o'yinlarining shu saytdagi nusxasi (_manba/kuvonch/sinxron.py, avtomatik yangilanadi)
+def kuv_url(o, fan=None, R=""):
+    """Sinf o'yinlari shu saytning o'zida (oyin/) ochiladi; «Barcha o'yinlar» — kuvonch.uz'da. Fan/mavzu oldindan tanlanadi."""
+    u = (KUV if o == "barcha" else R + OYIN_DIR) + OYIN_FAYL[o]
     if fan and o == "viktorina":
         u += "?fan=" + fan
     elif fan and o == "arqon" and 0 < len(KFAN[fan]["a"]) <= 30:
@@ -202,27 +208,31 @@ def kuv_url(o, fan=None):
 def oyin_qator(R, nomi):
     k = kfan(nomi)
     if k:
-        return (f'<div class="oyin-q"><span class="oyin-q-t">Sinf o‘yini · <b>{e(KFAN[k]["nom"])}</b> <span class="muted small">(kuvonch.uz, yangi oynada)</span></span>'
-                f'<a class="btn sm" target="_blank" rel="noopener" href="{e(kuv_url("viktorina", k))}">Jonli viktorina</a>'
-                f'<a class="btn ghost sm" target="_blank" rel="noopener" href="{e(kuv_url("arqon", k))}">Arqon tortish</a>'
+        return (f'<div class="oyin-q"><span class="oyin-q-t">Sinf o‘yini · <b>{e(KFAN[k]["nom"])}</b></span>'
+                f'<a class="btn sm" href="{e(kuv_url("viktorina", k, R))}">Jonli viktorina</a>'
+                f'<a class="btn ghost sm" href="{e(kuv_url("arqon", k, R))}">Arqon tortish</a>'
                 f'<a class="kv-l" href="{R}oyinlar/">Boshqa o‘yinlar</a></div>')
     return f'<div class="oyin-q"><span class="oyin-q-t">Sinf o‘yinlari — jonli viktorina, arqon tortish</span><a class="btn ghost sm" href="{R}oyinlar/">O‘yinni tanlash</a></div>'
 
 def oyinlar():
     R = "../"
     opts = '<option value="">Fan tanlanmagan (o‘yin ichida tanlanadi)</option>' + "".join(f'<option value="{k}">{e(v["nom"])}</option>' for k, v in sorted(KFAN.items(), key=lambda kv: norm(kv[1]["nom"])))
-    cards = "".join(f'<div class="card oyin-k"><span class="oyin-i">{i + 1:02d}</span><h3>{t}</h3><p class="muted small">{d}</p><a class="btn sm" data-o="{o}" target="_blank" rel="noopener" href="{e(kuv_url(o))}">Boshlash ↗</a></div>' for i, (o, t, d) in enumerate(OYINLAR))
-    cfg = {"kuv": KUV, "f": OYIN_FAYL, "a": {k: v["a"] for k, v in KFAN.items() if 0 < len(v["a"]) <= 30}}
-    b = hero("", "Sinf o‘yinlari", "Kuvonch Academy (kuvonch.uz) o‘yinlari — butun sinf bilan, doskada va telefonlarda. O‘yinlar kuvonch.uz’ning o‘zida yangi oynada ochiladi: u yerda kuchaytirilsa yoki yangi savollar qo‘shilsa, shu yerdan ham darhol yangisi ochiladi.", crumbs=[("Fanlar", R), ("Sinf o‘yinlari", None)])
+    def tugma(o):
+        if o == "barcha":
+            return f'<a class="btn ghost sm" data-o="{o}" target="_blank" rel="noopener" href="{e(kuv_url(o))}">kuvonch.uz’da ochish ↗</a>'
+        return f'<a class="btn sm" data-o="{o}" href="{e(kuv_url(o, None, R))}">Boshlash</a>'
+    cards = "".join(f'<div class="card oyin-k"><span class="oyin-i">{i + 1:02d}</span><h3>{t}</h3><p class="muted small">{d}</p>{tugma(o)}</div>' for i, (o, t, d) in enumerate(OYINLAR))
+    cfg = {"loc": R + OYIN_DIR, "f": OYIN_FAYL, "a": {k: v["a"] for k, v in KFAN.items() if 0 < len(v["a"]) <= 30}}
+    b = hero("", "Sinf o‘yinlari", "Jonli viktorina, arqon tortish va jamoaviy o‘yin — butun sinf bilan, proyektor, aqlli doska va o‘quvchilar telefonlarida. O‘yinlar shu saytning o‘zida ochiladi; kuvonch.uz’da kuchaytirilsa yoki yangi savollar qo‘shilsa, bu yerga ham avtomatik o‘tadi.", crumbs=[("Fanlar", R), ("Sinf o‘yinlari", None)])
     b += f"""<section class="blk"><div class="wrap">
 <div class="fbar"><label class="fsel"><span class="sr">Fan</span><select id="oyin-fan">{opts}</select></label><span class="muted small">Fanni tanlasangiz, viktorina va arqon tortish shu fan savollari bilan ochiladi.</span></div>
 <div class="grid g3" style="margin-top:14px">{cards}</div>
-<p class="small muted" style="margin-top:18px">Har bir fan sahifasida ham shu fanga mos «Jonli viktorina» va «Arqon tortish» tugmalari bor.</p>
+<p class="small muted" style="margin-top:18px">Har bir fan sahifasida ham shu fanga mos «Jonli viktorina» va «Arqon tortish» tugmalari bor. O‘yinlar: Kuvonch Academy (kuvonch.uz).</p>
 </div></section>
 <script>(function(){{var C={json.dumps(cfg, ensure_ascii=False)},s=document.getElementById('oyin-fan');
-function u(o,f){{var x=C.kuv+C.f[o];if(f&&o==='viktorina')x+='?fan='+f;else if(f&&o==='arqon'&&C.a[f])x+='?mavzu='+C.a[f].join(',');return x;}}
-s.addEventListener('change',function(){{Array.prototype.forEach.call(document.querySelectorAll('[data-o]'),function(a){{a.href=u(a.getAttribute('data-o'),s.value);}});}});}})();</script>"""
-    page("oyinlar/index.html", "Sinf o‘yinlari", "Jonli viktorina, arqon tortish va boshqa sinf o‘yinlari (Kuvonch Academy) — fanlar bo‘yicha.", b, active="oyinlar/")
+function u(o,f){{var x=C.loc+C.f[o];if(f&&o==='viktorina')x+='?fan='+f;else if(f&&o==='arqon'&&C.a[f])x+='?mavzu='+C.a[f].join(',');return x;}}
+s.addEventListener('change',function(){{Array.prototype.forEach.call(document.querySelectorAll('[data-o]'),function(a){{var o=a.getAttribute('data-o');if(o!=='barcha')a.href=u(o,s.value);}});}});}})();</script>"""
+    page("oyinlar/index.html", "Sinf o‘yinlari", "Jonli viktorina, arqon tortish va boshqa sinf o‘yinlari — fanlar bo‘yicha, butun sinf bilan.", b, active="oyinlar/")
 
 # ---------- Bosh sahifa: fanlar katalogi ----------
 def bosh():
@@ -371,9 +381,10 @@ def data_files():
 def extras():
     urls = ["", "oyinlar/"] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{DOMEN}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
-    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nDisallow: /eski/\nSitemap: {DOMEN}/sitemap.xml\n")
+    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nDisallow: /eski/\nDisallow: /oyin/\nSitemap: {DOMEN}/sitemap.xml\n")
     open(os.path.join(OUT, "CNAME"), "w").write("texnikum1son.uz\n")
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
+    shutil.copy(os.path.join(SRC, "assets", "favicon.ico"), os.path.join(OUT, "favicon.ico"))
     os.makedirs(os.path.join(OUT, "assets"), exist_ok=True)
     for fn in os.listdir(os.path.join(SRC, "assets")):
         shutil.copy(os.path.join(SRC, "assets", fn), os.path.join(OUT, "assets", fn))

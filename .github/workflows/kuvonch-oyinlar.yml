@@ -1,0 +1,36 @@
+# Sinf o'yinlari (jonli viktorina, arqon tortish, jamoaviy o'yin) — kuvonch.uz'dan shu saytga avtomatik ko'chiriladi.
+# kuvonch.uz (quvonchbek99/quvnoqdombogchalar) da o'yinlar kuchaytirilsa, keyingi sinxronda texnikum1son.uz/oyin/ ham yangilanadi.
+# Qo'lda: Actions → «Kuvonch o'yinlari (sinxron)» → Run workflow.
+name: Kuvonch o'yinlari (sinxron)
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kuvonch-oyinlar
+  cancel-in-progress: false
+
+jobs:
+  sinxron:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: kuvonch.uz o'yinlarini olish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 _manba/kuvonch/sinxron.py oyin
+      - name: Saytga joylash
+        run: |
+          git config user.name "Kuvonch sinxron"
+          git config user.email "kuvonch-sinxron@users.noreply.github.com"
+          git add -A oyin
+          if git diff --cached --quiet; then echo "O'zgarish yo'q"; exit 0; fi
+          git commit -q -m "Sinf o'yinlari: kuvonch.uz bilan sinxronlandi"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
+          exit 1

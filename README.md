@@ -26,8 +26,16 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
    mos parchalarni topib javob beradi, «N-bet» havolasi ko'ruvchida o'sha betni ochadi.
 4. Navbatdan o'chirilgan majmuani agent fayl/ va agent/ dan ham o'chiradi. `fayl/` umumiy chegarasi ~850 MB (GitHub Pages 1 GB).
 
-Muhim: saytni qayta yig'ishda (`build.py`) `agent/`, `fayl/`, `eski/`, `materiallar/` papkalariga tegilmaydi; push qilishdan oldin
+Muhim: saytni qayta yig'ishda (`build.py`) `agent/`, `fayl/`, `eski/`, `materiallar/`, `oyin/` papkalariga tegilmaydi; push qilishdan oldin
 `git pull --rebase` (agent ham commit qiladi). Qo'lda sinov: Actions → «Kuvi agent» → Run workflow → `sinov_url`.
+
+## Sinf o'yinlari — kuvonch.uz bilan avtomatik sinxron (14.11.2026)
+
+Jonli viktorina, arqon tortish, jamoaviy o'yin va «Sinf o'yinlari» markazi `oyin/` papkasida — shu saytning o'zida, e-baza sarlavhasi
+va texnikum logotipi bilan ochiladi. Manba: `quvonchbek99/quvnoqdombogchalar` (kuvonch.uz). `_manba/kuvonch/sinxron.py` kirish
+sahifalaridan boshlab kerakli JS/CSS/rasm/ovoz fayllarini o'zi topib ko'chiradi; ko'chirilmagan sahifalarga havolalar kuvonch.uz ga boradi.
+`.github/workflows/kuvonch-oyinlar.yml` har ~3 soatda (va qo'lda «Run workflow») ishga tushadi va faqat o'zgarish bo'lsa commit qiladi.
+`oyin/` ni qo'lda tahrirlamang — keyingi sinxronda qayta yoziladi; o'zgartirishni kuvonch.uz'da qiling.
 
 ## Tuzilma
 | Joy | Nima |
