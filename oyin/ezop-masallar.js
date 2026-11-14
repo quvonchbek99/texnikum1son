@@ -1217,5 +1217,13 @@ window.EZOP_MASALLAR = [
     variantlar: ["Uning yoshi katta va kuchli bo'lgani", "Bolaligida xato qilganda onasi uni to'g'rilamagani", "Hukm kuni u qo'lga tushgani uchun o'zini aybdor his qilgani"],
     javob: 1,
     izoh: "Kichik xatoni e'tiborsiz qoldirish keyinchalik kattaroq jinoyatga yo'l ochadi. Yomon odatni erta to'xtatish eng oson yo'l."
+  },
+  {
+    id: "ez-151", mavzu: "hamkorlik", sarlavha: "Sherning ulushi",
+    matn: "Sher, bo'ri va tulki birgalikda katta bug'uni ovlashdi. Ov tugagach, sher ularni yoniga chaqirib: \"Men shoh bo'lganim uchun bu ulush menga tegishli\", dedi. Shunday deb bug'uni uch qismga bo'lib, eng katta qismini o'ziga oldi. Qolgan qismlardan ham o'ziga ulush ajratib, hamkorlariga kichik bir parcha tashladi.",
+    savol: "Sher nima uchun ulushni adolatsiz bo'ldi?",
+    variantlar: ["Chunki u o'z kuchiga tayanib, hamkorlarining ulushini o'zi uchun tortib oldi", "Chunki bo'ri va tulki ovda qatnashmagan edi", "Chunki bug'u juda katta bo'lib, uni teng bo'lish qiyin edi"],
+    javob: 0,
+    izoh: "Ov birgalikda qilingan bo'lsa ham, sher kuchini bahona qilib, ulushni o'zgartirdi. Kuch adolat kafolati emas: birgalikdagi ishda mehnat va ulush teng bo'lishi kerak."
   }
 ];
