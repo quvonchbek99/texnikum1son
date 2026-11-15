@@ -1,0 +1,87 @@
+{
+ "id": "rasm-grafika",
+ "nomi": "Rasm va badiiy grafika studiyasi",
+ "e": "✏️",
+ "xona": "salon",
+ "fanlar": [
+  "rasm-va-badiiy-grafika"
+ ],
+ "tavsif": "Rasm va grafika materiallari: qalam, ko‘mir, tush, akvarel, guash; moda grafikasi va rangtasvir bo‘yicha mashqlar.",
+ "xavfsizlik": [
+  "O‘tkir pichoq bilan qalam ochishda ehtiyot bo‘ling.",
+  "Fiksativ (lak) purkashni shamollatiladigan joyda bajaring."
+ ],
+ "jihozlar": [
+  {
+   "id": "qalam",
+   "e": "✏️",
+   "nomi": "Grafit qalamlar",
+   "vazifa": "Qattiq (H) qalamlar ingichka och chiziq, yumshoq (B) qalamlar to‘q va qalin chiziq beradi.",
+   "tuzilish": [
+    "2H, H — qattiq",
+    "HB — o‘rtacha",
+    "B, 2B, 4B — yumshoq",
+    "O‘chirg‘ich (nag)"
+   ],
+   "ishlatish": [
+    "Konstruksiyani H yoki HB bilan yengil chizing.",
+    "Soyalarni B qalamlar bilan qatlamlab bering."
+   ]
+  },
+  {
+   "id": "komir",
+   "e": "⬛",
+   "nomi": "Ko‘mir va sangina",
+   "vazifa": "Tez eskiz va kuchli tonal kontrast uchun.",
+   "tuzilish": [
+    "Tabiiy ko‘mir",
+    "Presslangan ko‘mir",
+    "Sangina (qizg‘ish bo‘r)",
+    "Fiksativ"
+   ],
+   "ishlatish": [
+    "Barmoq yoki rastushovka bilan yumshating.",
+    "Ishni fiksativ bilan mustahkamlang."
+   ]
+  },
+  {
+   "id": "tush",
+   "e": "🖋️",
+   "nomi": "Tush va pero",
+   "vazifa": "Aniq qora chiziqli grafika va moda illyustratsiyasi uchun.",
+   "tuzilish": [
+    "Tush (qora siyoh)",
+    "Pero va ruchka",
+    "Liner"
+   ],
+   "ishlatish": [
+    "Avval qalamda chizib, keyin tush bilan aylantiring.",
+    "Quriguncha surkamang."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "figura",
+   "e": "🧍",
+   "nomi": "Moda figurasini chizish",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Balandlikni 9 boshga bo‘lish (moda proporsiyasi)",
+     "Muvozanat chizig‘ini chizish",
+     "Yelka, bel va son chiziqlarini belgilash",
+     "Tana va oyoq-qo‘llar shaklini chizish",
+     "Kiyimni figuraga «kiydirish»",
+     "Tus va rang berish"
+    ]
+   }
+  }
+ ],
+ "qisqa": "Rasm va grafika",
+ "meros": [
+  "rangtasvir"
+ ],
+ "amaliyotga": false
+}

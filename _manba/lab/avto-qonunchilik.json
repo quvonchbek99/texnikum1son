@@ -1,0 +1,169 @@
+{
+ "id": "avto-qonunchilik",
+ "nomi": "Avtotransport huquqi xonasi",
+ "e": "⚖️",
+ "xona": "sinf",
+ "fanlar": [
+  "avtotransportda-qonunchilik-asoslari"
+ ],
+ "tavsif": "Haydovchi va transport vositasi hujjatlari, yo‘l varaqasi va sug‘urta bilan tanishish; huquqiy vaziyatlarni hal qilish mashqlari.",
+ "xavfsizlik": [
+  "Qonun hujjatlarining amaldagi tahririni rasmiy manbadan (lex.uz) tekshiring.",
+  "Hujjatlarni haydash vaqtida o‘zingiz bilan olib yuring."
+ ],
+ "jihozlar": [
+  {
+   "id": "guvohnoma",
+   "e": "🪪",
+   "nomi": "Haydovchilik guvohnomasi",
+   "vazifa": "Transport vositasini boshqarish huquqini tasdiqlovchi hujjat; toifalar (A, B, C, D, E va boshqalar) ko‘rsatiladi.",
+   "tuzilish": [
+    "Shaxsiy ma’lumotlar va surat",
+    "Ruxsat etilgan toifalar",
+    "Berilgan va amal qilish sanasi"
+   ],
+   "ishlatish": [
+    "Haydash vaqtida doim yoningizda bo‘lsin.",
+    "Amal qilish muddatini kuzating.",
+    "Faqat ruxsat etilgan toifadagi transportni boshqaring."
+   ]
+  },
+  {
+   "id": "texpasport",
+   "e": "📘",
+   "nomi": "Transport vositasini qayd etish guvohnomasi",
+   "vazifa": "Avtomobilning ro‘yxatdan o‘tganini va egasini tasdiqlaydi.",
+   "tuzilish": [
+    "Davlat raqam belgisi",
+    "VIN (identifikatsiya raqami)",
+    "Marka, model, rangi",
+    "Egasi haqida ma’lumot"
+   ],
+   "ishlatish": [
+    "Haydovchi yonida bo‘lishi shart.",
+    "Ma’lumotlar avtomobildagi raqamlar bilan mos bo‘lishi kerak."
+   ]
+  },
+  {
+   "id": "sugurta",
+   "e": "📃",
+   "nomi": "Majburiy sug‘urta polisi",
+   "vazifa": "Transport vositasi egalarining fuqarolik javobgarligini majburiy sug‘urta qilish polisi: YTH da boshqalarga yetkazilgan zararni qoplaydi.",
+   "tuzilish": [
+    "Sug‘urta qildiruvchi",
+    "Transport vositasi",
+    "Amal qilish muddati",
+    "Boshqarishga ruxsat etilgan shaxslar"
+   ],
+   "ishlatish": [
+    "Muddati tugashidan oldin yangilang.",
+    "YTH bo‘lsa, sug‘urta kompaniyasiga belgilangan muddatda xabar bering."
+   ]
+  },
+  {
+   "id": "yolvaraqa",
+   "e": "🧾",
+   "nomi": "Yo‘l varaqasi",
+   "vazifa": "Tijorat yoki tashkilot transportida reys, haydovchi, masofa va yoqilg‘i sarfini qayd etuvchi hujjat.",
+   "tuzilish": [
+    "Haydovchi va transport ma’lumotlari",
+    "Tibbiy ko‘rik belgisi",
+    "Texnik ko‘rik (chiqishga ruxsat) belgisi",
+    "Spidometr ko‘rsatkichi (chiqish/qaytish)",
+    "Yoqilg‘i hisobi"
+   ],
+   "ishlatish": [
+    "Reysdan oldin tibbiy va texnik ko‘rikdan o‘ting.",
+    "Spidometr va yoqilg‘i ko‘rsatkichlarini yozing.",
+    "Qaytgach varaqani dispetcherga topshiring."
+   ]
+  },
+  {
+   "id": "taxograf",
+   "e": "⏲️",
+   "nomi": "Taxograf",
+   "vazifa": "Yuk va yo‘lovchi transportida tezlik, yurish va dam olish vaqtini qayd etib boradigan qurilma.",
+   "tuzilish": [
+    "Qayd qiluvchi blok",
+    "Haydovchi kartasi",
+    "Printer"
+   ],
+   "ishlatish": [
+    "Haydovchi kartasini reys boshida qo‘ying.",
+    "Mehnat va dam olish rejimiga rioya qiling."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "hujjat",
+   "e": "📂",
+   "nomi": "Hujjat va vazifasi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Hujjatni vazifasi bilan moslang.",
+    "juft": [
+     [
+      "Haydovchilik guvohnomasi",
+      "Boshqarish huquqini tasdiqlaydi"
+     ],
+     [
+      "Qayd etish guvohnomasi",
+      "Avtomobil ro‘yxatdan o‘tganini tasdiqlaydi"
+     ],
+     [
+      "Sug‘urta polisi",
+      "Uchinchi shaxslarga zararni qoplaydi"
+     ],
+     [
+      "Yo‘l varaqasi",
+      "Reys, masofa va yoqilg‘ini hisobga oladi"
+     ],
+     [
+      "Taxograf ma’lumoti",
+      "Haydash va dam olish vaqtini qayd etadi"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "vaziyat",
+   "e": "⚖️",
+   "nomi": "Huquqiy vaziyatlar",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Haydovchilik guvohnomasi uyda qolib ketdi, siz rulda ketyapsiz.",
+      "v": [
+       "Bu qoidabuzarlik: haydovchi guvohnomani yonida olib yurishi shart",
+       "Hech qanday muammo yo‘q",
+       "Faqat shahar tashqarisida muammo bo‘ladi"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Sug‘urta polisi muddati kecha tugadi.",
+      "v": [
+       "Avtomobilni boshqarishdan oldin polisni yangilayman",
+       "Bir hafta kutish mumkin"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Siz qatnashgan yo‘l-transport hodisasida jabrlanganlar bor.",
+      "v": [
+       "To‘xtab, avariya belgisini qo‘yaman, tez yordam (103) va YPX ni chaqiraman, birinchi yordam beraman",
+       "Joydan ketib qolaman",
+       "Avtomobilni darhol yo‘ldan olib qo‘yaman va izlarni yo‘qotaman"
+      ],
+      "t": 0,
+      "i": "Haydovchi joyida qolishi, yordam berishi va tegishli xizmatlarni chaqirishi shart."
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Qonunchilik",
+ "amaliyotga": false
+}

@@ -1,0 +1,325 @@
+{
+ "id": "avto-elektr",
+ "nomi": "Avtoelektrik laboratoriyasi",
+ "e": "🔋",
+ "xona": "elektr",
+ "fanlar": [
+  "avtomobil-elektr-va-elektron-jihozlari-tuzilishi-ularga-texnik-x"
+ ],
+ "tavsif": "Akkumulyator, generator, starter, o‘t oldirish va datchiklar; multimetr bilan o‘lchash, akkumulyatorni zaryadlash va zaryad darajasini baholash mashqlari.",
+ "xavfsizlik": [
+  "Elektr tizimida ishlashdan oldin akkumulyatorning manfiy (−) klemmasini uzing.",
+  "Akkumulyator zaryadlanganda vodorod ajraladi — uchqun va olovdan saqlaning, xonani shamollating.",
+  "Klemmalarni kalit bilan bir vaqtda «+» va massaga tekkizmang — qisqa tutashuv.",
+  "Saqlagichni yuqori nominaldagisiga almashtirmang."
+ ],
+ "jihozlar": [
+  {
+   "id": "akkumulyator",
+   "e": "🔋",
+   "nomi": "Akkumulyator batareyasi",
+   "vazifa": "Dvigatelni ishga tushirish uchun starterni, dvigatel o‘chiq bo‘lganda iste’molchilarni ta’minlaydi.",
+   "tuzilish": [
+    "Korpus va qopqoq",
+    "Musbat va manfiy plastinalar",
+    "Separatorlar",
+    "Elektrolit",
+    "Klemmalar (+ va −)"
+   ],
+   "ishlatish": [
+    "Dvigatel o‘chiq holda kuchlanishni o‘lchang: 12,6 V — to‘liq zaryad.",
+    "Klemmalarni oksiddan tozalang.",
+    "Yechishda avval «−», ulashda avval «+» klemma."
+   ],
+   "xavfsizlik": [
+    "Elektrolit (sulfat kislota) teri va ko‘zni kuydiradi."
+   ],
+   "sim": "akb"
+  },
+  {
+   "id": "generator",
+   "e": "⚡",
+   "nomi": "Generator",
+   "vazifa": "Dvigatel ishlaganda iste’molchilarni ta’minlaydi va akkumulyatorni zaryadlaydi.",
+   "tuzilish": [
+    "Rotor (qo‘zg‘atish chulg‘ami)",
+    "Stator (uch fazali chulg‘am)",
+    "Diodli ko‘prik (to‘g‘rilagich)",
+    "Kuchlanish regulyatori",
+    "Shkiv"
+   ],
+   "ishlatish": [
+    "Dvigatel ishlab turganda klemmalardagi kuchlanishni o‘lchang: taxminan 13,8–14,5 V.",
+    "Belbog‘ taranligini tekshiring."
+   ]
+  },
+  {
+   "id": "starter",
+   "e": "🔌",
+   "nomi": "Starter",
+   "vazifa": "Dvigatelni ishga tushirish uchun tirsakli valni aylantiradi.",
+   "tuzilish": [
+    "O‘zgarmas tok elektr dvigateli",
+    "Tortuvchi rele",
+    "Bendiks (erkin yurish muftasi)",
+    "Shesternya"
+   ],
+   "ishlatish": [
+    "Starterni 10 soniyadan ortiq uzluksiz aylantirmang.",
+    "Urinishlar orasida 30–60 soniya tanaffus qiling."
+   ]
+  },
+  {
+   "id": "otoldirish",
+   "e": "🔥",
+   "nomi": "O‘t oldirish tizimi",
+   "vazifa": "Silindrlardagi yonilg‘i-havo aralashmasini kerakli paytda uchqun bilan yondiradi.",
+   "tuzilish": [
+    "O‘t oldirish g‘altagi",
+    "Yuqori kuchlanish simlari yoki individual g‘altaklar",
+    "Shamlar",
+    "Datchiklar (tirsakli val holati)"
+   ],
+   "ishlatish": [
+    "Shamlarning tirqishi va qurumini tekshiring.",
+    "Shamni belgilangan moment bilan burang."
+   ],
+   "xavfsizlik": [
+    "G‘altakning yuqori kuchlanishi xavfli — ishlayotganda simlarga tegmang."
+   ]
+  },
+  {
+   "id": "multimetr",
+   "e": "📟",
+   "nomi": "Avtomobil multimetri",
+   "vazifa": "Kuchlanish, tok, qarshilik va uzluksizlikni o‘lchab, elektr nosozliklarini topadi.",
+   "tuzilish": [
+    "Displey",
+    "Rejim almashtirgich",
+    "COM, VΩmA va 10A uyalari",
+    "Shchuplar"
+   ],
+   "ishlatish": [
+    "O‘lchash rejimini va shchup uyasini to‘g‘ri tanlang.",
+    "Tokni o‘lchashda multimetrni zanjirga ketma-ket ulang."
+   ],
+   "sim": "multimetr"
+  },
+  {
+   "id": "saqlagich",
+   "e": "🧯",
+   "nomi": "Saqlagichlar va rele bloki",
+   "vazifa": "Elektr zanjirlarini qisqa tutashuv va ortiqcha yuklamadan himoya qiladi.",
+   "tuzilish": [
+    "Pichoqsimon saqlagichlar (rang — nominal tok)",
+    "Relelar",
+    "Blok qopqog‘idagi sxema"
+   ],
+   "ishlatish": [
+    "Kuygan saqlagichni xuddi shu nominaldagisiga almashtiring.",
+    "Qayta kuysa — qisqa tutashuv sababini qidiring."
+   ]
+  },
+  {
+   "id": "datchik",
+   "e": "📡",
+   "nomi": "Datchiklar",
+   "vazifa": "Boshqaruv blokiga dvigatel holati haqida axborot beradi.",
+   "tuzilish": [
+    "Lambda-zond (kislorod datchigi)",
+    "Sovitish suyuqligi harorati datchigi",
+    "Tirsakli val holati datchigi",
+    "Havo sarfi yoki bosimi datchigi",
+    "Detonatsiya datchigi"
+   ],
+   "ishlatish": [
+    "Diagnostika skaneri orqali ko‘rsatkichlarni kuzating.",
+    "Datchik ulagichini oksid va namlikdan saqlang."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "multimetr",
+   "e": "📟",
+   "nomi": "Multimetr bilan o‘lchash",
+   "tur": "multimetr",
+   "izoh": "Har bir obyekt uchun to‘g‘ri rejim va shchup uyasini tanlang.",
+   "p": {}
+  },
+  {
+   "id": "akb",
+   "e": "🔋",
+   "nomi": "Akkumulyator zaryad darajasi",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "U",
+      "n": "Tinch holatdagi kuchlanish (dvigatel o‘chiq)",
+      "u": "V",
+      "v": 12.4,
+      "min": 11.5,
+      "max": 13,
+      "q": 0.05
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Taxminiy zaryad darajasi",
+      "f": "U>=12.6?100:U>=12.4?75+(U-12.4)/0.2*25:U>=12.2?50+(U-12.2)/0.2*25:U>=12.0?25+(U-12.0)/0.2*25:U>=11.8?(U-11.8)/0.2*25:0",
+      "u": "%",
+      "x": 0,
+      "asosiy": true
+     },
+     {
+      "n": "Holat",
+      "f": "U>=12.5?'Yaxshi':U>=12.2?'Zaryadlash tavsiya etiladi':'Darhol zaryadlang (sulfatlanish xavfi)'",
+      "u": ""
+     }
+    ],
+    "izoh": "12 V li qo‘rg‘oshin-kislotali akkumulyator uchun taxminiy qiymatlar (25 °C atrofida, kamida 2 soat tinch turgandan keyin)."
+   }
+  },
+  {
+   "id": "zaryad",
+   "e": "🔌",
+   "nomi": "Akkumulyatorni zaryadlash",
+   "tur": "qurilma",
+   "p": {
+    "nomi": "Zaryadlash qurilmasi",
+    "e": "🔌",
+    "ekran": "Zaryadlovchi o‘chiq",
+    "maqsad": "Akkumulyatorni xavfsiz zaryadlash",
+    "boshqaruv": [
+     {
+      "id": "shamol",
+      "n": "Xonani shamollatish",
+      "e": "🌬️"
+     },
+     {
+      "id": "tekshir",
+      "n": "Korpus va klemmalarni tekshirish",
+      "e": "🔍"
+     },
+     {
+      "id": "plus",
+      "n": "Qizil qisqichni «+» ga ulash",
+      "e": "🔴"
+     },
+     {
+      "id": "minus",
+      "n": "Qora qisqichni «−» ga ulash",
+      "e": "⚫"
+     },
+     {
+      "id": "tarmoq",
+      "n": "Zaryadlovchini tarmoqqa ulash",
+      "e": "🔌"
+     },
+     {
+      "id": "tok",
+      "n": "Zaryad tokini sig‘imning 10% iga qo‘yish",
+      "e": "🎚️"
+     },
+     {
+      "id": "ochir",
+      "n": "Tarmoqdan uzish",
+      "e": "⏻"
+     }
+    ],
+    "qadamlar": [
+     {
+      "v": "Ish joyini tayyorlang.",
+      "t": "shamol",
+      "j": "Zaryadlashda vodorod ajraladi.",
+      "ekran": "Ventilyatsiya: ✓"
+     },
+     {
+      "v": "Akkumulyatorni ko‘zdan kechiring.",
+      "t": "tekshir",
+      "j": "Yoriq, elektrolit sizishi yo‘q.",
+      "ekran": "Korpus: butun"
+     },
+     {
+      "v": "Musbat qisqichni ulang.",
+      "t": "plus",
+      "j": "Avval «+».",
+      "ekran": "«+» ulandi"
+     },
+     {
+      "v": "Manfiy qisqichni ulang.",
+      "t": "minus",
+      "j": "Keyin «−».",
+      "ekran": "«+» va «−» ulandi"
+     },
+     {
+      "v": "Zaryadlovchini yoqing.",
+      "t": "tarmoq",
+      "j": "Qisqichlar ulangandan keyingina tarmoqqa ulanadi — uchqun chiqmaydi.",
+      "ekran": "Tarmoq: ON",
+      "chiroq": "sariq"
+     },
+     {
+      "v": "Zaryad tokini o‘rnating (60 A·soat → 6 A).",
+      "t": "tok",
+      "j": "Zaryad boshlandi.",
+      "ekran": "Tok: 6,0 A\nKuchlanish: 13,9 V",
+      "chiroq": "sariq",
+      "aylan": true
+     },
+     {
+      "v": "Zaryad tugagach (14,4 V atrofida, tok kamayadi) tarmoqdan uzing.",
+      "t": "ochir",
+      "j": "Endi qisqichlarni teskari tartibda («−», keyin «+») yechish mumkin.",
+      "ekran": "Zaryad tugadi ✓\n12,7 V",
+      "chiroq": "yashil",
+      "aylan": false
+     }
+    ],
+    "xato": {
+     "tarmoq": "Qisqichlar ulanmasdan zaryadlovchini yoqmang — uchqun portlashga sabab bo‘lishi mumkin.",
+     "minus": "Avval musbat («+») qisqich ulanadi."
+    },
+    "motor": "⚡"
+   }
+  },
+  {
+   "id": "nosozlik",
+   "e": "🔋",
+   "nomi": "Elektr nosozliklari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Dvigatel ishlayapti, lekin akkumulyator klemmalarida 12,2 V; zaryad chirog‘i yonib turibdi.",
+      "v": [
+       "Generator zaryad bermayapti (belbog‘, regulyator yoki diodlar)",
+       "Hammasi me’yorida",
+       "Starter nosoz"
+      ],
+      "t": 0,
+      "i": "Ishlayotgan dvigatelda 13,8–14,5 V bo‘lishi kerak."
+     },
+     {
+      "s": "Kalit burilganda faqat rele chiqillaydi, starter aylanmaydi; chiroqlar xiralashadi.",
+      "v": [
+       "Akkumulyator zaryadsiz yoki klemmalar oksidlangan",
+       "Yonilg‘i tugagan"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Bir xil saqlagich qayta-qayta kuymoqda.",
+      "v": [
+       "Zanjirda qisqa tutashuvni qidiraman",
+       "Kattaroq nominaldagi saqlagich qo‘yaman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Avtoelektrika"
+}

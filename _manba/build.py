@@ -67,7 +67,7 @@ if sys.argv[2] != "none":
 RTR_TIKUV = json.load(open(os.path.join(sys.argv[2], "zamonaviy-tikuv-jihozlari.json"), encoding="utf-8")) if sys.argv[2] != "none" else None
 
 # ---------- Sahifa qolipi ----------
-NAV = [("", "Fanlar"), ("oyinlar/", "Sinf o‘yinlari"), ("eski/", "Eski versiya")]
+NAV = [("", "Fanlar"), ("lab/", "Virtual laboratoriya"), ("oyinlar/", "Sinf o‘yinlari"), ("eski/", "Eski versiya")]
 
 def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_root=False, body_cls=""):
     depth = path.count("/")
@@ -75,7 +75,7 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
     nav = "".join(f'<a href="{R}{u}"{" aria-current=page" if active == u else ""}>{t}</a>' for u, t in NAV)
     full_title = f"{title} · {NOM} e-bazasi" if title != NOM else f"Fanlar — {NOM} e-bazasi"
     canon = DOMEN + "/" + re.sub(r"index\.html$", "", path)
-    sc = "".join(f'<script src="{R}assets/{s}?v=2" defer></script>' for s in ("sayt.js",) + tuple(scripts))
+    sc = "".join(f'<script src="{R}assets/{s}?v=3" defer></script>' for s in ("sayt.js",) + tuple(scripts))
     html = f"""<!doctype html>
 <html lang="uz">
 <head>
@@ -97,7 +97,7 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="{R}assets/sayt.css?v=2">
+<link rel="stylesheet" href="{R}assets/sayt.css?v=3">
 <script>(function(){{var m=new Date(Date.now()+(new Date().getTimezoneOffset()+300)*6e4).getMonth(),q=new URLSearchParams(location.search).get('fasl');document.documentElement.setAttribute('data-fasl',/^(kuz|qish|bahor|yoz)$/.test(q||'')?q:(m==11||m<2?'qish':m<5?'bahor':m<8?'yoz':'kuz'));}})();</script>
 </head>
 <body data-root="{R}"{f' class="{body_cls}"' if body_cls else ""}>
@@ -175,6 +175,176 @@ def fk_card(yid, f, R, meta):
             f'<span class="fk-t"><span class="tag {c}">{nom.replace(" fanlari", "").replace(" fanlar", "").replace(" (spes)", "")}</span><span class="tag ok" data-mat{"" if ok else " hidden"}>material bor</span></span>'
             f'<h3>{e(f["nomi"])}</h3><span class="meta">{meta}</span></a>')
 
+# ---------- Virtual laboratoriyalar (_manba/lab/*.json) ----------
+LAB_DIR = os.path.join(SRC, "lab")
+LABS = {}
+if os.path.isdir(LAB_DIR):
+    for _fn in sorted(os.listdir(LAB_DIR)):
+        if _fn.endswith(".json"):
+            _d = json.load(open(os.path.join(LAB_DIR, _fn), encoding="utf-8"))
+            LABS[_d["id"]] = _d
+def lab_tayyor(L):
+    """«meros» — boshqa laboratoriyadan jihoz, mashq va qoidalarni olish (masalan, Fizika va astronomiya ← Fizika)."""
+    if L.get("_ok"):
+        return L
+    L["_ok"] = 1
+    J, Sm, X, T = [], [], [], []
+    for a in L.get("meros", []):
+        A = lab_tayyor(LABS[a]); J += A["jihozlar"]; Sm += A["sim"]; X += A.get("xavfsizlik", []); T += A.get("test", [])
+    own = {j["id"] for j in L.get("jihozlar", [])}; owns = {x["id"] for x in L.get("sim", [])}
+    L["jihozlar"] = [j for j in J if j["id"] not in own] + L.get("jihozlar", [])
+    L["sim"] = [x for x in Sm if x["id"] not in owns] + L.get("sim", [])
+    L["xavfsizlik"] = list(dict.fromkeys(L.get("xavfsizlik", []) + X))[:12]
+    L["test"] = L.get("test", []) + T
+    return L
+for _L in list(LABS.values()):
+    lab_tayyor(_L)
+    _ji = {j["id"] for j in _L["jihozlar"]}; _si = {x["id"] for x in _L["sim"]}
+    for _j in _L["jihozlar"]:
+        assert not _j.get("sim") or _j["sim"] in _si, f'{_L["id"]}: {_j["id"]} -> {_j.get("sim")} topilmadi'
+def lab_aniq(yid, f):
+    for L in LABS.values():
+        if f["id"] in L.get("fanlar", []) and (not L.get("yonalishlar") or yid in L["yonalishlar"]):
+            return L["id"]
+    return None
+def lab_of(yid, f):
+    l = lab_aniq(yid, f)
+    if l:
+        return l
+    if f["toifa"] == "amaliyot":
+        return "ustaxona-" + yid if ("ustaxona-" + yid) in LABS else None
+    return None
+def ustaxonalar():
+    """Amaliyot fanlari uchun: yo'nalishning barcha kasbiy laboratoriyalari bitta ustaxonada."""
+    for y in Y:
+        if not any(f["toifa"] == "amaliyot" and not lab_aniq(y["id"], f) for f in y["fanlar"]):
+            continue
+        lids = []
+        for f in y["fanlar"]:
+            if f["toifa"] == "kasbiy":
+                l = lab_of(y["id"], f)
+                if l and l not in lids and LABS[l].get("amaliyotga", True):
+                    lids.append(l)
+        if not lids:
+            continue
+        J, Sm, X, T = [], [], [], []
+        for l in lids:
+            L = LABS[l]
+            for j in L["jihozlar"]:
+                j2 = dict(j, id=l + "--" + j["id"], zona=L.get("qisqa") or L["nomi"])
+                if j.get("sim"):
+                    j2["sim"] = l + "--" + j["sim"]
+                J.append(j2)
+            Sm += [dict(x, id=l + "--" + x["id"]) for x in L["sim"]]
+            X += L.get("xavfsizlik", [])[:3]; T += L.get("test", [])
+        hid = "ustaxona-" + y["id"]
+        LABS[hid] = {"id": hid, "_ok": 1, "_hub": [l for l in lids], "e": "🏭", "xona": LABS[lids[0]].get("xona", "ustaxona"),
+                     "nomi": f"{ynom(y)}: amaliyot ustaxonasi", "qisqa": "Amaliyot ustaxonasi",
+                     "tavsif": f"O‘quv va ishlab chiqarish amaliyoti uchun «{ynom(y)}» mutaxassisligining barcha virtual laboratoriyalari bitta ustaxonada: {len(J)} ta jihoz va {len(Sm)} ta virtual mashq.",
+                     "fanlar": [], "jihozlar": J, "sim": Sm, "xavfsizlik": list(dict.fromkeys(X))[:12], "test": T}
+def lab_fanlari(lid):
+    """Laboratoriyadan foydalanadigan fanlar: [(nomi, url, yonalish nomi)]"""
+    L, R = [], []
+    for f in UMF:
+        if lab_of("umumtalim", f) == lid:
+            R.append((f["nomi"], f'yonalish/umumtalim/fan/{f["id"]}/', "Umumta’lim"))
+    for y in YS:
+        for f in y["fanlar"]:
+            if f["toifa"] != "umumtalim" and lab_of(y["id"], f) == lid:
+                R.append((f["nomi"], f'yonalish/{y["id"]}/fan/{f["id"]}/', ynom(y)))
+    return R
+def lab_qator(R, yid, f):
+    lid = lab_of(yid, f)
+    if not lid:
+        return ""
+    L = LABS[lid]
+    return (f'<div class="lab-q"><span class="lab-q-t">{L.get("e", "🔬")} Virtual laboratoriya · <b>{e(L["nomi"])}</b>'
+            f'<small>{len(L["jihozlar"])} ta jihoz · {len(L["sim"])} ta virtual mashq · slaydlar · sinov</small></span>'
+            f'<a class="btn sm" href="{R}lab/{lid}/">Laboratoriyaga kirish</a></div>')
+LTABS = [("xona", "Xona va jihozlar"), ("slayd", "Slaydlar"), ("ishlat", "Virtual ishlatish"), ("sinov", "Sinov"), ("xavf", "Xavfsizlik")]
+def lab_page(lid):
+    L = LABS[lid]; R = "../../"
+    fl = lab_fanlari(lid)
+    chips = "".join(f'<a class="chip" href="{R}{u}">{e(n)}<span style="opacity:.7;font-weight:500">· {e(yn)}</span></a>' for n, u, yn in fl[:10])
+    extra = f'<div class="chips" style="margin-top:14px">{chips}</div>' if chips else ""
+    b = hero("", f'{L.get("e", "🔬")} {e(L["nomi"])}', e(L.get("tavsif", "")), crumbs=[("Fanlar", R), ("Virtual laboratoriyalar", R + "lab/"), (L.get("qisqa") or L["nomi"], None)], extra=extra)
+    tb = "".join(f'<button data-t="{k}">{t}' + (f'<span class="cnt">{len(L["sim"])}</span>' if k == "ishlat" and L["sim"] else '<span class="cnt"></span>') + "</button>" for k, t in LTABS)
+    def li(xs): return "".join(f"<li>{e(x)}</li>" for x in xs)
+    roy = ""
+    for i, j in enumerate(L["jihozlar"]):
+        roy += (f'<details class="mv" id="j-{e(j["id"])}"><summary><span class="no">{i + 1:02d}</span>{e(j.get("e", ""))} {e(j["nomi"])}</summary><div class="ic doc">'
+                + (f'<p>{e(j["vazifa"])}</p>' if j.get("vazifa") else "")
+                + (f'<h4>Tuzilishi</h4><ol>{li(j["tuzilish"])}</ol>' if j.get("tuzilish") else "")
+                + (f'<h4>Ishlatish tartibi</h4><ol>{li(j["ishlatish"])}</ol>' if j.get("ishlatish") else "")
+                + (f'<h4>Xavfsizlik</h4><ul>{li(j["xavfsizlik"])}</ul>' if j.get("xavfsizlik") else "") + "</div></details>")
+    nomlar = ", ".join(j["nomi"] for j in L["jihozlar"])[:600]
+    fan0 = fl[0][0] if fl else L["nomi"]
+    data = {k: v for k, v in L.items() if not k.startswith("_")}
+    data["fanlar_nomi"] = list(dict.fromkeys(n for n, _, _ in fl))[:6]
+    data["texnikum"] = NOM
+    js = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    b += f"""<section class="blk"><div class="wrap">
+<div id="fan" hidden data-fan="{e(fan0)}" data-yn="{e('Virtual laboratoriya «' + L['nomi'] + '», jihozlar: ' + nomlar)}" data-toifa="{'umumtalim' if any(yn == 'Umumta’lim' for _, _, yn in fl) else 'kasbiy'}" data-plan="{{}}"></div>
+<div id="lab" data-id="{e(lid)}">
+<div class="lab-top"><div class="lab-hol"></div></div>
+<div data-tabs data-hash><div class="tabs" role="tablist">{tb}</div>
+<div data-p="xona"><div class="lab-royxat"><div class="toolbar" style="margin-top:22px"><h3 style="margin:0">Jihozlar pasporti</h3><span class="sp"></span><button type="button" class="btn ghost sm" data-pasport-chop>🖨 Chop etish</button></div>{roy}</div></div>
+<div data-p="slayd"><noscript><p class="note">Slaydlarni ko‘rish uchun brauzerda JavaScript yoqilgan bo‘lishi kerak.</p></noscript></div>
+<div data-p="ishlat"></div><div data-p="sinov"></div><div data-p="xavf"></div>
+</div></div>
+<script type="application/json" id="lab-json">{js}</script>
+</div></section>"""
+    page(f"lab/{lid}/index.html", f'{L["nomi"]} — virtual laboratoriya',
+         f'«{L["nomi"]}» virtual laboratoriyasi: {len(L["jihozlar"])} ta jihoz bilan tanishish, slaydlar, ekranda virtual ishlatish va sinov. {NOM}.',
+         b, active="lab/", scripts=("lab-sim.js", "lab-sim-texnik.js", "lab-sim-it.js", "lab-sim-xizmat.js", "lab.js", "t1-kuvi.js"))
+def lab_card(lid, R, izoh=""):
+    L = LABS[lid]
+    em = " ".join(j.get("e", "") for j in L["jihozlar"][:7])
+    return (f'<a class="card lab-k" href="{R}lab/{lid}/" data-n="{e(norm(L["nomi"] + " " + izoh + " " + " ".join(j["nomi"] for j in L["jihozlar"])))}"><span class="lab-ke">{L.get("e", "🔬")}</span><span><h3>{e(L["nomi"])}</h3>'
+            f'<span class="meta">{len(L["jihozlar"])} ta jihoz · {len(L["sim"])} ta virtual mashq{(" · " + e(izoh)) if izoh else ""}</span><span class="lab-kj" aria-hidden="true">{em}</span></span></a>')
+def lab_katalog():
+    R = "../"
+    nj = sum(len(L["jihozlar"]) for k, L in LABS.items() if not L.get("_hub")); ns = sum(len(L["sim"]) for k, L in LABS.items() if not L.get("_hub"))
+    b = hero("", "Virtual laboratoriyalar", f"Har bir fan uchun virtual xona: jihozlar bilan tanishish (vazifasi, tuzilishi, ishlatish tartibi, xavfsizlik), darsda ko‘rsatish uchun slaydlar, jihozlarni ekranda virtual ishlatish va sinov. Jami {len([1 for L in LABS.values() if not L.get('_hub')])} ta fan laboratoriyasi va {len([1 for L in LABS.values() if L.get('_hub')])} ta amaliyot ustaxonasi: {nj} ta jihoz, {ns} ta virtual mashq.",
+             crumbs=[("Fanlar", R), ("Virtual laboratoriyalar", None)],
+             extra='<div class="fq"><label for="lq" class="sr">Laboratoriya yoki jihoz qidirish</label><input type="search" id="lq" class="q-big" placeholder="Jihoz yoki fan: multimetr, tikuv mashinasi, kompas…" autocomplete="off"></div>')
+    um = ""; seen = set()
+    for f in UMF:
+        l = lab_of("umumtalim", f)
+        if l and l not in seen:
+            seen.add(l); um += lab_card(l, R, f["nomi"] if f["nomi"] != LABS[l]["nomi"] else "")
+    ks = ""
+    for sid, snom, yids in SOHA:
+        h = ""
+        for yid in yids:
+            y = YID.get(yid)
+            if not y:
+                continue
+            cs, sn = "", set()
+            L2 = sorted([f for f in y["fanlar"] if f["toifa"] != "umumtalim"], key=lambda f: (f["toifa"] != "kasbiy", norm(f["nomi"])))
+            for f in L2:
+                l = lab_of(yid, f)
+                if l and l not in sn:
+                    sn.add(l); cs += lab_card(l, R)
+            if cs:
+                h += f'<div class="ys"><div class="ys-h"><h3>{e(ynom(y))}</h3><span class="meta">{len(sn)} ta laboratoriya</span></div><div class="grid g3">{cs}</div></div>'
+        if h:
+            ks += f'<section class="fsek" data-lsek><h2>{e(snom)}</h2>{h}</section>'
+    b += f"""<section class="blk katalog"><div class="wrap">
+<div class="note" style="margin-bottom:8px"><b>Qanday foydalaniladi?</b> Laboratoriyaga kiring → stollardagi jihozni bosib pasportini o‘qing → «Slaydlar» bo‘limini proyektorda ko‘rsating → «Virtual ishlatish»da jihozni ekranda ishlatib ko‘ring → «Sinov» bilan bilimni tekshiring. Natijalar shu qurilmada saqlanadi.</div>
+<p class="muted small" id="lsoni" aria-live="polite"></p>
+<section class="fsek" data-lsek><h2>Umumta’lim fanlari <span class="muted">barcha mutaxassisliklar uchun</span></h2><div class="grid g3">{um}</div></section>
+{ks}
+<div class="empty" id="lbosh" hidden><p><b>Hech narsa topilmadi.</b></p><p class="muted small">Boshqa so‘z bilan qidiring.</p></div>
+</div></section>
+<script>(function(){{var q=document.getElementById('lq'),c=[].slice.call(document.querySelectorAll('.lab-k')),n=document.getElementById('lsoni');
+function nm(s){{return s.toLowerCase().replace(/[ʻʼ‘’`´'"«»“”]/g,'').replace(/\\s+/g,' ').trim();}}
+function go(){{var w=nm(q.value).split(' ').filter(Boolean),k=0,seen={{}};c.forEach(function(a){{var ok=w.every(function(x){{return a.getAttribute('data-n').indexOf(x)>=0;}});a.hidden=!ok;if(ok&&!seen[a.getAttribute('href')]){{seen[a.getAttribute('href')]=1;k++;}}}});
+[].forEach.call(document.querySelectorAll('.ys'),function(y){{y.hidden=!y.querySelector('.lab-k:not([hidden])');}});[].forEach.call(document.querySelectorAll('[data-lsek]'),function(s){{s.hidden=!s.querySelector('.lab-k:not([hidden])');}});
+n.textContent=k+' ta laboratoriya';document.getElementById('lbosh').hidden=k>0;}}
+q.addEventListener('input',go);go();}})();</script>"""
+    page("lab/index.html", "Virtual laboratoriyalar", "Har bir fan uchun virtual laboratoriya: jihozlar bilan tanishish, slaydlar, virtual ishlatish va sinov — Toshkent tuman 1-son texnikumi.", b, active="lab/", scripts=("t1-kuvi.js",))
+
 # ---------- kuvonch.uz sinf o'yinlari (Jonli viktorina, Arqon tortish…) — jonli ulanadi, u yerda yangilansa bu yerda ham yangilanadi ----------
 KUV = "https://kuvonch.uz/"
 KFAN = json.load(open(os.path.join(SRC, "kuvonch-oyinlar.json"), encoding="utf-8"))   # kuvonch.uz viktorina fanlari va arqon mavzu ID lari
@@ -241,7 +411,8 @@ def bosh():
     opts = "".join(f'<option value="{y["id"]}">{e(ynom(y))}</option>' for y in YS)
     extra = (f'<p class="lead">Kasbiy fanlar har bir mutaxassislik bo‘yicha alohida, umumta’lim fanlari esa hammasi uchun bitta. Har bir fan: TMR, texnologik xaritalar, ma’ruzalar va o‘quv-uslubiy majmua.</p>'
              f'<div class="fq"><label for="fq" class="sr">Fanni qidirish</label>'
-             f'<input type="search" id="fq" class="q-big" placeholder="Fan, mavzu yoki mutaxassislik nomi…" autocomplete="off"></div>')
+             f'<input type="search" id="fq" class="q-big" placeholder="Fan, mavzu yoki mutaxassislik nomi…" autocomplete="off"></div>'
+             + (f'<div class="chips" style="margin-top:14px"><a class="chip" href="lab/">🔬 Virtual laboratoriyalar — {len([1 for L in LABS.values() if not L.get("_hub")])} ta</a><a class="chip" href="oyinlar/">🎮 Sinf o‘yinlari</a></div>' if LABS else ""))
     b = hero("", "Fanlar", "", extra=extra, small=False, fasl=True)
     seg = (f'<button type="button" data-tf="" aria-pressed="true">Hammasi</button>'
            f'<button type="button" data-tf="kasbiy" aria-pressed="false">Kasbiy fanlar <span>{nk}</span></button>'
@@ -304,7 +475,7 @@ def fan_page(y, f, cur=None, um=None):
         soat_jad = (f'<details class="mv" style="margin-top:22px"><summary>Soatlar mutaxassisliklar bo‘yicha</summary><div class="ic"><p class="small muted">Yuqoridagi soatlar — ko‘pchilik mutaxassisliklardagi qiymat. Ayrim o‘quv rejalarda farq qiladi:</p>'
                     f'<div class="tbl-w"><table><thead><tr><th>Mutaxassislik</th>' + "".join(f"<th class=n>{s}-sem</th>" for s in sems) + f"</tr></thead><tbody>{rows}</tbody></table></div></div></details>")
     b += f"""<section class="blk"><div class="wrap">
-{oyin_qator(R, f["nomi"])}
+{lab_qator(R, y["id"], f)}{oyin_qator(R, f["nomi"])}
 <div id="fan" data-y="{y['id']}" data-f="{f['id']}" data-fan="{e(f['nomi'])}" data-yn="{e(ynom(y) if not um else 'Umumta’lim (barcha mutaxassisliklar)')}" data-toifa="{f['toifa']}" data-def="{cur}" data-plan='{e(json.dumps(plan_of(f)))}' data-rtr='{e(json.dumps(rtr, ensure_ascii=False))}'>
 {semtabs}
 <p class="note" data-soat style="margin-bottom:18px"></p>
@@ -373,13 +544,19 @@ def data_files():
     if RTR_TIKUV:
         for t in RTR_TIKUV["topics"]:
             Q.append({"k": "m", "t": t["nomi"], "s": f'Zamonaviy tikuv jihozlari · {t["id"]} · {t["turi"]}', "u": "yonalish/moda-tikuv-texnologiyasi/fan/zamonaviy-tikuv-jihozlari/#" + ("amaliy" if t["turi"] == "Amaliy" else "maruza")})
+    for lid, L in LABS.items():
+        if L.get("_hub"):
+            continue
+        Q.append({"k": "m", "t": "Virtual laboratoriya: " + L["nomi"], "s": f'{len(L["jihozlar"])} ta jihoz · {len(L["sim"])} ta virtual mashq', "u": f"lab/{lid}/"})
+        for j in L["jihozlar"]:
+            Q.append({"k": "m", "t": f'{j.get("e", "")} {j["nomi"]}'.strip(), "s": "Virtual laboratoriya · " + L["nomi"], "u": f'lab/{lid}/#j-{j["id"]}'})
     json.dump(Q, open(os.path.join(OUT, "data", "qidiruv.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     if RTR_TIKUV:
         os.makedirs(os.path.join(OUT, "data", "rtr"), exist_ok=True)
         json.dump(RTR_TIKUV, open(os.path.join(OUT, "data", "rtr", "zamonaviy-tikuv-jihozlari.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 def extras():
-    urls = ["", "oyinlar/"] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
+    urls = ["", "lab/", "oyinlar/"] + [f"lab/{k}/" for k in LABS] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{DOMEN}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nDisallow: /eski/\nDisallow: /oyin/\nSitemap: {DOMEN}/sitemap.xml\n")
     open(os.path.join(OUT, "CNAME"), "w").write("texnikum1son.uz\n")
@@ -390,7 +567,12 @@ def extras():
         shutil.copy(os.path.join(SRC, "assets", fn), os.path.join(OUT, "assets", fn))
     open(os.path.join(OUT, "assets", "logo.svg"), "w", encoding="utf-8").write(LOGO.replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"').replace("var(--a)", "#b5541b"))
 
+ustaxonalar()
 bosh(); oyinlar(); yonaltirish(); kabinet(); admin(); xato404()
+if LABS:
+    lab_katalog()
+    for _lid in LABS:
+        lab_page(_lid)
 for y in Y:
     for f in y["fanlar"]:
         if f["toifa"] != "umumtalim":

@@ -1,0 +1,308 @@
+{
+ "id": "birinchi-yordam",
+ "nomi": "Birinchi tibbiy yordam xonasi",
+ "e": "🩺",
+ "xona": "tibbiy",
+ "fanlar": [
+  "favqulodda-vaziyatlardan-jabrlanganlarga-birinchi-tibbiy-yordam"
+ ],
+ "tavsif": "Birinchi yordam vositalari: aptechka, defibrillyator (AED), jgut, shinalar, zambil, reanimatsiya manekeni; yurak-o‘pka reanimatsiyasi ritmi, AED dan foydalanish va qon to‘xtatish mashqlari.",
+ "xavfsizlik": [
+  "Avval o‘z xavfsizligingizni ta’minlang — xavfli zonaga kirmang.",
+  "Tez yordam: 103 (yagona raqam 112). Manzilni va nima bo‘lganini aniq ayting.",
+  "Bir martalik qo‘lqopdan foydalaning.",
+  "Jabrlanganni faqat xavf tug‘ilganda ko‘chiring (yong‘in, portlash xavfi)."
+ ],
+ "jihozlar": [
+  {
+   "id": "aptechka",
+   "e": "🩹",
+   "nomi": "Birinchi yordam to‘plami",
+   "vazifa": "Qon to‘xtatish, bog‘lash va jarohatlarni yopish vositalari.",
+   "tuzilish": [
+    "Steril bintlar va salfetkalar",
+    "Gemostatik jgut",
+    "Plastirlar",
+    "Termik yopinchiq",
+    "Qaychi",
+    "Qo‘lqop va nafas niqobi"
+   ],
+   "ishlatish": [
+    "To‘plam joyi hammaga ma’lum bo‘lsin.",
+    "Ishlatilganini darhol to‘ldiring."
+   ]
+  },
+  {
+   "id": "aed",
+   "e": "⚡",
+   "nomi": "Avtomatik tashqi defibrillyator (AED)",
+   "vazifa": "Yurak to‘xtashining ayrim turlarida (fibrillyatsiya) elektr zarbasi bilan yurak ritmini tiklashga yordam beradi; ovozli ko‘rsatmalar beradi.",
+   "tuzilish": [
+    "Qurilma bloki",
+    "Yopishqoq elektrodlar",
+    "Zarba tugmasi",
+    "Ovozli va vizual ko‘rsatmalar"
+   ],
+   "ishlatish": [
+    "Yoqing va ko‘rsatmaga amal qiling.",
+    "Elektrodlarni quruq teriga yopishtiring.",
+    "Tahlil va zarba vaqtida hech kim tegmasin."
+   ],
+   "xavfsizlik": [
+    "Suv ustida yoki ho‘l jabrlanganda avval terini quriting."
+   ],
+   "sim": "aed"
+  },
+  {
+   "id": "maneken",
+   "e": "🫀",
+   "nomi": "Reanimatsiya manekeni",
+   "vazifa": "Yurak-o‘pka reanimatsiyasini (YO‘R) mashq qilish trenajyori.",
+   "tuzilish": [
+    "Ko‘krak qafasi (bosish chuqurligi)",
+    "Nafas yo‘llari",
+    "Indikatorlar"
+   ],
+   "ishlatish": [
+    "Qo‘llarni ko‘krak o‘rtasiga qo‘ying.",
+    "Daqiqasiga 100–120 marta, 5–6 sm chuqurlikda bosing.",
+    "30 bosishdan keyin 2 nafas bering."
+   ],
+   "sim": "yor"
+  },
+  {
+   "id": "jgut",
+   "e": "🎗️",
+   "nomi": "Gemostatik jgut",
+   "vazifa": "Qo‘l-oyoqdan kuchli (arterial) qon ketishini to‘xtatadi.",
+   "tuzilish": [
+    "Rezina tasma yoki burama jgut",
+    "Qisqich/qulf",
+    "Vaqt yoziladigan yorliq"
+   ],
+   "ishlatish": [
+    "Yaradan yuqoriroqqa, kiyim yoki mato ustidan qo‘ying.",
+    "Qon to‘xtaguncha torting.",
+    "Qo‘yilgan vaqtni yozib qo‘ying va jabrlanganni tezda shifokorga yetkazing."
+   ],
+   "xavfsizlik": [
+    "Jgutni bo‘yin, bosh va tanaga qo‘yib bo‘lmaydi."
+   ],
+   "sim": "qon"
+  },
+  {
+   "id": "shina",
+   "e": "🦴",
+   "nomi": "Shinalar (immobilizatsiya)",
+   "vazifa": "Suyak sinishida shikastlangan qo‘l-oyoqni harakatsiz qilib qo‘yadi.",
+   "tuzilish": [
+    "Narvonsimon (Kramer) shina",
+    "Vakuumli shina",
+    "Bint"
+   ],
+   "ishlatish": [
+    "Shinani sinish joyidan yuqori va pastdagi ikkita bo‘g‘imni qamraydigan qilib qo‘ying.",
+    "Ochiq sinishda avval qonni to‘xtatib, steril bog‘lam qo‘ying."
+   ]
+  },
+  {
+   "id": "zambil",
+   "e": "🛏️",
+   "nomi": "Zambil",
+   "vazifa": "Jabrlanganni xavfsiz ko‘chirish.",
+   "tuzilish": [
+    "Ramka",
+    "Mato",
+    "Kamarlar"
+   ],
+   "ishlatish": [
+    "Jabrlanganni kamida 3–4 kishi bo‘lib yotqizing.",
+    "Bosh va bo‘yin o‘qini saqlang."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "yor",
+   "e": "🫀",
+   "nomi": "Yurak-o‘pka reanimatsiyasi: ritm trenajyori",
+   "tur": "yurak",
+   "izoh": "«Bosish» tugmasini bosib, to‘g‘ri tezlikda (100–120/daq) ko‘krakka bosishni mashq qiling. 30:2.",
+   "p": {}
+  },
+  {
+   "id": "aed",
+   "e": "⚡",
+   "nomi": "Avtomatik tashqi defibrillyatordan (AED) foydalanish",
+   "tur": "qurilma",
+   "p": {
+    "nomi": "Avtomatik tashqi defibrillyator",
+    "e": "⚡",
+    "ekran": "AED o‘chiq",
+    "maqsad": "Yurak to‘xtagan jabrlanganga AED bilan yordam",
+    "boshqaruv": [
+     {
+      "id": "xavf",
+      "n": "Xavfsizlikni tekshirish va 103 ni chaqirish",
+      "e": "📞"
+     },
+     {
+      "id": "yor",
+      "n": "Yurak-o‘pka reanimatsiyasini boshlash",
+      "e": "🫀"
+     },
+     {
+      "id": "yoq",
+      "n": "AED ni yoqish",
+      "e": "⏻"
+     },
+     {
+      "id": "elektrod",
+      "n": "Elektrodlarni yopishtirish",
+      "e": "🩹"
+     },
+     {
+      "id": "tegma",
+      "n": "«Hech kim tegmasin!» — tahlil",
+      "e": "✋"
+     },
+     {
+      "id": "zarba",
+      "n": "Zarba tugmasini bosish",
+      "e": "⚡"
+     },
+     {
+      "id": "davom",
+      "n": "Darhol YO‘R ni davom ettirish",
+      "e": "🔁"
+     }
+    ],
+    "qadamlar": [
+     {
+      "v": "Vaziyatni baholang va yordam chaqiring.",
+      "t": "xavf",
+      "j": "Atrof xavfsiz; tez yordam (103) chaqirildi, AED olib kelish so‘raldi.",
+      "ekran": "—"
+     },
+     {
+      "v": "AED kelguncha reanimatsiya qiling.",
+      "t": "yor",
+      "j": "30 bosish : 2 nafas.",
+      "ekran": "—"
+     },
+     {
+      "v": "AED ni yoqing.",
+      "t": "yoq",
+      "j": "Qurilma ovozli ko‘rsatma bera boshlaydi.",
+      "ekran": "«Elektrodlarni bemorning ko‘kragiga yopishtiring»",
+      "chiroq": "yashil"
+     },
+     {
+      "v": "Elektrodlarni yopishtiring.",
+      "t": "elektrod",
+      "j": "Biri o‘ng o‘mrov ostiga, ikkinchisi chap qo‘ltiq ostiga (rasmdagidek), quruq teriga.",
+      "ekran": "«Yurak ritmi tahlil qilinmoqda»",
+      "chiroq": "sariq"
+     },
+     {
+      "v": "Tahlil vaqtida hech kim jabrlanganga tegmasin.",
+      "t": "tegma",
+      "j": "Harakat va tegish tahlilni buzadi.",
+      "ekran": "«Zarba tavsiya etiladi. Hech kim tegmasin!»",
+      "chiroq": "qizil"
+     },
+     {
+      "v": "Zarba bering.",
+      "t": "zarba",
+      "j": "Hech kim tegmayotganiga ishonch hosil qilib, tugmani bosing.",
+      "ekran": "«Zarba berildi»",
+      "chiroq": "qizil"
+     },
+     {
+      "v": "Reanimatsiyani davom ettiring.",
+      "t": "davom",
+      "j": "2 daqiqadan keyin AED yana tahlil qiladi; tez yordam kelguncha davom eting.",
+      "ekran": "«Reanimatsiyani davom ettiring»",
+      "chiroq": "yashil"
+     }
+    ],
+    "xato": {
+     "zarba": "Avval elektrodlar va tahlil kerak; zarbani faqat AED tavsiya qilganda va hech kim tegmaganda berish mumkin!",
+     "yoq": "Avval xavfsizlik va yordam chaqirish."
+    }
+   }
+  },
+  {
+   "id": "qon",
+   "e": "🎗️",
+   "nomi": "Kuchli qon ketishini to‘xtatish",
+   "tur": "tartib",
+   "izoh": "O‘quv qo‘llanmalarida jgutni yozda 1 soatdan, qishda 30 daqiqadan uzoq qoldirmaslik tavsiya etiladi; jabrlanganni imkon qadar tez shifoxonaga yetkazing.",
+   "p": {
+    "savol": "Harakatlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Xavfsizlikni ta’minlash va qo‘lqop kiyish",
+     "103 ga qo‘ng‘iroq qilish",
+     "Yarani steril salfetka bilan qattiq bosish",
+     "Bosuvchi bog‘lam qo‘yish",
+     "To‘xtamasa — yaradan yuqoriga jgut qo‘yish",
+     "Jgut qo‘yilgan vaqtni yozib qo‘yish",
+     "Jabrlanganni isitib, holatini kuzatish"
+    ]
+   }
+  },
+  {
+   "id": "vaziyat",
+   "e": "🩺",
+   "nomi": "Birinchi yordam vaziyatlari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Jabrlangan hushsiz va normal nafas olmayapti.",
+      "v": [
+       "103 ni chaqirib, darhol YO‘R ni boshlayman",
+       "Suv beraman",
+       "Kutib turaman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Qo‘ldan och qizil qon otilib chiqmoqda.",
+      "v": [
+       "Arterial qon ketishi — yarani bosib, kerak bo‘lsa jgut qo‘yaman",
+       "Venoz — e’tibor bermayman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Kishi qaynoq suvdan qo‘lini kuydirdi (qizarish, pufakcha).",
+      "v": [
+       "15–20 daqiqa salqin oqar suvda sovitaman, pufakchani yormayman",
+       "Yog‘ surtaman",
+       "Muz qo‘yaman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Hushsiz, lekin normal nafas olayotgan jabrlangan.",
+      "v": [
+       "Barqaror yon holatga yotqizib, nafasini kuzataman",
+       "O‘tqazib qo‘yaman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Ovqat tiqilib, kishi yo‘tala olmayapti va gapira olmayapti.",
+      "v": [
+       "Kuraklar orasiga 5 marta urib, so‘ng qorin turtkilari (Geymlix usuli) qilaman",
+       "Suv ichiraman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Birinchi yordam"
+}

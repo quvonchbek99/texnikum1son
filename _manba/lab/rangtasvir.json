@@ -1,0 +1,159 @@
+{
+ "id": "rangtasvir",
+ "nomi": "Rangtasvir studiyasi",
+ "e": "🎨",
+ "xona": "salon",
+ "fanlar": [
+  "rang-tasvir",
+  "rangtasvir"
+ ],
+ "tavsif": "Rangtasvir materiallari va asboblari: molbert, akvarel, guash, mo‘yqalam, palitra; rang doirasi, rang aralashtirish va uyg‘unlik bo‘yicha virtual mashqlar.",
+ "xavfsizlik": [
+  "Bo‘yoqlarni og‘izga olmang, ishdan keyin qo‘lni yuving.",
+  "Erituvchilar bilan ishlashda xonani shamollating."
+ ],
+ "jihozlar": [
+  {
+   "id": "molbert",
+   "e": "🖼️",
+   "nomi": "Molbert",
+   "vazifa": "Rasm chizishda qog‘oz yoki xolstni kerakli balandlik va burchakda ushlab turadi.",
+   "tuzilish": [
+    "Tayanch oyoqlar",
+    "Planshet ushlagich",
+    "Balandlik rostlagichi"
+   ],
+   "ishlatish": [
+    "Molbertni ko‘z balandligiga moslang.",
+    "Yorug‘lik chap tomondan tushsin."
+   ]
+  },
+  {
+   "id": "akvarel",
+   "e": "🎨",
+   "nomi": "Akvarel bo‘yoqlari",
+   "vazifa": "Suvda eriydigan shaffof bo‘yoq: nozik, havodor tuslar beradi.",
+   "tuzilish": [
+    "Bo‘yoq kyuvetalari",
+    "Palitra",
+    "Akvarel qog‘ozi (qalin, donador)"
+   ],
+   "ishlatish": [
+    "Qog‘ozni oldindan namlang (ho‘l usul) yoki quruq qog‘ozda ishlang.",
+    "Ochiq tuslardan to‘qlariga qarab boring.",
+    "Oqni bo‘yoq bilan emas, qog‘oz oqligi bilan qoldiring."
+   ]
+  },
+  {
+   "id": "guash",
+   "e": "🖌️",
+   "nomi": "Guash bo‘yoqlari",
+   "vazifa": "Qoplovchi (shaffof bo‘lmagan) mat bo‘yoq; xatoni ustidan bo‘yab tuzatish mumkin.",
+   "tuzilish": [
+    "Bo‘yoq bankalari",
+    "Palitra",
+    "Qalin qog‘oz yoki karton"
+   ],
+   "ishlatish": [
+    "Bo‘yoqni qaymoq quyuqligida suyultiring.",
+    "To‘q tuslardan ochiqlariga qarab ishlash mumkin."
+   ]
+  },
+  {
+   "id": "moyqalam",
+   "e": "🖌️",
+   "nomi": "Mo‘yqalamlar",
+   "vazifa": "Turli shakl va o‘lchamdagi cho‘tkalar: dumaloq — chiziq va detallar, yassi — keng yuzalar.",
+   "tuzilish": [
+    "Dumaloq (№1–12)",
+    "Yassi",
+    "Tabiiy (olmaxon, kolonok) va sintetik tuk"
+   ],
+   "ishlatish": [
+    "Ishdan keyin yuvib, tukini tekislab quriting.",
+    "Mo‘yqalamni suv idishida tik qoldirmang."
+   ]
+  },
+  {
+   "id": "palitra",
+   "e": "🎨",
+   "nomi": "Palitra",
+   "vazifa": "Ranglarni aralashtirib, kerakli tusni hosil qilish uchun.",
+   "tuzilish": [
+    "Plastik yoki yog‘och taxtacha",
+    "Aralashtirish katakchalari"
+   ],
+   "ishlatish": [
+    "Toza ranglarni chetga, aralashmalarni o‘rtaga qo‘ying.",
+    "Har aralashmadan oldin mo‘yqalamni yuving."
+   ],
+   "sim": "rang"
+  }
+ ],
+ "sim": [
+  {
+   "id": "rang",
+   "e": "🎨",
+   "nomi": "Rang doirasi va aralashtirish",
+   "tur": "rang",
+   "izoh": "Komplementar, triada va analog ranglarni toping; bo‘yoq (CMY) va nur (RGB) aralashuvini solishtiring.",
+   "p": {
+    "rejimlar": [
+     "doira",
+     "cmy",
+     "rgb"
+    ]
+   }
+  },
+  {
+   "id": "natyurmort",
+   "e": "🍎",
+   "nomi": "Natyurmortni rangtasvirda ishlash",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Kompozitsiyani (joylashuvni) qalamda belgilash",
+     "Buyumlar shakli va nisbatlarini chizish",
+     "Umumiy rang dog‘larini (podmalyovka) berish",
+     "Yorug‘-soya va rang munosabatlarini ishlash",
+     "Detallarni aniqlashtirish",
+     "Umumlashtirish (yaxlit ko‘rinishga keltirish)"
+    ]
+   }
+  },
+  {
+   "id": "tushuncha",
+   "e": "🎨",
+   "nomi": "Ranglar haqida tushunchalar",
+   "tur": "moslash",
+   "p": {
+    "savol": "Tushunchani ta’rifi bilan moslang.",
+    "juft": [
+     [
+      "Asosiy ranglar (bo‘yoqda)",
+      "Qizil, sariq, ko‘k"
+     ],
+     [
+      "Komplementar ranglar",
+      "Rang doirasida qarama-qarshi turadi"
+     ],
+     [
+      "Iliq ranglar",
+      "Qizil, to‘q sariq, sariq"
+     ],
+     [
+      "Sovuq ranglar",
+      "Ko‘k, havorang, binafsha"
+     ],
+     [
+      "Axromatik ranglar",
+      "Oq, kulrang, qora"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Rangtasvir",
+ "amaliyotga": false
+}

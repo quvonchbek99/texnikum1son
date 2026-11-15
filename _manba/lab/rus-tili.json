@@ -1,0 +1,308 @@
+{
+ "id": "rus-tili",
+ "nomi": "Rus tili lingafon xonasi",
+ "e": "🇷🇺",
+ "xona": "sinf",
+ "fanlar": [
+  "rus-tili-ozb-sinf"
+ ],
+ "tavsif": "Lingafon jihozlari; kundalik va kasbiy so‘zlarni tinglash, diktant, talaffuz va grammatik mashqlar.",
+ "xavfsizlik": [
+  "Naushnik va mikrofonni ehtiyotkorlik bilan taqing, simini tortmang.",
+  "Ovoz balandligini o‘rtacha darajada saqlang — uzoq vaqt baland ovoz eshitishga zarar.",
+  "Har 40–45 daqiqada naushnikni yechib, quloqqa dam bering.",
+  "Uskunalarni ovqat va ichimliklardan uzoq tuting."
+ ],
+ "jihozlar": [
+  {
+   "id": "kabina",
+   "e": "🎧",
+   "nomi": "Lingafon kabinasi (naushnik + mikrofon)",
+   "vazifa": "Har bir o‘quvchi uchun alohida tinglash va gapirish joyi: o‘qituvchi audio yuboradi, o‘quvchi javobini yozib oladi.",
+   "tuzilish": [
+    "Naushnik",
+    "Mikrofon",
+    "Ovoz balandligi regulyatori",
+    "Chaqiruv tugmasi (o‘qituvchiga)"
+   ],
+   "ishlatish": [
+    "Naushnikni taqib, ovozni sozlang.",
+    "Mikrofonni og‘izdan 2–3 sm masofaga keltiring.",
+    "Topshiriqni tinglang, takrorlang yoki javobingizni yozib oling.",
+    "Savol bo‘lsa, chaqiruv tugmasini bosing."
+   ]
+  },
+  {
+   "id": "doska",
+   "e": "🖥️",
+   "nomi": "Interaktiv doska",
+   "vazifa": "Darsda audio, video, matn va mashqlarni butun guruhga ko‘rsatish va sensor orqali boshqarish.",
+   "tuzilish": [
+    "Sensorli ekran yoki proyektor",
+    "Kompyuter bilan ulanish",
+    "Elektron qalam",
+    "Karnaylar"
+   ],
+   "ishlatish": [
+    "Kompyuter va proyektorni yoqing.",
+    "Kerakli audio yoki videoni oching.",
+    "Mashqlarni elektron qalam bilan bajarishni taklif qiling."
+   ]
+  },
+  {
+   "id": "lugat",
+   "e": "📘",
+   "nomi": "Lug‘at va elektron lug‘at",
+   "vazifa": "So‘zlarning ma’nosi, talaffuzi (transkripsiya), so‘z turkumi va qo‘llanish misollarini beradi.",
+   "tuzilish": [
+    "Bosh so‘z",
+    "Transkripsiya",
+    "So‘z turkumi belgisi",
+    "Tarjima va misollar"
+   ],
+   "ishlatish": [
+    "So‘zni alifbo tartibida yoki qidiruv orqali toping.",
+    "Transkripsiya bo‘yicha talaffuzni o‘qing yoki tinglang.",
+    "Misol gaplarni ko‘chirib, o‘z gapingizni tuzing."
+   ]
+  },
+  {
+   "id": "kolonka",
+   "e": "🔊",
+   "nomi": "Audio tizim (kolonka)",
+   "vazifa": "Tinglab tushunish mashqlari uchun audiomateriallarni butun guruhga eshittiradi.",
+   "tuzilish": [
+    "Kolonkalar",
+    "Ovoz kuchaytirgich",
+    "Ulanish (Bluetooth yoki kabel)"
+   ],
+   "ishlatish": [
+    "Ovozni avval past darajada yoqing, keyin moslang.",
+    "Audio matnni 2 marta eshittiring: avval umumiy, keyin batafsil tinglash."
+   ]
+  },
+  {
+   "id": "planshet",
+   "e": "📱",
+   "nomi": "Planshet va til ilovalari",
+   "vazifa": "Kartochkalar, lug‘at yodlash va talaffuzni tekshiruvchi ilovalar bilan mustaqil ishlash.",
+   "tuzilish": [
+    "Sensorli ekran",
+    "Mikrofon va kamera",
+    "Til o‘rganish ilovalari"
+   ],
+   "ishlatish": [
+    "Ilovada mavzu bo‘yicha so‘zlar to‘plamini oching.",
+    "Har kuni 10–15 daqiqa takrorlang.",
+    "Talaffuzni ovozli yozib, namuna bilan solishtiring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "til",
+   "e": "🎧",
+   "nomi": "So‘zlar: tinglash, diktant, talaffuz",
+   "tur": "til",
+   "izoh": "Ruscha so‘zni tinglang, tarjimasini ko‘ring va eshitganingizni yozing.",
+   "p": {
+    "til": "ru-RU",
+    "sozlar": [
+     [
+      "здравствуйте",
+      "assalomu alaykum (hurmat bilan)"
+     ],
+     [
+      "спасибо",
+      "rahmat"
+     ],
+     [
+      "пожалуйста",
+      "marhamat, iltimos"
+     ],
+     [
+      "колледж",
+      "kollej, texnikum"
+     ],
+     [
+      "преподаватель",
+      "o‘qituvchi"
+     ],
+     [
+      "студент",
+      "talaba, o‘quvchi"
+     ],
+     [
+      "профессия",
+      "kasb"
+     ],
+     [
+      "мастерская",
+      "ustaxona"
+     ],
+     [
+      "инструмент",
+      "asbob"
+     ],
+     [
+      "оборудование",
+      "jihoz, uskuna"
+     ],
+     [
+      "безопасность",
+      "xavfsizlik"
+     ],
+     [
+      "расписание",
+      "dars jadvali"
+     ],
+     [
+      "практика",
+      "amaliyot"
+     ],
+     [
+      "работа",
+      "ish"
+     ],
+     [
+      "опыт",
+      "tajriba"
+     ],
+     [
+      "зарплата",
+      "maosh"
+     ],
+     [
+      "клиент",
+      "mijoz"
+     ],
+     [
+      "вопрос",
+      "savol"
+     ],
+     [
+      "ответ",
+      "javob"
+     ],
+     [
+      "тетрадь",
+      "daftar"
+     ],
+     [
+      "учебник",
+      "darslik"
+     ],
+     [
+      "экзамен",
+      "imtihon"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "rod",
+   "e": "📝",
+   "nomi": "Ot turkumi: rod (род)",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "«Мастерская» — qaysi rod?",
+      "v": [
+       "женский род",
+       "мужской род",
+       "средний род"
+      ],
+      "t": 0,
+      "i": "-ая bilan tugagan sifatdosh-ot — ayol rodi."
+     },
+     {
+      "s": "«Инструмент» — qaysi rod?",
+      "v": [
+       "мужской род",
+       "женский род",
+       "средний род"
+      ],
+      "t": 0,
+      "i": "Undosh bilan tugagan otlar ko‘pincha erkak rodi."
+     },
+     {
+      "s": "«Оборудование» — qaysi rod?",
+      "v": [
+       "средний род",
+       "мужской род",
+       "женский род"
+      ],
+      "t": 0,
+      "i": "-ие bilan tugagan otlar — o‘rta rod."
+     },
+     {
+      "s": "«Тетрадь» — qaysi rod?",
+      "v": [
+       "женский род",
+       "мужской род",
+       "средний род"
+      ],
+      "t": 0,
+      "i": "-ь bilan tugagan bu ot ayol rodida: «моя тетрадь»."
+     }
+    ]
+   }
+  },
+  {
+   "id": "soz",
+   "e": "🔤",
+   "nomi": "So‘z va tarjima",
+   "tur": "moslash",
+   "p": {
+    "savol": "Ruscha so‘zni tarjimasi bilan moslang.",
+    "juft": [
+     [
+      "студент",
+      "talaba, o‘quvchi"
+     ],
+     [
+      "профессия",
+      "kasb"
+     ],
+     [
+      "мастерская",
+      "ustaxona"
+     ],
+     [
+      "инструмент",
+      "asbob"
+     ],
+     [
+      "оборудование",
+      "jihoz, uskuna"
+     ],
+     [
+      "безопасность",
+      "xavfsizlik"
+     ],
+     [
+      "расписание",
+      "dars jadvali"
+     ],
+     [
+      "практика",
+      "amaliyot"
+     ]
+    ]
+   }
+  }
+ ],
+ "test": [
+  {
+   "s": "«Мастерская» so‘zining tarjimasi?",
+   "v": [
+    "Ustaxona",
+    "Jadval",
+    "Daftar",
+    "Imtihon"
+   ],
+   "t": 0
+  }
+ ]
+}

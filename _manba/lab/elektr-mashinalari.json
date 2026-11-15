@@ -1,0 +1,285 @@
+{
+ "id": "elektr-mashinalari",
+ "nomi": "Elektr mashinalari laboratoriyasi",
+ "e": "🔄",
+ "xona": "elektr",
+ "fanlar": [
+  "elektr-mashinalari-va-transformatorlar"
+ ],
+ "tavsif": "Transformatorlar, asinxron va o‘zgarmas tok dvigatellari, generatorlar; transformatsiya koeffitsiyenti va asinxron dvigatel sirpanishi bo‘yicha virtual tajribalar.",
+ "xavfsizlik": [
+  "Elektr qurilmalarida ishlashdan oldin kuchlanishni o‘chiring, kommutatsiya apparatiga «Yoqmang! Odamlar ishlamoqda» plakatini iling.",
+  "Kuchlanish yo‘qligini ko‘rsatkich (indikator) bilan tekshiring.",
+  "Dielektrik qo‘lqop, gilamcha va izolyatsiyalangan dastali asboblardan foydalaning.",
+  "Bir qo‘l bilan ishlashga harakat qiling — tok yurak orqali o‘tmasin.",
+  "Nam va ho‘l joyda, shikastlangan izolyatsiya bilan ishlash taqiqlanadi.",
+  "Tok urgan odamni avval tok manbaidan ajrating, keyin birinchi yordam ko‘rsating va 103 ga qo‘ng‘iroq qiling."
+ ],
+ "jihozlar": [
+  {
+   "id": "transformator",
+   "e": "🔌",
+   "nomi": "Bir fazali transformator",
+   "vazifa": "O‘zgaruvchan tok kuchlanishini chastotani o‘zgartirmasdan oshiradi yoki pasaytiradi.",
+   "tuzilish": [
+    "Magnit o‘tkazgich (po‘lat plastinalardan yig‘ilgan o‘zak)",
+    "Birlamchi chulg‘am",
+    "Ikkilamchi chulg‘am",
+    "Klemmalar",
+    "Korpus"
+   ],
+   "ishlatish": [
+    "Pasport ma’lumotlarini (U1, U2, quvvat) tekshiring.",
+    "Birlamchi chulg‘amni tarmoqqa, ikkilamchini yuklamaga ulang.",
+    "Salt yurish va yuklama rejimida kuchlanish va toklarni o‘lchang."
+   ],
+   "xavfsizlik": [
+    "Transformatorni o‘zgarmas tok manbaiga ulamang — chulg‘am kuyadi."
+   ],
+   "sim": "transformator"
+  },
+  {
+   "id": "asinxron",
+   "e": "🌀",
+   "nomi": "Uch fazali asinxron dvigatel",
+   "vazifa": "Sanoatda eng ko‘p ishlatiladigan elektr dvigatel: stator aylanuvchi magnit maydoni rotorni aylantiradi.",
+   "tuzilish": [
+    "Stator (o‘zak va uch fazali chulg‘am)",
+    "Qisqa tutashtirilgan rotor («olmaxon g‘ildiragi»)",
+    "Val va podshipniklar",
+    "Ventilyator",
+    "Klemma qutisi (yulduz/uchburchak ulanish)"
+   ],
+   "ishlatish": [
+    "Pasport bo‘yicha ulanish sxemasini (Y yoki Δ) tanlang.",
+    "Izolyatsiyani megommetr bilan tekshiring.",
+    "Ishga tushirib, aylanish yo‘nalishini tekshiring; kerak bo‘lsa ikki fazani almashtiring."
+   ],
+   "xavfsizlik": [
+    "Korpus albatta yerga ulangan (zazemlenie) bo‘lsin."
+   ],
+   "sim": "asinxron"
+  },
+  {
+   "id": "ozgarmas",
+   "e": "⚙️",
+   "nomi": "O‘zgarmas tok dvigateli",
+   "vazifa": "Aylanish tezligini keng oraliqda silliq rostlash mumkin bo‘lgan dvigatel (elektr transport, kranlar).",
+   "tuzilish": [
+    "Stator (qo‘zg‘atish qutblari)",
+    "Yakor (rotor chulg‘ami)",
+    "Kollektor",
+    "Cho‘tkalar",
+    "Cho‘tka ushlagichlari"
+   ],
+   "ishlatish": [
+    "Cho‘tkalar yeyilishini va kollektor holatini tekshiring.",
+    "Ishga tushirishda tokni cheklovchi reostatdan foydalaning."
+   ]
+  },
+  {
+   "id": "generator",
+   "e": "⚡",
+   "nomi": "Sinxron generator",
+   "vazifa": "Mexanik energiyani o‘zgaruvchan tok elektr energiyasiga aylantiradi (elektr stansiyalarida).",
+   "tuzilish": [
+    "Stator chulg‘ami",
+    "Rotor (qo‘zg‘atish chulg‘ami yoki doimiy magnit)",
+    "Qo‘zg‘atish tizimi",
+    "Sovitish tizimi"
+   ],
+   "ishlatish": [
+    "Aylanish tezligini nominalga yetkazing.",
+    "Qo‘zg‘atishni rostlab, kuchlanishni o‘rnating.",
+    "Tarmoqqa ulashdan oldin sinxronlang (kuchlanish, chastota, faza)."
+   ]
+  },
+  {
+   "id": "megommetr",
+   "e": "🧪",
+   "nomi": "Megommetr",
+   "vazifa": "Chulg‘amlar va kabellar izolyatsiyasi qarshiligini yuqori kuchlanish (500–2500 V) bilan o‘lchaydi.",
+   "tuzilish": [
+    "Generator yoki batareyali manba",
+    "Shkala (MΩ)",
+    "Qisqichlar: «L» (liniya), «E» (yer), «G» (ekran)"
+   ],
+   "ishlatish": [
+    "Obyektni kuchlanishdan uzing va zaryadsizlantiring.",
+    "«E» ni korpusga, «L» ni chulg‘amga ulang.",
+    "1 daqiqa o‘lchab, ko‘rsatkichni yozing.",
+    "O‘lchashdan so‘ng obyektni yerga ulab zaryadsizlantiring."
+   ],
+   "xavfsizlik": [
+    "O‘lchash vaqtida qisqichlarga tegmang — yuqori kuchlanish."
+   ]
+  },
+  {
+   "id": "taxometr",
+   "e": "⏱️",
+   "nomi": "Taxometr",
+   "vazifa": "Val aylanish tezligini (ayl/daq) o‘lchaydi — sirpanishni aniqlash uchun kerak.",
+   "tuzilish": [
+    "Optik yoki kontaktli datchik",
+    "Displey",
+    "Aks ettiruvchi belgi (optik turda)"
+   ],
+   "ishlatish": [
+    "Valga aks ettiruvchi belgi yopishtiring.",
+    "Nurni belgiga yo‘naltirib, ko‘rsatkichni o‘qing."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "transformator",
+   "e": "🔌",
+   "nomi": "Transformator: kuchlanishni o‘zgartirish",
+   "tur": "transformator",
+   "izoh": "O‘ramlar sonini o‘zgartirib, ikkilamchi kuchlanish va toklarni kuzating.",
+   "p": {}
+  },
+  {
+   "id": "asinxron",
+   "e": "🌀",
+   "nomi": "Asinxron dvigatel: sinxron tezlik va sirpanish",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "f",
+      "n": "Tarmoq chastotasi f",
+      "u": "Hz",
+      "v": 50,
+      "tanlov": [
+       [
+        50,
+        "50 Hz"
+       ],
+       [
+        60,
+        "60 Hz"
+       ]
+      ]
+     },
+     {
+      "id": "p",
+      "n": "Qutblar juftlari soni p",
+      "u": "",
+      "v": 2,
+      "min": 1,
+      "max": 6,
+      "q": 1
+     },
+     {
+      "id": "n",
+      "n": "Rotorning haqiqiy aylanish tezligi n",
+      "u": "ayl/daq",
+      "v": 1440,
+      "min": 100,
+      "max": 3600,
+      "q": 10
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Sinxron tezlik n₁ = 60f/p",
+      "f": "60*f/p",
+      "u": "ayl/daq",
+      "x": 0
+     },
+     {
+      "n": "Sirpanish s = (n₁ − n)/n₁",
+      "f": "(60*f/p-n)/(60*f/p)*100",
+      "u": "%",
+      "x": 1,
+      "asosiy": true
+     },
+     {
+      "n": "Holat",
+      "f": "n>=60*f/p ? 'n ≥ n₁ — asinxron dvigatel bunday ishlay olmaydi' : ((60*f/p-n)/(60*f/p)<0.08 ? 'Me’yoriy ish rejimi' : 'Sirpanish katta: ortiqcha yuklama yoki ishga tushish')",
+      "u": ""
+     }
+    ],
+    "izoh": "Odatiy asinxron dvigatellarda nominal sirpanish 2–6% atrofida bo‘ladi.",
+    "vazifalar": [
+     {
+      "m": "1500 ayl/daq sinxron tezlikli (p = 2) dvigatelda sirpanishni 4% qiling.",
+      "f": "s.p==2 && s.f==50 && Math.abs(s.y1-4)<0.5"
+     },
+     {
+      "m": "3000 ayl/daq sinxron tezlikli dvigatelni tanlang.",
+      "f": "Math.abs(s.y0-3000)<1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "vaziyat",
+   "e": "🔄",
+   "nomi": "Elektr mashinalari bilan ishlash",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Uch fazali dvigatel teskari tomonga aylanmoqda.",
+      "v": [
+       "Istalgan ikki fazaning o‘rnini almashtiraman",
+       "Uchala fazani almashtiraman",
+       "Dvigatelni almashtiraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Dvigatel izolyatsiyasi qarshiligi juda past chiqdi.",
+      "v": [
+       "Ishga tushirmayman, chulg‘amni quritaman yoki ta’mirga beraman",
+       "Baribir ishga tushiraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Transformator salt yurishda ham qattiq qizimoqda.",
+      "v": [
+       "Magnit o‘tkazgich yoki chulg‘amlararo qisqa tutashuvni tekshiraman",
+       "Normal holat"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "qism",
+   "e": "🔩",
+   "nomi": "Elektr mashinasi qismlari",
+   "tur": "moslash",
+   "p": {
+    "savol": "Qismni vazifasi bilan moslang.",
+    "juft": [
+     [
+      "Stator",
+      "Aylanuvchi magnit maydon hosil qiladi"
+     ],
+     [
+      "Rotor",
+      "Aylanib, valni harakatlantiradi"
+     ],
+     [
+      "Kollektor",
+      "O‘zgarmas tok mashinasida tok yo‘nalishini almashtiradi"
+     ],
+     [
+      "Magnit o‘tkazgich",
+      "Magnit oqimini yo‘naltiradi"
+     ],
+     [
+      "Klemma qutisi",
+      "Chulg‘amlarni tarmoqqa ulash joyi"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Elektr mashinalari"
+}

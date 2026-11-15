@@ -1,0 +1,169 @@
+{
+ "id": "tarbiya",
+ "nomi": "Tarbiya xonasi: davlat ramzlari va qadriyatlar",
+ "e": "🇺🇿",
+ "xona": "sinf",
+ "fanlar": [
+  "tarbiya"
+ ],
+ "tavsif": "Davlat ramzlari, Konstitutsiya va odob-axloq qoidalari bilan tanishish; hayotiy vaziyatlarda to‘g‘ri qaror qabul qilish mashqlari.",
+ "xavfsizlik": [
+  "Davlat ramzlariga hurmat bilan munosabatda bo‘ling.",
+  "Munozarada boshqalarning fikrini oxirigacha tinglang."
+ ],
+ "jihozlar": [
+  {
+   "id": "bayroq",
+   "e": "🇺🇿",
+   "nomi": "O‘zbekiston Respublikasi Davlat bayrog‘i",
+   "vazifa": "1991-yil 18-noyabrda qabul qilingan. Ko‘k rang — tiniq osmon va obihayot, oq — tinchlik va poklik, yashil — tabiat va yangilanish ramzi; qizil chiziqlar — hayotiy kuch; yarim oy va 12 yulduz ham ramziy ma’noga ega.",
+   "tuzilish": [
+    "Ko‘k, oq va yashil yo‘llar",
+    "Ikki ingichka qizil chiziq",
+    "Yarim oy",
+    "12 ta yulduz"
+   ],
+   "ishlatish": [
+    "Bayroq ranglarining ma’nosini ayting.",
+    "Bayroq ko‘tarish marosimida tik turib, hurmat bildiring."
+   ]
+  },
+  {
+   "id": "gerb",
+   "e": "🦅",
+   "nomi": "Davlat gerbi",
+   "vazifa": "1992-yil 2-iyulda qabul qilingan. Markazda Humo qushi — baxt va erksevarlik ramzi; bug‘doy boshoqlari va paxta chanoqlari, quyosh, tog‘lar, daryolar tasvirlangan.",
+   "tuzilish": [
+    "Humo qushi",
+    "Quyosh",
+    "Bug‘doy boshoqlari va paxta chanoqlari",
+    "Sakkiz qirrali yulduz",
+    "«O‘zbekiston» yozuvi"
+   ],
+   "ishlatish": [
+    "Gerbdagi har bir tasvirning ma’nosini aniqlang."
+   ]
+  },
+  {
+   "id": "madhiya",
+   "e": "🎵",
+   "nomi": "Davlat madhiyasi",
+   "vazifa": "1992-yil 10-dekabrda tasdiqlangan. So‘zlari — Abdulla Oripov, musiqasi — Mutal Burhonov.",
+   "tuzilish": [
+    "Matn muallifi: Abdulla Oripov",
+    "Musiqa muallifi: Mutal Burhonov"
+   ],
+   "ishlatish": [
+    "Madhiya yangraganda o‘rningizdan turing, o‘ng qo‘lni ko‘krakka qo‘ying."
+   ]
+  },
+  {
+   "id": "konstitutsiya",
+   "e": "📜",
+   "nomi": "O‘zbekiston Respublikasi Konstitutsiyasi",
+   "vazifa": "Davlatning Asosiy Qonuni: 1992-yil 8-dekabrda qabul qilingan; 2023-yilda referendum orqali yangi tahriri qabul qilindi.",
+   "tuzilish": [
+    "Inson huquq va erkinliklari",
+    "Fuqarolarning burchlari",
+    "Davlat hokimiyati tizimi"
+   ],
+   "ishlatish": [
+    "Yoshlarning huquq va burchlariga oid moddalarni o‘qing.",
+    "Har kuni hayotda qanday qo‘llanishiga misol keltiring."
+   ]
+  },
+  {
+   "id": "odob",
+   "e": "🤝",
+   "nomi": "Odob-axloq va muomala madaniyati",
+   "vazifa": "Kattalarga hurmat, kichiklarga izzat, rostgo‘ylik, mehnatsevarlik va bag‘rikenglik — milliy qadriyatlarimiz asosi.",
+   "tuzilish": [
+    "Salomlashish odobi",
+    "Nutq va muloqot odobi",
+    "Jamoat joylaridagi odob",
+    "Raqamli odob (internetda muomala)"
+   ],
+   "ishlatish": [
+    "Har bir vaziyatda o‘zingizni boshqaning o‘rniga qo‘yib ko‘ring.",
+    "Nizolarni so‘z bilan, xotirjam hal qiling."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "vaziyat",
+   "e": "🤔",
+   "nomi": "Hayotiy vaziyatlar",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Avtobusda keksa kishi tik turibdi, siz esa o‘tiribsiz.",
+      "v": [
+       "Joy bo‘shatib beraman",
+       "Ko‘rmaganga olaman",
+       "Telefonga qarab o‘tiraveraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Guruhdoshingiz haqida ijtimoiy tarmoqda haqoratli post tarqalmoqda.",
+      "v": [
+       "Tarqatmayman, o‘qituvchi yoki kuratorga xabar beraman",
+       "Men ham ulashaman",
+       "Izoh yozib kulaman"
+      ],
+      "t": 0,
+      "i": "Kiberbullingni qo‘llab-quvvatlamaslik va kattalarga xabar berish to‘g‘ri yo‘l."
+     },
+     {
+      "s": "Ko‘chada hamyon topib oldingiz, ichida hujjatlar bor.",
+      "v": [
+       "Egasini topishga harakat qilaman yoki ichki ishlar organlariga topshiraman",
+       "O‘zimga olib qolaman",
+       "Tashlab yuboraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Darsga kechikdingiz.",
+      "v": [
+       "Ruxsat so‘rab kiraman va sababini qisqa tushuntiraman",
+       "Indamay kirib o‘tiraman",
+       "Darsga umuman kirmayman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ramz",
+   "e": "🏛️",
+   "nomi": "Davlat ramzlari va qabul qilingan sanalar",
+   "tur": "moslash",
+   "p": {
+    "savol": "Ramzni qabul qilingan sanasi bilan moslang.",
+    "juft": [
+     [
+      "Davlat bayrog‘i",
+      "1991-yil 18-noyabr"
+     ],
+     [
+      "Davlat gerbi",
+      "1992-yil 2-iyul"
+     ],
+     [
+      "Davlat madhiyasi",
+      "1992-yil 10-dekabr"
+     ],
+     [
+      "Konstitutsiya",
+      "1992-yil 8-dekabr"
+     ]
+    ]
+   }
+  }
+ ],
+ "amaliyotga": false
+}

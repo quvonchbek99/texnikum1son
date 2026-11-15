@@ -1,0 +1,277 @@
+{
+ "id": "diagnostika-apparatlari",
+ "nomi": "Diagnostika apparatlari laboratoriyasi",
+ "e": "🖥️",
+ "xona": "avto",
+ "fanlar": [
+  "diagnostika-apparatlarini-tuzilishi-va-ishlash-prinsiplari"
+ ],
+ "tavsif": "Zamonaviy avtomobil diagnostikasi uskunalari: skaner, motor-tester, ossillograf, gaz analizator, akkumulyator testeri va g‘ildiraklar o‘rnatilishi stendi.",
+ "xavfsizlik": [
+  "Uskunalarni faqat ishlab chiqaruvchi qo‘llanmasiga muvofiq ulang.",
+  "Gaz analizator bilan ishlashda chiqindi gazlar yopiq xonada to‘planmasin — so‘ruvchi ventilyatsiya yoqilsin."
+ ],
+ "jihozlar": [
+  {
+   "id": "motortester",
+   "e": "📊",
+   "nomi": "Motor-tester",
+   "vazifa": "Dvigatelning o‘t oldirish, yonilg‘i va boshqaruv tizimlarini kompleks tekshiruvchi kompyuterli uskuna.",
+   "tuzilish": [
+    "Asosiy blok",
+    "Ossillograf kanallari",
+    "Datchiklar (sig‘imli, tok qisqichi)",
+    "Dasturiy ta’minot"
+   ],
+   "ishlatish": [
+    "Datchiklarni sxema bo‘yicha ulang.",
+    "Dvigatelni turli rejimlarda ishlating.",
+    "Ossillogrammani namunaviy shakl bilan solishtiring."
+   ]
+  },
+  {
+   "id": "ossillograf",
+   "e": "〰️",
+   "nomi": "Avtomobil ossillografi",
+   "vazifa": "Datchik va ijrochi qurilmalardagi elektr signallarini vaqt bo‘yicha grafik ko‘rinishda ko‘rsatadi.",
+   "tuzilish": [
+    "Kanallar (kirishlar)",
+    "Volt/bo‘lim va vaqt/bo‘lim sozlamalari",
+    "Sinxronizatsiya (trigger)",
+    "Shchuplar"
+   ],
+   "ishlatish": [
+    "Signal amplitudasiga mos V/div tanlang.",
+    "Davrga mos vaqt/bo‘lim tanlang.",
+    "Signal shaklini tahlil qiling."
+   ],
+   "sim": "osiloskop"
+  },
+  {
+   "id": "gazanaliz",
+   "e": "🌫️",
+   "nomi": "Gaz analizator",
+   "vazifa": "Chiqindi gazlardagi CO, CH, CO₂, O₂ miqdorini o‘lchab, yonish sifatini va lambda koeffitsiyentini aniqlaydi.",
+   "tuzilish": [
+    "Zond (chiqarish trubasiga)",
+    "Kondensat ajratgich va filtrlar",
+    "O‘lchov bloki",
+    "Displey yoki printer"
+   ],
+   "ishlatish": [
+    "Asbobni qizdirib, nolga sozlang.",
+    "Dvigatel ish haroratida bo‘lsin.",
+    "Zondni trubaga kamida 30 sm kiriting.",
+    "Salt yurish va oshirilgan aylanishda o‘lchang."
+   ]
+  },
+  {
+   "id": "akbtester",
+   "e": "🔋",
+   "nomi": "Akkumulyator testeri",
+   "vazifa": "Akkumulyatorning haqiqiy holatini (ishga tushirish toki, ichki qarshilik) yuklama ostida yoki o‘tkazuvchanlik usulida baholaydi.",
+   "tuzilish": [
+    "Qisqichlar",
+    "Displey",
+    "Akkumulyator turi va standart tanlash"
+   ],
+   "ishlatish": [
+    "Akkumulyator turi va ishga tushirish tokini kiriting.",
+    "Qisqichlarni ulang.",
+    "Natija: yaroqli / zaryadlash kerak / almashtirish kerak."
+   ]
+  },
+  {
+   "id": "razval",
+   "e": "🛞",
+   "nomi": "G‘ildiraklar o‘rnatilishi stendi (3D)",
+   "vazifa": "G‘ildiraklarning yaqinlashish va og‘ish burchaklarini o‘lchab, sozlashga yordam beradi.",
+   "tuzilish": [
+    "Kameralar",
+    "G‘ildirak nishonlari",
+    "Ko‘targich",
+    "Dastur"
+   ],
+   "ishlatish": [
+    "Shina bosimini me’yorga keltiring.",
+    "Nishonlarni o‘rnatib, o‘lchang.",
+    "Burchaklarni zavod qiymatlariga keltiring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "skaner",
+   "e": "📟",
+   "nomi": "OBD-II skaner bilan xato kodlarini o‘qish",
+   "tur": "qurilma",
+   "izoh": "Xato kodlari faqat yo‘nalish beradi — sababni o‘lchovlar bilan tasdiqlash kerak.",
+   "p": {
+    "nomi": "OBD-II diagnostika skaneri",
+    "e": "📟",
+    "ekran": "Skaner o‘chiq",
+    "maqsad": "Dvigatel nazorat chirog‘i (Check Engine) yonishi sababini aniqlash",
+    "boshqaruv": [
+     {
+      "id": "ulash",
+      "n": "Skanerni OBD ulagichiga ulash",
+      "e": "🔌"
+     },
+     {
+      "id": "zajig",
+      "n": "O‘t oldirishni yoqish (dvigatel o‘chiq)",
+      "e": "🔑"
+     },
+     {
+      "id": "aloqa",
+      "n": "«Aloqa o‘rnatish»",
+      "e": "📶"
+     },
+     {
+      "id": "oqish",
+      "n": "«Xato kodlarini o‘qish»",
+      "e": "📖"
+     },
+     {
+      "id": "jonli",
+      "n": "«Joriy ma’lumotlar»",
+      "e": "📈"
+     },
+     {
+      "id": "tozala",
+      "n": "«Xatolarni o‘chirish»",
+      "e": "🧹"
+     },
+     {
+      "id": "start",
+      "n": "Dvigatelni ishga tushirish",
+      "e": "▶️"
+     }
+    ],
+    "qadamlar": [
+     {
+      "v": "Skanerni rul ostidagi 16 kontaktli OBD-II ulagichiga ulang.",
+      "t": "ulash",
+      "j": "Skaner quvvatni ulagichdan oladi.",
+      "ekran": "Skaner yoqildi…"
+     },
+     {
+      "v": "O‘t oldirishni yoqing (dvigatelni ishga tushirmasdan).",
+      "t": "zajig",
+      "j": "Boshqaruv bloki (EBU) ta’minot oldi.",
+      "ekran": "Zajiganie: ON"
+     },
+     {
+      "v": "Boshqaruv bloki bilan aloqa o‘rnating.",
+      "t": "aloqa",
+      "j": "Protokol aniqlandi.",
+      "ekran": "Aloqa o‘rnatildi ✓\nProtokol: ISO 15765 (CAN)",
+      "chiroq": "yashil"
+     },
+     {
+      "v": "Saqlangan xato kodlarini o‘qing.",
+      "t": "oqish",
+      "j": "P0301 — 1-silindrda o‘tkazib yuborish (misfire); P0171 — aralashma juda kambag‘al.",
+      "ekran": "P0301  1-silindr: o‘tkazib yuborish\nP0171  Aralashma kambag‘al (1-qator)",
+      "chiroq": "sariq"
+     },
+     {
+      "v": "Joriy ma’lumotlarni (datchiklar) ko‘ring.",
+      "t": "jonli",
+      "j": "Yonilg‘i korreksiyasi musbat (+18%) — havo so‘rilishi yoki yonilg‘i bosimi past bo‘lishi mumkin; 1-silindr shami va g‘altagini tekshirish kerak.",
+      "ekran": "Aylanish: 780 ayl/daq\nSovitish: 90 °C\nYonilg‘i korreksiyasi: +18 %"
+     },
+     {
+      "v": "Nosozlik bartaraf etilgach, xato kodlarini o‘chiring.",
+      "t": "tozala",
+      "j": "Kodlar o‘chirildi; qayta paydo bo‘lmasligini sinov yurishida tekshirish kerak.",
+      "ekran": "Xatolar yo‘q ✓",
+      "chiroq": "yashil"
+     }
+    ],
+    "xato": {
+     "start": "Diagnostika uchun hozircha dvigatelni ishga tushirish shart emas — avval kodlarni o‘qing.",
+     "tozala": "Kodlarni o‘qib, sababini aniqlamasdan o‘chirish mumkin emas!"
+    }
+   }
+  },
+  {
+   "id": "osiloskop",
+   "e": "〰️",
+   "nomi": "Ossillograf: signalni o‘lchash",
+   "tur": "osiloskop",
+   "izoh": "Amplituda, chastota va ekran sozlamalari (V/div, ms/div) bilan ishlash.",
+   "p": {}
+  },
+  {
+   "id": "gaz",
+   "e": "🌫️",
+   "nomi": "Gaz tahlili natijalari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Lambda = 1,00, CO past, CH past.",
+      "v": [
+       "Yonish me’yorida (stexiometrik aralashma)",
+       "Aralashma juda boy",
+       "Aralashma juda kambag‘al"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Lambda < 0,95, CO yuqori.",
+      "v": [
+       "Aralashma boy: forsunka, bosim regulyatori yoki datchiklarni tekshirish",
+       "Aralashma kambag‘al"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Lambda > 1,05, O₂ yuqori.",
+      "v": [
+       "Aralashma kambag‘al yoki havo so‘rilishi bor",
+       "Aralashma boy"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "asbob",
+   "e": "🧰",
+   "nomi": "Asbob va vazifasi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Diagnostika asbobini vazifasi bilan moslang.",
+    "juft": [
+     [
+      "Skaner",
+      "Xato kodlarini o‘qiydi"
+     ],
+     [
+      "Gaz analizator",
+      "Chiqindi gazlar tarkibini o‘lchaydi"
+     ],
+     [
+      "Kompressometr",
+      "Silindrlardagi bosimni o‘lchaydi"
+     ],
+     [
+      "Ossillograf",
+      "Signal shaklini ko‘rsatadi"
+     ],
+     [
+      "Akkumulyator testeri",
+      "Akkumulyator holatini yuklama ostida baholaydi"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Diagnostika apparatlari",
+ "meros": [
+  "avto-tashxis"
+ ]
+}

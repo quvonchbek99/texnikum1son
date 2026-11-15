@@ -1,0 +1,193 @@
+{
+ "id": "media-savodxonlik",
+ "nomi": "Media va axborot savodxonligi laboratoriyasi",
+ "e": "📰",
+ "xona": "it",
+ "fanlar": [
+  "media-va-axborot-savodxonligi"
+ ],
+ "tavsif": "Axborotni tekshirish vositalari: fakt-cheking, teskari rasm qidiruvi, manbalar ishonchliligi; soxta xabarlarni aniqlash va ma’lumotni tekshirish bosqichlari bo‘yicha mashqlar.",
+ "xavfsizlik": [
+  "Tekshirilmagan xabarni ulashmang.",
+  "Shaxsiy ma’lumotlaringizni va boshqalarning suratlarini ruxsatsiz tarqatmang.",
+  "Mualliflik huquqini hurmat qiling — manbani ko‘rsating."
+ ],
+ "jihozlar": [
+  {
+   "id": "faktcheking",
+   "e": "🔎",
+   "nomi": "Fakt-cheking (dalillarni tekshirish)",
+   "vazifa": "Xabardagi da’volarni ishonchli manbalar bilan solishtirib, haqiqatligini aniqlash.",
+   "tuzilish": [
+    "Da’voni ajratib olish",
+    "Asl manbani topish",
+    "Bir nechta mustaqil manba bilan solishtirish",
+    "Sana va kontekstni tekshirish"
+   ],
+   "ishlatish": [
+    "Xabar kim tomonidan, qachon e’lon qilinganini aniqlang.",
+    "Rasmiy sayt yoki asl hujjatni toping.",
+    "Kamida 2–3 ishonchli manbani solishtiring."
+   ]
+  },
+  {
+   "id": "teskari",
+   "e": "🖼️",
+   "nomi": "Teskari rasm qidiruvi",
+   "vazifa": "Rasmning asl manbasi va birinchi marta qachon e’lon qilinganini aniqlash.",
+   "tuzilish": [
+    "Qidiruv tizimining rasm bo‘yicha qidiruvi",
+    "Natijalar sanasi",
+    "O‘xshash rasmlar"
+   ],
+   "ishlatish": [
+    "Rasmni yuklang yoki havolasini kiriting.",
+    "Eng eski nusxani toping.",
+    "Rasm boshqa voqeaga tegishli emasligini tekshiring."
+   ]
+  },
+  {
+   "id": "manba",
+   "e": "🏛️",
+   "nomi": "Ishonchli manbalar",
+   "vazifa": "Rasmiy davlat saytlari, tan olingan ommaviy axborot vositalari va ilmiy nashrlar.",
+   "tuzilish": [
+    "Rasmiy saytlar (gov.uz domeni)",
+    "Muallif va tahririyat ko‘rsatilgan nashrlar",
+    "Ilmiy maqolalar",
+    "Statistika agentligi ma’lumotlari"
+   ],
+   "ishlatish": [
+    "Domenga va muallifga e’tibor bering.",
+    "Sarlavha mazmunga mosligini tekshiring.",
+    "Reklama va xolis xabarni farqlang."
+   ]
+  },
+  {
+   "id": "algoritm",
+   "e": "🔄",
+   "nomi": "Ijtimoiy tarmoq algoritmlari",
+   "vazifa": "Lentani sizga yoqqan narsalar asosida tuzadi — natijada «filtr pufagi» paydo bo‘lishi mumkin.",
+   "tuzilish": [
+    "Tavsiya tizimi",
+    "Layk va ko‘rishlar",
+    "Qiziqishlar profili"
+   ],
+   "ishlatish": [
+    "Turli nuqtai nazardagi manbalarni kuzating.",
+    "Hissiyotga kuchli ta’sir qiluvchi postlarga ehtiyot bo‘ling."
+   ]
+  },
+  {
+   "id": "deepfake",
+   "e": "🎭",
+   "nomi": "Deepfake (soxta video va ovoz)",
+   "vazifa": "Sun’iy intellekt yordamida yaratilgan, haqiqiyga o‘xshash soxta video yoki ovoz.",
+   "tuzilish": [
+    "Yuz ifodasi va lab harakati nomuvofiqligi",
+    "Noaniq chegaralar va yorug‘lik",
+    "G‘ayritabiiy ovoz ohangi"
+   ],
+   "ishlatish": [
+    "Video manbasini tekshiring.",
+    "Rasmiy kanallarda tasdig‘ini qidiring.",
+    "Shubhali bo‘lsa — ulashmang."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "feyk",
+   "e": "📰",
+   "nomi": "Soxta xabarni aniqlang",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "«Shoshilinch! Ertadan barcha talabalarga 5 million so‘m beriladi — havola orqali karta raqamingizni kiriting!»",
+      "v": [
+       "Firibgarlik: rasmiy manba yo‘q, karta ma’lumotlari so‘ralmoqda",
+       "Haqiqiy xabar, tezda kiritish kerak"
+      ],
+      "t": 0,
+      "i": "Rasmiy tashkilotlar karta ma’lumotlarini noma’lum havolalar orqali so‘ramaydi."
+     },
+     {
+      "s": "Sarlavha: «Olimlar hayratda!», matnda manba va muallif yo‘q.",
+      "v": [
+       "Ishonchsiz — klikbeyt belgilari",
+       "Ishonchli ilmiy yangilik"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Xabar vazirlikning rasmiy saytida va bir nechta yirik nashrlarda e’lon qilingan.",
+      "v": [
+       "Ishonchli bo‘lishi ehtimoli yuqori",
+       "Albatta soxta"
+      ],
+      "t": 0
+     },
+     {
+      "s": "2015-yilgi suv toshqini surati «bugungi voqea» deb tarqatilmoqda.",
+      "v": [
+       "Kontekstdan uzilgan (eski) rasm — teskari qidiruv bilan aniqlanadi",
+       "Yangi rasm"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "tekshir",
+   "e": "🔎",
+   "nomi": "Xabarni tekshirish bosqichlari",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "To‘xtang — darhol ulashmang",
+     "Manba va muallifni aniqlang",
+     "Sana va kontekstni tekshiring",
+     "Boshqa ishonchli manbalar bilan solishtiring",
+     "Rasm va videoni teskari qidiruvda tekshiring",
+     "Xulosa chiqaring: ulashish yoki ulashmaslik"
+    ]
+   }
+  },
+  {
+   "id": "atama",
+   "e": "📘",
+   "nomi": "Media atamalari",
+   "tur": "moslash",
+   "p": {
+    "savol": "Atamani ta’rifi bilan moslang.",
+    "juft": [
+     [
+      "Dezinformatsiya",
+      "Ataylab tarqatilgan yolg‘on axborot"
+     ],
+     [
+      "Misinformatsiya",
+      "Bilmasdan tarqatilgan noto‘g‘ri axborot"
+     ],
+     [
+      "Klikbeyt",
+      "Bosishga undovchi bo‘rttirilgan sarlavha"
+     ],
+     [
+      "Filtr pufagi",
+      "Algoritm faqat yoqqan fikrlarni ko‘rsatishi"
+     ],
+     [
+      "Deepfake",
+      "Sun’iy intellekt yaratgan soxta video yoki ovoz"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Media savodxonligi",
+ "amaliyotga": false
+}

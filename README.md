@@ -37,6 +37,22 @@ sahifalaridan boshlab kerakli JS/CSS/rasm/ovoz fayllarini o'zi topib ko'chiradi;
 `.github/workflows/kuvonch-oyinlar.yml` har ~3 soatda (va qo'lda «Run workflow») ishga tushadi va faqat o'zgarish bo'lsa commit qiladi.
 `oyin/` ni qo'lda tahrirlamang — keyingi sinxronda qayta yoziladi; o'zgartirishni kuvonch.uz'da qiling.
 
+## Virtual laboratoriyalar (15.11.2026)
+
+Har bir fan uchun virtual xona: `/lab/<id>/`, katalog — `/lab/`. Fan sahifasida «Virtual laboratoriya» tugmasi chiqadi.
+- **Xona va jihozlar** — stollardagi jihozni bosish → pasport (vazifasi, tuzilishi, ishlatish tartibi, xavfsizlik, haqiqiy rasmlarga havola). Pastda chop etiladigan «Jihozlar pasporti».
+- **Slaydlar** — jihozlar pasportidan avtomatik tuziladi; proyektor/to‘liq ekran, ← → tugmalari, oq-qora chop etish.
+- **Virtual ishlatish** — simulyatorlar (`assets/lab-sim*.js`): umumiy turlar — `tartib`, `moslash`, `tanlash`, `qurilma` (qurilmani tugmalar bilan ishlatish), `kalkulyator`, `sxema`;
+  maxsus — `zanjir`, `multimetr`, `osiloskop`, `transformator`, `dvigatel`, `payvand`, `chozish`, `mayatnik`, `ph`, `grafik`, `mantiq`, `tarmoq`, `kod`, `parol`, `piksel`,
+  `animatsiya`, `proyeksiya`, `rang`, `yurak`, `svetofor`, `til`, `kompas`, `chok`, `retsept`, `qolip`, `mato`, `taymer`.
+- **Sinov** — jihozlar pasportidan avtomatik savollar + lab JSON’dagi `test`. **Xavfsizlik** — umumiy va jihozlar bo‘yicha qoidalar (chop etiladi).
+- Natijalar (tanishildi / bajarildi / sinov %) foydalanuvchi brauzerida (`localStorage`) saqlanadi.
+
+Manba: `_manba/lab/<id>.json` (bitta fayl — bitta laboratoriya). Asosiy maydonlar: `id`, `nomi`, `e` (emoji), `xona` (fon: sinf, elektr, avto, ustaxona, oshxona, tikuv, salon, it, tibbiy, yongin, kimyo, fizika),
+`fanlar` (fan id lari — bir lab bir nechta fanga xizmat qilishi mumkin), `meros` (boshqa labdan jihoz va mashqlarni olish), `jihozlar[]`, `sim[]`, `xavfsizlik[]`, `test[]`.
+Amaliyot fanlari uchun alohida lab bo‘lmasa, generator yo‘nalishning barcha kasbiy laboratoriyalaridan «amaliyot ustaxonasi» (`/lab/ustaxona-<yonalish>/`) yasaydi.
+Yangi lab qo‘shish: JSON faylni `_manba/lab/` ga qo‘ying va saytni qayta yig‘ing (generator jihoz → mashq havolalarini tekshiradi).
+
 ## Tuzilma
 | Joy | Nima |
 | --- | --- |
@@ -45,7 +61,8 @@ sahifalaridan boshlab kerakli JS/CSS/rasm/ovoz fayllarini o'zi topib ko'chiradi;
 | `admin/` | Admin: o‘qituvchilarni tasdiqlash, Drive manzili, materiallarni yashirish/o‘chirish |
 | `materiallar/zamonaviy-tikuv-jihozlari/` | «Zamonaviy tikuv jihozlari» (UKM.4) interaktiv RTR paketi |
 | `data/` | `malumot.json` (yo‘nalish/fan/soat), `qidiruv.json`, `rtr/*.json` (tayyor fan materiallari) |
-| `_manba/` | Generator (`build.py`), asl JS/CSS, kasb-emis ma’lumoti, sozlash fayllari, agent uchun buyruq |
+| `lab/` | Virtual laboratoriyalar (generator yasaydi; manba — `_manba/lab/*.json`) |
+| `_manba/` | Generator (`build.py`), asl JS/CSS, kasb-emis ma’lumoti, laboratoriyalar (`lab/`), sozlash fayllari, agent uchun buyruq |
 
 ## Qayta yig‘ish
 ```

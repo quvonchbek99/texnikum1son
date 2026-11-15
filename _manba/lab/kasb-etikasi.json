@@ -1,0 +1,202 @@
+{
+ "id": "kasb-etikasi",
+ "nomi": "Kasb etikasi va muloqot xonasi",
+ "e": "🤝",
+ "xona": "salon",
+ "fanlar": [
+  "kasb-etikasi-va-psixologiyasi"
+ ],
+ "tavsif": "Mijoz bilan ishlash vositalari: mijoz kartasi, konsultatsiya, onlayn yozilish, fikr-mulohaza, dress-kod va telefon odobi; mijozni qabul qilish, nizolarni hal qilish va temperament turlari bo‘yicha mashqlar.",
+ "xavfsizlik": [
+  "Mijozning shaxsiy ma’lumotlari va suhbatlarini oshkor qilmang.",
+  "Har qanday vaziyatda xotirjam va hurmatli bo‘ling."
+ ],
+ "jihozlar": [
+  {
+   "id": "karta",
+   "e": "🗂️",
+   "nomi": "Mijoz kartasi",
+   "vazifa": "Mijozning xizmatlari, ishlatilgan bo‘yoq raqamlari, allergiyalari va istaklari yozib boriladigan hujjat.",
+   "tuzilish": [
+    "Aloqa ma’lumotlari",
+    "Xizmatlar tarixi",
+    "Ishlatilgan vositalar va retseptlar",
+    "Allergiya va eslatmalar"
+   ],
+   "ishlatish": [
+    "Har bir tashrifdan keyin to‘ldiring.",
+    "Ma’lumotlarni maxfiy saqlang."
+   ]
+  },
+  {
+   "id": "konsultatsiya",
+   "e": "💬",
+   "nomi": "Konsultatsiya (maslahat)",
+   "vazifa": "Xizmatdan oldin mijoz istagini, soch holatini va mumkin bo‘lgan natijani kelishish.",
+   "tuzilish": [
+    "Ochiq savollar",
+    "Rasmlar va namunalar",
+    "Narx va vaqtni kelishish"
+   ],
+   "ishlatish": [
+    "Mijozni diqqat bilan tinglang.",
+    "Natijani realistik tushuntiring.",
+    "Kelishilgan narsani qayta takrorlang."
+   ]
+  },
+  {
+   "id": "yozilish",
+   "e": "📅",
+   "nomi": "Onlayn yozilish tizimi",
+   "vazifa": "Mijozlarning xizmat vaqtini oldindan band qilish.",
+   "tuzilish": [
+    "Kalendar",
+    "Eslatma xabarlari",
+    "Xizmatlar ro‘yxati va narxlar"
+   ],
+   "ishlatish": [
+    "Vaqtni xizmat davomiyligiga mos bering.",
+    "Kechikish va bekor qilish qoidalarini oldindan tushuntiring."
+   ]
+  },
+  {
+   "id": "fikr",
+   "e": "⭐",
+   "nomi": "Fikr-mulohaza va reyting",
+   "vazifa": "Mijozlar bahosi xizmat sifatini oshirishga yordam beradi.",
+   "tuzilish": [
+    "Baholar",
+    "Sharhlar",
+    "Javoblar"
+   ],
+   "ishlatish": [
+    "Har bir sharhga xushmuomala javob bering.",
+    "Tanqiddan xulosa chiqaring."
+   ]
+  },
+  {
+   "id": "dresskod",
+   "e": "👔",
+   "nomi": "Dress-kod va tashqi ko‘rinish",
+   "vazifa": "Toza forma, tartibli soch va qo‘llar — mijoz ishonchining asosi.",
+   "tuzilish": [
+    "Toza forma yoki fartuk",
+    "Yopiq poyabzal",
+    "Tartibli soch va tirnoqlar"
+   ],
+   "ishlatish": [
+    "Har kuni toza formada keling.",
+    "Kuchli atir sepmang."
+   ]
+  },
+  {
+   "id": "telefon",
+   "e": "☎️",
+   "nomi": "Telefon odobi",
+   "vazifa": "Telefonda salon nomini va o‘zingizni tanishtirib, aniq va xushmuomala gaplashish.",
+   "tuzilish": [
+    "Salomlashish va tanishtirish",
+    "Mijozni tinglash",
+    "Yozib olish",
+    "Xayrlashish"
+   ],
+   "ishlatish": [
+    "Qo‘ng‘iroqqa 3 signal ichida javob bering.",
+    "Mijoz ismini va vaqtni qayta takrorlang."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "qabul",
+   "e": "🤝",
+   "nomi": "Mijozni qabul qilish",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Salomlashish va kutib olish",
+     "Kiyimini olish va o‘tirishni taklif qilish",
+     "Konsultatsiya: istak va soch holati",
+     "Xizmat va narxni kelishish",
+     "Xizmatni bajarish",
+     "Natijani ko‘rsatish va parvarish bo‘yicha maslahat",
+     "Hisob-kitob va keyingi tashrifga yozish",
+     "Xayrlashish"
+    ]
+   }
+  },
+  {
+   "id": "nizo",
+   "e": "😤",
+   "nomi": "Murakkab vaziyatlar",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Mijoz natijadan norozi va ovozini ko‘tarmoqda.",
+      "v": [
+       "Xotirjam tinglab, nima yoqmaganini aniqlayman va tuzatishni taklif qilaman",
+       "Men ham ovozimni ko‘taraman",
+       "E’tibor bermayman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Mijoz 30 daqiqa kechikdi, keyingi mijoz kutmoqda.",
+      "v": [
+       "Xushmuomala tushuntirib, qisqaroq xizmat yoki boshqa vaqt taklif qilaman",
+       "Keyingi mijozni kuttirib qo‘yaman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Hamkasbingiz mijoz oldida sizni tanqid qildi.",
+      "v": [
+       "Mijoz oldida bahslashmayman, keyin yakkama-yakka gaplashaman",
+       "Darhol javob qaytaraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Mijoz shaxsiy savollar berib, boshqa mijozlar haqida g‘iybat qilmoqda.",
+      "v": [
+       "Suhbatni xushmuomala tarzda xizmat mavzusiga burib, boshqalar haqida gapirmayman",
+       "Qo‘shilib gaplashaman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "temperament",
+   "e": "🧠",
+   "nomi": "Temperament turlari",
+   "tur": "moslash",
+   "p": {
+    "savol": "Temperament turini belgilari bilan moslang.",
+    "juft": [
+     [
+      "Xolerik",
+      "Tez, g‘ayratli, jahldor, sabrsiz"
+     ],
+     [
+      "Sangvinik",
+      "Quvnoq, kirishimli, tez moslashadi"
+     ],
+     [
+      "Flegmatik",
+      "Xotirjam, sekin, barqaror"
+     ],
+     [
+      "Melanxolik",
+      "Ta’sirchan, nozik, tez xafa bo‘ladi"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Kasb etikasi",
+ "amaliyotga": false
+}

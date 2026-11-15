@@ -1,0 +1,200 @@
+{
+ "id": "tashishlar",
+ "nomi": "Logistika va tashish laboratoriyasi",
+ "e": "🚚",
+ "xona": "avto",
+ "fanlar": [
+  "tashishlarni-tashkil-etish"
+ ],
+ "tavsif": "Yuk tashish vositalari va hujjatlari, yukni mahkamlash va kuzatish uskunalari; reys xarajatlarini hisoblash va tashish jarayonini tashkil etish mashqlari.",
+ "xavfsizlik": [
+  "Avtomobilning yuk ko‘tarish qobiliyatidan ortiq yuk ortmang.",
+  "Yukni mahkamlamasdan harakatlanmang.",
+  "Haydovchining mehnat va dam olish rejimiga rioya qiling."
+ ],
+ "jihozlar": [
+  {
+   "id": "furgon",
+   "e": "🚚",
+   "nomi": "Yuk avtomobili (furgon)",
+   "vazifa": "Yuklarni ob-havodan himoyalangan kuzovda tashish uchun.",
+   "tuzilish": [
+    "Kabina",
+    "Shassi",
+    "Furgon kuzov",
+    "Orqa va yon eshiklar",
+    "Yuk ko‘tarish qobiliyati yozuvi"
+   ],
+   "ishlatish": [
+    "Yuk massasi va hajmini ko‘tarish qobiliyati bilan solishtiring.",
+    "Og‘ir yukni pastga va o‘qlar orasiga joylang.",
+    "Eshiklarni yopib, plombalang."
+   ]
+  },
+  {
+   "id": "palleta",
+   "e": "🪵",
+   "nomi": "Palleta (poddon) va qadoq",
+   "vazifa": "Yuklarni birlashtirib, yuklash-tushirishni tezlashtiradi; standart yevropalleta 1200×800 mm.",
+   "tuzilish": [
+    "Palleta",
+    "Strech-plyonka",
+    "Burchak himoyachilari",
+    "Yorliq (markirovka)"
+   ],
+   "ishlatish": [
+    "Qutilarni tekis, piramida qilmasdan joylang.",
+    "Plyonka bilan o‘rang.",
+    "Yorliqni ko‘rinadigan joyga yopishtiring."
+   ]
+  },
+  {
+   "id": "tasma",
+   "e": "🎗️",
+   "nomi": "Yuk mahkamlash tasmalari",
+   "vazifa": "Yukni yo‘lda siljishdan va ag‘darilishdan saqlaydi.",
+   "tuzilish": [
+    "Poliester tasma",
+    "Tortish (taranglash) mexanizmi",
+    "Ilgaklar"
+   ],
+   "ishlatish": [
+    "Tasmani yuk ustidan o‘tkazib, kuzov ilgaklariga ilang.",
+    "Tortish mexanizmi bilan taranglang.",
+    "Yo‘lda vaqti-vaqti bilan tekshiring."
+   ],
+   "xavfsizlik": [
+    "Shikastlangan tasmadan foydalanmang."
+   ]
+  },
+  {
+   "id": "ttn",
+   "e": "🧾",
+   "nomi": "Tovar-transport yuk xati",
+   "vazifa": "Yuk jo‘natuvchi, tashuvchi va qabul qiluvchi o‘rtasida yuk topshirilganini tasdiqlovchi hujjat (xalqaro tashishda — CMR).",
+   "tuzilish": [
+    "Jo‘natuvchi va qabul qiluvchi",
+    "Yuk nomi, miqdori, massasi",
+    "Tashuvchi va transport",
+    "Imzo va muhrlar"
+   ],
+   "ishlatish": [
+    "Yukni qabul qilishda soni va holatini tekshiring.",
+    "Kamchilik bo‘lsa, xatda qayd eting.",
+    "Topshirishda qabul qiluvchi imzosini oling."
+   ]
+  },
+  {
+   "id": "gps",
+   "e": "📍",
+   "nomi": "GPS-treker va dispetcherlik dasturi",
+   "vazifa": "Transport joylashuvi, tezligi va marshrutini real vaqtda kuzatib, reyslarni rejalashtirishga yordam beradi.",
+   "tuzilish": [
+    "GPS qabul qilgich",
+    "Mobil aloqa moduli",
+    "Dispetcherlik dasturi"
+   ],
+   "ishlatish": [
+    "Marshrutni dasturda rejalashtiring.",
+    "Kechikish va to‘xtashlarni kuzating.",
+    "Hisobotni reys yakunida tahlil qiling."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "reys",
+   "e": "🛣️",
+   "nomi": "Reys xarajati",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "S",
+      "n": "Masofa",
+      "u": "km",
+      "v": 350,
+      "min": 10,
+      "max": 3000,
+      "q": 10
+     },
+     {
+      "id": "q",
+      "n": "Yoqilg‘i sarfi",
+      "u": "l/100 km",
+      "v": 18,
+      "min": 5,
+      "max": 45,
+      "q": 0.5
+     },
+     {
+      "id": "c",
+      "n": "1 litr yoqilg‘i narxi",
+      "u": "so‘m",
+      "v": 10000,
+      "min": 3000,
+      "max": 20000,
+      "q": 100
+     },
+     {
+      "id": "v",
+      "n": "O‘rtacha tezlik",
+      "u": "km/soat",
+      "v": 60,
+      "min": 20,
+      "max": 90,
+      "q": 1
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Yoqilg‘i sarfi = S·q/100",
+      "f": "S*q/100",
+      "u": "litr",
+      "x": 1,
+      "asosiy": true
+     },
+     {
+      "n": "Yoqilg‘i xarajati",
+      "f": "S*q/100*c",
+      "u": "so‘m",
+      "x": 0
+     },
+     {
+      "n": "Yo‘ldagi vaqt = S / v",
+      "f": "S/v",
+      "u": "soat",
+      "x": 1
+     },
+     {
+      "n": "1 km uchun yoqilg‘i xarajati",
+      "f": "q/100*c",
+      "u": "so‘m",
+      "x": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "jarayon",
+   "e": "📦",
+   "nomi": "Yuk tashish jarayoni",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Buyurtmani qabul qilish",
+     "Transport va haydovchini tanlash",
+     "Marshrutni rejalashtirish",
+     "Yukni qabul qilib, hujjatlarni rasmiylashtirish",
+     "Yuklash va mahkamlash",
+     "Tashish va kuzatish",
+     "Yukni topshirish va imzo olish",
+     "Hisob-kitob va hisobot"
+    ]
+   }
+  }
+ ],
+ "qisqa": "Tashishlar",
+ "amaliyotga": false
+}

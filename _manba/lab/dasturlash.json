@@ -1,0 +1,222 @@
+{
+ "id": "dasturlash",
+ "nomi": "Dasturlash laboratoriyasi",
+ "e": "⌨️",
+ "xona": "it",
+ "fanlar": [
+  "elementar-dasturlash"
+ ],
+ "tavsif": "Dasturchi vositalari va asosiy tushunchalar: kod muharriri, algoritm, o‘zgaruvchi, shart, sikl, funksiya; brauzerda ishlaydigan JavaScript mashqlari.",
+ "xavfsizlik": [
+  "Kompyuter va qurilmalarni nam qo‘l bilan ushlamang, ish joyida ovqatlanmang.",
+  "Monitordan 50–70 sm uzoqlikda, to‘g‘ri o‘tiring; har 45 daqiqada ko‘z va qo‘llarga dam bering.",
+  "Litsenziyalangan yoki erkin dasturlardan foydalaning, notanish fayllarni ochmang.",
+  "Ishni muntazam saqlang va zaxira nusxa oling."
+ ],
+ "jihozlar": [
+  {
+   "id": "muharrir",
+   "e": "🧑‍💻",
+   "nomi": "Kod muharriri (VS Code)",
+   "vazifa": "Dastur kodini yozish, xatolarni ko‘rsatish va ishga tushirish uchun.",
+   "tuzilish": [
+    "Fayllar paneli",
+    "Muharrir oynasi (sintaksis yoritilishi)",
+    "Terminal",
+    "Kengaytmalar"
+   ],
+   "ishlatish": [
+    "Loyiha papkasini oching.",
+    "Fayl kengaytmasini to‘g‘ri bering (.js, .py, .html).",
+    "Kodni formatlang va izohlar yozing."
+   ]
+  },
+  {
+   "id": "algoritm",
+   "e": "🧭",
+   "nomi": "Algoritm va blok-sxema",
+   "vazifa": "Masalani yechish uchun aniq, chekli qadamlar ketma-ketligi.",
+   "tuzilish": [
+    "Boshlanish/tugash (oval)",
+    "Amal (to‘rtburchak)",
+    "Shart (romb)",
+    "Kiritish/chiqarish (parallelogramm)",
+    "Strelkalar"
+   ],
+   "ishlatish": [
+    "Masalani kichik qadamlarga bo‘ling.",
+    "Blok-sxemasini chizing.",
+    "Keyin kodga o‘giring."
+   ],
+   "sim": "algoritm"
+  },
+  {
+   "id": "ozgaruvchi",
+   "e": "📦",
+   "nomi": "O‘zgaruvchi va ma’lumot turlari",
+   "vazifa": "Qiymatni nom bilan saqlaydigan «quti»: son, matn (satr), mantiqiy (true/false), massiv.",
+   "tuzilish": [
+    "Nom",
+    "Qiymat",
+    "Tur (number, string, boolean)"
+   ],
+   "ishlatish": [
+    "Tushunarli nom bering (narx, ism).",
+    "JavaScriptda let yoki const bilan e’lon qiling."
+   ]
+  },
+  {
+   "id": "shart",
+   "e": "🔀",
+   "nomi": "Shart operatori (if/else)",
+   "vazifa": "Shartga qarab dasturning turli tarmoqlarini bajaradi.",
+   "tuzilish": [
+    "if (shart)",
+    "else if",
+    "else",
+    "Taqqoslash: >, <, ===, !=="
+   ],
+   "ishlatish": [
+    "Shartni to‘g‘ri yozing.",
+    "Barcha holatlarni ko‘rib chiqing."
+   ]
+  },
+  {
+   "id": "sikl",
+   "e": "🔁",
+   "nomi": "Sikl (for, while)",
+   "vazifa": "Amallarni ko‘p marta takrorlash.",
+   "tuzilish": [
+    "Boshlang‘ich qiymat",
+    "Davom etish sharti",
+    "Qadam (i++)",
+    "Sikl tanasi"
+   ],
+   "ishlatish": [
+    "Sikl albatta tugashiga ishonch hosil qiling — cheksiz sikl dasturni muzlatadi."
+   ]
+  },
+  {
+   "id": "funksiya",
+   "e": "🧩",
+   "nomi": "Funksiya",
+   "vazifa": "Qayta ishlatiladigan nomlangan kod bo‘lagi: parametr oladi, natija qaytaradi.",
+   "tuzilish": [
+    "Nomi",
+    "Parametrlar",
+    "Tanasi",
+    "return (natija)"
+   ],
+   "ishlatish": [
+    "Bitta funksiya bitta ishni bajarsin.",
+    "Parametr va natija nomlarini tushunarli qiling."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "kod",
+   "e": "⌨️",
+   "nomi": "JavaScript mashqlari",
+   "tur": "kod",
+   "izoh": "Kodni yozing va «Ishga tushirish» tugmasini bosing. Natija kutilgan chiqish bilan solishtiriladi.",
+   "p": {
+    "til": "js",
+    "mashqlar": [
+     {
+      "n": "Salom, dunyo!",
+      "m": "console.log yordamida «Salom, dunyo!» matnini chiqaring.",
+      "kod": "// shu yerga yozing\n",
+      "kutilgan": "Salom, dunyo!"
+     },
+     {
+      "n": "O‘zgaruvchilar",
+      "m": "a = 7 va b = 5 bo‘lsin. Ularning yig‘indisini chiqaring.",
+      "kod": "let a = 7;\nlet b = 5;\n",
+      "kutilgan": "12"
+     },
+     {
+      "n": "Sikl",
+      "m": "1 dan 5 gacha sonlarni har birini yangi qatorda chiqaring.",
+      "kod": "for (let i = 1; i <= 5; i++) {\n  \n}\n",
+      "kutilgan": "1\n2\n3\n4\n5"
+     },
+     {
+      "n": "Shart",
+      "m": "ball = 75. Agar ball >= 86 bo‘lsa «A’lo», >= 71 bo‘lsa «Yaxshi», >= 56 bo‘lsa «Qoniqarli», aks holda «Qoniqarsiz» deb chiqaring.",
+      "kod": "let ball = 75;\n",
+      "kutilgan": "Yaxshi"
+     },
+     {
+      "n": "Funksiya",
+      "m": "kvadrat(n) funksiyasini yozing (n*n qaytarsin) va kvadrat(9) natijasini chiqaring.",
+      "kod": "function kvadrat(n) {\n  \n}\nconsole.log(kvadrat(9));\n",
+      "kutilgan": "81"
+     },
+     {
+      "n": "Massiv",
+      "m": "[3, 8, 1, 6] massivining eng katta elementini chiqaring.",
+      "kod": "let m = [3, 8, 1, 6];\n",
+      "kutilgan": "8"
+     }
+    ]
+   }
+  },
+  {
+   "id": "algoritm",
+   "e": "🧭",
+   "nomi": "Algoritm: ikki sonning kattasini topish",
+   "tur": "tartib",
+   "p": {
+    "savol": "Algoritm qadamlarini to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Boshlash",
+     "a va b sonlarini kiritish",
+     "Agar a > b bo‘lsa, katta = a",
+     "Aks holda katta = b",
+     "katta ni chiqarish",
+     "Tugatish"
+    ]
+   }
+  },
+  {
+   "id": "mantiq",
+   "e": "🔢",
+   "nomi": "Mantiqiy amallar va ikkilik sanoq",
+   "tur": "mantiq",
+   "p": {}
+  },
+  {
+   "id": "tushuncha",
+   "e": "📘",
+   "nomi": "Dasturlash tushunchalari",
+   "tur": "moslash",
+   "p": {
+    "savol": "Tushunchani misoli bilan moslang.",
+    "juft": [
+     [
+      "O‘zgaruvchi",
+      "let narx = 5000;"
+     ],
+     [
+      "Shart",
+      "if (yosh >= 18) { ... }"
+     ],
+     [
+      "Sikl",
+      "for (let i = 0; i < 10; i++)"
+     ],
+     [
+      "Funksiya",
+      "function yigindi(a, b) { return a + b; }"
+     ],
+     [
+      "Massiv",
+      "let ranglar = [’qizil’, ’ko‘k’];"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Dasturlash"
+}

@@ -1,0 +1,415 @@
+{
+ "id": "sartarosh",
+ "nomi": "Sartaroshxona (erkaklar va ayollar zali)",
+ "e": "💈",
+ "xona": "salon",
+ "fanlar": [
+  "erkaklar-va-ayollar-sartaroshi"
+ ],
+ "tavsif": "Sartarosh asboblari: qaychilar, filirovka qaychisi, soch olish mashinkasi, taroqlar, fen, ustara va sartarosh kreslosi; bosh zonalari sxemasi, mashinka bilan ishlash va klassik soch turmagi bosqichlari.",
+ "xavfsizlik": [
+  "Har bir mijozdan keyin asboblarni yuving, dezinfeksiya qiling yoki sterilizatsiya qiling; peleringa va sochiq har mijozga toza bo‘lsin.",
+  "Elektr asboblarni (fen, mashinka, dazmol) ho‘l qo‘l bilan ushlamang, suv yaqinida qoldirmang.",
+  "Qaychi va ustarani yopiq holda, dastasi bilan uzating.",
+  "Kimyoviy vositalar (bo‘yoq, oksidant) bilan ishlashda qo‘lqop kiying va mijoz terisini allergiyaga sinab ko‘ring.",
+  "Teri yoki bosh terisida kasallik belgilari (toshma, yiring, zamburug‘) bo‘lsa — xizmat ko‘rsatmang, shifokorga yo‘llang."
+ ],
+ "jihozlar": [
+  {
+   "id": "qaychi",
+   "e": "✂️",
+   "nomi": "Sartaroshlik qaychisi",
+   "vazifa": "Sochni to‘g‘ri chiziq bo‘yicha kesish, shakl berish.",
+   "tuzilish": [
+    "Tig‘lar",
+    "Vint (taranglik)",
+    "Halqalar",
+    "Barmoq tayanchi"
+   ],
+   "ishlatish": [
+    "Bosh barmoqni pastki halqaga, nomsiz barmoqni yuqori halqaga qo‘ying.",
+    "Faqat pastki tig‘ni harakatlantiring.",
+    "Vint tarangligini sozlang."
+   ],
+   "xavfsizlik": [
+    "Qaychini cho‘ntakda yoki ochiq holda qoldirmang."
+   ]
+  },
+  {
+   "id": "filirovka",
+   "e": "✂️",
+   "nomi": "Filirovka (yupqalash) qaychisi",
+   "vazifa": "Soch zichligini kamaytiradi va o‘tishlarni yumshatadi.",
+   "tuzilish": [
+    "Bir tig‘i tishli",
+    "Ikkinchi tig‘i silliq"
+   ],
+   "ishlatish": [
+    "Tutamning o‘rtasidan yoki uchidan yupqalang.",
+    "Ildizga yaqin yupqalamang — soch tikka turib qoladi."
+   ]
+  },
+  {
+   "id": "mashinka",
+   "e": "🪒",
+   "nomi": "Soch olish mashinkasi",
+   "vazifa": "Sochni nasadka uzunligida bir tekis qisqartiradi.",
+   "tuzilish": [
+    "Pichoq bloki",
+    "Nasadkalar (3, 6, 9, 12 mm…)",
+    "Uzunlik richagi",
+    "Motor va akkumulyator"
+   ],
+   "ishlatish": [
+    "Kerakli nasadkani tanlang.",
+    "Mashinkani soch o‘sishiga qarshi yo‘naltiring.",
+    "Pichoqni moylab, dezinfeksiya qilib turing."
+   ],
+   "sim": "mashinka"
+  },
+  {
+   "id": "taroq",
+   "e": "🪮",
+   "nomi": "Taroqlar to‘plami",
+   "vazifa": "Sochni taroqlash, bo‘lish va kesishda ushlab turish.",
+   "tuzilish": [
+    "Kesish tarog‘i (siyrak va zich tishli)",
+    "Dumli taroq (bo‘lish uchun)",
+    "Brashing (fen uchun dumaloq)"
+   ],
+   "ishlatish": [
+    "Har mijozdan keyin dezinfeksiya qiling."
+   ]
+  },
+  {
+   "id": "fen",
+   "e": "💨",
+   "nomi": "Fen",
+   "vazifa": "Sochni quritish va shakl berish.",
+   "tuzilish": [
+    "Motor va ventilyator",
+    "Qizdirgich",
+    "Konsentrator va diffuzor nasadka",
+    "Harorat va tezlik tugmalari",
+    "Sovuq havo tugmasi"
+   ],
+   "ishlatish": [
+    "Sochni avval sochiq bilan artib oling.",
+    "Havo oqimini ildizdan uchiga yo‘naltiring.",
+    "Shaklni sovuq havo bilan mustahkamlang."
+   ],
+   "xavfsizlik": [
+    "Fenni suv yaqinida ishlatmang."
+   ]
+  },
+  {
+   "id": "ustara",
+   "e": "🗡️",
+   "nomi": "Ustara (britva)",
+   "vazifa": "Soqol olish, kantovka va bo‘yin chizig‘ini tozalash.",
+   "tuzilish": [
+    "Tig‘ (almashtiriladigan)",
+    "Dasta"
+   ],
+   "ishlatish": [
+    "Har mijozga yangi bir martalik tig‘ qo‘ying.",
+    "Terini tortib, kichik burchakda harakatlaning."
+   ],
+   "xavfsizlik": [
+    "Ishlatilgan tig‘ni maxsus konteynerga tashlang."
+   ]
+  },
+  {
+   "id": "kreslo",
+   "e": "💺",
+   "nomi": "Sartarosh kreslosi",
+   "vazifa": "Mijozning qulay va kerakli balandlikda o‘tirishini ta’minlaydi.",
+   "tuzilish": [
+    "Gidravlik ko‘targich",
+    "Aylanuvchi asos",
+    "Bosh tayanch",
+    "Oyoq tayanch"
+   ],
+   "ishlatish": [
+    "Mijoz boshini ishlash uchun qulay balandlikka ko‘taring.",
+    "Kresloni dezinfeksiya qilib turing."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "zonalar",
+   "e": "🧑",
+   "nomi": "Bosh zonalari",
+   "tur": "sxema",
+   "izoh": "Zonani bosib tavsifini o‘qing, so‘ng «Topish» rejimida o‘zingizni tekshiring.",
+   "p": {
+    "w": 300,
+    "h": 300,
+    "sh": [
+     {
+      "t": "p",
+      "d": "M95,175 Q70,80 160,40 Q262,36 268,140 Q272,215 222,255 L152,262 Q112,250 98,222 Q84,214 92,198 Q78,186 96,172 Z",
+      "f": "#f6e3d3",
+      "s": "#8a6a55",
+      "sw": 2
+     },
+     {
+      "t": "p",
+      "d": "M98,150 Q92,70 160,42 L172,104 L118,140 Z",
+      "n": "Peshona (old) zonasi",
+      "i": "Soch o‘sish chizig‘idan tepa zonasigacha; chakka burchaklari bilan birga oldingi qismni tashkil etadi.",
+      "f": "#ffd8a8",
+      "lb": [
+       134,
+       100,
+       10,
+       "Peshona"
+      ]
+     },
+     {
+      "t": "p",
+      "d": "M160,42 Q232,38 252,92 L196,118 L172,104 Z",
+      "n": "Tepa (toj) zonasi",
+      "i": "Boshning eng yuqori qismi; soch turmagining hajmi va shakli shu yerda belgilanadi.",
+      "f": "#ffe9a8",
+      "lb": [
+       206,
+       80,
+       10,
+       "Tepa"
+      ]
+     },
+     {
+      "t": "p",
+      "d": "M252,92 Q270,140 264,172 L204,164 L196,118 Z",
+      "n": "Ensa yuqori zonasi",
+      "i": "Ensa do‘ngligi atrofi; soch kesishda hajm va o‘tishlar shu zonada shakllanadi.",
+      "f": "#cfe8c9",
+      "lb": [
+       232,
+       140,
+       9,
+       "Ensa yuqori"
+      ]
+     },
+     {
+      "t": "p",
+      "d": "M264,172 Q256,230 222,254 L196,212 L204,164 Z",
+      "n": "Ensa pastki zonasi",
+      "i": "Bo‘yin chizig‘igacha; erkaklar turmaklarida qisqa qirqiladi va kantovka qilinadi.",
+      "f": "#bfe0f2",
+      "lb": [
+       226,
+       210,
+       9,
+       "Ensa pastki"
+      ]
+     },
+     {
+      "t": "p",
+      "d": "M118,140 L172,104 L196,118 L204,164 L196,212 L164,190 Q140,178 128,160 Z",
+      "n": "Chakka zonasi",
+      "i": "Quloq atrofi va tepasidagi yon qism; chakka (visok) shakli soch turmagining xarakterini belgilaydi.",
+      "f": "#e9d5f2",
+      "lb": [
+       160,
+       150,
+       10,
+       "Chakka"
+      ]
+     },
+     {
+      "t": "c",
+      "g": [
+       176,
+       176,
+       11
+      ],
+      "f": "#f1cdb4",
+      "s": "#8a6a55"
+     },
+     {
+      "t": "x",
+      "g": [
+       150,
+       286,
+       "Bosh zonalari (yon tomondan, yuz chapda)",
+       11
+      ],
+      "f": "#556"
+     }
+    ]
+   }
+  },
+  {
+   "id": "mashinka",
+   "e": "🪒",
+   "nomi": "Mashinka bilan soch olish (sport turmak)",
+   "tur": "qurilma",
+   "p": {
+    "nomi": "Soch olish mashinkasi",
+    "e": "🪒",
+    "ekran": "Mashinka: o‘chiq\nNasadka: yo‘q",
+    "maqsad": "Ensa va chakkalarni qisqa, tepani uzunroq qilish",
+    "boshqaruv": [
+     {
+      "id": "dez",
+      "n": "Pichoqni dezinfeksiya qilish",
+      "e": "🧴"
+     },
+     {
+      "id": "pelerin",
+      "n": "Peleringa va yoqa qog‘ozini taqish",
+      "e": "🧣"
+     },
+     {
+      "id": "n3",
+      "n": "3 mm nasadka qo‘yish",
+      "e": "3️⃣"
+     },
+     {
+      "id": "n9",
+      "n": "9 mm nasadka qo‘yish",
+      "e": "9️⃣"
+     },
+     {
+      "id": "yoq",
+      "n": "Mashinkani yoqish",
+      "e": "⏻"
+     },
+     {
+      "id": "ensa",
+      "n": "Ensa va chakkalarni pastdan yuqoriga olish",
+      "e": "⬆️"
+     },
+     {
+      "id": "tepa",
+      "n": "Tepani uzunroq nasadka bilan olish",
+      "e": "🔝"
+     },
+     {
+      "id": "otish",
+      "n": "O‘tishni tekislash (nasadkasiz, richag bilan)",
+      "e": "〰️"
+     },
+     {
+      "id": "kant",
+      "n": "Kantovka (chegara chiziq)",
+      "e": "📏"
+     }
+    ],
+    "qadamlar": [
+     {
+      "v": "Asbobni tayyorlang.",
+      "t": "dez",
+      "j": "Har mijozdan oldin.",
+      "ekran": "Pichoq: dezinfeksiya ✓"
+     },
+     {
+      "v": "Mijozni tayyorlang.",
+      "t": "pelerin",
+      "ekran": "Mijoz: tayyor"
+     },
+     {
+      "v": "Pastki zona uchun nasadka.",
+      "t": "n3",
+      "ekran": "Nasadka: 3 mm"
+     },
+     {
+      "v": "Mashinkani yoqing.",
+      "t": "yoq",
+      "ekran": "Ishlamoqda",
+      "chiroq": "yashil",
+      "aylan": true
+     },
+     {
+      "v": "Ensa va chakkalarni oling.",
+      "t": "ensa",
+      "j": "Mashinka soch o‘sishiga qarshi, pastdan yuqoriga.",
+      "ekran": "Ensa: 3 mm ✓"
+     },
+     {
+      "v": "Tepa zona uchun nasadka.",
+      "t": "n9",
+      "ekran": "Nasadka: 9 mm"
+     },
+     {
+      "v": "Tepani oling.",
+      "t": "tepa",
+      "ekran": "Tepa: 9 mm ✓"
+     },
+     {
+      "v": "O‘tishni yumshating.",
+      "t": "otish",
+      "j": "Zonalar orasidagi chegara ko‘rinmasin.",
+      "ekran": "O‘tish: silliq ✓"
+     },
+     {
+      "v": "Chegarani tozalang.",
+      "t": "kant",
+      "j": "Bo‘yin va quloq atrofidagi chiziq aniq bo‘lsin.",
+      "ekran": "Turmak tayyor ✓",
+      "chiroq": "yashil",
+      "aylan": false
+     }
+    ],
+    "xato": {
+     "yoq": "Avval pichoqni dezinfeksiya qilib, mijozni yoping va nasadkani qo‘ying.",
+     "tepa": "Avval pastki zonalarni qisqa nasadka bilan oling."
+    }
+   }
+  },
+  {
+   "id": "klassik",
+   "e": "💇",
+   "nomi": "Klassik erkaklar soch turmagi",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Mijoz bilan maslahat (shakl va uzunlik)",
+     "Sochni yuvish yoki namlash",
+     "Taroqlab, zonalarga bo‘lish",
+     "Ensa va chakkani mashinka yoki qaychi bilan qisqartirish",
+     "Tepa zonani qaychi bilan kesish",
+     "O‘tishlarni tekislash va yupqalash",
+     "Kantovka (chegara chiziqlari)",
+     "Quritish va ukladka"
+    ]
+   }
+  },
+  {
+   "id": "asbob",
+   "e": "✂️",
+   "nomi": "Asbob va vazifasi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Asbobni vazifasi bilan moslang.",
+    "juft": [
+     [
+      "To‘g‘ri qaychi",
+      "Sochni kesib shakl berish"
+     ],
+     [
+      "Filirovka qaychisi",
+      "Soch zichligini kamaytirish"
+     ],
+     [
+      "Mashinka",
+      "Nasadka uzunligida bir tekis qisqartirish"
+     ],
+     [
+      "Ustara",
+      "Kantovka va soqol olish"
+     ],
+     [
+      "Brashing",
+      "Fen bilan hajm va shakl berish"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Sartarosh"
+}

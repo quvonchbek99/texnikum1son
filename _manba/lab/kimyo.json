@@ -1,0 +1,258 @@
+{
+ "id": "kimyo",
+ "nomi": "Kimyo laboratoriyasi",
+ "e": "🧪",
+ "xona": "kimyo",
+ "fanlar": [
+  "kimyo"
+ ],
+ "tavsif": "Kimyoviy idishlar, isitish va o‘lchash asboblari; indikatorlar yordamida muhitni aniqlash va neytrallash (titrlash) virtual tajribalari.",
+ "xavfsizlik": [
+  "Laboratoriyada himoya ko‘zoynagi, xalat va qo‘lqop bilan ishlang.",
+  "Moddalarni tatib ko‘rmang va hidini bevosita idish ustidan hidlamang — qo‘l bilan yelpib hidlang.",
+  "Kislotani suvga quying, aksincha emas! (Suv kislotaga quyilsa, eritma sachrab, kuydiradi.)",
+  "Kislota yoki ishqor teriga tegsa, darhol ko‘p miqdordagi oqar suv bilan yuving va o‘qituvchiga ayting.",
+  "Probirkani qizdirganda uning og‘zini o‘zingizga va boshqalarga qaratmang.",
+  "Ishlatilgan reaktivlarni rakovinaga emas, maxsus idishga to‘king."
+ ],
+ "jihozlar": [
+  {
+   "id": "probirka",
+   "e": "🧪",
+   "nomi": "Probirka va shtativ",
+   "vazifa": "Oz miqdordagi moddalar bilan tajriba o‘tkazish uchun shisha naycha; shtativ ularni tik saqlaydi.",
+   "tuzilish": [
+    "Shisha probirka",
+    "Probirka shtativi",
+    "Probirka ushlagich (qisqich)"
+   ],
+   "ishlatish": [
+    "Probirkani 1/3 qismidan ko‘p to‘ldirmang.",
+    "Qizdirishda qisqich bilan og‘zidan 1/3 joyidan ushlang.",
+    "Avval butun probirkani bir tekis isiting, keyin modda turgan joyini.",
+    "Og‘zini o‘zingizdan va boshqalardan uzoqqa qarating."
+   ],
+   "xavfsizlik": [
+    "Issiq probirkani sovuq suvga solmang — yorilib ketadi."
+   ],
+   "sim": "ph"
+  },
+  {
+   "id": "kolba",
+   "e": "⚗️",
+   "nomi": "Kimyoviy stakan va kolbalar",
+   "vazifa": "Eritmalar tayyorlash, aralashtirish va isitish uchun idishlar: stakan, konussimon (Erlenmeyer) va yassi tubli kolba.",
+   "tuzilish": [
+    "Kimyoviy stakan (darajalangan)",
+    "Konussimon kolba",
+    "Yassi tubli kolba",
+    "O‘lchov silindri"
+   ],
+   "ishlatish": [
+    "Hajmni o‘lchov silindri yordamida aniq o‘lchang.",
+    "Suyuqlik sathini ko‘z balandligida, menisk pastidan o‘qing.",
+    "Isitishda asbest to‘r (setka) ustiga qo‘ying."
+   ]
+  },
+  {
+   "id": "byuretka",
+   "e": "💧",
+   "nomi": "Byuretka",
+   "vazifa": "Titrlashda sarflangan eritma hajmini 0,1 mL aniqlikda o‘lchaydigan darajalangan naycha.",
+   "tuzilish": [
+    "Darajalangan shisha naycha",
+    "Jo‘mrak (kran)",
+    "Shtativ va qisqich"
+   ],
+   "ishlatish": [
+    "Byuretkani titrlovchi eritma bilan chayqab, keyin nol belgisigacha to‘ldiring.",
+    "Kolbaga indikator qo‘shilgan eritmani soling.",
+    "Jo‘mrakni ochib, eritmani tomchilab qo‘shing va kolbani aylantirib aralashtiring.",
+    "Rang o‘zgargan zahoti jo‘mrakni yoping va sarflangan hajmni yozing."
+   ],
+   "sim": "ph"
+  },
+  {
+   "id": "spirtlampa",
+   "e": "🔥",
+   "nomi": "Spirt lampasi",
+   "vazifa": "Laboratoriyada moddalarni qizdirish uchun ochiq alanga manbai.",
+   "tuzilish": [
+    "Shisha idish (rezervuar)",
+    "Pilik",
+    "Pilik ushlagich",
+    "Qalpoqcha (qopqoq)"
+   ],
+   "ishlatish": [
+    "Lampa butun va spirt to‘kilmaganini tekshiring.",
+    "Qalpoqchani olib, tik turgan holda qo‘ying.",
+    "Gugurtni yon tomondan yaqinlashtirib yoqing.",
+    "Qizdirishda alanganing yuqori (eng issiq) qismidan foydalaning.",
+    "O‘chirish uchun qalpoqcha bilan yoping — puflamang."
+   ],
+   "xavfsizlik": [
+    "Yonib turgan lampadan boshqa lampani yoqmang.",
+    "Yonib turgan lampaga spirt quymang."
+   ]
+  },
+  {
+   "id": "tarozi",
+   "e": "⚖️",
+   "nomi": "Elektron (analitik) tarozi",
+   "vazifa": "Moddalar massasini 0,01–0,001 g aniqlikda o‘lchaydi.",
+   "tuzilish": [
+    "Tarozi pallasi",
+    "Displey",
+    "Tarelini nolga keltirish (TARE) tugmasi",
+    "Shamoldan himoya qopqog‘i"
+   ],
+   "ishlatish": [
+    "Tarozini tekis va tebranmaydigan stolga qo‘ying.",
+    "Bo‘sh idishni qo‘yib, TARE tugmasini bosing.",
+    "Moddani qoshiqcha bilan asta soling.",
+    "Ko‘rsatkich barqarorlashgach yozib oling."
+   ],
+   "xavfsizlik": [
+    "Moddani to‘g‘ridan-to‘g‘ri pallaga qo‘ymang — idish yoki qog‘oz ishlating."
+   ]
+  },
+  {
+   "id": "himoya",
+   "e": "🥽",
+   "nomi": "Himoya ko‘zoynagi va qo‘lqop",
+   "vazifa": "Kimyoviy moddalar sachrashidan ko‘z va qo‘llarni himoya qiladi.",
+   "tuzilish": [
+    "Yon himoyali ko‘zoynak",
+    "Nitril yoki lateks qo‘lqop",
+    "Laboratoriya xalati"
+   ],
+   "ishlatish": [
+    "Tajriba boshlanishidan oldin kiying.",
+    "Qo‘lqopni yirtilmaganini tekshiring.",
+    "Ish tugagach qo‘lqopni ichini tashqariga ag‘darib yeching va qo‘lni yuving."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "ph",
+   "e": "🧪",
+   "nomi": "Indikatorlar va neytrallash (titrlash)",
+   "tur": "ph",
+   "izoh": "Moddalarga indikator tomizib muhitni aniqlang, keyin kislotani ishqor bilan neytrallang.",
+   "p": {}
+  },
+  {
+   "id": "lampa",
+   "e": "🔥",
+   "nomi": "Spirt lampasini xavfsiz ishlatish",
+   "tur": "tartib",
+   "p": {
+    "savol": "Spirt lampasi bilan ishlash bosqichlarini to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Lampaning butunligini va spirt to‘kilmaganini tekshirish",
+     "Qalpoqchani olib, stolga qo‘yish",
+     "Gugurtni yon tomondan yaqinlashtirib yoqish",
+     "Probirkani alanganing yuqori qismida qizdirish",
+     "Lampani qalpoqcha bilan yopib o‘chirish"
+    ]
+   }
+  },
+  {
+   "id": "idish",
+   "e": "⚗️",
+   "nomi": "Laboratoriya idishlari va vazifalari",
+   "tur": "moslash",
+   "p": {
+    "savol": "Idishni uning asosiy vazifasi bilan moslang.",
+    "juft": [
+     [
+      "Byuretka",
+      "Titrlashda hajmni aniq o‘lchash"
+     ],
+     [
+      "O‘lchov silindri",
+      "Suyuqlik hajmini o‘lchash"
+     ],
+     [
+      "Probirka",
+      "Oz miqdorli tajribalar"
+     ],
+     [
+      "Voronka",
+      "Filtrlash va quyish"
+     ],
+     [
+      "Chinni kosacha",
+      "Eritmani bug‘latish"
+     ],
+     [
+      "Shtativ",
+      "Asboblarni mahkamlash"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "xavf",
+   "e": "⚠️",
+   "nomi": "Laboratoriyadagi vaziyatlar",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Sulfat kislota eritmasini tayyorlash kerak. Qanday qilasiz?",
+      "v": [
+       "Kislotani suvga ingichka oqim bilan quyaman",
+       "Suvni kislotaga quyaman",
+       "Ikkalasini bir vaqtda quyaman"
+      ],
+      "t": 0,
+      "i": "Kislota suvga quyiladi: aks holda kuchli qizish natijasida eritma sachraydi."
+     },
+     {
+      "s": "Qo‘lingizga ishqor eritmasi tegdi.",
+      "v": [
+       "Darhol ko‘p miqdorda oqar suv bilan yuvaman va o‘qituvchiga aytaman",
+       "Sochiq bilan artib, ishni davom ettiraman",
+       "Kislota surtib neytrallayman"
+      ],
+      "t": 0,
+      "i": "Birinchi yordam — ko‘p miqdordagi oqar suv. Kislota yoki ishqorni teriga «neytrallash» uchun surtish mumkin emas."
+     },
+     {
+      "s": "Moddaning hidini aniqlash kerak.",
+      "v": [
+       "Qo‘l bilan bug‘ni o‘zimga yelpib hidlayman",
+       "Idishga burnimni yaqin olib hidlayman",
+       "Tatib ko‘raman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "test": [
+  {
+   "s": "Fenolftalein ishqoriy muhitda qanday rangga kiradi?",
+   "v": [
+    "To‘q pushti (malina)",
+    "Qizil",
+    "Sariq",
+    "Rangsiz qoladi"
+   ],
+   "t": 0
+  },
+  {
+   "s": "Lakmus kislotali muhitda qanday rangga kiradi?",
+   "v": [
+    "Qizil",
+    "Ko‘k",
+    "Binafsha",
+    "Yashil"
+   ],
+   "t": 0
+  }
+ ]
+}

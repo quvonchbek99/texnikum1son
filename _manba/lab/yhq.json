@@ -1,0 +1,203 @@
+{
+ "id": "yhq",
+ "nomi": "Yo‘l harakati qoidalari sinfi",
+ "e": "🚦",
+ "xona": "sinf",
+ "fanlar": [
+  "yol-harakati-qoidalari-va-harakat-xavfsizligi"
+ ],
+ "tavsif": "Svetofor, yo‘l belgilari, tartibga soluvchi ishoralari va avtomobil xavfsizlik vositalari; svetofor ishoralari bo‘yicha qaror qabul qilish va yo‘l vaziyatlari mashqlari.",
+ "xavfsizlik": [
+  "Yo‘l harakati qoidalari (YHQ) amaldagi tahririni rasmiy manbadan o‘rganing.",
+  "Mashg‘ulot maydonchasida faqat o‘qituvchi ruxsati bilan harakatlaning."
+ ],
+ "jihozlar": [
+  {
+   "id": "svetofor",
+   "e": "🚦",
+   "nomi": "Transport svetofori",
+   "vazifa": "Chorrahalar va piyodalar o‘tish joylarida harakatni navbat bilan tartibga soladi.",
+   "tuzilish": [
+    "Qizil ishora — harakat taqiqlanadi",
+    "Sariq ishora — harakat taqiqlanadi, ishoralar almashinishidan ogohlantiradi",
+    "Yashil ishora — harakatga ruxsat",
+    "Yashil miltillovchi — ruxsat vaqti tugamoqda",
+    "Qizil va sariq birga — tez orada yashil yonadi"
+   ],
+   "ishlatish": [
+    "Ishorani uzoqdan kuzating va tezlikni oldindan moslang.",
+    "Sariq yonganda keskin tormozlamasdan to‘xtay olsangiz, to‘xtang.",
+    "Qo‘shimcha seksiya yo‘nalish ko‘rsatkichlariga e’tibor bering."
+   ],
+   "sim": "svetofor"
+  },
+  {
+   "id": "belgilar",
+   "e": "⚠️",
+   "nomi": "Yo‘l belgilari",
+   "vazifa": "Haydovchi va piyodalarga yo‘l sharoiti haqida axborot beradi, harakatni tartibga soladi.",
+   "tuzilish": [
+    "Ogohlantiruvchi — qizil hoshiyali uchburchak",
+    "Imtiyoz belgilari (masalan, «Asosiy yo‘l» — sariq romb)",
+    "Taqiqlovchi — qizil hoshiyali doira",
+    "Buyuruvchi — ko‘k doira",
+    "Axborot-ko‘rsatkich va servis belgilari — to‘rtburchak"
+   ],
+   "ishlatish": [
+    "Belgi guruhini shakli va rangidan aniqlang.",
+    "Qo‘shimcha axborot taxtachalariga e’tibor bering."
+   ],
+   "sim": "belgi"
+  },
+  {
+   "id": "regulyovshik",
+   "e": "👮",
+   "nomi": "Tartibga soluvchi (YPX inspektori)",
+   "vazifa": "Uning ishoralari svetofor va belgilardan ustun turadi.",
+   "tuzilish": [
+    "Qo‘llar yon tomonga yoki pastga tushirilgan",
+    "O‘ng qo‘l oldinga cho‘zilgan",
+    "Qo‘l yuqoriga ko‘tarilgan",
+    "Tayoqcha (jezl)"
+   ],
+   "ishlatish": [
+    "Qo‘l yuqoriga ko‘tarilgan — barcha yo‘nalishlarda harakat taqiqlanadi (chorrahani tark etayotganlar bundan mustasno).",
+    "Tartibga soluvchi ko‘kragi yoki yelkasiga qarab turgan tomondan harakat taqiqlanadi."
+   ]
+  },
+  {
+   "id": "avariya",
+   "e": "🔺",
+   "nomi": "Avariya to‘xtash belgisi",
+   "vazifa": "Majburiy to‘xtaganda yoki YTH da boshqa haydovchilarni ogohlantirish uchun qo‘yiladi.",
+   "tuzilish": [
+    "Qizil nur qaytaruvchi uchburchak",
+    "Tirgak (oyoqcha)"
+   ],
+   "ishlatish": [
+    "Avariya chiroqlarini yoqing.",
+    "Belgini aholi punktida kamida 15 m, aholi punktidan tashqarida kamida 30 m masofaga qo‘ying."
+   ]
+  },
+  {
+   "id": "aptechka",
+   "e": "🩹",
+   "nomi": "Avtomobil aptechkasi va o‘t o‘chirgich",
+   "vazifa": "Har bir avtomobilda bo‘lishi shart bo‘lgan xavfsizlik vositalari.",
+   "tuzilish": [
+    "Bint, jgut, plastir, antiseptik",
+    "O‘t o‘chirgich (kamida 2 l)",
+    "Nur qaytaruvchi jilet"
+   ],
+   "ishlatish": [
+    "Yaroqlilik muddatini tekshiring.",
+    "Tez olinadigan joyda saqlang."
+   ]
+  },
+  {
+   "id": "kamar",
+   "e": "🪢",
+   "nomi": "Xavfsizlik kamari",
+   "vazifa": "To‘qnashuvda haydovchi va yo‘lovchilarni o‘rindiqda ushlab, og‘ir jarohatdan saqlaydi.",
+   "tuzilish": [
+    "Yelka va bel tasmasi",
+    "Qulf",
+    "Inersiya g‘altagi",
+    "Taranglagich"
+   ],
+   "ishlatish": [
+    "Harakatdan oldin barcha yo‘lovchilar kamar taqsin.",
+    "Kamar burilib qolmasin."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "svetofor",
+   "e": "🚦",
+   "nomi": "Svetofor: harakatlanaman yoki to‘xtayman?",
+   "tur": "svetofor",
+   "izoh": "Svetofor ishorasiga qarab to‘g‘ri qaror qabul qiling.",
+   "p": {}
+  },
+  {
+   "id": "belgi",
+   "e": "⚠️",
+   "nomi": "Yo‘l belgilari guruhlari",
+   "tur": "moslash",
+   "p": {
+    "savol": "Belgi ko‘rinishini guruhi bilan moslang.",
+    "juft": [
+     [
+      "Qizil hoshiyali uchburchak",
+      "Ogohlantiruvchi"
+     ],
+     [
+      "Sariq romb",
+      "«Asosiy yo‘l» (imtiyoz belgisi)"
+     ],
+     [
+      "Qizil hoshiyali doira",
+      "Taqiqlovchi"
+     ],
+     [
+      "Ko‘k doira",
+      "Buyuruvchi"
+     ],
+     [
+      "Ko‘k to‘rtburchak",
+      "Axborot-ko‘rsatkich"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "vaziyat",
+   "e": "🚗",
+   "nomi": "Yo‘l vaziyatlari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Tartibga soluvchi qo‘lini yuqoriga ko‘tardi. Siz chorrahaga yaqinlashyapsiz.",
+      "v": [
+       "To‘xtayman",
+       "Tezlikni oshirib o‘taman",
+       "Faqat o‘ngga burilish mumkin"
+      ],
+      "t": 0,
+      "i": "Qo‘l yuqoriga ko‘tarilgan — barcha yo‘nalishlarda harakat taqiqlanadi."
+     },
+     {
+      "s": "Aholi punktida avtomobilingiz majburan to‘xtadi. Avariya to‘xtash belgisi qayerga qo‘yiladi?",
+      "v": [
+       "Kamida 15 m orqaga",
+       "Kamida 5 m orqaga",
+       "Avtomobil oldiga"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Piyodalar o‘tish joyida piyoda yo‘lga tushdi.",
+      "v": [
+       "To‘xtab, unga yo‘l beraman",
+       "Signal berib o‘tib ketaman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Sariq ishora yondi, siz chorrahaga 5 m qoldi va keskin tormozlamasdan to‘xtay olmaysiz.",
+      "v": [
+       "Harakatni davom ettiraman",
+       "Keskin tormozlayman"
+      ],
+      "t": 0,
+      "i": "Bu holatda qoidalar harakatni davom ettirishga ruxsat beradi."
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "YHQ",
+ "amaliyotga": false
+}

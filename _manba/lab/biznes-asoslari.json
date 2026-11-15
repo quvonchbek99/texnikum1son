@@ -1,0 +1,322 @@
+{
+ "id": "biznes-asoslari",
+ "nomi": "Biznes laboratoriyasi",
+ "e": "💼",
+ "xona": "it",
+ "fanlar": [
+  "biznes-asoslari"
+ ],
+ "tavsif": "Tadbirkorning asosiy vositalari: biznes-reja, kassa va to‘lov uskunalari; zararsizlik nuqtasi va foyda hisob-kitobi, biznes ochish bosqichlari bo‘yicha virtual mashqlar.",
+ "xavfsizlik": [
+  "Moliyaviy hisob-kitoblarda faqat hujjat bilan tasdiqlangan raqamlardan foydalaning.",
+  "Mijozlarning shaxsiy ma’lumotlarini oshkor qilmang.",
+  "Soliq va hisobot muddatlarini o‘tkazib yubormang — amaldagi qonunchilikni rasmiy manbadan tekshiring."
+ ],
+ "jihozlar": [
+  {
+   "id": "reja",
+   "e": "📑",
+   "nomi": "Biznes-reja",
+   "vazifa": "G‘oyani amalga oshirish yo‘l xaritasi: bozor, mahsulot, xarajatlar, daromad va xatarlarni hisoblab beradi.",
+   "tuzilish": [
+    "Loyiha qisqacha tavsifi",
+    "Bozor va raqobatchilar tahlili",
+    "Marketing rejasi",
+    "Ishlab chiqarish (xizmat) rejasi",
+    "Moliyaviy reja",
+    "Xatarlar va ularni kamaytirish"
+   ],
+   "ishlatish": [
+    "Mahsulot yoki xizmatni aniq ta’riflang.",
+    "Mijozlaringiz kimligini va ehtiyojini aniqlang.",
+    "Boshlang‘ich va oylik xarajatlarni hisoblang.",
+    "Zararsizlik nuqtasini toping.",
+    "Rejani har chorakda yangilab boring."
+   ],
+   "sim": "zarar"
+  },
+  {
+   "id": "kassa",
+   "e": "🧾",
+   "nomi": "Onlayn kassa apparati (NKM)",
+   "vazifa": "Savdo va xizmatlar uchun to‘lovni qayd etib, xaridorga chek beradi va ma’lumotni soliq organiga onlayn uzatadi.",
+   "tuzilish": [
+    "Displey va klaviatura",
+    "Chek printeri",
+    "Fiskal modul",
+    "Internet ulanish"
+   ],
+   "ishlatish": [
+    "Kun boshida smenani oching.",
+    "Har bir sotuvga chek bering.",
+    "Kun oxirida smenani yoping va hisobotni chiqaring."
+   ]
+  },
+  {
+   "id": "pos",
+   "e": "💳",
+   "nomi": "POS-terminal",
+   "vazifa": "Bank kartalari (Uzcard, Humo va xalqaro kartalar) orqali naqd pulsiz to‘lovni qabul qiladi.",
+   "tuzilish": [
+    "Karta o‘quvchi (chip, magnit tasma, kontaktsiz)",
+    "PIN-klaviatura",
+    "Chek chiqargich"
+   ],
+   "ishlatish": [
+    "Summani kiriting.",
+    "Mijozga kartani tekkizish yoki kiritishni taklif qiling.",
+    "PIN-kodni mijozning o‘zi kiritsin.",
+    "Chekni bering."
+   ],
+   "xavfsizlik": [
+    "Mijozning PIN-kodiga qaramang va kartasini o‘zingizda qoldirmang."
+   ]
+  },
+  {
+   "id": "skaner",
+   "e": "📠",
+   "nomi": "Shtrix-kod skaneri",
+   "vazifa": "Tovar kodini o‘qib, narx va qoldiqni avtomatik hisobga oladi.",
+   "tuzilish": [
+    "Optik o‘quvchi",
+    "Tetik (tugma)",
+    "Kabel yoki simsiz ulanish"
+   ],
+   "ishlatish": [
+    "Skanerni tovar kodiga 10–20 sm masofada yo‘naltiring.",
+    "Ovozli signalni kuting.",
+    "Ekranda tovar nomi va narxini tekshiring."
+   ]
+  },
+  {
+   "id": "smm",
+   "e": "📱",
+   "nomi": "Raqamli marketing vositalari",
+   "vazifa": "Ijtimoiy tarmoqlar, onlayn do‘konlar va xaritalardagi biznes profili orqali mijozlarni jalb qilish.",
+   "tuzilish": [
+    "Ijtimoiy tarmoq sahifasi",
+    "Kontent-reja",
+    "Onlayn to‘lov va yetkazib berish",
+    "Mijozlar fikrlari"
+   ],
+   "ishlatish": [
+    "Maqsadli auditoriyangizni aniqlang.",
+    "Muntazam (haftalik) kontent rejasini tuzing.",
+    "Har bir post natijasini tahlil qiling."
+   ]
+  },
+  {
+   "id": "kalkulyator",
+   "e": "🧮",
+   "nomi": "Moliyaviy kalkulyator va elektron jadval",
+   "vazifa": "Tannarx, narx, foyda va rentabellikni hisoblash uchun.",
+   "tuzilish": [
+    "Kiritish ustunlari (xarajatlar, narx)",
+    "Formulalar",
+    "Natija va grafiklar"
+   ],
+   "ishlatish": [
+    "Barcha xarajatlarni doimiy va o‘zgaruvchanga ajrating.",
+    "Tannarxni hisoblang.",
+    "Narxni bozor va tannarx asosida belgilang."
+   ],
+   "sim": "foyda"
+  }
+ ],
+ "sim": [
+  {
+   "id": "zarar",
+   "e": "⚖️",
+   "nomi": "Zararsizlik nuqtasi",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "FC",
+      "n": "Oylik doimiy xarajatlar (ijara, maosh)",
+      "u": "ming so‘m",
+      "v": 8000,
+      "min": 0,
+      "max": 50000,
+      "q": 100
+     },
+     {
+      "id": "P",
+      "n": "Bir dona mahsulot narxi",
+      "u": "ming so‘m",
+      "v": 50,
+      "min": 1,
+      "max": 500,
+      "q": 1
+     },
+     {
+      "id": "VC",
+      "n": "Bir dona uchun o‘zgaruvchan xarajat",
+      "u": "ming so‘m",
+      "v": 30,
+      "min": 0,
+      "max": 400,
+      "q": 1
+     },
+     {
+      "id": "Q",
+      "n": "Oylik sotuv hajmi",
+      "u": "dona",
+      "v": 300,
+      "min": 0,
+      "max": 3000,
+      "q": 10
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Zararsizlik nuqtasi Q* = FC / (P − VC)",
+      "f": "P>VC ? Math.ceil(FC/(P-VC)) : 'narx xarajatdan past!'",
+      "u": "dona",
+      "x": 0,
+      "asosiy": true
+     },
+     {
+      "n": "Bir donadan qoplash daromadi (P − VC)",
+      "f": "P-VC",
+      "u": "ming so‘m",
+      "x": 0
+     },
+     {
+      "n": "Oylik tushum P·Q",
+      "f": "P*Q",
+      "u": "ming so‘m",
+      "x": 0
+     },
+     {
+      "n": "Oylik foyda (P − VC)·Q − FC",
+      "f": "(P-VC)*Q-FC",
+      "u": "ming so‘m",
+      "x": 0
+     },
+     {
+      "n": "Holat",
+      "f": "(P-VC)*Q-FC>=0 ? 'foyda ✓' : 'zarar ✗'",
+      "u": ""
+     }
+    ],
+    "izoh": "Zararsizlik nuqtasi — daromad barcha xarajatlarni aynan qoplaydigan sotuv hajmi.",
+    "vazifalar": [
+     {
+      "m": "Narxni shunday belgilangki, 300 dona sotuvda biznes foyda keltirsin.",
+      "f": "s.Q==300 && s.y3>0"
+     },
+     {
+      "m": "Doimiy xarajatlarni kamaytirib, zararsizlik nuqtasini 200 donadan pastga tushiring.",
+      "f": "typeof s.y0=='number' && s.y0<200"
+     }
+    ]
+   }
+  },
+  {
+   "id": "foyda",
+   "e": "📊",
+   "nomi": "Narx va rentabellik",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "T",
+      "n": "Tannarx (bir dona)",
+      "u": "ming so‘m",
+      "v": 40,
+      "min": 1,
+      "max": 1000,
+      "q": 1
+     },
+     {
+      "id": "U",
+      "n": "Ustama (natsenka)",
+      "u": "%",
+      "v": 25,
+      "min": 0,
+      "max": 200,
+      "q": 1
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Sotuv narxi = tannarx × (1 + ustama)",
+      "f": "T*(1+U/100)",
+      "u": "ming so‘m",
+      "x": 1,
+      "asosiy": true
+     },
+     {
+      "n": "Bir donadan foyda",
+      "f": "T*U/100",
+      "u": "ming so‘m",
+      "x": 1
+     },
+     {
+      "n": "Savdo rentabelligi = foyda / narx",
+      "f": "U/(100+U)*100",
+      "u": "%",
+      "x": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "ochish",
+   "e": "🚀",
+   "nomi": "Biznes ochish bosqichlari",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni mantiqiy tartibda tanlang.",
+    "qadamlar": [
+     "G‘oyani tanlash",
+     "Bozor va raqobatchilarni o‘rganish",
+     "Biznes-reja tuzish",
+     "Davlat ro‘yxatidan o‘tish (masalan, my.gov.uz yoki birdarcha.uz orqali)",
+     "Moliyalashtirish manbaini topish",
+     "Jihoz va xom ashyo xarid qilish",
+     "Mahsulot yoki xizmatni ishga tushirish",
+     "Natijalarni tahlil qilish va rivojlantirish"
+    ]
+   }
+  },
+  {
+   "id": "atama",
+   "e": "📘",
+   "nomi": "Biznes atamalari",
+   "tur": "moslash",
+   "p": {
+    "savol": "Atamani ta’rifi bilan moslang.",
+    "juft": [
+     [
+      "Tannarx",
+      "Mahsulot ishlab chiqarishga ketgan xarajat"
+     ],
+     [
+      "Tushum",
+      "Sotuvdan olingan jami pul"
+     ],
+     [
+      "Foyda",
+      "Tushumdan barcha xarajatlar ayirilgandagi qoldiq"
+     ],
+     [
+      "Marketing",
+      "Mijoz ehtiyojini o‘rganish va mahsulotni bozorga olib chiqish"
+     ],
+     [
+      "Raqobatchi",
+      "Xuddi shunday mahsulot taklif qiluvchi korxona"
+     ],
+     [
+      "Investitsiya",
+      "Kelajakda daromad olish uchun kiritilgan mablag‘"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Biznes asoslari",
+ "amaliyotga": false
+}

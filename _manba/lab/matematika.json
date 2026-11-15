@@ -1,0 +1,236 @@
+{
+ "id": "matematika",
+ "nomi": "Matematika laboratoriyasi",
+ "e": "📐",
+ "xona": "sinf",
+ "fanlar": [
+  "matematika"
+ ],
+ "tavsif": "Chizma va o‘lchash asboblari, geometrik jismlar modellari va funksiyalar grafigini quruvchi virtual vosita.",
+ "xavfsizlik": [
+  "Laboratoriyaga faqat o‘qituvchi ruxsati bilan kiriladi va ish o‘rni toza saqlanadi.",
+  "Jihozlarni vazifasini va ishlatish tartibini bilmasdan yoqmang.",
+  "Sirkul ignasi va chizg‘ich qirralari bilan ehtiyot bo‘ling."
+ ],
+ "jihozlar": [
+  {
+   "id": "sirkul",
+   "e": "📐",
+   "nomi": "Chizmachilik asboblari to‘plami",
+   "vazifa": "Geometrik yasashlar: aylana chizish, kesmani teng bo‘lish, burchak yasash uchun asboblar.",
+   "tuzilish": [
+    "Sirkul (igna va grifel oyoqchasi)",
+    "Chizg‘ich (sm/mm)",
+    "Transportir (0–180°)",
+    "Uchburchak chizg‘ichlar (45° va 30°/60°)"
+   ],
+   "ishlatish": [
+    "Sirkul grifelini ignasi bilan bir balandlikka to‘g‘rilang.",
+    "Kerakli radiusni chizg‘ichdan oling.",
+    "Ignani markazga qo‘yib, sirkulni bir tekis aylantiring.",
+    "Burchak o‘lchashda transportir markazini burchak uchiga, nol chizig‘ini bir tomoniga qo‘ying."
+   ]
+  },
+  {
+   "id": "jismlar",
+   "e": "🧊",
+   "nomi": "Geometrik jismlar modellari",
+   "vazifa": "Kub, prizma, piramida, silindr, konus va shar modellari — ularning yoqlari, qirralari, uchlari va hajm formulalarini o‘rganish uchun.",
+   "tuzilish": [
+    "Kub va to‘g‘ri burchakli parallelepiped",
+    "Prizma va piramida",
+    "Silindr va konus",
+    "Shar"
+   ],
+   "ishlatish": [
+    "Modelni qo‘lga olib, yoqlar, qirralar va uchlarni sanang.",
+    "Eyler formulasini tekshiring: Uchlar − Qirralar + Yoqlar = 2.",
+    "O‘lchamlarni o‘lchab, hajm va sirt yuzasini hisoblang."
+   ],
+   "sim": "hajm"
+  },
+  {
+   "id": "koordinata",
+   "e": "📈",
+   "nomi": "Koordinata tekisligi doskasi",
+   "vazifa": "Funksiya grafiklarini chizish va o‘qish uchun katakli doska yoki raqamli grafik quruvchi.",
+   "tuzilish": [
+    "Ox va Oy o‘qlari",
+    "Koordinata boshi O(0; 0)",
+    "Birlik kesma",
+    "Katakli to‘r"
+   ],
+   "ishlatish": [
+    "Funksiyaning bir nechta nuqtasini hisoblab jadval tuzing.",
+    "Nuqtalarni tekislikka belgilang.",
+    "Nuqtalarni silliq chiziq bilan tutashtiring.",
+    "O‘qlar bilan kesishish nuqtalarini aniqlang."
+   ],
+   "sim": "grafik"
+  },
+  {
+   "id": "kalkulyator",
+   "e": "🧮",
+   "nomi": "Ilmiy kalkulyator",
+   "vazifa": "Darajalar, ildizlar, trigonometrik va logarifmik funksiyalarni hisoblaydi.",
+   "tuzilish": [
+    "Raqamli klaviatura",
+    "Funksiya tugmalari: sin, cos, tan, log, ln, √, xʸ",
+    "SHIFT/2nd tugmasi",
+    "Xotira tugmalari (M+, MR)",
+    "Burchak birligi rejimi: DEG/RAD"
+   ],
+   "ishlatish": [
+    "Trigonometriyada burchak birligini (DEG — gradus) tekshiring.",
+    "Murakkab ifodalarni qavslar bilan kiriting.",
+    "Natijani taxminiy hisob bilan solishtirib tekshiring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "grafik",
+   "e": "📈",
+   "nomi": "Funksiya grafigi quruvchi",
+   "tur": "grafik",
+   "izoh": "a, b, c parametrlarini o‘zgartirib, grafik qanday siljishini kuzating.",
+   "p": {}
+  },
+  {
+   "id": "hajm",
+   "e": "🧊",
+   "nomi": "Geometrik jismlar hajmi va yuzasi",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "r",
+      "n": "Asos radiusi r",
+      "u": "sm",
+      "v": 3,
+      "min": 1,
+      "max": 30,
+      "q": 0.5
+     },
+     {
+      "id": "h",
+      "n": "Balandlik h",
+      "u": "sm",
+      "v": 10,
+      "min": 1,
+      "max": 50,
+      "q": 0.5
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Silindr hajmi V = πr²h",
+      "f": "Math.PI*r*r*h",
+      "u": "sm³",
+      "x": 1,
+      "asosiy": true
+     },
+     {
+      "n": "Konus hajmi V = ⅓πr²h",
+      "f": "Math.PI*r*r*h/3",
+      "u": "sm³",
+      "x": 1
+     },
+     {
+      "n": "Shar hajmi V = 4/3·πr³",
+      "f": "4/3*Math.PI*r*r*r",
+      "u": "sm³",
+      "x": 1
+     },
+     {
+      "n": "Silindr to‘la sirti S = 2πr(r + h)",
+      "f": "2*Math.PI*r*(r+h)",
+      "u": "sm²",
+      "x": 1
+     },
+     {
+      "n": "Shar sirti S = 4πr²",
+      "f": "4*Math.PI*r*r",
+      "u": "sm²",
+      "x": 1
+     }
+    ],
+    "vazifalar": [
+     {
+      "m": "Hajmi 1 litrga (1000 sm³) eng yaqin silindr toping (±20 sm³).",
+      "f": "Math.abs(s.y0-1000)<=20"
+     },
+     {
+      "m": "Konus hajmi xuddi shu o‘lchamdagi silindr hajmining necha qismi ekanini ko‘ring (r = 5, h = 12).",
+      "f": "s.r==5 && s.h==12"
+     }
+    ]
+   }
+  },
+  {
+   "id": "formula",
+   "e": "📏",
+   "nomi": "Shakl va yuza formulasi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Shaklni uning yuzasi formulasi bilan moslang.",
+    "juft": [
+     [
+      "Kvadrat",
+      "S = a²"
+     ],
+     [
+      "To‘g‘ri to‘rtburchak",
+      "S = a·b"
+     ],
+     [
+      "Uchburchak",
+      "S = ½·a·h"
+     ],
+     [
+      "Trapetsiya",
+      "S = ½·(a + b)·h"
+     ],
+     [
+      "Doira",
+      "S = πr²"
+     ],
+     [
+      "Parallelogramm",
+      "S = a·h"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "proyeksiya",
+   "e": "🧱",
+   "nomi": "Fazoviy tasavvur: detal va uning ko‘rinishlari",
+   "tur": "proyeksiya",
+   "izoh": "Kublardan detal yasang va uning uch tomondan ko‘rinishini kuzating.",
+   "p": {}
+  }
+ ],
+ "test": [
+  {
+   "s": "Kubning nechta qirrasi bor?",
+   "v": [
+    "12",
+    "8",
+    "6",
+    "4"
+   ],
+   "t": 0
+  },
+  {
+   "s": "y = ax² + bx + c parabolasida a < 0 bo‘lsa, shoxlari qayerga qaraydi?",
+   "v": [
+    "Pastga",
+    "Yuqoriga",
+    "O‘ngga",
+    "Chapga"
+   ],
+   "t": 0
+  }
+ ]
+}

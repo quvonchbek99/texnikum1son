@@ -1,0 +1,88 @@
+{
+ "id": "loyihalash",
+ "nomi": "Kiyim loyihalash studiyasi",
+ "e": "🗂️",
+ "xona": "tikuv",
+ "fanlar": [
+  "loyihalash"
+ ],
+ "tavsif": "Loyihalash hujjatlari va bosqichlari: texnik topshiriq, eskiz, texnik rasm, konfeksion karta; kolleksiya yaratish va dizayn vositalari bilan mashqlar.",
+ "xavfsizlik": [
+  "Loyihada mijoz talablari va ishlab chiqarish imkoniyatlarini hisobga oling."
+ ],
+ "jihozlar": [
+  {
+   "id": "tt",
+   "e": "📋",
+   "nomi": "Texnik topshiriq",
+   "vazifa": "Loyihalanadigan buyumga qo‘yiladigan talablar: maqsad, iste’molchi, mavsum, mato, narx, o‘lchamlar.",
+   "tuzilish": [
+    "Buyum nomi va vazifasi",
+    "Iste’molchilar guruhi",
+    "Mavsum va materiallar",
+    "O‘lcham va bo‘y guruhlari",
+    "Iqtisodiy talablar"
+   ],
+   "ishlatish": [
+    "Mijoz bilan talablarni kelishing.",
+    "Topshiriqni hujjat sifatida rasmiylashtiring."
+   ]
+  },
+  {
+   "id": "texrasm",
+   "e": "📐",
+   "nomi": "Texnik rasm (texnik eskiz)",
+   "vazifa": "Buyumning old va orqa ko‘rinishi barcha choklar, detallar va o‘lchamlar bilan aniq chizilgan rasmi.",
+   "tuzilish": [
+    "Old ko‘rinish",
+    "Orqa ko‘rinish",
+    "Detallar kattalashtirilgan",
+    "Choklar va bostirmalar"
+   ],
+   "ishlatish": [
+    "Simmetrik figurada chizing.",
+    "Barcha choklarni ko‘rsating."
+   ]
+  },
+  {
+   "id": "konfeksion",
+   "e": "🗃️",
+   "nomi": "Konfeksion karta",
+   "vazifa": "Buyum uchun tanlangan barcha materiallar (asosiy mato, astar, qistirma, iplar, furnitura) namunalari va ma’lumotlari jamlangan karta.",
+   "tuzilish": [
+    "Mato namunalari",
+    "Iplar",
+    "Furnitura",
+    "Material sarfi"
+   ],
+   "ishlatish": [
+    "Har bir materialning nomi, tarkibi va sarfini yozing."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "bosqich",
+   "e": "🗂️",
+   "nomi": "Kiyim loyihalash bosqichlari",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Texnik topshiriq",
+     "Analog va tendensiyalarni o‘rganish",
+     "Badiiy eskizlar",
+     "Texnik rasm",
+     "Konstruksiya va qoliplar",
+     "Konfeksion karta",
+     "Namuna tikish va sinash",
+     "Texnik hujjatlarni rasmiylashtirish"
+    ]
+   }
+  }
+ ],
+ "qisqa": "Loyihalash",
+ "meros": [
+  "kiyim-dizayn"
+ ]
+}

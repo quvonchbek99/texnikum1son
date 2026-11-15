@@ -1,0 +1,254 @@
+{
+ "id": "veb-dizayn",
+ "nomi": "Veb dizayn va UI/UX studiyasi",
+ "e": "🌐",
+ "xona": "it",
+ "fanlar": [
+  "veb-dizayn-va-ui-ux"
+ ],
+ "tavsif": "Veb-dizayner vositalari: Figma, brauzer ishlab chiquvchi asboblari, wireframe, rang va tipografika; HTML/CSS jonli muharriri va rang uyg‘unligi mashqlari.",
+ "xavfsizlik": [
+  "Kompyuter va qurilmalarni nam qo‘l bilan ushlamang, ish joyida ovqatlanmang.",
+  "Monitordan 50–70 sm uzoqlikda, to‘g‘ri o‘tiring; har 45 daqiqada ko‘z va qo‘llarga dam bering.",
+  "Litsenziyalangan yoki erkin dasturlardan foydalaning, notanish fayllarni ochmang.",
+  "Ishni muntazam saqlang va zaxira nusxa oling."
+ ],
+ "jihozlar": [
+  {
+   "id": "figma",
+   "e": "🎨",
+   "nomi": "Figma (interfeys dizayni dasturi)",
+   "vazifa": "Veb-sayt va ilova interfeyslarini loyihalash, prototip yaratish va jamoada birga ishlash uchun.",
+   "tuzilish": [
+    "Freymlar (ekran o‘lchamlari)",
+    "Komponentlar va variantlar",
+    "Auto Layout",
+    "Uslublar (rang, matn)",
+    "Prototip rejimi"
+   ],
+   "ishlatish": [
+    "Qurilma o‘lchamiga mos freym yarating (masalan, 1440 px va 390 px).",
+    "Takrorlanuvchi elementlarni komponent qiling.",
+    "Auto Layout bilan moslashuvchan bloklar yarating.",
+    "Prototip bog‘lanishlarini qo‘shing va sinab ko‘ring."
+   ]
+  },
+  {
+   "id": "devtools",
+   "e": "🛠️",
+   "nomi": "Brauzer ishlab chiquvchi asboblari (DevTools)",
+   "vazifa": "Sahifa kodini, uslublarini va mobil ko‘rinishini brauzerning o‘zida tekshirish va tahrirlash.",
+   "tuzilish": [
+    "Elements (HTML/CSS)",
+    "Console",
+    "Network",
+    "Device toolbar (mobil ko‘rinish)",
+    "Lighthouse (sifat tekshiruvi)"
+   ],
+   "ishlatish": [
+    "F12 bilan oching.",
+    "Elementni tanlab, CSS ni jonli o‘zgartiring.",
+    "Mobil ko‘rinishni turli ekranlarda tekshiring."
+   ]
+  },
+  {
+   "id": "wireframe",
+   "e": "🧱",
+   "nomi": "Wireframe (karkas)",
+   "vazifa": "Ranglarsiz, oddiy bloklar bilan sahifa tuzilishini rejalash — dizaynning birinchi bosqichi.",
+   "tuzilish": [
+    "Sarlavha (header)",
+    "Asosiy blok (hero)",
+    "Kontent bo‘limlari",
+    "Harakatga chaqiruv tugmasi",
+    "Pastki qism (footer)"
+   ],
+   "ishlatish": [
+    "Foydalanuvchi maqsadini aniqlang.",
+    "Bloklarni muhimlik tartibida joylashtiring.",
+    "Mobil versiyani alohida rejalang."
+   ]
+  },
+  {
+   "id": "palitra",
+   "e": "🎨",
+   "nomi": "Rang palitrasi",
+   "vazifa": "Brendga mos asosiy, qo‘shimcha va neytral ranglar to‘plami; matn va fon kontrasti o‘qilishni ta’minlaydi.",
+   "tuzilish": [
+    "Asosiy (brend) rang",
+    "Aksent rang",
+    "Neytral ranglar (fon, matn)",
+    "Holat ranglari (xato, muvaffaqiyat)"
+   ],
+   "ishlatish": [
+    "Rang doirasidan uyg‘un ranglarni tanlang.",
+    "Oddiy matn uchun kontrast nisbati kamida 4,5:1 bo‘lsin.",
+    "Ranglarni o‘zgaruvchilar (CSS variables) sifatida saqlang."
+   ],
+   "sim": "rang"
+  },
+  {
+   "id": "tipografika",
+   "e": "🔤",
+   "nomi": "Tipografika",
+   "vazifa": "Shriftlar tanlash va matn ierarxiyasi: sarlavhalar, matn, izohlar.",
+   "tuzilish": [
+    "Shrift oilasi (sans-serif, serif)",
+    "O‘lcham shkalasi",
+    "Qator oralig‘i (line-height)",
+    "Qalinlik (weight)"
+   ],
+   "ishlatish": [
+    "2 tadan ortiq shrift ishlatmang.",
+    "Asosiy matn 16 px dan kichik bo‘lmasin.",
+    "Qator oralig‘i 1,4–1,6."
+   ]
+  },
+  {
+   "id": "responsive",
+   "e": "📱",
+   "nomi": "Moslashuvchan (responsive) maket",
+   "vazifa": "Sahifa telefon, planshet va kompyuter ekraniga avtomatik moslashadi.",
+   "tuzilish": [
+    "Moslashuvchan to‘r (flex, grid)",
+    "Media so‘rovlar (@media)",
+    "Nisbiy birliklar (%, rem, vw)",
+    "Moslashuvchan rasmlar"
+   ],
+   "ishlatish": [
+    "Avval mobil versiyani loyihalang (mobile first).",
+    "Tugmalarni barmoq bilan bosish qulay o‘lchamda qiling (taxminan 44 px).",
+    "Turli ekranlarda sinab ko‘ring."
+   ],
+   "sim": "kod"
+  }
+ ],
+ "sim": [
+  {
+   "id": "kod",
+   "e": "⌨️",
+   "nomi": "HTML/CSS jonli muharriri",
+   "tur": "kod",
+   "izoh": "Kod yozing va «Ishga tushirish» tugmasini bosing — natija o‘ng tomonda ko‘rinadi.",
+   "p": {
+    "til": "html",
+    "mashqlar": [
+     {
+      "n": "Sarlavha va matn",
+      "m": "Sahifaga <h1> sarlavha («Mening portfoliom») va <p> paragraf qo‘shing.",
+      "kod": "<!-- shu yerga yozing -->\n",
+      "tekshir": [
+       "<h1[^>]*>[^<]*portfolio",
+       "<p[^>]*>"
+      ],
+      "izoh": "<h1> va <p> teglari bo‘lishi kerak."
+     },
+     {
+      "n": "Tugma uslubi",
+      "m": "class=\"btn\" li tugma yarating va CSS bilan unga fon rangi (background), oq matn (color: white) va burchak yumaloqligi (border-radius) bering.",
+      "kod": "<style>\n  .btn {\n    \n  }\n</style>\n<button class=\"btn\">Yozilish</button>\n",
+      "tekshir": [
+       "\\.btn\\s*\\{[^}]*background",
+       "\\.btn\\s*\\{[^}]*color\\s*:\\s*(white|#fff)",
+       "border-radius"
+      ],
+      "izoh": "background, color: white va border-radius xossalari kerak."
+     },
+     {
+      "n": "Flex qator",
+      "m": "Uchta kartochkani (<div class=\"k\">) bir qatorga joylang: konteynerga display: flex va gap bering.",
+      "kod": "<style>\n  .qator {  }\n  .k { padding: 16px; border: 1px solid #ccc; border-radius: 8px; }\n</style>\n<div class=\"qator\">\n  <div class=\"k\">1</div>\n  <div class=\"k\">2</div>\n  <div class=\"k\">3</div>\n</div>\n",
+      "tekshir": [
+       "display\\s*:\\s*flex",
+       "gap\\s*:"
+      ],
+      "izoh": "display: flex va gap kerak."
+     },
+     {
+      "n": "Moslashuvchan rasm",
+      "m": "Rasm ekrandan chiqib ketmasligi uchun img ga max-width: 100% bering.",
+      "kod": "<style>\n  img {  }\n</style>\n<img src=\"https://picsum.photos/1200/400\" alt=\"Banner\">\n",
+      "tekshir": [
+       "img\\s*\\{[^}]*max-width\\s*:\\s*100%"
+      ],
+      "izoh": "img uchun max-width: 100%."
+     }
+    ]
+   }
+  },
+  {
+   "id": "rang",
+   "e": "🎨",
+   "nomi": "Rang uyg‘unligi va RGB",
+   "tur": "rang",
+   "p": {
+    "rejimlar": [
+     "doira",
+     "rgb"
+    ]
+   }
+  },
+  {
+   "id": "ux",
+   "e": "🧭",
+   "nomi": "UX qoidalari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Kulrang fonga och kulrang matn qo‘yildi, o‘qish qiyin.",
+      "v": [
+       "Kontrastni oshiraman (kamida 4,5:1)",
+       "Shriftni kichraytiraman",
+       "Hech narsa qilmayman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Mobil versiyada tugmalar juda kichik va bir-biriga yaqin.",
+      "v": [
+       "Tugmalarni kattalashtirib, orasini ochaman",
+       "Ularni yanada kichraytiraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Formadagi xato faqat qizil rang bilan ko‘rsatilgan.",
+      "v": [
+       "Rangga qo‘shimcha ravishda matnli xabar va belgi qo‘shaman",
+       "Rangni yorqinroq qilaman"
+      ],
+      "t": 0,
+      "i": "Rangni farqlay olmaydigan foydalanuvchilar uchun ham axborot tushunarli bo‘lishi kerak."
+     },
+     {
+      "s": "Sahifada 6 xil shrift ishlatilgan.",
+      "v": [
+       "1–2 ta shrift oilasini qoldiraman",
+       "Yana bir shrift qo‘shaman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "jarayon",
+   "e": "🧩",
+   "nomi": "UI/UX loyihalash jarayoni",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Foydalanuvchilar va maqsadni o‘rganish",
+     "Sayt tuzilishi (xarita) va wireframe",
+     "Vizual dizayn (rang, tipografika)",
+     "Interaktiv prototip",
+     "Foydalanuvchilar bilan sinov",
+     "Kamchiliklarni tuzatish va dasturchiga topshirish"
+    ]
+   }
+  }
+ ],
+ "qisqa": "Veb dizayn"
+}

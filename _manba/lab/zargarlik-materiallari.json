@@ -1,0 +1,313 @@
+{
+ "id": "zargarlik-materiallari",
+ "nomi": "Zargarlik materialshunosligi laboratoriyasi",
+ "e": "💍",
+ "xona": "salon",
+ "fanlar": [
+  "materialshunoslik"
+ ],
+ "tavsif": "Qimmatbaho metallar va toshlar, sinov toshi va reaktivlar, zargarlik tarozisi va lupa; proba va karat hisob-kitobi, toshlar xossalari bo‘yicha mashqlar.",
+ "xavfsizlik": [
+  "Zargarlik gorelkasi va kavsharlash bilan ishlashda yong‘in xavfsizligiga rioya qiling, sochni yig‘ib oling.",
+  "Kislotalar (oqartirish, sinov reaktivlari) bilan faqat qo‘lqop va ko‘zoynakda ishlang.",
+  "Mayda qimmatbaho metall qirindilarini maxsus tortmaga yig‘ing.",
+  "Ish o‘rni yaxshi yoritilgan bo‘lsin, ko‘zni charchatmaslik uchun tanaffus qiling."
+ ],
+ "jihozlar": [
+  {
+   "id": "oltin",
+   "e": "🥇",
+   "nomi": "Oltin va uning qotishmalari",
+   "vazifa": "Zargarlikda sof oltin yumshoq bo‘lgani uchun mis, kumush va boshqa metallar bilan qotishma qilinadi. Proba — 1000 g qotishmadagi sof oltin grammi.",
+   "tuzilish": [
+    "375 proba (9 karat)",
+    "585 proba (14 karat) — eng keng tarqalgan",
+    "750 proba (18 karat)",
+    "916 proba (22 karat)",
+    "999 proba — sof oltin"
+   ],
+   "ishlatish": [
+    "Buyumdagi proba tamg‘asini (kleymo) lupa bilan o‘qing.",
+    "Rang (sariq, qizil, oq) qotishma tarkibiga bog‘liqligini tushuntiring."
+   ],
+   "sim": "proba"
+  },
+  {
+   "id": "kumush",
+   "e": "🥈",
+   "nomi": "Kumush",
+   "vazifa": "Oq, yaltiroq qimmatbaho metall; zargarlikda ko‘pincha 925 proba (sterling) qotishmasi ishlatiladi.",
+   "tuzilish": [
+    "925 proba — 92,5% kumush, qolgani asosan mis",
+    "875 va 960 probalar ham uchraydi"
+   ],
+   "ishlatish": [
+    "Qorayishdan saqlash uchun quruq joyda saqlang.",
+    "Maxsus vosita bilan tozalang."
+   ]
+  },
+  {
+   "id": "platina",
+   "e": "⚪",
+   "nomi": "Platina",
+   "vazifa": "Juda zich, og‘ir va korroziyaga chidamli oq metall; nikoh uzuklari va toshlar mahkamlagichlarida ishlatiladi.",
+   "tuzilish": [
+    "950 proba keng tarqalgan",
+    "Zichligi oltindan katta"
+   ],
+   "ishlatish": [
+    "Platina buyumlari og‘irligi bilan ajralib turadi."
+   ]
+  },
+  {
+   "id": "toshlar",
+   "e": "💎",
+   "nomi": "Qimmatbaho va yarim qimmatbaho toshlar",
+   "vazifa": "Olmos, yoqut, sapfir, zumrad va yarim qimmatbaho toshlar (feruza, ametist va boshq.); massasi karatda (1 kt = 0,2 g) o‘lchanadi.",
+   "tuzilish": [
+    "Olmos — Moos shkalasida 10 (eng qattiq)",
+    "Yoqut va sapfir — korund, qattiqligi 9",
+    "Zumrad — beril, qattiqligi 7,5–8",
+    "Feruza — havorang, qattiqligi 5–6"
+   ],
+   "ishlatish": [
+    "Toshni lupa bilan nuqson va kiritmalarga tekshiring.",
+    "Massani karat tarozida o‘lchang."
+   ],
+   "sim": "tosh"
+  },
+  {
+   "id": "sinov",
+   "e": "🪨",
+   "nomi": "Sinov (proba) toshi va reaktivlar",
+   "vazifa": "Metallni qora sinov toshiga ishqab, izga reaktiv tomizib, probani taxminan aniqlash.",
+   "tuzilish": [
+    "Qora slanets toshi",
+    "Sinov reaktivlari (turli probalar uchun)",
+    "Etalon ignalar"
+   ],
+   "ishlatish": [
+    "Buyumni ko‘rinmas joyidan toshga ishqang.",
+    "Yoniga etalon igna izini qo‘ying.",
+    "Reaktiv tomizib, reaksiyani solishtiring."
+   ],
+   "xavfsizlik": [
+    "Reaktivlar kislotali — qo‘lqop va ko‘zoynakda ishlang."
+   ]
+  },
+  {
+   "id": "tarozi",
+   "e": "⚖️",
+   "nomi": "Zargarlik tarozisi",
+   "vazifa": "Metallni 0,01 g, toshlarni 0,01 karat aniqlikda tortadi.",
+   "tuzilish": [
+    "Platforma",
+    "Shamol himoyasi",
+    "Birlik tanlash (g, ct)"
+   ],
+   "ishlatish": [
+    "Tekis joyga qo‘yib, nolga keltiring.",
+    "Kerakli birlikni tanlang."
+   ]
+  },
+  {
+   "id": "lupa",
+   "e": "🔍",
+   "nomi": "Zargar lupasi (10×)",
+   "vazifa": "Proba tamg‘asi, tosh nuqsonlari va ish sifatini ko‘rish.",
+   "tuzilish": [
+    "Linza (10× — standart)",
+    "Korpus"
+   ],
+   "ishlatish": [
+    "Lupani ko‘zga yaqin tuting, buyumni lupaga yaqinlashtiring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "proba",
+   "e": "🥇",
+   "nomi": "Proba va karat",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "m",
+      "n": "Buyum massasi",
+      "u": "g",
+      "v": 5,
+      "min": 0.1,
+      "max": 100,
+      "q": 0.1
+     },
+     {
+      "id": "p",
+      "n": "Proba",
+      "u": "",
+      "v": 585,
+      "tanlov": [
+       [
+        375,
+        "375"
+       ],
+       [
+        500,
+        "500"
+       ],
+       [
+        585,
+        "585"
+       ],
+       [
+        750,
+        "750"
+       ],
+       [
+        916,
+        "916"
+       ],
+       [
+        999,
+        "999"
+       ]
+      ]
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Sof oltin massasi = m·proba/1000",
+      "f": "m*p/1000",
+      "u": "g",
+      "x": 2,
+      "asosiy": true
+     },
+     {
+      "n": "Karat ≈ proba·24/1000",
+      "f": "p*24/1000",
+      "u": "K",
+      "x": 1
+     },
+     {
+      "n": "Ligatura (boshqa metallar)",
+      "f": "m*(1000-p)/1000",
+      "u": "g",
+      "x": 2
+     }
+    ],
+    "vazifalar": [
+     {
+      "m": "585 probali 4 g uzukdagi sof oltin massasini toping.",
+      "f": "s.p==585 && Math.abs(s.m-4)<0.001"
+     },
+     {
+      "m": "18 karatli oltin probasini toping.",
+      "f": "s.p==750"
+     }
+    ]
+   }
+  },
+  {
+   "id": "tosh",
+   "e": "💎",
+   "nomi": "Tosh va xossasi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Toshni xossasi bilan moslang.",
+    "juft": [
+     [
+      "Olmos",
+      "Eng qattiq tabiiy mineral (Moos 10)"
+     ],
+     [
+      "Yoqut",
+      "Qizil korund (Moos 9)"
+     ],
+     [
+      "Sapfir",
+      "Ko‘k korund (Moos 9)"
+     ],
+     [
+      "Zumrad",
+      "Yashil beril (Moos 7,5–8)"
+     ],
+     [
+      "Feruza",
+      "Havorang, nisbatan yumshoq (Moos 5–6)"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "karat",
+   "e": "⚖️",
+   "nomi": "Tosh massasi: karat va gramm",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "k",
+      "n": "Tosh massasi",
+      "u": "karat",
+      "v": 1,
+      "min": 0.01,
+      "max": 20,
+      "q": 0.01
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Grammda (1 kt = 0,2 g)",
+      "f": "k*0.2",
+      "u": "g",
+      "x": 3,
+      "asosiy": true
+     },
+     {
+      "n": "Milligrammda",
+      "f": "k*200",
+      "u": "mg",
+      "x": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "vaziyat",
+   "e": "🔍",
+   "nomi": "Zargarlik vaziyatlari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Uzukda «585» tamg‘asi bor. Bu nimani bildiradi?",
+      "v": [
+       "Qotishmada 58,5% sof oltin bor",
+       "Uzuk 585 g",
+       "585 yil oldin yasalgan"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Kumush buyum qorayib qolgan.",
+      "v": [
+       "Maxsus tozalovchi vosita bilan avaylab tozalayman",
+       "Qo‘pol jilvir qog‘oz bilan ishqalayman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Qaysi tosh bilan oyna (shisha)ni tirnash mumkin?",
+      "v": [
+       "Olmos",
+       "Feruza",
+       "Marvarid"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Zargarlik materiallari"
+}

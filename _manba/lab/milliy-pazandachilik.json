@@ -1,0 +1,306 @@
+{
+ "id": "milliy-pazandachilik",
+ "nomi": "O‘zbek milliy oshxonasi",
+ "e": "🍲",
+ "xona": "oshxona",
+ "fanlar": [
+  "ozbek-milliy-pazandachilik-texnologiyasi"
+ ],
+ "tavsif": "Milliy taomlar tayyorlash jihozlari: qozon, tandir, kapgir, pichoq va taxtalar; palov tayyorlash bosqichlari va porsiya bo‘yicha mahsulot hisob-kitobi (kalkulyatsiya).",
+ "xavfsizlik": [
+  "Ishni toza maxsus kiyim (oq xalat/kitel, qalpoq, fartuk) va yopiq poyabzalda bajaring; sochlar qalpoq ostida bo‘lsin.",
+  "Ish boshlashdan oldin va xom mahsulotdan keyin qo‘lni sovunlab yuving.",
+  "Pichoqlarni o‘tkir holda saqlang va kesish taxtasida, o‘zingizdan uzoqqa qarab kesing.",
+  "Issiq idishlarni quruq ushlagich bilan ushlang; qozon dastalarini stol chetidan chiqarib qo‘ymang.",
+  "Qizigan yog‘ga suv tushirmang; yog‘ alangalansa — qopqoq bilan yoping, suv sepmang.",
+  "Elektr jihozlarini ho‘l qo‘l bilan ushlamang, ishdan keyin tarmoqdan uzing."
+ ],
+ "jihozlar": [
+  {
+   "id": "qozon",
+   "e": "🍲",
+   "nomi": "Cho‘yan qozon",
+   "vazifa": "Palov, qovurma va shirinliklar tayyorlash uchun qalin devorli idish — issiqlikni bir tekis tarqatadi.",
+   "tuzilish": [
+    "Qalin cho‘yan devor",
+    "Yarim sferik tub",
+    "Qopqoq",
+    "O‘choq yoki plita"
+   ],
+   "ishlatish": [
+    "Yangi qozonni yog‘ bilan kuydirib (toblab) oling.",
+    "Yog‘ni tutun chiqquncha qizdirmang.",
+    "Ishdan keyin yuvib, quruq artib, yupqa yog‘ surting."
+   ],
+   "xavfsizlik": [
+    "Qizigan yog‘ga ho‘l mahsulotni ehtiyotkorlik bilan soling — sachraydi."
+   ]
+  },
+  {
+   "id": "tandir",
+   "e": "🔥",
+   "nomi": "Tandir",
+   "vazifa": "Non, somsa va tandir go‘sht pishiriladigan loydan yasalgan an’anaviy pech.",
+   "tuzilish": [
+    "Loy korpus",
+    "Og‘iz (teshik)",
+    "Kul teshigi",
+    "Tashqi issiqlik izolyatsiyasi"
+   ],
+   "ishlatish": [
+    "Tandirni o‘tin bilan qizdiring, cho‘g‘ tushgach devorini tozalang.",
+    "Devorga suv sepib haroratni tekshiring.",
+    "Nonni yostiqcha (rapida) bilan devorga yopishtiring."
+   ],
+   "xavfsizlik": [
+    "Qo‘lga uzun yengli qo‘lqop kiying — tandir devori juda issiq."
+   ]
+  },
+  {
+   "id": "kapgir",
+   "e": "🥄",
+   "nomi": "Kapgir va cho‘mich",
+   "vazifa": "Kapgir — teshikli qoshiq (palov, qovurma uchun), cho‘mich — suyuq taom quyish uchun.",
+   "tuzilish": [
+    "Teshikli yassi qism",
+    "Uzun dasta"
+   ],
+   "ishlatish": [
+    "Palovni kapgir bilan avaylab aralashtiring — guruch ezilmasin."
+   ]
+  },
+  {
+   "id": "pichoq",
+   "e": "🔪",
+   "nomi": "Oshxona pichog‘i (oshpichoq)",
+   "vazifa": "Go‘sht va sabzavotlarni to‘g‘rash uchun.",
+   "tuzilish": [
+    "Tig‘",
+    "Dasta",
+    "Tig‘ning orqa qismi"
+   ],
+   "ishlatish": [
+    "Pichoqni har kuni charxlab, o‘tkir saqlang.",
+    "Sabzini palovbop qilib somoncha shaklida to‘g‘rang.",
+    "Barmoq uchlarini ichkariga bukib ushlang."
+   ],
+   "xavfsizlik": [
+    "Pichoqni rakovinaga tashlab qo‘ymang."
+   ]
+  },
+  {
+   "id": "taxta",
+   "e": "🟫",
+   "nomi": "Kesish taxtalari (rangli belgilangan)",
+   "vazifa": "Xom va tayyor mahsulotlar uchun alohida taxtalar — mikroblar bir mahsulotdan boshqasiga o‘tmasligi uchun.",
+   "tuzilish": [
+    "Qizil — xom go‘sht",
+    "Ko‘k — xom baliq",
+    "Yashil — sabzavot va mevalar",
+    "Sariq — pishgan go‘sht",
+    "Oq — non va sut mahsulotlari"
+   ],
+   "ishlatish": [
+    "Har bir mahsulot turini o‘z taxtasida kesing.",
+    "Ishdan keyin yuvib, quriting."
+   ]
+  },
+  {
+   "id": "lagan",
+   "e": "🍽️",
+   "nomi": "Lagan va milliy idishlar",
+   "vazifa": "Palov va milliy taomlarni dasturxonga tortish uchun.",
+   "tuzilish": [
+    "Lagan",
+    "Kosa",
+    "Choynak va piyola"
+   ],
+   "ishlatish": [
+    "Taomni lagan o‘rtasiga tepacha qilib suzing.",
+    "Go‘shtni bo‘laklab, ustiga terib chiqing."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "palov",
+   "e": "🍚",
+   "nomi": "Toshkent palovini tayyorlash",
+   "tur": "tartib",
+   "izoh": "Palov tayyorlash usullari hududga qarab farq qiladi; bu yerda keng tarqalgan ketma-ketliklardan biri berilgan.",
+   "p": {
+    "savol": "Texnologik bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Guruchni saralab, yuvib, iliq suvda ivitish",
+     "Yog‘ni qozonda qizdirish",
+     "Go‘shtni qovurish",
+     "Piyozni qo‘shib qovurish",
+     "Sabzini solib qovurish",
+     "Suv, ziravor va tuz qo‘shib zirvak qaynatish",
+     "Guruchni zirvak ustiga tekis yoyib solish",
+     "Suv bug‘langach guruchni tepacha qilib, olovni pasaytirib dimlash",
+     "Aralashtirib, laganga suzish"
+    ]
+   }
+  },
+  {
+   "id": "retsept",
+   "e": "🧮",
+   "nomi": "Kalkulyatsiya: porsiya bo‘yicha mahsulot hisobi",
+   "tur": "retsept",
+   "izoh": "Porsiyalar sonini kiriting — brutto va netto miqdorlar avtomatik hisoblanadi.",
+   "p": {
+    "taomlar": [
+     {
+      "nomi": "Toshkent palovi (o‘quv namunasi)",
+      "porsiya": 10,
+      "chiqish": 350,
+      "tarkib": [
+       [
+        "Guruch (devzira yoki lazer)",
+        1000,
+        1000
+       ],
+       [
+        "Qo‘y go‘shti (suyakli)",
+        1300,
+        1000
+       ],
+       [
+        "Sabzi",
+        1250,
+        1000
+       ],
+       [
+        "Piyoz",
+        360,
+        300
+       ],
+       [
+        "Paxta yog‘i",
+        300,
+        300
+       ],
+       [
+        "No‘xat (ixtiyoriy)",
+        150,
+        150
+       ],
+       [
+        "Sarimsoq piyoz",
+        120,
+        100
+       ],
+       [
+        "Zira",
+        10,
+        10
+       ],
+       [
+        "Tuz",
+        30,
+        30
+       ]
+      ]
+     },
+     {
+      "nomi": "Mastava (o‘quv namunasi)",
+      "porsiya": 10,
+      "chiqish": 400,
+      "tarkib": [
+       [
+        "Mol go‘shti",
+        650,
+        500
+       ],
+       [
+        "Guruch",
+        300,
+        300
+       ],
+       [
+        "Kartoshka",
+        800,
+        600
+       ],
+       [
+        "Sabzi",
+        250,
+        200
+       ],
+       [
+        "Piyoz",
+        240,
+        200
+       ],
+       [
+        "Pomidor",
+        250,
+        220
+       ],
+       [
+        "Paxta yog‘i",
+        100,
+        100
+       ],
+       [
+        "Qatiq (tortishga)",
+        500,
+        500
+       ],
+       [
+        "Ko‘katlar",
+        60,
+        50
+       ],
+       [
+        "Tuz va ziravorlar",
+        30,
+        30
+       ]
+      ]
+     }
+    ],
+    "izoh": "O‘quv namunasi. Korxonada me’yorlar amaldagi retseptlar to‘plami va texnologik kartalar asosida olinadi."
+   }
+  },
+  {
+   "id": "vaziyat",
+   "e": "🍲",
+   "nomi": "Oshxona vaziyatlari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Qozondagi yog‘ alangalandi.",
+      "v": [
+       "Qozonni qopqoq bilan yopib, olovni o‘chiraman",
+       "Ustiga suv sepaman",
+       "Puflab o‘chiraman"
+      ],
+      "t": 0,
+      "i": "Yonayotgan yog‘ga suv sepish portlashsimon alanga chiqishiga olib keladi."
+     },
+     {
+      "s": "Xom go‘shtni kesgan taxtada salat sabzavotini kesish mumkinmi?",
+      "v": [
+       "Yo‘q — alohida (yashil) taxta ishlataman",
+       "Ha, yuvmasdan ham bo‘ladi"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Palov uchun sabzini qanday to‘g‘rash kerak?",
+      "v": [
+       "Uzunasiga somoncha (brusochka) shaklida",
+       "Mayda qirg‘ichdan o‘tkazib",
+       "Kubik shaklida"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Milliy oshxona"
+}

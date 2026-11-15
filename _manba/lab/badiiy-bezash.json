@@ -1,0 +1,194 @@
+{
+ "id": "badiiy-bezash",
+ "nomi": "Badiiy bezash ustaxonasi",
+ "e": "🌸",
+ "xona": "tikuv",
+ "fanlar": [
+  "tikuv-buyumlarini-badiiy-bezash"
+ ],
+ "tavsif": "Kashtachilik va bezash vositalari: gardish, mulina, kashtachilik mashinasi, applikatsiya, munchoq va termopress; milliy kashtachilik va bezash usullari bo‘yicha mashqlar.",
+ "xavfsizlik": [
+  "Tikuv mashinasida ishlashda barmoqlarni igna yo‘lidan uzoq tuting; igna himoyachisidan foydalaning.",
+  "Ipni o‘tkazish, igna yoki lapkani almashtirishda mashinani tarmoqdan uzing.",
+  "Qaychi va pichoqlarni uchini pastga qaratib, yopiq holda uzating.",
+  "Termopress va dazmol bilan ishlashda issiqbardosh taglikdan foydalaning."
+ ],
+ "jihozlar": [
+  {
+   "id": "gardish",
+   "e": "⭕",
+   "nomi": "Kashta gardishi (pyalta)",
+   "vazifa": "Matoni taranglab tutib, bir tekis kashta tikish imkonini beradi.",
+   "tuzilish": [
+    "Ichki halqa",
+    "Tashqi halqa",
+    "Taranglash vinti"
+   ],
+   "ishlatish": [
+    "Matoni ichki halqa ustiga qo‘yib, tashqi halqa bilan qising.",
+    "Mato baraban kabi tarang bo‘lsin."
+   ]
+  },
+  {
+   "id": "mulina",
+   "e": "🧶",
+   "nomi": "Mulina va kashta iplari",
+   "vazifa": "Kashta uchun ko‘p tolali rangli iplar; tolalar sonini ajratib ishlatiladi.",
+   "tuzilish": [
+    "6 tolali mulina",
+    "Ipak va metall iplar (zar)",
+    "Rang raqamlari"
+   ],
+   "ishlatish": [
+    "Kerakli tolalar sonini ajrating.",
+    "Ip uzunligi 40–50 sm bo‘lsin."
+   ]
+  },
+  {
+   "id": "kashtamashina",
+   "e": "🪡",
+   "nomi": "Kashtachilik mashinasi (kompyuterli)",
+   "vazifa": "Raqamli dizayn bo‘yicha kashtani avtomatik tikadi.",
+   "tuzilish": [
+    "Kashta ramkasi",
+    "Igna boshchasi",
+    "Ip almashtirgich",
+    "Displey va USB"
+   ],
+   "ishlatish": [
+    "Dizaynni mashina formatida yuklang.",
+    "Matoni stabilizator bilan ramkaga taranglang.",
+    "Iplarni rang tartibida o‘rnating."
+   ]
+  },
+  {
+   "id": "applikatsiya",
+   "e": "✂️",
+   "nomi": "Applikatsiya materiallari",
+   "vazifa": "Bir matoning bo‘laklarini boshqa mato ustiga tikib yoki yopishtirib naqsh hosil qilish.",
+   "tuzilish": [
+    "Rangli mato bo‘laklari",
+    "Yelimli qistirma (flizelin)",
+    "Zigzag chok"
+   ],
+   "ishlatish": [
+    "Bo‘laklarni flizelin bilan dazmollab yopishtiring.",
+    "Chetlarini zigzag yoki atlas chok bilan tiking."
+   ]
+  },
+  {
+   "id": "munchoq",
+   "e": "💎",
+   "nomi": "Munchoq, payetka va toshlar",
+   "vazifa": "Bezakka hajm va yaltiroqlik beradi.",
+   "tuzilish": [
+    "Munchoq (biser)",
+    "Payetkalar",
+    "Strazlar",
+    "Maxsus ingichka igna"
+   ],
+   "ishlatish": [
+    "Naqshni bo‘r bilan chizing.",
+    "Har bir munchoqni mahkam qadang."
+   ]
+  },
+  {
+   "id": "termopress",
+   "e": "♨️",
+   "nomi": "Termopress (transfer bosish)",
+   "vazifa": "Rasm yoki yozuvni maxsus plyonkadan matoga issiqlik va bosim bilan ko‘chiradi.",
+   "tuzilish": [
+    "Isitiladigan plita",
+    "Harorat va taymer",
+    "Bosim rostlagichi"
+   ],
+   "ishlatish": [
+    "Mato turiga mos harorat va vaqtni o‘rnating.",
+    "Transferni joylashtirib, bosing.",
+    "Plyonkani ko‘rsatmaga ko‘ra issiq yoki sovuq holda oling."
+   ],
+   "xavfsizlik": [
+    "Plita juda qiziydi — qo‘lni yaqin olib bormang."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "kashta",
+   "e": "🌸",
+   "nomi": "Kashta tikish bosqichlari",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Naqsh tanlash yoki chizish",
+     "Naqshni matoga ko‘chirish",
+     "Matoni gardishga taranglash",
+     "Ip ranglarini tanlash",
+     "Konturlarni tikish",
+     "Ichini to‘ldirish",
+     "Gardishdan chiqarib, teskarisidan dazmollash"
+    ]
+   }
+  },
+  {
+   "id": "usul",
+   "e": "🎨",
+   "nomi": "Bezash usullari",
+   "tur": "moslash",
+   "p": {
+    "savol": "Usulni ta’rifi bilan moslang.",
+    "juft": [
+     [
+      "Zardo‘zi",
+      "Zar (metall) iplar bilan kashta — Buxoro an’anasi"
+     ],
+     [
+      "So‘zana",
+      "Katta devoriy kashta bezak"
+     ],
+     [
+      "Applikatsiya",
+      "Mato bo‘laklarini ustidan tikish"
+     ],
+     [
+      "Mashina kashtasi",
+      "Raqamli dizayn bo‘yicha avtomatik tikish"
+     ],
+     [
+      "Termotransfer",
+      "Rasmni issiqlik bilan ko‘chirish"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "vaziyat",
+   "e": "🌸",
+   "nomi": "Bezash vaziyatlari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Yupqa matoga mashina kashtasi tikilganda mato burishmoqda.",
+      "v": [
+       "Ostiga stabilizator qo‘yib, ramkada yaxshi taranglayman",
+       "Ipni yo‘g‘onlashtiraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Bolalar kiyimiga bezak tanlash kerak.",
+      "v": [
+       "Mustahkam tikilgan applikatsiya yoki kashta (mayda munchoqsiz)",
+       "Mayda munchoq va toshlar"
+      ],
+      "t": 0,
+      "i": "Mayda qismlar bolalar uchun xavfli — uzilib yutib yuborilishi mumkin."
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Badiiy bezash"
+}

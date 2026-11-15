@@ -1,0 +1,329 @@
+{
+ "id": "ingliz-tili",
+ "nomi": "Ingliz tili lingafon xonasi",
+ "e": "🇬🇧",
+ "xona": "sinf",
+ "fanlar": [
+  "chet-tili-ingliz-tili"
+ ],
+ "tavsif": "Lingafon jihozlari bilan tanishish; kasbiy so‘zlarni tinglash, takrorlash, diktant va talaffuz bo‘yicha virtual mashqlar.",
+ "xavfsizlik": [
+  "Naushnik va mikrofonni ehtiyotkorlik bilan taqing, simini tortmang.",
+  "Ovoz balandligini o‘rtacha darajada saqlang — uzoq vaqt baland ovoz eshitishga zarar.",
+  "Har 40–45 daqiqada naushnikni yechib, quloqqa dam bering.",
+  "Uskunalarni ovqat va ichimliklardan uzoq tuting."
+ ],
+ "jihozlar": [
+  {
+   "id": "kabina",
+   "e": "🎧",
+   "nomi": "Lingafon kabinasi (naushnik + mikrofon)",
+   "vazifa": "Har bir o‘quvchi uchun alohida tinglash va gapirish joyi: o‘qituvchi audio yuboradi, o‘quvchi javobini yozib oladi.",
+   "tuzilish": [
+    "Naushnik",
+    "Mikrofon",
+    "Ovoz balandligi regulyatori",
+    "Chaqiruv tugmasi (o‘qituvchiga)"
+   ],
+   "ishlatish": [
+    "Naushnikni taqib, ovozni sozlang.",
+    "Mikrofonni og‘izdan 2–3 sm masofaga keltiring.",
+    "Topshiriqni tinglang, takrorlang yoki javobingizni yozib oling.",
+    "Savol bo‘lsa, chaqiruv tugmasini bosing."
+   ]
+  },
+  {
+   "id": "doska",
+   "e": "🖥️",
+   "nomi": "Interaktiv doska",
+   "vazifa": "Darsda audio, video, matn va mashqlarni butun guruhga ko‘rsatish va sensor orqali boshqarish.",
+   "tuzilish": [
+    "Sensorli ekran yoki proyektor",
+    "Kompyuter bilan ulanish",
+    "Elektron qalam",
+    "Karnaylar"
+   ],
+   "ishlatish": [
+    "Kompyuter va proyektorni yoqing.",
+    "Kerakli audio yoki videoni oching.",
+    "Mashqlarni elektron qalam bilan bajarishni taklif qiling."
+   ]
+  },
+  {
+   "id": "lugat",
+   "e": "📘",
+   "nomi": "Lug‘at va elektron lug‘at",
+   "vazifa": "So‘zlarning ma’nosi, talaffuzi (transkripsiya), so‘z turkumi va qo‘llanish misollarini beradi.",
+   "tuzilish": [
+    "Bosh so‘z",
+    "Transkripsiya",
+    "So‘z turkumi belgisi",
+    "Tarjima va misollar"
+   ],
+   "ishlatish": [
+    "So‘zni alifbo tartibida yoki qidiruv orqali toping.",
+    "Transkripsiya bo‘yicha talaffuzni o‘qing yoki tinglang.",
+    "Misol gaplarni ko‘chirib, o‘z gapingizni tuzing."
+   ]
+  },
+  {
+   "id": "kolonka",
+   "e": "🔊",
+   "nomi": "Audio tizim (kolonka)",
+   "vazifa": "Tinglab tushunish mashqlari uchun audiomateriallarni butun guruhga eshittiradi.",
+   "tuzilish": [
+    "Kolonkalar",
+    "Ovoz kuchaytirgich",
+    "Ulanish (Bluetooth yoki kabel)"
+   ],
+   "ishlatish": [
+    "Ovozni avval past darajada yoqing, keyin moslang.",
+    "Audio matnni 2 marta eshittiring: avval umumiy, keyin batafsil tinglash."
+   ]
+  },
+  {
+   "id": "planshet",
+   "e": "📱",
+   "nomi": "Planshet va til ilovalari",
+   "vazifa": "Kartochkalar, lug‘at yodlash va talaffuzni tekshiruvchi ilovalar bilan mustaqil ishlash.",
+   "tuzilish": [
+    "Sensorli ekran",
+    "Mikrofon va kamera",
+    "Til o‘rganish ilovalari"
+   ],
+   "ishlatish": [
+    "Ilovada mavzu bo‘yicha so‘zlar to‘plamini oching.",
+    "Har kuni 10–15 daqiqa takrorlang.",
+    "Talaffuzni ovozli yozib, namuna bilan solishtiring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "til",
+   "e": "🎧",
+   "nomi": "Kasbiy so‘zlar: tinglash, diktant, talaffuz",
+   "tur": "til",
+   "izoh": "So‘zni tinglang, tarjimasini ko‘ring, eshitganingizni yozing yoki talaffuz qiling.",
+   "p": {
+    "til": "en-GB",
+    "sozlar": [
+     [
+      "equipment",
+      "jihoz, uskuna"
+     ],
+     [
+      "safety",
+      "xavfsizlik"
+     ],
+     [
+      "engineer",
+      "muhandis"
+     ],
+     [
+      "skill",
+      "ko‘nikma, mahorat"
+     ],
+     [
+      "workshop",
+      "ustaxona"
+     ],
+     [
+      "machine",
+      "mashina, dastgoh"
+     ],
+     [
+      "measure",
+      "o‘lchamoq"
+     ],
+     [
+      "repair",
+      "ta’mirlash"
+     ],
+     [
+      "customer",
+      "mijoz"
+     ],
+     [
+      "schedule",
+      "jadval"
+     ],
+     [
+      "experience",
+      "tajriba"
+     ],
+     [
+      "knowledge",
+      "bilim"
+     ],
+     [
+      "technician",
+      "texnik"
+     ],
+     [
+      "tool",
+      "asbob"
+     ],
+     [
+      "teacher",
+      "o‘qituvchi"
+     ],
+     [
+      "college",
+      "kollej, texnikum"
+     ],
+     [
+      "computer",
+      "kompyuter"
+     ],
+     [
+      "electricity",
+      "elektr energiyasi"
+     ],
+     [
+      "kitchen",
+      "oshxona"
+     ],
+     [
+      "fabric",
+      "mato, gazlama"
+     ],
+     [
+      "engine",
+      "dvigatel"
+     ],
+     [
+      "profession",
+      "kasb"
+     ],
+     [
+      "practice",
+      "amaliyot"
+     ],
+     [
+      "interview",
+      "suhbat (ishga qabul)"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "grammar",
+   "e": "📝",
+   "nomi": "Grammar: Present Simple yoki Present Continuous",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "She ___ in a car repair workshop every day.",
+      "v": [
+       "works",
+       "is working",
+       "work",
+       "working"
+      ],
+      "t": 0,
+      "i": "«every day» — muntazam takrorlanadigan ish: Present Simple, uchinchi shaxs birlikda -s qo‘shiladi."
+     },
+     {
+      "s": "Look! The teacher ___ the new machine now.",
+      "v": [
+       "is showing",
+       "shows",
+       "show",
+       "showed"
+      ],
+      "t": 0,
+      "i": "«Look!» va «now» — hozir sodir bo‘layotgan ish: Present Continuous."
+     },
+     {
+      "s": "They usually ___ lunch at 1 p.m.",
+      "v": [
+       "have",
+       "are having",
+       "has",
+       "having"
+      ],
+      "t": 0
+     },
+     {
+      "s": "I ___ English at the moment, please wait.",
+      "v": [
+       "am studying",
+       "study",
+       "studies",
+       "studied"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Water ___ at 100 degrees Celsius.",
+      "v": [
+       "boils",
+       "is boiling",
+       "boil",
+       "boiled"
+      ],
+      "t": 0,
+      "i": "Tabiat qonuniyatlari Present Simple bilan ifodalanadi."
+     }
+    ]
+   }
+  },
+  {
+   "id": "soz",
+   "e": "🔤",
+   "nomi": "So‘z va tarjima",
+   "tur": "moslash",
+   "p": {
+    "savol": "Inglizcha so‘zni uning tarjimasi bilan moslang.",
+    "juft": [
+     [
+      "equipment",
+      "jihoz, uskuna"
+     ],
+     [
+      "safety",
+      "xavfsizlik"
+     ],
+     [
+      "engineer",
+      "muhandis"
+     ],
+     [
+      "skill",
+      "ko‘nikma, mahorat"
+     ],
+     [
+      "workshop",
+      "ustaxona"
+     ],
+     [
+      "machine",
+      "mashina, dastgoh"
+     ],
+     [
+      "measure",
+      "o‘lchamoq"
+     ],
+     [
+      "repair",
+      "ta’mirlash"
+     ]
+    ]
+   }
+  }
+ ],
+ "test": [
+  {
+   "s": "«Safety» so‘zining tarjimasi?",
+   "v": [
+    "Xavfsizlik",
+    "Jihoz",
+    "Ustaxona",
+    "Mijoz"
+   ],
+   "t": 0
+  }
+ ]
+}

@@ -1,0 +1,499 @@
+{
+ "id": "avtomobil-tuzilishi",
+ "nomi": "Avtomobil tuzilishi laboratoriyasi",
+ "e": "🚗",
+ "xona": "avto",
+ "fanlar": [
+  "avtomobil-tuzilishi"
+ ],
+ "tavsif": "Avtomobilning asosiy agregatlari: dvigatel, transmissiya, yurish qismi va boshqaruv mexanizmlari. Interaktiv shassi sxemasi va to‘rt taktli dvigatel animatsiyasi.",
+ "xavfsizlik": [
+  "Avtomobil ostida ishlashda uni ko‘targich yoki mustahkam tirgaklarga (kozyol) qo‘ying — faqat domkratga ishonmang.",
+  "Dvigatel ishlab turganda aylanuvchi qismlarga (belbog‘, ventilyator) yaqinlashmang.",
+  "Issiq dvigatelda radiator qopqog‘ini ochmang — qaynoq antifriz otilib chiqadi."
+ ],
+ "jihozlar": [
+  {
+   "id": "dvigatel",
+   "e": "🔩",
+   "nomi": "Ichki yonuv dvigateli",
+   "vazifa": "Yonilg‘i-havo aralashmasi yonishidan hosil bo‘lgan issiqlik energiyasini mexanik ishga aylantiradi.",
+   "tuzilish": [
+    "Silindrlar bloki va kallagi",
+    "Krivoship-shatun mexanizmi (porshen, shatun, tirsakli val)",
+    "Gaz taqsimlash mexanizmi (klapanlar, taqsimlash vali)",
+    "Yonilg‘i ta’minlash tizimi",
+    "Moylash tizimi",
+    "Sovitish tizimi",
+    "O‘t oldirish tizimi"
+   ],
+   "ishlatish": [
+    "Ishga tushirishdan oldin moy va sovituvchi suyuqlik sathini tekshiring.",
+    "Dvigatelni ishga tushirib, nazorat chiroqlari o‘chganini kuzating.",
+    "Qizdirib, so‘ng yuklama bering."
+   ],
+   "sim": "dvigatel"
+  },
+  {
+   "id": "sseplenie",
+   "e": "⚙️",
+   "nomi": "Ilashish muftasi (sseplenie)",
+   "vazifa": "Dvigatelni transmissiyadan vaqtincha ajratib, joyidan silliq qo‘zg‘alish va uzatmalarni almashtirishni ta’minlaydi.",
+   "tuzilish": [
+    "Maxovik",
+    "Yetaklanuvchi disk (friksion qoplamali)",
+    "Bosim diski (korzina)",
+    "Ajratish podshipnigi",
+    "Yuritma (pedal, tros yoki gidravlika)"
+   ],
+   "ishlatish": [
+    "Pedalni bosganda dvigatel va uzatmalar qutisi ajraladi.",
+    "Uzatmani qo‘shib, pedalni silliq qo‘yib yuboring."
+   ],
+   "xavfsizlik": [
+    "Pedalni yarim bosilgan holda uzoq ushlab turmang — disk tez yeyiladi."
+   ]
+  },
+  {
+   "id": "kpp",
+   "e": "🕹️",
+   "nomi": "Uzatmalar qutisi",
+   "vazifa": "Dvigatel momenti va g‘ildiraklar aylanish tezligi nisbatini o‘zgartiradi, orqaga yurishni ta’minlaydi.",
+   "tuzilish": [
+    "Karter",
+    "Birlamchi, ikkilamchi va oraliq vallar",
+    "Shesternyalar",
+    "Sinxronizatorlar",
+    "Almashtirish mexanizmi"
+   ],
+   "ishlatish": [
+    "Joyidan 1-uzatmada qo‘zg‘aling.",
+    "Tezlik oshgani sari yuqori uzatmaga o‘ting.",
+    "Orqaga yurishni faqat to‘liq to‘xtagach qo‘shing."
+   ]
+  },
+  {
+   "id": "kardan",
+   "e": "🔗",
+   "nomi": "Kardan uzatma",
+   "vazifa": "Uzatmalar qutisidan yetakchi ko‘prikka momentni o‘zgaruvchan burchak ostida uzatadi.",
+   "tuzilish": [
+    "Kardan vali",
+    "Kardan sharnirlari (krestovina)",
+    "Shlitsli birikma",
+    "Oraliq tayanch"
+   ],
+   "ishlatish": [
+    "Sharnirlardagi lyuft va moylanishni tekshiring."
+   ]
+  },
+  {
+   "id": "differensial",
+   "e": "⚙️",
+   "nomi": "Bosh uzatma va differensial",
+   "vazifa": "Momentni oshiradi va burilishda yetakchi g‘ildiraklarning turli tezlikda aylanishiga imkon beradi.",
+   "tuzilish": [
+    "Yetakchi va yetaklanuvchi shesternya",
+    "Differensial korpusi",
+    "Satellitlar",
+    "Yarim o‘q shesternyalari"
+   ],
+   "ishlatish": [
+    "Karterdagi moy sathini tekshiring."
+   ]
+  },
+  {
+   "id": "tormoz",
+   "e": "🛑",
+   "nomi": "Tormoz tizimi",
+   "vazifa": "Avtomobil tezligini kamaytiradi, to‘xtatadi va joyida ushlab turadi.",
+   "tuzilish": [
+    "Tormoz pedali va vakuum kuchaytirgich",
+    "Bosh tormoz silindri",
+    "Quvurlar va shlanglar",
+    "Disk va kolodkalar",
+    "Qo‘l tormozi"
+   ],
+   "ishlatish": [
+    "Tormoz suyuqligi sathini bachokdan tekshiring.",
+    "Kolodkalar yeyilishini kuzating.",
+    "Pedal «yumshab» qolsa, tizimdagi havoni chiqaring."
+   ],
+   "xavfsizlik": [
+    "Tormoz nosoz bo‘lsa harakatlanish taqiqlanadi."
+   ]
+  },
+  {
+   "id": "rul",
+   "e": "🎡",
+   "nomi": "Rul boshqaruvi",
+   "vazifa": "Rul g‘ildiragidan oldingi g‘ildiraklarga burilish harakatini uzatadi.",
+   "tuzilish": [
+    "Rul g‘ildiragi va vali",
+    "Rul mexanizmi (reyka)",
+    "Rul tortqilari va uchliklar",
+    "Gidro yoki elektr kuchaytirgich"
+   ],
+   "ishlatish": [
+    "Rul lyuftini tekshiring.",
+    "Tortqi uchliklarining changdan himoya rezinalari butunligini kuzating."
+   ]
+  },
+  {
+   "id": "osma",
+   "e": "🛞",
+   "nomi": "Osma (podveska)",
+   "vazifa": "Kuzovni g‘ildiraklar bilan elastik bog‘laydi, zarbalarni yumshatadi va tebranishlarni so‘ndiradi.",
+   "tuzilish": [
+    "Prujinalar yoki ressorlar",
+    "Amortizatorlar",
+    "Richaglar",
+    "Stabilizator",
+    "Sharovoy tayanchlar"
+   ],
+   "ishlatish": [
+    "Amortizatordan moy oqmasligini tekshiring.",
+    "Notekis yo‘lda tezlikni kamaytiring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "shassi",
+   "e": "🚗",
+   "nomi": "Avtomobil agregatlari sxemasi",
+   "tur": "sxema",
+   "izoh": "Sxemadagi agregatni bosing — vazifasi chiqadi. «Topish» rejimida agregatlarni o‘zingiz toping.",
+   "p": {
+    "w": 400,
+    "h": 280,
+    "sh": [
+     {
+      "t": "r",
+      "g": [
+       40,
+       30,
+       320,
+       200,
+       40
+      ],
+      "f": "#eef2f6",
+      "s": "#9aa6b4"
+     },
+     {
+      "t": "x",
+      "g": [
+       200,
+       270,
+       "Avtomobil (ustdan ko‘rinish) — old tomoni chapda",
+       11
+      ],
+      "f": "#556"
+     },
+     {
+      "t": "r",
+      "g": [
+       72,
+       16,
+       50,
+       26,
+       6
+      ],
+      "n": "G‘ildirak (shina, disk, tormoz mexanizmi)",
+      "i": "Avtomobilni yo‘l bilan bog‘laydi; ichida tormoz mexanizmi (disk yoki baraban) joylashgan.",
+      "f": "#333"
+     },
+     {
+      "t": "r",
+      "g": [
+       72,
+       218,
+       50,
+       26,
+       6
+      ],
+      "n": "G‘ildirak (shina, disk, tormoz mexanizmi)",
+      "f": "#333"
+     },
+     {
+      "t": "r",
+      "g": [
+       282,
+       16,
+       50,
+       26,
+       6
+      ],
+      "n": "G‘ildirak (shina, disk, tormoz mexanizmi)",
+      "f": "#333"
+     },
+     {
+      "t": "r",
+      "g": [
+       282,
+       218,
+       50,
+       26,
+       6
+      ],
+      "n": "G‘ildirak (shina, disk, tormoz mexanizmi)",
+      "f": "#333"
+     },
+     {
+      "t": "r",
+      "g": [
+       46,
+       92,
+       12,
+       76
+      ],
+      "n": "Radiator (sovitish tizimi)",
+      "i": "Dvigateldan qizigan sovituvchi suyuqlikni havo oqimi yordamida sovitadi.",
+      "f": "#9fc5e8"
+     },
+     {
+      "t": "r",
+      "g": [
+       64,
+       86,
+       74,
+       88
+      ],
+      "n": "Dvigatel",
+      "i": "Yonilg‘ining issiqlik energiyasini mexanik ishga aylantiradi; tirsakli val aylanma harakat beradi.",
+      "f": "#c9d3de",
+      "lb": [
+       101,
+       134,
+       10,
+       "Dvigatel"
+      ]
+     },
+     {
+      "t": "r",
+      "g": [
+       139,
+       104,
+       9,
+       52
+      ],
+      "n": "Ilashish muftasi (sseplenie)",
+      "i": "Dvigatelni uzatmalar qutisidan vaqtincha ajratib, silliq qo‘zg‘alish va uzatma almashtirishni ta’minlaydi.",
+      "f": "#f6c177"
+     },
+     {
+      "t": "r",
+      "g": [
+       149,
+       104,
+       46,
+       52
+      ],
+      "n": "Uzatmalar qutisi",
+      "i": "Tortish kuchi va tezlikni o‘zgartiradi, orqaga yurishni va neytral holatni ta’minlaydi.",
+      "f": "#b5cde6",
+      "lb": [
+       172,
+       134,
+       9,
+       "KPP"
+      ]
+     },
+     {
+      "t": "r",
+      "g": [
+       195,
+       124,
+       112,
+       12
+      ],
+      "n": "Kardan uzatma",
+      "i": "Uzatmalar qutisidan bosh uzatmaga burchak va masofa o‘zgarganda ham aylanma harakat uzatadi.",
+      "f": "#d9c7a0"
+     },
+     {
+      "t": "r",
+      "g": [
+       315,
+       44,
+       10,
+       172
+      ],
+      "n": "Yarim o‘qlar (yetakchi ko‘prik)",
+      "i": "Bosh uzatma va differensialdan yetakchi g‘ildiraklarga aylanma harakat uzatadi.",
+      "f": "#c4b28c"
+     },
+     {
+      "t": "c",
+      "g": [
+       320,
+       130,
+       17
+      ],
+      "n": "Bosh uzatma va differensial",
+      "i": "Aylanishlar sonini kamaytirib, momentni oshiradi; burilishda g‘ildiraklarning har xil tezlikda aylanishiga imkon beradi.",
+      "f": "#e8c27a"
+     },
+     {
+      "t": "c",
+      "g": [
+       205,
+       78,
+       14
+      ],
+      "n": "Rul boshqaruvi",
+      "i": "Rul g‘ildiragi va rul mexanizmi orqali oldingi g‘ildiraklarni burib, harakat yo‘nalishini o‘zgartiradi.",
+      "f": "#fff"
+     },
+     {
+      "t": "r",
+      "g": [
+       72,
+       46,
+       20,
+       12
+      ],
+      "n": "Osma (amortizator va prujina)",
+      "i": "Yo‘l notekisliklaridan kelgan zarbalarni yumshatadi va tebranishlarni so‘ndiradi.",
+      "f": "#8fbf8f"
+     },
+     {
+      "t": "r",
+      "g": [
+       72,
+       202,
+       20,
+       12
+      ],
+      "n": "Osma (amortizator va prujina)",
+      "f": "#8fbf8f"
+     },
+     {
+      "t": "r",
+      "g": [
+       286,
+       46,
+       20,
+       12
+      ],
+      "n": "Osma (amortizator va prujina)",
+      "f": "#8fbf8f"
+     },
+     {
+      "t": "r",
+      "g": [
+       286,
+       202,
+       20,
+       12
+      ],
+      "n": "Osma (amortizator va prujina)",
+      "f": "#8fbf8f"
+     },
+     {
+      "t": "r",
+      "g": [
+       150,
+       58,
+       30,
+       22
+      ],
+      "n": "Akkumulyator batareyasi",
+      "i": "Dvigatelni ishga tushirish (starter) uchun elektr energiyasini saqlaydi.",
+      "f": "#555"
+     },
+     {
+      "t": "r",
+      "g": [
+       245,
+       168,
+       52,
+       36
+      ],
+      "n": "Yonilg‘i baki",
+      "i": "Yonilg‘i zaxirasini saqlaydi; ichida yonilg‘i nasosi va sath datchigi joylashgan.",
+      "f": "#f4b6a6"
+     },
+     {
+      "t": "r",
+      "g": [
+       150,
+       178,
+       200,
+       6
+      ],
+      "n": "Chiqarish tizimi (glushitel)",
+      "i": "Ishlatilgan gazlarni chiqaradi, shovqinni pasaytiradi; katalizator zararli moddalarni kamaytiradi.",
+      "f": "#888"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dvigatel",
+   "e": "🔩",
+   "nomi": "To‘rt taktli dvigatelning ishlashi",
+   "tur": "dvigatel",
+   "izoh": "So‘rish, siqish, ishchi yo‘l va chiqarish taktlarini animatsiyada kuzating.",
+   "p": {}
+  },
+  {
+   "id": "agregat",
+   "e": "⚙️",
+   "nomi": "Agregat va vazifasi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Agregatni vazifasi bilan moslang.",
+    "juft": [
+     [
+      "Ilashish muftasi",
+      "Dvigatelni transmissiyadan vaqtincha ajratadi"
+     ],
+     [
+      "Uzatmalar qutisi",
+      "Tortish kuchi va tezlikni o‘zgartiradi"
+     ],
+     [
+      "Differensial",
+      "Burilishda g‘ildiraklarni turli tezlikda aylantiradi"
+     ],
+     [
+      "Amortizator",
+      "Kuzov tebranishlarini so‘ndiradi"
+     ],
+     [
+      "Radiator",
+      "Sovituvchi suyuqlikni sovitadi"
+     ],
+     [
+      "Kardan uzatma",
+      "Momentni burchak ostida uzatadi"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Avtomobil tuzilishi",
+ "test": [
+  {
+   "s": "Bir ish siklida tirsakli val necha marta aylanadi (to‘rt taktli dvigatel)?",
+   "v": [
+    "2",
+    "1",
+    "4",
+    "0,5"
+   ],
+   "t": 0
+  },
+  {
+   "s": "Qaysi taktda foydali ish bajariladi?",
+   "v": [
+    "Ishchi yo‘l",
+    "So‘rish",
+    "Siqish",
+    "Chiqarish"
+   ],
+   "t": 0
+  }
+ ]
+}

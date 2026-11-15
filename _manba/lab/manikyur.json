@@ -1,0 +1,278 @@
+{
+ "id": "manikyur",
+ "nomi": "Manikyur va pedikyur kabineti",
+ "e": "💅",
+ "xona": "salon",
+ "fanlar": [
+  "manikyur-va-pedikyur-ishlari"
+ ],
+ "tavsif": "Manikyur apparati, UF/LED lampa, asboblar, tirnoq egovlari, gel-lak va sterilizator; klassik manikyur bosqichlari, gel-lak qoplash va gigiyena qoidalari bo‘yicha mashqlar.",
+ "xavfsizlik": [
+  "Har bir mijozdan keyin asboblarni yuving, dezinfeksiya qiling yoki sterilizatsiya qiling; peleringa va sochiq har mijozga toza bo‘lsin.",
+  "Har bir mijoz uchun sterillangan asboblar va bir martalik egovlardan foydalaning.",
+  "Tirnoq yoki terida zamburug‘, yallig‘lanish, yara bo‘lsa — xizmat ko‘rsatmang, shifokorga yo‘llang.",
+  "Frezer bilan ishlashda niqob va ko‘zoynak taqing — chang nafas yo‘liga tushmasin."
+ ],
+ "jihozlar": [
+  {
+   "id": "apparat",
+   "e": "🛠️",
+   "nomi": "Manikyur apparati (frezer)",
+   "vazifa": "Aylanuvchi frezalar bilan kutikula, tirnoq yuzasi va qadoqlarni ishlov beradi.",
+   "tuzilish": [
+    "Boshqaruv bloki (tezlik, yo‘nalish)",
+    "Ruchka",
+    "Frezalar to‘plami (keramik, olmos, karbid)",
+    "Pedal"
+   ],
+   "ishlatish": [
+    "Frezani vazifaga mos tanlang.",
+    "Kichik tezlikdan boshlang.",
+    "Frezani teriga bosmasdan, doimiy harakatda ishlating."
+   ],
+   "xavfsizlik": [
+    "Bir joyda uzoq ushlab turmang — tirnoq qiziydi va shikastlanadi."
+   ]
+  },
+  {
+   "id": "lampa",
+   "e": "💡",
+   "nomi": "UF/LED lampa",
+   "vazifa": "Gel va gel-lakni polimerlaydi (qotiradi).",
+   "tuzilish": [
+    "Diodlar (LED) yoki UF-lampalar",
+    "Taymer (30, 60, 120 s)",
+    "Sensor"
+   ],
+   "ishlatish": [
+    "Har qatlamni ko‘rsatmadagi vaqt bo‘yicha quriting.",
+    "Qo‘lni lampa ichida to‘g‘ri joylang."
+   ],
+   "sim": "gellak"
+  },
+  {
+   "id": "asboblar",
+   "e": "✂️",
+   "nomi": "Manikyur asboblari",
+   "vazifa": "Kusachka (kutikula uchun), pusher (surgich), manikyur qaychisi, pinset.",
+   "tuzilish": [
+    "Kusachka",
+    "Pusher (kurakcha)",
+    "Manikyur qaychisi",
+    "Pinset"
+   ],
+   "ishlatish": [
+    "Kutikulani avval yumshatib, pusher bilan suring.",
+    "Faqat o‘lik terini kesing."
+   ],
+   "xavfsizlik": [
+    "Har mijozdan keyin sterilizatsiya qiling."
+   ]
+  },
+  {
+   "id": "egov",
+   "e": "📏",
+   "nomi": "Tirnoq egovi (pilka) va baf",
+   "vazifa": "Tirnoqqa shakl berish va yuzasini silliqlash.",
+   "tuzilish": [
+    "Abrazivlik (grit): 100/180 — sun’iy tirnoq, 180/240 — tabiiy tirnoq",
+    "Baf — silliqlash"
+   ],
+   "ishlatish": [
+    "Tabiiy tirnoqni bir yo‘nalishda egovlang.",
+    "Bir martalik egovlarni har mijozga yangisini oling."
+   ]
+  },
+  {
+   "id": "gellak",
+   "e": "💅",
+   "nomi": "Gel-lak tizimi",
+   "vazifa": "Baza, rangli gel-lak va top (ustki qoplama) — bir necha hafta saqlanadigan qoplama.",
+   "tuzilish": [
+    "Degidrator va praymer",
+    "Baza",
+    "Rangli gel-lak",
+    "Top",
+    "Yopishqoq qatlamni olish suyuqligi"
+   ],
+   "ishlatish": [
+    "Tirnoq yuzasini tayyorlang (yaltirog‘ini oling, yog‘sizlantiring).",
+    "Yupqa qatlamlar bilan surting.",
+    "Har qatlamni lampada quriting."
+   ],
+   "sim": "gellak"
+  },
+  {
+   "id": "sterilizator",
+   "e": "🔆",
+   "nomi": "Quruq issiqlik sterilizatori",
+   "vazifa": "Metall manikyur asboblarini to‘liq sterillaydi.",
+   "tuzilish": [
+    "Kamera",
+    "Termometr va taymer"
+   ],
+   "ishlatish": [
+    "Asboblarni avval yuvib, dezinfeksiya qiling.",
+    "Quruq holda sterilizatorga joylang.",
+    "Kraft-paketlarda saqlang."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "manikyur",
+   "e": "💅",
+   "nomi": "Klassik (qirqiladigan) manikyur",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Usta va mijoz qo‘llarini antiseptik bilan ishlash",
+     "Eski lakni olib tashlash",
+     "Tirnoqqa egov bilan shakl berish",
+     "Qo‘llarni iliq vannachada yumshatish",
+     "Kutikulani pusher bilan surish",
+     "Kutikula va pterigiyni kusachka bilan kesish",
+     "Kutikulaga moy surtish",
+     "Lak yoki qoplama surtish"
+    ]
+   }
+  },
+  {
+   "id": "gellak",
+   "e": "💡",
+   "nomi": "Gel-lak qoplash",
+   "tur": "qurilma",
+   "p": {
+    "nomi": "UF/LED lampa",
+    "e": "💡",
+    "ekran": "Lampa: o‘chiq",
+    "maqsad": "Gel-lakni to‘g‘ri qatlamlarda qoplash",
+    "boshqaruv": [
+     {
+      "id": "tayyor",
+      "n": "Yuzani tayyorlash (baf, degidrator)",
+      "e": "🧽"
+     },
+     {
+      "id": "baza",
+      "n": "Baza surtish",
+      "e": "1️⃣"
+     },
+     {
+      "id": "lampa",
+      "n": "Lampada quritish",
+      "e": "💡"
+     },
+     {
+      "id": "rang",
+      "n": "Rangli gel-lak surtish",
+      "e": "🎨"
+     },
+     {
+      "id": "top",
+      "n": "Top surtish",
+      "e": "✨"
+     },
+     {
+      "id": "yopishqoq",
+      "n": "Yopishqoq qatlamni olish",
+      "e": "🧻"
+     }
+    ],
+    "qadamlar": [
+     {
+      "v": "Tirnoq yuzasini tayyorlang.",
+      "t": "tayyor",
+      "j": "Yaltiroq qatlam olinib, yog‘sizlantirildi — qoplama yaxshi yopishadi.",
+      "ekran": "Tayyorgarlik ✓"
+     },
+     {
+      "v": "Baza surting.",
+      "t": "baza",
+      "j": "Yupqa qatlam, kutikulaga tegmasdan.",
+      "ekran": "Baza: surtildi"
+     },
+     {
+      "v": "Bazani quriting.",
+      "t": "lampa",
+      "j": "LED lampada odatda 30–60 soniya (ko‘rsatmaga ko‘ra).",
+      "ekran": "Baza: qotdi ✓",
+      "chiroq": "yashil"
+     },
+     {
+      "v": "Rangni surting.",
+      "t": "rang",
+      "j": "Ikki yupqa qatlam — har biri alohida quritiladi.",
+      "ekran": "Rang: surtildi"
+     },
+     {
+      "v": "Rangni quriting.",
+      "t": "lampa",
+      "ekran": "Rang: qotdi ✓",
+      "chiroq": "yashil"
+     },
+     {
+      "v": "Top surting.",
+      "t": "top",
+      "j": "Tirnoq uchini ham qoplang (tortish).",
+      "ekran": "Top: surtildi"
+     },
+     {
+      "v": "Topni quriting.",
+      "t": "lampa",
+      "ekran": "Top: qotdi ✓",
+      "chiroq": "yashil"
+     },
+     {
+      "v": "Yopishqoq qatlamni oling.",
+      "t": "yopishqoq",
+      "j": "Agar top yopishqoq qatlamli bo‘lsa.",
+      "ekran": "Manikyur tayyor ✓",
+      "chiroq": "yashil"
+     }
+    ],
+    "xato": {
+     "rang": "Avval baza surtilib, quritilishi kerak.",
+     "top": "Avval rang qatlamlarini quriting.",
+     "lampa": "Lampada faqat surtilgan qatlam quritiladi."
+    }
+   }
+  },
+  {
+   "id": "gigiyena",
+   "e": "🧼",
+   "nomi": "Gigiyena va kontrindikatsiyalar",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Mijoz tirnog‘i sarg‘aygan, qalinlashgan va uqalanmoqda.",
+      "v": [
+       "Zamburug‘ kasalligi belgisi bo‘lishi mumkin — xizmat ko‘rsatmay, shifokorga yo‘llayman",
+       "Gel-lak bilan yopib qo‘yaman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Bir martalik egov oldingi mijozda ishlatilgan.",
+      "v": [
+       "Uni tashlab, yangi egov olaman",
+       "Artib ishlataveraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Asboblar faqat dezinfeksiya eritmasida turdi, sterilizatsiya qilinmadi.",
+      "v": [
+       "Sterilizatsiyadan o‘tkazaman — teri butunligi buzilishi mumkin bo‘lgan asboblar steril bo‘lishi shart",
+       "Shu holda ishlataman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Manikyur"
+}

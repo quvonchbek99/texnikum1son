@@ -1,0 +1,400 @@
+{
+ "id": "mehnat-muhofazasi",
+ "nomi": "Mehnat muhofazasi laboratoriyasi",
+ "e": "⛑️",
+ "xona": "ustaxona",
+ "fanlar": [
+  "mehnat-muhofazasi-va-xavfsizlik-texnikasi"
+ ],
+ "tavsif": "Shaxsiy himoya vositalari, xavfsizlik belgilari, o‘t o‘chirish va birinchi yordam vositalari bilan tanishish; o‘t o‘chirgichdan foydalanish va xavfli vaziyatlarda to‘g‘ri qaror qabul qilish mashqlari.",
+ "xavfsizlik": [
+  "Ish o‘rnida faqat shaxsiy himoya vositalarida (SHHV) ishlang.",
+  "Nosoz asbob va jihoz bilan ishlash taqiqlanadi — darhol rahbarga xabar bering.",
+  "Elektr jihozlarini nam qo‘l bilan ushlamang, simlarning izolyatsiyasi butunligini tekshiring.",
+  "Evakuatsiya yo‘llari va chiqishlarni to‘sib qo‘ymang.",
+  "Baxtsiz hodisa yuz bersa: jabrlanganga yordam bering, 103 yoki 112 ga qo‘ng‘iroq qiling va rahbarga xabar bering.",
+  "Yong‘in sodir bo‘lsa — 101 ga qo‘ng‘iroq qiling."
+ ],
+ "jihozlar": [
+  {
+   "id": "kaska",
+   "e": "⛑️",
+   "nomi": "Himoya kaskasi",
+   "vazifa": "Boshni yuqoridan tushadigan narsalar, zarba va elektr tokidan himoya qiladi.",
+   "tuzilish": [
+    "Korpus (qattiq plastik)",
+    "Ichki amortizatsiya to‘ri",
+    "O‘lcham regulyatori",
+    "Iyak tasmasi"
+   ],
+   "ishlatish": [
+    "Korpusda yoriq yo‘qligini tekshiring.",
+    "O‘lchamni boshga moslang.",
+    "Iyak tasmasini mahkamlang."
+   ],
+   "xavfsizlik": [
+    "Zarba olgan yoki yorilgan kaskani almashtiring."
+   ]
+  },
+  {
+   "id": "kozoynak",
+   "e": "🥽",
+   "nomi": "Himoya ko‘zoynagi va yuz niqobi",
+   "vazifa": "Ko‘zni uchqun, qirindi, chang va kimyoviy sachrashlardan himoya qiladi.",
+   "tuzilish": [
+    "Zarbaga chidamli oyna",
+    "Yon himoya",
+    "Bosh tasmasi yoki dasta"
+   ],
+   "ishlatish": [
+    "Ish turiga mos ko‘zoynak tanlang.",
+    "Oynani toza saqlang.",
+    "Ish boshlanishidan oldin taqing."
+   ]
+  },
+  {
+   "id": "respirator",
+   "e": "😷",
+   "nomi": "Respirator",
+   "vazifa": "Nafas olish organlarini chang, aerozol va ba’zi zararli bug‘lardan himoya qiladi.",
+   "tuzilish": [
+    "Yarim niqob",
+    "Filtr",
+    "Nafas chiqarish klapani",
+    "Bosh tasmalari"
+   ],
+   "ishlatish": [
+    "Filtr turini zararli modda turiga mos tanlang.",
+    "Niqob yuzga zich yopishganini tekshiring.",
+    "Filtrni muddatida almashtiring."
+   ],
+   "xavfsizlik": [
+    "Respirator kislorod yetishmaydigan joyda himoya qilmaydi."
+   ]
+  },
+  {
+   "id": "dielektrik",
+   "e": "🧤",
+   "nomi": "Dielektrik qo‘lqop va gilamcha",
+   "vazifa": "Elektr qurilmalarida ishlaganda tok urishidan himoya qiluvchi izolyatsiyalovchi vositalar.",
+   "tuzilish": [
+    "Rezina qo‘lqop (sinov muddati shtampi bilan)",
+    "Dielektrik gilamcha",
+    "Dielektrik botlar"
+   ],
+   "ishlatish": [
+    "Sinov muddati o‘tmaganini shtampdan tekshiring.",
+    "Qo‘lqopni o‘ramidan havo kiritib, teshik yo‘qligini tekshiring.",
+    "Kiyimning yengini qo‘lqop ichiga kiritmang."
+   ],
+   "xavfsizlik": [
+    "Teshilgan yoki muddati o‘tgan qo‘lqopdan foydalanmang."
+   ]
+  },
+  {
+   "id": "otochirgich",
+   "e": "🧯",
+   "nomi": "O‘t o‘chirgich (kukunli)",
+   "vazifa": "Boshlang‘ich yong‘inlarni o‘chirish uchun. Kukunli o‘t o‘chirgichlar A, B, C sinf yong‘inlarida va kuchlanish ostidagi (1000 V gacha) elektr qurilmalarida qo‘llanadi.",
+   "tuzilish": [
+    "Ballon",
+    "Bosim ko‘rsatkichi (manometr)",
+    "Plomba va cheka",
+    "Richag (ishga tushirish dastagi)",
+    "Shlang va nasadka"
+   ],
+   "ishlatish": [
+    "Plombani uzing va chekani sug‘uring.",
+    "Shamolga orqa o‘girib, 2–3 m ga yaqinlashing.",
+    "Shlangni alanga asosiga yo‘naltiring.",
+    "Richagni bosing va olovni supurib o‘chiring."
+   ],
+   "xavfsizlik": [
+    "Manometr strelkasi yashil zonada bo‘lishini muntazam tekshiring."
+   ],
+   "sim": "otochirgich"
+  },
+  {
+   "id": "aptechka",
+   "e": "🩹",
+   "nomi": "Birinchi yordam qutichasi",
+   "vazifa": "Ish joyida jarohatlanganda dastlabki yordam ko‘rsatish uchun dori va bog‘lov vositalari to‘plami.",
+   "tuzilish": [
+    "Steril bint va salfetkalar",
+    "Bakteritsid plastir",
+    "Gemostatik jgut",
+    "Antiseptik",
+    "Qaychi",
+    "Bir martalik qo‘lqop"
+   ],
+   "ishlatish": [
+    "Qutichaning joyi hammaga ma’lum bo‘lsin.",
+    "Ishlatilgan vositalarni o‘z vaqtida to‘ldiring.",
+    "Yaroqlilik muddatini tekshirib boring."
+   ]
+  },
+  {
+   "id": "belgilar",
+   "e": "⚠️",
+   "nomi": "Xavfsizlik belgilari",
+   "vazifa": "Xavf haqida ogohlantiradi, xavfli harakatni taqiqlaydi, majburiy talabni ko‘rsatadi yoki xavfsiz yo‘lni bildiradi.",
+   "tuzilish": [
+    "Taqiqlovchi — qizil hoshiyali doira",
+    "Ogohlantiruvchi — sariq uchburchak",
+    "Buyuruvchi (majburiy) — ko‘k doira",
+    "Evakuatsiya va tibbiy — yashil to‘rtburchak",
+    "Yong‘in xavfsizligi vositalari — qizil to‘rtburchak"
+   ],
+   "ishlatish": [
+    "Ish joyidagi belgilarni o‘rganing va ularga amal qiling.",
+    "Belgilarni to‘sib qo‘ymang."
+   ],
+   "sim": "belgi"
+  }
+ ],
+ "sim": [
+  {
+   "id": "otochirgich",
+   "e": "🧯",
+   "nomi": "O‘t o‘chirgichdan foydalanish",
+   "tur": "qurilma",
+   "izoh": "PASS usuli: sug‘ur — yo‘naltir — bos — supur.",
+   "p": {
+    "nomi": "Kukunli o‘t o‘chirgich (OP-4)",
+    "e": "🧯",
+    "ekran": "Bosim ko‘rsatkichi: yashil zona\nPlomba: butun",
+    "maqsad": "Kichik yong‘in o‘chog‘ini xavfsiz o‘chirish",
+    "boshqaruv": [
+     {
+      "id": "tel",
+      "n": "101 ga qo‘ng‘iroq / signal",
+      "e": "📞"
+     },
+     {
+      "id": "chek",
+      "n": "Plombani uzib, chekani sug‘urish",
+      "e": "📌"
+     },
+     {
+      "id": "yon",
+      "n": "Shamolga orqa o‘girib, 2–3 m ga yaqinlashish",
+      "e": "🧍"
+     },
+     {
+      "id": "shlang",
+      "n": "Shlangni alanga asosiga yo‘naltirish",
+      "e": "🎯"
+     },
+     {
+      "id": "richag",
+      "n": "Richagni bosish",
+      "e": "✊"
+     },
+     {
+      "id": "supur",
+      "n": "Chetdan boshlab supurib o‘chirish",
+      "e": "↔️"
+     },
+     {
+      "id": "suv",
+      "n": "Elektr qurilmaga suv sepish",
+      "e": "💦"
+     }
+    ],
+    "qadamlar": [
+     {
+      "v": "Yong‘in haqida xabar bering (101) va atrofdagilarni ogohlantiring.",
+      "t": "tel",
+      "j": "Avval yong‘in xizmatini chaqiring, keyin o‘chirishga kirishing.",
+      "ekran": "Yong‘in xizmati chaqirildi"
+     },
+     {
+      "v": "O‘t o‘chirgichni tayyorlang.",
+      "t": "chek",
+      "j": "Plomba uzilib, cheka sug‘urildi — o‘t o‘chirgich ishga tayyor.",
+      "ekran": "Cheka: sug‘urilgan"
+     },
+     {
+      "v": "To‘g‘ri holatda yaqinlashing.",
+      "t": "yon",
+      "j": "Shamol orqadan bo‘lsa, kukun va tutun sizga qaytmaydi.",
+      "ekran": "Masofa: 2–3 m"
+     },
+     {
+      "v": "Shlangni yo‘naltiring.",
+      "t": "shlang",
+      "j": "Olovning tepasiga emas, yonayotgan narsa (alanga asosi) ga qaratiladi.",
+      "ekran": "Nishon: alanga asosi"
+     },
+     {
+      "v": "O‘t o‘chirgichni ishga tushiring.",
+      "t": "richag",
+      "j": "Kukun otilib chiqa boshladi (OP-4 taxminan 10–15 soniya ishlaydi).",
+      "ekran": "Kukun otilmoqda…",
+      "chiroq": "sariq",
+      "aylan": true
+     },
+     {
+      "v": "Olovni o‘chiring.",
+      "t": "supur",
+      "j": "Yaqin chetdan boshlab supurib, olov to‘liq o‘chguncha davom eting.",
+      "ekran": "Olov o‘chirildi ✓",
+      "chiroq": "yashil",
+      "aylan": false
+     }
+    ],
+    "xato": {
+     "suv": "Kuchlanish ostidagi elektr jihozlarini suv bilan o‘chirish taqiqlanadi — tok urishi mumkin!",
+     "richag": "Avval cheka sug‘urilishi va to‘g‘ri yaqinlashish kerak."
+    }
+   }
+  },
+  {
+   "id": "belgi",
+   "e": "⚠️",
+   "nomi": "Xavfsizlik belgilari: rang va shakl",
+   "tur": "moslash",
+   "p": {
+    "savol": "Belgining ko‘rinishini uning ma’nosi bilan moslang.",
+    "juft": [
+     [
+      "Qizil hoshiyali doira, qiya chiziq",
+      "Taqiqlovchi belgi"
+     ],
+     [
+      "Sariq uchburchak, qora hoshiya",
+      "Ogohlantiruvchi belgi"
+     ],
+     [
+      "Ko‘k doira, oq rasm",
+      "Buyuruvchi (majburiy) belgi"
+     ],
+     [
+      "Yashil to‘rtburchak",
+      "Evakuatsiya yo‘li, birinchi yordam"
+     ],
+     [
+      "Qizil to‘rtburchak",
+      "Yong‘inga qarshi vositalar joyi"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "vaziyat",
+   "e": "🦺",
+   "nomi": "Xavfli vaziyatlar",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Hamkasbingizni elektr toki urdi va u simni qo‘yib yubora olmayapti.",
+      "v": [
+       "Elektr manbaini o‘chiraman yoki quruq yog‘och tayoq bilan simni uzoqlashtiraman",
+       "Darhol qo‘li bilan tortib olaman",
+       "Ustiga suv sepaman"
+      ],
+      "t": 0,
+      "i": "Avval jabrlanganni tok ta’siridan xalos qilish kerak, o‘zingizni xavf ostiga qo‘ymasdan."
+     },
+     {
+      "s": "Silliqlash (charxlash) dastgohida ishlashingiz kerak.",
+      "v": [
+       "Himoya ko‘zoynagini taqaman",
+       "Ko‘zoynaksiz, tez bajaraman",
+       "Faqat qo‘lqop kiyaman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Elektr qurilmada qisqa tutashuvdan yong‘in chiqdi.",
+      "v": [
+       "Kukunli yoki karbonat angidridli o‘t o‘chirgich bilan o‘chiraman",
+       "Suv sepaman",
+       "Ko‘pikli o‘t o‘chirgichni elektr qurilmaga yo‘naltiraman"
+      ],
+      "t": 0,
+      "i": "Kuchlanish ostidagi qurilmalarni suv yoki suv asosidagi vositalar bilan o‘chirish mumkin emas."
+     },
+     {
+      "s": "Ish o‘rningizdagi simning izolyatsiyasi yorilgan.",
+      "v": [
+       "Ishni to‘xtatib, rahbarga xabar beraman",
+       "Izolenta o‘rab ishlayveraman",
+       "E’tibor bermayman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "shhv",
+   "e": "🦺",
+   "nomi": "Ish turi va himoya vositasi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Ish turini kerakli shaxsiy himoya vositasi bilan moslang.",
+    "juft": [
+     [
+      "Payvandlash",
+      "Payvandchi niqobi"
+     ],
+     [
+      "Elektr shitida ishlash",
+      "Dielektrik qo‘lqop"
+     ],
+     [
+      "Bo‘yoq purkash",
+      "Respirator"
+     ],
+     [
+      "Qurilish maydoni",
+      "Himoya kaskasi"
+     ],
+     [
+      "Charxlash",
+      "Himoya ko‘zoynagi"
+     ],
+     [
+      "Shovqinli sex",
+      "Quloqchin (antifon)"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Mehnat muhofazasi",
+ "test": [
+  {
+   "s": "Kuchlanish ostidagi elektr qurilmasidagi yong‘inni nima bilan o‘chirib bo‘lmaydi?",
+   "v": [
+    "Suv bilan",
+    "Kukunli o‘t o‘chirgich bilan",
+    "Karbonat angidridli o‘t o‘chirgich bilan",
+    "Qum bilan"
+   ],
+   "t": 0
+  },
+  {
+   "s": "Yong‘in xizmati telefon raqami?",
+   "v": [
+    "101",
+    "102",
+    "103",
+    "104"
+   ],
+   "t": 0
+  },
+  {
+   "s": "Tez tibbiy yordam raqami?",
+   "v": [
+    "103",
+    "101",
+    "102",
+    "104"
+   ],
+   "t": 0
+  }
+ ]
+}

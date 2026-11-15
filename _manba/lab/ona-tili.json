@@ -1,0 +1,232 @@
+{
+ "id": "ona-tili",
+ "nomi": "Ona tili va adabiyot xonasi",
+ "e": "📚",
+ "xona": "sinf",
+ "fanlar": [
+  "ona-tili-va-adabiyoti"
+ ],
+ "tavsif": "Lug‘atlar, adabiyot galereyasi va nutq madaniyati vositalari; imlo, asar va muallif, gap tuzish bo‘yicha virtual mashqlar.",
+ "xavfsizlik": [
+  "Kitoblarni toza qo‘l bilan varaqlang, sahifalarni bukmang.",
+  "Kutubxona kitoblarini o‘z vaqtida qaytaring."
+ ],
+ "jihozlar": [
+  {
+   "id": "izohli",
+   "e": "📗",
+   "nomi": "O‘zbek tilining izohli lug‘ati",
+   "vazifa": "So‘zlarning ma’nosi, qo‘llanishi va ma’nodoshlarini izohlaydi.",
+   "tuzilish": [
+    "Bosh so‘z",
+    "So‘z turkumi belgisi",
+    "Ma’nolar va izohlar",
+    "Adabiy asarlardan misollar"
+   ],
+   "ishlatish": [
+    "So‘zni alifbo tartibida toping.",
+    "Barcha ma’nolarini o‘qing va matnga mosini tanlang.",
+    "Misol gaplarni tahlil qiling."
+   ]
+  },
+  {
+   "id": "imlo",
+   "e": "📕",
+   "nomi": "Imlo lug‘ati",
+   "vazifa": "So‘zlarning to‘g‘ri yozilishini ko‘rsatadi; lotin yozuvidagi o‘zbek alifbosi imlo qoidalariga asoslanadi.",
+   "tuzilish": [
+    "So‘zlar ro‘yxati",
+    "Imlo qoidalari ilovasi",
+    "Qo‘shma va juft so‘zlar yozilishi"
+   ],
+   "ishlatish": [
+    "Shubhali so‘zni lug‘atdan tekshiring.",
+    "Qo‘shma so‘zlarning qo‘shib yoki ajratib yozilishiga e’tibor bering.",
+    "Tutuq belgisi (’) va o‘, g‘ harflarini to‘g‘ri yozing."
+   ]
+  },
+  {
+   "id": "galereya",
+   "e": "🖼️",
+   "nomi": "Adiblar galereyasi",
+   "vazifa": "O‘zbek mumtoz va zamonaviy adabiyoti vakillari, ularning asosiy asarlari haqida ma’lumot stendlari.",
+   "tuzilish": [
+    "Alisher Navoiy — «Xamsa»",
+    "Zahiriddin Muhammad Bobur — «Boburnoma»",
+    "Abdulla Qodiriy — «O‘tkan kunlar»",
+    "Cho‘lpon — «Kecha va kunduz»",
+    "G‘afur G‘ulom — «Shum bola»",
+    "Oybek — «Navoiy» romani"
+   ],
+   "ishlatish": [
+    "Adibning hayot yo‘li bilan tanishing.",
+    "Asosiy asarlari va ularning g‘oyasini yozib oling.",
+    "Asardan parcha o‘qib, badiiy tasvir vositalarini toping."
+   ]
+  },
+  {
+   "id": "mikrofon",
+   "e": "🎤",
+   "nomi": "Notiqlik mikrofoni va yozib olish",
+   "vazifa": "Nutq madaniyati va ifodali o‘qishni mashq qilish: o‘z nutqingizni yozib olib, tahlil qilish.",
+   "tuzilish": [
+    "Mikrofon",
+    "Yozib olish ilovasi",
+    "Naushnik"
+   ],
+   "ishlatish": [
+    "Matnni avval ichingizda o‘qib, urg‘u va to‘xtamlarni belgilang.",
+    "Nutqingizni yozib oling.",
+    "Tinglab, talaffuz, tezlik va ohangni baholang."
+   ]
+  },
+  {
+   "id": "javon",
+   "e": "📚",
+   "nomi": "Badiiy adabiyot javoni",
+   "vazifa": "Dastur asosidagi badiiy asarlar to‘plami: nasr, she’riyat, dramaturgiya.",
+   "tuzilish": [
+    "Mumtoz adabiyot",
+    "XX asr adabiyoti",
+    "Zamonaviy adabiyot",
+    "Jahon adabiyoti tarjimalari"
+   ],
+   "ishlatish": [
+    "Asarni tanlab, o‘qish kundaligiga yozing.",
+    "Har bob yoki qismdan keyin qisqacha mazmun yozing.",
+    "Qahramonlarga tavsif bering."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "asar",
+   "e": "📖",
+   "nomi": "Asar va muallif",
+   "tur": "moslash",
+   "p": {
+    "savol": "Asarni uning muallifi bilan moslang.",
+    "juft": [
+     [
+      "«Xamsa»",
+      "Alisher Navoiy"
+     ],
+     [
+      "«Boburnoma»",
+      "Zahiriddin Muhammad Bobur"
+     ],
+     [
+      "«O‘tkan kunlar»",
+      "Abdulla Qodiriy"
+     ],
+     [
+      "«Kecha va kunduz»",
+      "Cho‘lpon"
+     ],
+     [
+      "«Shum bola»",
+      "G‘afur G‘ulom"
+     ],
+     [
+      "«Navoiy» (roman)",
+      "Oybek"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "imlo",
+   "e": "✍️",
+   "nomi": "To‘g‘ri yozilishini toping",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Qaysi so‘z to‘g‘ri yozilgan?",
+      "v": [
+       "ma’lumot",
+       "malumot",
+       "ma-lumot",
+       "ma’lumod"
+      ],
+      "t": 0,
+      "i": "Tutuq belgisi bilan: ma’lumot."
+     },
+     {
+      "s": "Qaysi so‘z to‘g‘ri yozilgan?",
+      "v": [
+       "mehnatkash",
+       "mexnatkash",
+       "mehnatkesh",
+       "mehnatkashh"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Qaysi qo‘shma so‘z to‘g‘ri yozilgan?",
+      "v": [
+       "toshbaqa",
+       "tosh baqa",
+       "tosh-baqa",
+       "toshbaqqa"
+      ],
+      "t": 0,
+      "i": "Ma’nosi yaxlit bo‘lgan qo‘shma otlar qo‘shib yoziladi."
+     },
+     {
+      "s": "Qaysi juft so‘z to‘g‘ri yozilgan?",
+      "v": [
+       "ota-ona",
+       "otaona",
+       "ota ona",
+       "ota, ona"
+      ],
+      "t": 0,
+      "i": "Juft so‘zlar chiziqcha bilan yoziladi."
+     },
+     {
+      "s": "Qaysi so‘z to‘g‘ri yozilgan?",
+      "v": [
+       "g‘isht",
+       "gisht",
+       "g‘ishd",
+       "g‘ishit"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "gap",
+   "e": "🧩",
+   "nomi": "Gap tuzish",
+   "tur": "tartib",
+   "izoh": "O‘zbek tilida kesim odatda gap oxirida keladi.",
+   "p": {
+    "savol": "So‘zlarni tanlab, to‘g‘ri tartibli gap tuzing.",
+    "qadamlar": [
+     "Talabalar",
+     "kecha",
+     "ustaxonada",
+     "yangi",
+     "jihozlar",
+     "bilan",
+     "tanishdilar."
+    ]
+   }
+  }
+ ],
+ "test": [
+  {
+   "s": "«O‘tkan kunlar» romani muallifi kim?",
+   "v": [
+    "Abdulla Qodiriy",
+    "Cho‘lpon",
+    "Oybek",
+    "G‘afur G‘ulom"
+   ],
+   "t": 0
+  }
+ ]
+}

@@ -1,0 +1,247 @@
+{
+ "id": "rastr-vektor",
+ "nomi": "Rastr va vektor grafika studiyasi",
+ "e": "🖌️",
+ "xona": "it",
+ "fanlar": [
+  "rastr-va-vektor-grafikasi-asoslari"
+ ],
+ "tavsif": "Rastr va vektor muharrirlar, grafik planshet, skaner, printer va kalibrlangan monitor; piksel va vektor farqi, RGB/CMY ranglar va chop etish ruxsati hisob-kitobi.",
+ "xavfsizlik": [
+  "Kompyuter va qurilmalarni nam qo‘l bilan ushlamang, ish joyida ovqatlanmang.",
+  "Monitordan 50–70 sm uzoqlikda, to‘g‘ri o‘tiring; har 45 daqiqada ko‘z va qo‘llarga dam bering.",
+  "Litsenziyalangan yoki erkin dasturlardan foydalaning, notanish fayllarni ochmang.",
+  "Ishni muntazam saqlang va zaxira nusxa oling."
+ ],
+ "jihozlar": [
+  {
+   "id": "rastrmuh",
+   "e": "🖼️",
+   "nomi": "Rastr muharrir (Photoshop, GIMP)",
+   "vazifa": "Fotosurat va piksellardan iborat tasvirlarni tahrirlash.",
+   "tuzilish": [
+    "Qatlamlar",
+    "Tanlash asboblari",
+    "Mo‘yqalam va o‘chirg‘ich",
+    "Tuzatish (yorqinlik, rang)",
+    "Filtrlar"
+   ],
+   "ishlatish": [
+    "Asl faylning nusxasi bilan ishlang.",
+    "Har bir o‘zgarishni alohida qatlamda qiling.",
+    "Internet uchun JPG/PNG, chop etish uchun TIFF/PDF ga saqlang."
+   ],
+   "sim": "piksel"
+  },
+  {
+   "id": "vektormuh",
+   "e": "📐",
+   "nomi": "Vektor muharrir (Illustrator, CorelDRAW, Inkscape)",
+   "vazifa": "Logotip, ikonka va bosma mahsulotlarni matematik egri chiziqlar bilan chizish — sifat yo‘qotmasdan kattalashadi.",
+   "tuzilish": [
+    "Pero (Bezye egri chiziqlari)",
+    "Shakllar",
+    "Konturlar va to‘ldirish",
+    "Matn",
+    "Qatlamlar"
+   ],
+   "ishlatish": [
+    "Shakllarni oddiy primitivlardan yig‘ing.",
+    "Logotipni vektor formatda (SVG, AI, PDF) saqlang.",
+    "Matnni chop etishga yuborishda egri chiziqqa aylantiring."
+   ]
+  },
+  {
+   "id": "planshet",
+   "e": "✒️",
+   "nomi": "Grafik planshet",
+   "vazifa": "Qo‘lda chizish va retush uchun.",
+   "tuzilish": [
+    "Sezgir sirt",
+    "Pero (bosim sezgirligi)"
+   ],
+   "ishlatish": [
+    "Pero bosimini sozlang.",
+    "Ish maydonini ekranga moslang."
+   ]
+  },
+  {
+   "id": "skaner",
+   "e": "📠",
+   "nomi": "Skaner",
+   "vazifa": "Qog‘ozdagi tasvirni rastr faylga aylantiradi.",
+   "tuzilish": [
+    "Shisha oyna",
+    "Optik blok",
+    "Qopqoq"
+   ],
+   "ishlatish": [
+    "Ruxsatni maqsadga moslang: matn — 300 dpi, rasm — 600 dpi.",
+    "Oynani toza saqlang."
+   ]
+  },
+  {
+   "id": "monitor",
+   "e": "🖥️",
+   "nomi": "Kalibrlangan monitor",
+   "vazifa": "Ranglarni to‘g‘ri ko‘rsatadi — dizayn va chop etishda rang mosligi uchun muhim.",
+   "tuzilish": [
+    "IPS matritsa",
+    "Kalibrator (kolorimetr)",
+    "Rang profili"
+   ],
+   "ishlatish": [
+    "Monitorni muntazam kalibrlang.",
+    "Xona yoritilishini doimiy saqlang."
+   ]
+  },
+  {
+   "id": "printer",
+   "e": "🖨️",
+   "nomi": "Rangli printer (CMYK)",
+   "vazifa": "Tasvirni Cyan, Magenta, Yellow va Key (qora) bo‘yoqlari bilan chop etadi.",
+   "tuzilish": [
+    "Kartrijlar (C, M, Y, K)",
+    "Qog‘oz lotogi",
+    "Chop etish boshchasi"
+   ],
+   "ishlatish": [
+    "Faylni CMYK rejimida tayyorlang.",
+    "Chop etish ruxsati 300 dpi bo‘lsin."
+   ],
+   "sim": "rang"
+  }
+ ],
+ "sim": [
+  {
+   "id": "piksel",
+   "e": "🔍",
+   "nomi": "Rastr va vektor: kattalashtirib ko‘ring",
+   "tur": "piksel",
+   "p": {}
+  },
+  {
+   "id": "rang",
+   "e": "🎨",
+   "nomi": "RGB va CMY rang modellari",
+   "tur": "rang",
+   "p": {
+    "rejimlar": [
+     "rgb",
+     "cmy",
+     "doira"
+    ]
+   }
+  },
+  {
+   "id": "dpi",
+   "e": "🖨️",
+   "nomi": "Chop etish o‘lchami va ruxsat",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "w",
+      "n": "Tasvir kengligi",
+      "u": "piksel",
+      "v": 3000,
+      "min": 100,
+      "max": 10000,
+      "q": 10
+     },
+     {
+      "id": "h",
+      "n": "Tasvir balandligi",
+      "u": "piksel",
+      "v": 2000,
+      "min": 100,
+      "max": 10000,
+      "q": 10
+     },
+     {
+      "id": "dpi",
+      "n": "Chop etish ruxsati",
+      "u": "dpi",
+      "v": 300,
+      "tanlov": [
+       [
+        72,
+        "72 dpi (ekran)"
+       ],
+       [
+        150,
+        "150 dpi (plakat uzoqdan)"
+       ],
+       [
+        300,
+        "300 dpi (sifatli bosma)"
+       ]
+      ]
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Kengligi = piksel / dpi × 2,54",
+      "f": "w/dpi*2.54",
+      "u": "sm",
+      "x": 1,
+      "asosiy": true
+     },
+     {
+      "n": "Balandligi",
+      "f": "h/dpi*2.54",
+      "u": "sm",
+      "x": 1
+     },
+     {
+      "n": "Megapiksel",
+      "f": "w*h/1e6",
+      "u": "MP",
+      "x": 1
+     },
+     {
+      "n": "A4 (21×29,7 sm) ga sifatli sig‘adimi?",
+      "f": "(w/dpi*2.54>=21 && h/dpi*2.54>=29.7) || (h/dpi*2.54>=21 && w/dpi*2.54>=29.7) ? 'Ha' : 'Yo‘q — ruxsat yetmaydi'",
+      "u": ""
+     }
+    ]
+   }
+  },
+  {
+   "id": "format",
+   "e": "📂",
+   "nomi": "Grafik formatlar",
+   "tur": "moslash",
+   "p": {
+    "savol": "Formatni turi bilan moslang.",
+    "juft": [
+     [
+      "JPG",
+      "Rastr, siqilgan (fotosuratlar)"
+     ],
+     [
+      "PNG",
+      "Rastr, shaffof fon"
+     ],
+     [
+      "SVG",
+      "Vektor, veb uchun"
+     ],
+     [
+      "AI / CDR",
+      "Vektor muharrir loyihasi"
+     ],
+     [
+      "PSD",
+      "Rastr muharrir loyihasi (qatlamlar)"
+     ],
+     [
+      "PDF",
+      "Chop etish uchun universal"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Rastr va vektor"
+}

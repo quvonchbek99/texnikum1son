@@ -1,0 +1,393 @@
+{
+ "id": "oshxona-jihozlari",
+ "nomi": "Oshxona texnologik jihozlari sexi",
+ "e": "🏭",
+ "xona": "oshxona",
+ "fanlar": [
+  "umumiy-ovqatlanish-korxonalarida-texnologik-jihozlar"
+ ],
+ "tavsif": "Umumiy ovqatlanish korxonasi jihozlari: parokonvektomat, elektr plita, go‘sht qiymalagich, kartoshka tozalagich, planetar mikser, sovutish shkafi va fritur; jihozlarni xavfsiz yig‘ish va ishlatish mashqlari.",
+ "xavfsizlik": [
+  "Ishni toza maxsus kiyim (oq xalat/kitel, qalpoq, fartuk) va yopiq poyabzalda bajaring; sochlar qalpoq ostida bo‘lsin.",
+  "Ish boshlashdan oldin va xom mahsulotdan keyin qo‘lni sovunlab yuving.",
+  "Pichoqlarni o‘tkir holda saqlang va kesish taxtasida, o‘zingizdan uzoqqa qarab kesing.",
+  "Issiq idishlarni quruq ushlagich bilan ushlang; qozon dastalarini stol chetidan chiqarib qo‘ymang.",
+  "Qizigan yog‘ga suv tushirmang; yog‘ alangalansa — qopqoq bilan yoping, suv sepmang.",
+  "Elektr jihozlarini ho‘l qo‘l bilan ushlamang, ishdan keyin tarmoqdan uzing.",
+  "Mexanik jihozlarni yig‘ish, tozalash va yechishni faqat tarmoqdan uzilgan holda bajaring.",
+  "Mahsulotni mashinaga qo‘l bilan emas, itargich (tolkatel) bilan bering."
+ ],
+ "jihozlar": [
+  {
+   "id": "parokonvekt",
+   "e": "♨️",
+   "nomi": "Parokonvektomat",
+   "vazifa": "Issiq havo (konveksiya), bug‘ yoki ikkalasi birgalikda taom pishiradi: qovurish, bug‘da pishirish, qayta isitish.",
+   "tuzilish": [
+    "Ishchi kamera va ventilyator",
+    "Bug‘ generatori",
+    "Boshqaruv paneli (harorat, namlik, vaqt)",
+    "Harorat shchupi",
+    "Gastroyemkosti (GN idishlar)"
+   ],
+   "ishlatish": [
+    "Rejimni tanlang: konveksiya, bug‘ yoki kombinatsiyalangan.",
+    "Kamerani oldindan qizdiring.",
+    "Shchupni mahsulot ichiga suqib, ichki haroratni nazorat qiling."
+   ],
+   "xavfsizlik": [
+    "Eshikni ochganda yuzni chetga oling — issiq bug‘ chiqadi."
+   ],
+   "sim": "parokonvekt"
+  },
+  {
+   "id": "plita",
+   "e": "🔥",
+   "nomi": "Elektr plita (sanoat)",
+   "vazifa": "Qaynatish, qovurish va dimlash uchun.",
+   "tuzilish": [
+    "Konforkalar (cho‘yan yoki induksion)",
+    "Duxovka",
+    "Rejim almashtirgichlar"
+   ],
+   "ishlatish": [
+    "Idish tubini konforka o‘lchamiga moslang.",
+    "Konforkani bo‘sh holda yoqib qo‘ymang."
+   ]
+  },
+  {
+   "id": "qiymalagich",
+   "e": "🥩",
+   "nomi": "Go‘sht qiymalagich (myasorubka)",
+   "vazifa": "Go‘shtni qiymaga aylantiradi.",
+   "tuzilish": [
+    "Elektr yuritma",
+    "Ishchi silindr",
+    "Shnek",
+    "Pichoq (xochsimon)",
+    "Panjara",
+    "Qisuvchi gayka",
+    "Yuklash tarelkasi va itargich"
+   ],
+   "ishlatish": [
+    "Shnek, pichoq (kesuvchi tomoni panjaraga qaragan), panjara va gaykani tartib bilan yig‘ing.",
+    "Mashinani tarmoqqa ulab, ishga tushiring.",
+    "Go‘shtni itargich bilan bering.",
+    "Ishdan keyin o‘chirib, qismlarga ajratib yuving."
+   ],
+   "xavfsizlik": [
+    "Go‘shtni qo‘l yoki barmoq bilan itarish qat’iyan taqiqlanadi."
+   ],
+   "sim": "qiymalagich"
+  },
+  {
+   "id": "tozalagich",
+   "e": "🥔",
+   "nomi": "Kartoshka tozalagich mashinasi",
+   "vazifa": "Abraziv disk yordamida kartoshka va ildizmevalarni po‘stidan tozalaydi.",
+   "tuzilish": [
+    "Abraziv disk va devorlar",
+    "Suv berish",
+    "Yuklash va tushirish teshiklari"
+   ],
+   "ishlatish": [
+    "Suvni oching, mashinani yoqing.",
+    "Saralangan kartoshkani soling (me’yordan ko‘p emas).",
+    "1–2 daqiqadan keyin tushiring, ko‘zchalarini qo‘lda tozalang."
+   ]
+  },
+  {
+   "id": "mikser",
+   "e": "🌀",
+   "nomi": "Planetar mikser",
+   "vazifa": "Xamir qorish, krem va oqsilni ko‘pirtirish.",
+   "tuzilish": [
+    "Idish (dejya)",
+    "Ilmoqsimon, kurakcha va ko‘pirtirgich nasadkalar",
+    "Tezlik regulyatori",
+    "Himoya to‘sig‘i"
+   ],
+   "ishlatish": [
+    "Nasadkani mahsulotga mos tanlang.",
+    "Kichik tezlikdan boshlang.",
+    "Ishlayotganda idishga qo‘l yoki qoshiq tiqmang."
+   ],
+   "xavfsizlik": [
+    "To‘siqsiz ishlatmang."
+   ]
+  },
+  {
+   "id": "sovutgich",
+   "e": "❄️",
+   "nomi": "Sovutish shkafi va muzlatgich",
+   "vazifa": "Tez buziladigan mahsulotlarni past haroratda saqlaydi.",
+   "tuzilish": [
+    "Kamera",
+    "Termometr",
+    "Javonlar",
+    "Sovutish agregati"
+   ],
+   "ishlatish": [
+    "Haroratni har smenada jurnalga yozing.",
+    "Xom va tayyor mahsulotni alohida saqlang.",
+    "Eshikni uzoq ochiq qoldirmang."
+   ]
+  },
+  {
+   "id": "fritur",
+   "e": "🍟",
+   "nomi": "Fritur",
+   "vazifa": "Mahsulotlarni ko‘p miqdordagi qizigan yog‘da qovuradi.",
+   "tuzilish": [
+    "Yog‘ vannasi",
+    "Qizdirgich",
+    "Termostat",
+    "To‘r savat"
+   ],
+   "ishlatish": [
+    "Yog‘ni belgigacha quying.",
+    "Haroratni 160–180 °C ga qo‘ying.",
+    "Mahsulotni quruq holda, savatda asta tushiring."
+   ],
+   "xavfsizlik": [
+    "Ho‘l mahsulotni tushirmang — yog‘ sachraydi.",
+    "Yog‘ni muntazam almashtiring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "qiymalagich",
+   "e": "🥩",
+   "nomi": "Go‘sht qiymalagichni yig‘ish va ishlatish",
+   "tur": "qurilma",
+   "p": {
+    "nomi": "Go‘sht qiymalagich",
+    "e": "🥩",
+    "ekran": "Mashina: tarmoqdan uzilgan\nQismlar: yechilgan",
+    "maqsad": "Mashinani xavfsiz yig‘ib, go‘sht qiymalash",
+    "boshqaruv": [
+     {
+      "id": "shnek",
+      "n": "Shnekni silindrga kiritish",
+      "e": "🌀"
+     },
+     {
+      "id": "pichoq",
+      "n": "Pichoqni (qirrasi panjaraga) o‘rnatish",
+      "e": "🔪"
+     },
+     {
+      "id": "panjara",
+      "n": "Panjarani o‘rnatish",
+      "e": "🔘"
+     },
+     {
+      "id": "gayka",
+      "n": "Qisuvchi gaykani burash",
+      "e": "🔩"
+     },
+     {
+      "id": "tarmoq",
+      "n": "Tarmoqqa ulab, yoqish",
+      "e": "⏻"
+     },
+     {
+      "id": "itargich",
+      "n": "Go‘shtni itargich bilan berish",
+      "e": "🥢"
+     },
+     {
+      "id": "qol",
+      "n": "Go‘shtni qo‘l bilan itarish",
+      "e": "✋"
+     },
+     {
+      "id": "ochir",
+      "n": "O‘chirib, tarmoqdan uzish",
+      "e": "⏹️"
+     }
+    ],
+    "qadamlar": [
+     {
+      "v": "Shnekni o‘rnating.",
+      "t": "shnek",
+      "ekran": "Shnek: o‘rnatildi"
+     },
+     {
+      "v": "Pichoqni o‘rnating.",
+      "t": "pichoq",
+      "j": "Kesuvchi qirralar panjaraga tegib turishi kerak — aks holda go‘sht eziladi.",
+      "ekran": "Pichoq: o‘rnatildi"
+     },
+     {
+      "v": "Panjarani qo‘ying.",
+      "t": "panjara",
+      "j": "Teshiklar o‘lchami qiyma maydaligini belgilaydi.",
+      "ekran": "Panjara: o‘rnatildi"
+     },
+     {
+      "v": "Gaykani mahkamlang.",
+      "t": "gayka",
+      "j": "Gayka qo‘lda, me’yorida tortiladi.",
+      "ekran": "Mashina yig‘ildi ✓"
+     },
+     {
+      "v": "Mashinani ishga tushiring.",
+      "t": "tarmoq",
+      "ekran": "Ishlamoqda",
+      "chiroq": "yashil",
+      "aylan": true
+     },
+     {
+      "v": "Go‘shtni qiymalang.",
+      "t": "itargich",
+      "j": "Go‘sht bo‘laklari itargich bilan asta beriladi.",
+      "ekran": "Qiyma tayyor ✓",
+      "chiroq": "yashil",
+      "aylan": true
+     },
+     {
+      "v": "Ishni yakunlang.",
+      "t": "ochir",
+      "j": "Endi mashinani qismlarga ajratib yuvish mumkin.",
+      "ekran": "Mashina o‘chiq",
+      "chiroq": "off",
+      "aylan": false
+     }
+    ],
+    "xato": {
+     "qol": "Go‘shtni qo‘l bilan itarish taqiqlanadi — barmoq shnekka tortilib ketadi!",
+     "tarmoq": "Avval mashinani to‘liq yig‘ing.",
+     "gayka": "Avval ichki qismlarni tartib bilan o‘rnating."
+    }
+   }
+  },
+  {
+   "id": "parokonvekt",
+   "e": "♨️",
+   "nomi": "Parokonvektomatda tovuq pishirish",
+   "tur": "qurilma",
+   "p": {
+    "nomi": "Parokonvektomat",
+    "e": "♨️",
+    "ekran": "Kamera: 22 °C",
+    "maqsad": "Tovuq go‘shtini xavfsiz ichki haroratgacha pishirish",
+    "boshqaruv": [
+     {
+      "id": "rejim",
+      "n": "Kombinatsiyalangan rejimni tanlash",
+      "e": "🎛️"
+     },
+     {
+      "id": "qizdir",
+      "n": "Kamerani 180 °C gacha oldindan qizdirish",
+      "e": "🔥"
+     },
+     {
+      "id": "joylash",
+      "n": "GN idishni joylash",
+      "e": "🍗"
+     },
+     {
+      "id": "shchup",
+      "n": "Shchupni eng qalin joyga suqish",
+      "e": "🌡️"
+     },
+     {
+      "id": "start",
+      "n": "Start (ichki 75 °C gacha)",
+      "e": "▶️"
+     },
+     {
+      "id": "ochish",
+      "n": "Eshikni yuzni chetga olib ochish",
+      "e": "🚪"
+     }
+    ],
+    "qadamlar": [
+     {
+      "v": "Rejimni tanlang.",
+      "t": "rejim",
+      "j": "Bug‘ + konveksiya: go‘sht suvli va qizarib pishadi.",
+      "ekran": "Rejim: kombi, namlik 50%"
+     },
+     {
+      "v": "Kamerani qizdiring.",
+      "t": "qizdir",
+      "ekran": "Kamera: 180 °C",
+      "chiroq": "sariq",
+      "aylan": true
+     },
+     {
+      "v": "Mahsulotni joylang.",
+      "t": "joylash",
+      "ekran": "GN 1/1: tovuq"
+     },
+     {
+      "v": "Harorat shchupini o‘rnating.",
+      "t": "shchup",
+      "j": "Ichki harorat bo‘yicha pishirish eng ishonchli usul.",
+      "ekran": "Shchup: 6 °C"
+     },
+     {
+      "v": "Pishirishni boshlang.",
+      "t": "start",
+      "j": "Parranda go‘shti ichki harorati kamida 75 °C ga yetishi kerak.",
+      "ekran": "Ichki harorat: 75 °C ✓",
+      "chiroq": "yashil",
+      "aylan": true
+     },
+     {
+      "v": "Mahsulotni oling.",
+      "t": "ochish",
+      "j": "Eshik ochilganda issiq bug‘ chiqadi.",
+      "ekran": "Tayyor ✓",
+      "chiroq": "yashil",
+      "aylan": false
+     }
+    ],
+    "xato": {
+     "start": "Avval rejimni tanlab, kamerani qizdiring va shchupni o‘rnating."
+    },
+    "motor": "🌀"
+   }
+  },
+  {
+   "id": "jihoz",
+   "e": "🏭",
+   "nomi": "Jihoz va vazifasi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Jihozni vazifasi bilan moslang.",
+    "juft": [
+     [
+      "Parokonvektomat",
+      "Bug‘ va issiq havoda pishirish"
+     ],
+     [
+      "Go‘sht qiymalagich",
+      "Qiyma tayyorlash"
+     ],
+     [
+      "Planetar mikser",
+      "Xamir qorish va ko‘pirtirish"
+     ],
+     [
+      "Fritur",
+      "Ko‘p yog‘da qovurish"
+     ],
+     [
+      "Kartoshka tozalagich",
+      "Ildizmevalarni po‘stdan tozalash"
+     ],
+     [
+      "Sovutish shkafi",
+      "Tez buziladigan mahsulotni saqlash"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Texnologik jihozlar"
+}

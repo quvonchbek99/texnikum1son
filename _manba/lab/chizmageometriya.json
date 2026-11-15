@@ -1,0 +1,188 @@
+{
+ "id": "chizmageometriya",
+ "nomi": "Chizma geometriya va perspektiva xonasi",
+ "e": "📐",
+ "xona": "sinf",
+ "fanlar": [
+  "chizmageometriya-soyalar-nazariyasi-nuqtai-nazar"
+ ],
+ "tavsif": "Chizmachilik asboblari, gipsli geometrik jismlar, perspektiva ramkasi, yorug‘lik manbai va Monj epyuri; proyeksiyalar, perspektiva va soyalar bo‘yicha mashqlar.",
+ "xavfsizlik": [
+  "Sirkul va o‘tkir asboblar bilan ehtiyot bo‘ling.",
+  "Yorug‘lik manbaini (lampa) yoqilgan holda ko‘chirmang — qiziydi."
+ ],
+ "jihozlar": [
+  {
+   "id": "asboblar",
+   "e": "📐",
+   "nomi": "Chizmachilik asboblari",
+   "vazifa": "Aniq geometrik yasashlar uchun: reysshina, uchburchaklar, sirkul, transportir, qalamlar.",
+   "tuzilish": [
+    "Reysshina",
+    "Uchburchaklar",
+    "Sirkul",
+    "Qalamlar (H, HB, B)"
+   ],
+   "ishlatish": [
+    "Yordamchi chiziqlarni ingichka, asosiylarini yo‘g‘on chizing."
+   ]
+  },
+  {
+   "id": "gips",
+   "e": "🧊",
+   "nomi": "Gipsli geometrik jismlar",
+   "vazifa": "Kub, piramida, silindr, konus, shar — shakl, proyeksiya va yorug‘-soyani o‘rganish uchun.",
+   "tuzilish": [
+    "Kub",
+    "Prizma va piramida",
+    "Silindr va konus",
+    "Shar"
+   ],
+   "ishlatish": [
+    "Jismni yorug‘lik manbaiga nisbatan joylashtiring.",
+    "Yorug‘, yarim soya, xususiy va tushuvchi soyani aniqlang."
+   ],
+   "sim": "soya"
+  },
+  {
+   "id": "ramka",
+   "e": "🖼️",
+   "nomi": "Perspektiva ramkasi (vizir)",
+   "vazifa": "Ko‘rinayotgan manzarani kadrga solish va chiziqlar qiyaligini aniqlash.",
+   "tuzilish": [
+    "Ramka",
+    "Ip to‘r"
+   ],
+   "ishlatish": [
+    "Ramkani ko‘z oldida bir xil masofada ushlang.",
+    "Ufq chizig‘ini ko‘z balandligida belgilang."
+   ],
+   "sim": "perspektiva"
+  },
+  {
+   "id": "lampa",
+   "e": "💡",
+   "nomi": "Yo‘naltirilgan yorug‘lik manbai",
+   "vazifa": "Soyalar qurilishini o‘rganish uchun bitta aniq yorug‘lik manbai.",
+   "tuzilish": [
+    "Lampa",
+    "Shtativ",
+    "Reflektor"
+   ],
+   "ishlatish": [
+    "Manbani 45° burchakda, yuqori-chapda joylang.",
+    "Soyaning yo‘nalishi va uzunligini kuzating."
+   ]
+  },
+  {
+   "id": "epyur",
+   "e": "📊",
+   "nomi": "Monj epyuri",
+   "vazifa": "Fazodagi nuqta va jismlarning gorizontal, frontal va profil proyeksiya tekisliklariga ortogonal proyeksiyalari bir tekislikka yoyilgan chizmasi.",
+   "tuzilish": [
+    "Gorizontal tekislik (H)",
+    "Frontal tekislik (V)",
+    "Profil tekislik (W)",
+    "Proyeksiya o‘qlari"
+   ],
+   "ishlatish": [
+    "Nuqtaning ikki proyeksiyasi bo‘yicha uchinchisini quring.",
+    "Bog‘lovchi chiziqlar o‘qlarga perpendikulyar bo‘lsin."
+   ],
+   "sim": "proyeksiya"
+  }
+ ],
+ "sim": [
+  {
+   "id": "proyeksiya",
+   "e": "🧱",
+   "nomi": "Jism va uning ortogonal proyeksiyalari",
+   "tur": "proyeksiya",
+   "p": {}
+  },
+  {
+   "id": "perspektiva",
+   "e": "🛤️",
+   "nomi": "Perspektiva asoslari",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Kuzatuvchi ko‘zi balandligida joylashgan gorizontal chiziq?",
+      "v": [
+       "Ufq chizig‘i",
+       "Asos chizig‘i",
+       "Shtrix chizig‘i"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Parallel chiziqlar perspektivada qayerda kesishadi?",
+      "v": [
+       "Ufqdagi yo‘qolish nuqtasida",
+       "Hech qachon kesishmaydi",
+       "Rasm markazida"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Bir yo‘qolish nuqtali perspektiva qachon ishlatiladi?",
+      "v": [
+       "Obyektning old yuzasi kuzatuvchiga parallel bo‘lganda (frontal perspektiva)",
+       "Faqat osmonni chizishda"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "soya",
+   "e": "🌗",
+   "nomi": "Soyalar nazariyasi",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Jismning yorug‘lik tushmaydigan o‘z yuzasidagi soya?",
+      "v": [
+       "Xususiy soya",
+       "Tushuvchi soya",
+       "Refleks"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Jism boshqa sirtga (stol, devor) tashlaydigan soya?",
+      "v": [
+       "Tushuvchi soya",
+       "Xususiy soya",
+       "Blik"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Soya ichidagi atrofdan qaytgan yorug‘lik?",
+      "v": [
+       "Refleks",
+       "Blik",
+       "Yarim soya"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Yorug‘lik eng kuchli tushgan eng yorug‘ nuqta?",
+      "v": [
+       "Blik",
+       "Refleks",
+       "Xususiy soya"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Chizma geometriya",
+ "amaliyotga": false
+}

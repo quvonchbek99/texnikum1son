@@ -1,0 +1,289 @@
+{
+ "id": "kasbiy-rus-tili",
+ "nomi": "Kasbiy rus tili: salon lingafon xonasi",
+ "e": "🗣️",
+ "xona": "salon",
+ "fanlar": [
+  "kasbiy-faoliyatda-xorijiy-til-rus-tili"
+ ],
+ "tavsif": "Sartaroshlik asboblari va xizmatlarining ruscha nomlari; salondagi muloqot iboralarini tinglash, diktant va talaffuz mashqlari.",
+ "xavfsizlik": [
+  "Ovoz balandligini o‘rtacha saqlang, naushnikni ehtiyotkorlik bilan ishlating."
+ ],
+ "jihozlar": [
+  {
+   "id": "nojnitsy",
+   "e": "✂️",
+   "nomi": "Ножницы — qaychi",
+   "vazifa": "Sochni kesish asbobi. «Подайте, пожалуйста, ножницы» — «Iltimos, qaychini bering».",
+   "tuzilish": [
+    "лезвия — tig‘lar",
+    "кольца — halqalar",
+    "винт — vint"
+   ],
+   "ishlatish": [
+    "Iborani tinglab, takrorlang.",
+    "So‘zni o‘z gapingizda ishlating."
+   ]
+  },
+  {
+   "id": "raschyoska",
+   "e": "🪮",
+   "nomi": "Расчёска — taroq",
+   "vazifa": "«Расчешите волосы» — «Sochni taroqlang».",
+   "tuzilish": [
+    "зубья — tishlar",
+    "ручка — dasta"
+   ],
+   "ishlatish": [
+    "Yangi so‘zni kartochkaga yozing."
+   ]
+  },
+  {
+   "id": "fen",
+   "e": "💨",
+   "nomi": "Фен — fen",
+   "vazifa": "«Высушите волосы феном» — «Sochni fen bilan quriting».",
+   "tuzilish": [
+    "насадка — nasadka",
+    "горячий/холодный воздух — issiq/sovuq havo"
+   ],
+   "ishlatish": [
+    "Mijozga «Не горячо?» («Issiq emasmi?») deb so‘rashni o‘rganing."
+   ]
+  },
+  {
+   "id": "mashinka",
+   "e": "🪒",
+   "nomi": "Машинка для стрижки — soch olish mashinkasi",
+   "vazifa": "«Какую насадку поставить?» — «Qaysi nasadkani qo‘yay?»",
+   "tuzilish": [
+    "насадка 3 мм — 3 mm nasadka",
+    "нож — pichoq"
+   ],
+   "ishlatish": [
+    "Nasadka uzunligini ruscha ayting: «три миллиметра»."
+   ]
+  },
+  {
+   "id": "kraska",
+   "e": "🎨",
+   "nomi": "Краска для волос — soch bo‘yog‘i",
+   "vazifa": "«Какой цвет вы хотите?» — «Qanday rangni xohlaysiz?»",
+   "tuzilish": [
+    "оттенок — tus",
+    "окислитель — oksidant",
+    "корни — ildizlar"
+   ],
+   "ishlatish": [
+    "Tus jadvalidan foydalanib, ranglarni ruscha ayting."
+   ]
+  },
+  {
+   "id": "shampun",
+   "e": "🧴",
+   "nomi": "Шампунь и бальзам — shampun va balzam",
+   "vazifa": "«Сейчас помоем голову» — «Hozir boshingizni yuvamiz».",
+   "tuzilish": [
+    "вода — suv",
+    "тёплая — iliq",
+    "полотенце — sochiq"
+   ],
+   "ishlatish": [
+    "Suv haroratini so‘rang: «Вода не горячая?»"
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "til",
+   "e": "🎧",
+   "nomi": "Salon so‘zlari va iboralari",
+   "tur": "til",
+   "izoh": "So‘z va iboralarni tinglang, tarjimasini ko‘ring, diktant yozing.",
+   "p": {
+    "til": "ru-RU",
+    "sozlar": [
+     [
+      "стрижка",
+      "soch olish (kesish)"
+     ],
+     [
+      "укладка",
+      "ukladka (soch turmagi)"
+     ],
+     [
+      "окрашивание",
+      "bo‘yash"
+     ],
+     [
+      "ножницы",
+      "qaychi"
+     ],
+     [
+      "расчёска",
+      "taroq"
+     ],
+     [
+      "фен",
+      "fen"
+     ],
+     [
+      "шампунь",
+      "shampun"
+     ],
+     [
+      "бальзам",
+      "balzam"
+     ],
+     [
+      "чёлка",
+      "chelka (kokil)"
+     ],
+     [
+      "пробор",
+      "farq (bo‘lish chizig‘i)"
+     ],
+     [
+      "корни",
+      "ildizlar"
+     ],
+     [
+      "кончики",
+      "soch uchlari"
+     ],
+     [
+      "мелирование",
+      "melirovanie (tutamlarni ochish)"
+     ],
+     [
+      "запись",
+      "yozilish (navbat)"
+     ],
+     [
+      "мастер",
+      "usta"
+     ],
+     [
+      "клиент",
+      "mijoz"
+     ],
+     [
+      "машинка для стрижки",
+      "soch olish mashinkasi"
+     ],
+     [
+      "краска для волос",
+      "soch bo‘yog‘i"
+     ],
+     [
+      "Как вас подстричь?",
+      "Sochingizni qanday olay?"
+     ],
+     [
+      "Покороче, пожалуйста.",
+      "Qisqaroq qiling, iltimos."
+     ],
+     [
+      "Сколько стоит стрижка?",
+      "Soch olish qancha turadi?"
+     ],
+     [
+      "Подождите, пожалуйста.",
+      "Iltimos, kutib turing."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "soz",
+   "e": "🔤",
+   "nomi": "Ruscha — o‘zbekcha",
+   "tur": "moslash",
+   "p": {
+    "savol": "So‘zni tarjimasi bilan moslang.",
+    "juft": [
+     [
+      "стрижка",
+      "soch olish (kesish)"
+     ],
+     [
+      "укладка",
+      "ukladka (soch turmagi)"
+     ],
+     [
+      "окрашивание",
+      "bo‘yash"
+     ],
+     [
+      "ножницы",
+      "qaychi"
+     ],
+     [
+      "расчёска",
+      "taroq"
+     ],
+     [
+      "фен",
+      "fen"
+     ],
+     [
+      "шампунь",
+      "shampun"
+     ],
+     [
+      "бальзам",
+      "balzam"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "dialog",
+   "e": "💬",
+   "nomi": "Salondagi muloqot",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Mijoz kirib keldi. Qanday kutib olasiz?",
+      "v": [
+       "Здравствуйте! Проходите, пожалуйста.",
+       "Пока!",
+       "Спасибо, до свидания."
+      ],
+      "t": 0
+     },
+     {
+      "s": "Mijozdan soch turmagini so‘rash kerak.",
+      "v": [
+       "Как вас подстричь?",
+       "Сколько вам лет?",
+       "Где вы живёте?"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Mijoz «Покороче, пожалуйста» dedi. Bu nima degani?",
+      "v": [
+       "Qisqaroq qiling, iltimos",
+       "Uzunroq qoldiring",
+       "Bo‘yab bering"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Xizmat narxini aytish kerak (50 000 so‘m).",
+      "v": [
+       "Стрижка стоит пятьдесят тысяч сумов.",
+       "Стрижка стоит пять сумов."
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Kasbiy rus tili",
+ "amaliyotga": false
+}

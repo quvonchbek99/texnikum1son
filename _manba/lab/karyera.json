@@ -1,0 +1,205 @@
+{
+ "id": "karyera",
+ "nomi": "Karyera markazi",
+ "e": "🧭",
+ "xona": "sinf",
+ "fanlar": [
+  "karyerani-rivojlantirish"
+ ],
+ "tavsif": "Ish qidirish va kasbiy rivojlanish vositalari: rezyume, portfolio, ish suhbati; suhbatga tayyorgarlik va to‘g‘ri javoblar bo‘yicha mashqlar.",
+ "xavfsizlik": [
+  "Rezyumeda faqat haqiqiy ma’lumotlarni yozing.",
+  "Shaxsiy ma’lumotlaringizni (pasport seriyasi, karta raqami) ishonchsiz saytlarga yubormang.",
+  "Ish taklifi pul talab qilsa — bu firibgarlik belgisi."
+ ],
+ "jihozlar": [
+  {
+   "id": "rezyume",
+   "e": "📄",
+   "nomi": "Rezyume (CV)",
+   "vazifa": "Ish beruvchiga o‘zingiz haqingizda qisqa va aniq ma’lumot beradigan 1–2 sahifalik hujjat.",
+   "tuzilish": [
+    "Shaxsiy ma’lumotlar va aloqa",
+    "Maqsad (qaysi lavozimga)",
+    "Ta’lim",
+    "Tajriba va amaliyot",
+    "Ko‘nikmalar (kasbiy va shaxsiy)",
+    "Tillar va sertifikatlar"
+   ],
+   "ishlatish": [
+    "Har bir lavozim uchun rezyumeni moslashtiring.",
+    "Yutuqlarni raqamlar bilan ko‘rsating.",
+    "Imlo xatolarini tekshiring.",
+    "PDF formatda yuboring."
+   ]
+  },
+  {
+   "id": "portfolio",
+   "e": "📁",
+   "nomi": "Portfolio",
+   "vazifa": "Bajargan ishlaringiz namunalari to‘plami: fotosuratlar, loyihalar, sertifikatlar.",
+   "tuzilish": [
+    "Eng yaxshi 5–10 ta ish",
+    "Har bir ishning qisqacha tavsifi",
+    "Sertifikat va tavsiyanomalar"
+   ],
+   "ishlatish": [
+    "Amaliyotdagi ishlaringizni suratga olib boring.",
+    "Har bir ishga «vazifa — yechim — natija» tavsifini yozing.",
+    "Onlayn portfolio (sayt yoki bulutli papka) yarating."
+   ]
+  },
+  {
+   "id": "suhbat",
+   "e": "🤝",
+   "nomi": "Ish suhbati (intervyu)",
+   "vazifa": "Ish beruvchi nomzodning bilimi, ko‘nikmasi va shaxsiy fazilatlarini baholaydigan uchrashuv.",
+   "tuzilish": [
+    "Tanishuv",
+    "Tajriba va ko‘nikmalar haqida savollar",
+    "Vaziyatli savollar",
+    "Nomzodning savollari",
+    "Yakun"
+   ],
+   "ishlatish": [
+    "Korxona haqida oldindan ma’lumot to‘plang.",
+    "O‘zingiz haqingizda 1 daqiqalik hikoya tayyorlang.",
+    "10 daqiqa oldin keling.",
+    "Ish haqida 1–2 ta savol tayyorlang."
+   ],
+   "sim": "suhbat"
+  },
+  {
+   "id": "profil",
+   "e": "💼",
+   "nomi": "Onlayn ish qidirish profili",
+   "vazifa": "Ish qidirish saytlari va professional tarmoqlardagi profil — ish beruvchilar sizni topishi uchun.",
+   "tuzilish": [
+    "Profil surati (rasmiy)",
+    "Sarlavha (kasb)",
+    "Tajriba va ko‘nikmalar",
+    "Tavsiyalar"
+   ],
+   "ishlatish": [
+    "Profilni to‘liq to‘ldiring.",
+    "Kasbingizga oid kalit so‘zlardan foydalaning.",
+    "Muntazam yangilab turing."
+   ]
+  },
+  {
+   "id": "reja",
+   "e": "🗓️",
+   "nomi": "Shaxsiy rivojlanish rejasi",
+   "vazifa": "1, 3 va 5 yillik kasbiy maqsadlar va ularga erishish qadamlari.",
+   "tuzilish": [
+    "Maqsad (SMART: aniq, o‘lchanadigan, erishiladigan, muhim, muddatli)",
+    "Kerakli bilim va ko‘nikmalar",
+    "Qadamlar va muddatlar",
+    "Natijani tekshirish"
+   ],
+   "ishlatish": [
+    "Kasbingizda o‘sish yo‘lini o‘rganing.",
+    "Har yil bitta yangi ko‘nikma yoki sertifikat oling.",
+    "Rejani har yarim yilda qayta ko‘rib chiqing."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "tayyorgarlik",
+   "e": "📝",
+   "nomi": "Ish suhbatiga tayyorgarlik",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Vakansiya talablarini o‘qish",
+     "Korxona haqida ma’lumot to‘plash",
+     "Rezyumeni vakansiyaga moslab yuborish",
+     "O‘zini tanishtirish nutqini tayyorlash",
+     "Kiyim va hujjatlarni tayyorlash",
+     "Suhbatga o‘z vaqtida kelish",
+     "Suhbatdan keyin minnatdorchilik xati yuborish"
+    ]
+   }
+  },
+  {
+   "id": "suhbat",
+   "e": "🤝",
+   "nomi": "Suhbatdagi savollar",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "«O‘zingiz haqingizda gapirib bering» savoli berildi.",
+      "v": [
+       "Ta’limim, amaliyotdagi tajribam va shu ishga nega mosligimni qisqa aytaman",
+       "Butun hayotimni bolalikdan boshlab gapiraman",
+       "«Rezyumeda hammasi yozilgan» deyman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "«Kamchiligingiz nima?» deb so‘rashdi.",
+      "v": [
+       "Haqiqiy, lekin ishga xalaqit bermaydigan kamchilikni va uni qanday tuzatayotganimni aytaman",
+       "«Kamchiligim yo‘q» deyman",
+       "Ko‘p kamchiliklarimni sanab beraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Oldingi ish joyingiz haqida so‘rashdi.",
+      "v": [
+       "Olgan tajribamni ijobiy tarzda aytaman",
+       "Rahbarimni yomonlayman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Suhbat oxirida «Savollaringiz bormi?» deyishdi.",
+      "v": [
+       "Ish vazifalari va o‘sish imkoniyatlari haqida savol beraman",
+       "«Yo‘q» deb chiqib ketaman",
+       "Faqat ta’til haqida so‘rayman"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "konikma",
+   "e": "🧠",
+   "nomi": "Ko‘nikma va misol",
+   "tur": "moslash",
+   "p": {
+    "savol": "Ko‘nikmani unga mos misol bilan moslang.",
+    "juft": [
+     [
+      "Jamoada ishlash",
+      "Guruh loyihasida vazifalarni bo‘lishib bajarish"
+     ],
+     [
+      "Vaqtni boshqarish",
+      "Ishlarni muddatidan oldin rejalashtirib bajarish"
+     ],
+     [
+      "Muloqot",
+      "Mijozga xizmatni tushunarli tushuntirish"
+     ],
+     [
+      "Muammoni hal qilish",
+      "Nosozlik sababini topib bartaraf etish"
+     ],
+     [
+      "Mas’uliyat",
+      "Topshiriqni nazoratsiz ham sifatli bajarish"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Karyera",
+ "amaliyotga": false
+}

@@ -1,0 +1,178 @@
+{
+ "id": "tarix",
+ "nomi": "Tarix: virtual muzey",
+ "e": "🏛️",
+ "xona": "sinf",
+ "fanlar": [
+  "tarix"
+ ],
+ "tavsif": "O‘zbekiston tarixining muhim yodgorliklari va eksponatlari bilan tanishish, xronologiya va sanalar bo‘yicha virtual mashqlar.",
+ "xavfsizlik": [
+  "Muzeyda eksponatlarga qo‘l tekkizmang va surat olish qoidalariga amal qiling.",
+  "Manbalarni tahlil qilganda sana va muallifni albatta ko‘rsating."
+ ],
+ "jihozlar": [
+  {
+   "id": "fayoztepa",
+   "e": "🛕",
+   "nomi": "Fayoztepa (Termiz)",
+   "vazifa": "Kushon davriga (milodiy I–III asrlar) oid buddaviylik ibodatxonasi va monastiri xarobalari; Buyuk ipak yo‘li orqali madaniyatlar almashinuvining dalili.",
+   "tuzilish": [
+    "Davr: Kushon podsholigi",
+    "Joylashuvi: Surxondaryo, Termiz",
+    "Topilmalar: Budda haykali, devoriy rasmlar, sopol buyumlar"
+   ],
+   "ishlatish": [
+    "Xaritada joylashuvini toping.",
+    "Kushon davri madaniyati haqida yozing."
+   ],
+   "q": "Fayoztepa Termiz"
+  },
+  {
+   "id": "afrosiyob",
+   "e": "🎨",
+   "nomi": "Afrosiyob devoriy suratlari",
+   "vazifa": "Samarqanddagi qadimiy Afrosiyob shahar xarobalaridan topilgan VII asr devoriy rasmlari: elchilarning Sug‘d hukmdori huzuriga kelishi tasvirlangan.",
+   "tuzilish": [
+    "Davr: VII asr (Sug‘d)",
+    "Joylashuvi: Samarqand, Afrosiyob muzeyi",
+    "Mavzu: elchilar qabuli, marosimlar"
+   ],
+   "ishlatish": [
+    "Rasmdagi turli xalqlar elchilarini aniqlang.",
+    "Sug‘dning xalqaro aloqalari haqida xulosa chiqaring."
+   ],
+   "q": "Afrosiyob devoriy suratlari"
+  },
+  {
+   "id": "mushaf",
+   "e": "📜",
+   "nomi": "Usmon Mushafi",
+   "vazifa": "VII asrga oid eng qadimiy Qur’on nusxalaridan biri; Toshkentdagi Hazrati Imom majmuasida saqlanadi.",
+   "tuzilish": [
+    "Davr: VII asr",
+    "Saqlanadigan joyi: Toshkent, Hazrati Imom majmuasi",
+    "Yozuvi: kufiy xati, terida (pergament)"
+   ],
+   "ishlatish": [
+    "Majmua tarixi bilan tanishing.",
+    "Yozma manbalarning ahamiyatini muhokama qiling."
+   ],
+   "q": "Usmon Mushafi Toshkent"
+  },
+  {
+   "id": "rasadxona",
+   "e": "🔭",
+   "nomi": "Mirzo Ulug‘bek rasadxonasi",
+   "vazifa": "XV asrda (1420-yillarda) Samarqandda qurilgan rasadxona; ulkan sekstant yordamida tuzilgan «Ziji jadidi Ko‘ragoniy» yulduzlar jadvali bilan mashhur.",
+   "tuzilish": [
+    "Davr: XV asr, Temuriylar",
+    "Asosiy asbob: ulkan sekstant (meridian yoyi)",
+    "Natija: 1018 yulduz katalogi, yil uzunligini yuqori aniqlikda hisoblash"
+   ],
+   "ishlatish": [
+    "Ulug‘bekning ilmiy maktabi haqida o‘qing.",
+    "Sekstant ishlash prinsipini tushuntiring."
+   ],
+   "q": "Ulugbek rasadxonasi sekstant"
+  },
+  {
+   "id": "oqsaroy",
+   "e": "🏰",
+   "nomi": "Oqsaroy (Shahrisabz)",
+   "vazifa": "Amir Temur buyrug‘i bilan 1380–1404-yillarda qurilgan saroy; ulkan peshtoqi qoldiqlari saqlangan, YUNESKO Jahon merosi ro‘yxatidagi Shahrisabz tarixiy markazining qismi.",
+   "tuzilish": [
+    "Davr: XIV–XV asrlar",
+    "Joylashuvi: Qashqadaryo, Shahrisabz",
+    "Me’moriy xususiyati: ulkan peshtoq, koshinlar"
+   ],
+   "ishlatish": [
+    "Temuriylar me’morchiligining belgilarini sanang.",
+    "Amir Temur davri bunyodkorligi haqida taqdimot tayyorlang."
+   ],
+   "q": "Oqsaroy Shahrisabz"
+  },
+  {
+   "id": "ipakyoli",
+   "e": "🐫",
+   "nomi": "Buyuk ipak yo‘li",
+   "vazifa": "Miloddan avvalgi II asrdan XV asrgacha Xitoyni O‘rta Osiyo orqali O‘rta Yer dengizi bilan bog‘lagan savdo yo‘llari tarmog‘i.",
+   "tuzilish": [
+    "Asosiy shaharlar: Samarqand, Buxoro, Termiz, Marg‘ilon, Xiva",
+    "Tovarlar: ipak, ziravorlar, qog‘oz, chinni",
+    "Ahamiyati: savdo, fan va madaniyat almashinuvi"
+   ],
+   "ishlatish": [
+    "Xaritada yo‘l tarmoqlarini chizing.",
+    "Qaysi ixtirolar shu yo‘l orqali tarqalganini toping."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "xronologiya",
+   "e": "⏳",
+   "nomi": "Xronologiya: voqealarni tartiblang",
+   "tur": "tartib",
+   "p": {
+    "savol": "Voqealarni sodir bo‘lgan vaqti bo‘yicha (eng qadimiysidan boshlab) tanlang.",
+    "qadamlar": [
+     "Kushon podsholigi va Fayoztepa ibodatxonasi (I–III asrlar)",
+     "Afrosiyob devoriy suratlari (VII asr)",
+     "Amir Temur tavalludi (1336)",
+     "Mirzo Ulug‘bek rasadxonasi qurilishi (1420-yillar)",
+     "Alisher Navoiy tavalludi (1441)",
+     "Zahiriddin Muhammad Bobur tavalludi (1483)",
+     "O‘zbekiston mustaqilligi (1991)"
+    ]
+   }
+  },
+  {
+   "id": "sana",
+   "e": "📅",
+   "nomi": "Sana va voqea",
+   "tur": "moslash",
+   "p": {
+    "savol": "Sanani voqea bilan moslang.",
+    "juft": [
+     [
+      "1336",
+      "Amir Temur tavalludi"
+     ],
+     [
+      "1394",
+      "Mirzo Ulug‘bek tavalludi"
+     ],
+     [
+      "1441",
+      "Alisher Navoiy tavalludi"
+     ],
+     [
+      "1483",
+      "Bobur tavalludi"
+     ],
+     [
+      "1991-yil 1-sentabr",
+      "Mustaqillik kuni"
+     ],
+     [
+      "1992-yil 8-dekabr",
+      "Konstitutsiya qabul qilindi"
+     ]
+    ]
+   }
+  }
+ ],
+ "test": [
+  {
+   "s": "Ulug‘bek rasadxonasi qaysi shaharda?",
+   "v": [
+    "Samarqand",
+    "Buxoro",
+    "Xiva",
+    "Termiz"
+   ],
+   "t": 0
+  }
+ ]
+}

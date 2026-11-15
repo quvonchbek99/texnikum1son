@@ -1,0 +1,199 @@
+{
+ "id": "axborot-xavfsizligi",
+ "nomi": "Axborot xavfsizligi laboratoriyasi",
+ "e": "🛡️",
+ "xona": "it",
+ "fanlar": [
+  "axborot-xavfsizligi"
+ ],
+ "tavsif": "Himoya vositalari: antivirus, fayrvol, ikki bosqichli autentifikatsiya, parol menejeri, VPN va zaxira nusxa; parol mustahkamligi va fishingni aniqlash mashqlari.",
+ "xavfsizlik": [
+  "Kompyuter va qurilmalarni nam qo‘l bilan ushlamang, ish joyida ovqatlanmang.",
+  "Monitordan 50–70 sm uzoqlikda, to‘g‘ri o‘tiring; har 45 daqiqada ko‘z va qo‘llarga dam bering.",
+  "Litsenziyalangan yoki erkin dasturlardan foydalaning, notanish fayllarni ochmang.",
+  "Ishni muntazam saqlang va zaxira nusxa oling.",
+  "Hech qachon parol, SMS-kod va karta ma’lumotlarini boshqalarga aytmang.",
+  "Faqat ruxsat berilgan tizimlarda sinov o‘tkazing — begona tizimlarga kirishga urinish qonunga zid."
+ ],
+ "jihozlar": [
+  {
+   "id": "antivirus",
+   "e": "🦠",
+   "nomi": "Antivirus",
+   "vazifa": "Zararli dasturlarni aniqlaydi, bloklaydi va yo‘q qiladi.",
+   "tuzilish": [
+    "Real vaqtli himoya",
+    "Skaner",
+    "Virus bazasi",
+    "Karantin"
+   ],
+   "ishlatish": [
+    "Bazani avtomatik yangilashni yoqing.",
+    "Fleshkalarni ochishdan oldin tekshiring.",
+    "Haftada bir marta to‘liq skanerlang."
+   ]
+  },
+  {
+   "id": "fayrvol",
+   "e": "🔥",
+   "nomi": "Fayrvol (tarmoqlararo ekran)",
+   "vazifa": "Kompyuterga kiruvchi va chiquvchi tarmoq ulanishlarini qoidalar asosida nazorat qiladi.",
+   "tuzilish": [
+    "Kiruvchi qoidalar",
+    "Chiquvchi qoidalar",
+    "Tarmoq profillari (umumiy, xususiy)"
+   ],
+   "ishlatish": [
+    "Fayrvolni doim yoqiq saqlang.",
+    "Faqat ishonchli dasturlarga ruxsat bering.",
+    "Ommaviy Wi-Fi da «umumiy tarmoq» profilini tanlang."
+   ]
+  },
+  {
+   "id": "2fa",
+   "e": "🔐",
+   "nomi": "Ikki bosqichli autentifikatsiya (2FA)",
+   "vazifa": "Paroldan tashqari ikkinchi tasdiq (SMS-kod, ilova kodi, kalit) talab qiladi.",
+   "tuzilish": [
+    "Parol (bilasiz)",
+    "Telefon yoki kalit (sizda bor)",
+    "Autentifikator ilovasi"
+   ],
+   "ishlatish": [
+    "Barcha muhim akkauntlarda 2FA ni yoqing.",
+    "Zaxira kodlarini xavfsiz joyda saqlang.",
+    "SMS-kodni hech kimga aytmang."
+   ]
+  },
+  {
+   "id": "parolmen",
+   "e": "🗝️",
+   "nomi": "Parol menejeri",
+   "vazifa": "Har bir sayt uchun murakkab, takrorlanmas parollar yaratadi va xavfsiz saqlaydi.",
+   "tuzilish": [
+    "Shifrlangan ombor",
+    "Bosh parol",
+    "Parol generatori"
+   ],
+   "ishlatish": [
+    "Kuchli bosh parol o‘ylab toping.",
+    "Har bir saytga alohida parol bering."
+   ],
+   "sim": "parol"
+  },
+  {
+   "id": "vpn",
+   "e": "🌐",
+   "nomi": "VPN",
+   "vazifa": "Internet trafigini shifrlangan kanal orqali uzatadi — ommaviy Wi-Fi da xavfsizlikni oshiradi.",
+   "tuzilish": [
+    "VPN mijoz dasturi",
+    "Shifrlash protokoli",
+    "Server"
+   ],
+   "ishlatish": [
+    "Ishonchli provayderni tanlang.",
+    "Ommaviy tarmoqlarda yoqing."
+   ]
+  },
+  {
+   "id": "backup",
+   "e": "💽",
+   "nomi": "Zaxira nusxa (backup)",
+   "vazifa": "Ma’lumotlarni yo‘qotish (virus, shifrlovchi dastur, disk buzilishi) holatidan himoya qiladi.",
+   "tuzilish": [
+    "Tashqi disk",
+    "Bulutli ombor",
+    "3-2-1 qoidasi: 3 nusxa, 2 xil vosita, 1 tasi boshqa joyda"
+   ],
+   "ishlatish": [
+    "Muntazam avtomatik zaxiralashni sozlang.",
+    "Zaxiradan tiklashni vaqti-vaqti bilan sinab ko‘ring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "parol",
+   "e": "🔑",
+   "nomi": "Parol mustahkamligini tekshirish",
+   "tur": "parol",
+   "izoh": "Sinov parolini yozing — entropiya va topish vaqti hisoblanadi. Matn hech qayerga yuborilmaydi.",
+   "p": {}
+  },
+  {
+   "id": "fishing",
+   "e": "🎣",
+   "nomi": "Fishingni aniqlang",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Xat: «Bankingiz: kartangiz bloklandi, 1 soat ichida bank-uz-xavfsiz.com saytiga kirib, karta va SMS-kodni kiriting».",
+      "v": [
+       "Fishing: shoshiltirish, soxta domen, SMS-kod so‘ralmoqda",
+       "Haqiqiy bank xabari"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Do‘stingiz akkauntidan: «Menga ovoz bering, havola: konkurs-ovoz.top» va tasdiqlash uchun SMS-kod so‘ralmoqda.",
+      "v": [
+       "Akkaunt buzilgan bo‘lishi mumkin — kodni bermayman, do‘stimga boshqa yo‘l bilan qo‘ng‘iroq qilaman",
+       "Kodni yuboraman"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Rasmiy ilova ichida 2FA ni yoqish taklif qilinmoqda.",
+      "v": [
+       "Xavfsiz — yoqaman",
+       "Fishing"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Notanish raqamdan «Siz yutdingiz! Sovg‘ani olish uchun to‘lov qiling».",
+      "v": [
+       "Firibgarlik",
+       "Haqiqiy yutuq"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "tahdid",
+   "e": "🛡️",
+   "nomi": "Tahdid va himoya",
+   "tur": "moslash",
+   "p": {
+    "savol": "Tahdidni unga qarshi himoya bilan moslang.",
+    "juft": [
+     [
+      "Zararli dastur (virus)",
+      "Antivirus"
+     ],
+     [
+      "Parol o‘g‘irlanishi",
+      "Ikki bosqichli autentifikatsiya"
+     ],
+     [
+      "Ommaviy Wi-Fi da kuzatish",
+      "VPN"
+     ],
+     [
+      "Ma’lumotlar shifrlanishi (ransomware)",
+      "Zaxira nusxa"
+     ],
+     [
+      "Ruxsatsiz tarmoq ulanishi",
+      "Fayrvol"
+     ]
+    ]
+   }
+  }
+ ],
+ "qisqa": "Axborot xavfsizligi"
+}

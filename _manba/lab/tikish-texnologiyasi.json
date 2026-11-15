@@ -1,0 +1,132 @@
+{
+ "id": "tikish-texnologiyasi",
+ "nomi": "Tikish texnologiyasi ustaxonasi",
+ "e": "🪡",
+ "xona": "tikuv",
+ "fanlar": [
+  "tikuv-buyumlarini-tikish-texnologiyasi"
+ ],
+ "tavsif": "Tikish texnologiyasi: qo‘l va mashina choklari, namlab-isitib ishlov berish, buyum tikish ketma-ketligi; tikuv jihozlari bilan virtual mashqlar.",
+ "xavfsizlik": [
+  "Tikuv mashinasida ishlashda barmoqlarni igna yo‘lidan uzoq tuting; igna himoyachisidan foydalaning.",
+  "Ipni o‘tkazish, igna yoki lapkani almashtirishda mashinani tarmoqdan uzing.",
+  "Qaychi va pichoqlarni uchini pastga qaratib, yopiq holda uzating.",
+  "Dazmolni ishlatmayotganda tik holatda qo‘ying, simini dazmol tagiga tushirmang.",
+  "Ignalar va to‘g‘nag‘ichlarni maxsus yostiqchada saqlang, og‘izga olmang."
+ ],
+ "jihozlar": [
+  {
+   "id": "qolchok",
+   "e": "🪡",
+   "nomi": "Qo‘l ignalari va angishvona",
+   "vazifa": "Vaqtincha (ko‘klash) va doimiy qo‘l choklari uchun.",
+   "tuzilish": [
+    "Igna (raqami — yo‘g‘onligi)",
+    "Angishvona",
+    "Ip",
+    "Ignador yostiqcha"
+   ],
+   "ishlatish": [
+    "Ip uzunligi 50–60 sm dan oshmasin.",
+    "Ko‘klash chokini tugunsiz yoki kichik tugun bilan boshlang.",
+    "Doimiy choklarni bir xil bahyada tiking."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "chokturi",
+   "e": "🧵",
+   "nomi": "Chok turi va qo‘llanilishi",
+   "tur": "moslash",
+   "p": {
+    "savol": "Chok turini qo‘llanilishi bilan moslang.",
+    "juft": [
+     [
+      "Biriktiruvchi (yonma) chok",
+      "Ikki detalni bir-biriga ulash"
+     ],
+     [
+      "Yo‘rma (overlok) chok",
+      "Qirqimni so‘kilishdan saqlash"
+     ],
+     [
+      "Qayirma chok",
+      "Etak, yeng uchini ishlov berish"
+     ],
+     [
+      "Ko‘klash (vaqtincha) chok",
+      "Detallarni tikishdan oldin vaqtincha biriktirish"
+     ],
+     [
+      "Bekitma (potayniy) chok",
+      "Etakni ko‘rinmas qilib tikish"
+     ],
+     [
+      "Bostirma chok",
+      "Ustidan bezak va mustahkamlik uchun tikish"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "yubka",
+   "e": "👗",
+   "nomi": "To‘g‘ri yubka tikish ketma-ketligi",
+   "tur": "tartib",
+   "p": {
+    "savol": "Bosqichlarni to‘g‘ri tartibda tanlang.",
+    "qadamlar": [
+     "Detallarni bichish va bo‘r belgilarini o‘tkazish",
+     "Vitochkalarni tikish va dazmollash",
+     "Yon choklarni tikish va yo‘rmash",
+     "Zamok (molniya) tikish",
+     "Belbog‘ni tikib biriktirish",
+     "Etakni qayirib tikish",
+     "Tugma va ilgak qilish",
+     "Yakuniy namlab-isitib ishlov berish (dazmollash)"
+    ]
+   }
+  },
+  {
+   "id": "vtx",
+   "e": "♨️",
+   "nomi": "Namlab-isitib ishlov berish",
+   "tur": "tanlash",
+   "p": {
+    "savollar": [
+     {
+      "s": "Choklarni ikki tomonga yotqizib dazmollash nima deyiladi?",
+      "v": [
+       "Yozish (razutyujivanie)",
+       "Yotqizish (zautyujivanie)",
+       "Kirishtirish (sutyujivanie)"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Junli matoni dazmollashda nima qilish kerak?",
+      "v": [
+       "Nam mato orqali, o‘rtacha haroratda dazmollash",
+       "Eng yuqori haroratda to‘g‘ridan-to‘g‘ri",
+       "Dazmollamaslik"
+      ],
+      "t": 0
+     },
+     {
+      "s": "Ipak mato uchun qaysi harorat to‘g‘ri?",
+      "v": [
+       "Past (1 nuqta, ~110 °C)",
+       "Yuqori (3 nuqta, ~200 °C)"
+      ],
+      "t": 0
+     }
+    ]
+   }
+  }
+ ],
+ "qisqa": "Tikish texnologiyasi",
+ "meros": [
+  "tikuv-jihozlari"
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "id": "fizika-astronomiya",
+ "nomi": "Fizika va astronomiya laboratoriyasi",
+ "e": "🔭",
+ "xona": "fizika",
+ "fanlar": [
+  "fizika-va-astronomiya"
+ ],
+ "tavsif": "Fizika laboratoriyasi jihozlari va astronomik kuzatish asboblari: teleskop, osmon xaritasi, tellurium. Sayyoralardagi mayatnik va og‘irlik bo‘yicha virtual tajribalar.",
+ "xavfsizlik": [
+  "Teleskop yoki durbin bilan Quyoshga hech qachon qaramang (maxsus filtrsiz) — ko‘z ko‘r bo‘lishi mumkin."
+ ],
+ "jihozlar": [
+  {
+   "id": "teleskop",
+   "e": "🔭",
+   "nomi": "Teleskop (refraktor)",
+   "vazifa": "Osmon jismlarining tasvirini kattalashtirib, xira yulduzlarni ko‘rish imkonini beruvchi optik asbob.",
+   "tuzilish": [
+    "Obyektiv (katta linza)",
+    "Okular",
+    "Tubus (truba)",
+    "Qidiruvchi (iskatel)",
+    "Montirovka va shtativ",
+    "Fokuslash g‘ildiragi"
+   ],
+   "ishlatish": [
+    "Teleskopni tekis joyga o‘rnating va shtativni mahkamlang.",
+    "Avval kichik kattalashtiruvchi okular qo‘ying.",
+    "Qidiruvchi orqali obyektni toping.",
+    "Fokuslash g‘ildiragi bilan aniq tasvirga keltiring.",
+    "Kattalashtirish = obyektiv fokus masofasi / okular fokus masofasi."
+   ],
+   "xavfsizlik": [
+    "Quyoshni faqat maxsus quyosh filtri bilan kuzatish mumkin."
+   ]
+  },
+  {
+   "id": "planisfera",
+   "e": "🗺️",
+   "nomi": "Harakatlanuvchi osmon xaritasi (planisfera)",
+   "vazifa": "Istalgan sana va soatda osmonning qaysi qismi ko‘rinishini aniqlash uchun aylanuvchi xarita.",
+   "tuzilish": [
+    "Yulduzlar xaritasi (doira)",
+    "Ufq chizig‘i kesilgan ustki qatlam",
+    "Sana va soat shkalasi"
+   ],
+   "ishlatish": [
+    "Kuzatish sanasini soat shkalasidagi vaqtga to‘g‘rilang.",
+    "Kesik ichidagi yulduz turkumlari hozir ufqdan yuqorida ekanini ko‘ring.",
+    "Xaritani boshingiz ustida, shimolni shimolga qaratib ushlang."
+   ]
+  },
+  {
+   "id": "tellurium",
+   "e": "🌍",
+   "nomi": "Tellurium (Quyosh–Yer–Oy modeli)",
+   "vazifa": "Kun va tun almashinishi, fasllar, Oy fazalari va tutilishlarni ko‘rgazmali tushuntiruvchi model.",
+   "tuzilish": [
+    "Quyosh (lampa)",
+    "Yer shari (o‘qi 23,5° og‘ma)",
+    "Oy",
+    "Aylantirish mexanizmi"
+   ],
+   "ishlatish": [
+    "Lampani yoqing — u Quyosh vazifasini bajaradi.",
+    "Yerni orbita bo‘ylab aylantirib, fasllar almashinishini kuzating.",
+    "Oyni aylantirib, uning fazalarini ko‘ring."
+   ]
+  }
+ ],
+ "sim": [
+  {
+   "id": "ogirlik",
+   "e": "🪐",
+   "nomi": "Sayyoralarda og‘irlik",
+   "tur": "kalkulyator",
+   "p": {
+    "kirish": [
+     {
+      "id": "m",
+      "n": "Jism massasi",
+      "u": "kg",
+      "v": 60,
+      "min": 1,
+      "max": 200,
+      "q": 1
+     },
+     {
+      "id": "g",
+      "n": "Osmon jismi",
+      "u": "",
+      "v": 9.81,
+      "tanlov": [
+       [
+        9.81,
+        "Yer (9,81 m/s²)"
+       ],
+       [
+        1.62,
+        "Oy (1,62)"
+       ],
+       [
+        3.71,
+        "Mars (3,71)"
+       ],
+       [
+        8.87,
+        "Venera (8,87)"
+       ],
+       [
+        24.79,
+        "Yupiter (24,79)"
+       ],
+       [
+        274,
+        "Quyosh (274)"
+       ]
+      ]
+     }
+    ],
+    "chiqish": [
+     {
+      "n": "Og‘irlik kuchi P = m·g",
+      "f": "m*g",
+      "u": "N",
+      "x": 0,
+      "asosiy": true
+     },
+     {
+      "n": "Yerdagiga nisbatan",
+      "f": "g/9.81",
+      "u": "marta",
+      "x": 2
+     },
+     {
+      "n": "Yerdagi «tarozi ko‘rsatkichi» bo‘yicha",
+      "f": "m*g/9.81",
+      "u": "kg",
+      "x": 1
+     }
+    ],
+    "izoh": "Massa hamma joyda bir xil, og‘irlik esa erkin tushish tezlanishiga bog‘liq."
+   }
+  },
+  {
+   "id": "sayyora",
+   "e": "🪐",
+   "nomi": "Quyosh sistemasi sayyoralari",
+   "tur": "tartib",
+   "p": {
+    "savol": "Sayyoralarni Quyoshdan uzoqlashish tartibida tanlang.",
+    "qadamlar": [
+     "Merkuriy",
+     "Venera",
+     "Yer",
+     "Mars",
+     "Yupiter",
+     "Saturn",
+     "Uran",
+     "Neptun"
+    ]
+   }
+  }
+ ],
+ "meros": [
+  "fizika"
+ ],
+ "test": [
+  {
+   "s": "Yer o‘qining orbita tekisligiga perpendikulyarga nisbatan og‘ish burchagi taxminan qancha?",
+   "v": [
+    "23,5°",
+    "45°",
+    "5°",
+    "90°"
+   ],
+   "t": 0,
+   "i": "O‘qning og‘maligi fasllar almashinishiga sabab bo‘ladi."
+  }
+ ]
+}
