@@ -1241,5 +1241,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Tashqi go'zalligi qanchalik ko'p bo'lsa, shuncha yuqori qadrlanadi", "Qila olgan ishi va foydasi bilan o'lchanadi", "Patlari xira bo'lgan qush hech qachon qadrlanmaydi"],
     javob: 1,
     izoh: "Turna go'zallik emas, uchish va osmonga ko'tarila olish muhimligini aytdi. Haqiqiy qadr insonning, qushning ham, qilgan ishi bilan belgilanadi."
+  },
+  {
+    id: "ez-154", mavzu: "ehtiyotkorlik", sarlavha: "Tulki va bulbul",
+    matn: "Och tulki bog' yonidagi shoxda o'tirgan bulbulni ko'rib qoldi. Yumshoq ohangda: \"Ovozing dunyodagi eng go'zal ovoz ekan. Tushib kelsang, qo'shig'ingni yaqinroqdan eshitardim\", dedi. Bulbul tulkining ko'zidagi ochlikni payqadi. U shoxdan tushmay, bir necha daqiqa qo'shiq aytdi-da, uchib ketdi. Tulki esa baribir bulbulga yetolmadi.",
+    savol: "Bulbul nima uchun shoxdan tushmadi?",
+    variantlar: ["Chunki tulkining maqtovi samimiy emasligini va ochligini sezdi", "Chunki u qo'shiq aytishni umuman xohlamasdi", "Chunki shoxda o'tirish unga qulay edi va tulkidan qo'rqmasdi"],
+    javob: 0,
+    izoh: "Maqtov ortida yashirin niyat bo'lishi mumkin. Bulbul xavfni sezib, o'zini himoya qildi. Ortiqcha xushomadga ehtiyot bo'lish kerak."
+  },
+  {
+    id: "ez-155", mavzu: "idrok", sarlavha: "Maymun va ko'zgu",
+    matn: "Maymun bir kuni uyidan ko'zgu topib qoldi va unga qaradi. Ko'zgudagi aksini ko'rib, bu boshqa maymun ekan deb o'yladi. Qochib ketmasin deb ko'zguga yetib olish uchun shoshilib intildi va ko'zgu yerga tushib sindi.",
+    savol: "Maymun nima uchun ko'zguni sindirdi?",
+    variantlar: ["Chunki ko'zgu uning do'sti edi va u uni o'ynatmoqchi bo'ldi", "Chunki u ko'zguni ko'rmagan va tasodifan urilib ketgan edi", "Chunki u ko'zgudagi aksni boshqa maymun deb o'ylab, uni ushlamoqchi bo'ldi"],
+    javob: 2,
+    izoh: "Maymun aksini boshqa jonzot deb adashtirdi va shoshilib harakat qildi. Tekshirmasdan noto'g'ri xulosaga kelish va shoshqaloqlik ko'pincha zarar keltiradi."
   }
 ];
