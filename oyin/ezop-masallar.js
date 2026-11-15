@@ -1257,5 +1257,14 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki ko'zgu uning do'sti edi va u uni o'ynatmoqchi bo'ldi", "Chunki u ko'zguni ko'rmagan va tasodifan urilib ketgan edi", "Chunki u ko'zgudagi aksni boshqa maymun deb o'ylab, uni ushlamoqchi bo'ldi"],
     javob: 2,
     izoh: "Maymun aksini boshqa jonzot deb adashtirdi va shoshilib harakat qildi. Tekshirmasdan noto'g'ri xulosaga kelish va shoshqaloqlik ko'pincha zarar keltiradi."
+  },
+  {
+    id: "ez-156", mavzu: "yaxshilik", sarlavha: "Kaptar va chumoli bargi",
+    matn: "Bir kuni daryo bo'yidagi daraxt shoxida o'tirgan kaptar, suvda cho'kayotgan kichkina chumolini ko'rib qoldi. Chumoli qirg'oqqa chiqish uchun ojizlik bilan harakat qilardi. Kaptar darhol bir barg uzib, suvga tashladi. Chumoli bargga minib, quruqlikka yetib oldi. Shu orada ovchi daraxt tagiga kelib, kaptarni tutish uchun to'r yoydi.",
+    savol: "Kaptar ovchidan qanday qutulib qoldi?",
+    variantlar: ["Chunki u ovchidan oldin daraxtdan tushib ketdi", "Chunki chumoli ovchining oyog'ini chaqib, uning e'tiborini chalg'itdi", "Chunki ovchi to'rni o'zi yirtib tashladi"],
+    javob: 1,
+    izoh: "Chumoli ovchiga yaxshilik qaytardi: uni chaqib, e'tiborini chalg'itdi. Kaptar esa oldin qilgan yaxshiligi tufayli qutulib qoldi. Yaxshilik ko'pincha o'z o'rnida qaytib keladi."
   }
 ];
+
