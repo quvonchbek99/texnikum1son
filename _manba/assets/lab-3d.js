@@ -79,6 +79,13 @@
       shisha: new T.MeshPhysicalMaterial({ color: 0xcfe6f2, roughness: .05, metalness: 0, transparent: true, opacity: .28 }),
       qoraShisha: new T.MeshPhysicalMaterial({ color: 0x0b0d10, roughness: .08, metalness: .4, transparent: true, opacity: .82 })
     };
+    function tex(w, h, f, rx, ry) { var cv = document.createElement("canvas"); cv.width = w; cv.height = h; f(cv.getContext("2d"), w, h); var t = new T.CanvasTexture(cv); t.colorSpace = T.SRGBColorSpace; t.wrapS = t.wrapT = T.RepeatWrapping; t.repeat.set(rx || 1, ry || 1); t.anisotropy = 8; return t; }
+    function polat(rang) { // silliqlangan (brushed) zanglamas po'lat
+      var t = tex(256, 256, function (q, w, h) { q.fillStyle = "#c4c8cc"; q.fillRect(0, 0, w, h); for (var i = 0; i < 2200; i++) { var v = 175 + Math.random() * 60 | 0; q.strokeStyle = "rgba(" + v + "," + v + "," + (v + 3) + ",.16)"; q.lineWidth = .6 + Math.random(); var y = Math.random() * h, x = Math.random() * w, l = 30 + Math.random() * 180; q.beginPath(); q.moveTo(x, y); q.lineTo(x + l, y); q.stroke(); } }, 2, 2);
+      var r2 = t.clone(); r2.colorSpace = T.NoColorSpace; r2.needsUpdate = true;
+      return new T.MeshStandardMaterial({ color: rang || 0xe4e7ea, map: t, roughnessMap: r2, roughness: .5, metalness: 1 });
+    }
+    function kafel(asos, chok, n, rx, ry) { return new T.MeshStandardMaterial({ roughness: .35, map: tex(256, 256, function (q, w, h) { q.fillStyle = chok; q.fillRect(0, 0, w, h); var k = w / n; for (var i = 0; i < n; i++) for (var j = 0; j < n; j++) { var v = (Math.random() * 10 | 0) - 5; q.fillStyle = asos; q.fillRect(i * k + 2, j * k + 2, k - 4, k - 4); q.fillStyle = "rgba(" + (v > 0 ? "255,255,255" : "0,0,0") + "," + Math.abs(v) / 100 + ")"; q.fillRect(i * k + 2, j * k + 2, k - 4, k - 4); } }, rx, ry) }); }
     function add(g, m, x, y, z, par) { var o = new T.Mesh(g, m); o.position.set(x || 0, y || 0, z || 0); o.castShadow = true; o.receiveShadow = true; (par || scene).add(o); return o; }
     function box(w, h, d, m, x, y, z, par, r) {
       var g;
@@ -98,7 +105,8 @@
     function matn(g, s, x, y, px, c) { g.fillStyle = c || "#e7f0ff"; g.font = "600 " + px + "px sans-serif"; g.fillText(s, x, y); }
     function zarra(n, color, size, par) {
       var geo = new T.BufferGeometry(), pos = new Float32Array(n * 3); geo.setAttribute("position", new T.BufferAttribute(pos, 3));
-      var o = new T.Points(geo, new T.PointsMaterial({ color: color, size: size, transparent: true, opacity: .8, depthWrite: false })); o.frustumCulled = false; (par || scene).add(o);
+      if (!zarra.t) { var zc = document.createElement("canvas"); zc.width = zc.height = 64; var zg = zc.getContext("2d"), zr = zg.createRadialGradient(32, 32, 0, 32, 32, 32); zr.addColorStop(0, "rgba(255,255,255,1)"); zr.addColorStop(.4, "rgba(255,255,255,.45)"); zr.addColorStop(1, "rgba(255,255,255,0)"); zg.fillStyle = zr; zg.fillRect(0, 0, 64, 64); zarra.t = new T.CanvasTexture(zc); }
+      var o = new T.Points(geo, new T.PointsMaterial({ color: color, size: size * 2.2, map: zarra.t, transparent: true, opacity: .55, depthWrite: false })); o.frustumCulled = false; (par || scene).add(o);
       o.userData = { pos: pos, ph: Array.from({ length: n }, Math.random) }; return o;
     }
     function zOqim(o, t, f) { var P = o.userData.pos, ph = o.userData.ph; for (var i = 0; i < ph.length; i++) { var q = f((t * .6 + ph[i]) % 1, ph[i], i); P[i * 3] = q[0]; P[i * 3 + 1] = q[1]; P[i * 3 + 2] = q[2]; } o.geometry.attributes.position.needsUpdate = true; }
@@ -190,16 +198,56 @@
       return { r: .5, y: 1.25, rIsh: 1.3, yIsh: 1.3, anim: function (t, ish) { hv.visible = ish; if (ish) zOqim(hv, t * 2, function (q, ph) { return [.13 + q * .3, 1.38 + (ph - .5) * q * .12, (ph * 7 % 1 - .5) * q * .12]; }); k.rotation.z = ish ? Math.sin(t * 2) * .12 : 0; } };
     };
     B.pech = function (g, c, L) {
-      box(.85, .08, .78, M.polat, 0, .74, 0, g); [[-.38, -.34], [.38, -.34], [-.38, .34], [.38, .34]].forEach(function (s) { box(.04, .7, .04, M.polat, s[0], .35, s[1], g); });
-      box(.85, 1.0, .78, M.polat, 0, 1.28, 0, g, .02); box(.6, .86, .02, M.qora, -.1, 1.28, .385, g);
-      for (var i = 0; i < 6; i++) box(.54, .012, .5, M.polat, -.1, .95 + i * .13, .1, g);
-      var esh = new T.Group(); esh.position.set(-.41, 1.28, .4); g.add(esh); box(.62, .9, .03, M.qoraShisha, .31, 0, 0, esh, .02); box(.03, .5, .04, M.polat, .58, 0, .04, esh, .01);
-      box(.2, .9, .02, M.qora, .31, 1.28, .392, g); ekran(.16, .26, function (q, w, h) { matn(q, "iCombi Pro", 30, 80, 70, "#7fd0ff"); matn(q, "160°C", 30, 260, 130, "#ffd36b"); matn(q, "Bug‘ 60%", 30, 400, 70, "#e7f0ff"); matn(q, "12:40", 30, 560, 110, "#35d07f"); }, .31, 1.45, .404, g);
-      cyl(.04, .03, M.polat, .31, 1.05, .405, g, "z");
-      var ich = nur(0xffc880, 6, 1.5, -.1, 1.4, .1, g);
-      L("Sensorli boshqaruv ekrani", .31, 1.62, .41); L("Shisha eshik", -.2, 1.5, .42); L("Tovoq yo‘naltirgichlari", -.1, 1.2, .3); L("Taglik", 0, .5, .35);
-      var bg = zarra(70, 0xffffff, .03, c); odam(c, 1.0, .9);
-      return { r: 2.9, y: 1.05, rIsh: 3.4, yIsh: 1.1, anim: function (t, ish) { var a = ish ? -1.5 : 0; esh.rotation.y += (a - esh.rotation.y) * .05; bg.visible = ish; if (ish) zOqim(bg, t * .5, function (q, ph, i) { return [-.1 + (ph - .5) * .5 + Math.sin(i + t) * .05, 1.1 + q * 1.0, .45 + q * .35 + (ph * 5 % 1) * .1]; }); ich.intensity = 5 + Math.sin(t * 2); } };
+      var st = polat(), stQ = polat(0x8f959b), qg = new T.MeshPhysicalMaterial({ color: 0x08090b, roughness: .06, metalness: .2, clearcoat: 1, clearcoatRoughness: .04 }), Y = 1.3, H = 1.04;
+      var oyna = new T.MeshPhysicalMaterial({ color: 0x30363c, roughness: .03, metalness: 0, transparent: true, opacity: .32, clearcoat: 1 });
+      // taglik: ramka, GN yo'naltirgichlar, rostlanadigan oyoqlar
+      [[-.38, -.34], [.38, -.34], [-.38, .34], [.38, .34]].forEach(function (s) { box(.04, .7, .04, st, s[0], .41, s[1], g); cyl(.024, .05, M.qora, s[0], .03, s[1], g); cyl(.03, .012, st, s[0], .006, s[1], g); });
+      [-.34, .34].forEach(function (z) { box(.8, .04, .04, st, 0, .74, z, g); box(.8, .03, .03, st, 0, .16, z, g); }); [-.38, .38].forEach(function (x) { box(.04, .04, .72, st, x, .74, 0, g); box(.03, .03, .72, st, x, .16, 0, g); });
+      box(.76, .012, .68, st, 0, .18, 0, g); for (var i = 0; i < 6; i++) [-.352, .352].forEach(function (x) { box(.014, .01, .64, st, x, .28 + i * .075, 0, g); });
+      box(.53, .02, .6, st, 0, .44, 0, g); box(.53, .02, .6, st, 0, .59, 0, g); // zaxira tovoqlar
+      // korpus qobig'i (old tomoni ochiq) va ichki kamera
+      box(.85, .03, .78, st, 0, Y + H / 2 - .015, 0, g, .008); box(.85, .03, .78, st, 0, Y - H / 2 + .015, 0, g); box(.03, H, .78, st, -.41, Y, 0, g); box(.03, H, .78, st, .41, Y, 0, g); box(.85, H, .03, st, 0, Y, -.375, g);
+      box(.02, H - .06, .74, stQ, .2, Y, 0, g); box(.58, H - .08, .01, stQ, -.1, Y, -.35, g); box(.58, .01, .7, stQ, -.1, Y - H / 2 + .04, 0, g);
+      cyl(.17, .012, M.temir, -.1, Y, -.34, g, "z"); for (i = 0; i < 6; i++) { var pr = box(.3, .012, .004, st, -.1, Y, -.332, g); pr.rotation.z = i * Math.PI / 6; } // ventilyator panjarasi
+      var non = mat(0xc8873a, 0, .8), pish = [];
+      for (i = 0; i < 10; i++) { var yy = Y - H / 2 + .1 + i * .088; [-.385, .185].forEach(function (x) { box(.012, .008, .62, st, x, yy, .02, g); });
+        if (i % 2 === 1) { box(.545, .012, .5, stQ, -.1, yy + .01, .02, g); for (var k = 0; k < 6; k++) { var n = add(new T.CapsuleGeometry(.032, .09, 6, 12), non, -.27 + (k % 3) * .17, yy + .048, -.1 + Math.floor(k / 3) * .24, g); n.rotation.z = Math.PI / 2; n.scale.set(1, .8, 1.25); pish.push(n); } } }
+      var ich = nur(0xffc27a, 5, 1.6, -.1, Y + .38, .1, g), ich2 = nur(0xffc27a, 3, 1.4, -.1, Y - .2, .15, g);
+      box(.6, .03, .02, qg, -.1, Y + H / 2 - .035, .385, g); box(.6, .03, .02, qg, -.1, Y - H / 2 + .035, .385, g); // old ramka
+      // eshik: ramka + shisha + tutqich, chap tomonda oshiq-moshiq
+      var esh = new T.Group(); esh.position.set(-.41, Y, .395); g.add(esh);
+      box(.62, .07, .035, qg, .31, H / 2 - .055, .018, esh, .012); box(.62, .07, .035, qg, .31, -H / 2 + .055, .018, esh, .012); box(.07, H - .04, .035, qg, .035, 0, .018, esh, .012); box(.07, H - .04, .035, qg, .585, 0, .018, esh, .012);
+      var sh = box(.49, H - .17, .012, oyna, .31, 0, .02, esh); sh.castShadow = false; box(.5, H - .16, .006, M.rezina, .31, 0, .002, esh).scale.set(1, 1, 1);
+      esh.children[esh.children.length - 1].visible = false;
+      cyl(.013, .62, st, .585, 0, .085, esh); [.24, -.24].forEach(function (y) { cyl(.009, .05, st, .585, y, .06, esh, "z"); });
+      [.4, -.4].forEach(function (y) { cyl(.014, .07, st, -.405, Y + y, .4, g); });
+      box(.6, .018, .05, st, -.1, Y - H / 2 - .012, .41, g); // tomchi tarnovi
+      // boshqaruv paneli: qora shisha, sensorli ekran, aylanma dasta
+      box(.2, H - .03, .03, qg, .31, Y, .395, g, .01);
+      var ek = ekran(.16, .27, function (q, w, h) { var gr = q.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, "#101a2c"); gr.addColorStop(1, "#060a12"); q.fillStyle = gr; q.fillRect(0, 0, w, h);
+        matn(q, "12:40", 30, 70, 44, "#9fb3cc"); matn(q, "Non · 6 tovoq", 30, 140, 46, "#fff"); q.strokeStyle = "#ff8a3d"; q.lineWidth = 16; q.beginPath(); q.arc(w / 2, 360, 140, -Math.PI / 2, Math.PI * .9); q.stroke(); q.strokeStyle = "#22304a"; q.beginPath(); q.arc(w / 2, 360, 140, Math.PI * .9, Math.PI * 1.5); q.stroke();
+        q.textAlign = "center"; matn(q, "180°C", w / 2, 350, 84, "#ffd36b"); matn(q, "08:25 qoldi", w / 2, 410, 38, "#e7f0ff"); q.textAlign = "left";
+        [["Bug‘", "40%", "#5ab6ff"], ["Havo", "3/5", "#35d07f"], ["Zond", "92°", "#ff8a3d"]].forEach(function (a, i) { q.fillStyle = "#16233a"; q.fillRect(30 + i * 155, 560, 140, 150); matn(q, a[0], 46 + i * 155, 610, 34, "#9fb3cc"); matn(q, a[1], 46 + i * 155, 680, 50, a[2]); });
+        q.fillStyle = "#e8742a"; q.fillRect(30, 750, w - 60, 80); q.textAlign = "center"; matn(q, "TO‘XTATISH", w / 2, 805, 44, "#fff"); q.textAlign = "left"; }, .31, Y + .28, .4115, g);
+      cyl(.036, .028, st, .31, Y - .02, .42, g, "z"); add(new T.TorusGeometry(.042, .004, 10, 40), mat(0xff8a3d, 0, .3, { emissive: 0xff8a3d, emissiveIntensity: 2 }), .31, Y - .02, .412, g);
+      box(.05, .016, .004, M.temir, .31, Y - .14, .412, g); for (i = 0; i < 7; i++) box(.12, .006, .004, M.temir, .31, Y - .3 - i * .018, .4115, g); // USB va dinamik panjarasi
+      for (i = 0; i < 9; i++) box(.004, .012, .3, M.temir, .4265, Y - .2 - i * .03, -.1, g); // yon shamollatish
+      cyl(.032, .07, st, -.22, Y + H / 2 + .035, -.25, g); cyl(.022, .05, st, .1, Y + H / 2 + .025, -.28, g); // bug' chiqish quvurlari
+      L("Sensorli boshqaruv ekrani", .31, Y + .44, .42); L("Shisha eshik", -.25, Y + .3, .43); L("Eshik tutqichi", .175, Y - .1, .5); L("Aylanma dasta", .31, Y - .02, .45); L("Tovoq yo‘naltirgichlari (10 daraja)", -.1, Y - .3, .4); L("Bug‘ chiqish quvuri", -.22, Y + H / 2 + .1, -.25); L("Taglik va zaxira tovoqlar", 0, .5, .36);
+      // ish joyi: oshxona
+      var pol = add(new T.PlaneGeometry(9, 7), kafel("#b9b3a8", "#6d675e", 4, 9, 7), 1, .002, 1.2, c); pol.rotation.x = -Math.PI / 2; pol.castShadow = false;
+      var dev = add(new T.PlaneGeometry(9, 3.2), kafel("#f3f1ec", "#c9c5bc", 8, 9, 3.2), 1, 1.6, -.62, c); dev.castShadow = false;
+      box(3.4, .4, 1.1, st, .9, 2.45, -.05, c, .02); box(3.4, .05, 1.14, stQ, .9, 2.24, -.05, c); // so'rish zonti
+      var tx = 1.75; box(1.5, .04, .7, st, tx, .88, -.1, c, .008); box(1.5, .1, .02, st, tx, .93, -.44, c); box(1.4, .02, .6, st, tx, .25, -.1, c); [[-.7, -.3], [.7, -.3], [-.7, .3], [.7, .3]].forEach(function (s) { box(.04, .86, .04, st, tx + s[0], .43, -.1 + s[1], c); });
+      box(.45, .025, .3, mat(0xb98a5c, 0, .7), tx - .35, .913, -.05, c, .008); box(.54, .02, .34, stQ, tx + .3, .91, -.08, c);
+      for (i = 0; i < 6; i++) { var n2 = add(new T.CapsuleGeometry(.032, .09, 6, 12), non, tx + .14 + (i % 3) * .16, .945, -.16 + Math.floor(i / 3) * .16, c); n2.rotation.z = Math.PI / 2; n2.scale.set(1, .8, 1.25); }
+      var osh = new T.Group(); osh.position.set(1.15, 0, .75); osh.rotation.y = -1.9; c.add(osh); var oqM = mat(0xf4f4f2, 0, .8);
+      add(new T.CapsuleGeometry(.17, .5, 8, 18), oqM, 0, 1.12, 0, osh); box(.3, .5, .02, mat(0x2b2f36, 0, .9), 0, .95, .165, osh); sph(.105, M.teri, 0, 1.62, 0, osh); cyl(.1, .17, oqM, 0, 1.78, 0, osh, null, .115);
+      [-.085, .085].forEach(function (x) { cyl(.07, .78, mat(0x2b2f36, 0, .9), x, .4, 0, osh, null, .08); box(.1, .06, .22, M.qora, x, .03, .04, osh, .02); var q = add(new T.CapsuleGeometry(.05, .46, 6, 12), oqM, x * 2.5, 1.12, .06, osh); q.rotation.x = -.35; });
+      var bg = zarra(110, 0xffffff, .09, c);
+      return { r: 2.9, y: 1.02, rIsh: 4.3, yIsh: 1.25, thIsh: .55, anim: function (t, ish) { var a = ish ? -1.75 : 0; esh.rotation.y += (a - esh.rotation.y) * .04; var och = -esh.rotation.y / 1.75; bg.visible = och > .15;
+        if (bg.visible) { bg.material.opacity = .35 * och; zOqim(bg, t * .35, function (q, ph, i) { var x0 = -.1 + ((ph * 13) % 1 - .5) * .5; return [x0 + Math.sin(i + t * .7) * .06 * q, Y - .2 + ((ph * 7) % 1) * .5 + q * 1.1, .3 + q * (.45 + ph * .3)]; }); }
+        ich.intensity = 5 + Math.sin(t * 1.7) * .4; ek.material.emissiveIntensity = .95; } };
     };
     B.mashina = function (g, c, L) {
       box(7.3, 1.9, 2.3, M.qizil, 0, 1.75, 0, g, .18); box(1.5, 1.0, 2.32, M.qoraShisha, 2.75, 2.05, 0, g, .12); box(7.3, .35, 2.32, M.temir, 0, .82, 0, g);
