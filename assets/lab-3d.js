@@ -52,7 +52,7 @@
     h = "<h3>" + esc(g("nomi")) + '</h3><span class="meta">' + esc(g("tur")) + " · " + esc(g("ishlab")) + " · " + esc(g("yil")) + '</span><div class="z3-g"><div><h4>' + T("yangi") + "</h4><ul>" + li(g("nima")) + "</ul></div><div><h4>" + T("qayer") + "</h4><p>" + esc(g("qayerda")) + "</p></div>" +
       (ust ? "<div><h4>" + T("ustun") + "</h4><ul>" + li(ust) + "</ul></div>" : "") +
       (mat ? "<div><h4>" + T("mat") + "</h4><p><b>" + esc(mat[0]) + '</b></p><p style="margin-top:6px">' + esc(mat[1]) + "</p></div>" : "") +
-      (g("foyda") ? "<div><h4>" + T("foyda") + "</h4><p>" + esc(g("foyda")) + "</p></div>" : "") +
+      (g("foyda") ? "<div><h4>" + T("foyda") + "</h4><p>" + esc(g("foyda")) + "</p>" + (g("hisob") ? '<p style="margin-top:6px">' + esc(g("hisob")) + "</p>" : "") + "</div>" : "") +
       (uzb ? "<div><h4>" + T("uzb") + "</h4><p>" + esc(uzb) + (z.uz_manba ? ' <a href="' + esc(z.uz_manba) + '" target="_blank" rel="noopener">' + T("manbaL") + "</a>" : "") + "</p></div>" : "") + "</div>" +
       '<p class="z3-m">' + T("manba") + " (" + esc(g("manba_turi") || T("manbaL")) + '): <a href="' + esc(z.manba) + '" target="_blank" rel="noopener">' + esc(z.manba.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + "</a>. " +
       (z.sf ? T("haq") + ": «" + esc(z.sf.nomi) + "», " + T("muallif") + " " + esc(z.sf.muallif) + ' (<a href="https://sketchfab.com/3d-models/' + esc(z.sf.uid) + '" target="_blank" rel="noopener">Sketchfab</a>). ' + esc(E.sf || z.sf.izoh) + " " + T("maket") : T("yoq")) + "</p>";

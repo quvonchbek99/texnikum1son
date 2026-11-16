@@ -330,8 +330,10 @@
      "Shows how a drop of metal passes from the electrode into the pool.",
      "TimWelds channel"
     ]
-   ]
-  }
+   ],
+   "hisob": "Payback (using the Jasic MIG 350 sold in Tashkent): 14,522,868 soums ÷ 400,000 soums a day ≈ 37 working days. (The daily income is an example value.)"
+  },
+  "hisob": "O‘zini oqlash (Toshkentda sotiladigan Jasic MIG 350 misolida): 14 522 868 so‘m ÷ kuniga 400 000 so‘m ≈ 37 ish kuni. (Kunlik daromad misol uchun olingan.)"
  },
  {
   "id": "termokamera",
@@ -863,8 +865,10 @@
      "Drying and styling hair with a dryer and a round brush.",
      "«Путь парикмахера» channel (in Russian)"
     ]
-   ]
-  }
+   ],
+   "hisob": "Payback: T = Price ÷ daily income. Example: 7,712,500 soums; 10 clients a day × 30,000 soums = 300,000 soums → T ≈ 26 working days. (Price from the listing for the standard Supersonic; client numbers and fee are example values.)"
+  },
+  "hisob": "O‘zini oqlash: T = Narx ÷ kunlik daromad. Misol: 7 712 500 so‘m; kuniga 10 mijoz × 30 000 so‘m = 300 000 so‘m → T ≈ 26 ish kuni. (Narx oddiy Supersonic e’lonidan; mijozlar soni va haqi misol uchun olingan.)"
  },
  {
   "id": "pech",
@@ -954,8 +958,10 @@
      "The oven’s screen, modes and tray loading.",
      "Артур АЛЬФТОРГ channel (in Russian)"
     ]
-   ]
-  }
+   ],
+   "hisob": "Payback: T = Price ÷ daily net income. Example: 174,982,000 soums ÷ 1,500,000 soums ≈ 117 working days. (The daily income is an example value.)"
+  },
+  "hisob": "O‘zini oqlash: T = Narx ÷ kunlik sof daromad. Misol: 174 982 000 so‘m ÷ 1 500 000 so‘m ≈ 117 ish kuni. (Kunlik daromad misol uchun olingan.)"
  },
  {
   "id": "mashina",
@@ -1141,8 +1147,10 @@
      "How the X2D differs from the earlier X1C.",
      "ProTech channel (in Russian)"
     ]
-   ]
-  }
+   ],
+   "hisob": "Payback: 6,051,195 soums ÷ 150,000 soums a day ≈ 41 working days. (Price from the cheapest Bambu Lab listing; the daily income is an example value.)"
+  },
+  "hisob": "O‘zini oqlash: 6 051 195 so‘m ÷ kuniga 150 000 so‘m ≈ 41 ish kuni. (Narx Bambu Lab printerlarining eng arzon e’lonidan; kunlik daromad misol uchun olingan.)"
  },
  {
   "id": "ap",
@@ -1298,7 +1306,14 @@
      "Running an experiment with the sensor and obtaining a graph.",
      "«НИИ в каждом доме» channel (in Russian)"
     ]
-   ]
+   ],
+   "sf": "A digital pH meter with a probe — not a temperature sensor, but a digital lab instrument that works the same way."
+  },
+  "sf": {
+   "uid": "9c2133ce7b4442009fc44033220264b3",
+   "nomi": "pH meter with accessories",
+   "muallif": "Sketchfab muallifi",
+   "izoh": "Zondli raqamli pH-metr — harorat datchigi emas, lekin xuddi shunday ishlaydigan raqamli laboratoriya o‘lchagichi."
   }
  }
 ]
