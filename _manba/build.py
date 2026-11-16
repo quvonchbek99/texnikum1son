@@ -75,7 +75,10 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
     nav = "".join(f'<a href="{R}{u}"{" aria-current=page" if active == u else ""}>{t}</a>' for u, t in NAV)
     full_title = f"{title} · {NOM} e-bazasi" if title != NOM else f"Fanlar — {NOM} e-bazasi"
     canon = DOMEN + "/" + re.sub(r"index\.html$", "", path)
-    sc = "".join(f'<script src="{R}assets/{s}?v=3" defer></script>' for s in ("sayt.js",) + tuple(scripts))
+    def _v(s):  # lab-3d.js tez-tez yangilanadi: versiya fayl mazmunidan olinadi (brauzer keshi eskirib qolmasin)
+        if s != "lab-3d.js": return "3"
+        import hashlib; return hashlib.md5(open(os.path.join(SRC, "assets", s), "rb").read()).hexdigest()[:8]
+    sc = "".join(f'<script src="{R}assets/{s}?v={_v(s)}" defer></script>' for s in ("sayt.js",) + tuple(scripts))
     html = f"""<!doctype html>
 <html lang="uz">
 <head>
