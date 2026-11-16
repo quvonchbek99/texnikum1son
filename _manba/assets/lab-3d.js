@@ -23,7 +23,7 @@
     "@media print{.z3-st,.z3-l,.z3-vp{display:none}}";
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
-  p.innerHTML = '<div class="z3">' + (Z.length > 1 ? '<div class="z3-l">' + Z.map(function (z, i) { return '<button type="button" class="chip" data-z="' + i + '">' + esc(z.nomi) + "</button>"; }).join("") + "</div>" : "") +
+  p.innerHTML = '<div class="z3"><div class="z3-l" style="justify-content:flex-end;margin-bottom:8px"><button type="button" class="chip z3-til" data-til></button></div>' + (Z.length > 1 ? '<div class="z3-l">' + Z.map(function (z, i) { return '<button type="button" class="chip" data-z="' + i + '">' + esc(z.nomi) + "</button>"; }).join("") + "</div>" : "") +
     '<div class="z3-st"><button type="button" class="z3-rj" hidden></button><iframe class="z3-sf" title="Haqiqiy 3D model" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen hidden></iframe><canvas></canvas><div class="z3-tags"></div><div class="z3-yuk">3D model yuklanmoqda…</div>' +
     '<div class="z3-bar"><button type="button" data-a="tuz">Tuzilishi</button><button type="button" data-a="ish">▶ Ish joyida ko‘rsatish</button><button type="button" data-a="ayl" class="on">Aylanish</button><button type="button" data-a="toliq">⛶ To‘liq ekran</button></div></div>' +
     '<div class="z3-i card"></div></div>';
@@ -33,7 +33,7 @@
   // Haqiqiy 3D model (Sketchfab) bor bo'lsa — avval shu ko'rsatiladi; maket faqat ish jarayoni animatsiyasi uchun
   function rejim() {
     var z = Z[cur], haq = !!z.sf && !maket;
-    rj.hidden = !z.sf; rj.textContent = haq ? "⚙ Ish jarayoni (animatsiya)" : "📷 Haqiqiy 3D model";
+    rj.hidden = !z.sf; rj.textContent = haq ? T("rj1") : T("rj2");
     sfF.hidden = !haq; canvas.style.display = haq ? "none" : ""; bar.style.display = haq ? "none" : ""; tagsBox.style.visibility = haq ? "hidden" : ""; if (yuk.parentNode) yuk.style.display = haq ? "none" : "";
     if (!korindi) return;
     if (haq) { var u = "https://sketchfab.com/models/" + z.sf.uid + "/embed?autostart=1&autospin=0.2&ui_theme=dark&dnt=1"; if (sfF.getAttribute("src") !== u) sfF.setAttribute("src", u); }
@@ -41,27 +41,39 @@
   }
   rj.addEventListener("click", function () { maket = !maket; rejim(); });
 
+  var TL = { en: { yangi: "What is new", qayer: "Where it works", ustun: "Advantages over other models", mat: "The maths", foyda: "Benefit", uzb: "In Uzbekistan", manba: "Source", video: "At work — video", yt: "Open on YouTube", och: "Play video: ", haq: "Real 3D model", muallif: "author", maket: "The “Working process” animation is a simplified teaching mock-up.", yoq: "No ready-made real 3D model was found for this device — a simplified teaching mock-up is shown.", tuz: "Parts", ish: "▶ Show at work", ish2: "■ Device only", ayl: "Rotate", toliq: "⛶ Full screen", rj1: "⚙ Working process (animation)", rj2: "📷 Real 3D model", manbaL: "source" },
+    uz: { yangi: "Nimasi yangi", qayer: "Qayerda ishlaydi", ustun: "Boshqa modellardan ustunligi", mat: "Matematikasi", foyda: "Foydasi", uzb: "O‘zbekistonda", manba: "Manba", video: "Ish jarayoni — video", yt: "YouTube’da ochish", och: "Videoni ochish: ", haq: "Haqiqiy 3D model", muallif: "muallif", maket: "«Ish jarayoni» animatsiyasi — soddalashtirilgan o‘quv maketi.", yoq: "Bu jihoz uchun tayyor haqiqiy 3D model topilmadi — soddalashtirilgan o‘quv maketi ko‘rsatilmoqda.", tuz: "Tuzilishi", ish: "▶ Ish joyida ko‘rsatish", ish2: "■ Faqat jihoz", ayl: "Aylanish", toliq: "⛶ To‘liq ekran", rj1: "⚙ Ish jarayoni (animatsiya)", rj2: "📷 Haqiqiy 3D model", manbaL: "manba" } };
+  var til = "uz"; try { if (localStorage.getItem("t1-z3-til") === "en") til = "en"; } catch (e) {}
+  function T(k) { return TL[til][k]; }
+  function li(a) { return a.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join(""); }
   function infoHTML(z) {
-    info.innerHTML = "<h3>" + esc(z.nomi) + '</h3><span class="meta">' + esc(z.tur) + " · " + esc(z.ishlab) + " · " + esc(z.yil) + '</span><div class="z3-g"><div><h4>Nimasi yangi</h4><ul>' +
-      z.nima.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div><div><h4>Qayerda ishlaydi</h4><p>" + esc(z.qayerda) + "</p></div>" +
-      (z.ustun ? "<div><h4>Boshqa modellardan ustunligi</h4><ul>" + z.ustun.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>" : "") +
-      (z.mat ? "<div><h4>Matematikasi</h4><p><b>" + esc(z.mat[0]) + "</b></p><p style=\"margin-top:6px\">" + esc(z.mat[1]) + "</p></div>" : "") +
-      (z.foyda ? "<div><h4>Foydasi</h4><p>" + esc(z.foyda) + "</p></div>" : "") +
-      (z.uz ? "<div><h4>O‘zbekistonda</h4><p>" + esc(z.uz) + (z.uz_manba ? ' <a href="' + esc(z.uz_manba) + '" target="_blank" rel="noopener">manba</a>' : "") + "</p></div>" : "") + "</div>" +
-      '<p class="z3-m">Manba (' + esc(z.manba_turi || "manba") + '): <a href="' + esc(z.manba) + '" target="_blank" rel="noopener">' + esc(z.manba.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + "</a>. " + (z.sf ? "Haqiqiy 3D model: «" + esc(z.sf.nomi) + "», muallif " + esc(z.sf.muallif) + ' (<a href="https://sketchfab.com/3d-models/' + esc(z.sf.uid) + '" target="_blank" rel="noopener">Sketchfab</a>). ' + esc(z.sf.izoh) + " «Ish jarayoni» animatsiyasi — soddalashtirilgan o‘quv maketi." : "Bu jihoz uchun tayyor haqiqiy 3D model topilmadi — soddalashtirilgan o‘quv maketi ko‘rsatilmoqda.") + "</p>";
-    if (z.videolar) info.innerHTML += '<div class="z3-v"><h4>' + esc(z.video_sarlavha || "Ish jarayoni — video") + '</h4><div class="z3-vg">' + z.videolar.map(function (v) {
-      return '<div class="z3-vk"><button type="button" class="z3-vp" data-yt="' + esc(v.yt) + '" aria-label="Videoni ochish: ' + esc(v.nomi) + '" style="background-image:url(https://i.ytimg.com/vi/' + esc(v.yt) + '/hqdefault.jpg)"></button><b>' + esc(v.nomi) + "</b><p>" + esc(v.izoh) + '</p><small>' + esc(v.manba) + ' · <a href="https://www.youtube.com/watch?v=' + esc(v.yt) + '" target="_blank" rel="noopener">YouTube’da ochish</a></small></div>'; }).join("") + "</div></div>";
+    var E = (til === "en" && z.en) || {}; function g(k) { return E[k] != null ? E[k] : z[k]; }
+    var mat = g("mat"), ust = g("ustun"), uzb = g("uz"), h;
+    h = "<h3>" + esc(g("nomi")) + '</h3><span class="meta">' + esc(g("tur")) + " · " + esc(g("ishlab")) + " · " + esc(g("yil")) + '</span><div class="z3-g"><div><h4>' + T("yangi") + "</h4><ul>" + li(g("nima")) + "</ul></div><div><h4>" + T("qayer") + "</h4><p>" + esc(g("qayerda")) + "</p></div>" +
+      (ust ? "<div><h4>" + T("ustun") + "</h4><ul>" + li(ust) + "</ul></div>" : "") +
+      (mat ? "<div><h4>" + T("mat") + "</h4><p><b>" + esc(mat[0]) + '</b></p><p style="margin-top:6px">' + esc(mat[1]) + "</p></div>" : "") +
+      (g("foyda") ? "<div><h4>" + T("foyda") + "</h4><p>" + esc(g("foyda")) + "</p></div>" : "") +
+      (uzb ? "<div><h4>" + T("uzb") + "</h4><p>" + esc(uzb) + (z.uz_manba ? ' <a href="' + esc(z.uz_manba) + '" target="_blank" rel="noopener">' + T("manbaL") + "</a>" : "") + "</p></div>" : "") + "</div>" +
+      '<p class="z3-m">' + T("manba") + " (" + esc(g("manba_turi") || T("manbaL")) + '): <a href="' + esc(z.manba) + '" target="_blank" rel="noopener">' + esc(z.manba.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + "</a>. " +
+      (z.sf ? T("haq") + ": «" + esc(z.sf.nomi) + "», " + T("muallif") + " " + esc(z.sf.muallif) + ' (<a href="https://sketchfab.com/3d-models/' + esc(z.sf.uid) + '" target="_blank" rel="noopener">Sketchfab</a>). ' + esc(E.sf || z.sf.izoh) + " " + T("maket") : T("yoq")) + "</p>";
+    if (z.videolar) h += '<div class="z3-v"><h4>' + esc(g("video_sarlavha") || T("video")) + '</h4><div class="z3-vg">' + z.videolar.map(function (v, i) {
+      var e = E.videolar && E.videolar[i], nm = e ? e[0] : v.nomi;
+      return '<div class="z3-vk"><button type="button" class="z3-vp" data-yt="' + esc(v.yt) + '" aria-label="' + esc(T("och") + nm) + '" style="background-image:url(https://i.ytimg.com/vi/' + esc(v.yt) + '/hqdefault.jpg)"></button><b>' + esc(nm) + "</b><p>" + esc(e ? e[1] : v.izoh) + "</p><small>" + esc(e ? e[2] : v.manba) + ' · <a href="https://www.youtube.com/watch?v=' + esc(v.yt) + '" target="_blank" rel="noopener">' + T("yt") + "</a></small></div>"; }).join("") + "</div></div>";
+    info.innerHTML = h;
     [].forEach.call(p.querySelectorAll("[data-z]"), function (b) { b.classList.toggle("on", +b.getAttribute("data-z") === cur); });
+    var B = { tuz: T("tuz"), ish: S.ish ? T("ish2") : T("ish"), ayl: T("ayl"), toliq: T("toliq") }; for (var k in B) { var bb = p.querySelector('[data-a="' + k + '"]'); if (bb) bb.textContent = B[k]; }
+    var tb = p.querySelector(".z3-til"); if (tb) tb.textContent = til === "en" ? "🇺🇿 O‘zbekcha" : "🇬🇧 English";
   }
   infoHTML(Z[0]);
   p.addEventListener("click", function (e) {
     var b = e.target.closest ? e.target.closest("button") : null; if (!b) return;
+    if (b.hasAttribute("data-til")) { til = til === "en" ? "uz" : "en"; try { localStorage.setItem("t1-z3-til", til); } catch (x) {} infoHTML(Z[cur]); rejim(); return; }
     if (b.hasAttribute("data-yt")) { var f = document.createElement("iframe"); f.src = "https://www.youtube-nocookie.com/embed/" + b.getAttribute("data-yt") + "?autoplay=1&rel=0"; f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; f.allowFullscreen = true; f.title = b.getAttribute("aria-label"); b.parentNode.replaceChild(f, b); return; }
     if (b.hasAttribute("data-z")) { cur = +b.getAttribute("data-z"); maket = false; infoHTML(Z[cur]); if (eng) eng.show(Z[cur]); rejim(); return; }
     var a = b.getAttribute("data-a"); if (!a) return;
     if (a === "toliq") { try { (document.fullscreenElement ? document.exitFullscreen() : stage.requestFullscreen()); } catch (x) {} return; }
     S[a] = !S[a]; b.classList.toggle("on", S[a]); if (a === "ish" && eng) eng.burchak();
-    if (a === "ish") { stage.classList.toggle("ish", S.ish); b.textContent = S.ish ? "■ Faqat jihoz" : "▶ Ish joyida ko‘rsatish"; }
+    if (a === "ish") { stage.classList.toggle("ish", S.ish); b.textContent = S.ish ? T("ish2") : T("ish"); }
     if (eng) eng.sync();
   });
 

@@ -53,7 +53,46 @@
     "izoh": "Creader seriyasidagi qo‘l skanerini OBD-II uyasiga ulash va kodlarni o‘qish.",
     "manba": "Алексей Хлупенков kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "tur": "Car diagnostic scanner",
+   "ishlab": "Launch (China)",
+   "yil": "On sale in Uzbekistan",
+   "manba_turi": "seller’s page",
+   "nima": [
+    "4-inch touchscreen, Android system, Russian-language interface",
+    "Works with every make built since 1996 that has a 16-pin OBD-II socket",
+    "Reads and clears fault codes; connects to the car by cable"
+   ],
+   "qayerda": "In car service shops in Tashkent and the regions, and with car owners: when the Check Engine light comes on, it shows the cause within minutes.",
+   "ustun": [
+    "Many times cheaper than the Autel MaxiSys Ultra, and it fits in a pocket",
+    "The Ultra checks every electronic unit and the EV battery — the CRE916 works with one system"
+   ],
+   "mat": [
+    "Payback period: T = Price ÷ daily income",
+    "Example: price 2,582,000 soums; 5 cars a day × 50,000 soums per diagnosis = 250,000 soums → T ≈ 11 working days. (The fee and number of cars are example values.)"
+   ],
+   "foyda": "Finds the fault by code, not by guesswork: no parts are replaced unnecessarily.",
+   "uz": "On sale at automaster.uz in Tashkent (Launch’s representative): 2,582,000 soums, instalments available.",
+   "videolar": [
+    [
+     "Launch X431 diagnostic scanner — in Uzbek",
+     "The Tashkent seller demonstrates a Launch scanner.",
+     "automasteruz channel (in Uzbek)"
+    ],
+    [
+     "Diagnosing a Cobalt with a scanner — in Uzbek",
+     "Connecting the scanner and reading faults on a Chevrolet Cobalt.",
+     "Avtokontent channel (in Uzbek)"
+    ],
+    [
+     "Working with a Launch Creader scanner",
+     "Plugging a Creader handheld scanner into the OBD-II socket and reading codes.",
+     "Алексей Хлупенков channel (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "skaner",
@@ -94,6 +133,28 @@
    "nomi": "Diagnostic Scanner",
    "muallif": "elexpress",
    "izoh": "OBD-II uyasiga ulanadigan diagnostika adapteri — Autel planshetining o‘zi emas, shu tizimning mashinaga ulanadigan qismi."
+  },
+  "en": {
+   "tur": "Car diagnostic scanner",
+   "ishlab": "Autel (China)",
+   "manba_turi": "retail review",
+   "nima": [
+    "An AI assistant suggests the likely cause of a fault",
+    "Topology 3.0: all electronic units on one map, the faulty one highlighted by colour",
+    "A test mode for the high-voltage battery of electric vehicles"
+   ],
+   "qayerda": "In a car service shop a wireless adapter plugs into the car’s OBD-II socket; the technician scans every unit on the tablet in seconds and reads the fault codes.",
+   "ustun": [
+    "Topology 3.0 replaces the Topology 2.0 of the previous Ultra",
+    "A basic OBD scanner reads only engine faults; this one checks every unit and the EV battery"
+   ],
+   "mat": [
+    "Battery state of health: SOH = (current capacity ÷ rated capacity) × 100%",
+    "Example: 54 kWh ÷ 60 kWh × 100% = 90%. Below 80% a battery is considered close to replacement."
+   ],
+   "foyda": "Less time is spent hunting for the cause: a technician can take in more cars per day.",
+   "uz": "No official Autel representative was found in Uzbekistan — so the Launch CRE916, which is sold in Tashkent, comes first in this list.",
+   "sf": "An adapter that plugs into the OBD-II socket — not the Autel tablet itself, but the part of the system that connects to the car."
   }
  },
  {
@@ -195,7 +256,82 @@
     "manba": "TimWelds kanali"
    }
   ],
-  "video_sarlavha": "Chok turlari — video"
+  "video_sarlavha": "Chok turlari — video",
+  "en": {
+   "tur": "MIG/MAG welding machine",
+   "ishlab": "Fronius (Austria)",
+   "manba_turi": "manufacturer",
+   "nima": [
+    "Weld Wizard: enter the material and thickness and it sets the parameters itself",
+    "With an external wire feeder, one machine runs two spools and two torches",
+    "Pulse welding, SynchroPulse and network connectivity"
+   ],
+   "qayerda": "In steel fabrication and repair workshops, for semi-automatic welding of steel, stainless steel and aluminium parts.",
+   "ustun": [
+    "On an ordinary inverter current and voltage are chosen by hand; here the assistant proposes the settings",
+    "With two spools there is no retooling when the material changes"
+   ],
+   "mat": [
+    "Heat input: Q = η · U · I · 60 ÷ (v · 1000), kJ/mm",
+    "Example: U = 22.4 V, I = 185 A, v = 400 mm/min, η = 0.8 → Q ≈ 0.50 kJ/mm. A higher Q heats the metal more and increases distortion."
+   ],
+   "foyda": "Fewer rejected welds and less rework; a new welder becomes independent sooner.",
+   "uz": "No Fronius listing was found on prom.uz. Semi-automatic machines of the same class are sold in Tashkent: Jasic MIG 350 — 14,522,868 soums, ESAB Caddy MIG C200i — from 19,436,438 soums.",
+   "sf": "A MIG/MAG welding machine with a gas cylinder and trolley — not the Fronius Fortis, but a machine of the same class.",
+   "video_sarlavha": "Weld types — video",
+   "videolar": [
+    [
+     "Types of welds and joints (overview)",
+     "Butt, corner, T and lap joints; welding positions: flat, vertical, horizontal, overhead.",
+     "Лукаринвест channel (in Russian)"
+    ],
+    [
+     "Striking the electrode — in Uzbek",
+     "Striking and holding the arc: the start of every weld. For beginners.",
+     "Svarka Olami channel (in Uzbek)"
+    ],
+    [
+     "Flat-position weld: moving the electrode",
+     "Electrode angle, arc length and travel speed decide the bead shape. The butt weld is learned in this position.",
+     "FUBAG channel (in Russian)"
+    ],
+    [
+     "Fillet (T-joint) weld",
+     "Two parts meet at 90°. The electrode follows the bisector of the angle, melting both walls equally.",
+     "Территория сварки channel (in Russian)"
+    ],
+    [
+     "Lap weld",
+     "One sheet lies on the other; the bead runs along the edge of the top sheet. Common on thin metal.",
+     "СпецЭлектрод channel (in Russian)"
+    ],
+    [
+     "Vertical weld",
+     "Welded upwards with a short arc so the molten metal does not run down.",
+     "FUBAG channel (in Russian)"
+    ],
+    [
+     "Overhead weld",
+     "The hardest position: the weld pool hangs above. Current is reduced and the arc kept very short.",
+     "MastakSvarka channel (in Russian)"
+    ],
+    [
+     "Semi-automatic (MIG/MAG) weld",
+     "Wire feeds continuously and the pool is shielded by gas. Machines like the Fronius Fortis work this way.",
+     "СВАРЩИК В ГОРОДЕ channel (in Russian)"
+    ],
+    [
+     "Argon-arc (TIG) weld",
+     "A non-consumable tungsten electrode and argon gas: the cleanest weld on stainless steel and aluminium.",
+     "FUBAG channel (in Russian)"
+    ],
+    [
+     "The welding arc in slow motion",
+     "Shows how a drop of metal passes from the electrode into the pool.",
+     "TimWelds channel"
+    ]
+   ]
+  }
  },
  {
   "id": "termokamera",
@@ -248,7 +384,42 @@
     "izoh": "Tok ostidagi jihozlarni masofadan ko‘zdan kechirish.",
     "manba": "Energy Service kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "tur": "Thermal imager",
+   "ishlab": "Fluke (USA)",
+   "yil": "2026 catalogue",
+   "manba_turi": "manufacturer",
+   "nima": [
+    "New generation with improved thermal image quality",
+    "QR-code tagging of each asset and inspection profiles",
+    "Wireless image transfer and standardised reports"
+   ],
+   "qayerda": "For inspecting switchboards, transformers and motors while live and without contact: a loose connection shows on screen as a reddish hot spot.",
+   "ustun": [
+    "A multimeter checks one point; a thermal imager checks the whole board at a glance",
+    "Measures live equipment without contact, from a safe distance"
+   ],
+   "mat": [
+    "Heat released at a contact: P = I² · R",
+    "Example: I = 40 A, resistance of a loose contact R = 0.05 Ω → P = 40² · 0.05 = 80 W. Those 80 W heat the contact — the imager shows it as a hot spot."
+   ],
+   "foyda": "The contact is found before it burns out: breakdowns and production stoppages are prevented.",
+   "uz": "Fluke thermal imagers are sold in Tashkent: TiS and Ti series are listed on prom.uz and glotr.uz (for example, the Fluke Ti450 at 107,000,000 soums). No listing for the TiS75 PRO itself was found.",
+   "sf": "A FLIR E5 thermal imager — not a Fluke, but the same type of handheld imager.",
+   "videolar": [
+    [
+     "A thermal imager helping an electrician",
+     "An example of finding an overheated contact in a switchboard.",
+     "MAD MAX channel (in Russian)"
+    ],
+    [
+     "Inspecting switchboards at a transformer substation",
+     "Examining live equipment from a distance.",
+     "Energy Service channel (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "tikuv-uz",
@@ -331,7 +502,68 @@
     "manba": "KNiTism kanali, izma mashinasi (rus tilida)"
    }
   ],
-  "video_sarlavha": "Chok turlari — video"
+  "video_sarlavha": "Chok turlari — video",
+  "en": {
+   "tur": "Industrial lockstitch sewing machine",
+   "ishlab": "Jack (China)",
+   "yil": "On sale in Uzbekistan",
+   "manba_turi": "seller’s listing",
+   "nima": [
+    "Single-needle straight lockstitch — the main machine of any sewing workshop",
+    "Sold new in Tashkent with, according to the seller’s listing, a 3-year warranty and service",
+    "The JACK Uzbekistan channel has warned that fake F5 machines appear on the market — buy from an official seller"
+   ],
+   "qayerda": "In sewing workshops and factories across Uzbekistan: most seams of shirts, trousers, workwear and home textiles are sewn on this type of machine.",
+   "ustun": [
+    "Far cheaper than the JUKI DX-01, with spare parts and mechanics available in Tashkent itself",
+    "On the DX-01 settings are digital and stored in memory — on the F5 setup depends more on the operator’s experience"
+   ],
+   "mat": [
+    "Payback period: T = Price ÷ daily net income",
+    "Example: price 3,025,597 soums; 40 garments a day × 2,000 soums sewing fee = 80,000 soums → T ≈ 38 working days. (The fee and number of garments are example values.)"
+   ],
+   "foyda": "The cheapest way into the trade for a small workshop: one machine can pay for itself in a month and a half to two months.",
+   "uz": "On prom.uz the Jack F5 industrial lockstitch machine is listed from 3,025,597 soums (Grand Tech) and F5/310 models from 3,751,740 soums (Sew Master Royal); delivered to Tashkent.",
+   "sf": "An industrial sewing machine with its table — a general view, not an exact copy of this model.",
+   "video_sarlavha": "Stitch types — video",
+   "videolar": [
+    [
+     "Lockstitch — type 301",
+     "The needle thread and bobbin thread interlock inside the fabric. Looks the same on both sides and does not unravel, but does not stretch. The most widely used stitch.",
+     "Groz-Beckert, slow-motion footage"
+    ],
+    [
+     "Two-thread chainstitch — type 401",
+     "The needle thread forms a chain with the looper thread underneath. Stretchy and fast to sew; unravels if pulled from the end. Side seams of jeans.",
+     "Groz-Beckert, slow-motion footage"
+    ],
+    [
+     "Overlock stitch — type 504",
+     "One needle and two loopers, three threads. Trims the fabric edge and wraps it so it does not fray.",
+     "Groz-Beckert, slow-motion footage"
+    ],
+    [
+     "Coverstitch — type 605",
+     "Three needles and five threads. A flat, stretchy seam on knitwear: T-shirt hems, sportswear.",
+     "Groz-Beckert, slow-motion footage"
+    ],
+    [
+     "Zigzag stitch",
+     "The needle shifts left and right with each stitch. For stretch fabrics, appliqué and securing edges.",
+     "KNiTism channel, industrial zigzag machine (in Russian)"
+    ],
+    [
+     "Blind stitch",
+     "A curved needle catches only half the thickness of the fabric — the seam is invisible on the right side. Hemming trousers and skirts.",
+     "Praktyk channel, hemming machine (in Russian)"
+    ],
+    [
+     "Buttonhole",
+     "The machine surrounds the hole with dense zigzag stitching and cuts the centre.",
+     "KNiTism channel, buttonhole machine (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "tikuv",
@@ -369,6 +601,28 @@
    "nomi": "Sewing Machine",
    "muallif": "cankut",
    "izoh": "Stolli sanoat tikuv mashinasi — umumiy ko‘rinishi; JUKI DX-01 ning aniq nusxasi emas."
+  },
+  "en": {
+   "tur": "Fully digital sewing machine",
+   "ishlab": "JUKI (Japan)",
+   "manba_turi": "manufacturer",
+   "nima": [
+    "Fabric feed, presser-foot pressure and thread tension are set as numbers and stored in memory",
+    "Curved seams and easing ratios are controlled automatically",
+    "Settings are copied to other machines over the network"
+   ],
+   "qayerda": "In garment factories, on complex curved seams such as setting a sleeve: an experienced operator’s settings are saved and any operator can repeat them.",
+   "ustun": [
+    "On a mechanical machine tension and pressure are set by screw and by eye; here by number and from memory",
+    "Settings move from one machine to another over the network"
+   ],
+   "mat": [
+    "Sewing speed: v = n · l (n — stitches per minute, l — stitch length)",
+    "Example: n = 4000 stitches/min, l = 3 mm → v = 12 m/min. A 1.5-metre seam is sewn in 7.5 seconds."
+   ],
+   "foyda": "Less time is lost on re-setting when the model changes, and seam quality depends less on the operator.",
+   "uz": "No official JUKI dealer was found in Uzbekistan — so the Jack F5, which is sold in Uzbekistan, comes first in this list.",
+   "sf": "An industrial sewing machine with its table — a general view, not an exact copy of the JUKI DX-01."
   }
  },
  {
@@ -422,7 +676,42 @@
     "izoh": "Bichish kompleksi sexda ishlamoqda.",
     "manba": "Kabur-Tech kanali"
    }
-  ]
+  ],
+  "en": {
+   "tur": "Automatic fabric cutting system",
+   "ishlab": "Lectra (France)",
+   "yil": "current series",
+   "manba_turi": "catalogue",
+   "nima": [
+    "Cuts a multi-ply lay of fabric with a knife, following a program",
+    "The cutting head adapts to the type of fabric",
+    "In September 2026 Lectra released Apogy, an AI platform for product development: 2D patterns and 3D samples in one digital twin"
+   ],
+   "qayerda": "In the cutting room of a garment factory: the pattern maker arranges the patterns on a computer and the machine cuts the lay to the millimetre.",
+   "ustun": [
+    "With hand cutting, accuracy depends on the cutter; the machine cuts every ply identically",
+    "Software arranges the patterns on the fabric in the most economical way"
+   ],
+   "mat": [
+    "Marker efficiency: E = (area of patterns ÷ area of fabric) × 100%",
+    "Example: a lay of 1.5 m × 6 m = 9 m², pattern area 7.74 m² → E = 86%. Each extra 1% of efficiency saves 4.5 m² of fabric on a 50-ply lay."
+   ],
+   "foyda": "Fabric is the largest part of a garment’s cost — every percent of waste saved is direct profit.",
+   "uz": "No Lectra listing was found. In Tashkent, Tristar Technologies lists Serkon automatic cutting systems from 36,307,170 soums; the listings are marked “out of stock”.",
+   "sf": "A fabric measuring and cutting machine — not the Lectra Vector, but a different type of machine doing the same job.",
+   "videolar": [
+    [
+     "Lectra Vector: automatic fabric cutting",
+     "The manufacturer’s own video: cutting a multi-ply lay.",
+     "Lectra official channel"
+    ],
+    [
+     "Lectra Vector 2500 at work",
+     "The cutting system running on the shop floor.",
+     "Kabur-Tech channel"
+    ]
+   ]
+  }
  },
  {
   "id": "zargar",
@@ -467,7 +756,39 @@
     "izoh": "Kichik buyumda nuqtali payvand.",
     "manba": "LASE kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "tur": "Jewellery laser welder",
+   "manba_turi": "industry news",
+   "nima": [
+    "Latest-generation laser source",
+    "7-inch touchscreen and simple software",
+    "Active air cooling in a compact body"
+   ],
+   "qayerda": "In a jewellery workshop, for repairing chains and stone settings: the laser spot is so small that the stone next to it does not heat up.",
+   "ustun": [
+    "A gas torch heats the whole piece; the laser heats only a point — nearby stones and enamel are not damaged",
+    "Welds with the piece’s own metal, without solder"
+   ],
+   "mat": [
+    "Pulse power: P = E ÷ t",
+    "Example: E = 2.4 J, t = 3 ms = 0.003 s → P = 800 W. The energy is small, but delivered so quickly that the metal melts at a single point."
+   ],
+   "foyda": "Repairs can be made without removing the stone: the work is faster and the risk of damaging the piece is lower.",
+   "uz": "No listing for a dedicated jewellery laser welder was found. Handheld laser welders for metal are sold: for example, the HUGONG HGLW-1500E at 77,455,296 soums.",
+   "videolar": [
+    [
+     "Jewellery laser welding: a work example",
+     "Setting up the machine and welding a piece.",
+     "Gravity channel (in Russian)"
+    ],
+    [
+     "Repairing an earring with a laser",
+     "Spot welding on a small piece.",
+     "LASE channel (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "fen",
@@ -514,7 +835,36 @@
     "izoh": "Fen va dumaloq cho‘tka bilan sochni quritib turmaklash texnikasi.",
     "manba": "«Путь парикмахера» kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "tur": "Professional hair dryer",
+   "ishlab": "Dyson (United Kingdom)",
+   "manba_turi": "manufacturer",
+   "nima": [
+    "30% smaller and 20% lighter than the previous model",
+    "An RFID sensor in each attachment sets the airflow and temperature automatically",
+    "Air temperature is measured more than 20 times a second — the hair is not burned"
+   ],
+   "qayerda": "In hair salons for drying and styling; sold only to professional stylists.",
+   "ustun": [
+    "30% smaller and 20% lighter than the earlier Supersonic — less strain on the stylist’s wrist",
+    "Temperature and airflow adjust automatically when the attachment is changed"
+   ],
+   "mat": [
+    "Energy used: E = P · t",
+    "Example: a 1.6 kW dryer running for 10 minutes: E = 1.6 · (10 ÷ 60) ≈ 0.27 kWh. With 20 clients a day — 5.3 kWh. (The power rating is an example value.)"
+   ],
+   "foyda": "Hair dries quickly without burning; the stylist is less tired over the day.",
+   "uz": "On prom.uz a Dyson Supersonic dryer is listed from 7,712,500 soums (Buy me, Tashkent), but marked “out of stock”. No listing for the professional “r” model was found.",
+   "sf": "Dyson Supersonic Professional — the generation before the “r” model.",
+   "videolar": [
+    [
+     "Blow-drying: the brushing technique",
+     "Drying and styling hair with a dryer and a round brush.",
+     "«Путь парикмахера» channel (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "pech",
@@ -570,7 +920,42 @@
     "izoh": "Pechning ekrani, rejimlari va tovoqlarni joylash.",
     "manba": "Артур АЛЬФТОРГ kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "tur": "Combi oven (combi-steamer)",
+   "ishlab": "RATIONAL (Germany)",
+   "yil": "in production in 2026",
+   "manba_turi": "manufacturer",
+   "nima": [
+    "Four intelligent assistants control the cooking process themselves",
+    "Uses steam and hot air together: roasting, stewing and baking in one oven",
+    "Remote monitoring through ConnectedCooking"
+   ],
+   "qayerda": "In restaurants and production kitchens: meat, bread and vegetables cook on several trays at once, with the same quality every time.",
+   "ustun": [
+    "An ordinary oven uses hot air only; here steam and air work together — meat does not dry out",
+    "One oven does the work of a stove, an oven and a steamer"
+   ],
+   "mat": [
+    "Heat needed to warm the food: Q = c · m · ΔT",
+    "Example: m = 10 kg, c ≈ 3.5 kJ/(kg·°C), ΔT = 160 °C → Q = 5600 kJ ≈ 1.56 kWh. Comparing the oven’s consumption with this figure gives an estimate of its efficiency."
+   ],
+   "foyda": "6–10 trays cook at once, the food loses less weight, and the chef need not stand by the oven.",
+   "uz": "On sale in Tashkent: RATIONAL iCombi Pro 6-1/1 — 174,982,000 soums (Delicom).",
+   "sf": "A RATIONAL combi oven.",
+   "videolar": [
+    [
+     "How a combi oven works",
+     "The principle of steam and hot air working together.",
+     "FOOD EQUIP channel (in Russian)"
+    ],
+    [
+     "RATIONAL iCombi Pro review",
+     "The oven’s screen, modes and tray loading.",
+     "Артур АЛЬФТОРГ channel (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "mashina",
@@ -628,7 +1013,46 @@
     "izoh": "Avtosisterna nasosini ishga tushirish tartibi — O‘zbekistondagi mashinalarda ham shu turdagi nasos.",
     "manba": "«вМаске» kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "tur": "Electric fire engine",
+   "ishlab": "Rosenbauer (Austria)",
+   "manba_turi": "trade publication",
+   "nima": [
+    "Two electric motors and all-wheel drive",
+    "Runs with zero emissions and almost no noise in full-electric mode",
+    "Every function is controlled from a 17-inch display in the cab"
+   ],
+   "qayerda": "In city fire brigades (Los Angeles, Victoria and other cities): agile in narrow streets, and the crew can hear each other while the pump is running.",
+   "ustun": [
+    "No exhaust fumes or noise compared with a diesel engine — the crew can hear each other beside the pump",
+    "Low floor and all-wheel drive: agile in narrow streets"
+   ],
+   "mat": [
+    "How long the water tank lasts: t = V ÷ q",
+    "Example: V = 2000 l, one nozzle uses q = 7.4 l/s → t ≈ 270 s = 4.5 minutes. With two nozzles, half that. (The tank volume is an example value.)"
+   ],
+   "foyda": "Lower fuel costs and less harm to the crew’s health.",
+   "uz": "No information was found about a Rosenbauer RTX in Uzbekistan. In 2022 South Korea donated firefighting and medical vehicles to the Ministry of Emergency Situations; fire tankers on MAN chassis are sold in the country.",
+   "sf": "A Rosenbauer Panther 6×6 — an airport fire engine, not the RTX model for cities.",
+   "videolar": [
+    [
+     "Rosenbauer RT: one year in service",
+     "The manufacturer’s own video: the electric engine in an airport fire service.",
+     "Rosenbauer Group official channel (in English)"
+    ],
+    [
+     "Rosenbauer RT/RTX: exterior and interior",
+     "The cab, compartments and controls.",
+     "RTobi channel"
+    ],
+    [
+     "Operating a fire pump",
+     "How to start a tanker’s pump — fire engines in Uzbekistan carry the same type of pump.",
+     "«вМаске» channel (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "printer3d",
@@ -683,7 +1107,42 @@
     "izoh": "X2D ning oldingi X1C modelidan farqlari.",
     "manba": "ProTech kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "tur": "3D printer",
+   "ishlab": "Bambu Lab (China)",
+   "yil": "April 2026",
+   "manba_turi": "trade publication",
+   "nima": [
+    "Two nozzles: one prints the model, the other prints supports in a different material",
+    "A heated chamber for engineering plastics",
+    "31 sensors monitor print quality"
+   ],
+   "qayerda": "In design studios and engineering departments: a 3D model drawn on a computer becomes a part you can hold within a few hours.",
+   "ustun": [
+    "On a single-nozzle printer supports are printed in the same plastic and are hard to remove; with two nozzles they are a different, easily removed material",
+    "The heated chamber reduces warping of engineering plastics"
+   ],
+   "mat": [
+    "Volumetric flow: Q = w · h · v; print time t ≈ V ÷ Q",
+    "Example: line width w = 0.42 mm, layer h = 0.2 mm, speed v = 200 mm/s → Q = 16.8 mm³/s. A 50 cm³ part: t ≈ 50,000 ÷ 16.8 ≈ 50 minutes."
+   ],
+   "foyda": "A mock-up or spare part is ready the same day instead of waiting for an order.",
+   "uz": "In Tashkent, Nova Plus supplies Bambu Lab printers to order: listed from 6,051,195 soums. The X2D model is not named separately.",
+   "sf": "A Bambu Lab A1 — an open-frame model from the same maker; not the X2D.",
+   "videolar": [
+    [
+     "How a 3D printer is built",
+     "The principle of melting plastic filament and printing layer by layer.",
+     "Discovery Channel (in Russian)"
+    ],
+    [
+     "Bambu Lab X2D: what is new",
+     "How the X2D differs from the earlier X1C.",
+     "ProTech channel (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "ap",
@@ -737,7 +1196,41 @@
     "izoh": "320 MGs kanal va bir necha diapazonda bir vaqtda ishlash tushuntiriladi.",
     "manba": "Droider kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "tur": "Wi-Fi 7 access point",
+   "ishlab": "Cisco (USA)",
+   "manba_turi": "manufacturer",
+   "nima": [
+    "Wi-Fi 7 (802.11be) standard",
+    "WPA3 encryption is mandatory",
+    "Compact body, managed from the cloud or on site"
+   ],
+   "qayerda": "Mounted on the ceiling in offices, schools and hospitals, giving dozens of devices fast internet at once.",
+   "ustun": [
+    "Wi-Fi 6 channels are up to 160 MHz wide; Wi-Fi 7 channels up to 320 MHz",
+    "A device connects on several bands at once — fewer dropouts"
+   ],
+   "mat": [
+    "Channel capacity (Shannon’s formula): C = B · log₂(1 + S/N)",
+    "Example: B = 320 MHz, S/N = 1000 (30 dB) → C = 320 · log₂(1001) ≈ 3.19 Gbit/s. Doubling the channel width doubles the speed limit."
+   ],
+   "foyda": "Dozens of devices in one room work without interfering with each other.",
+   "uz": "In Tashkent the Cisco Catalyst 9115AX access point (Wi-Fi 6) is sold from 9,200,000 soums (Universal Tekhno Systems). No listing for a Cisco Wi-Fi 7 model was found.",
+   "sf": "A Cisco Catalyst 9130 access point (Wi-Fi 6) — the generation before the CW9171.",
+   "videolar": [
+    [
+     "Why a Wi-Fi access point is needed",
+     "The difference between a router and an access point; extending a network.",
+     "Клуб DNS channel (in Russian)"
+    ],
+    [
+     "Wi-Fi 7 technologies",
+     "Explains the 320 MHz channel and working on several bands at once.",
+     "Droider channel (in Russian)"
+    ]
+   ]
+  }
  },
  {
   "id": "sensor",
@@ -776,6 +1269,36 @@
     "izoh": "Datchik bilan tajriba o‘tkazish va grafik olish.",
     "manba": "«НИИ в каждом доме» kanali (rus tilida)"
    }
-  ]
+  ],
+  "en": {
+   "nomi": "PASCO wireless temperature sensor",
+   "tur": "Wireless measuring sensor",
+   "ishlab": "PASCO (USA)",
+   "yil": "current series",
+   "manba_turi": "manufacturer",
+   "nima": [
+    "Readings reach a phone or tablet in real time over Bluetooth",
+    "No cables — the lab bench stays tidy",
+    "SPARKvue software draws the graph itself"
+   ],
+   "qayerda": "In modern physics and chemistry labs: instead of a mercury thermometer, the sensor is lowered into the solution and the heating curve is drawn on screen.",
+   "ustun": [
+    "A mercury thermometer shows a single number; the sensor records the whole process as a graph",
+    "Wireless — no tangle of cables and stands on the bench"
+   ],
+   "mat": [
+    "Law of heating: T(t) = T∞ − (T∞ − T₀) · e^(−kt)",
+    "Example: T₀ = 22 °C, T∞ = 100 °C, k = 0.01 1/s → after 60 seconds T ≈ 57.2 °C. The graph the sensor draws is exactly this exponential."
+   ],
+   "foyda": "Students do not spend time writing down readings and can spend it on analysis.",
+   "uz": "No PASCO listing was found. Sensor-based digital lab kits for schools are sold in Tashkent: for example, a geography/ecology kit at 15,985,569 soums (U VENDOR).",
+   "videolar": [
+    [
+     "Digital laboratory: the temperature sensor",
+     "Running an experiment with the sensor and obtaining a graph.",
+     "«НИИ в каждом доме» channel (in Russian)"
+    ]
+   ]
+  }
  }
 ]
