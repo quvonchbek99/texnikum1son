@@ -112,7 +112,69 @@
    "nomi": "MIG/MAG lasapparaat",
    "muallif": "Stichting Consortium Beroepsonderwijs",
    "izoh": "Gaz balloni va aravachali MIG/MAG payvandlash apparati — Fronius Fortis emas, shu sinfdagi apparat."
-  }
+  },
+  "videolar": [
+   {
+    "nomi": "Chok va birikma turlari (umumiy)",
+    "yt": "RoBtvmhi1a4",
+    "izoh": "Uchma-uch, burchakli, tavr va ustma-ust birikmalar; chokning fazodagi holatlari: pastki, vertikal, gorizontal, shift.",
+    "manba": "Лукаринвест kanali (rus tilida)"
+   },
+   {
+    "nomi": "Elektrodni yoqish — o‘zbek tilida",
+    "yt": "y86Xzk26OXY",
+    "izoh": "Yoyni yoqish va ushlab turish: har qanday chokning boshlanishi. Yangi boshlovchilar uchun.",
+    "manba": "Svarka Olami kanali (o‘zbek tilida)"
+   },
+   {
+    "nomi": "Pastki holatdagi chok: elektrodni yuritish",
+    "yt": "-0xDlYX5LM8",
+    "izoh": "Elektrod burchagi, yoy uzunligi va harakat tezligi chok shaklini belgilaydi. Uchma-uch chok shu holatda o‘rganiladi.",
+    "manba": "FUBAG kanali (rus tilida)"
+   },
+   {
+    "nomi": "Burchakli (tavr) chok",
+    "yt": "Zm0xVvBBksc",
+    "izoh": "Ikki detal 90° ostida ulanadi. Elektrod burchak bissektrisasi bo‘ylab, ikkala devorni teng eritib yuritiladi.",
+    "manba": "Территория сварки kanali (rus tilida)"
+   },
+   {
+    "nomi": "Ustma-ust chok",
+    "yt": "LCQUxuWe7Co",
+    "izoh": "Bir list ikkinchisining ustiga qo‘yiladi; chok yuqori list qirrasi bo‘ylab tushadi. Yupqa metallda ko‘p ishlatiladi.",
+    "manba": "СпецЭлектрод kanali (rus tilida)"
+   },
+   {
+    "nomi": "Vertikal chok",
+    "yt": "47dM4HTYVks",
+    "izoh": "Erigan metall pastga oqmasligi uchun pastdan yuqoriga, qisqa yoy bilan payvandlanadi.",
+    "manba": "FUBAG kanali (rus tilida)"
+   },
+   {
+    "nomi": "Shift choki",
+    "yt": "AS3_F7lnwn0",
+    "izoh": "Eng qiyin holat: vanna tepada turadi. Tok kamaytiriladi, yoy juda qisqa ushlanadi.",
+    "manba": "MastakSvarka kanali (rus tilida)"
+   },
+   {
+    "nomi": "Yarim avtomat (MIG/MAG) choki",
+    "yt": "Ntasi95dg0E",
+    "izoh": "Sim uzluksiz uzatiladi, vanna himoya gazi ostida. Fronius Fortis kabi apparatlar shu usulda ishlaydi.",
+    "manba": "СВАРЩИК В ГОРОДЕ kanali (rus tilida)"
+   },
+   {
+    "nomi": "Argon-yoyli (TIG) chok",
+    "yt": "JSpAHmsxjBM",
+    "izoh": "Erimaydigan volfram elektrod va argon gazi: zanglamas po‘lat va alyuminiyda eng toza chok.",
+    "manba": "FUBAG kanali (rus tilida)"
+   },
+   {
+    "nomi": "Payvandlash yoyi sekinlashtirilgan tasvirda",
+    "yt": "ygLbldJF_dc",
+    "izoh": "Metall tomchisi elektroddan vannaga qanday o‘tishi juda sekinlashtirilgan tasvirda ko‘rinadi.",
+    "manba": "TimWelds kanali"
+   }
+  ]
  },
  {
   "id": "termokamera",
