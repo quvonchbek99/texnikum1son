@@ -33,7 +33,13 @@
   ],
   "foyda": "Nosozlik sababini qidirishga ketadigan vaqt qisqaradi: usta bir kunda ko‘proq mashina qabul qiladi.",
   "uz": "Autel’ning O‘zbekistondagi rasmiy vakili topilmadi. Toshkentda Launch brendining vakili (LAUNCH ASIA, automaster.uz) ishlaydi — amalda ustaxonalarda shu sinfdagi Launch skanerlari uchraydi.",
-  "uz_manba": "https://www.yellowpages.uz/rubrika/svarochnye-apparaty-prodazha-proizvodstvo"
+  "uz_manba": "https://www.yellowpages.uz/rubrika/svarochnye-apparaty-prodazha-proizvodstvo",
+  "sf": {
+   "uid": "17184869fa4f45b4a120bb89693049b4",
+   "nomi": "Diagnostic Scanner",
+   "muallif": "elexpress",
+   "izoh": "OBD-II uyasiga ulanadigan diagnostika adapteri — Autel planshetining o‘zi emas, shu tizimning mashinaga ulanadigan qismi."
+  }
  },
  {
   "id": "payvand",
@@ -65,7 +71,13 @@
   ],
   "foyda": "Brak choklar va qayta payvandlash kamayadi; yangi payvandchi tezroq mustaqil ishlay boshlaydi.",
   "uz": "Fronius’ning O‘zbekistondagi rasmiy dileri qidiruvda topilmadi; Toshkentda payvandlash apparatlari sotuvchi bir necha firma bor (masalan, Center of Welding Technologies). Fortis yetkazib berilishi alohida so‘rab aniqlanadi.",
-  "uz_manba": "https://www.goldenpages.uz/rubrics/?Id=4669"
+  "uz_manba": "https://www.goldenpages.uz/rubrics/?Id=4669",
+  "sf": {
+   "uid": "df47f50be1594b4d976cca1778c6f76f",
+   "nomi": "MIG/MAG lasapparaat",
+   "muallif": "Stichting Consortium Beroepsonderwijs",
+   "izoh": "Gaz balloni va aravachali MIG/MAG payvandlash apparati — Fronius Fortis emas, shu sinfdagi apparat."
+  }
  },
  {
   "id": "termokamera",
@@ -98,7 +110,13 @@
   ],
   "foyda": "Kontakt kuyishidan oldin topiladi: avariya va ishlab chiqarish to‘xtashining oldi olinadi.",
   "uz": "Fluke teplovizorlari Toshkentda sotiladi: prom.uz va glotr.uz saytlarida TiS va Ti seriyalari e’lon qilingan (masalan, Fluke Ti450 — 107 000 000 so‘m). Aynan TiS75 PRO e’loni topilmadi.",
-  "uz_manba": "https://glotr.uz/teplovizor-fluke-ti450-p-1142964/"
+  "uz_manba": "https://glotr.uz/teplovizor-fluke-ti450-p-1142964/",
+  "sf": {
+   "uid": "c5c37e8cd607424fbdb06c7ae2924924",
+   "nomi": "FLIR E5",
+   "muallif": "rubiez",
+   "izoh": "FLIR E5 teplovizori — Fluke emas, xuddi shu turdagi qo‘l teplovizori."
+  }
  },
  {
   "id": "tikuv",
@@ -130,7 +148,13 @@
   ],
   "foyda": "Model almashganda qayta sozlash vaqti qisqaradi, chok sifati operatorga kam bog‘liq bo‘ladi.",
   "uz": "JUKI’ning O‘zbekistondagi rasmiy dileri qidiruvda topilmadi. Toshkentda Jack (JACK UZBEKISTAN), Baoyu, Juita va Brother sanoat tikuv mashinalari keng sotiladi — korxonalarda asosan shular ishlaydi.",
-  "uz_manba": "https://www.goldenpages.uz/rubrics/?Id=1836"
+  "uz_manba": "https://www.goldenpages.uz/rubrics/?Id=1836",
+  "sf": {
+   "uid": "50889d6fc4a64cce85acd5bb420d661f",
+   "nomi": "Sewing Machine",
+   "muallif": "cankut",
+   "izoh": "Stolli sanoat tikuv mashinasi — umumiy ko‘rinishi; JUKI DX-01 ning aniq nusxasi emas."
+  }
  },
  {
   "id": "bichish",
@@ -162,7 +186,13 @@
    "Dastur andazalarni matoga eng tejamli joylashtiradi"
   ],
   "foyda": "Mato kiyim tannarxining eng katta qismi — chiqindining har foizi to‘g‘ridan-to‘g‘ri foyda.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi.",
+  "sf": {
+   "uid": "d522d7e61a1540a09aabe02adc370326",
+   "nomi": "Industrial Fabric Cutting & Measuring Machine",
+   "muallif": "abderrahmen.fbx",
+   "izoh": "Mato o‘lchash va bichish mashinasi — Lectra Vector emas, shu ishni bajaradigan boshqa turdagi jihoz."
+  }
  },
  {
   "id": "zargar",
@@ -224,7 +254,13 @@
    "Nasadka almashtirilganda harorat va oqim avtomatik moslashadi"
   ],
   "foyda": "Soch tez quriydi va kuymaydi; sartarosh kun davomida kamroq charchaydi.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi.",
+  "sf": {
+   "uid": "1f77de5a386540ef9c35581775bf0275",
+   "nomi": "Dyson Supersonic Professional",
+   "muallif": "eltayerkebulan",
+   "izoh": "Dyson Supersonic Professional — «r» modelidan oldingi avlod."
+  }
  },
  {
   "id": "pech",
@@ -259,7 +295,13 @@
    "Bir pech plita, duxovka va bug‘ qozonining ishini bajaradi"
   ],
   "foyda": "Bir vaqtda 6–10 tovoq pishadi, mahsulot vazni kam yo‘qoladi, oshpaz pech oldida turishi shart emas.",
-  "uz": "O‘zbekistondagi sotuvchi va so‘mdagi narx qidiruvda topilmadi (Rossiyada 10 tovoqli model 2025-yil yanvarda 2 478 260 rubl turgan)."
+  "uz": "O‘zbekistondagi sotuvchi va so‘mdagi narx qidiruvda topilmadi (Rossiyada 10 tovoqli model 2025-yil yanvarda 2 478 260 rubl turgan).",
+  "sf": {
+   "uid": "cd536811b6e046d2b8e32e4ae354f276",
+   "nomi": "Rational Combi Oven",
+   "muallif": "jits.soni",
+   "izoh": "RATIONAL kombi pechi."
+  }
  },
  {
   "id": "mashina",
@@ -291,7 +333,13 @@
   ],
   "foyda": "Yoqilg‘i sarfi va ekipaj sog‘lig‘iga zarar kamayadi.",
   "uz": "O‘zbekistonda Rosenbauer RTX borligi haqida ma’lumot topilmadi. FVVga 2022-yilda Janubiy Koreya o‘t o‘chirish va tibbiy texnika bergan; mamlakatda MAN shassisidagi o‘t o‘chirish avtosisternalari sotiladi.",
-  "uz_manba": "https://anhor.uz/news/technics/"
+  "uz_manba": "https://anhor.uz/news/technics/",
+  "sf": {
+   "uid": "5e5013490d474f72b80c1d8c781d0aea",
+   "nomi": "Rosenbauer Panther 6x6",
+   "muallif": "BlueMesh",
+   "izoh": "Rosenbauer Panther 6×6 — aeroport o‘t o‘chirish mashinasi; shahar uchun RTX modeli emas."
+  }
  },
  {
   "id": "printer3d",
@@ -325,7 +373,13 @@
    "Isitiladigan kamera muhandislik plastiklarida qiyshayishni kamaytiradi"
   ],
   "foyda": "Maket va ehtiyot qism buyurtma kutmasdan, shu kunning o‘zida tayyor bo‘ladi.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi.",
+  "sf": {
+   "uid": "c859237754d24d35b0699ccf9d297224",
+   "nomi": "Bambu Lab A1",
+   "muallif": "Stichting Consortium Beroepsonderwijs",
+   "izoh": "Bambu Lab A1 — shu ishlab chiqaruvchining ochiq ramkali modeli; X2D emas."
+  }
  },
  {
   "id": "ap",
@@ -358,7 +412,13 @@
    "Qurilma bir vaqtda bir necha diapazonda ulanadi — uzilish kamayadi"
   ],
   "foyda": "Bir xonadagi o‘nlab qurilma bir-biriga xalaqit bermay ishlaydi.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi.",
+  "sf": {
+   "uid": "dd013717665c4f28ad005fbd45275c10",
+   "nomi": "C9130 Access Point",
+   "muallif": "Tyler Rodenburg",
+   "izoh": "Cisco Catalyst 9130 kirish nuqtasi (Wi-Fi 6) — CW9171 dan oldingi avlod."
+  }
  },
  {
   "id": "sensor",

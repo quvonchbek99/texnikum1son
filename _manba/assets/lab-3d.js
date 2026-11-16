@@ -17,15 +17,27 @@
     ".z3-bar button.on{background:#e8742a}.z3-tag{position:absolute;transform:translate(-50%,-135%);background:#2a160b;color:#fff;font:600 11.5px/1 inherit;padding:5px 9px;border-radius:999px;white-space:nowrap;pointer-events:none}" +
     ".z3-tag:after{content:'';position:absolute;left:50%;top:100%;width:2px;height:12px;background:#2a160b;margin-left:-1px}.z3-yuk{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:600;color:#6b4a33;text-align:center;padding:20px}" +
     ".z3-i{margin-top:14px}.z3-i h3{margin:0 0 2px}.z3-i .meta{display:block;margin-bottom:10px}.z3-g{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.z3-i h4{margin:0 0 6px}.z3-i ul{margin:0;padding-left:18px}.z3-i p{margin:0}.z3-m{margin-top:12px;font-size:13px;opacity:.8}" +
+    ".z3-sf{position:absolute;inset:0;width:100%;height:100%;border:0;background:#1b1b1f}.z3-rj{position:absolute;top:10px;right:10px;z-index:2;border:0;border-radius:999px;padding:9px 14px;font:600 13px inherit;background:#e8742a;color:#fff;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}" +
     "@media print{.z3-st,.z3-l{display:none}}";
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
   p.innerHTML = '<div class="z3">' + (Z.length > 1 ? '<div class="z3-l">' + Z.map(function (z, i) { return '<button type="button" class="chip" data-z="' + i + '">' + esc(z.nomi) + "</button>"; }).join("") + "</div>" : "") +
-    '<div class="z3-st"><canvas></canvas><div class="z3-tags"></div><div class="z3-yuk">3D model yuklanmoqda…</div>' +
+    '<div class="z3-st"><button type="button" class="z3-rj" hidden></button><iframe class="z3-sf" title="Haqiqiy 3D model" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen hidden></iframe><canvas></canvas><div class="z3-tags"></div><div class="z3-yuk">3D model yuklanmoqda…</div>' +
     '<div class="z3-bar"><button type="button" data-a="tuz">Tuzilishi</button><button type="button" data-a="ish">▶ Ish joyida ko‘rsatish</button><button type="button" data-a="ayl" class="on">Aylanish</button><button type="button" data-a="toliq">⛶ To‘liq ekran</button></div></div>' +
     '<div class="z3-i card"></div></div>';
   var stage = p.querySelector(".z3-st"), canvas = p.querySelector("canvas"), tagsBox = p.querySelector(".z3-tags"), yuk = p.querySelector(".z3-yuk"), info = p.querySelector(".z3-i");
-  var cur = 0, S = { tuz: false, ish: false, ayl: true }, eng = null;
+  var cur = 0, S = { tuz: false, ish: false, ayl: true }, eng = null, korindi = false, maket = false;
+  var sfF = p.querySelector(".z3-sf"), rj = p.querySelector(".z3-rj"), bar = p.querySelector(".z3-bar");
+  // Haqiqiy 3D model (Sketchfab) bor bo'lsa — avval shu ko'rsatiladi; maket faqat ish jarayoni animatsiyasi uchun
+  function rejim() {
+    var z = Z[cur], haq = !!z.sf && !maket;
+    rj.hidden = !z.sf; rj.textContent = haq ? "⚙ Ish jarayoni (animatsiya)" : "📷 Haqiqiy 3D model";
+    sfF.hidden = !haq; canvas.style.display = haq ? "none" : ""; bar.style.display = haq ? "none" : ""; tagsBox.style.visibility = haq ? "hidden" : ""; if (yuk.parentNode) yuk.style.display = haq ? "none" : "";
+    if (!korindi) return;
+    if (haq) { var u = "https://sketchfab.com/models/" + z.sf.uid + "/embed?autostart=1&autospin=0.2&ui_theme=dark&dnt=1"; if (sfF.getAttribute("src") !== u) sfF.setAttribute("src", u); }
+    else { sfF.removeAttribute("src"); boshla(); }
+  }
+  rj.addEventListener("click", function () { maket = !maket; rejim(); });
 
   function infoHTML(z) {
     info.innerHTML = "<h3>" + esc(z.nomi) + '</h3><span class="meta">' + esc(z.tur) + " · " + esc(z.ishlab) + " · " + esc(z.yil) + '</span><div class="z3-g"><div><h4>Nimasi yangi</h4><ul>' +
@@ -34,13 +46,13 @@
       (z.mat ? "<div><h4>Matematikasi</h4><p><b>" + esc(z.mat[0]) + "</b></p><p style=\"margin-top:6px\">" + esc(z.mat[1]) + "</p></div>" : "") +
       (z.foyda ? "<div><h4>Foydasi</h4><p>" + esc(z.foyda) + "</p></div>" : "") +
       (z.uz ? "<div><h4>O‘zbekistonda</h4><p>" + esc(z.uz) + (z.uz_manba ? ' <a href="' + esc(z.uz_manba) + '" target="_blank" rel="noopener">manba</a>' : "") + "</p></div>" : "") + "</div>" +
-      '<p class="z3-m">Manba (' + esc(z.manba_turi || "manba") + '): <a href="' + esc(z.manba) + '" target="_blank" rel="noopener">' + esc(z.manba.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + "</a>. 3D model soddalashtirilgan o‘quv maketi — o‘lchamlari taxminiy, ishlab chiqaruvchining rasmiy chizmasi emas.</p>";
+      '<p class="z3-m">Manba (' + esc(z.manba_turi || "manba") + '): <a href="' + esc(z.manba) + '" target="_blank" rel="noopener">' + esc(z.manba.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + "</a>. " + (z.sf ? "Haqiqiy 3D model: «" + esc(z.sf.nomi) + "», muallif " + esc(z.sf.muallif) + ' (<a href="https://sketchfab.com/3d-models/' + esc(z.sf.uid) + '" target="_blank" rel="noopener">Sketchfab</a>). ' + esc(z.sf.izoh) + " «Ish jarayoni» animatsiyasi — soddalashtirilgan o‘quv maketi." : "Bu jihoz uchun tayyor haqiqiy 3D model topilmadi — soddalashtirilgan o‘quv maketi ko‘rsatilmoqda.") + "</p>";
     [].forEach.call(p.querySelectorAll("[data-z]"), function (b) { b.classList.toggle("on", +b.getAttribute("data-z") === cur); });
   }
   infoHTML(Z[0]);
   p.addEventListener("click", function (e) {
     var b = e.target.closest ? e.target.closest("button") : null; if (!b) return;
-    if (b.hasAttribute("data-z")) { cur = +b.getAttribute("data-z"); infoHTML(Z[cur]); if (eng) eng.show(Z[cur]); return; }
+    if (b.hasAttribute("data-z")) { cur = +b.getAttribute("data-z"); maket = false; infoHTML(Z[cur]); if (eng) eng.show(Z[cur]); rejim(); return; }
     var a = b.getAttribute("data-a"); if (!a) return;
     if (a === "toliq") { try { (document.fullscreenElement ? document.exitFullscreen() : stage.requestFullscreen()); } catch (x) {} return; }
     S[a] = !S[a]; b.classList.toggle("on", S[a]); if (a === "ish" && eng) eng.burchak();
@@ -51,10 +63,11 @@
   var boshlandi = false;
   function boshla() {
     if (boshlandi) return; boshlandi = true;
-    import(base + "three.module.min.js").then(function (T) { eng = dvigatel(T); eng.show(Z[cur]); yuk.remove(); })
+    import(base + "three.module.min.js").then(function (T) { eng = dvigatel(T); eng.show(Z[cur]); yuk.remove(); rejim(); })
       .catch(function () { yuk.textContent = "3D ko‘rinish bu brauzerda ochilmadi. Chrome yoki Edge’ning yangi versiyasida sinab ko‘ring."; });
   }
-  if ("IntersectionObserver" in window) new IntersectionObserver(function (en, ob) { if (en[0].isIntersecting) { ob.disconnect(); boshla(); } }).observe(stage); else boshla();
+  if ("IntersectionObserver" in window) new IntersectionObserver(function (en, ob) { if (en[0].isIntersecting) { ob.disconnect(); korindi = true; rejim(); } }).observe(stage); else { korindi = true; }
+  rejim();
 
   /* ===================================================================== */
   function dvigatel(T) {
