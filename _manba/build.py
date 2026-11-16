@@ -67,7 +67,7 @@ if sys.argv[2] != "none":
 RTR_TIKUV = json.load(open(os.path.join(sys.argv[2], "zamonaviy-tikuv-jihozlari.json"), encoding="utf-8")) if sys.argv[2] != "none" else None
 
 # ---------- Sahifa qolipi ----------
-NAV = [("", "Fanlar"), ("lab/", "Virtual laboratoriya"), ("oyinlar/", "Sinf o‘yinlari"), ("eski/", "Eski versiya")]
+NAV = [("", "Fanlar"), ("lab/", "Virtual laboratoriya"), ("kasblar/", "Kasblar xaritasi"), ("oyinlar/", "Sinf o‘yinlari"), ("eski/", "Eski versiya")]
 
 def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_root=False, body_cls=""):
     depth = path.count("/")
@@ -319,6 +319,14 @@ def lab_card(lid, R, izoh=""):
     em = " ".join(j.get("e", "") for j in L["jihozlar"][:7])
     return (f'<a class="card lab-k" href="{R}lab/{lid}/" data-n="{e(norm(L["nomi"] + " " + izoh + " " + " ".join(j["nomi"] for j in L["jihozlar"])))}"><span class="lab-ke">{L.get("e", "🔬")}</span><span><h3>{e(L["nomi"])}</h3>'
             f'<span class="meta">{len(L["jihozlar"])} ta jihoz · {len(L["sim"])} ta virtual mashq{(" · " + e(izoh)) if izoh else ""}</span><span class="lab-kj" aria-hidden="true">{em}</span></span></a>')
+def kasb_xarita():
+    """Kasblar xaritasi: dunyo (ILOSTAT) va O'zbekiston (Milliy statistika qo'mitasi) — assets/kasb-xarita.js + kasb-xarita.json."""
+    R = "../"
+    b = hero("", "Kasblar xaritasi", "Dunyoning qaysi davlatida qaysi kasb egalari ko‘p va qayerda maosh yuqori — rasmiy statistika asosida. Xaritani O‘zbekistonga yaqinlashtirsangiz, viloyatlar bo‘yicha o‘rtacha ish haqi ko‘rinadi.",
+             crumbs=[("Fanlar", R), ("Kasblar xaritasi", None)])
+    b += """<section class="blk"><div class="wrap"><div id="kx"><noscript><p class="note">Xaritani ko‘rish uchun brauzerda JavaScript yoqilgan bo‘lishi kerak.</p></noscript></div>
+<div class="note" style="margin-top:16px"><b>Qanday o‘qiladi?</b> «Maosh» rejimida kasb guruhini tanlang — to‘q rangli davlatlarda shu guruh ko‘proq maosh oladi. «Kasb ulushi» rejimida kasbni tanlang — to‘q rangli davlatlarda band aholining kattaroq qismi shu kasbda ishlaydi. Davlatni bosing — o‘ng tomonda batafsil ma’lumot chiqadi. Maosh dollarda berilgan, lekin narxlar har davlatda har xil: yuqori maosh har doim ham yuqori turmush darajasini bildirmaydi.</div></div></section>"""
+    page("kasblar/index.html", "Kasblar xaritasi", "Dunyo va O‘zbekiston bo‘yicha kasblar xaritasi: qaysi davlatda qaysi kasb ko‘p, qayerda maosh yuqori — rasmiy statistika asosida. " + NOM + ".", b, active="kasblar/", scripts=("kasb-xarita.js", "t1-kuvi.js"))
 def lab_katalog():
     R = "../"
     nj = sum(len(L["jihozlar"]) for k, L in LABS.items() if not L.get("_hub")); ns = sum(len(L["sim"]) for k, L in LABS.items() if not L.get("_hub"))
@@ -429,7 +437,7 @@ def bosh():
     extra = (f'<p class="lead">Kasbiy fanlar har bir mutaxassislik bo‘yicha alohida, umumta’lim fanlari esa hammasi uchun bitta. Har bir fan: TMR, texnologik xaritalar, ma’ruzalar va o‘quv-uslubiy majmua.</p>'
              f'<div class="fq"><label for="fq" class="sr">Fanni qidirish</label>'
              f'<input type="search" id="fq" class="q-big" placeholder="Fan, mavzu yoki mutaxassislik nomi…" autocomplete="off"></div>'
-             + (f'<div class="chips" style="margin-top:14px"><a class="chip" href="lab/">🔬 Virtual laboratoriyalar — {len([1 for L in LABS.values() if not L.get("_hub")])} ta</a><a class="chip" href="oyinlar/">🎮 Sinf o‘yinlari</a></div>' if LABS else ""))
+             + (f'<div class="chips" style="margin-top:14px"><a class="chip" href="lab/">🔬 Virtual laboratoriyalar — {len([1 for L in LABS.values() if not L.get("_hub")])} ta</a><a class="chip" href="kasblar/">🌍 Kasblar xaritasi</a><a class="chip" href="oyinlar/">🎮 Sinf o‘yinlari</a></div>' if LABS else ""))
     b = hero("", "Fanlar", "", extra=extra, small=False, fasl=True)
     seg = (f'<button type="button" data-tf="" aria-pressed="true">Hammasi</button>'
            f'<button type="button" data-tf="kasbiy" aria-pressed="false">Kasbiy fanlar <span>{nk}</span></button>'
@@ -573,7 +581,7 @@ def data_files():
         json.dump(RTR_TIKUV, open(os.path.join(OUT, "data", "rtr", "zamonaviy-tikuv-jihozlari.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 def extras():
-    urls = ["", "lab/", "oyinlar/"] + [f"lab/{k}/" for k in LABS] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
+    urls = ["", "lab/", "kasblar/", "oyinlar/"] + [f"lab/{k}/" for k in LABS] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{DOMEN}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nDisallow: /eski/\nDisallow: /oyin/\nSitemap: {DOMEN}/sitemap.xml\n")
     open(os.path.join(OUT, "CNAME"), "w").write("texnikum1son.uz\n")
@@ -588,6 +596,7 @@ ustaxonalar()
 bosh(); oyinlar(); yonaltirish(); kabinet(); admin(); xato404()
 if LABS:
     lab_katalog()
+    kasb_xarita()
     for _lid in LABS:
         lab_page(_lid)
 for y in Y:

@@ -75,3 +75,11 @@ Yangi tayyor fan materiali (RTR JSON) qo‘shish: faylni `data/rtr/<fan-id>.json
 2. **Firestore qoidalari**: `_manba/sozlash/firestore-qoidalar-qoshimcha.rules` blokini Firebase konsoli → Firestore → Rules ga qo‘shing va «Publish».
 3. **Google Drive**: `_manba/sozlash/drive-yuklash.gs` ni Apps Script’da veb-ilova qilib joylang, URL’ni Admin panel → «Fayllar ombori» ga kiriting.
 4. **Firebase**: Authentication → Settings → Authorized domains ga `texnikum1son.uz`; AI uchun reCAPTCHA kalitining domenlariga `texnikum1son.uz` qo‘shing.
+
+## Kasblar xaritasi (17.11.2026)
+
+`/kasblar/` — dunyo va O‘zbekiston bo‘yicha interaktiv xarita (`assets/kasb-xarita.js`, ma’lumot `assets/kasb-xarita.json`, d3 + topojson sayt ichida).
+- Dunyo: ILOSTAT SDMX — `DF_EAR_EMTA_SEX_OCU_CUR_NB` (kasb guruhlari bo‘yicha o‘rtacha oylik maosh, USD) va `DF_EMP_TEMP_SEX_OC2_NB` (ISCO-08 2-daraja bo‘yicha bandlik);
+  manzil: `https://sdmx.ilo.org/rest/data/ILO,DF_<id>,1.0/all?startPeriod=2018` (CSV). Har davlat uchun eng so‘nggi yil olinadi.
+- O‘zbekiston: Milliy statistika qo‘mitasining 2026-yil yanvar–sentabr press-relizi (hududlar va sohalar bo‘yicha o‘rtacha ish haqi); chegaralar — geoBoundaries UZB ADM1.
+- Yangilash: ikkala CSV ni qayta yuklab, `kasb-xarita.json` ni qayta yig‘ish; hududlar raqamlari faylning `uz` qismida qo‘lda yangilanadi.
