@@ -33,6 +33,26 @@
    "avtomobil-tuzilishi",
    "yonilgi-tizimi",
    "bc-toifa"
+  ],
+  "videolar": [
+   {
+    "nomi": "Launch X431 diagnostika skaneri — o‘zbek tilida",
+    "yt": "7qn2MzLt0qo",
+    "izoh": "Toshkentdagi sotuvchining o‘zi Launch skanerini ko‘rsatadi.",
+    "manba": "automasteruz kanali (o‘zbek tilida)"
+   },
+   {
+    "nomi": "Cobalt diagnostikasi skaner bilan — o‘zbek tilida",
+    "yt": "Sf3ZyVte6vI",
+    "izoh": "Chevrolet Cobalt misolida skanerni ulash va xatolarni o‘qish.",
+    "manba": "Avtokontent kanali (o‘zbek tilida)"
+   },
+   {
+    "nomi": "Launch Creader skaneri bilan ishlash",
+    "yt": "ZVLxJog5Jao",
+    "izoh": "Creader seriyasidagi qo‘l skanerini OBD-II uyasiga ulash va kodlarni o‘qish.",
+    "manba": "Алексей Хлупенков kanali (rus tilida)"
+   }
   ]
  },
  {
@@ -105,8 +125,8 @@
    "Ikki g‘altak bilan materialni almashtirish uchun qayta sozlash shart emas"
   ],
   "foyda": "Brak choklar va qayta payvandlash kamayadi; yangi payvandchi tezroq mustaqil ishlay boshlaydi.",
-  "uz": "Fronius’ning O‘zbekistondagi rasmiy dileri qidiruvda topilmadi; Toshkentda payvandlash apparatlari sotuvchi bir necha firma bor (masalan, Center of Welding Technologies). Fortis yetkazib berilishi alohida so‘rab aniqlanadi.",
-  "uz_manba": "https://www.goldenpages.uz/rubrics/?Id=4669",
+  "uz": "Fronius e’loni prom.uz da topilmadi. Shu sinfdagi yarim avtomatlar Toshkentda sotiladi: Jasic MIG 350 — 14 522 868 so‘m, ESAB Caddy MIG C200i — 19 436 438 so‘mdan.",
+  "uz_manba": "https://www.prom.uz/ads/poluavtomat-zasik-mig350-1/",
   "sf": {
    "uid": "df47f50be1594b4d976cca1778c6f76f",
    "nomi": "MIG/MAG lasapparaat",
@@ -174,7 +194,8 @@
     "izoh": "Metall tomchisi elektroddan vannaga qanday o‘tishi juda sekinlashtirilgan tasvirda ko‘rinadi.",
     "manba": "TimWelds kanali"
    }
-  ]
+  ],
+  "video_sarlavha": "Chok turlari — video"
  },
  {
   "id": "termokamera",
@@ -213,7 +234,21 @@
    "nomi": "FLIR E5",
    "muallif": "rubiez",
    "izoh": "FLIR E5 teplovizori — Fluke emas, xuddi shu turdagi qo‘l teplovizori."
-  }
+  },
+  "videolar": [
+   {
+    "nomi": "Teplovizor elektromontyorga yordamda",
+    "yt": "U-qJP2_lk7c",
+    "izoh": "Shchitdagi qizigan kontaktni teplovizor bilan topish misoli.",
+    "manba": "MAD MAX kanali (rus tilida)"
+   },
+   {
+    "nomi": "Transformator punktida shchitlarni tekshirish",
+    "yt": "rceRWZs5O9U",
+    "izoh": "Tok ostidagi jihozlarni masofadan ko‘zdan kechirish.",
+    "manba": "Energy Service kanali (rus tilida)"
+   }
+  ]
  },
  {
   "id": "tikuv-uz",
@@ -295,7 +330,8 @@
     "izoh": "Mashina teshik atrofini zich zigzag bilan o‘rab tikadi va o‘rtasini kesadi.",
     "manba": "KNiTism kanali, izma mashinasi (rus tilida)"
    }
-  ]
+  ],
+  "video_sarlavha": "Chok turlari — video"
  },
  {
   "id": "tikuv",
@@ -365,13 +401,28 @@
    "Dastur andazalarni matoga eng tejamli joylashtiradi"
   ],
   "foyda": "Mato kiyim tannarxining eng katta qismi — chiqindining har foizi to‘g‘ridan-to‘g‘ri foyda.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi.",
+  "uz": "Lectra e’loni topilmadi. Toshkentda Tristar Technologies firmasi Serkon avtomatik bichish komplekslarini 36 307 170 so‘mdan e’lon qilgan; e’lonlarda «sotuvda yo‘q» deb belgilangan.",
   "sf": {
    "uid": "d522d7e61a1540a09aabe02adc370326",
    "nomi": "Industrial Fabric Cutting & Measuring Machine",
    "muallif": "abderrahmen.fbx",
    "izoh": "Mato o‘lchash va bichish mashinasi — Lectra Vector emas, shu ishni bajaradigan boshqa turdagi jihoz."
-  }
+  },
+  "uz_manba": "https://www.prom.uz/ads/avtomaticheskiy-kontsevoy-raskroynyy-kompleks-serkon/",
+  "videolar": [
+   {
+    "nomi": "Lectra Vector: matoni avtomatik bichish",
+    "yt": "YJ9MURvYYlE",
+    "izoh": "Ishlab chiqaruvchining o‘z videosi: ko‘p qavatli to‘shamani bichish.",
+    "manba": "Lectra rasmiy kanali"
+   },
+   {
+    "nomi": "Lectra Vector 2500 ish jarayonida",
+    "yt": "9pLsKE7MtJ4",
+    "izoh": "Bichish kompleksi sexda ishlamoqda.",
+    "manba": "Kabur-Tech kanali"
+   }
+  ]
  },
  {
   "id": "zargar",
@@ -401,7 +452,22 @@
    "Kavsharsiz, buyumning o‘z metalli bilan payvandlaydi"
   ],
   "foyda": "Toshni chiqarmasdan ta’mirlash mumkin: ish tezlashadi, buyumni buzish xavfi kamayadi.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
+  "uz": "Zargarlik uchun maxsus lazer payvandlagich e’loni topilmadi. Metall uchun qo‘l lazer payvandlash apparatlari sotiladi: masalan, HUGONG HGLW-1500E — 77 455 296 so‘m.",
+  "uz_manba": "https://www.prom.uz/ads/apparat-dlya-rucnoi-lazernoi-svarki-hugong-hglw-1500e-hugong/",
+  "videolar": [
+   {
+    "nomi": "Zargarlik lazer payvandi: ish namunasi",
+    "yt": "YzyrORwkz2Y",
+    "izoh": "Apparatni sozlash va buyumni payvandlash.",
+    "manba": "Gravity kanali (rus tilida)"
+   },
+   {
+    "nomi": "Sirg‘ani lazer bilan ta’mirlash",
+    "yt": "Z6DjXoZ8MUI",
+    "izoh": "Kichik buyumda nuqtali payvand.",
+    "manba": "LASE kanali (rus tilida)"
+   }
+  ]
  },
  {
   "id": "fen",
@@ -433,13 +499,22 @@
    "Nasadka almashtirilganda harorat va oqim avtomatik moslashadi"
   ],
   "foyda": "Soch tez quriydi va kuymaydi; sartarosh kun davomida kamroq charchaydi.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi.",
+  "uz": "prom.uz da Dyson Supersonic feni 7 712 500 so‘mdan e’lon qilingan (Buy me, Toshkent), lekin e’londa «sotuvda yo‘q» deb belgilangan. Professional «r» modelining e’loni topilmadi.",
   "sf": {
    "uid": "1f77de5a386540ef9c35581775bf0275",
    "nomi": "Dyson Supersonic Professional",
    "muallif": "eltayerkebulan",
    "izoh": "Dyson Supersonic Professional — «r» modelidan oldingi avlod."
-  }
+  },
+  "uz_manba": "https://www.prom.uz/ads/fen-dyson-supersonic-305967-01/",
+  "videolar": [
+   {
+    "nomi": "Soch quritish: brashing usuli",
+    "yt": "-ghsUVcLFX0",
+    "izoh": "Fen va dumaloq cho‘tka bilan sochni quritib turmaklash texnikasi.",
+    "manba": "«Путь парикмахера» kanali (rus tilida)"
+   }
+  ]
  },
  {
   "id": "pech",
@@ -474,13 +549,28 @@
    "Bir pech plita, duxovka va bug‘ qozonining ishini bajaradi"
   ],
   "foyda": "Bir vaqtda 6–10 tovoq pishadi, mahsulot vazni kam yo‘qoladi, oshpaz pech oldida turishi shart emas.",
-  "uz": "O‘zbekistondagi sotuvchi va so‘mdagi narx qidiruvda topilmadi (Rossiyada 10 tovoqli model 2025-yil yanvarda 2 478 260 rubl turgan).",
+  "uz": "Toshkentda sotuvda bor: RATIONAL iCombi Pro 6-1/1 — 174 982 000 so‘m (Delicom).",
   "sf": {
    "uid": "cd536811b6e046d2b8e32e4ae354f276",
    "nomi": "Rational Combi Oven",
    "muallif": "jits.soni",
    "izoh": "RATIONAL kombi pechi."
-  }
+  },
+  "uz_manba": "https://www.prom.uz/ads/parokonvektomat-rational-icombi-pro-6-11/",
+  "videolar": [
+   {
+    "nomi": "Parokonvektomat qanday ishlaydi",
+    "yt": "LLGTrq8nOzE",
+    "izoh": "Bug‘ va issiq havoning birga ishlash tamoyili.",
+    "manba": "FOOD EQUIP kanali (rus tilida)"
+   },
+   {
+    "nomi": "RATIONAL iCombi Pro sharhi",
+    "yt": "2dLWZOVotK0",
+    "izoh": "Pechning ekrani, rejimlari va tovoqlarni joylash.",
+    "manba": "Артур АЛЬФТОРГ kanali (rus tilida)"
+   }
+  ]
  },
  {
   "id": "mashina",
@@ -518,7 +608,27 @@
    "nomi": "Rosenbauer Panther 6x6",
    "muallif": "BlueMesh",
    "izoh": "Rosenbauer Panther 6×6 — aeroport o‘t o‘chirish mashinasi; shahar uchun RTX modeli emas."
-  }
+  },
+  "videolar": [
+   {
+    "nomi": "Rosenbauer RT: bir yillik ish tajribasi",
+    "yt": "RTHRNJyVGP4",
+    "izoh": "Ishlab chiqaruvchining o‘z videosi: elektr mashina aeroport o‘t o‘chirish xizmatida.",
+    "manba": "Rosenbauer Group rasmiy kanali (ingliz tilida)"
+   },
+   {
+    "nomi": "Rosenbauer RT/RTX: tashqi va ichki ko‘rinish",
+    "yt": "_1k5W-ljmWk",
+    "izoh": "Mashinaning kabinasi, bo‘linmalari va boshqaruvi.",
+    "manba": "RTobi kanali"
+   },
+   {
+    "nomi": "O‘t o‘chirish nasosida ishlash",
+    "yt": "8WgedjaL16A",
+    "izoh": "Avtosisterna nasosini ishga tushirish tartibi — O‘zbekistondagi mashinalarda ham shu turdagi nasos.",
+    "manba": "«вМаске» kanali (rus tilida)"
+   }
+  ]
  },
  {
   "id": "printer3d",
@@ -552,13 +662,28 @@
    "Isitiladigan kamera muhandislik plastiklarida qiyshayishni kamaytiradi"
   ],
   "foyda": "Maket va ehtiyot qism buyurtma kutmasdan, shu kunning o‘zida tayyor bo‘ladi.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi.",
+  "uz": "Toshkentda Nova Plus firmasi Bambu Lab printerlarini buyurtma asosida keltiradi: e’lonlarda 6 051 195 so‘mdan. Aynan X2D modeli alohida ko‘rsatilmagan.",
   "sf": {
    "uid": "c859237754d24d35b0699ccf9d297224",
    "nomi": "Bambu Lab A1",
    "muallif": "Stichting Consortium Beroepsonderwijs",
    "izoh": "Bambu Lab A1 — shu ishlab chiqaruvchining ochiq ramkali modeli; X2D emas."
-  }
+  },
+  "uz_manba": "https://www.prom.uz/ads/3d-printery-pod-zakaz-creality-bambu-lab-anycubic-phrozen-elegoo/",
+  "videolar": [
+   {
+    "nomi": "3D printer qanday tuzilgan",
+    "yt": "mb31gU3lIqU",
+    "izoh": "Plastik ipni eritib, qatlam-qatlam bosish tamoyili.",
+    "manba": "Discovery Channel (rus tilida)"
+   },
+   {
+    "nomi": "Bambu Lab X2D: nimasi yangi",
+    "yt": "x9H4YtBfpO8",
+    "izoh": "X2D ning oldingi X1C modelidan farqlari.",
+    "manba": "ProTech kanali (rus tilida)"
+   }
+  ]
  },
  {
   "id": "ap",
@@ -591,13 +716,28 @@
    "Qurilma bir vaqtda bir necha diapazonda ulanadi — uzilish kamayadi"
   ],
   "foyda": "Bir xonadagi o‘nlab qurilma bir-biriga xalaqit bermay ishlaydi.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi.",
+  "uz": "Toshkentda Cisco Catalyst 9115AX kirish nuqtasi (Wi-Fi 6) 9 200 000 so‘mdan sotiladi (Universal Tekhno Systems). Wi-Fi 7 li Cisco modeli e’loni topilmadi.",
   "sf": {
    "uid": "dd013717665c4f28ad005fbd45275c10",
    "nomi": "C9130 Access Point",
    "muallif": "Tyler Rodenburg",
    "izoh": "Cisco Catalyst 9130 kirish nuqtasi (Wi-Fi 6) — CW9171 dan oldingi avlod."
-  }
+  },
+  "uz_manba": "https://www.prom.uz/ads/tocka-dostupa-cisco-catalyst-9115ax-series/",
+  "videolar": [
+   {
+    "nomi": "Wi-Fi kirish nuqtasi nima uchun kerak",
+    "yt": "hO2pMET-bI4",
+    "izoh": "Router va kirish nuqtasining farqi, tarmoqni kengaytirish.",
+    "manba": "Клуб DNS kanali (rus tilida)"
+   },
+   {
+    "nomi": "Wi-Fi 7 texnologiyalari",
+    "yt": "yhletyROPb0",
+    "izoh": "320 MGs kanal va bir necha diapazonda bir vaqtda ishlash tushuntiriladi.",
+    "manba": "Droider kanali (rus tilida)"
+   }
+  ]
  },
  {
   "id": "sensor",
@@ -627,6 +767,15 @@
    "Simsiz — stolda sim va shtativ chigalligi yo‘q"
   ],
   "foyda": "O‘quvchi natijani yozib o‘tirmaydi, vaqtini tahlilga sarflaydi.",
-  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
+  "uz": "PASCO e’loni topilmadi. Toshkentda maktablar uchun datchikli raqamli laboratoriya to‘plamlari sotiladi: masalan, geografiya/ekologiya to‘plami — 15 985 569 so‘m (U VENDOR).",
+  "uz_manba": "https://www.prom.uz/ads/718cifrovaya-laboratoriya-po-geografiiekologii/",
+  "videolar": [
+   {
+    "nomi": "Raqamli laboratoriya: harorat datchigi",
+    "yt": "Ki3l0y-B3Ec",
+    "izoh": "Datchik bilan tajriba o‘tkazish va grafik olish.",
+    "manba": "«НИИ в каждом доме» kanali (rus tilida)"
+   }
+  ]
  }
 ]
