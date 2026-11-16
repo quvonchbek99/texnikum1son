@@ -1,0 +1,372 @@
+{
+ "Generator": [
+  "c7ddcec7798349d5abcdb84002a64340",
+  "Car alternator",
+  "Ele.G"
+ ],
+ "Starter": [
+  "7d7e1fecacaf4751945de538b8c1378f",
+  "Electric starter motor",
+  "menarzuw"
+ ],
+ "Avtomobil multimetri": [
+  "7d78602d32b64581a1884b5fec3b9040",
+  "Digital Multimeter MT-4200",
+  "Fabio Corona"
+ ],
+ "Raqamli multimetr": [
+  "7d78602d32b64581a1884b5fec3b9040",
+  "Digital Multimeter MT-4200",
+  "Fabio Corona"
+ ],
+ "Uzatmalar qutisi": [
+  "811ce409dda746099924ac0b39d34140",
+  "Manual Transmission / gearbox",
+  "Sketchfab muallifi"
+ ],
+ "Tormoz tizimi": [
+  "5feda9dbf20a49cf9fd29d550e55e4b9",
+  "Brake Disk and Caliper",
+  "Vladi"
+ ],
+ "Shina va g‘ildirak": [
+  "4e50d45e5ff04d00927a50c150e088c1",
+  "BBS RS16 Car Wheel",
+  "Martin Trafas"
+ ],
+ "Domkrat va ballon kaliti": [
+  "b07e82ed61d145d5a3294d74f6183368",
+  "Car jack",
+  "Jinhong Jeong"
+ ],
+ "Birinchi yordam to‘plami": [
+  "8b0d64278d504c508d02d33e22ea7f12",
+  "First Aid Kit",
+  "Shedmon"
+ ],
+ "Birinchi yordam qutichasi": [
+  "8b0d64278d504c508d02d33e22ea7f12",
+  "First Aid Kit",
+  "Shedmon"
+ ],
+ "Shaxsiy birinchi yordam to‘plami": [
+  "8b0d64278d504c508d02d33e22ea7f12",
+  "First Aid Kit",
+  "Shedmon"
+ ],
+ "Avtomatik tashqi defibrillyator (AED)": [
+  "a3b9b2132c7042e18789a6a53b3d8d39",
+  "AED with Wall Bracket",
+  "ChakkitPP"
+ ],
+ "Zambil": [
+  "bd69f5a963714cb2b2c08ee098a03aab",
+  "Stretcher",
+  "Odlab"
+ ],
+ "Zambil (nosilka)": [
+  "bd69f5a963714cb2b2c08ee098a03aab",
+  "Stretcher",
+  "Odlab"
+ ],
+ "Parmalash dastgohi (vertikal)": [
+  "c89d0f20cb9e421c94606540df665d82",
+  "Drill Press",
+  "Scanamatics"
+ ],
+ "Shtangensirkul": [
+  "205ebdec7304449bb8d2effbfe272ec8",
+  "Vernier Caliper",
+  "kg007"
+ ],
+ "Shtangensirkul va mikrometr": [
+  "205ebdec7304449bb8d2effbfe272ec8",
+  "Vernier Caliper",
+  "kg007"
+ ],
+ "Kompas": [
+  "961d3304906247128e1760f7d724c5b3",
+  "Map with compass",
+  "denoises"
+ ],
+ "Topografik xarita": [
+  "961d3304906247128e1760f7d724c5b3",
+  "Map with compass",
+  "denoises"
+ ],
+ "Fuqarolik protivogazi (GP-7 turi)": [
+  "a4cea22eddbf4e3fa7dd8d622642e635",
+  "GP-5 Gas Mask (GP-7 dan oldingi model)",
+  "MattMakesSwords"
+ ],
+ "Tok qisqichi (klesh-metr)": [
+  "29bf6948997a4a94b4d1f11673921e31",
+  "Clamp Meter",
+  "ChakkitPP"
+ ],
+ "Elektron ossillograf": [
+  "b5b047d3ffec4fe2b98659d056c0f414",
+  "Tektronix RM565 Oscilloscope (eski model)",
+  "Thusko"
+ ],
+ "Maket plata (breadboard) va simlar": [
+  "e98f8d8a0e284b818f7540f118fb2ab5",
+  "Breadboard Arduino",
+  "syukurmanhia3"
+ ],
+ "Lehimlash stansiyasi": [
+  "563f3a638d0e471baef919d0dacf77c3",
+  "Soldering Iron Station",
+  "deslancer"
+ ],
+ "Teleskop (refraktor)": [
+  "7220b6283360440fbbf8ccff08e25a7f",
+  "Telescope",
+  "Francesco Coldesina"
+ ],
+ "Mikroskop": [
+  "a9c83e6af504463aa354e3b7e1b21c53",
+  "Microscope",
+  "LarkArt Store"
+ ],
+ "Tizim bloki": [
+  "d1d8282c9916438091f11aeb28787b66",
+  "Gaming Desktop PC",
+  "Yolala3D"
+ ],
+ "Shaxsiy kompyuter": [
+  "d1d8282c9916438091f11aeb28787b66",
+  "Gaming Desktop PC",
+  "Yolala3D"
+ ],
+ "Klaviatura va sichqoncha": [
+  "c63ee81b71ff45b68a778101b4df3d46",
+  "Mouse and Keyboard",
+  "gorzi"
+ ],
+ "Printer": [
+  "d55f6fca7c3d45c883bbff770672970d",
+  "MFP Office Printer",
+  "Red Fox"
+ ],
+ "Wi-Fi router (marshrutizator)": [
+  "ac86d8ae65a54f4aa99d7d624f71e5f4",
+  "Router",
+  "Rasmus"
+ ],
+ "Ona plata": [
+  "3bc94057328243d4b341a55f59160f8a",
+  "MotherBoard + Components",
+  "Daniel Cardona"
+ ],
+ "Protsessor (CPU)": [
+  "a50bafa2d9914caa9bf185cd16e6935f",
+  "Processor",
+  "Mustafa Özgen"
+ ],
+ "Videokarta (GPU)": [
+  "8b947ee1bf7a4e3d8ffa1c24893ac160",
+  "GeForce RTX 3080 Graphics Card",
+  "_surovic_"
+ ],
+ "Operativ xotira (RAM)": [
+  "d2715d60f139421eb6028efd5153fdaf",
+  "Random access memory (RAM)",
+  "CommunicationNode"
+ ],
+ "Basketbol halqasi va to‘pi": [
+  "a30a5de53a6748c39cbd2923946b5993",
+  "Basketball Hoop Panel",
+  "Nimrod Assaf"
+ ],
+ "Futbol to‘pi va darvoza": [
+  "46c91864ef384158b0078e20bdbfe3e9",
+  "Soccer Ball",
+  "typhomnt"
+ ],
+ "Gantel va shtanga": [
+  "6adf727b552348af9350a29c40f4ef21",
+  "Dumbbell Barbell Bench",
+  "Mehdi Shahsavan"
+ ],
+ "Probirka va shtativ": [
+  "f09bcbfe529e4314a1acbf7b7d1e867f",
+  "Test Tube Rack",
+  "Harry Bond"
+ ],
+ "Kimyoviy stakan va kolbalar": [
+  "c57097ffd2bb467c85d49c10e1e0efe0",
+  "Laboratory Glassware Set",
+  "Martin Ibbett"
+ ],
+ "Manekken": [
+  "edce03ca9ee8410b8e0485504597389b",
+  "Mannequin",
+  "Aleksei Moskvin"
+ ],
+ "Himoya kaskasi": [
+  "a1328e74b0f44b4284af05eb2aa5cfb6",
+  "Hard hat",
+  "Naira"
+ ],
+ "Respirator": [
+  "1d94357061ed4279a71291c665be0765",
+  "Respirator",
+  "Daniel Ryan"
+ ],
+ "O‘t o‘chirgich (kukunli)": [
+  "5676b179b3b744c0aaae53a3dcea2300",
+  "Fire Extinguisher",
+  "Loïc"
+ ],
+ "O‘t o‘chirgichlar": [
+  "5676b179b3b744c0aaae53a3dcea2300",
+  "Fire Extinguisher",
+  "Loïc"
+ ],
+ "Cho‘yan qozon": [
+  "8ed741d396db4db69b4ecafade39d5a3",
+  "Cast-Iron Cauldron",
+  "My Name Is This"
+ ],
+ "Tandir": [
+  "0227e3cf2b5146ac9471e07d9dc331b3",
+  "Tandoor",
+  "Akshat Sharma"
+ ],
+ "Oshxona pichog‘i (oshpichoq)": [
+  "2be56aac48d042449a89cf5c74aae4bf",
+  "Kitchen Knife",
+  "Max Doroszewski"
+ ],
+ "Videokamera / fotoapparat": [
+  "19d8c0bf6c814424a6a0dd54d726e475",
+  "PENTAX K-1 DSLR",
+  "tuma_youzyo"
+ ],
+ "Mikrofon (petlichka va studiya)": [
+  "91df30cb2cd44f8083aaec05168b94d9",
+  "MXL 770 microphone",
+  "Shapernode"
+ ],
+ "Yoritish uskunalari (softboks)": [
+  "69e42ce9306249c2995ff196ab0ed8ad",
+  "Studio Softbox Light",
+  "Glowbox 3D"
+ ],
+ "Planetar mikser": [
+  "716dfa11eb8f4020833584a3c3d09d5d",
+  "KitchenAid Stand mixer",
+  "MelissaVerdonck"
+ ],
+ "Go‘sht qiymalagich (myasorubka)": [
+  "e4ede0c793f94c07944f10746aff0a62",
+  "Meat Grinder",
+  "kanistra"
+ ],
+ "Payvandchi niqobi (xameleon)": [
+  "4f0462e1c43e4c1db947b8eb9d37b746",
+  "Welding mask",
+  "guss67"
+ ],
+ "Bosh suyagi modeli": [
+  "4868b0bea3b94041b77ecadf6f9cdf0e",
+  "Human Skull",
+  "Velicsek Artistic"
+ ],
+ "Molbert": [
+  "449501e5ac704151b2f913649617dc7c",
+  "Easel",
+  "Every 3D"
+ ],
+ "Sartaroshlik qaychisi": [
+  "6e0defc85edc4920a794fe9e82b5f16b",
+  "Scissors",
+  "sweedboy69"
+ ],
+ "Soch olish mashinkasi": [
+  "05a12bc9a23c4c7bb5a84601b61221ce",
+  "Salon Clippers",
+  "Cosche"
+ ],
+ "Sartarosh kreslosi": [
+  "a200eda7c8404d848079d68375425411",
+  "Barber Chair (eski uslub)",
+  "bunnypew"
+ ],
+ "Ustara (britva)": [
+  "c12310682cb846f48f43e5932efa7c42",
+  "Razor",
+  "Filip"
+ ],
+ "Yong‘in gidranti va kolonka": [
+  "d021f42ea8c44afe9c90655beaa36d89",
+  "Fire hydrant (Amerika turi)",
+  "Fayruso"
+ ],
+ "Havo nafas olish apparati": [
+  "49685581e3eb47e4866bc91298fa2c78",
+  "SCBA Breathing Apparatus",
+  "Studio Lab"
+ ],
+ "Ko‘chma radiostansiya": [
+  "282d16b8d5a84343953eb6d8d135722a",
+  "Handheld Portable Radio",
+  "Andrzej Borkowski"
+ ],
+ "Refraktometr": [
+  "3331ad58eda3431bb1f6ee68d4f74b8a",
+  "Analogue Refractometer",
+  "Alvin Suen"
+ ],
+ "Sekundomer": [
+  "fa007d624522430aa27eec7951acf2f8",
+  "Stopwatch",
+  "re1monsen"
+ ],
+ "Ampermetr va voltmetr": [
+  "32675e92c212439688bc551cd8c3d551",
+  "Voltmeter",
+  "Beau James"
+ ],
+ "O‘t o‘chirish avtotsisternasi": [
+  "36562b00c0304114adb9a2317af8d808",
+  "Fire Engine (Amerika turi)",
+  "Araon"
+ ],
+ "Parokonvektomat": [
+  "cd536811b6e046d2b8e32e4ae354f276",
+  "Rational Combi Oven",
+  "jits.soni"
+ ],
+ "3D printer": [
+  "c859237754d24d35b0699ccf9d297224",
+  "Bambu Lab A1",
+  "Stichting Consortium Beroepsonderwijs"
+ ],
+ "3D printer (FDM)": [
+  "c859237754d24d35b0699ccf9d297224",
+  "Bambu Lab A1",
+  "Stichting Consortium Beroepsonderwijs"
+ ],
+ "Universal tikuv mashinasi": [
+  "50889d6fc4a64cce85acd5bb420d661f",
+  "Sewing Machine",
+  "cankut"
+ ],
+ "Fen": [
+  "1f77de5a386540ef9c35581775bf0275",
+  "Dyson Supersonic Professional",
+  "eltayerkebulan"
+ ],
+ "OBD-II diagnostika skaneri": [
+  "17184869fa4f45b4a120bb89693049b4",
+  "Diagnostic Scanner (OBD adapter)",
+  "elexpress"
+ ],
+ "pH-metr": [
+  "9c2133ce7b4442009fc44033220264b3",
+  "pH meter with accessories",
+  "Sketchfab muallifi"
+ ]
+}

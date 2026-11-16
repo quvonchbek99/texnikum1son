@@ -80,6 +80,7 @@
     var i = J.indexOf(j), oldin = J[(i - 1 + J.length) % J.length], keyin = J[(i + 1) % J.length];
     $(".lab-de", dlg).textContent = j.e || "🔧"; $("h3", dlg).textContent = j.nomi;
     var h = '<div class="lab-pas">';
+    if (j.sf) h += '<div class="lab-3d" style="margin:0 0 12px"><iframe title="Haqiqiy 3D model" style="display:block;width:100%;aspect-ratio:16/10;border:0;border-radius:12px;background:#1b1b1f" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy" src="https://sketchfab.com/models/' + esc(j.sf[0]) + '/embed?autostart=1&autospin=0.2&ui_theme=dark&dnt=1"></iframe><small class="muted" style="display:block;margin-top:4px">Haqiqiy 3D model: «' + esc(j.sf[1]) + '», muallif ' + esc(j.sf[2]) + ' (Sketchfab). Sichqoncha bilan aylantiring.</small></div>';
     if (j.vazifa) h += '<p class="lab-vz">' + esc(j.vazifa) + "</p>";
     if (j.tuzilish && j.tuzilish.length) h += '<h4>Tuzilishi</h4><ol class="lab-tz">' + j.tuzilish.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>";
     if (j.ishlatish && j.ishlatish.length) h += '<h4>Ishlatish tartibi</h4><ol class="lab-is">' + j.ishlatish.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>";

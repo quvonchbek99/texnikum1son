@@ -32,17 +32,15 @@
   var sfF = p.querySelector(".z3-sf"), rj = p.querySelector(".z3-rj"), bar = p.querySelector(".z3-bar");
   // Haqiqiy 3D model (Sketchfab) bor bo'lsa — avval shu ko'rsatiladi; maket faqat ish jarayoni animatsiyasi uchun
   function rejim() {
-    var z = Z[cur], haq = !!z.sf && !maket;
-    rj.hidden = !z.sf; rj.textContent = haq ? T("rj1") : T("rj2");
-    sfF.hidden = !haq; canvas.style.display = haq ? "none" : ""; bar.style.display = haq ? "none" : ""; tagsBox.style.visibility = haq ? "hidden" : ""; if (yuk.parentNode) yuk.style.display = haq ? "none" : "";
-    if (!korindi) return;
-    if (haq) { var u = "https://sketchfab.com/models/" + z.sf.uid + "/embed?autostart=1&autospin=0.2&ui_theme=dark&dnt=1"; if (sfF.getAttribute("src") !== u) sfF.setAttribute("src", u); }
-    else { sfF.removeAttribute("src"); boshla(); }
+    var z = Z[cur]; rj.hidden = true; canvas.style.display = "none"; bar.style.display = "none"; tagsBox.style.display = "none"; if (yuk.parentNode) yuk.style.display = "none";
+    stage.style.display = z.sf ? "" : "none"; sfF.hidden = !z.sf;
+    if (!korindi && z.sf) return;
+    if (z.sf) { var u = "https://sketchfab.com/models/" + z.sf.uid + "/embed?autostart=1&autospin=0.2&ui_theme=dark&dnt=1"; if (sfF.getAttribute("src") !== u) sfF.setAttribute("src", u); } else sfF.removeAttribute("src");
   }
   rj.addEventListener("click", function () { maket = !maket; rejim(); });
 
-  var TL = { en: { yangi: "What is new", qayer: "Where it works", ustun: "Advantages over other models", mat: "The maths", foyda: "Benefit", uzb: "In Uzbekistan", manba: "Source", video: "At work — video", yt: "Open on YouTube", och: "Play video: ", haq: "Real 3D model", muallif: "author", maket: "The “Working process” animation is a simplified teaching mock-up.", yoq: "No ready-made real 3D model was found for this device — a simplified teaching mock-up is shown.", tuz: "Parts", ish: "▶ Show at work", ish2: "■ Device only", ayl: "Rotate", toliq: "⛶ Full screen", rj1: "⚙ Working process (animation)", rj2: "📷 Real 3D model", manbaL: "source" },
-    uz: { yangi: "Nimasi yangi", qayer: "Qayerda ishlaydi", ustun: "Boshqa modellardan ustunligi", mat: "Matematikasi", foyda: "Foydasi", uzb: "O‘zbekistonda", manba: "Manba", video: "Ish jarayoni — video", yt: "YouTube’da ochish", och: "Videoni ochish: ", haq: "Haqiqiy 3D model", muallif: "muallif", maket: "«Ish jarayoni» animatsiyasi — soddalashtirilgan o‘quv maketi.", yoq: "Bu jihoz uchun tayyor haqiqiy 3D model topilmadi — soddalashtirilgan o‘quv maketi ko‘rsatilmoqda.", tuz: "Tuzilishi", ish: "▶ Ish joyida ko‘rsatish", ish2: "■ Faqat jihoz", ayl: "Aylanish", toliq: "⛶ To‘liq ekran", rj1: "⚙ Ish jarayoni (animatsiya)", rj2: "📷 Haqiqiy 3D model", manbaL: "manba" } };
+  var TL = { en: { yangi: "What is new", qayer: "Where it works", ustun: "Advantages over other models", mat: "The maths", foyda: "Benefit", uzb: "In Uzbekistan", manba: "Source", video: "At work — video", yt: "Open on YouTube", och: "Play video: ", haq: "Real 3D model", muallif: "author", maket: "", yoq: "No real 3D model of this device has been found yet — see the real equipment in the videos below.", tuz: "Parts", ish: "▶ Show at work", ish2: "■ Device only", ayl: "Rotate", toliq: "⛶ Full screen", rj1: "⚙ Working process (animation)", rj2: "📷 Real 3D model", manbaL: "source" },
+    uz: { yangi: "Nimasi yangi", qayer: "Qayerda ishlaydi", ustun: "Boshqa modellardan ustunligi", mat: "Matematikasi", foyda: "Foydasi", uzb: "O‘zbekistonda", manba: "Manba", video: "Ish jarayoni — video", yt: "YouTube’da ochish", och: "Videoni ochish: ", haq: "Haqiqiy 3D model", muallif: "muallif", maket: "", yoq: "Bu jihozning haqiqiy 3D modeli hali topilmadi — haqiqiy uskunani quyidagi videolarda ko‘ring.", tuz: "Tuzilishi", ish: "▶ Ish joyida ko‘rsatish", ish2: "■ Faqat jihoz", ayl: "Aylanish", toliq: "⛶ To‘liq ekran", rj1: "⚙ Ish jarayoni (animatsiya)", rj2: "📷 Haqiqiy 3D model", manbaL: "manba" } };
   var til = "uz"; try { if (localStorage.getItem("t1-z3-til") === "en") til = "en"; } catch (e) {}
   function T(k) { return TL[til][k]; }
   function li(a) { return a.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join(""); }
