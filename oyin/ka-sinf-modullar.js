@@ -136,7 +136,7 @@
   G.s5m3 = function (L) { // o'nli kasrlar
     var a = R(10, lv(L, 99, 999, 9999)) / 10, b = R(10, lv(L, 99, 999, 999)) / 10, k = R(0, 2);
     if (k === 0) return numQ(a + " + " + b + " = ?", Math.round((a + b) * 10) / 10, ["Vergulni vergul ostiga yozib qo'shamiz"]);
-    if (k === 1) { var m = pick([10, 100, 1000]); return numQ(a + " · " + m + " = ?", Math.round(a * m * 10) / 10, ["Vergulni o'ngga " + String(m).length - 1 + " xona suramiz"]); }
+    if (k === 1) { var m = pick([10, 100, 1000]); return numQ(a + " · " + m + " = ?", Math.round(a * m * 10) / 10, ["Vergulni o'ngga " + (String(m).length - 1) + " xona suramiz"]); }
     var c = R(2, 9), e = R(1, 9); return numQ((c + e / 10) + " · " + c + " = ?", Math.round((c + e / 10) * c * 100) / 100, [c + " · " + c + " = " + c * c + ", " + e / 10 + " · " + c + " = " + e * c / 10]);
   };
   G.s5m4 = function (L) { // foiz

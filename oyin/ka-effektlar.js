@@ -262,7 +262,8 @@
     }
 
     // ---------- holat ----------
-    var W = innerWidth, px = Math.random() * Math.max(40, W - 140) + 20, dir = 1, speed = 52;
+    var Z = innerWidth <= 640 ? 0.62 : 1; if (Z < 1) { k.style.zoom = ball.style.zoom = sh.style.zoom = Z; say.style.bottom = "calc(" + Math.round(116 * Z + 6) + "px + var(--kb,0px))"; x.style.bottom = "calc(" + Math.round(98 * Z) + "px + var(--kb,0px))"; }
+    var W = innerWidth / Z, px = Math.random() * Math.max(40, W - 140) + 20, dir = 1, speed = 52;
     var mode = "walk", modeT = 0;          // walk | idle | fly | sleep
     var jumpT = -1, jumpH = 0, nextJump = 3 + Math.random() * 3, t = 0, last = performance.now();
     var fly = null;                         // {x0,x1,h,T,t}
@@ -335,7 +336,7 @@
     addEventListener("pointermove", function (e) { pX = e.clientX; pY = e.clientY; idleFor = 0; if (mode === "sleep" && Math.random() < .02) wake(); }, { passive: true });
     addEventListener("pointerdown", function () { idleFor = 0; }, { passive: true });
     addEventListener("keydown", function () { idleFor = 0; });
-    addEventListener("resize", function () { W = innerWidth; px = Math.min(px, W - 96); });
+    addEventListener("resize", function () { W = innerWidth / Z; px = Math.min(px, W - 96); });
     var lastSY = scrollY, scrollJumpAt = 0;
     addEventListener("scroll", function () {
       var d = scrollY - lastSY; lastSY = scrollY; idleFor = 0;
@@ -462,10 +463,10 @@
       ball.style.transform = "translate(" + bx + "px," + (-by) + "px) rotate(" + ballAngle + "deg)";
       var shw = 54 - Math.min(34, jy / 4);
       sh.style.transform = "translateX(" + (px + 15).toFixed(1) + "px) scaleX(" + (shw / 54).toFixed(3) + ")"; sh.style.opacity = String(1 - Math.min(.7, jy / 160)).slice(0, 5);
-      x.style.left = (px + 70) + "px"; x.style.transform = "translateY(" + (-jy - bob) + "px)";
+      x.style.left = ((px + 70) * Z) + "px"; x.style.transform = "translateY(" + ((-jy - bob) * Z) + "px)";
       if (sayT > 0) {
-        sayT -= dt; var sx = Math.max(8, Math.min(W - 262, px - 20)); say.style.left = sx + "px"; say.style.setProperty("--tx", Math.max(10, Math.min(232, px + 42 - sx - 8)) + "px");
-        say.style.transform = "translateY(" + (-jy - bob) + "px)";
+        sayT -= dt; var sx = Math.max(8, Math.min(innerWidth - 262, px * Z - 20)); say.style.left = sx + "px"; say.style.setProperty("--tx", Math.max(10, Math.min(232, (px + 42) * Z - sx - 8)) + "px");
+        say.style.transform = "translateY(" + ((-jy - bob) * Z) + "px)";
         if (sayT <= 0) { say.classList.remove("on"); say.style.transform = ""; }
       }
     }

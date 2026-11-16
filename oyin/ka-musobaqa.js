@@ -116,7 +116,7 @@
         (CH ? '<label>Liga raundlari</label><select id="kmRounds"><option value="3" selected>3 raund</option><option value="5">5 raund</option></select>'
           : '<label style="display:flex;align-items:center;gap:8px;margin-top:12px"><input type="checkbox" id="kmPlay" checked style="width:auto"> Men ham o\'ynayman</label>') +
         '<div class="actions"><button class="main" id="kmCreate">' + (CH ? "🏆 Turnirni ochish" : "➕ Xona ochish") + '</button></div></div>' +
-        '<div class="card"><h2>🔑 Kod bilan qo\'shilish</h2><p class="dim">Xona egasi bergan 5 belgili kodni yozing.</p>' +
+        '<div class="card"><h2>🔑 Kod bilan qo\'shilish</h2><p class="dim">Xona egasi bergan 5 harfli kodni yozing (faqat katta lotin harflari).</p>' +
         '<label>Xona kodi</label><input id="kmCode" maxlength="5" autocomplete="off" style="text-transform:uppercase;letter-spacing:6px;font-size:24px;text-align:center" value="' + esc(N.normCode(qs.get("kod") || "")) + '" placeholder="ABCDE">' +
         '<div class="actions"><button class="main" id="kmJoin">🔑 Qo\'shilish</button></div></div>' +
         "</div>" +
@@ -327,7 +327,7 @@
     function joinRoom() {
       var m = readMe(); if (!m) return;
       var code = N.normCode(root.querySelector("#kmCode").value);
-      if (code.length !== 5) { root.querySelector("#kmErr").textContent = "Kod 5 ta belgidan iborat."; return; }
+      if (code.length !== 5) { root.querySelector("#kmErr").textContent = "Kod 5 ta harfdan iborat."; return; }
       busy(true, "⏳ Ulanmoqda…");
       C = { id: null, conn: null, code: code, lastQ: null, myAns: null, ended: false };
       N.join(code, { name: m.name, group: m.group }, {

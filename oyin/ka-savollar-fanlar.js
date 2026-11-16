@@ -935,7 +935,8 @@
     var o = pickFresh("sherlock", M11, 12), it = o.c, x = o.q, cor = x.variantlar[x.javob];
     var w = x.variantlar.filter(function (v, i) { return i !== x.javob; });
     var hik = String(it.hikoya).replace(/<(?!\/?(em|b|i)>)[^>]*>/g, "");
-    var q = "🔎 «" + it.sarlavha + "»<br><span style=\"font-size:.82em;font-weight:500\">" + hik + "</span><br><b>" + x.savol + "</b>";
+    var R = window.SHERLOCK_RASM && window.SHERLOCK_RASM[it.sarlavha];
+    var q = (R ? "<img src=\"" + R + "\" alt=\"\" loading=\"lazy\" style=\"display:block;width:100%;max-width:420px;border-radius:10px;margin:0 auto 6px\">" : "") + "🔎 «" + it.sarlavha + "»<br><span style=\"font-size:.82em;font-weight:500\">" + hik + "</span><br><b>" + x.savol + "</b>";
     return Q(q, cor, w, [shortTxt(x.izoh, 200)]);
   }
 
@@ -1180,7 +1181,7 @@
     e4: ["english/assets/words-b4.js"], e5: ["english/assets/words-b5.js"], e6: ["english/assets/words-b6.js"],
     r1: ["rus-tili/assets/lugat-data.js"], r2: ["rus-tili/assets/lugat-data.js"], r4: ["rus-tili/assets/lugat-data.js"],
     r3: ["rus-tili/assets/mashq-data.js"], r6: ["rus-tili/assets/mashq-data.js"],
-    m10: ["ezop-masallar.js"], m11: ["sherlock-ishlar.js?v=20261113a"]
+    m10: ["ezop-masallar.js"], m11: ["sherlock-ishlar.js?v=20261113a", "sherlock-rasmlar.js?v=20261116a"]
   };
   var LOADED = {};
   function addJs(src) {

@@ -18,6 +18,14 @@
   }
   function fan() { var m = /(fizika|kimyo|biologiya|tarix|geografiya|informatika)/.exec(path); return m ? m[1] : ""; }
   function topic() { return String(document.title || "").replace(/\s*[|—–]\s*Kuvonch Academy.*$/i, "").replace(/\s+/g, " ").trim().slice(0, 100); }
+  // mavzu bo'limlari bor sahifada (mashqlar.html: <section class="topic" id="t63">) — ekranda ko'rinib turgan mavzu
+  function mt() {
+    var ok = /^(t\d{1,3}|a\d)$/, h = (location.hash || "").slice(1); if (ok.test(h)) return h;
+    // o'qilayotgan mavzu: yuqori qirrasi ekranning yuqori qismidan o'tgan oxirgi bo'lim (bo'lim qisqa bo'lsa ham topiladi)
+    var best = "", bt = -1e9, mid = (window.innerHeight || 600) * 0.45;
+    Array.prototype.forEach.call(document.querySelectorAll("section.topic[id]"), function (el) { var r = el.getBoundingClientRect(); if (r.height && r.top <= mid && r.top > bt && r.bottom > 0) { bt = r.top; best = el.id; } });
+    return ok.test(best) ? best : "";
+  }
   var css = ".kvfab{position:fixed;right:14px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:940;width:66px;height:62px;border:0;background:none;cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent}" +
     ".kvfab .kuvi{width:66px}.kvfab:focus-visible{outline:3px solid #3b82f6;outline-offset:3px;border-radius:16px}" +
     ".kvtip{position:fixed;right:88px;bottom:calc(30px + env(safe-area-inset-bottom,0px));z-index:940;background:#fff;color:#1d2230;font:700 13px/1.3 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:8px 12px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.25);max-width:220px;transition:opacity .4s}" +
@@ -33,7 +41,7 @@
   function openChat() {
     css1(); if (document.querySelector(".kvov")) return;
     var ov = document.createElement("div"); ov.className = "kvov"; ov.setAttribute("role", "dialog"); ov.setAttribute("aria-label", "Kuvi — AI ustoz");
-    var f = fan(), url = base + "ai-ustoz.html?embed=1&rejim=" + mode() + (f ? "&fan=" + f : "") + "&mavzu=" + encodeURIComponent(topic());
+    var f = fan(), m = mode(), t = m === "math" ? mt() : "", url = base + "ai-ustoz.html?embed=1&rejim=" + m + (f ? "&fan=" + f : "") + (t ? "&mt=" + t : "") + "&mavzu=" + encodeURIComponent(topic());
     ov.innerHTML = '<div class="bx"><button type="button" class="x" aria-label="Yopish">✕</button><iframe allow="microphone; autoplay" title="Kuvi — AI ustoz"></iframe></div>';
     ov.querySelector("iframe").src = url;
     function close() { ov.remove(); document.removeEventListener("keydown", esc); if (b && document.body.contains(b)) b.focus(); robot("happy", "Yana gaplashamiz! 👋"); }
@@ -70,6 +78,6 @@
     b.onclick = openChat;
     setInterval(function () { if (document.body.contains(b) && !document.hidden) face(); }, 12000);
   }
-  function go() { if (window.kaYuz) setTimeout(boot, 800); else { var s = document.createElement("script"); s.src = base + "ka-kuvi.js?v=20261112d"; s.onload = function () { setTimeout(boot, 800); }; s.onerror = boot; document.head.appendChild(s); } }
+  function go() { if (window.kaYuz) setTimeout(boot, 800); else { var s = document.createElement("script"); s.src = base + "ka-kuvi.js?v=20261116a"; s.onload = function () { setTimeout(boot, 800); }; s.onerror = boot; document.head.appendChild(s); } }
   if (document.body) go(); else document.addEventListener("DOMContentLoaded", go);
 })();

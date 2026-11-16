@@ -40,6 +40,7 @@
   @keyframes kdp{70%{box-shadow:0 0 0 9px rgba(94,230,160,0)}100%{box-shadow:0 0 0 0 rgba(94,230,160,0)}}
   .kd-toast{position:fixed;right:12px;top:52px;z-index:3500;max-width:min(330px,calc(100vw - 24px));background:linear-gradient(135deg,#0f2a1d,#123524);border:1px solid #2f7a50;color:#eafff1;border-radius:14px;padding:10px 12px;font:600 13.5px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 14px 34px rgba(0,0,0,.45);transform:translateY(-12px);opacity:0;transition:all .3s;pointer-events:none}
   .kd-toast.on{transform:none;opacity:1;pointer-events:auto}
+  @media (max-width:640px){.kd-toast{left:auto;right:8px;top:50px;max-width:min(270px,calc(100vw - 16px));padding:7px 10px;font-size:12px;border-radius:12px}}
   .kd-toast b{color:#ffd479}
   .kd-coin{position:fixed;z-index:3600;font:900 22px/1 sans-serif;color:#ffd479;text-shadow:0 2px 8px rgba(0,0,0,.6);pointer-events:none;transition:transform .9s cubic-bezier(.3,.7,.3,1),opacity .9s}
   .kd-bg{position:fixed;top:0;right:0;bottom:0;left:0;z-index:3000;background:rgba(3,10,7,.78);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 12px}
@@ -87,7 +88,7 @@
   window.addEventListener("scroll", function () { var y = window.scrollY || 0; pill.classList.toggle("mini", y > 240 && y > lastY); lastY = y; }, { passive: true });
 
   var toastEl = el("div", { class: "kd-toast", role: "status" }), toastT = 0;
-  function toast(h, ms) { if (!document.body.contains(toastEl)) document.body.appendChild(toastEl); toastEl.innerHTML = h; toastEl.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove("on"); }, ms || 4200); }
+  function toast(h, ms) { if (!document.body.contains(toastEl)) document.body.appendChild(toastEl); toastEl.innerHTML = h; toastEl.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove("on"); }, ms || (innerWidth <= 640 ? 2600 : 4200)); }
   function flyCoin(from) {
     if (RM) return;
     var r = (from || pill).getBoundingClientRect(), p = pill.getBoundingClientRect(), c = el("div", { class: "kd-coin" }, "₿");

@@ -1281,5 +1281,22 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u hovuzdagi boshqa baliqlar bilan janjallashgan edi", "Chunki suv kamayib borayotganini ko'rib, doimiy oqim bor joyni topishga shoshildi", "Chunki u sayr qilishni yaxshi ko'rar va har kuni yangi joyga borardi"],
     javob: 1,
     izoh: "Ikkinchi baliq vaziyatni kuzatib, xavfni oldindan anglab yetdi. Xavf yaqinlashayotganini ko'rganda vaqtida harakat qilish aqlli yo'ldir."
+  },
+{
+    id: "ez-159", mavzu: "ehtiyot", sarlavha: "Ikki qush va dehqon",
+    matn: "Qamishzor ichida ikki qush uya qurib yashardi. Bir kuni dehqon ariq bo'yiga kelib, qamishni kesish uchun arqon va bolta olib keldi. Birinchi qush: \"U shunchaki o'tib ketar, biz hech narsa qilmaymiz\", deb uyasida qolaverdi. Ikkinchi qush esa dehqonning ishini ko'rib, uyasini ko'chirib, boshqa daraxtga o'tib oldi.",
+    savol: "Ikkinchi qush nima uchun uyasini ko'chirdi?",
+    variantlar: ["Chunki qamishzor juda chiroyli va yangi uyga ehtiyoj yo'q edi", "Chunki dehqonning arqon va bolta bilan kelganini ko'rib, uyasiga xavf borligini angladi", "Chunki u daraxtda yashashni shunchaki yoqtirar edi"],
+    javob: 1,
+    izoh: "Ikkinchi qush dehqonning niyatini asbob-anjomlaridan bilib oldi va xavfni oldindan his qildi. Xavf kelishini kutmasdan tayyorgarlik ko'rish aqlli ish."
+  },
+  {
+    id: "ez-160", mavzu: "mas'uliyat", sarlavha: "Ot va cho'pon",
+    matn: "Bir cho'pon o'z otini ko'p oylar davomida e'tiborsiz qoldirib, uni yem-xashaksiz va suvsiz tutdi. Ot o'sha paytda hech kim uni eslamayotganini sezar, ammo indamay chidardi. Kunlardan birida dushman yaqinlashib qoldi va cho'pon zudlik bilan otga minib, qochishga shoshildi. Ammo ot holsiz edi, shuning uchun u tez yugura olmadi va cho'pon ham dushmandan qutula olmadi.",
+    savol: "Ot nima uchun tez yugura olmadi?",
+    variantlar: ["Chunki u dushmandan qo'rqib, ataylab sekin yurdi", "Chunki cho'pon uni uzoq vaqt och va parvarishsiz qoldirgan edi", "Chunki u juda qarib qolgan va hech qachon yugurmagan edi"],
+    javob: 1,
+    izoh: "Otning holsizligi cho'ponning uzoq vaqt parvarish qilmagani natijasi edi. Mas'uliyatsizlik oqibatlari odatda darhol emas, eng zarur paytda namoyon bo'ladi."
   }
 ];
+

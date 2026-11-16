@@ -212,18 +212,23 @@
 
   var L = {
     ok: ["Barakalla!", "Zo'r, aynan shunday!", "Ofarin, miyang charxlangan!", "Qoyil, to'ppa-to'g'ri!", "Ana, ko'rdingmi, uddalading!", "Super! Shunday davom et!",
-      "Ajoyib, {p}!", "Barakalla, {p}!", "Qoyil-e, {p}! To'ppa-to'g'ri!", "Ofarin, {p}, aqlingga qoyil!", "Voy, {p}, zo'rsan-ku!"],
-    streak: ["Ketma-ket {n} ta! Yonib ketyapsan!", "{n} ta ketma-ket — bugun sen yulduzsan!", "Voy-voy, {n} ta ketma-ket! Hech kim to'xtata olmaydi!", "Ha-ha-ha! {n} ta ketma-ket, {p}! Kulgim to'xtamayapti!"],
+      "Ajoyib, {p}!", "Barakalla, {p}!", "Qoyil-e, {p}! To'ppa-to'g'ri!", "Ofarin, {p}, aqlingga qoyil!", "Voy, {p}, zo'rsan-ku!",
+      "Mana bu boshqa gap!", "Zo'r! Miyang kompyuterdan ham tez ishlayapti!", "To'ppa-to'g'ri! Qoyilman!", "Ana endi gap bor! Barakalla!", "Yashavor, {p}!", "Voy, zo'r-ku, {p}!",
+      "Bilimdon ekansan, {p}!", "Aql bovar qilmaydi! Juda zo'r!", "Daho-ku bu! Ofarin!", "Mukammal javob! Shunday davom et!"],
+    streak: ["Ketma-ket {n} ta! Yonib ketyapsan!", "{n} ta ketma-ket — bugun sen yulduzsan!", "Voy-voy, {n} ta ketma-ket! Hech kim to'xtata olmaydi!", "Ha-ha-ha! {n} ta ketma-ket, {p}! Kulgim to'xtamayapti!",
+      "{n} ta ketma-ket! Sen haqiqiy chempionsan!", "Voy-bo'y, {n} ta ketma-ket! Bugun omading chopyapti!"],
     bad: ["Afsus, bu safar xato. Keyingisida albatta topasan!", "Hmm, unchalik emas. Yechimga bir qara-chi.", "Xato, lekin xatodan o'rganamiz!", "Bu safar o'xshamadi. Yechimni o'qib ol!",
-      "Xafa bo'lma, {p}, keyingisini topasan!"],
+      "Xafa bo'lma, {p}, keyingisini topasan!",
+      "Hmm, yana bir o'ylab ko'r-chi. Yechimga bir nazar tashla.", "Yaqin qolding! Yechimni o'qib, farqini top.", "Qo'rqma, xato — bilimning birinchi qadami!",
+      "Bu safar chiqmadi, lekin sen albatta uddalaysan!", "Shoshilmagin, {p}!", "Hech qisi yo'q! Xato qilmagan odam o'rganmaydi."],
     cry: ["Uhu-uhu... yig'lab yubordim-ku! Burnim ham oqib ketdi. Yechimga qara, {p}!", "Voy-voy, ko'z yoshlarim to'kildi! Mayli, keyingisini birga topamiz, {p}."],
     tease: ["Voy qovoq kalla-ey!", "Ey oshqovoq, shuni ham bilmaysanmi?", "Qovunjon, bir o'ylab ko'r-chi!", "Hay qovoq kallajonim...", "Oshqovoqcha, bunisi oson-ku!",
       "Voy qovun-ey, shunga ham-a?", "Ey xumpar, qayoqqa qarayapsan?", "Voy eshakvoy-ey!", "Voy poponam-ey, shuni ham bilmaysanmi?", "Tarvuz kalla, bunisi oson-ku!", "Xumparvoy, miyangni ishlat-chi!"],
-    timeout: ["Vaqt tugadi-ku! Keyingisida tezroq bo'l.", "Soatga qara, do'stim! Ulgurmay qolding."],
+    timeout: ["Vaqt tugadi-ku! Keyingisida tezroq bo'l.", "Soatga qara, do'stim! Ulgurmay qolding.", "Vaqt uchib ketdi-ya! Keyingisida chaqqonroq bo'l.", "Tik-tak, tik-tak… vaqt tugadi! Keyingisida ulgurasan."],
     timeoutT: ["Voy uyquchi-ey, vaqt tugadi-ku!", "Poponam, tezroq bo'l-da!", "Xumpar, soatga qara!", "Qovoq kalla, uxlab qoldingmi?"],
-    cGood: ["Barakalla, sinf! Deyarli hamma topdi!", "Zo'r sinf! Ofarin hammangizga!", "Qoyil! Bu sinf — chempionlar sinfi!", "Ha-ha! Ajoyib, poponlarim! Deyarli hammangiz topdingiz!"],
-    cMid: ["Yomon emas! Lekin yarmingiz yana o'ylab ko'ring.", "Yarmingiz topdi — keyingisida hammangiz topasiz!", "Hmm, o'rtacha. Yechimga diqqat bilan qarang!"],
-    cBad: ["Bu savol qiyin bo'ldi. Keling, yechimini birga ko'ramiz.", "Ko'pchilik topa olmadi. Yechimga diqqat qiling!", "Uhu-uhu, ko'pchilik topmadi, yig'lab yuboraman-ku! Yechimni birga ko'ramiz."],
+    cGood: ["Barakalla, sinf! Deyarli hamma topdi!", "Zo'r sinf! Ofarin hammangizga!", "Qoyil! Bu sinf — chempionlar sinfi!", "Ha-ha! Ajoyib, poponlarim! Deyarli hammangiz topdingiz!", "Voy-bo'y, sinf! Hammangiz daho ekansiz!", "Ofarin! Bunday sinfga ustoz bo'lish — baxt!"],
+    cMid: ["Yomon emas! Lekin yarmingiz yana o'ylab ko'ring.", "Yarmingiz topdi — keyingisida hammangiz topasiz!", "Hmm, o'rtacha. Yechimga diqqat bilan qarang!", "Yarmi topdi, yarmi o'ylab qoldi. Yechimni birga ko'ramiz!"],
+    cBad: ["Bu savol qiyin bo'ldi. Keling, yechimini birga ko'ramiz.", "Ko'pchilik topa olmadi. Yechimga diqqat qiling!", "Uhu-uhu, ko'pchilik topmadi, yig'lab yuboraman-ku! Yechimni birga ko'ramiz.", "Hmm, bu savol hammani qiynadi. Keling, yechimini tahlil qilamiz."],
     cBadT: ["Voy, butun sinf qovoq kalla bo'lib qoldimi?! Mayli, yechimni birga ko'ramiz.", "Eshakvoylarim-ey, shunga ham-a? Yechimga qaranglar!", "Oshqovoqlarim-ey, qani, yechimni o'qiylik!", "Xumparlar-ey, uyg'oninglar! Yechimga qarang."]
   };
   /* Qiz va o'g'il bolalarga alohida — mehrli hazil va pand-nasihat bilan (o'quvchi o'zi belgilagan jinsi bo'yicha) */
@@ -242,14 +247,16 @@
   // pand-nasihat: xato yoki vaqt tugaganda — mehr bilan maslahat
   var NAS = ["Sabr tagi — sariq oltin, shoshmasdan o'qi.", "Bilmaganni so'rab o'rgangan — olim, uyalib so'ramagan — o'ziga zolim.", "Yiqilgan kurashga to'ymas — keyingisini albatta topasan!",
     "Xatodan qo'rqma, xatodan o'rgan.", "O'qigan o'zar, o'qimagan to'zar.", "Ilm — aql chirog'i, yechimni diqqat bilan o'qi.", "Shoshgan ish — chala ish, avval savolni oxirigacha o'qi.",
-    "Mehnatning tagi — rohat, yana bir urinib ko'r.", "Bilim — bitmas boylik, yechimni daftaringga yozib ol.", "Ming eshitgandan bir ko'rgan yaxshi — yechimga bir qara."];
+    "Mehnatning tagi — rohat, yana bir urinib ko'r.", "Bilim — bitmas boylik, yechimni daftaringga yozib ol.", "Ming eshitgandan bir ko'rgan yaxshi — yechimga bir qara.",
+    "Tomchi-tomchi ko'l bo'lur — har kuni ozgina mashq qil.", "Harakatda — barakat, yana bir urin!", "Avval o'yla, keyin so'yla.", "Kitob — bilim bulog'i, ko'proq o'qi.",
+    "Ilm olish — igna bilan quduq qazishdek, sabr qil.", "Bir yigitga yetmish hunar oz — o'rganishdan to'xtama."];
   function tease() { try { var c = JSON.parse(localStorage.getItem("ka.ustoz.cfg") || "{}"); return c.tease !== false; } catch (e) { return true; } }
   var esc = function (s) { return String(s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); };
   function react(kind, o) {
     o = o || {}; var tz = o.tz == null ? tease() : !!o.tz, n = o.n | 0, t, mood, G = LG[o.sg] || null;
     if (kind === "ok") {
       if (n >= 5 && Math.random() < .5) { t = L.streak[3]; mood = "laugh"; }
-      else if (n >= 3) { t = pick(L.streak.slice(0, 3)); mood = "love"; }
+      else if (n >= 3) { t = pick(L.streak.slice(0, 3).concat(L.streak.slice(4))); mood = "love"; }
       else { t = G && Math.random() < .55 ? pick(G.ok) : pick(L.ok); mood = Math.random() < .2 ? "wink" : "happy"; }
     }
     else if (kind === "bad") {

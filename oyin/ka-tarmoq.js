@@ -12,7 +12,8 @@
 
   var SCRIPT_BASE = ((document.currentScript && document.currentScript.src) || "").replace(/[^/?#]*([?#].*)?$/, "");
   var RESULTS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxeBUPBTqpJ8rw9PH4mW8dlonvIJCjeP9ijTfq84R6MrFqCeIjf04uoQsEgVqne2xYBTA/exec";
-  var ALPH = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+  // Xona kodi — faqat katta lotin harflari (raqamsiz; I va O ham yo'q — 1 va 0 bilan adashtirilmasin)
+  var ALPH = "ABCDEFGHJKLMNPQRSTUVWXYZ";
 
   /* ---------------- yordamchilar ---------------- */
   function R(a, b) { return a + Math.floor(Math.random() * (b - a + 1)); }
@@ -194,8 +195,18 @@
     }).catch(function (e) { mqttLoading = null; throw e; });
     return mqttLoading;
   }
-  function genCode() { var s = ""; for (var i = 0; i < 5; i++) s += ALPH[Math.floor(Math.random() * ALPH.length)]; return s; }
+  function genCode() {
+    for (var t = 0; t < 60; t++) {
+      var s = "", r = new Uint8Array(5); crypto.getRandomValues(r);
+      for (var i = 0; i < 5; i++) s += ALPH[r[i] % ALPH.length];
+      if (!badName(s) && !/(.)\1\1/.test(s)) return s; // tasodifan so'kinish yoki AAA chiqmasin
+    }
+    return s;
+  }
+  // eski (raqamli) kodlar ham qabul qilinadi — tok o'chib qayta ochilgan eski xonalar uchun
   function normCode(c) { return String(c || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 5); }
+  // xona qaysi sahifada ochilgani (live kirish sahifasi kodni shu sahifaga yo'naltiradi)
+  function pageKind() { return ((location.pathname.match(/([\w-]+)\.html?$/) || [])[1] || "viktorina").toLowerCase(); }
   function rid(n) { var a = "abcdefghijkmnpqrstuvwxyz23456789", s = "", r = new Uint8Array(n); crypto.getRandomValues(r); for (var i = 0; i < n; i++) s += a[r[i] % a.length]; return s; }
   function hex(buf) { return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ("0" + b.toString(16)).slice(-2); }).join(""); }
   function b64(u8) { var s = ""; for (var i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); }
@@ -250,6 +261,7 @@
   function host(opts) {
     // opts.code — tok o'chib qolgandan keyin o'sha xonani qayta ochish uchun (telefonlar o'zi qaytadi)
     var code = opts && opts.code && normCode(opts.code).length === 5 ? normCode(opts.code) : genCode();
+    var kind = String((opts && opts.kind) || pageKind()).replace(/[^\w-]/g, "").slice(0, 24) || "viktorina";
     return loadMqtt().then(function () { return room(code); }).then(function (R) {
       return new Promise(function (res, rej) {
         var clients = [], conns = {}, peers = {}, seqs = {}, whoT = {}, settled = false, closed = false, timers = [], bseq = Date.now(), pubB = bseq, state = "";
@@ -326,7 +338,8 @@
           delete peers[id];
           if (conns[id]) { delete conns[id]; if (opts.onLeave) opts.onLeave(id); }
         }
-        function info(c, bi) { pub(c, BROKERS[bi], TI, "~on " + Date.now(), true); }
+        // "~on <vaqt> <sahifa>" — o'quvchilar faqat "~on " boshini tekshiradi; sahifa nomi live kirish sahifasi uchun
+        function info(c, bi) { pub(c, BROKERS[bi], TI, "~on " + Date.now() + " " + kind, true); }
         function hb() { return "~hb " + pubB + (state ? " " + state : ""); }
         function flush() { // aloqa uzilgan paytda yuborilmay qolgan xabarlar (1 daqiqadan eskilari emas)
           if (!backlog.length || !upCount()) return;
@@ -657,6 +670,44 @@
   }
 
   /* ---------------- shaxs va natija ---------------- */
+  /* ---------------- live kirish: kod bo'yicha xona bormi va qaysi sahifada ----------------
+   * Xonaga qo'shilmaydi (o'qituvchi ro'yxatida «arvoh» o'quvchi paydo bo'lmaydi) — faqat xona ma'lumotini o'qiydi.
+   * -> Promise<{ok:true, kind, at} | {ok:false, net:bool}>; net=false — hech qaysi brokerga ulanib bo'lmadi */
+  function probe(code, ms) {
+    code = normCode(code);
+    if (code.length !== 5) return Promise.resolve({ ok: false, net: true });
+    return loadMqtt().then(function () { return room(code); }).then(function (R) {
+      return new Promise(function (res) {
+        var TI = R.t + "/i", cl = [], done = false, checked = 0, failed = 0;
+        function fin(v) {
+          if (done) return; done = true; clearTimeout(to);
+          cl.forEach(function (c) { setTimeout(function () { try { c.end(true); } catch (e) {} }, 50); });
+          res(v);
+        }
+        // hamma brokerlar tekshirilib (yoki ulanmay) xona topilmasa — darhol javob, 9 soniya kutmasdan
+        function maybeEnd() { if (checked + failed >= BROKERS.length) fin({ ok: false, net: checked > 0 }); }
+        var to = setTimeout(function () { fin({ ok: false, net: checked > 0 }); }, ms || 9000);
+        BROKERS.forEach(function (b) {
+          var c, st = 0; // 0 — ulanmoqda, 1 — ulandi, 2 — ulana olmadi
+          try { c = mconnect(b); } catch (e) { failed++; return; }
+          cl.push(c);
+          c.on("connect", function () {
+            if (st === 1) return; st = 1;
+            // saqlangan (retained) xabar obunadan keyin darhol keladi; 2,5 s ichida kelmasa — bu brokerda xona yo'q
+            c.subscribe(TI, { qos: 0 }, function () { setTimeout(function () { checked++; maybeEnd(); }, 2500); });
+          });
+          c.on("close", function () { if (st === 0) { st = 2; failed++; maybeEnd(); } });
+          c.on("message", function (topic, payload) {
+            var s = payload.toString(); if (topic !== TI || s.slice(0, 4) !== "~on ") return;
+            var p = s.split(" "), at = +p[1] || 0;
+            if (at && Date.now() - at > 30 * 60000) return; // yarim soatdan beri yangilanmagan — yopilmay qolgan eski xona
+            fin({ ok: true, kind: (p[2] || "viktorina").replace(/[^\w-]/g, ""), at: at });
+          });
+          c.on("error", function () {});
+        });
+      });
+    }).catch(function () { return { ok: false, net: false }; });
+  }
   function identity() {
     var n = "", g = "";
     try { var idn = JSON.parse(localStorage.getItem("mq_identity") || "null"); if (idn) { n = idn.name || ""; g = idn.group || ""; } } catch (e) {}
@@ -670,7 +721,7 @@
   function joinUrl(page, code) { var u = location.href.split("#")[0].split("?")[0]; u = u.replace(/[^/]*$/, page); return u + "?kod=" + code; }
 
   window.KANet = {
-    GAMES: GAMES, makeQuestions: makeQuestions, host: host, join: join, normCode: normCode, badName: badName,
+    GAMES: GAMES, makeQuestions: makeQuestions, host: host, join: join, normCode: normCode, badName: badName, probe: probe, genCode: genCode,
     identity: identity, saveIdentity: saveIdentity, postResult: postResult, esc: esc, shuffle: shuffle, joinUrl: joinUrl
   };
 })();

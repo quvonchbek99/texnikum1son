@@ -133,8 +133,112 @@
     } finally { pushing = false; }
   }
 
+  // ---- Parol o'zgarsa ham asl (eski) parol bilan kirish ----
+  // kalit/{id}: cn — yangi parol asl parol bilan shifrlangan, cb — asl parol yangi parol bilan shifrlangan.
+  // Asl parolni bilgan kishi yangisini ochib, o'sha bilan kiradi (Firebase'da parol bitta bo'lgani uchun).
+  function kidOf(email) { return String(email).split("@")[0]; }
+  function b64e(u) { var t = ""; for (var i = 0; i < u.length; i++) t += String.fromCharCode(u[i]); return btoa(t); }
+  function b64d(t) { var b = atob(t), u = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
+  async function kdf(pw, salt) {
+    var raw = await crypto.subtle.importKey("raw", new TextEncoder().encode(String(pw)), "PBKDF2", false, ["deriveKey"]);
+    return crypto.subtle.deriveKey({ name: "PBKDF2", salt: new TextEncoder().encode("ka-kalit|" + salt), iterations: 120000, hash: "SHA-256" }, raw, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
+  }
+  async function sealT(pw, salt, text) {
+    var k = await kdf(pw, salt), iv = crypto.getRandomValues(new Uint8Array(12));
+    var ct = new Uint8Array(await crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, k, new TextEncoder().encode(String(text))));
+    var u = new Uint8Array(12 + ct.length); u.set(iv, 0); u.set(ct, 12); return b64e(u);
+  }
+  async function unsealT(pw, salt, t) {
+    try { var u = b64d(t), k = await kdf(pw, salt); return new TextDecoder().decode(await crypto.subtle.decrypt({ name: "AES-GCM", iv: u.subarray(0, 12) }, k, u.subarray(12))); }
+    catch (e) { return null; }
+  }
+  function badPw(e) { var k = e && e.code; return k === "auth/invalid-credential" || k === "auth/wrong-password" || k === "auth/invalid-login-credentials"; }
+  // Kiritilgan parol hozirgi bo'lmasa — asl parol deb, kalit orqali hozirgisini topamiz
+  async function realPw(c, email, pw) {
+    var s = await c.F.getDoc(c.F.doc(c.db, "kalit", kidOf(email)));
+    if (!s.exists() || !s.data().cn) return null;
+    return unsealT(pw, kidOf(email), s.data().cn);
+  }
+  async function signInAny(c, email, pw) {
+    try { return { cred: await c.A.signInWithEmailAndPassword(c.auth, email, pw), pw: pw }; }
+    catch (e) {
+      if (!badPw(e)) throw e;
+      var np = null; try { np = await realPw(c, email, pw); } catch (e2) {}
+      if (!np || np === pw) throw e;
+      return { cred: await c.A.signInWithEmailAndPassword(c.auth, email, np), pw: np, eski: true };
+    }
+  }
+  // Parol o'zgarganda: asl parol (birinchi o'zgarishdan oldingisi) bilan kirish ishlashda davom etsin
+  async function saveKalit(c, email, curPw, newPw) {
+    if (!curPw || !newPw) return;
+    try {
+      var id = kidOf(email), ref = c.F.doc(c.db, "kalit", id), base = curPw, s = await c.F.getDoc(ref);
+      if (s.exists() && s.data().cb) { var b = await unsealT(curPw, id, s.data().cb); if (b != null) base = b; }
+      if (base === newPw) { await c.F.deleteDoc(ref); return; } // asl parolga qaytdi
+      await c.F.setDoc(ref, { cn: await sealT(base, id, newPw), cb: await sealT(newPw, id, base), at: c.F.serverTimestamp() });
+    } catch (e) {} // Firestore qoidalari hali yangilanmagan bo'lsa — jim o'tamiz
+  }
+
+  // ---- Kuvonch kartalar: o'qituvchi o'quvchilar akkountini ochadi va ballini yozadi ----
+  // Alohida Firebase ilovasi (xotirada) — o'qituvchining o'z kirishi o'zgarmaydi.
+  var P2 = null;
+  function load2() {
+    if (!P2) {
+      P2 = load().then(function (c) {
+        return import(BASE + "firebase-app.js").then(function (A) {
+          var app2; try { app2 = A.getApp("ka-oquvchi"); } catch (e) { app2 = A.initializeApp(CFG, "ka-oquvchi"); }
+          var auth2; try { auth2 = c.A.initializeAuth(app2, { persistence: c.A.inMemoryPersistence }); } catch (e) { auth2 = c.A.getAuth(app2); }
+          return { A: c.A, F: c.F, auth: auth2, db: c.F.getFirestore(app2) };
+        });
+      });
+      P2.catch(function () { P2 = null; });
+    }
+    return P2;
+  }
+  // jins: "o" — o'g'il, "q" — qiz (qoidalar yangilanmagan bo'lsa — maydonsiz yoziladi)
+  async function ochOquvchi(s) {
+    var c = await load2(), email = await emailFor(s.name, s.group), cr = null, holat = "yangi";
+    try { cr = await c.A.createUserWithEmailAndPassword(c.auth, email, s.pw); }
+    catch (e) {
+      if (!e || e.code !== "auth/email-already-in-use") throw e;
+      try { var si = await signInAny(c, email, s.pw); cr = si.cred; holat = "bor"; if (si.eski) s = Object.assign({}, s, { yangi: si.pw }); }
+      catch (e2) { var x = new Error("parol"); x.code = "boshqa-parol"; throw x; }
+    }
+    try {
+      var ref = c.F.doc(c.db, "users", cr.user.uid), snap = await c.F.getDoc(ref);
+      if (!snap.exists()) {
+        var d = clean({ name: s.name, group: s.group, av: s.av | 0 }, c.F); d.rol = "oquvchi";
+        if (s.jins === "o" || s.jins === "q") d.jins = s.jins;
+        await setCompat(c.F, ref, d, ["jins"]);
+      }
+      return { uid: cr.user.uid, holat: holat, yangiParol: s.yangi || "" };
+    } finally { try { await c.A.signOut(c.auth); } catch (e) {} }
+  }
+  async function ballOquvchi(s, r) {
+    var c = await load2(), email = await emailFor(s.name, s.group), cr, used = s.pw;
+    try { var si = await signInAny(c, email, s.pw); cr = si.cred; used = si.pw; }
+    catch (e) { var x = new Error("parol"); x.code = (e && e.code) === "auth/too-many-requests" ? e.code : "boshqa-parol"; throw x; }
+    try {
+      var uid = cr.user.uid, ref = c.F.doc(c.db, "users", uid), snap = await c.F.getDoc(ref);
+      if (!snap.exists()) { var y = new Error("profil"); y.code = "profil-yoq"; throw y; }
+      var d = snap.data(), add = Math.max(0, Math.min(200, r.coins | 0));
+      var upd = { coins: Math.min(100000, (d.coins | 0) + add), correct: (d.correct | 0) + (r.correct | 0), answered: (d.answered | 0) + (r.answered | 0), tests: (d.tests | 0) + 1, updated: c.F.serverTimestamp() };
+      try { await c.F.updateDoc(ref, upd); }
+      catch (e) { if (!denied(e)) throw e; await new Promise(function (ok) { setTimeout(ok, 2600); }); await c.F.updateDoc(ref, upd); } // 2 soniyalik cheklov
+      if (r.total) {
+        try {
+          await c.F.addDoc(c.F.collection(c.db, "results"), { uid: uid, name: String(d.name || s.name).slice(0, 40), group: String(d.group || s.group).slice(0, 20),
+            topic: String(r.topic || "Kuvonch kartalar").slice(0, 120), correct: Math.min(r.correct | 0, Math.min(200, r.total | 0)), total: Math.min(200, r.total | 0), at: c.F.serverTimestamp() });
+        } catch (e) {}
+      }
+      return { coins: upd.coins, yangiParol: used !== s.pw ? used : "" };
+    } finally { try { await c.A.signOut(c.auth); } catch (e) {} }
+  }
+
   window.kaCloud = {
     ready: function () { return load().then(function () { return true; }, function () { return false; }); },
+    ochOquvchi: ochOquvchi,   // {name, group, pw, av, jins} -> {uid, holat: "yangi"|"bor"}
+    ballOquvchi: ballOquvchi, // ({name, group, pw}, {coins, correct, answered, total, topic})
     uzError: uzError,
     uid: function () { return P && window.__kaCloudAuth && window.__kaCloudAuth.currentUser ? window.__kaCloudAuth.currentUser.uid : null; },
     // Sahifa ochilganda oldingi sessiya tiklanishini kutish; kirgan bo'lsa uid qaytaradi
@@ -159,7 +263,7 @@
     login: async function (name, group, password) {
       var c = await load();
       var email = await emailFor(name, group);
-      var cred = await c.A.signInWithEmailAndPassword(c.auth, email, password);
+      var cred = (await signInAny(c, email, password)).cred;
       window.__kaCloudAuth = c.auth; cloudState = null;
       var snap = await c.F.getDoc(c.F.doc(c.db, "users", cred.user.uid));
       return { uid: cred.user.uid, data: snap.exists() ? snap.data() : null };
@@ -214,7 +318,7 @@
         var s0 = await c.F.getDoc(c.F.doc(c.db, "users", u.uid));
         if (!s0.exists()) { try { await u.delete(); } catch (e) { try { await c.A.signOut(c.auth); } catch (e2) {} } }
       }
-      var cr = await c.A.signInWithEmailAndPassword(c.auth, await emailFor(name, group), password);
+      var cr = (await signInAny(c, await emailFor(name, group), password)).cred;
       window.__kaCloudAuth = c.auth; cloudState = null;
       var email = null, linkErr = null, g0 = gInfo(cr.user);
       if (g0) email = g0.email || "ulangan";
@@ -230,20 +334,24 @@
     // Parolni tekshirish (kirish orqali) — uid qaytaradi
     verifyPassword: async function (name, group, password) {
       var c = await load();
-      var r = await c.A.signInWithEmailAndPassword(c.auth, await emailFor(name, group), password);
+      var r = (await signInAny(c, await emailFor(name, group), password)).cred;
       window.__kaCloudAuth = c.auth; cloudState = null; return r.user.uid;
     },
     // Parolni o'zgartirish yoki (Gmail orqali kirgandan keyin) yangi parol qo'yish
     changePassword: async function (name, group, oldPw, newPw) {
-      var c = await load(); await c.auth.authStateReady(); var u = c.auth.currentUser, email = await emailFor(name, group);
+      var c = await load(); await c.auth.authStateReady(); var u = c.auth.currentUser, email = await emailFor(name, group), cur = oldPw || null;
       if (!u) {
         if (!oldPw) throw { code: "auth/requires-recent-login" };
-        u = (await c.A.signInWithEmailAndPassword(c.auth, email, oldPw)).user; window.__kaCloudAuth = c.auth; cloudState = null; oldPw = null;
+        var si = await signInAny(c, email, oldPw); u = si.cred.user; cur = si.pw; window.__kaCloudAuth = c.auth; cloudState = null; oldPw = null;
       }
       var pe = pwEmail(u);
       if (pe) {
-        if (oldPw) await c.A.reauthenticateWithCredential(u, c.A.EmailAuthProvider.credential(pe, oldPw));
+        if (oldPw) {
+          try { await c.A.reauthenticateWithCredential(u, c.A.EmailAuthProvider.credential(pe, oldPw)); }
+          catch (e) { if (!badPw(e)) throw e; var np = null; try { np = await realPw(c, pe, oldPw); } catch (e3) {} if (!np) throw e; await c.A.reauthenticateWithCredential(u, c.A.EmailAuthProvider.credential(pe, np)); cur = np; }
+        }
         await c.A.updatePassword(u, newPw);
+        await saveKalit(c, pe, cur, newPw);
       } else {
         try { await c.A.linkWithCredential(u, c.A.EmailAuthProvider.credential(email, newPw)); }
         catch (e) { var k = e && e.code; if (k === "auth/email-already-in-use" || k === "auth/credential-already-in-use") throw { code: "auth/email-already-in-use" }; throw e; }

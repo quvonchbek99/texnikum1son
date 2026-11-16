@@ -44,6 +44,18 @@
   if (document.readyState === "complete") later(); else window.addEventListener("load", later);
 })();
 
+/* Umumiy dizayn qatlami: yorug' rejim, shriftlar, sayqal (ka-dizayn.js) */
+(function () {
+  try {
+    if (window.__kaDzLd) return; window.__kaDzLd = 1;
+    try { if (localStorage.getItem("ka.mavzu") === "yorug") document.documentElement.classList.add("ka-yorug"); } catch (e) {}
+    var me = document.currentScript && document.currentScript.src;
+    var s = document.createElement("script"); s.async = true;
+    s.src = (me ? me.replace(/statistika\.js(\?.*)?$/, "") : "/") + "ka-dizayn.js?v=20261116d";
+    (document.head || document.documentElement).appendChild(s);
+  } catch (e) {}
+})();
+
 /* Bolalarga mos reklama (Google AdSense) — sozlama va qoidalar reklama.js ichida; ID yozilmaguncha o'chiq */
 (function () {
   try {
@@ -97,7 +109,7 @@
     if (window.__kaKuviFabL) return; window.__kaKuviFabL = 1;
     var me = document.currentScript && document.currentScript.src;
     if (!me) { var ss = document.querySelectorAll('script[src*="statistika.js"],script[src*="ka-fasl.js"]'); me = ss.length ? ss[ss.length - 1].src : ""; }
-    var s = document.createElement("script"); s.src = (me ? me.replace(/[^\/]*(\?.*)?$/, "") : "/") + "ka-kuvi-fab.js?v=20261112d"; s.async = true;
+    var s = document.createElement("script"); s.src = (me ? me.replace(/[^\/]*(\?.*)?$/, "") : "/") + "ka-kuvi-fab.js?v=20261116b"; s.async = true;
     (document.head || document.documentElement).appendChild(s);
   } catch (e) {}
 })();
