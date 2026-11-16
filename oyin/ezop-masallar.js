@@ -1265,6 +1265,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u ovchidan oldin daraxtdan tushib ketdi", "Chunki chumoli ovchining oyog'ini chaqib, uning e'tiborini chalg'itdi", "Chunki ovchi to'rni o'zi yirtib tashladi"],
     javob: 1,
     izoh: "Chumoli ovchiga yaxshilik qaytardi: uni chaqib, e'tiborini chalg'itdi. Kaptar esa oldin qilgan yaxshiligi tufayli qutulib qoldi. Yaxshilik ko'pincha o'z o'rnida qaytib keladi."
+  },
+  {
+    id: "ez-157", mavzu: "mantiq", sarlavha: "Qarg'a va yong'oq",
+    matn: "Bir kuni qarg'a yo'lda katta, qattiq qobiqli yong'oq topdi. Uni tishlab ko'rdi, ammo qobig'i zarracha ham yorilmadi. Shunda u yong'oqni tumshug'ida ko'tarib, baland daraxt tepasiga uchdi va uni pastdagi toshga tashladi. Yong'oq toshga urilib yorildi, qarg'a esa ichidagi mazali mag'zni yeb to'ydi.",
+    savol: "Qarg'a yong'oqni nima uchun baland joydan toshga tashladi?",
+    variantlar: ["Chunki tishlab yorolmagach, qobiqni toshga urib yorish mumkinligini o'yladi", "Chunki yong'oqni dengizga tashlamoqchi edi", "Chunki toshning ustida o'tirish unga qulay edi"],
+    javob: 0,
+    izoh: "Qarg'a tishi bilan yorib bo'lmasligini ko'rib, muammoni boshqa usul bilan hal qildi. Bir usul ishlamasa, sababini o'ylab yangi yechim izlash mantiqiy yondashuvdir."
+  },
+{
+    id: "ez-158", mavzu: "ehtiyot", sarlavha: "Ikki baliq va hovuz",
+    matn: "Katta hovuzda ikki baliq yashardi. Yoz kelib, yomg'ir yog'may qoldi va hovuzdagi suv kundan-kunga kamayib bordi. Birinchi baliq, \"Hali juda uzoq emas, yomg'ir albatta yog'adi\", deb hovuzda qolaverdi. Ikkinchi baliq esa suvning qanchalik tez kamayayotganini ko'rib, yonidagi doim oqib turadigan daryoga yo'l oldi.",
+    savol: "Ikkinchi baliq nima uchun hovuzni tark etdi?",
+    variantlar: ["Chunki u hovuzdagi boshqa baliqlar bilan janjallashgan edi", "Chunki suv kamayib borayotganini ko'rib, doimiy oqim bor joyni topishga shoshildi", "Chunki u sayr qilishni yaxshi ko'rar va har kuni yangi joyga borardi"],
+    javob: 1,
+    izoh: "Ikkinchi baliq vaziyatni kuzatib, xavfni oldindan anglab yetdi. Xavf yaqinlashayotganini ko'rganda vaqtida harakat qilish aqlli yo'ldir."
   }
 ];
-
