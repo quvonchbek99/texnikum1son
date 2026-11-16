@@ -31,12 +31,11 @@
   var rej = "e", D, d3, tj, svgSel, gW, gU, zoom, path, tanl = null, ranglar;
 
   function yukla(u) { return new Promise(function (ok, no) { var s = document.createElement("script"); s.src = base + u; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
-  Promise.all([yukla("d3.min.js"), yukla("topojson-client.min.js"), fetch(base + "kasb-xarita.json?v=2").then(function (r) { return r.json(); })]).then(function (a) {
+  Promise.all([yukla("d3.min.js"), yukla("topojson-client.min.js"), fetch(base + "kasb-xarita.json?v=3").then(function (r) { return r.json(); })]).then(function (a) {
     D = a[2]; d3 = window.d3; tj = window.topojson; chiz(); toldir(); boya(); uzPanel(null);
   }).catch(function () { pan.innerHTML = '<p class="note bad">Xaritani yuklab bo‘lmadi. Internetni tekshirib, sahifani yangilang.</p>'; });
 
-  var nomlar; try { nomlar = new Intl.DisplayNames(["uz"], { type: "region" }); } catch (e) { nomlar = null; }
-  function dnom(f) { var w = D.w[f.id]; if (w && nomlar) { try { return nomlar.of(w.a2) || f.properties.name; } catch (e) {} } return f.properties.name; }
+  function dnom(f) { return (D.nom && D.nom[f.id]) || f.properties.name; }
   function qiymat(id) { var w = D.w[id]; if (!w) return null; var k = sel.value; if (rej === "e") return w.e ? w.e[+k] : null; return w.p && w.p[k] != null ? w.p[k] / 10 : null; }
 
   function toldir() {
