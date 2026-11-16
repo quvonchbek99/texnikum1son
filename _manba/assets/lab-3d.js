@@ -18,7 +18,9 @@
     ".z3-tag:after{content:'';position:absolute;left:50%;top:100%;width:2px;height:12px;background:#2a160b;margin-left:-1px}.z3-yuk{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:600;color:#6b4a33;text-align:center;padding:20px}" +
     ".z3-i{margin-top:14px}.z3-i h3{margin:0 0 2px}.z3-i .meta{display:block;margin-bottom:10px}.z3-g{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.z3-i h4{margin:0 0 6px}.z3-i ul{margin:0;padding-left:18px}.z3-i p{margin:0}.z3-m{margin-top:12px;font-size:13px;opacity:.8}" +
     ".z3-sf{position:absolute;inset:0;width:100%;height:100%;border:0;background:#1b1b1f}.z3-rj{position:absolute;top:10px;right:10px;z-index:2;border:0;border-radius:999px;padding:9px 14px;font:600 13px inherit;background:#e8742a;color:#fff;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}" +
-    "@media print{.z3-st,.z3-l{display:none}}";
+    ".z3-v{margin-top:16px}.z3-vg{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}.z3-vk{border:1px solid rgba(90,50,20,.15);border-radius:12px;overflow:hidden;background:#fff}.z3-vk b{display:block;padding:10px 12px 2px}.z3-vk p{padding:0 12px;font-size:13.5px}.z3-vk small{display:block;padding:6px 12px 10px;opacity:.7}" +
+    ".z3-vp{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;background:#000 center/cover no-repeat;cursor:pointer}.z3-vp:after{content:'▶';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:40px;border-radius:10px;background:rgba(232,116,42,.95);color:#fff;font-size:20px;line-height:40px;text-align:center}.z3-vk iframe{display:block;width:100%;aspect-ratio:16/9;border:0}" +
+    "@media print{.z3-st,.z3-l,.z3-vp{display:none}}";
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
   p.innerHTML = '<div class="z3">' + (Z.length > 1 ? '<div class="z3-l">' + Z.map(function (z, i) { return '<button type="button" class="chip" data-z="' + i + '">' + esc(z.nomi) + "</button>"; }).join("") + "</div>" : "") +
@@ -47,11 +49,14 @@
       (z.foyda ? "<div><h4>Foydasi</h4><p>" + esc(z.foyda) + "</p></div>" : "") +
       (z.uz ? "<div><h4>O‘zbekistonda</h4><p>" + esc(z.uz) + (z.uz_manba ? ' <a href="' + esc(z.uz_manba) + '" target="_blank" rel="noopener">manba</a>' : "") + "</p></div>" : "") + "</div>" +
       '<p class="z3-m">Manba (' + esc(z.manba_turi || "manba") + '): <a href="' + esc(z.manba) + '" target="_blank" rel="noopener">' + esc(z.manba.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + "</a>. " + (z.sf ? "Haqiqiy 3D model: «" + esc(z.sf.nomi) + "», muallif " + esc(z.sf.muallif) + ' (<a href="https://sketchfab.com/3d-models/' + esc(z.sf.uid) + '" target="_blank" rel="noopener">Sketchfab</a>). ' + esc(z.sf.izoh) + " «Ish jarayoni» animatsiyasi — soddalashtirilgan o‘quv maketi." : "Bu jihoz uchun tayyor haqiqiy 3D model topilmadi — soddalashtirilgan o‘quv maketi ko‘rsatilmoqda.") + "</p>";
+    if (z.videolar) info.innerHTML += '<div class="z3-v"><h4>Chok turlari — video</h4><div class="z3-vg">' + z.videolar.map(function (v) {
+      return '<div class="z3-vk"><button type="button" class="z3-vp" data-yt="' + esc(v.yt) + '" aria-label="Videoni ochish: ' + esc(v.nomi) + '" style="background-image:url(https://i.ytimg.com/vi/' + esc(v.yt) + '/hqdefault.jpg)"></button><b>' + esc(v.nomi) + "</b><p>" + esc(v.izoh) + '</p><small>' + esc(v.manba) + ' · <a href="https://www.youtube.com/watch?v=' + esc(v.yt) + '" target="_blank" rel="noopener">YouTube’da ochish</a></small></div>'; }).join("") + "</div></div>";
     [].forEach.call(p.querySelectorAll("[data-z]"), function (b) { b.classList.toggle("on", +b.getAttribute("data-z") === cur); });
   }
   infoHTML(Z[0]);
   p.addEventListener("click", function (e) {
     var b = e.target.closest ? e.target.closest("button") : null; if (!b) return;
+    if (b.hasAttribute("data-yt")) { var f = document.createElement("iframe"); f.src = "https://www.youtube-nocookie.com/embed/" + b.getAttribute("data-yt") + "?autoplay=1&rel=0"; f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; f.allowFullscreen = true; f.title = b.getAttribute("aria-label"); b.parentNode.replaceChild(f, b); return; }
     if (b.hasAttribute("data-z")) { cur = +b.getAttribute("data-z"); maket = false; infoHTML(Z[cur]); if (eng) eng.show(Z[cur]); rejim(); return; }
     var a = b.getAttribute("data-a"); if (!a) return;
     if (a === "toliq") { try { (document.fullscreenElement ? document.exitFullscreen() : stage.requestFullscreen()); } catch (x) {} return; }

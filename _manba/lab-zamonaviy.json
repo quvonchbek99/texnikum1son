@@ -1,5 +1,41 @@
 [
  {
+  "id": "skaner-uz",
+  "m3": "skaner",
+  "nomi": "Launch Creader Elite CRE916",
+  "ishlab": "Launch (Xitoy)",
+  "yil": "O‘zbekistonda sotuvda",
+  "tur": "Avtomobil diagnostika skaneri",
+  "nima": [
+   "4 dyuymli sensorli ekran, Android tizimi, rus tilidagi interfeys",
+   "1996-yildan keyingi, 16 kontaktli OBD-II uyasi bor barcha markalarda ishlaydi",
+   "Xato kodlarini o‘qiydi va o‘chiradi; mashinaga kabel bilan ulanadi"
+  ],
+  "qayerda": "Toshkent va viloyatlardagi avtoservislarda hamda avtohavaskorlarda: «Check Engine» chirog‘i yonganda sababini bir necha daqiqada ko‘rsatadi.",
+  "ustun": [
+   "Autel MaxiSys Ultra ga nisbatan ko‘p marta arzon va cho‘ntakka sig‘adi",
+   "Ultra barcha elektron bloklarni va elektromobil batareyasini tekshiradi — CRE916 bitta tizim bilan ishlaydi"
+  ],
+  "mat": [
+   "O‘zini oqlash muddati: T = Narx ÷ kunlik daromad",
+   "Misol: narx 2 582 000 so‘m; kuniga 5 ta mashina × 50 000 so‘m diagnostika haqi = 250 000 so‘m → T ≈ 11 ish kuni. (Diagnostika haqi va mashinalar soni misol uchun olingan.)"
+  ],
+  "foyda": "Nosozlikni taxmin bilan emas, kod bo‘yicha topadi: keraksiz ehtiyot qism almashtirilmaydi.",
+  "uz": "Toshkentdagi automaster.uz (Launch vakili) saytida sotuvda bor: 2 582 000 so‘m, bo‘lib to‘lash mumkin.",
+  "uz_manba": "https://automaster.uz/products/diagnosticeskii-pribor-launch-creader-elite-cre-916",
+  "manba": "https://automaster.uz/products/diagnosticeskii-pribor-launch-creader-elite-cre-916",
+  "manba_turi": "sotuvchi sahifasi",
+  "labs": [
+   "diagnostika-apparatlari",
+   "avto-tashxis",
+   "avto-elektr",
+   "dvigatel-servis",
+   "avtomobil-tuzilishi",
+   "yonilgi-tizimi",
+   "bc-toifa"
+  ]
+ },
+ {
   "id": "skaner",
   "m3": "skaner",
   "nomi": "Autel MaxiSys Ultra S2",
@@ -32,8 +68,7 @@
    "Oddiy OBD-skaner faqat dvigatel xatolarini o‘qiydi, bu esa barcha bloklarni va EV batareyasini tekshiradi"
   ],
   "foyda": "Nosozlik sababini qidirishga ketadigan vaqt qisqaradi: usta bir kunda ko‘proq mashina qabul qiladi.",
-  "uz": "Autel’ning O‘zbekistondagi rasmiy vakili topilmadi. Toshkentda Launch brendining vakili (LAUNCH ASIA, automaster.uz) ishlaydi — amalda ustaxonalarda shu sinfdagi Launch skanerlari uchraydi.",
-  "uz_manba": "https://www.yellowpages.uz/rubrika/svarochnye-apparaty-prodazha-proizvodstvo",
+  "uz": "Autel’ning O‘zbekistondagi rasmiy vakili topilmadi — shu sababli ro‘yxatda birinchi bo‘lib Toshkentda sotiladigan Launch CRE916 turibdi.",
   "sf": {
    "uid": "17184869fa4f45b4a120bb89693049b4",
    "nomi": "Diagnostic Scanner",
@@ -119,6 +154,88 @@
   }
  },
  {
+  "id": "tikuv-uz",
+  "m3": "tikuv",
+  "nomi": "Jack F5",
+  "ishlab": "Jack (Xitoy)",
+  "yil": "O‘zbekistonda sotuvda",
+  "tur": "Sanoat to‘g‘ri chok tikuv mashinasi",
+  "nima": [
+   "Bir ignali to‘g‘ri (mokili) chok — tikuv sexining asosiy mashinasi",
+   "Toshkentda yangi holda, sotuvchi e’loniga ko‘ra 3 yil kafolat va servis bilan sotiladi",
+   "JACK Uzbekistan kanali bozorda soxta F5 lar uchrashidan ogohlantirgan — rasmiy sotuvchidan olish kerak"
+  ],
+  "qayerda": "O‘zbekistondagi tikuv sexlari va fabrikalarida: ko‘ylak, shim, ish kiyimi va uy to‘qimachiligi choklarining asosiy qismi shu turdagi mashinada tikiladi.",
+  "ustun": [
+   "JUKI DX-01 ga nisbatan ancha arzon, ehtiyot qismi va ustasi Toshkentning o‘zida bor",
+   "DX-01 da sozlamalar raqamli va xotirada saqlanadi — F5 da sozlash ko‘proq chevarning tajribasiga bog‘liq"
+  ],
+  "mat": [
+   "O‘zini oqlash muddati: T = Narx ÷ kunlik sof daromad",
+   "Misol: narx 3 025 597 so‘m; kuniga 40 ta buyum × 2 000 so‘m tikish haqi = 80 000 so‘m → T ≈ 38 ish kuni. (Tikish haqi va buyum soni misol uchun olingan.)"
+  ],
+  "foyda": "Kichik sex uchun eng arzon kirish: bitta mashina bir yarim-ikki oyda o‘zini oqlashi mumkin.",
+  "uz": "prom.uz da «Jack F5» sanoat to‘g‘ri chok mashinasi 3 025 597 so‘mdan (Grand Tech), F5/310 modellari 3 751 740 so‘mdan (Sew Master Royal) e’lon qilingan; Toshkentga yetkazib beriladi.",
+  "uz_manba": "https://www.prom.uz/search/?q=Jack+F5",
+  "manba": "https://www.prom.uz/ads/jack-f5-yangi-karobkada-boladi-3-yil-kafolat-va-service-xizmati/",
+  "manba_turi": "sotuvchi e’loni",
+  "sf": {
+   "uid": "50889d6fc4a64cce85acd5bb420d661f",
+   "nomi": "Sewing Machine",
+   "muallif": "cankut",
+   "izoh": "Stolli sanoat tikuv mashinasi — umumiy ko‘rinishi; JUKI DX-01 ning aniq nusxasi emas."
+  },
+  "labs": [
+   "tikuv-jihozlari",
+   "tikish-texnologiyasi",
+   "badiiy-bezash"
+  ],
+  "videolar": [
+   {
+    "nomi": "Mokili (to‘g‘ri) chok — 301",
+    "yt": "zk9h8ByMcvg",
+    "izoh": "Igna ipi va moki ipi mato ichida chirmashadi. Ikki tomoni bir xil ko‘rinadi, so‘kilmaydi, lekin cho‘zilmaydi. Eng ko‘p ishlatiladigan chok.",
+    "manba": "Groz-Beckert, sekinlashtirilgan tasvir"
+   },
+   {
+    "nomi": "Ikki ipli zanjirsimon chok — 401",
+    "yt": "jEr_SNFMIqw",
+    "izoh": "Igna ipi pastda ilmoqchi ipi bilan zanjir hosil qiladi. Cho‘ziluvchan va tez tikiladi; uchidan tortilsa so‘kiladi. Jinsi shimlarning yon choklari.",
+    "manba": "Groz-Beckert, sekinlashtirilgan tasvir"
+   },
+   {
+    "nomi": "Overlok (yo‘rma) choki — 504",
+    "yt": "KMrsT6jPR7s",
+    "izoh": "Bitta igna va ikkita ilmoqchi, uch ip. Mato qirg‘og‘ini kesib, titilmasligi uchun o‘rab tikadi.",
+    "manba": "Groz-Beckert, sekinlashtirilgan tasvir"
+   },
+   {
+    "nomi": "Yassi (rasposhiv) chok — 605",
+    "yt": "P0TUkj-8sY8",
+    "izoh": "Uch igna va beshta ip. Trikotaj buyumlarda yassi, cho‘ziluvchan chok: futbolka etagi, sport kiyimi.",
+    "manba": "Groz-Beckert, sekinlashtirilgan tasvir"
+   },
+   {
+    "nomi": "Zigzag chok",
+    "yt": "YZHRNivXnwA",
+    "izoh": "Igna har qaviqda o‘ngga-chapga suriladi. Cho‘ziluvchan matolar, applikatsiya va qirg‘oqni mahkamlash uchun.",
+    "manba": "KNiTism kanali, sanoat zigzag mashinasi (rus tilida)"
+   },
+   {
+    "nomi": "Yashirin (potayn) chok",
+    "yt": "HYtN3WhGtkA",
+    "izoh": "Egri igna matoning faqat yarim qalinligini ilib o‘tadi — chok o‘ng tomonda ko‘rinmaydi. Shim va yubka etagini bukish.",
+    "manba": "Praktyk kanali, etak bukish mashinasi (rus tilida)"
+   },
+   {
+    "nomi": "Izma (tugma teshigi)",
+    "yt": "Fn67ibVbpP4",
+    "izoh": "Mashina teshik atrofini zich zigzag bilan o‘rab tikadi va o‘rtasini kesadi.",
+    "manba": "KNiTism kanali, izma mashinasi (rus tilida)"
+   }
+  ]
+ },
+ {
   "id": "tikuv",
   "m3": "tikuv",
   "nomi": "JUKI DX-01",
@@ -147,7 +264,7 @@
    "Sozlama bir mashinadan boshqasiga tarmoq orqali ko‘chadi"
   ],
   "foyda": "Model almashganda qayta sozlash vaqti qisqaradi, chok sifati operatorga kam bog‘liq bo‘ladi.",
-  "uz": "JUKI’ning O‘zbekistondagi rasmiy dileri qidiruvda topilmadi. Toshkentda Jack (JACK UZBEKISTAN), Baoyu, Juita va Brother sanoat tikuv mashinalari keng sotiladi — korxonalarda asosan shular ishlaydi.",
+  "uz": "JUKI’ning O‘zbekistondagi rasmiy dileri qidiruvda topilmadi — shu sababli ro‘yxatda birinchi bo‘lib O‘zbekistonda sotiladigan Jack F5 turibdi.",
   "uz_manba": "https://www.goldenpages.uz/rubrics/?Id=1836",
   "sf": {
    "uid": "50889d6fc4a64cce85acd5bb420d661f",
