@@ -22,7 +22,18 @@
    "avtomobil-tuzilishi",
    "yonilgi-tizimi",
    "bc-toifa"
-  ]
+  ],
+  "mat": [
+   "Batareya salomatligi: SOH = (hozirgi sig‘im ÷ pasport sig‘imi) × 100%",
+   "Misol: 54 kVt·soat ÷ 60 kVt·soat × 100% = 90%. 80% dan pastda batareya almashtirishga yaqin hisoblanadi."
+  ],
+  "ustun": [
+   "Oldingi Ultra modelidagi Topology 2.0 o‘rniga Topology 3.0",
+   "Oddiy OBD-skaner faqat dvigatel xatolarini o‘qiydi, bu esa barcha bloklarni va EV batareyasini tekshiradi"
+  ],
+  "foyda": "Nosozlik sababini qidirishga ketadigan vaqt qisqaradi: usta bir kunda ko‘proq mashina qabul qiladi.",
+  "uz": "Autel’ning O‘zbekistondagi rasmiy vakili topilmadi. Toshkentda Launch brendining vakili (LAUNCH ASIA, automaster.uz) ishlaydi — amalda ustaxonalarda shu sinfdagi Launch skanerlari uchraydi.",
+  "uz_manba": "https://www.yellowpages.uz/rubrika/svarochnye-apparaty-prodazha-proizvodstvo"
  },
  {
   "id": "payvand",
@@ -43,7 +54,18 @@
    "payvandlash",
    "chilangarlik",
    "konstruksion-materiallar"
-  ]
+  ],
+  "mat": [
+   "Issiqlik kiritish: Q = η · U · I · 60 ÷ (v · 1000), kJ/mm",
+   "Misol: U = 22,4 V, I = 185 A, v = 400 mm/min, η = 0,8 → Q ≈ 0,50 kJ/mm. Q katta bo‘lsa metall ko‘proq qiziydi va deformatsiya ortadi."
+  ],
+  "ustun": [
+   "Oddiy invertorda tok va kuchlanish qo‘lda tanlanadi; bu yerda yordamchi dastur rejimni o‘zi taklif qiladi",
+   "Ikki g‘altak bilan materialni almashtirish uchun qayta sozlash shart emas"
+  ],
+  "foyda": "Brak choklar va qayta payvandlash kamayadi; yangi payvandchi tezroq mustaqil ishlay boshlaydi.",
+  "uz": "Fronius’ning O‘zbekistondagi rasmiy dileri qidiruvda topilmadi; Toshkentda payvandlash apparatlari sotuvchi bir necha firma bor (masalan, Center of Welding Technologies). Fortis yetkazib berilishi alohida so‘rab aniqlanadi.",
+  "uz_manba": "https://www.goldenpages.uz/rubrics/?Id=4669"
  },
  {
   "id": "termokamera",
@@ -65,7 +87,18 @@
    "elektrotexnika",
    "elektr-mashinalari",
    "elektr-stansiya"
-  ]
+  ],
+  "mat": [
+   "Kontaktda ajraladigan issiqlik: P = I² · R",
+   "Misol: I = 40 A, bo‘shashgan kontakt qarshiligi R = 0,05 Ω → P = 40² · 0,05 = 80 Vt. Shu 80 Vt kontaktni qizdiradi — teplovizor uni «issiq nuqta» qilib ko‘rsatadi."
+  ],
+  "ustun": [
+   "Multimetr faqat bitta nuqtani, teplovizor butun shchitni bir qarashda tekshiradi",
+   "Tok ostida, tegmasdan va xavfsiz masofadan o‘lchaydi"
+  ],
+  "foyda": "Kontakt kuyishidan oldin topiladi: avariya va ishlab chiqarish to‘xtashining oldi olinadi.",
+  "uz": "Fluke teplovizorlari Toshkentda sotiladi: prom.uz va glotr.uz saytlarida TiS va Ti seriyalari e’lon qilingan (masalan, Fluke Ti450 — 107 000 000 so‘m). Aynan TiS75 PRO e’loni topilmadi.",
+  "uz_manba": "https://glotr.uz/teplovizor-fluke-ti450-p-1142964/"
  },
  {
   "id": "tikuv",
@@ -86,7 +119,18 @@
    "tikuv-jihozlari",
    "tikish-texnologiyasi",
    "badiiy-bezash"
-  ]
+  ],
+  "mat": [
+   "Chok tezligi: v = n · l (n — daqiqadagi qaviqlar soni, l — qaviq uzunligi)",
+   "Misol: n = 4000 qaviq/min, l = 3 mm → v = 12 m/min. 1,5 metrli chok 7,5 soniyada tikiladi."
+  ],
+  "ustun": [
+   "Mexanik mashinada taranglik va bosim vint bilan «ko‘z chamasi» sozlanadi; bu yerda raqam bilan va xotiradan",
+   "Sozlama bir mashinadan boshqasiga tarmoq orqali ko‘chadi"
+  ],
+  "foyda": "Model almashganda qayta sozlash vaqti qisqaradi, chok sifati operatorga kam bog‘liq bo‘ladi.",
+  "uz": "JUKI’ning O‘zbekistondagi rasmiy dileri qidiruvda topilmadi. Toshkentda Jack (JACK UZBEKISTAN), Baoyu, Juita va Brother sanoat tikuv mashinalari keng sotiladi — korxonalarda asosan shular ishlaydi.",
+  "uz_manba": "https://www.goldenpages.uz/rubrics/?Id=1836"
  },
  {
   "id": "bichish",
@@ -108,7 +152,17 @@
    "loyihalash",
    "kiyim-dizayn",
    "tekstil"
-  ]
+  ],
+  "mat": [
+   "Joylashtirish samaradorligi: E = (andazalar yuzi ÷ mato yuzi) × 100%",
+   "Misol: to‘shama 1,5 m × 6 m = 9 m², andazalar yuzi 7,74 m² → E = 86%. Samaradorlik 1% oshsa, 50 qavatli to‘shamada 4,5 m² mato tejaladi."
+  ],
+  "ustun": [
+   "Qo‘lda bichishda aniqlik bichuvchiga bog‘liq; avtomat har qavatni bir xil kesadi",
+   "Dastur andazalarni matoga eng tejamli joylashtiradi"
+  ],
+  "foyda": "Mato kiyim tannarxining eng katta qismi — chiqindining har foizi to‘g‘ridan-to‘g‘ri foyda.",
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
  },
  {
   "id": "zargar",
@@ -128,7 +182,17 @@
   "labs": [
    "zargarlik-materiallari",
    "kompozitsiya"
-  ]
+  ],
+  "mat": [
+   "Impuls quvvati: P = E ÷ t",
+   "Misol: E = 2,4 J, t = 3 ms = 0,003 s → P = 800 Vt. Energiya kichik, lekin juda qisqa vaqtda berilgani uchun metall faqat bir nuqtada eriydi."
+  ],
+  "ustun": [
+   "Gaz gorelkasi butun buyumni qizdiradi; lazer faqat nuqtani — yonidagi tosh va emal shikastlanmaydi",
+   "Kavsharsiz, buyumning o‘z metalli bilan payvandlaydi"
+  ],
+  "foyda": "Toshni chiqarmasdan ta’mirlash mumkin: ish tezlashadi, buyumni buzish xavfi kamayadi.",
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
  },
  {
   "id": "fen",
@@ -150,7 +214,17 @@
    "sartarosh-asbob",
    "sartaroshlik-asoslari",
    "koloristika"
-  ]
+  ],
+  "mat": [
+   "Sarflangan energiya: E = P · t",
+   "Misol: quvvati 1,6 kVt bo‘lgan fen 10 daqiqa ishlasa: E = 1,6 · (10 ÷ 60) ≈ 0,27 kVt·soat. Kuniga 20 mijoz bo‘lsa — 5,3 kVt·soat. (Quvvat misol uchun olingan.)"
+  ],
+  "ustun": [
+   "Oldingi Supersonic’dan 30% kichik va 20% yengil — sartarosh bilagi kam charchaydi",
+   "Nasadka almashtirilganda harorat va oqim avtomatik moslashadi"
+  ],
+  "foyda": "Soch tez quriydi va kuymaydi; sartarosh kun davomida kamroq charchaydi.",
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
  },
  {
   "id": "pech",
@@ -175,7 +249,17 @@
    "sharq-shirinliklari",
    "tovarshunoslik",
    "sanitariya"
-  ]
+  ],
+  "mat": [
+   "Mahsulotni isitish uchun issiqlik: Q = c · m · ΔT",
+   "Misol: m = 10 kg, c ≈ 3,5 kJ/(kg·°C), ΔT = 160 °C → Q = 5600 kJ ≈ 1,56 kVt·soat. Pech sarfini shu son bilan solishtirib, foydali ish koeffitsiyentini baholash mumkin."
+  ],
+  "ustun": [
+   "Oddiy duxovkada faqat issiq havo; bu yerda bug‘ va havo birga — go‘sht qurib qolmaydi",
+   "Bir pech plita, duxovka va bug‘ qozonining ishini bajaradi"
+  ],
+  "foyda": "Bir vaqtda 6–10 tovoq pishadi, mahsulot vazni kam yo‘qoladi, oshpaz pech oldida turishi shart emas.",
+  "uz": "O‘zbekistondagi sotuvchi va so‘mdagi narx qidiruvda topilmadi (Rossiyada 10 tovoqli model 2025-yil yanvarda 2 478 260 rubl turgan)."
  },
  {
   "id": "mashina",
@@ -196,7 +280,18 @@
    "yongin-taktika",
    "maxsus-tayyorgarlik",
    "fv-muhofaza"
-  ]
+  ],
+  "mat": [
+   "Sisternadagi suv yetadigan vaqt: t = V ÷ q",
+   "Misol: V = 2000 l, bitta stvol sarfi q = 7,4 l/s → t ≈ 270 s = 4,5 daqiqa. Ikki stvol ishlasa — ikki baravar kam. (Sisterna hajmi misol uchun olingan.)"
+  ],
+  "ustun": [
+   "Dizel mashinaga nisbatan chiqindi gaz va shovqin yo‘q — ekipaj nasos yonida bir-birini eshitadi",
+   "Past pol va to‘liq yuritma: tor ko‘chalarda chaqqon"
+  ],
+  "foyda": "Yoqilg‘i sarfi va ekipaj sog‘lig‘iga zarar kamayadi.",
+  "uz": "O‘zbekistonda Rosenbauer RTX borligi haqida ma’lumot topilmadi. FVVga 2022-yilda Janubiy Koreya o‘t o‘chirish va tibbiy texnika bergan; mamlakatda MAN shassisidagi o‘t o‘chirish avtosisternalari sotiladi.",
+  "uz_manba": "https://anhor.uz/news/technics/"
  },
  {
   "id": "printer3d",
@@ -220,7 +315,17 @@
    "rastr-vektor",
    "veb-dizayn",
    "multimedia"
-  ]
+  ],
+  "mat": [
+   "Hajmiy unumdorlik: Q = w · h · v; chop vaqti t ≈ V ÷ Q",
+   "Misol: chiziq eni w = 0,42 mm, qatlam h = 0,2 mm, tezlik v = 200 mm/s → Q = 16,8 mm³/s. Hajmi 50 sm³ detal: t ≈ 50 000 ÷ 16,8 ≈ 50 daqiqa."
+  ],
+  "ustun": [
+   "Bir soploli printerda tayanch ham shu plastikdan bosiladi va qiyin ajraladi; ikki soploda tayanch boshqa, oson ajraladigan materialdan",
+   "Isitiladigan kamera muhandislik plastiklarida qiyshayishni kamaytiradi"
+  ],
+  "foyda": "Maket va ehtiyot qism buyurtma kutmasdan, shu kunning o‘zida tayyor bo‘ladi.",
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
  },
  {
   "id": "ap",
@@ -243,7 +348,17 @@
    "informatika",
    "axborot-xavfsizligi",
    "dasturlash"
-  ]
+  ],
+  "mat": [
+   "Kanal sig‘imi (Shennon formulasi): C = B · log₂(1 + S/N)",
+   "Misol: B = 320 MGs, S/N = 1000 (30 dB) → C = 320 · log₂(1001) ≈ 3,19 Gbit/s. Kanal eni ikki baravar oshsa, tezlik chegarasi ham ikki baravar oshadi."
+  ],
+  "ustun": [
+   "Wi-Fi 6 da kanal eni 160 MGs gacha, Wi-Fi 7 da 320 MGs gacha",
+   "Qurilma bir vaqtda bir necha diapazonda ulanadi — uzilish kamayadi"
+  ],
+  "foyda": "Bir xonadagi o‘nlab qurilma bir-biriga xalaqit bermay ishlaydi.",
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
  },
  {
   "id": "sensor",
@@ -263,6 +378,16 @@
   "labs": [
    "fizika",
    "kimyo"
-  ]
+  ],
+  "mat": [
+   "Isish qonuni: T(t) = T∞ − (T∞ − T₀) · e^(−kt)",
+   "Misol: T₀ = 22 °C, T∞ = 100 °C, k = 0,01 1/s → 60 soniyadan keyin T ≈ 57,2 °C. Datchik chizgan grafik aynan shu eksponenta."
+  ],
+  "ustun": [
+   "Simobli termometr bitta sonni ko‘rsatadi; datchik butun jarayonni grafik qilib yozadi",
+   "Simsiz — stolda sim va shtativ chigalligi yo‘q"
+  ],
+  "foyda": "O‘quvchi natijani yozib o‘tirmaydi, vaqtini tahlilga sarflaydi.",
+  "uz": "O‘zbekistonda bor-yo‘qligi hali tekshirilmadi."
  }
 ]

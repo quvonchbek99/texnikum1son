@@ -29,7 +29,11 @@
 
   function infoHTML(z) {
     info.innerHTML = "<h3>" + esc(z.nomi) + '</h3><span class="meta">' + esc(z.tur) + " · " + esc(z.ishlab) + " · " + esc(z.yil) + '</span><div class="z3-g"><div><h4>Nimasi yangi</h4><ul>' +
-      z.nima.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div><div><h4>Qayerda ishlaydi</h4><p>" + esc(z.qayerda) + "</p></div></div>" +
+      z.nima.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div><div><h4>Qayerda ishlaydi</h4><p>" + esc(z.qayerda) + "</p></div>" +
+      (z.ustun ? "<div><h4>Boshqa modellardan ustunligi</h4><ul>" + z.ustun.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>" : "") +
+      (z.mat ? "<div><h4>Matematikasi</h4><p><b>" + esc(z.mat[0]) + "</b></p><p style=\"margin-top:6px\">" + esc(z.mat[1]) + "</p></div>" : "") +
+      (z.foyda ? "<div><h4>Foydasi</h4><p>" + esc(z.foyda) + "</p></div>" : "") +
+      (z.uz ? "<div><h4>O‘zbekistonda</h4><p>" + esc(z.uz) + (z.uz_manba ? ' <a href="' + esc(z.uz_manba) + '" target="_blank" rel="noopener">manba</a>' : "") + "</p></div>" : "") + "</div>" +
       '<p class="z3-m">Manba (' + esc(z.manba_turi || "manba") + '): <a href="' + esc(z.manba) + '" target="_blank" rel="noopener">' + esc(z.manba.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + "</a>. 3D model soddalashtirilgan o‘quv maketi — o‘lchamlari taxminiy, ishlab chiqaruvchining rasmiy chizmasi emas.</p>";
     [].forEach.call(p.querySelectorAll("[data-z]"), function (b) { b.classList.toggle("on", +b.getAttribute("data-z") === cur); });
   }
