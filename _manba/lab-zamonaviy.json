@@ -1,0 +1,268 @@
+[
+ {
+  "id": "skaner",
+  "m3": "skaner",
+  "nomi": "Autel MaxiSys Ultra S2",
+  "ishlab": "Autel (Xitoy)",
+  "yil": "2026",
+  "tur": "Avtomobil diagnostika skaneri",
+  "nima": [
+   "Sun’iy intellekt yordamchisi nosozlik sababini taklif qiladi",
+   "Topology 3.0: barcha elektron bloklar bitta xaritada, nosoz blok rangi bilan ajraladi",
+   "Elektromobil (EV) yuqori voltli batareyasini tekshirish rejimi"
+  ],
+  "qayerda": "Avtoservisda mashinaning OBD-II uyasiga simsiz adapter ulanadi; usta planshetda barcha bloklarni bir necha soniyada skanerlaydi va xato kodlarini o‘qiydi.",
+  "manba": "https://abramsartists.com/best-autel-best-scanner/",
+  "manba_turi": "savdo sharhi",
+  "labs": [
+   "diagnostika-apparatlari",
+   "avto-tashxis",
+   "avto-elektr",
+   "dvigatel-servis",
+   "avtomobil-tuzilishi",
+   "yonilgi-tizimi",
+   "bc-toifa"
+  ]
+ },
+ {
+  "id": "payvand",
+  "m3": "payvand",
+  "nomi": "Fronius Fortis",
+  "ishlab": "Fronius (Avstriya)",
+  "yil": "2025",
+  "tur": "MIG/MAG payvandlash apparati",
+  "nima": [
+   "Weld Wizard yordamchisi: material va qalinlik kiritilsa, rejimni o‘zi sozlaydi",
+   "Tashqi sim uzatgich bilan bitta apparatda ikkita g‘altak va ikkita gorelka",
+   "Impulsli payvandlash, SynchroPulse va tarmoqqa ulanish imkoniyati"
+  ],
+  "qayerda": "Metall konstruksiya sexlari va ta’mirlash ustaxonalarida po‘lat, zanglamas po‘lat va alyuminiy detallarni yarim avtomat payvandlashda.",
+  "manba": "https://www.fronius.com/en/about-us/updates/news-and-press/fortis-210825",
+  "manba_turi": "ishlab chiqaruvchi",
+  "labs": [
+   "payvandlash",
+   "chilangarlik",
+   "konstruksion-materiallar"
+  ]
+ },
+ {
+  "id": "termokamera",
+  "m3": "termokamera",
+  "nomi": "Fluke TiS75 PRO",
+  "ishlab": "Fluke (AQSH)",
+  "yil": "2026 katalogi",
+  "tur": "Teplovizor (issiqlik kamerasi)",
+  "nima": [
+   "Yangi avlod: issiqlik tasviri sifati oshirilgan",
+   "QR-kod orqali har bir jihozni belgilash va tekshiruv profillari",
+   "Tasvirlarni simsiz uzatish va standart hisobot"
+  ],
+  "qayerda": "Elektr shchitlari, transformator va dvigatellarni tok ostida, tegmasdan tekshirishda: bo‘shashgan kontakt ekranda qizg‘ish «issiq nuqta» bo‘lib ko‘rinadi.",
+  "manba": "https://fluke.com.au/en-th/products/new-fluke-products",
+  "manba_turi": "ishlab chiqaruvchi",
+  "labs": [
+   "elektr-olchash",
+   "elektrotexnika",
+   "elektr-mashinalari",
+   "elektr-stansiya"
+  ]
+ },
+ {
+  "id": "tikuv",
+  "m3": "tikuv",
+  "nomi": "JUKI DX-01",
+  "ishlab": "JUKI (Yaponiya)",
+  "yil": "2025–2026",
+  "tur": "To‘liq raqamli tikuv mashinasi",
+  "nima": [
+   "Mato surish, tepki bosimi va ip tarangligi raqam bilan o‘rnatiladi va xotirada saqlanadi",
+   "Egri choklar va «posadka» (o‘tqazish) nisbati avtomatik boshqariladi",
+   "Sozlamalar tarmoq orqali boshqa mashinalarga ko‘chiriladi"
+  ],
+  "qayerda": "Tikuv fabrikalarida yeng o‘tqazish kabi murakkab egri choklarda: tajribali chevarning sozlamasi saqlanadi va har qanday operator uni takrorlaydi.",
+  "manba": "https://www.juki.co.jp/industrial_e/whatsnew_e/new.php?id=1236",
+  "manba_turi": "ishlab chiqaruvchi",
+  "labs": [
+   "tikuv-jihozlari",
+   "tikish-texnologiyasi",
+   "badiiy-bezash"
+  ]
+ },
+ {
+  "id": "bichish",
+  "m3": "bichish",
+  "nomi": "Lectra Vector Fashion",
+  "ishlab": "Lectra (Fransiya)",
+  "yil": "joriy seriya",
+  "tur": "Avtomatik bichish tizimi",
+  "nima": [
+   "Ko‘p qavatli mato to‘shamasini dastur bo‘yicha pichoq bilan bichadi",
+   "Bichish kallagi mato turiga moslashadi",
+   "2026-yil sentabrda Lectra loyihalash uchun Apogy sun’iy intellekt platformasini chiqardi: 2D andaza va 3D namuna bitta raqamli egizakda"
+  ],
+  "qayerda": "Tikuv korxonasining bichish sexida: konstruktor kompyuterda andazalarni joylashtiradi, mashina to‘shamani millimetr aniqligida kesadi.",
+  "manba": "https://www.directindustry.com/prod/gerber-technology-lectra-company/product-55072-2836546.html",
+  "manba_turi": "katalog",
+  "labs": [
+   "konstruksiyalash",
+   "loyihalash",
+   "kiyim-dizayn",
+   "tekstil"
+  ]
+ },
+ {
+  "id": "zargar",
+  "m3": "zargar",
+  "nomi": "LC Laser LC-Weld Smart",
+  "ishlab": "LC Laser",
+  "yil": "2026",
+  "tur": "Zargarlik lazer payvandlagichi",
+  "nima": [
+   "Eng yangi avlod lazer generatori",
+   "7 dyuymli sensorli ekran va sodda dastur",
+   "Faol havo sovutish tizimi, ixcham korpus"
+  ],
+  "qayerda": "Zargarlik ustaxonasida zanjir va tosh uyachalarini ta’mirlashda: lazer nuqtasi juda kichik, yonidagi tosh qizimaydi.",
+  "manba": "https://infocenter.git.or.th/en/business-news/business-news-20260624",
+  "manba_turi": "soha yangiliklari",
+  "labs": [
+   "zargarlik-materiallari",
+   "kompozitsiya"
+  ]
+ },
+ {
+  "id": "fen",
+  "m3": "fen",
+  "nomi": "Dyson Supersonic r Professional",
+  "ishlab": "Dyson (Buyuk Britaniya)",
+  "yil": "2024",
+  "tur": "Professional soch quritgich",
+  "nima": [
+   "Oldingi modeldan 30% kichik va 20% yengil",
+   "Nasadkalardagi RFID datchik havo oqimi va haroratni o‘zi tanlaydi",
+   "Havo harorati soniyasiga 20 martadan ko‘p o‘lchanadi — soch kuymaydi"
+  ],
+  "qayerda": "Sartaroshxonada soch quritish va turmaklashda; faqat professional sartaroshlarga sotiladi.",
+  "manba": "https://www.dyson.com.sg/newsroom/dyson-supersonic-r",
+  "manba_turi": "ishlab chiqaruvchi",
+  "labs": [
+   "sartarosh",
+   "sartarosh-asbob",
+   "sartaroshlik-asoslari",
+   "koloristika"
+  ]
+ },
+ {
+  "id": "pech",
+  "m3": "pech",
+  "nomi": "RATIONAL iCombi Pro",
+  "ishlab": "RATIONAL (Germaniya)",
+  "yil": "2026-yilda ishlab chiqarilmoqda",
+  "tur": "Parokonvektomat (kombi pech)",
+  "nima": [
+   "To‘rtta «aqlli yordamchi» pishirish jarayonini o‘zi boshqaradi",
+   "Bug‘ va issiq havoni birga ishlatadi: bir pechda qovurish, dimlash, pishirish",
+   "ConnectedCooking orqali tarmoqdan kuzatish"
+  ],
+  "qayerda": "Restoran va oshxona sexlarida: bir vaqtda bir necha tovoqda go‘sht, non va sabzavot pishiriladi, sifat har safar bir xil chiqadi.",
+  "manba": "https://www.rational-online.com/en_xx/products",
+  "manba_turi": "ishlab chiqaruvchi",
+  "labs": [
+   "oshxona-jihozlari",
+   "taom-texnologiyasi",
+   "qandolatchilik",
+   "milliy-pazandachilik",
+   "sharq-shirinliklari",
+   "tovarshunoslik",
+   "sanitariya"
+  ]
+ },
+ {
+  "id": "mashina",
+  "m3": "mashina",
+  "nomi": "Rosenbauer RTX",
+  "ishlab": "Rosenbauer (Avstriya)",
+  "yil": "2024–2026",
+  "tur": "Elektr o‘t o‘chirish avtomobili",
+  "nima": [
+   "Ikkita elektr motor va to‘liq yuritma",
+   "To‘liq elektr rejimda chiqindisiz va shovqinsiz ishlaydi",
+   "Barcha funksiyalar kabinadagi 17 dyuymli ekrandan boshqariladi"
+  ],
+  "qayerda": "Shahar o‘t o‘chirish qismlarida (Los-Anjeles, Viktoriya va boshqa shaharlar): tor ko‘chalarda chaqqon, nasos ishlaganda ekipaj bir-birini eshitadi.",
+  "manba": "https://www.fireengineering.com/industry-news/new-rosenbauer-electric-fire-truck-delivered-to-victoria-canada-fd/",
+  "manba_turi": "soha nashri",
+  "labs": [
+   "yongin-taktika",
+   "maxsus-tayyorgarlik",
+   "fv-muhofaza"
+  ]
+ },
+ {
+  "id": "printer3d",
+  "m3": "printer3d",
+  "nomi": "Bambu Lab X2D",
+  "ishlab": "Bambu Lab (Xitoy)",
+  "yil": "2026-yil aprel",
+  "tur": "3D printer",
+  "nima": [
+   "Ikkita soplo: biri modelni, ikkinchisi tayanchni boshqa materialdan bosadi",
+   "Isitiladigan kamera — muhandislik plastiklari uchun",
+   "31 ta datchik chop sifatini kuzatadi"
+  ],
+  "qayerda": "Dizayn studiyalari va muhandislik bo‘limlarida: kompyuterda chizilgan 3D model bir necha soatda qo‘lga ushlanadigan detalga aylanadi.",
+  "manba": "https://all3dp.com/4/bambu-lab-x2d/",
+  "manba_turi": "soha nashri",
+  "labs": [
+   "3d-modellash",
+   "chizmachilik-cad",
+   "chizmachilik",
+   "rastr-vektor",
+   "veb-dizayn",
+   "multimedia"
+  ]
+ },
+ {
+  "id": "ap",
+  "m3": "ap",
+  "nomi": "Cisco Wireless CW9171",
+  "ishlab": "Cisco (AQSH)",
+  "yil": "2025–2026",
+  "tur": "Wi-Fi 7 kirish nuqtasi",
+  "nima": [
+   "Wi-Fi 7 (802.11be) standarti",
+   "WPA3 shifrlash majburiy",
+   "Ixcham korpus, bulut yoki joyida boshqarish"
+  ],
+  "qayerda": "Ofis, maktab va shifoxonalarda shiftga o‘rnatiladi va o‘nlab qurilmalarni bir vaqtda tez internet bilan ta’minlaydi.",
+  "manba": "https://www.cisco.com/c/en/us/products/collateral/networking/wireless/access-points/wireless-cw9171-wi-fi-7-access-point-so.html",
+  "manba_turi": "ishlab chiqaruvchi",
+  "labs": [
+   "kompyuter-tizimlari",
+   "at-asoslari",
+   "informatika",
+   "axborot-xavfsizligi",
+   "dasturlash"
+  ]
+ },
+ {
+  "id": "sensor",
+  "m3": "sensor",
+  "nomi": "PASCO simsiz harorat datchigi",
+  "ishlab": "PASCO (AQSH)",
+  "yil": "joriy seriya",
+  "tur": "Simsiz o‘lchov datchigi",
+  "nima": [
+   "Bluetooth orqali o‘lchov natijasi telefon yoki planshetga real vaqtda boradi",
+   "Simlar yo‘q — tajriba stoli ozoda",
+   "SPARKvue dasturi grafikni o‘zi chizadi"
+  ],
+  "qayerda": "Zamonaviy fizika va kimyo laboratoriyalarida: simobli termometr o‘rniga datchik eritmaga tushiriladi, isish grafigi ekranda chiziladi.",
+  "manba": "https://pasco.com/products/guides/wireless-sensors",
+  "manba_turi": "ishlab chiqaruvchi",
+  "labs": [
+   "fizika",
+   "kimyo"
+  ]
+ }
+]

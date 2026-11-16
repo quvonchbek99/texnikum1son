@@ -183,6 +183,17 @@ if os.path.isdir(LAB_DIR):
         if _fn.endswith(".json"):
             _d = json.load(open(os.path.join(LAB_DIR, _fn), encoding="utf-8"))
             LABS[_d["id"]] = _d
+# «Zamonaviy texnika · 3D»: _manba/lab-zamonaviy.json dagi har bir model o'zining `labs` ro'yxatidagi laboratoriyalarga biriktiriladi
+_zf = os.path.join(SRC, "lab-zamonaviy.json")
+if os.path.isfile(_zf):
+    for _z in json.load(open(_zf, encoding="utf-8")):
+        for _l in _z.get("labs", []):
+            if _l in LABS:
+                LABS[_l].setdefault("zamonaviy", []).append({k: v for k, v in _z.items() if k != "labs"})
+    for _d in LABS.values():
+        for _a in (_d.get("meros") or []):
+            if not _d.get("zamonaviy") and LABS.get(_a, {}).get("zamonaviy"):
+                _d["zamonaviy"] = LABS[_a]["zamonaviy"]
 def lab_tayyor(L):
     """«meros» — boshqa laboratoriyadan jihoz, mashq va qoidalarni olish (masalan, Fizika va astronomiya ← Fizika)."""
     if L.get("_ok"):
@@ -264,11 +275,14 @@ def lab_qator(R, yid, f):
 LTABS = [("xona", "Xona va jihozlar"), ("slayd", "Slaydlar"), ("ishlat", "Virtual ishlatish"), ("sinov", "Sinov"), ("xavf", "Xavfsizlik")]
 def lab_page(lid):
     L = LABS[lid]; R = "../../"
+    if L.get("_hub") and not L.get("zamonaviy"):
+        zz = {z["id"]: z for l in L["_hub"] for z in LABS[l].get("zamonaviy", [])}
+        if zz: L["zamonaviy"] = list(zz.values())
     fl = lab_fanlari(lid)
     chips = "".join(f'<a class="chip" href="{R}{u}">{e(n)}<span style="opacity:.7;font-weight:500">· {e(yn)}</span></a>' for n, u, yn in fl[:10])
     extra = f'<div class="chips" style="margin-top:14px">{chips}</div>' if chips else ""
     b = hero("", f'{L.get("e", "🔬")} {e(L["nomi"])}', e(L.get("tavsif", "")), crumbs=[("Fanlar", R), ("Virtual laboratoriyalar", R + "lab/"), (L.get("qisqa") or L["nomi"], None)], extra=extra)
-    tb = "".join(f'<button data-t="{k}">{t}' + (f'<span class="cnt">{len(L["sim"])}</span>' if k == "ishlat" and L["sim"] else '<span class="cnt"></span>') + "</button>" for k, t in LTABS)
+    tb = "".join(f'<button data-t="{k}">{t}' + (f'<span class="cnt">{len(L["sim"])}</span>' if k == "ishlat" and L["sim"] else '<span class="cnt"></span>') + "</button>" for k, t in LTABS + ([("zamon", "Zamonaviy texnika · 3D")] if L.get("zamonaviy") else []))
     def li(xs): return "".join(f"<li>{e(x)}</li>" for x in xs)
     roy = ""
     for i, j in enumerate(L["jihozlar"]):
@@ -290,13 +304,13 @@ def lab_page(lid):
 <div data-tabs data-hash><div class="tabs" role="tablist">{tb}</div>
 <div data-p="xona"><div class="lab-royxat"><div class="toolbar" style="margin-top:22px"><h3 style="margin:0">Jihozlar pasporti</h3><span class="sp"></span><button type="button" class="btn ghost sm" data-pasport-chop>🖨 Chop etish</button></div>{roy}</div></div>
 <div data-p="slayd"><noscript><p class="note">Slaydlarni ko‘rish uchun brauzerda JavaScript yoqilgan bo‘lishi kerak.</p></noscript></div>
-<div data-p="ishlat"></div><div data-p="sinov"></div><div data-p="xavf"></div>
+<div data-p="ishlat"></div><div data-p="sinov"></div><div data-p="xavf"></div>{'<div data-p="zamon"></div>' if L.get("zamonaviy") else ""}
 </div></div>
 <script type="application/json" id="lab-json">{js}</script>
 </div></section>"""
     page(f"lab/{lid}/index.html", f'{L["nomi"]} — virtual laboratoriya',
          f'«{L["nomi"]}» virtual laboratoriyasi: {len(L["jihozlar"])} ta jihoz bilan tanishish, slaydlar, ekranda virtual ishlatish va sinov. {NOM}.',
-         b, active="lab/", scripts=("lab-sim.js", "lab-sim-texnik.js", "lab-sim-it.js", "lab-sim-xizmat.js", "lab.js", "t1-kuvi.js"))
+         b, active="lab/", scripts=("lab-sim.js", "lab-sim-texnik.js", "lab-sim-it.js", "lab-sim-xizmat.js", "lab.js") + (("lab-3d.js",) if L.get("zamonaviy") else ()) + ("t1-kuvi.js",))
 def lab_card(lid, R, izoh=""):
     L = LABS[lid]
     em = " ".join(j.get("e", "") for j in L["jihozlar"][:7])
