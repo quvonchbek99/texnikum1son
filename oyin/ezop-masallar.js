@@ -1317,7 +1317,31 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u yordam uchun egar va dizginni qabul qilib, ovchiga bo'ysunishga rozi bo'lgan edi", "Chunki kiyik uni o'ldirib, boshqa yaylovga olib ketgan edi", "Chunki u dasht bo'ylab yugurishni yoqtirmas edi"],
     javob: 0,
     izoh: "Ot dushmanni yengish uchun begonadan yordam so'radi va buning narxini oldindan o'ylamadi. Qiyin paytda yordam olishdan oldin, uning oqibatini ham hisobga olish kerak."
+  },
+  {
+    id: "ez-163",
+    mavzu: "hamkorlik",
+    sarlavha: "Xachir va eshak",
+    matn: "Bir yo'lda eshak va xachir birga yuk ortilgan holda ketishardi. Eshak og'irlikdan charchab, xachirdan yukining bir qismini olib qo'yishni so'radi. Xachir esa \"Mening yukim o'zimga o'zi yetadi\" deb rad etdi va yo'lida davom etaverdi. Oxiri eshak yo'l o'rtasida holsizlanib yiqildi, egasi esa uning butun yukini xachirga ortdi.",
+    savol: "Xachir nima uchun oxir-oqibat eshakning yukini ham ko'tarishga majbur bo'ldi?",
+    variantlar: ["Chunki xo'jayin xachirni yukdan ozod qilishni buyurgan edi", "Chunki eshak yo'l o'rtasida yiqilib, uning yuki xachirga ortilgan edi", "Chunki xachir o'zi xohlagan yukni tanlab olgan edi"],
+    javob: 1,
+    izoh: "Xachir yordam berishdan bosh tortgani uchun eshak yiqildi va yuk to'liq unga o'tdi. Yordamni vaqtida berish ko'pincha o'zimiz uchun ham qulay bo'ladi."
+  },
+  {
+    id: "ez-164", mavzu: "ishonch", sarlavha: "Maymun va delfin",
+    matn: "Bo'ron paytida kemadan dengizga tushib ketgan maymunni delfin ko'rib qoldi va uni qirg'oqqa olib bordi. Maymun o'zini Afina shahrining olijanob fuqarosi deb aytib, delfinning mehrini qozondi. Delfin unga yana yordam berib, do'st bo'lmoqchi bo'ldi. Ammo oxirida u maymunning hech qanday olijanob nasabi yo'qligini bilib qoldi.",
+    savol: "Delfin maymunni nima uchun qirg'oqda qoldirib ketdi?",
+    variantlar: ["Chunki maymun o'zini aldab, yolg'on gapirgan edi", "Chunki maymun juda kichik va ojiz edi", "Chunki delfin o'zi xohlagan joyga ketishi kerak edi"],
+    javob: 0,
+    izoh: "Maymun o'zini aldab yordam olgani uchun delfin unga ishonmay qoldi. Ishonch yolg'on bilan emas, rostgo'ylik bilan qozoniladi."
+  },
+  {
+    id: "ez-165", mavzu: "ehtiyotkorlik", sarlavha: "Ikki tovuq va don",
+    matn: "Ikki tovuq omborda bir uyum don topdi. Birinchisi donni asta-sekin yedi va bir qismini ertaga uchun qoldirdi. Ikkinchisi esa \"Ertaga ham shu yerda bo'ladi\" deb, bor donni bir kunda yeb tugatdi. Ertasi kuni ombor eshigi qulflanib, tovuqlar ichkariga kira olmadi.",
+    savol: "Ikkinchi tovuq nima uchun ochlikdan azob chekdi?",
+    variantlar: ["Chunki u donni bir kunda yeb tugatib, kelgusi uchun zaxira qoldirmagan edi", "Chunki don juda sho'r va yeb bo'lmaydigan edi", "Chunki birinchi tovuq uning ulushini olib ketgan edi"],
+    javob: 0,
+    izoh: "Ikkinchi tovuq kelgusini o'ylamay, bor donni bir kunda yedi va zaxira qoldirmadi. Ehtiyotkorlik ehtiyojning kelajakda ham qondirilishini ta'minlaydi."
   }
 ];
-
-
