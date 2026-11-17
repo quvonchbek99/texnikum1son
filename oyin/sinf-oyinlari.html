@@ -5,13 +5,13 @@
 <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Sinf o'yinlari: Arqon tortish va Jonli viktorina · Texnikum e-bazasi</title>
-<meta name="description" content="Butun sinf bilan o'ynaladigan matematik o'yinlar: Arqon tortish (1–10 jamoa) va Kahoot uslubidagi Jonli viktorina (o'quvchilar telefondan kod bilan). 110 ta mavzuning har biri uchun.">
+<title>Sinf o'yinlari: Viktorina, Arqon tortish, Sirli kataklar, Shoh savol, Oltin sandiq, Mol ur · Texnikum e-bazasi</title>
+<meta name="description" content="Butun sinf bilan o'ynaladigan o'yinlar, o'zbek tilida: Kahoot uslubidagi Jonli viktorina, Arqon tortish, Sirli kataklar (Baamboozle), Shoh savol doskasi (Jeopardy), Oltin sandiq (Blooket/Gimkit), Mol ur, Moslashtir, Omad g'ildiragi (Wordwall) va telefonsiz Kuvonch kartalar (Plickers). Matematika va 20 fan.">
 <link rel="canonical" href="https://kuvonch.uz/sinf-oyinlari.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kuvonch Academy">
-<meta property="og:title" content="Sinf o'yinlari: Arqon tortish va Jonli viktorina">
-<meta property="og:description" content="110 ta matematika mavzusining har biri uchun sinf o'yinlari — proyektor, aqlli doska va telefonlar bilan.">
+<meta property="og:title" content="Sinf o'yinlari — Kahoot, Blooket, Wordwall o'rniga o'zbekcha">
+<meta property="og:description" content="10 xil sinf o'yini: viktorina, kataklar, shoh savol, oltin sandiq, mol ur, moslashtir — proyektor, aqlli doska va telefonlar bilan.">
 <meta property="og:url" content="https://kuvonch.uz/sinf-oyinlari.html">
 <meta property="og:image" content="https://kuvonch.uz/og-image.jpg">
 <meta name="theme-color" content="#0b1220">
@@ -44,6 +44,17 @@ h1 span{background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit
 .game .meta span{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
 .game .go{align-self:flex-start;margin-top:6px;font-weight:900;padding:10px 18px;border-radius:12px;background:linear-gradient(135deg,#ffd479,#ff9f6b);color:#1d1200}
 .game.v .go{background:linear-gradient(135deg,#5ee6c7,#7c9bff);color:#081019}
+.more{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:6px 0 22px}
+.mini{position:relative;display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:18px;text-decoration:none;color:var(--text);border:1px solid var(--border);background:linear-gradient(160deg,var(--g1,#18264a) 0%,#141f38 70%);transition:transform .2s,border-color .2s;min-height:170px}
+.mini:hover{transform:translateY(-3px);border-color:#3a4c78}
+.mini .ic{font-size:36px;line-height:1}
+.mini h3{margin:0;font-size:19px}
+.mini p{margin:0;color:var(--text-dim);font-size:14px}
+.mini .meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
+.mini .meta span{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
+.mini .like{position:absolute;top:12px;right:12px;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#2b1d00;background:#ffd479;border-radius:999px;padding:2px 7px}
+.sec-h{margin:22px 0 4px;font-size:22px}
+.trow .btn.nw{border-color:rgba(255,212,121,.45)}
 .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;margin:14px 0}
 .card h2{margin:0 0 4px;font-size:21px}
 .sub{color:var(--text-dim);font-size:14px;margin:0 0 12px}
@@ -90,7 +101,7 @@ footer a{color:var(--text-dim)}
 <div class="hero">
 <span class="kicker">🎯 Yangi bo'lim</span>
 <h1>Sinf <span>o'yinlari</span></h1>
-<p class="lead">Butun sinf bilan bir vaqtda o'ynaladigan matematik o'yinlar — proyektor, aqlli doska va o'quvchilarning telefonlari bilan. 110 ta mavzuning har biri uchun, savollar har safar yangi.</p>
+<p class="lead">Butun sinf bilan bir vaqtda o'ynaladigan o'yinlar — proyektor, aqlli doska va o'quvchilarning telefonlari bilan. Kahoot, Blooket, Baamboozle va Wordwall'ning eng sevimli o'yinlari endi o'zbek tilida va bepul: matematika va 20 fan, savollar har safar yangi.</p>
 </div>
 
 <div class="big2">
@@ -104,9 +115,21 @@ footer a{color:var(--text-dim)}
 <span class="go">▶ Viktorina ochish</span></a>
 </div>
 
+
+<h2 class="sec-h">🆕 Yangi sinf o'yinlari</h2>
+<p class="sub" style="margin:0 0 10px">Mashhur platformalar uslubida — o'zbek tilida, ro'yxatdan o'tmasdan, savollar avtomatik.</p>
+<div class="more">
+<a class="mini" href="https://kuvonch.uz/kataklar.html" style="--g1:#3a1d2e"><span class="like">Baamboozle</span><span class="ic">🎁</span><h3>Sirli kataklar</h3><p>Jamoalar raqamli katak ochadi: savol yoki syurpriz — 💣 bomba, ✖️2, 🦊 o'g'irlash, 🔄 almashtirish.</p><span class="meta"><span>2–8 jamoa</span><span>telefonsiz</span></span></a>
+<a class="mini" href="https://kuvonch.uz/shoh-savol.html" style="--g1:#1b2a6b"><span class="like">Jeopardy</span><span class="ic">👑</span><h3>Shoh savol doskasi</h3><p>Mavzular × 100–500 ball. ⚡ Ikki karra kataklar, javobni o'g'irlash va tikish bilan final savol.</p><span class="meta"><span>2–6 jamoa</span><span>televizion viktorina</span></span></a>
+<a class="mini" href="https://kuvonch.uz/oltin-sandiq.html" style="--g1:#3a2a0e"><span class="like">Blooket · Gimkit</span><span class="ic">💰</span><h3>Oltin sandiq</h3><p>To'g'ri javob — sandiq ochiladi: oltin, ×2, o'g'irlash… Do'konda magnit, qalqon, omad.</p><span class="meta"><span>proyektor</span><span>📱 telefonlar</span></span></a>
+<a class="mini" href="https://kuvonch.uz/mol-ur.html" style="--g1:#16351f"><span class="like">Wordwall</span><span class="ic">🔨</span><h3>Mol ur</h3><p>Inlardan javob ko'targan mollar chiqadi — faqat to'g'ri javobni ur! Kombo bonus.</p><span class="meta"><span>aqlli doska</span><span>📱 telefonlar</span></span></a>
+<a class="mini" href="https://kuvonch.uz/moslashtir.html" style="--g1:#2a1d4a"><span class="like">Wordwall</span><span class="ic">🧩</span><h3>Moslashtir</h3><p>Savolni javobi bilan juftla yoki yopiq kartalardan juftini top (xotira o'yini).</p><span class="meta"><span>juftlash</span><span>xotira</span><span>📱 telefonlar</span></span></a>
+<a class="mini" href="https://kuvonch.uz/omad-gildiragi.html" style="--g1:#3a2416"><span class="like">Wordwall</span><span class="ic">🎡</span><h3>Omad g'ildiragi</h3><p>Kim doskaga chiqadi? Ro'yxatni aylantiring, tanlanganga savol bering, ball yozing.</p><span class="meta"><span>ism tanlash</span><span>ballar CSV</span></span></a>
+<a class="mini" href="https://kuvonch.uz/kartalar.html" style="--g1:#14303a"><span class="like">Plickers</span><span class="ic">🃏</span><h3>Kuvonch kartalar</h3><p>Telefonsiz test: o'quvchilar qog'oz kartani buradi, o'qituvchi kamerasi bilan skanerlaydi.</p><span class="meta"><span>telefon shart emas</span><span>40 karta</span></span></a>
+</div>
 <section class="card" id="cJoin">
-<h2>📱 O'quvchi: viktorinaga kirish</h2>
-<p class="sub">O'qituvchi ekranidagi 5 belgili kodni yozing.</p>
+<h2>📱 O'quvchi: o'yinga kirish</h2>
+<p class="sub">O'qituvchi ekranidagi 5 harfli kodni yozing — viktorina, Oltin sandiq, Mol ur yoki Moslashtir xonasi o'zi topiladi.</p>
 <div class="pinrow"><input class="field pin" id="pin" maxlength="5" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABCDE" aria-label="Xona kodi"><button type="button" class="btn primary" id="pinGo">Kirish ▶</button></div>
 <div class="jerr" id="pinErr" role="alert"></div>
 </section>
@@ -133,6 +156,12 @@ footer a{color:var(--text-dim)}
 <li><b>Jonli viktorina</b> — o'qituvchi kompyuterida xona ochiladi, ekranda kod va QR chiqadi. O'quvchilar <b>kuvonch.uz/viktorina.html</b> sahifasida kodni yozib kiradi va telefondan javob beradi.</li>
 <li>Ikkala o'yinda ham xato javobdan keyin <b>to'g'ri javob va yechim qadamlari</b> ko'rsatiladi; oxirida xatolar tahlili chiqadi.</li>
 <li>Viktorina natijalarini <b>CSV</b> (Excel) faylda yuklab olish mumkin — jurnalga baho qo'yish uchun qulay.</li>
+<li><b>Sirli kataklar</b> va <b>Shoh savol</b> — bitta ekranda jamoalar navbat bilan; <b>Oltin sandiq</b>, <b>Mol ur</b> va <b>Moslashtir</b> esa telefon rejimida ham ishlaydi: o'quvchilar <b>kuvonch.uz/live</b> orqali kod bilan kiradi.</li>
+<li><b>📷 Kartalar (telefonsiz)</b>: o'quvchilar <a href="https://kuvonch.uz/kartalar.html">Kuvonch kartalar</a>ni ko'taradi, javobni kamera o'qiydi — Jonli viktorina (📷 tugmasi), Arqon tortish, Sirli kataklar, Shoh savol va Oltin sandiqda. Kamera — kompyuterniki yoki o'qituvchi telefoni.</li>
+<li><b>📗 Tayyor test bazasi</b> (110 mavzu × 60 variant): Sirli kataklar, Shoh savol, Oltin sandiq (proyektor) va Omad g'ildiragida «📗 Test bazasi» fani ostida. Bu savollarda javob varianti yo'q — o'quvchi javobni aytadi, o'qituvchi ✅ yoki ❌ bosadi.</li>
+<li><b>📚 O'z savollaringiz</b>: viktorinada yozgan savollaringiz va saqlangan testlaringiz barcha sinf o'yinlarida «📚 Mening savollarim» fani ostida chiqadi.</li>
+<li>Telefon xonasida hech kim kirmasa ham <b>«Baribir boshlash»</b> mumkin — kech qolganlar o'yin davomida qo'shiladi.</li>
+<li>Har bir mavzu qatoridagi belgilar: 🎁 Sirli kataklar · 👑 Shoh savol · 💰 Oltin sandiq · 🔨 Mol ur · 🧩 Moslashtir.</li>
 </ul>
 </section>
 
@@ -153,7 +182,8 @@ footer a{color:var(--text-dim)}
     html += '<details class="grp"' + (gi === 1 ? " open" : "") + '><summary>' + esc(g) + "<small>" + rows.length + " ta mavzu</small></summary>" +
       rows.map(function (t) {
         return '<div class="trow" data-s="' + esc(t[1].toLowerCase()) + '"><span class="t"><a href="https://kuvonch.uz/mashqlar.html#' + t[0] + '">' + esc(t[1]) + '</a></span><span class="b">' +
-          '<a class="btn ar" href="arqon.html?mavzu=' + t[0] + '">🪢 Arqon tortish</a><a class="btn vk" href="viktorina.html?mavzu=' + t[0] + '">⚡ Viktorina</a></span></div>';
+          '<a class="btn ar" href="arqon.html?mavzu=' + t[0] + '">🪢 Arqon</a><a class="btn vk" href="viktorina.html?mavzu=' + t[0] + '">⚡ Viktorina</a>' +
+          '<a class="btn nw" href="kataklar.html?mavzu=' + t[0] + '" title="Sirli kataklar">🎁</a><a class="btn nw" href="shoh-savol.html?mavzu=' + t[0] + '" title="Shoh savol doskasi">👑</a><a class="btn nw" href="oltin-sandiq.html?mavzu=' + t[0] + '" title="Oltin sandiq">💰</a><a class="btn nw" href="mol-ur.html?mavzu=' + t[0] + '" title="Mol ur">🔨</a><a class="btn nw" href="moslashtir.html?mavzu=' + t[0] + '" title="Moslashtir">🧩</a></span></div>';
       }).join("") + "</details>";
   });
   box.innerHTML = html;
@@ -169,7 +199,7 @@ footer a{color:var(--text-dim)}
   pin.addEventListener("input", function () { var v = pin.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 5); if (pin.value !== v) pin.value = v; });
   function go() {
     if (pin.value.length !== 5) { document.getElementById("pinErr").textContent = "Kod 5 ta belgidan iborat bo'lishi kerak"; pin.focus(); return; }
-    location.href = "viktorina.html?kod=" + pin.value;
+    location.href = "live/?kod=" + pin.value;
   }
   document.getElementById("pinGo").onclick = go;
   pin.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });

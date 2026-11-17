@@ -854,6 +854,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
 <span class="pill" id="hCnt">👥 0</span>
 <span class="pill away" id="hAway" role="button" tabindex="0" hidden>📵 0</span>
 <span class="pill lim" id="hLim" role="button" tabindex="0" hidden title="Test vaqti — bosing: vaqt qo'shish yoki cheklovni olib tashlash">⏳ —</span>
+<button type="button" data-a="cam" title="📷 Kartalar: o'quvchilar javobini kamera o'qiydi (telefonsiz, Plickers kabi)" aria-label="Kartalar skaneri">📷</button>
 <button type="button" data-a="graph" title="Grafik chizish taxtasi (formula yozing yoki qo'lda chizing)" aria-label="Grafik chizish">📈</button>
 <button type="button" data-a="edit" title="Testni tahrirlash — o'z savolingiz, fanlar ulushi, yana savol qo'shish (T)" aria-label="Testni tahrirlash">✏️</button>
 <button type="button" data-a="finish" title="Testni hozir yakunlash — natijalar va sertifikatlar (E)" aria-label="Testni yakunlash">🏁</button>
@@ -878,6 +879,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
 <div class="toast" id="toast"></div>
 
 <script src="ka-tarmoq.js?v=20261116a"></script>
+<script src="ka-karta.js?v=20261117b"></script>
 <script src="ka-sertifikat.js?v=20261110a"></script>
 <script src="ka-kuvi.js?v=20261116a"></script>
 <script src="ka-xato.js?v=20261110a"></script>
@@ -2001,6 +2003,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
         '<div class="lob-go"><div class="info"><span id="lInfo"></span><div class="lob-err" id="lobErr"></div></div>' +
         '<button type="button" class="btn edb" data-a="edit" title="O\'z savolingizni qo\'shing, fanlar ulushini o\'zgartiring, savollarni tahrirlang (T)">✏️ Testni tahrirlash</button>' +
         '<button type="button" class="btn edb" data-a="man" title="Telefoni yo\'q o\'quvchilarni qo\'shish — javobini o\'qituvchi kiritadi (M)">📝 Telefonsiz o\'quvchi</button>' +
+        '<button type="button" class="btn edb" data-a="cam" title="O\'quvchilar qog\'oz kartani ko\'taradi, javobni kamera o\'qiydi — telefon va internet shart emas">📷 Kartalar bilan</button>' +
         '<button type="button" class="btn finb" data-a="finish" title="Xonani yopish / testni yakunlash (E)">🏁 Yakunlash</button>' +
         '<button type="button" class="nextb" id="lStart" disabled>▶ Boshlash</button></div></div>';
       $("#lStart").onclick = startGame;
@@ -2035,7 +2038,9 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
       if (!mEl) { mEl = document.createElement("div"); mEl.className = "lob-miss"; mEl.id = "lMiss"; $(".lob-pl", hEl()).appendChild(mEl); }
       mEl.innerHTML = "📋 <b>" + esc(H.roster.name) + "</b>: " + (H.roster.list.length - miss.length) + "/" + H.roster.list.length + " kirdi" + (miss.length && miss.length <= 40 ? " · hali kirmaganlar: " + miss.map(esc).join(", ") : "");
     }
-    $("#lStart").disabled = !ps.length || !H.code || !H.qs.length;
+    $("#lStart").disabled = !H.code || !H.qs.length;
+    $("#lStart").textContent = ps.length ? "▶ Boshlash" : "▶ Baribir boshlash";
+    $("#lStart").title = ps.length ? "" : "Hali hech kim kirmagan — baribir boshlash mumkin: kech qolganlar o'yin davomida kiradi yoki 📷 kartalar bilan javob beradi";
     refitFn = null;
   }
   var qrLoad = null;
@@ -2125,7 +2130,8 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     limTick(); hSave();
   }
   function startGame() {
-    if (!H || !allPlayers().length) return;
+    if (!H) return;
+    if (!allPlayers().length && !H.cards && !confirm("Hali hech kim kirmagan. Baribir boshlaysizmi?\n\nKech qolganlar o'yin davomida kod bilan kiradi. Telefon bo'lmasa — 📷 Kartalar tugmasi: o'quvchilar kartani ko'taradi, javobni kamera o'qiydi.")) return;
     snd("start"); H.i = -1;
     // savollar telefonlarga OLDINDAN yuborilmaydi: har bir savol faqat o'z vaqtida, javobi esa natija chiqqanda keladi
     H.gid = rid8(); H.started = true; H.revN = 0; H.startAt = Date.now();
@@ -2145,6 +2151,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     if (H.api) { if (H.api.cast) H.api.cast(qMsg(qSec())); else online().forEach(function (p) { H.api.send(p.id, qMsg(qSec())); }); }
     hBeat();
     renderQuestion();
+    camSync();
     var lastSec = qSec();
     H.timer = setInterval(function () {
       var left = qSec() - (Date.now() - H.qStart) / 1000;
@@ -2193,6 +2200,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     if (!H || H.phase !== "q") return;
     clearTimeout(H.chkT);
     var now = Date.now(), ps = allPlayers(), i = H.i;
+    if (H.cards) return; // kartalar rejimi: kim karta ko'tarishi oldindan noma'lum — vaqt tugashini (yoki ⏭ tugmasini) kutamiz
     if (!ps.some(function (p) { return p.online || p.man; })) return;
     if (ps.some(function (p) { return (p.online || p.man) && p.ans[i] == null; })) return; // telefonsizlar javobi ham kiritilsin
     if (ps.some(function (p) { return !p.online && p.ans[i] == null && p.leftAt && now - p.leftAt < 6000; })) { H.chkT = setTimeout(checkAllAnswered, 1000); return; }
@@ -2281,6 +2289,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     if (g) setTimeout(function () { if (window.kaYuz && kaYuz.say && cfg.sound) try { kaYuz.say("Afsonaviy quti! " + g.name + ", tabriklayman!", "happy"); } catch (e) {} }, 1600);
   }
   function reveal() {
+    if (KC) KC.setNote("✅ Natija ekranda. Keyingi savolda kartalarni yana ko'taring.");
     if (!H || H.phase !== "q") return;
     clearInterval(H.timer);
     H.phase = "reveal"; hBeat(); H.revN = H.i + 1;
@@ -2385,7 +2394,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     a.until = Date.now() + a.left;
     a.t = setInterval(function () {
       if (!H || H.auto !== a) { clearInterval(a.t); return; }
-      if (!online().length && !allPlayers().some(function (p) { return p.man; })) { a.until = Date.now() + a.left; return; } // xonada hech kim qolmasa — kutib turamiz
+      if (!online().length && !H.cards && !allPlayers().some(function (p) { return p.man; })) { a.until = Date.now() + a.left; return; } // xonada hech kim qolmasa — kutib turamiz
       a.left = Math.max(0, a.until - Date.now());
       if (a.left <= 0) { autoClear(); a.fn(); } else autoPaint();
     }, 200);
@@ -2477,6 +2486,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
   }
   function endGame() {
     if (!H) return;
+    if (KC) KC.close();
     clearInterval(H.timer); autoClear();
     H.phase = "end"; hBeat(); H.revN = H.qs.length;
     var order = ranked(), body = hEl();
@@ -2766,6 +2776,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     else if (a === "finish") finishNow();
     else if (a === "edit") openEditor();
     else if (a === "man") manOpen();
+    else if (a === "cam") camOpen();
     else if (a === "d3") { cfg.d3 = !cfg.d3; saveCfg(); setD3($("#hs"), cfg.d3); if (H.api) online().forEach(function (p) { H.api.send(p.id, { type: "d3", on: cfg.d3 }); }); }
   });
   addEventListener("beforeunload", function (e) { if (H && H.phase !== "end" && allPlayers().length) { e.preventDefault(); e.returnValue = ""; } });
@@ -3456,6 +3467,44 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     var qs = JSON.parse(JSON.stringify(H.allQs || H.qs)); qs.forEach(function (q) { delete q.sec; });
     toLobby(qs);
     toast("🔁 Xuddi shu test — kutish xonasida ✏️ bilan tahrirlash mumkin");
+  }
+
+  /* ================= 📷 KARTALAR: javobni kamera o'qiydi (Plickers kabi) =================
+     O'quvchi qog'oz kartani ko'taradi (kuvonch.uz/kartalar.html dan chop etiladi), tepadagi harf — javobi.
+     Guruh ro'yxati ulangan bo'lsa: karta raqami = tartib raqami (zaxira kartalar kartalar.html dagi kabi); bo'lmasa «Karta 12».
+     Kamera: shu kompyuterniki yoki o'qituvchi telefoni (skaner.html). Javoblar 📝 telefonsiz o'quvchilar kabi hisoblanadi. */
+  var KC = null;
+  function camLetters() { var q = H && H.phase === "q" ? H.qs[H.i] : null; return q && q.t !== "in" ? Math.min(4, q.opts.length) : 4; }
+  function camOpen() {
+    if (!H) return;
+    if (!window.KKarta) { toast("Skaner moduli yuklanmadi — sahifani yangilang"); return; }
+    if (KC) { KC.el.classList.remove("min"); return; }
+    H.cards = true; // o'quvchilar birinchi kartasi ko'ringanda qo'shiladi (kelmaganlar natijada «qatnashmadi» bo'lib qoladi)
+    KC = KKarta.open({ title: "Viktorina", letters: camLetters(), onCard: camCard, onClose: function () { KC = null; } });
+    camSync(); hCount(); if (H.phase === "lobby") renderLobby();
+    toast(H.roster ? "📷 «" + H.roster.name + "»: karta raqami = ro'yxatdagi tartib raqami" : "📷 Guruh ulanmagan — javoblar «Karta 1, 2…» nomi bilan yoziladi");
+  }
+  function camSync() {
+    if (!KC || !H) return;
+    KC.reset(camLetters());
+    var q = H.phase === "q" ? H.qs[H.i] : null;
+    KC.setNote(!q ? "Savol chiqqanda o'quvchilar kartani ko'taradi — tepadagi harf javob bo'ladi." : q.t === "in" ? "✍️ Bu savolga javob yoziladi — kartalar hisoblanmaydi." : "▶ " + (H.i + 1) + "-savol: kartalarni ko'taring!" + (q.opts.length < 4 ? " (faqat " + "ABCD".slice(0, q.opts.length).split("").join(", ") + ")" : ""));
+  }
+  function camCard(card, L) {
+    if (!H || H.phase !== "q") return;
+    var q = H.qs[H.i]; if (!q || q.t === "in") return;
+    var j = "ABCD".indexOf(L); if (j < 0 || j >= q.opts.length) return;
+    var p = null;
+    if (H.roster) {
+      var s = KKarta.studentOf(H.roster.key, Math.min(H.roster.list.length, KKarta.MAX), card);
+      if (s < 0) return;
+      p = H.players["r" + s]; if (!p) { manAdd("", s); p = H.players["r" + s]; }
+    } else {
+      var nm = "Karta " + card, k = "m:" + nm.toLowerCase();
+      p = H.players[k]; if (!p) { manAdd(nm); p = H.players[k]; }
+    }
+    if (!p || !p.man) return; // telefondan kirgan o'quvchining javobi o'zidan keladi
+    manSet(p, j);
   }
 
   /* ================= 📝 TELEFONSIZ O'QUVCHILAR: javobni o'qituvchi kiritadi =================

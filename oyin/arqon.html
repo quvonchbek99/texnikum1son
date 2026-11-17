@@ -203,6 +203,10 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
 .conf{position:absolute;top:-40px;font-size:30px;animation:fall 2.6s linear forwards;z-index:19;pointer-events:none}
 @keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
 @media (prefers-reduced-motion:reduce){.conf{display:none}.pn.bad,.shake{animation:none}}
+.kartrev{margin-left:10px;border:0;border-radius:10px;padding:6px 12px;font-weight:900;cursor:pointer;background:linear-gradient(135deg,#ffd479,#ff9f6b);color:#1d1200}
+#tnO button{position:relative}
+#tnO button.dim{opacity:.35}
+.kcnt{position:absolute;top:6px;right:10px;font:900 15px/1 ui-monospace,monospace;background:rgba(0,0,0,.35);border-radius:999px;padding:3px 8px;color:#fff}
 </style>
 <script async src="statistika.js"></script>
 <style>@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}</style>
@@ -254,7 +258,9 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
 <div class="opts" id="modeOpts">
 <button type="button" class="opt" data-v="race"><b>⚡ Poyga</b><span>Hamma bir vaqtda, har jamoaga o'z savoli. Telefon, planshet, aqlli doska.</span></button>
 <button type="button" class="opt" data-v="turn"><b>🎤 Navbat bilan</b><span>Bitta katta savol, jamoalar navbat bilan javob beradi. Proyektor uchun.</span></button>
+<button type="button" class="opt" data-v="kart"><b>📷 Kartalar</b><span>Butun sinf qog'oz kartani ko'taradi, kamera o'qiydi. Qaysi jamoada to'g'ri javob ko'p — o'sha tortadi. Telefonsiz.</span></button>
 </div>
+<div id="kartBox" hidden style="margin-top:10px"></div>
 </section>
 
 <section class="card">
@@ -310,6 +316,9 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
 <div class="toast" id="toast"></div>
 
 <script src="ka-savollar.js?v=20261030c"></script>
+<script src="ka-mavzular.js?v=20261117b"></script>
+<script src="ka-tarmoq.js?v=20261116a"></script>
+<script src="ka-karta.js?v=20261117b"></script>
 <script src="ka-savollar-2.js"></script>
 <script src="ka-savollar-3.js"></script>
 <script src="ka-savollar-4.js"></script>
@@ -325,52 +334,14 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
 /*! Kuvonch Academy — Arqon tortish (har bir mavzu, 1–10 jamoa, 3 daraja + o'sib boruvchi) */
 (function () {
   "use strict";
-  var TOPICS=[["a1","A1. Qo'shish amali",0],["a2","A2. Ayirish amali",0],["a3","A3. Ko'paytirish amali",0],["a4","A4. Bo'lish amali",0],["a5","A5. Foizlar bilan amallar",0],["a6","A6. Darajaga ko'tarish amali",0],["a7","A7. Ko'paytirish (karra) jadvali",0],["a8","A8. Sonlar",0],["t1","1. Kvadrat funksiya va uning grafigi",1],["t2","2. Kvadrat tengsizlik va uning yechimi",1],["t3","3. Trigonometrik ayniyatlar",1],["t4","4. Arifmetik va geometrik progressiya",1],["t5","5. Funksiya tushunchasi",1],["t6","6. Funksiya xossalari",1],["t7","7. Funksiya grafiklarini sodda almashtirish",1],["t8","8. Chiziqli va kvadratik modellashtirish",1],["t9","9. Loyiha ishi. Munosabatlar va funksiyalar",1],["t10","10. Sodda ratsional tenglamalar",1],["t11","11. Sodda ratsional tenglamalar sistemasi",1],["t12","12. Sodda ratsional tengsizliklar",1],["t13","13. Sodda ratsional tengsizliklar sistemasi",1],["t14","14. Ratsional tenglamalarga doir misollar yechish",1],["t15","15. Sodda irratsional tenglamalar",1],["t16","16. Irratsional tenglamalarga doir misollar yechish",1],["t17","17. Sodda irratsional tenglamalar sistemasi",1],["t18","18. Ratsional va irratsional ifodalarga doir misollar",1],["t19","19. Ko'rsatkichli funksiya",1],["t20","20. Logarifmik funksiya",1],["t21","21. Ko'rsatkichli va logarifmik ifodalarni soddalashtirish",1],["t22","22. Sodda ko'rsatkichli tenglamalar",1],["t23","23. Sodda logarifmik tenglamalar",1],["t24","24. Ko'rsatkichli va logarifmik tenglamalar sistemasi",1],["t25","25. Sodda ko'rsatkichli tengsizliklar",1],["t26","26. Sodda logarifmik tengsizliklar",1],["t27","27. Ko'rsatkichli modellashtirish",1],["t28","28. Ko'rsatkichli va logarifmik ifodalarga doir misollar",1],["t29","29. Trigonometrik funksiyalar",1],["t30","30. Teskari trigonometrik funksiyalar",1],["t31","31. Trigonometrik funksiyalarga doir misollar",1],["t32","32. STEM topshiriq",1],["t33","33. sin x = a, cos x = a trigonometrik tenglamalar",1],["t34","34. tg x = a, ctg x = a trigonometrik tenglamalar",1],["t35","35. Trigonometrik tenglamalarni yechish",1],["t36","36. Eng sodda trigonometrik tengsizliklar",1],["t37","37. Tasodifiy hodisalar",1],["t38","38. Ehtimollikni hisoblashda kombinatorika formulalaridan foydalanish",1],["t39","39. Teng ehtimolli hodisalar",1],["t40","40. Planimetriyaning mantiqiy tuzilishi",1],["t41","41. Geometrik masalalar va ularni yechish usullari",1],["t42","42. Stereometriyaning asosiy tushunchalari",1],["t43","43. Fazoda to'g'ri chiziqlar va tekisliklar",1],["t44","44. Fazoviy geometrik shakllar. Ko'pyoqlar",1],["t45","45. Ko'pyoqlarni tasvirlash va modelini yasash",1],["t46","46. Fazoda to'g'ri chiziqlarning o'zaro joylashuvi",1],["t47","47. Ayqash to'g'ri chiziqlar",1],["t48","48. Fazoda to'g'ri chiziqlar va tekisliklarning o'zaro joylashuvi",1],["t49","49. Fazoda tekisliklarning o'zaro joylashuvi",1],["t50","50. Fazoda parallel proyeksiyalash",1],["t51","51. Qisqa ko'paytirish formulalari",2],["t52","52. Ko'phadni ko'paytuvchilarga ajratish",2],["t53","53. Modulli tenglamalar va tengsizliklar",2],["t54","54. Arifmetik progressiya",2],["t55","55. Geometrik progressiya",2],["t56","56. Nisbat, proporsiya va foizli masalalar",2],["t57","57. O'rta qiymatlar (arifmetik, geometrik, garmonik)",2],["t58","58. Determinantlar va Kramer usuli",2],["t59","59. Funksiyaning limiti asoslari",2],["t60","60. Hosila va uning tatbiqlari (asosiy formulalar)",2],["t61","61. Bo'linish belgilari, EKUB va EKUK",2],["t62","62. Kvadrat ildiz va ratsional ko'rsatkichli daraja",2],["t63","63. Vyet teoremasi",2],["t64","64. Irratsional tenglamalar",2],["t65","65. Funksiyaning aniqlanish sohasi",2],["t66","66. Gorner sxemasi va Bezu teoremasi",2],["t67","67. Logarifm xossalari va sodda logarifmik tenglamalar",2],["t68","68. Asosiy trigonometrik ayniyatlar va keltirish formulalari",2],["t69","69. Sodda trigonometrik tenglamalar (sin x = a, cos x = a)",2],["t70","70. Aniqmas integral asoslari",2],["t71","71. Uchburchak va uning xossalari",3],["t72","72. To'rtburchaklar va ularning xossalari",3],["t73","73. Aylana va doira",3],["t74","74. Muntazam ko'pburchaklar",3],["t75","75. Prizma va parallelepiped",3],["t76","76. Piramida",3],["t77","77. Silindr",3],["t78","78. Konus",3],["t79","79. Shar va sfera",3],["t80","80. Ichki va tashqi chizilgan shakllar",3],["t81","81. Jismlar kombinatsiyasi (shar, silindr, konus, prizma)",3],["t82","82. Dekart koordinatalari (tekislikda)",3],["t83","83. Vektorlar (tekislikda)",3],["t84","84. Fazoda koordinatalar va vektorlar",3],["t85","85. Sinuslar va kosinuslar teoremalari",3],["t86","86. Shakllar o'xshashligi",3],["t87","87. Fazoda burchak va masofalar",3],["t88","88. Jismlarning kesimlari",3],["t89","89. Faktorial",4],["t90","90. Kombinatorikaning asosiy qoidalari",4],["t91","91. O'rin almashtirish, o'rinlashtirish va guruhlash",4],["t92","92. Ehtimollik: klassik ta'rif",4],["t93","93. Ehtimollik qoidalari",4],["t94","94. To'plamlar nazariyasi asoslari",4],["t95","95. Eyler–Venn doiralari va kiritish-chiqarish formulasi",4],["t96","96. Nyuton binomi",4],["t97","97. Fizika uchun matematika: formulalar bilan ishlash",5],["t98","98. O'lchov birliklari va shkala",5],["t99","99. O'rtacha kvadratik chetlanish, tanlanma va xatolik chegarasi",6],["t100","100. Diagrammalar: nuqtali, quti diagrammasi, gistogramma",6],["t101","101. Sochilma diagramma va eng yaxshi moslik chizig'i",6],["t102","102. Kompleks sonlar",6]];
-  var GROUPS = ["🧮 Asosiy amallar", "📘 Mavzular (1–50)", "🎓 Algebra · Milliy sertifikat (51–70)", "📐 Geometriya (71–88)", "🎲 Kombinatorika va ehtimollik (89–96)", "⚛️ Fizika uchun matematika (97–98)", "📊 SAT statistika (99–102)"];
-  // Boshqa fanlar va avtotest — generatorlari faqat shu mavzular tanlanganda yuklanadi (GEN_EXTRA)
-  TOPICS = TOPICS.concat([
-    ["m1","Mantiq · Sonli ketma-ketliklar",7],["m2","Mantiq · Ortiqchasini toping",7],["m3","Mantiq · Harflar, kunlar, oylar va soat",7],["m4","Mantiq · Mantiqiy xulosa (sillogizmlar)",7],["m5","Mantiq · Tartiblash va taqqoslash",7],["m6","Mantiq · Mantiqiy masalalar",7],["m7","Mantiq · Rostgo'y va yolg'onchi",7],["m8","Mantiq · Kim qaysi kasbda? (mantiqiy jadval)",7],["m9","Mantiq · Sehrli kvadrat va sonli jumboqlar",7],["m10","Mantiq · Ezop masallari",7],["m11","Mantiq · Sherlock tergov ishlari",7],
-    ["e1","Ingliz tili · Lug'at A1 (4000 Essential Words 1)",8],["e2","Ingliz tili · Lug'at A2 (4000 Essential Words 2)",8],["e3","Ingliz tili · Lug'at B1 (4000 Essential Words 3)",8],["e4","Ingliz tili · Lug'at B1+ (4000 Essential Words 4)",8],["e5","Ingliz tili · Lug'at B2 (4000 Essential Words 5)",8],["e6","Ingliz tili · Lug'at C1 (4000 Essential Words 6)",8],["e7","Ingliz tili · To be va Present Simple",8],["e8","Ingliz tili · Noto'g'ri fe'llar (V2, V3)",8],["e9","Ingliz tili · Artikllar, ko'plik, predloglar",8],["e10","Ingliz tili · Sifat darajalari va zamonlar",8],
-    ["r1","Rus tili · Lug'at: ruscha → o'zbekcha",9],["r2","Rus tili · Lug'at: o'zbekcha → ruscha",9],["r3","Rus tili · Olmoshlar kelishiklarda",9],["r4","Rus tili · Otlarning jinsi (м, ж, ср)",9],["r5","Rus tili · Sonlar, hafta kunlari va oylar",9],["r6","Rus tili · Kundalik iboralar",9],
-    ["f1","Fizika · Mexanika: tezlik, kuch, bosim",10],["f2","Fizika · Ish, quvvat va energiya",10],["f3","Fizika · Elektr: Om qonuni, quvvat",10],["f4","Fizika · Issiqlik, zichlik, Arximed kuchi",10],["f5","Fizika · Kattaliklar, birliklar va olimlar",10],
-    ["k1","Kimyo · Kimyoviy elementlar va belgilar",11],["k2","Kimyo · Molyar massa va modda miqdori",11],["k3","Kimyo · Asosiy tushunchalar va reaksiyalar",11],
-    ["b1","Biologiya · Hujayra va tirik organizmlar",12],["b2","Biologiya · Odam anatomiyasi va salomatlik",12],["b3","Biologiya · O'simliklar va hayvonlar dunyosi",12],
-    ["g1","Geografiya · Davlatlar va poytaxtlar",13],["g2","Geografiya · O'zbekiston geografiyasi",13],["g3","Geografiya · Materiklar, okeanlar va tabiat",13],
-    ["h1","Tarix · O'zbekiston tarixi: muhim sanalar",14],["h2","Tarix · Buyuk allomalar va ularning asarlari",14],["h3","Tarix · Jahon tarixi",14],
-    ["i1","Informatika · Sanoq sistemalari",15],["i2","Informatika · Axborot birliklari",15],["i3","Informatika · Kompyuter, internet va dasturlash",15],["i4","Informatika · Mantiqiy amallar va algoritmlar",15],["i5","Informatika · Robototexnika asoslari",15],
-    ["o1","Ona tili · Kelishiklar va qo'shimchalar",16],["o2","Ona tili · So'z turkumlari",16],["o3","Ona tili · Fonetika va imlo",16],
-    ["at0","Avtotest · Barcha mavzular (aralash)",17],["at1","Avtotest · Umumiy qoidalar va atamalar",17],["at2","Avtotest · Yo'l belgilari",17],["at3","Avtotest · Yo'l chiziqlari",17],["at4","Avtotest · Svetofor va tartibga soluvchi ishoralari",17],["at5","Avtotest · Harakatni boshlash va manevr",17],["at6","Avtotest · Tezlik, quvib o'tish, oraliq",17],["at7","Avtotest · To'xtash va to'xtab turish",17],["at8","Avtotest · Chorrahalar",17],["at9","Avtotest · Piyodalar, bekatlar, temir yo'l, avtomagistral",17],["at10","Avtotest · Yoritish asboblari va signallar",17],["at11","Avtotest · Shatakka olish, odam va yuk tashish",17],["at12","Avtotest · Texnik holat va jihozlar",17],["at13","Avtotest · Birinchi tibbiy yordam",17]]);
-  GROUPS = GROUPS.concat(["🧠 Mantiq", "🇬🇧 Ingliz tili", "🇷🇺 Rus tili", "⚛️ Fizika", "🧪 Kimyo", "🧬 Biologiya", "🌍 Geografiya", "📜 Tarix", "💻 Informatika va robototexnika", "📝 Ona tili", "🚗 Avtotest (prava imtihoni)", "📖 Adabiyot", "⚖️ Huquq", "💰 Iqtisodiyot", "🔭 Astronomiya", "✏️ Chizmachilik", "🌱 Ekologiya", "🤝 Tarbiya", "🎖️ ChQBT (chaqiruvgacha tayyorgarlik)", "🏃 Jismoniy tarbiya"]);
-  TOPICS = TOPICS.concat([
-    ["ad1", "Adabiyot · O'zbek adiblari va ularning asarlari", 18],["ad2", "Adabiyot · Adabiyot nazariyasi: tur, janr va tasvir vositalari", 18],["ad3", "Adabiyot · Jahon adabiyoti", 18],
-    ["hq1", "Huquq · Konstitutsiya va davlat tuzilishi", 19],["hq2", "Huquq · Inson huquqlari, erkinliklari va burchlari", 19],["hq3", "Huquq · Huquq sohalari: mehnat, oila, ma'muriy va jinoyat huquqi asoslari", 19],
-    ["iq1", "Iqtisodiyot · Asosiy tushunchalar: ehtiyoj, talab, taklif, bozor", 20],["iq2", "Iqtisodiyot · Pul, bank va soliqlar", 20],["iq3", "Iqtisodiyot · Moliyaviy savodxonlik: byudjet, jamg'arma, kredit va foiz", 20],
-    ["as1", "Astronomiya · Quyosh sistemasi", 21],["as2", "Astronomiya · Yulduzlar, galaktikalar va koinot", 21],["as3", "Astronomiya · Astronomiya tarixi va kosmonavtika", 21],
-    ["cz1", "Chizmachilik · Chizma asboblari, formatlar va chiziq turlari", 22],["cz2", "Chizmachilik · Proyeksiyalar va ko'rinishlar", 22],["cz3", "Chizmachilik · Masshtab, o'lchamlar va kesimlar", 22],
-    ["ek1", "Ekologiya · Ekotizimlar va oziq zanjiri", 23],["ek2", "Ekologiya · Ekologik muammolar: Orol, iqlim, ifloslanish", 23],["ek3", "Ekologiya · Tabiatni muhofaza qilish", 23],
-    ["tb1", "Tarbiya · Odob-axloq va muomala madaniyati", 24],["tb2", "Tarbiya · Vatan, davlat ramzlari va milliy bayramlar", 24],["tb3", "Tarbiya · Sog'lom turmush, xavfsiz internet va kasb tanlash", 24],
-    ["cq1", "ChQBT · Birinchi tibbiy yordam", 25],["cq2", "ChQBT · Fuqaro muhofazasi va favqulodda vaziyatlar", 25],["cq3", "ChQBT · Qurolli Kuchlar va harbiy xizmat asoslari", 25],
-    ["jt1", "Jismoniy tarbiya · Sport turlari va o'yin qoidalari", 26],["jt2", "Jismoniy tarbiya · Olimpiya o'yinlari va o'zbek sportchilari", 26],["jt3", "Jismoniy tarbiya · Sog'liq, gigiyena va mashqlar", 26]
-  ]);
-  var GEN_EXTRA = [["ka-savollar-fanlar.js", /^(m|e|r)\d+$/], ["ka-fan-tabiiy.js", /^(f|k|i)\d+$/], ["ka-fan-ijtimoiy.js", /^(b|g|h|o)\d+$/], ["ka-fan-avtotest.js", /^at\d+$/], ["ka-fan-maktab.js", /^(ad|hq|iq|as|cz|ek|tb|cq|jt)\d+$/]];
-  function needGen(id) { for (var i = 0; i < GEN_EXTRA.length; i++) if (GEN_EXTRA[i][1].test(id)) return GEN_EXTRA[i][0]; return null; }
-  var genLoaded = {};
-  function addJs(src) {
-    if (genLoaded[src]) return genLoaded[src];
-    return (genLoaded[src] = new Promise(function (ok) { var sc = document.createElement("script"); sc.src = src + "?v=20261107b"; sc.onload = ok; sc.onerror = function () { delete genLoaded[src]; ok(); }; document.head.appendChild(sc); }));
-  }
-  // tanlangan mavzular uchun generator fayllari (ketma-ket) + lug'at/savol banklari (kaFan.prep)
-  function prepTopics(ids) {
-    var files = GEN_EXTRA.filter(function (g) { return ids.some(function (id) { return g[1].test(id); }); }).map(function (g) { return g[0]; });
-    return files.reduce(function (p, f) { return p.then(function () { return addJs(f); }); }, Promise.resolve()).then(function () {
-      var ps = [];
-      if (window.kaFan && window.kaFan.prep) ps.push(window.kaFan.prep(ids));
-      if (window.kaAvto && ids.some(window.kaAvto.isAt)) ps.push(window.kaAvto.load());
-      return Promise.race([Promise.all(ps), new Promise(function (ok) { setTimeout(ok, 20000); })]);
-    }).catch(function () {});
-  }
-  // savol matni (+ avtotestda yo'l belgisi yoki chorraha rasmi)
-  function qHtml(q) { return (q && q.r && window.kaAvto ? window.kaAvto.img(q.r) : "") + safe(q ? q.q : ""); }
+  // Mavzular katalogi barcha sinf o'yinlari bilan umumiy (ka-mavzular.js): 258 mavzu, 20 fan + o'qituvchining o'z savollari
+  var MV = window.KA_MAVZU;
+  // 📗 test bazasi savollarida javob varianti yo'q — Arqon tortishda (variantli o'yin) ko'rsatilmaydi
+  var TOPICS = MV.TOPICS.filter(function (t) { return !MV.isOpen(t[0]); }), GROUPS = MV.GROUPS;
+  function needGen(id) { return !(window.kaSavol && window.kaSavol.has(id)); }
+  function prepTopics(ids) { return MV.prep(ids); }
+  // savol matni (+ avtotestda yo'l belgisi, o'qituvchi savolida rasm)
+  function qHtml(q) { return (q && q.r ? MV.img(q.r) : "") + safe(q ? q.q : ""); }
   var COLORS = ["#7c9bff", "#ff8585", "#5ee6c7", "#ffd479", "#c18bff", "#ff9f6b", "#6fd3ff", "#ff7ac8", "#a6e36b", "#e3e8f5"];
   var TEAMS = [["🦁", "Sherlar"], ["🐺", "Bo'rilar"], ["🦅", "Burgutlar"], ["🐯", "Yo'lbarslar"], ["🐻", "Ayiqlar"], ["🦊", "Tulkilar"], ["🐬", "Delfinlar"], ["🐎", "Tulporlar"], ["🐝", "Arilar"], ["🦉", "Boyqushlar"]];
   var KEYS = [["1", "2", "3", "4"], ["7", "8", "9", "0"], ["q", "w", "e", "r"], ["u", "i", "o", "p"]];
@@ -395,11 +366,11 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
   }
 
   /* ---------------- sozlamalar ---------------- */
-  var cfg = { topics: [], n: 2, lvl: "2", mode: "race", qn: 10, min: 5, steps: 5, qsec: 30, exp: 0, combo: true, sound: true, full: true, names: [] };
+  var cfg = { topics: [], n: 2, lvl: "2", mode: "race", qn: 10, min: 5, steps: 5, qsec: 30, exp: 0, combo: true, sound: true, full: true, names: [], kr: "", kn: 30 };
   try { var sv = JSON.parse(localStorage.getItem(LS) || "null"); if (sv) for (var k in sv) if (k in cfg) cfg[k] = sv[k]; } catch (e) {}
   var qp = /[?&]mavzu=([a-z0-9,]+)/i.exec(location.search);
   if (qp) cfg.topics = qp[1].split(",").filter(function (id) { return TITLE[id]; });
-  cfg.topics = cfg.topics.filter(function (id) { return TITLE[id] && (needGen(id) || window.kaSavol && kaSavol.has(id)); });
+  cfg.topics = cfg.topics.filter(function (id) { return TITLE[id]; });
   var np = /[?&]n=(\d+)/.exec(location.search); if (np) cfg.n = Math.max(1, Math.min(10, +np[1]));
   function saveCfg() { try { localStorage.setItem(LS, JSON.stringify(cfg)); } catch (e) {} }
 
@@ -488,11 +459,12 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
     $$("#modeOpts .opt").forEach(function (b) {
       var v = b.dataset.v;
       b.classList.toggle("on", v === cfg.mode);
-      b.disabled = v === "turn" && cfg.n === 1;
+      b.disabled = (v === "turn" || v === "kart") && cfg.n === 1;
       var rec = (v === "race" && cfg.n <= 4) || (v === "turn" && cfg.n >= 5);
       var tg = $(".tag", b); if (rec && !tg) $("b", b).insertAdjacentHTML("beforeend", '<span class="tag">tavsiya</span>'); if (!rec && tg) tg.remove();
     });
-    $("#lQsec").style.opacity = cfg.mode === "turn" ? "1" : ".45";
+    $("#lQsec").style.opacity = cfg.mode === "turn" || cfg.mode === "kart" ? "1" : ".45";
+    kartBox();
     summary();
   }
   function bindOpts() {
@@ -593,6 +565,61 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
     var go = $("#go"), lbl = go.textContent; go.disabled = true; go.textContent = "⏳ Savollar yuklanmoqda…";
     prepTopics(ids).then(function () { starting = false; go.disabled = false; go.textContent = lbl; startGame(); });
   }
+  /* ---------------- 📷 kartalar rejimi (Plickers kabi) ---------------- */
+  function kartBox() {
+    var box = $("#kartBox"), KK = window.KKarta; if (!box) return;
+    box.hidden = cfg.mode !== "kart"; if (box.hidden) return;
+    var rs = KK ? KK.rosters() : [];
+    if (cfg.kr && !rs.some(function (r) { return r.key === cfg.kr; })) cfg.kr = "";
+    box.innerHTML = '<div class="sets"><label>📋 Guruh ro\'yxati<select id="kR"><option value="">Ro\'yxatsiz — karta raqamlari bo\'yicha</option>' + rs.map(function (r) { return '<option value="' + esc(r.key) + '"' + (r.key === cfg.kr ? " selected" : "") + ">" + esc(r.name) + " · " + r.list.length + "</option>"; }).join("") + "</select></label>" +
+      (cfg.kr ? "" : '<label>👥 Sinfda nechta o\'quvchi<input id="kN" type="number" min="2" max="40" value="' + (cfg.kn || 30) + '"></label>') + "</div>" +
+      '<p class="sub" style="margin:6px 0 0">Jamoalar karta raqamlari bo\'yicha ketma-ket bo\'linadi (masalan 1–15 va 16–30). Kartalarni <a href="https://kuvonch.uz/kartalar.html" target="_blank" rel="noopener">🃏 Kuvonch kartalar</a> sahifasidan chop eting. Kamera — shu kompyuterniki yoki o\'qituvchi telefoni.</p>';
+    $("#kR").onchange = function () { cfg.kr = this.value; saveCfg(); kartBox(); };
+    var kn = $("#kN"); if (kn) kn.oninput = function () { cfg.kn = Math.max(2, Math.min(40, +kn.value || 30)); saveCfg(); };
+  }
+  function kartInit() {
+    var KK = window.KKarta, r = cfg.kr && KK ? KK.roster(cfg.kr) : null, n = r ? Math.min(r.list.length, KK.MAX) : Math.max(2, Math.min(40, +cfg.kn || 30)), T = G.teams.length;
+    G.kart = { n: n, r: r, ans: {}, person: function (card) { return r ? KK.studentOf(r.key, n, card) : card >= 1 && card <= n ? card - 1 : -1; } };
+    G.teams.forEach(function (t, i) { t.from = Math.ceil(i * n / T); t.to = Math.ceil((i + 1) * n / T) - 1; });
+    G.kc = KK.open({ title: "Arqon tortish", onCard: kartCard, onClose: function () { if (G) G.kc = null; } });
+  }
+  function kartTeam(s) { for (var i = 0; i < G.teams.length; i++) if (s >= G.teams[i].from && s <= G.teams[i].to) return i; return -1; }
+  function kartCard(card, L) {
+    if (!G || !G.kart || G.over || !G.cur || G.teams[G.turn].state !== "q") return;
+    var j = "ABCD".indexOf(L); if (j < 0 || j >= G.cur.opts.length) return;
+    var s = G.kart.person(card); if (s < 0) return;
+    G.kart.ans[card] = { j: j, t: kartTeam(s) }; kartBar();
+  }
+  function kartBar() {
+    var per = G.teams.map(function () { return 0; }), tot = 0;
+    for (var c in G.kart.ans) { tot++; if (G.kart.ans[c].t > -1) per[G.kart.ans[c].t]++; }
+    $(".who", $("#tnBar")).innerHTML = "📷 Hamma kartani ko'tarsin · <b>" + tot + "</b> javob: " + G.teams.map(function (t, i) { return '<span style="color:' + t.color + '">' + t.emoji + " " + per[i] + "</span>"; }).join(" ") +
+      ' <button type="button" class="kartrev" id="kRev">✅ Javobni ochish</button>';
+    $("#kRev").onclick = kartReveal;
+  }
+  function kartReveal() {
+    var t0 = G.teams[G.turn]; if (!G || G.over || t0.state !== "q") return;
+    var q = G.cur, st = G.teams.map(function () { return { n: 0, ok: 0 }; }), cnt = q.opts.map(function () { return 0; });
+    for (var c in G.kart.ans) { var a = G.kart.ans[c]; cnt[a.j]++; if (a.t > -1) { st[a.t].n++; if (a.j === q.ci) st[a.t].ok++; } }
+    var btns = $$("#tnO button");
+    btns.forEach(function (b, i) { b.disabled = true; b.classList.add(i === q.ci ? "right" : "dim"); b.insertAdjacentHTML("beforeend", '<span class="kcnt">' + cnt[i] + "</span>"); });
+    var share = st.map(function (x) { return x.n ? x.ok / x.n : 0; }), best = Math.max.apply(null, share), win = share.map(function (v, i) { return v === best && best > 0 ? i : -1; }).filter(function (i) { return i > -1; });
+    G.teams.forEach(function (t, i) { t.score += st[i].ok; var sc = document.getElementById("sc" + i); if (sc) sc.textContent = t.score; });
+    t0.state = "exp"; t0.closeAt = 0;
+    var html = '<div class="xa">✅ To\'g\'ri javob: ' + safe(q.a) + "</div>" + '<div class="xh" style="font-size:.8em">' + G.teams.map(function (t, i) { return '<span style="color:' + t.color + '">' + t.emoji + " " + esc(t.name) + ": " + st[i].ok + "/" + st[i].n + "</span>"; }).join(" · ") + "</div>" +
+      (win.length === 1 ? '<div class="xh">🪢 ' + esc(G.teams[win[0]].emoji + " " + G.teams[win[0]].name) + " tortadi!</div>" : '<div class="xh">' + (best > 0 ? "🤝 Teng — arqon joyida" : "Hech kim topmadi") + "</div>") +
+      (q.steps.length && best < 1 ? "<ol>" + q.steps.map(function (x) { return "<li>" + safe(x) + "</li>"; }).join("") + "</ol>" : "");
+    if (best < 1) G.mistakes.push({ team: "📷 Sinf", q: q.q, a: q.a, chosen: null, steps: q.steps, tid: q.tid });
+    if (G.kc) G.kc.setNote("✅ Natija ekranda. Keyingi savolda kartalarni yana ko'taring.");
+    snd(best > 0 ? "ok" : "bad");
+    if (win.length === 1) { var second = share.slice().sort(function (a, b) { return b - a; })[1] || 0; if (pull(win[0], best - second >= .5 ? 2 : 1)) return; }
+    setTimeout(function () {
+      if (!G || G.over) return;
+      $("#tn").classList.add("exp");
+      var x = $("#tnX"); $(".fitq", x).innerHTML = "<div>" + html + "</div>"; x.classList.add("on");
+      fitTurn();
+    }, 600);
+  }
   function startGame() {
     if (!window.kaSavol) { toast("Savollar yuklanmadi — sahifani yangilang"); return; }
     var okT = cfg.topics.filter(function (id) { return kaSavol.has(id); });
@@ -604,12 +631,14 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
       toast("Kamida bitta mavzu tanlang"); return;
     }
     if (cfg.n === 1) cfg.mode = "race";
+    if (cfg.mode === "kart" && !window.KKarta) { toast("Skaner moduli yuklanmadi — sahifani yangilang"); return; }
     saveCfg();
     G = {
       topics: cfg.topics.slice(), S: cfg.steps, teams: makeTeams(), p: [0, 0], shown: [0, 0], left: cfg.min * 60, el: 0,
       running: true, paused: false, over: false, turn: 0, asked: 0, seen: {}, mistakes: [], last: Date.now(), cur: null, qLeft: cfg.qsec,
-      robotAcc: 0, robotNext: 0, mode: cfg.mode, humans: cfg.n
+      robotAcc: 0, robotNext: 0, mode: cfg.mode === "kart" ? "turn" : cfg.mode, humans: cfg.n
     };
+    if (cfg.mode === "kart") kartInit();
     if (cfg.n === 1) G.robotNext = robotInterval();
     root.className = "g on " + (G.mode === "turn" ? "turn" : "race") + " n" + cfg.n + (G.teams.length === 2 ? " lin" : " rad");
     $("#gOver").classList.remove("on");
@@ -792,7 +821,7 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
     if ($(".xp", pn).classList.contains("on")) fit($(".xp .fitq", pn), Math.min(h * 0.14, 72), 10);
   }
   function nextTurn(first) {
-    if (cfg.qn && G.asked >= cfg.qn * G.teams.length) { G.running = false; return byPosition("qn"); }
+    if (cfg.qn && G.asked >= cfg.qn * (G.kart ? 1 : G.teams.length)) { G.running = false; return byPosition("qn"); }
     if (!first) G.turn = (G.turn + 1) % G.teams.length;
     var t = G.teams[G.turn];
     G.cur = newQ(t); G.asked++; G.qLeft = cfg.qsec; t.state = "q";
@@ -804,8 +833,9 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
     $("#tnQ>div").innerHTML = qHtml(G.cur);
     var o = $("#tnO"); o.className = "ops" + (G.cur.opts.length <= 2 ? " two" : ""); o.style.setProperty("--c", t.color); o.innerHTML = optsHtml(G.cur, G.turn);
     renderQTime();
+    if (G.kart) { G.kart.ans = {}; if (G.kc) { G.kc.reset(Math.min(4, G.cur.opts.length)); G.kc.setNote("▶ " + G.asked + "-savol: kartalarni ko'taring!"); } kartBar(); }
     fitTurn();
-    live(t.name + " navbati");
+    live(G.kart ? "Hamma kartani ko'tarsin" : t.name + " navbati");
   }
   function fitTurn() {
     var tn = $("#tn"); if (!tn) return;
@@ -825,7 +855,7 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
 
   function curQ(ti) { return G.mode === "turn" ? G.cur : G.teams[ti].q; }
   function answer(ti, j) {
-    if (!G || !G.running || G.paused || G.over) return;
+    if (!G || !G.running || G.paused || G.over || G.kart) return;
     var t = G.teams[ti]; if (!t || t.robot || t.state !== "q") return;
     if (G.mode === "turn" && ti !== G.turn) return;
     var q = curQ(ti); if (!q || j >= q.opts.length) return;
@@ -905,7 +935,7 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
       if (cfg.qsec && t.state === "q") {
         var before = Math.ceil(G.qLeft); G.qLeft -= dt; renderQTime();
         if (Math.ceil(G.qLeft) !== before && G.qLeft <= 5 && G.qLeft > 0) snd("tick");
-        if (G.qLeft <= 0) { $$("#tnO button").forEach(function (b) { b.disabled = true; }); wrong(G.turn, -1, $$("#tnO button")); }
+        if (G.qLeft <= 0) { if (G.kart) kartReveal(); else { $$("#tnO button").forEach(function (b) { b.disabled = true; }); wrong(G.turn, -1, $$("#tnO button")); } }
       }
     }
     // yechimni avtomatik yopish
@@ -1010,6 +1040,7 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
     } catch (e) {}
   }
   function stop(fromPop) {
+    if (G && G.kc) { G.kc.close(); G.kc = null; }
     clearInterval(loopId); cancelAnimationFrame(rafId);
     try { if (wake) { wake.release(); wake = null; } } catch (e) {}
     G = null; root.className = "g"; root.classList.remove("paused");
