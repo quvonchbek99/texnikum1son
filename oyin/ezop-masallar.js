@@ -1375,5 +1375,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u tikanli sharga aylanib, ilonning tishlashi uchun xavfli bo'lib qoldi", "Chunki ilon juda kuchsiz va ochko'z edi", "Chunki kirpi tez yugurib, ilondan uzoqlashib ketdi"],
     javob: 0,
     izoh: "Kirpi o'zini himoya qilish uchun eng kuchli qurolini ishga soldi. Kuchsiz ko'rinsa ham, vaziyatga mos to'g'ri usul bilan o'zini himoya qilish mumkin."
+  },
+  {
+    id: "ez-170", mavzu: "mantiq", sarlavha: "Ortiqcha yuk va qayiq",
+    matn: "Qayiqchi odamlarni daryo narigi qirg'og'iga tashib, kun bo'yi pul topardi. Bir kuni u vaqtni tejash uchun qayiqqa imkon qadar ko'proq yuk ortishga qaror qildi. Qayiq ustiga shunchalik ko'p yuk ortildiki, u bir necha qadam yurmasdanoq suvga botib ketdi. Qayiqchi daryoni ayblab qolganida, yonidan o'tayotgan chol unga: 'Daryo aybdor emas, sen qayiqqa ortiqcha yuk ortding', dedi.",
+    savol: "Qayiq nima uchun suvga botib ketdi?",
+    variantlar: ["Chunki unga sig'imidan ortiq yuk ortilgan edi", "Chunki daryo juda sayoz va tor edi", "Chunki qayiqchi eshkakni suvga tashlab yuborgan edi"],
+    javob: 0,
+    izoh: "Qayiq o'z sig'imidan ortiq yuk olganda muvozanatini yo'qotib, suvga botadi. Muammoning sababi ko'pincha tashqarida emas, o'zimiz qilgan ortiqcha harakatda bo'ladi."
+  },
+  {
+    id: "ez-171", mavzu: "mantiq", sarlavha: "Qurbaqa va daryo",
+    matn: "Hovuz qirg'og'ida qurbaqalar kun bo'yi quyoshda cho'milib, sakrab o'ynardi. Bir kuni katta ot hovuz yonidan dupur-dupur o'tib ketdi. Qurbaqalar bu shovqindan qo'rqib, birin-ketin suvga sakrab tushdi. Eng keksa qurbaqa esa ularga: \"To'xtanglar, avval xavf haqiqatanmi, bilib olaylik\", dedi. Qurbaqalar suv yuziga chiqib qarashsa, ot allaqachon uzoqlashib ketgan va hovuzga yaqinlashmagan edi.",
+    savol: "Keksa qurbaqa nima uchun qurbaqalarni qochishdan to'xtatdi?",
+    variantlar: ["Chunki xavf haqiqatanmi, avval aniqlash kerak edi", "Chunki hovuzda qochish uchun joy yo'q edi", "Chunki ot qurbaqalarni ovqat qilmoqchi emas edi"],
+    javob: 0,
+    izoh: "Xavfni aniq bilmasdan ko'r-ko'rona qochish ham ortiqcha zarar keltirishi mumkin. Avval vaziyatni tekshirib, keyin qaror qilish aqlli yo'l."
   }
 ];
