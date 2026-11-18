@@ -1343,5 +1343,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u donni bir kunda yeb tugatib, kelgusi uchun zaxira qoldirmagan edi", "Chunki don juda sho'r va yeb bo'lmaydigan edi", "Chunki birinchi tovuq uning ulushini olib ketgan edi"],
     javob: 0,
     izoh: "Ikkinchi tovuq kelgusini o'ylamay, bor donni bir kunda yedi va zaxira qoldirmadi. Ehtiyotkorlik ehtiyojning kelajakda ham qondirilishini ta'minlaydi."
+  },
+  {
+    id: "ez-166", mavzu: "mas'uliyat", sarlavha: "Kalxat va ertaga",
+    matn: "Kalxat yomg'ir yog'ishidan oldin uya qurishi kerakligini bilar edi. Ammo u har kuni: \"Ertaga boshlayman, bugun charchadim\", deb dam olaverdi. Bir kuni tong otganda osmon qorong'ilashib, qattiq yomg'ir quyib yubordi.",
+    savol: "Kalxat nima uchun yomg'irda uyasiz qoldi?",
+    variantlar: ["Chunki yomg'ir uni topishga qaror qilgan edi", "Chunki u uyani kechiktirib, yomg'irdan oldin qurmagan edi", "Chunki boshqa qushlar uning uyasini buzib ketgan edi"],
+    javob: 1,
+    izoh: "Kalxat muhim ishni ertaga qoldirdi va yomg'ir kelguncha tayyor bo'lmadi. Ishni o'z vaqtida bajarish imkoniyatni saqlab qoladi."
+  },
+  {
+    id: "ez-167", mavzu: "ishonch", sarlavha: "Mushuk va chumchuq",
+    matn: "Mushuk ko'p yillar davomida sichqonlarni tutib yurgan, endi esa tishlari qariganini bahona qilardi. Bir kuni u shoxda o'tirgan chumchuqqa mehribonlik bilan dedi: \"Men endi ovchilik qilmayman, tishlarimni tashlaganman. Yaqinroq kel, do'st bo'lib suhbatlashaylik.\" Chumchuq uning so'zlariga quloq solmadi va uzoqroq shoxga o'tib oldi. Mushukning ko'zlari esa hali ham o'tkir va ochko'z edi.",
+    savol: "Chumchuq nima uchun mushukka yaqinlashmadi?",
+    variantlar: ["Chunki mushukning so'zi bilan ko'zlari ko'rsatayotgan niyat bir-biriga mos kelmadi", "Chunki chumchuq uchishni bilmas edi", "Chunki mushuk unga ovqat olib kelmoqchi edi"],
+    javob: 0,
+    izoh: "Mushuk tishlari qarib qolganini aytsa-da, uning ko'zlari hali ham ovchilik niyatini bildirardi. So'z bilan xulq mos kelmasa, ehtiyotkorlik bilan ehtiyot bo'lish to'g'ri."
   }
 ];
