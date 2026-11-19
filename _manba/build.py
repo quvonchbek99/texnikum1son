@@ -598,7 +598,7 @@ def data_files():
             if _q.get("dars"):
                 _bor.add(_q["dars"])
             Q.append({"k": "m", "t": _q.get("sarlavha") or "", "s": f'{_m.get("fan_nomi") or _fid} · ' + (f'{_q["dars"]}-mavzu · ' if _q.get("dars") else "") + ("Amaliy" if _q["turi"] == "amaliy" else "Ma’ruza"),
-                      "u": f'yonalish/{_yid}/fan/{_fid}/#{_q["turi"]}'})
+                      "u": f'yonalish/{_yid}/fan/{_fid}/' + (f'?sem={_m["sem"]}' if _m.get("sem") else "") + f'#{_q["turi"]}'})
     for lid, L in LABS.items():
         if L.get("_hub"):
             continue

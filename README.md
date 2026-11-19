@@ -29,8 +29,11 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
    yozilmaydi — agent faqat `holat.json` dagilarni tozalaydi, shuning uchun bularga tegmaydi. O'chirish: uchala faylni olib tashlab,
    `agent/index.json` dan yozuvini o'chirish. Namuna: `multimedia-animatsiya-2026` (Grafik va dizayn texnologiyasi → Multimedia va
    animatsiya texnologiyalari, Mahmudova Sh.R., 192 bet, 83 qism; 19.11.2026).
+   Bir PDF bir necha semestrga bo'linishi mumkin: `ingliz-tili-1kurs-1sem` (1–90-darslar) va `ingliz-tili-1kurs-2sem` (91–150-darslar)
+   ikkalasi `fayl/ingliz-tili-1kurs.pdf` ga ishora qiladi (Chet tili, umumta'lim; muqova — Toshkent tuman 1-son texnikumi, 5 bet;
+   asl bet raqamlari +5 ga almashtirilgan; o'qituvchi nomi ataylab bo'sh — sahifada o'qituvchi qismi chiqmaydi).
 6. Bosh sahifa `agent/index.json` dagi fanlarni ham «material bor» deb belgilaydi (`fanlar.js`); `build.py` qayta yig'ishda agent
-   majmualarining ma'ruza/amaliy mavzularini qidiruvga (`data/qidiruv.json`) qo'shadi.
+   majmualarining ma'ruza/amaliy mavzularini qidiruvga (`data/qidiruv.json`, havola `?sem=` bilan) qo'shadi.
 
 Muhim: saytni qayta yig'ishda (`build.py`) `agent/`, `fayl/`, `eski/`, `materiallar/`, `oyin/` papkalariga tegilmaydi; push qilishdan oldin
 `git pull --rebase` (agent ham commit qiladi). Qo'lda sinov: Actions → «Kuvi agent» → Run workflow → `sinov_url`.

@@ -143,12 +143,12 @@
   }
   function bet(q) { return q.bet_bosh === q.bet_oxir ? q.bet_bosh + "-bet" : q.bet_bosh + "–" + q.bet_oxir + "-bet"; }
   function majmua(m) {
-    var pdf = ROOT + m.pdf, kim = esc(m.oqituvchi || "o‘qituvchi"), by = {};
+    var pdf = ROOT + m.pdf, kim = esc(m.oqituvchi || ""), by = {};  // nom ko'rsatilmagan majmualarda o'qituvchi qismi chiqmaydi
     (window.t1Majmua = window.t1Majmua || []).push({ id: m.id, nom: m.nom, pdf: pdf, k: ROOT + "agent/k/" + m.id + ".json", betlar: m.betlar, qismlar: m.qismlar });
     document.dispatchEvent(new CustomEvent("t1-majmua"));
     m.qismlar.forEach(function (q) { var p = A2P[q.turi] || "fayllar"; (by[p] = by[p] || []).push(q); });
     Object.keys(by).forEach(function (p) {
-      var w = slot(p, "Majmuadan: " + esc(m.nom) + ' <span class="muted small">— ' + kim + "</span>");
+      var w = slot(p, "Majmuadan: " + esc(m.nom) + (kim ? ' <span class="muted small">— ' + kim + "</span>" : ""));
       if (!w) return;
       by[p].forEach(function (q) {
         var d = document.createElement("details"); d.className = "mv";
@@ -164,7 +164,7 @@
     if (el.querySelector(".empty")) el.innerHTML = "";
     var box = document.createElement("div"); box.className = "yig no-print";
     var turlar = Object.keys(ANOM).filter(function (t) { return m.qismlar.some(function (q) { return q.turi === t; }); });
-    box.innerHTML = '<div class="yig-h"><h3>To‘liq majmua: ' + esc(m.nom) + "</h3><p class=\"small muted\">" + m.betlar + " bet · " + kim + " · " + esc(m.sana || "") +
+    box.innerHTML = '<div class="yig-h"><h3>To‘liq majmua: ' + esc(m.nom) + "</h3><p class=\"small muted\">" + m.betlar + " bet · " + (kim ? kim + " · " : "") + esc(m.sana || "") +
       '. Butun majmuani oching yoki kerakli qismlarni belgilab, bitta PDF yoki alohida fayllar (ZIP) qilib oling.</p></div>' +
       '<div class="toolbar"><button type="button" class="btn" data-och>Majmuani ochish</button><a class="btn ghost" href="' + pdf + '" download>To‘liq PDF (' + Math.max(1, Math.round((m.hajm || 0) / 1048576)) + " MB)</a>" +
       (m.drive_id ? '<a class="btn ghost" target="_blank" rel="noopener" href="https://drive.google.com/file/d/' + encodeURIComponent(m.drive_id) + '/view">Asl fayl (Drive)</a>' : "") + "</div>" +
