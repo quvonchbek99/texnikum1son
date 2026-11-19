@@ -1415,5 +1415,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Odamdan yordam so'radi va erkinligini yo'qotdi", "Bug'uni o'zi ovlab, yaylovni qaytarib oldi", "Bug'u bilan do'st bo'lib, yaylovni bo'lishib oldi"],
     javob: 0,
     izoh: "Ot dushmanidan o'ch olish uchun odamning yordamiga tayandi, lekin buning evaziga o'z erkinligidan ajralib qoldi. Qasos ko'pincha o'zimizga boshqacha qimmatga tushadi, shuning uchun ehtiyot bo'lish kerak."
+  },
+  {
+    id: "ez-175", mavzu: "hurmat", sarlavha: "Ikki buqa va tor ko'prik",
+    matn: "Ikki buqa bir kuni tor ko'prik ustida to'qnashib qoldi. Ularning hech biri yo'ldan chetga chiqib, ikkinchisiga joy bermoqchi emas edi. Har biri o'zini kuchliroq ko'rsatmoqchi bo'lib, bir-birini itarishga tushdi. Oxiri ikkalasi ham ko'prikdan daryoga yiqilib tushdi.",
+    savol: "Ikki buqa nima uchun daryoga yiqilib tushdi?",
+    variantlar: ["Chunki ikkalasi ham bir-biriga yo'l berishni xohlamadi", "Chunki ko'prik juda keng va xavfsiz edi", "Chunki ular bir-biridan qo'rqib, tezda qochib ketdi"],
+    javob: 0,
+    izoh: "Ikkala buqa ham o'zini ustun ko'rsatmoqchi bo'lib, orqaga qadam qo'ymadi. Kibr va inatlashish ko'pincha foydadan ko'ra zarar keltiradi; ozgina hurmat va yo'l berish hammaga foyda beradi."
+  },
+  {
+    id: "ez-176", mavzu: "ehtiyotkorlik", sarlavha: "Ikki kaptar va yomg'ir",
+    matn: "Ikki kaptar bir daraxt shoxida yashardi. Ulardan biri osmonda qora bulutlar yig'ilayotganini ko'rib, darhol uyasini chuqur qilib mustahkamladi. Ikkinchisi esa quyosh charaqlab turganini ko'rib, \"Bugun yomg'ir yo'q, ishim ham ko'p emas\" deb dam oldi. Kechqurun kuchli shamol turdi, yomg'ir quyib berdi va dam olgan kaptarning uyasi suv bilan yuvilib ketdi.",
+    savol: "Birinchi kaptar nima uchun uyasini darhol mustahkamladi?",
+    variantlar: ["Chunki bulutlarga qarab yomg'ir yaqinlashayotganini tushundi", "Chunki uyasi go'zal ko'rinishga ega bo'lishini xohladi", "Chunki ikkinchi kaptar unga buyruq bergan edi"],
+    javob: 0,
+    izoh: "Birinchi kaptar osmondagi belgilarni o'qib, xavfni oldindan payqadi va tayyorgarlik ko'rdi. Ikkinchisi faqat hozirgi holatga qarab qaror qildi va oqibatda zarar ko'rdi."
   }
 ];
