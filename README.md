@@ -32,6 +32,11 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
    Bir PDF bir necha semestrga bo'linishi mumkin: `ingliz-tili-1kurs-1sem` (1–90-darslar) va `ingliz-tili-1kurs-2sem` (91–150-darslar)
    ikkalasi `fayl/ingliz-tili-1kurs.pdf` ga ishora qiladi (Chet tili, umumta'lim; muqova — Toshkent tuman 1-son texnikumi, 5 bet;
    asl bet raqamlari +5 ga almashtirilgan; o'qituvchi nomi ataylab bo'sh — sahifada o'qituvchi qismi chiqmaydi).
+   Bir necha Word fayldan yig'ilgan majmua: `milliy-sharq-shirinliklari-2026` (Oshpaz → Milliy va sharq shirinliklari qandolatchiligi,
+   3-semestr, Ibragimova S.T., 193 bet, 48 qism; 20.11.2026) — titul, namunaviy va ishchi dastur, TMR, 20 mavzuning texnologik xaritasi
+   va mavzu bayoni, test, adabiyotlar, baholash mezonlari. Har mavzu va har mavzu bayoni yangi betdan boshlangan, bo'sh betlar tashlangan;
+   har bet faqat o'z rasmlariga ishora qiladi (`qpdf --empty --pages a.pdf -- --remove-unreferenced-resources=yes …`), shuning uchun
+   qismlarni alohida PDF qilib olish yengil. Muallifning telefoni, emaili va surati ochiq saytga qo'yilmagan.
 6. Bosh sahifa `agent/index.json` dagi fanlarni ham «material bor» deb belgilaydi (`fanlar.js`); `build.py` qayta yig'ishda agent
    majmualarining ma'ruza/amaliy mavzularini qidiruvga (`data/qidiruv.json`, havola `?sem=` bilan) qo'shadi.
 
