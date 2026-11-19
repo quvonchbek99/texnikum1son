@@ -1391,5 +1391,13 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki xavf haqiqatanmi, avval aniqlash kerak edi", "Chunki hovuzda qochish uchun joy yo'q edi", "Chunki ot qurbaqalarni ovqat qilmoqchi emas edi"],
     javob: 0,
     izoh: "Xavfni aniq bilmasdan ko'r-ko'rona qochish ham ortiqcha zarar keltirishi mumkin. Avval vaziyatni tekshirib, keyin qaror qilish aqlli yo'l."
+  },
+  {
+    id: "ez-172", mavzu: "mehnat", sarlavha: "Dehqon va yomg'ir",
+    matn: "Dehqon yerga urug' sepish uchun qulay vaqtni kutib, uzoq vaqt bekor yurdi. Har kuni osmonga qarab: \"Yomg'ir yog'sa, ekin o'zi unib chiqadi\", der edi. Ammo u yerni haydamadi va urug'ni ham ekmadi. Yomg'ir yog'di, dalalar yashil bo'ldi, lekin dehqonning yeri bo'sh qoldi. Kuz kelib, qo'shnilari hosilni yig'ishtirganda, dehqon qo'l qovushtirib turardi.",
+    savol: "Dehqon nima uchun hosil ololmadi?",
+    variantlar: ["Chunki u yerni ekmasdan, faqat yomg'ir yog'ishini kutdi", "Chunki yomg'ir juda ko'p yog'di", "Chunki qo'shnilari unga urug' bermadi"],
+    javob: 0,
+    izoh: "Yomg'ir ekin o'sishiga yordam beradi, lekin urug'ni o'zi ekib bermaydi. Natijaga erishish uchun kerakli ishni o'zimiz boshlashimiz shart."
   }
 ];
