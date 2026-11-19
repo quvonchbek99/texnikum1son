@@ -43,6 +43,15 @@ sahifalaridan boshlab kerakli JS/CSS/rasm/ovoz fayllarini o'zi topib ko'chiradi;
 `.github/workflows/kuvonch-oyinlar.yml` har ~3 soatda (va qo'lda «Run workflow») ishga tushadi va faqat o'zgarish bo'lsa commit qiladi.
 `oyin/` ni qo'lda tahrirlamang — keyingi sinxronda qayta yoziladi; o'zgartirishni kuvonch.uz'da qiling.
 
+## Yo‘l harakati qoidalari 2026 va viktorina (19.11.2026)
+
+`yhq/` — «Yo‘l harakati qoidalari 2026» veb-ilovasi: o‘zbekcha (lotin/kirill), qoidalar, yo‘l belgilari va chiziqlar (vektor rasmlar),
+jarimalar (MJtK, BHM), test. Manba: lex.uz — VM 172-son qarori (30.10.2026 tahriri) va MJtK. `yhq/viktorina.html` — Kahoot uslubidagi
+viktorina: jonli (xona kodi + QR, o‘quvchilar telefondan; `yhq/js/net/ka-tarmoq.js` — MQTT reley), jamoaviy (bitta ekranda 2–4 jamoa)
+va yakka o‘yin; savollar `yhq/js/vq-bank.js` da har safar yangidan tuziladi. `yhq/yuklab/YHQ-2026.apk` — internetsiz Android ilova.
+`build.py` bu papkaga tegmaydi (faqat menyu, bosh sahifa, «Sinf o‘yinlari», qidiruv va sitemap’da havolalar bor). Yangilash: ilova
+manbasidagi `www/` ni `yhq/` ga ko‘chirish; `index.html` va `viktorina.html` dagi `window.YHQ_WEB=1` va SEO teglari saqlansin.
+
 ## Virtual laboratoriyalar (15.11.2026)
 
 Har bir fan uchun virtual xona: `/lab/<id>/`, katalog — `/lab/`. Fan sahifasida «Virtual laboratoriya» tugmasi chiqadi.
