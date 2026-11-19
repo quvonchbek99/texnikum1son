@@ -577,6 +577,24 @@ def data_files():
     if RTR_TIKUV:
         for t in RTR_TIKUV["topics"]:
             Q.append({"k": "m", "t": t["nomi"], "s": f'Zamonaviy tikuv jihozlari · {t["id"]} · {t["turi"]}', "u": "yonalish/moda-tikuv-texnologiyasi/fan/zamonaviy-tikuv-jihozlari/#" + ("amaliy" if t["turi"] == "Amaliy" else "maruza")})
+    # Kuvi agent joylagan majmualar (agent/m/*.json): ma'ruza va amaliy mavzulari ham qidiruvda chiqadi (har mavzudan bittadan)
+    _am = os.path.join(os.path.dirname(SRC), "agent", "m")
+    for _fn in sorted(os.listdir(_am)) if os.path.isdir(_am) else []:
+        try:
+            _m = json.load(open(os.path.join(_am, _fn), encoding="utf-8"))
+        except Exception:
+            continue
+        _yid, _fid = _m.get("yonalish"), _m.get("fan")
+        if not (_fid in UM if _yid == "umumtalim" else (_yid in YID and any(f["id"] == _fid for f in YID[_yid]["fanlar"]))):
+            continue
+        _bor = set()
+        for _q in _m.get("qismlar", []):
+            if _q.get("turi") not in ("maruza", "amaliy") or (_q.get("dars") and _q["dars"] in _bor):
+                continue
+            if _q.get("dars"):
+                _bor.add(_q["dars"])
+            Q.append({"k": "m", "t": _q.get("sarlavha") or "", "s": f'{_m.get("fan_nomi") or _fid} · ' + (f'{_q["dars"]}-mavzu · ' if _q.get("dars") else "") + ("Amaliy" if _q["turi"] == "amaliy" else "Ma’ruza"),
+                      "u": f'yonalish/{_yid}/fan/{_fid}/#{_q["turi"]}'})
     for lid, L in LABS.items():
         if L.get("_hub"):
             continue

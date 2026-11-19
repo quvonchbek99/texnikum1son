@@ -25,6 +25,12 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
    O'UM bo'limida to'liq majmua va qismlardan bitta PDF yoki ZIP (pdf-lib). Kuvi AI (`assets/t1-kuvi.js`) majmua matnidan
    mos parchalarni topib javob beradi, «N-bet» havolasi ko'ruvchida o'sha betni ochadi.
 4. Navbatdan o'chirilgan majmuani agent fayl/ va agent/ dan ham o'chiradi. `fayl/` umumiy chegarasi ~850 MB (GitHub Pages 1 GB).
+5. Qo'lda joylangan majmualar (navbatsiz): xuddi shu formatda `fayl/`, `agent/m/`, `agent/k/` ga yoziladi, lekin `agent/holat.json` ga
+   yozilmaydi — agent faqat `holat.json` dagilarni tozalaydi, shuning uchun bularga tegmaydi. O'chirish: uchala faylni olib tashlab,
+   `agent/index.json` dan yozuvini o'chirish. Namuna: `multimedia-animatsiya-2026` (Grafik va dizayn texnologiyasi → Multimedia va
+   animatsiya texnologiyalari, Mahmudova Sh.R., 192 bet, 83 qism; 19.11.2026).
+6. Bosh sahifa `agent/index.json` dagi fanlarni ham «material bor» deb belgilaydi (`fanlar.js`); `build.py` qayta yig'ishda agent
+   majmualarining ma'ruza/amaliy mavzularini qidiruvga (`data/qidiruv.json`) qo'shadi.
 
 Muhim: saytni qayta yig'ishda (`build.py`) `agent/`, `fayl/`, `eski/`, `materiallar/`, `oyin/` papkalariga tegilmaydi; push qilishdan oldin
 `git pull --rebase` (agent ham commit qiladi). Qo'lda sinov: Actions → «Kuvi agent» → Run workflow → `sinov_url`.

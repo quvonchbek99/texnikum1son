@@ -80,4 +80,14 @@
     })["catch"](function () {});
   }
   if ("requestIdleCallback" in window) requestIdleCallback(bulut, { timeout: 2500 }); else setTimeout(bulut, 1200);
+
+  // Kuvi agent joylagan katta majmualar (agent/index.json) ham «material bor» deb belgilanadi
+  fetch(ROOT + "agent/index.json?t=" + Math.floor(Date.now() / 300000)).then(function (r) { return r.ok ? r.json() : {}; }).then(function (idx) {
+    Object.keys(idx || {}).forEach(function (k) {
+      if (!(idx[k] || []).length) return;
+      MAT[k] = 1;
+      $$('.fk[data-k="' + k.replace(/"/g, "") + '"] [data-mat]').forEach(function (t) { t.hidden = false; });
+    });
+    if (S.m) go();
+  })["catch"](function () {});
 })();
