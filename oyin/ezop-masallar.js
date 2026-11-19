@@ -1399,5 +1399,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u yerni ekmasdan, faqat yomg'ir yog'ishini kutdi", "Chunki yomg'ir juda ko'p yog'di", "Chunki qo'shnilari unga urug' bermadi"],
     javob: 0,
     izoh: "Yomg'ir ekin o'sishiga yordam beradi, lekin urug'ni o'zi ekib bermaydi. Natijaga erishish uchun kerakli ishni o'zimiz boshlashimiz shart."
+  },
+  {
+    id: "ez-173", mavzu: "ehtiyotkorlik", sarlavha: "Echki va bo'ri",
+    matn: "Ochko'z bo'ri bir kuni echkining izidan kelib, uni tutmoqchi bo'ldi. Echki esa tezda baland tom ustiga chiqib olgan edi. Bo'ri pastda turib: \"Tushsang, seni yeyman\", dedi. Echki esa tom ustidan javob berdi: \"Men bu yerda xavfsizman, sen esa tomga chiqa olmaysan.\"",
+    savol: "Echki nima uchun bo'ridan qutulib qoldi?",
+    variantlar: ["Chunki u bo'ri bilan do'st bo'lib qolgan edi", "Chunki u bo'riga yetib bo'lmaydigan balandlikda turardi", "Chunki bo'ri ochlikdan kasal bo'lib qolgan edi"],
+    javob: 1,
+    izoh: "Echki bo'ri yetib bora olmaydigan joyga chiqib, o'zini xavfdan uzoqda saqladi. Ba'zan xavfdan tezda uzoqlashish eng oddiy va eng ishonchli himoya bo'ladi."
+  },
+  {
+    id: "ez-174", mavzu: "erkinlik", sarlavha: "Ot va bug'u",
+    matn: "Ot yaylovda yolg'iz o'tlab yurardi. Bir kuni bug'u kelib, eng yaxshi o'tloqni egallab oldi va otni uzoqqa haydab chiqardi. Ot qasos olish uchun odamga borib, bug'uni yengishda yordam berishni so'radi. Odam egar va jilov olib keldi, otga minib, bug'uni ovlab oldi, ammo o'sha kundan boshlab ot odamning xizmatkoriga aylanib qoldi.",
+    savol: "Ot bug'udan qasos olish uchun nima qildi va oqibatda nimani yo'qotdi?",
+    variantlar: ["Odamdan yordam so'radi va erkinligini yo'qotdi", "Bug'uni o'zi ovlab, yaylovni qaytarib oldi", "Bug'u bilan do'st bo'lib, yaylovni bo'lishib oldi"],
+    javob: 0,
+    izoh: "Ot dushmanidan o'ch olish uchun odamning yordamiga tayandi, lekin buning evaziga o'z erkinligidan ajralib qoldi. Qasos ko'pincha o'zimizga boshqacha qimmatga tushadi, shuning uchun ehtiyot bo'lish kerak."
   }
 ];
