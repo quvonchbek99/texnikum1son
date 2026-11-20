@@ -6,7 +6,7 @@
   if (window.__kaKuviFab) return; window.__kaKuviFab = 1;
   var path = location.pathname;
   if (window.top !== window.self) return;
-  if (/ai-ustoz\.html|viktorina\.html|jamoa\.html|chempionat\.html|\/playables\/|ezop-reels|google[0-9a-f]+\.html|kirish-ekrani/.test(path)) return;
+  if (/ai-ustoz\.html|kuvi-ai\.html|viktorina\.html|jamoa\.html|chempionat\.html|\/playables\/|ezop-reels|google[0-9a-f]+\.html|kirish-ekrani/.test(path)) return;
   var me = document.currentScript && document.currentScript.src, base = me ? me.replace(/[^\/]*(\?.*)?$/, "") : "/";
   try { if (localStorage.getItem("ka.kuvi.fab.off") === new Date().toISOString().slice(0, 10)) return; } catch (e) {}
   function mode() {

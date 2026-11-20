@@ -1455,5 +1455,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["U o'zini o'likka solib, nafasini tutdi", "U daraxtga chiqib yashirindi", "U ayiq bilan do'stlashib oldi"],
     javob: 0,
     izoh: "Ikkinchi do'st qochishga ulgurmagach, o'zini o'likka solib, nafasini tutdi va ayiq uni o'lik deb o'yladi. Bu hikoya ibrat uchun aytilgan; haqiqatda ayiqqa duch kelganda tavsiya etilgan xatti-harakatlar boshqacha."
+  },
+  {
+    id: "ez-180", mavzu: "ahloq", sarlavha: "Burgut va tulki",
+    matn: "Burgut va tulki bir daraxtda qo'shni bo'lib yashardi, bir-biriga qasam ichib, bolalarini tinch yashashga o'rgatdi. Bir kuni burgut ovga chiqib, bolalariga ovqat topa olmadi. Ochlikka chiday olmagan burgut tulkining bolalari yotgan uyaga bostirib kirib, ularni olib ketdi. Tulki qaytib kelib, qasamni eslatganda, burgut ochlikni bahona qilib, uzr so'ramadi.",
+    savol: "Burgut tulkining bolalarini nega olib ketdi?",
+    variantlar: ["Chunki u ochligini bahona qilib, qasamini buzdi", "Chunki tulki unga qarzini qaytarmagan edi", "Chunki u tulkining bolalarini o'z bolalaridek sevardi"],
+    javob: 0,
+    izoh: "Burgut ochlikni bahona qilib, qasamini buzdi. Masal shuni ko'rsatadiki, qiyin paytda ham va'daga sodiq qolish kerak; bahona topish yomonlikni oqlamaydi."
+  },
+  {
+    id: "ez-181", mavzu: "ehtiyotkorlik", sarlavha: "Kaptarning saboqi",
+    matn: "Bir kaptar har kuni don izlab, bog'ning bir xil yo'lidan uchib o'tardi. Bir kuni u yo'lda yerga yashirilgan to'r va uning ustiga sochilgan donni ko'rdi. Yaqinroq borganda to'rning chetida bir kaptar qanotlari ilinib qolib, qiynalib turganini ko'rdi. Kaptar uzoqdan turib, o'sha yo'ldan emas, boshqa, uzunroq yo'ldan uchishga qaror qildi. Ertasi kuni u shu yo'l bilan don topib, xavfdan omon qoldi.",
+    savol: "Kaptar nega ertasi kuni boshqa yo'ldan uchdi?",
+    variantlar: ["Chunki boshqa yo'l donga boyroq edi", "Chunki u ko'rgan xavfdan saboq olib, yo'lini o'zgartirdi", "Chunki u o'sha yo'lda uchishdan charchagan edi"],
+    javob: 1,
+    izoh: "Kaptar o'z ko'zi bilan ko'rgan xavfdan saboq oldi va xavfli joydan uzoqroq yurishni tanladi. Masal shuni o'rgatadiki, boshqalarning boshiga tushgan xavfdan ham ibrat olib, ehtiyot bo'lish kerak."
   }
 ];
