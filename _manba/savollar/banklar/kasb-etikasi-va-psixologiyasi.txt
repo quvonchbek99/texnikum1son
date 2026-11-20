@@ -1,0 +1,14 @@
+# Kasb etikasi va psixologiyasi — savollar banki
+@ Kasb etikasi
+Kasb etikasi nimani o'rganadi? | Kasbiy faoliyatdagi axloqiy me'yorlar va xulq qoidalarini | Faqat texnologiyani | Faqat narxlarni | Sport qoidalarini
+Mijoz bilan muloqotda eng muhim narsa qaysi? | Hurmat, diqqat bilan tinglash va xushmuomalalik | Ovozni ko'tarish | E'tiborsizlik | Bahslashish
+Mijoz norozi bo'lsa, usta qanday harakat qiladi? | Xotirjam tinglab, muammoni hal qilish yo'lini taklif qiladi | Bahslashadi | Mijozni chiqarib yuboradi | E'tibor bermaydi
+Mijozning shaxsiy ma'lumotlarini boshqalarga aytish mumkinmi? | Yo'q, maxfiylikka rioya qilinadi | Ha | Faqat do'stlarga | Faqat ijtimoiy tarmoqda
+Ustaning tashqi ko'rinishi nimaga ta'sir qiladi? | Mijozning ishonchi va salonga munosabatiga | Hech narsaga | Faqat narxga | Ob-havoga
+@ Muloqot psixologiyasi
+"Faol tinglash" nima? | Suhbatdoshni diqqat bilan tinglash, aniqlashtiruvchi savollar berish va fikrini qaytarish | Gapni bo'lish | Telefonga qarab tinglash | Jim turish
+Neverbal muloqotga nimalar kiradi? | Mimika, imo-ishora, ko'z bilan aloqa, tana holati | Faqat so'zlar | Yozma xatlar | Telefon qo'ng'irog'i
+Temperament turlari qaysi qatorda? | Xolerik, sangvinik, flegmatik, melanxolik | Optimist va pessimist | Faqat ikki tur | Kuchli va kuchsiz
+Tez, jo'shqin, ammo tez ta'sirlanuvchi temperament qaysi? | Xolerik | Flegmatik | Melanxolik | Sangvinik
+Vazmin, sekin va xotirjam temperament qaysi? | Flegmatik | Xolerik | Sangvinik | Melanxolik
+Kasbiy "kuyish" (burnout) nima? | Uzoq stress natijasida emotsional va jismoniy holsizlanish | Kasbga qiziqish ortishi | Ta'til | Maosh oshishi

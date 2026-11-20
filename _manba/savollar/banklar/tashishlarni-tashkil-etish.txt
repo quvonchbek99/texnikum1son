@@ -1,0 +1,14 @@
+# Tashishlarni tashkil etish — savollar banki
+@ Hujjatlar va ko'rsatkichlar
+Haydovchining ish kuni va avtomobil ishini qayd etuvchi asosiy hujjat qaysi? | Yo'l varaqasi | Yuk xati | Hisob-faktura | Shartnoma
+Yukni jo'natuvchidan qabul qilib, oluvchiga topshirishni rasmiylashtiruvchi hujjat? | Tovar-transport yuk xati | Yo'l varaqasi | Mehnat shartnomasi | Pasport
+Xalqaro avtomobil yuk tashishlarida ishlatiladigan yuk xati qaysi? | CMR yuk xati | Yo'l varaqasi | Ichki buyurtma | Kassa cheki
+Yuk ko'tarish qobiliyatidan foydalanish koeffitsienti nimani ko'rsatadi? | Tashilgan yuk massasining avtomobil yuk ko'tarish qobiliyatiga nisbatini | Tezlikni | Yoqilg'i sarfini | Haydovchi stajini
+Logistikada eng qisqa, tez va arzon yo'lni tanlash nima deyiladi? | Marshrutni optimallashtirish | Inventarizatsiya | Litsenziyalash | Sertifikatlash
+@ Tashish turlari va transport
+Belgilangan marshrut va jadval bo'yicha yo'lovchi tashish qanday ataladi? | Muntazam (yo'nalishli) tashish | Buyurtma asosida tashish | Taksi | Xalqaro tashish
+Tez buziladigan mahsulotlarni tashish uchun qaysi transport kerak? | Refrijerator (sovutgichli furgon) | Ochiq bortli avtomobil | Avtosamosval | Avtotsisterna
+Suyuq yuklarni (yoqilg'i, sut) tashish uchun maxsus transport qaysi? | Avtotsisterna | Refrijerator | Avtosamosval | Furgon
+Sochiluvchan yuklarni (qum, shag'al) tashib, to'kib berish uchun qaysi transport mos? | Avtosamosval | Refrijerator | Avtobus | Furgon
+Xavfli yuklarni xalqaro avtomobil tashish qaysi kelishuv bilan tartibga solinadi? | ADR kelishuvi | CMR konvensiyasi | Incoterms qoidalari | TIR karneti
+Yukni joylashtirishdagi asosiy talab qaysi? | Yuk teng taqsimlanadi, mahkamlanadi va ruxsat etilgan massadan oshmaydi | Yuk bir tomonga yig'iladi | Mahkamlash shart emas | Imkon qadar ko'proq yuklanadi

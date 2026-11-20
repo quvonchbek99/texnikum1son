@@ -1,0 +1,25 @@
+# Rus tili (o'zbek guruhlari uchun) — savollar banki
+@ Lug'at
+"Kitob" rus tilida qanday aytiladi? | Книга | Ручка | Стол | Дверь
+"Uy" rus tilida qanday aytiladi? | Дом | Дым | Дама | Душ
+"Ish" rus tilida qanday aytiladi? | Работа | Отдых | Школа | Улица
+"O'qituvchi" rus tilida qanday aytiladi? | Учитель (преподаватель) | Ученик | Врач | Водитель
+"Mehnat muhofazasi" rus tilida qanday aytiladi? | Охрана труда | Рабочий день | Заработная плата | Отпуск
+"Красный" so'zi qaysi rangni bildiradi? | Qizil | Ko'k | Yashil | Sariq
+"Понедельник" qaysi hafta kuni? | Dushanba | Seshanba | Yakshanba | Juma
+"Пятница" qaysi hafta kuni? | Juma | Payshanba | Shanba | Chorshanba
+@ Muloqot odobi
+"Rahmat" rus tilida qanday aytiladi? | Спасибо | Пожалуйста | Здравствуйте | До свидания
+"Assalomu alaykum" (rasmiy salom) rus tilida qanday aytiladi? | Здравствуйте | До свидания | Спасибо | Извините
+"Xayr" rus tilida qanday aytiladi? | До свидания | Привет | Спасибо | Пожалуйста
+"Kechirasiz" rus tilida qanday aytiladi? | Извините | Спасибо | Пожалуйста | Хорошо
+"Как вас зовут?" savolining ma'nosi nima? | Ismingiz nima? | Qayerda yashaysiz? | Necha yoshdasiz? | Qayerdan keldingiz?
+"Сколько вам лет?" savolining ma'nosi nima? | Necha yoshdasiz? | Ismingiz nima? | Soat necha? | Qancha turadi?
+"Где вы работаете?" savolining ma'nosi nima? | Qayerda ishlaysiz? | Qachon ishlaysiz? | Kim bo'lib ishlaysiz? | Ishingiz qanday?
+"Я читаю книгу" gapining tarjimasi qaysi? | Men kitob o'qiyapman | Men kitob yozyapman | Men kitob sotyapman | Men kitob olaman
+@ Grammatika
+Rus alifbosida nechta harf bor? | 33 ta | 26 ta | 29 ta | 35 ta
+"Стол" so'zi qaysi jinsda? | Мужской род (erkak jinsi) | Женский род (ayol jinsi) | Средний род (o'rta jins) | Jinsi yo'q
+"Книга" so'zi qaysi jinsda? | Женский род (ayol jinsi) | Мужской род (erkak jinsi) | Средний род (o'rta jins) | Jinsi yo'q
+"Окно" so'zi qaysi jinsda? | Средний род (o'rta jins) | Мужской род (erkak jinsi) | Женский род (ayol jinsi) | Faqat ko'plikda
+"Дом" so'zining ko'plik shakli qaysi? | дома | домы | доми | домья

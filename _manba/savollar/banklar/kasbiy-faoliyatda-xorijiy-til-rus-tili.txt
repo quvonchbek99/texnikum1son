@@ -1,0 +1,16 @@
+# Kasbiy faoliyatda xorijiy til (rus tili) — sartarosh uchun savollar banki
+@ Kasbiy lug'at
+"Qaychi" rus tilida qanday aytiladi? | Ножницы | Расчёска | Фен | Бритва
+"Taroq" rus tilida qanday aytiladi? | Расчёска | Ножницы | Зеркало | Кресло
+"Soch" rus tilida qanday aytiladi? | Волосы | Голова | Лицо | Брови
+"Soch turmagi (kesish)" rus tilida qanday aytiladi? | Стрижка | Покраска | Укладка | Завивка
+"Sochni bo'yash" rus tilida qanday aytiladi? | Окрашивание волос | Мытьё волос | Сушка волос | Стрижка волос
+"Bosh yuvish" rus tilida qanday aytiladi? | Мытьё головы | Стрижка | Укладка | Бритьё
+"Soqol olish" rus tilida qanday aytiladi? | Бритьё | Стрижка | Причёска | Маникюр
+"Фен" so'zi nimani bildiradi? | Soch quritgich | Qaychi | Taroq | Ustara
+"Короткая стрижка" nimani bildiradi? | Kalta soch turmagi | Uzun soch | Soch bo'yash | Soch yuvish
+@ Mijoz bilan muloqot
+"Mijoz" rus tilida qanday aytiladi? | Клиент | Мастер | Парикмахер | Касса
+"Qancha turadi?" rus tilida qanday so'raladi? | Сколько стоит? | Который час? | Где вы живёте? | Как вас зовут?
+"Садитесь, пожалуйста" iborasi nimani anglatadi? | Iltimos, o'tiring | Iltimos, kuting | Rahmat | Xayr
+"Записаться к мастеру" nimani anglatadi? | Ustaga navbatga yozilish | Ustaga pul to'lash | Ustani kutish | Ustaga qo'ng'iroq qilish

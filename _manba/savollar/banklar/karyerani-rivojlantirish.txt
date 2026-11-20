@@ -1,0 +1,14 @@
+# Karyerani rivojlantirish — savollar banki
+@ Ish qidirish
+Ish beruvchiga yuboriladigan, ta'lim, tajriba va ko'nikmalar qisqacha yozilgan hujjat? | Rezyume (CV) | Diplom | Pasport | Mehnat daftarchasi
+Rezyumeda odatda nimalar ko'rsatiladi? | Aloqa ma'lumotlari, ta'lim, ish tajribasi, ko'nikmalar | Faqat sevimli taomlar | Faqat oila a'zolari | Faqat kutilgan maosh
+Ish suhbatiga tayyorgarlikda nima muhim? | Kompaniya haqida ma'lumot to'plash va tajribani misollar bilan aytishga tayyorlanish | Kech qolish | Kompaniya haqida bilmaslik | Suhbat paytida telefonda gaplashish
+Kasbiy portfolio nima? | Bajarilgan ishlar, loyihalar va yutuqlar namunalari to'plami | Pasport nusxasi | Bank hisobi | Mehnat daftarchasi
+@ Ko'nikmalar va maqsadlar
+SMART maqsadning xususiyatlari qaysi qatorda? | Aniq, o'lchanadigan, erishiladigan, dolzarb, muddatli | Katta, qiyin, uzoq, noaniq | Tez, oson, arzon | Faqat orzu
+"Soft skills" (umumiy, yumshoq ko'nikmalar)ga misol qaysi? | Muloqot, jamoada ishlash, vaqtni boshqarish | Payvandlash | Dasturlash tili | Dvigatel ta'mirlash
+"Hard skills" (kasbiy ko'nikmalar)ga misol qaysi? | Avtomobil diagnostikasi, chizma o'qish | Muloqot | Hamdardlik | Kechirimlilik
+Kasbiy o'sish uchun eng to'g'ri yo'l qaysi? | Uzluksiz o'qish, malaka oshirish va yangi texnologiyalarni o'rganish | Bir joyda to'xtab qolish | Faqat diplom bilan cheklanish | O'qishni tashlash
+@ Mehnat munosabatlari
+Mehnat shartnomasi qaysi tomonlar o'rtasida tuziladi? | Xodim va ish beruvchi | Xodim va qo'shni | Ikki ish beruvchi | O'quvchi va do'st
+O'zbekiston Mehnat kodeksiga ko'ra normal ish vaqti haftasiga necha soatdan oshmasligi kerak? | 40 soat | 48 soat | 60 soat | 30 soat

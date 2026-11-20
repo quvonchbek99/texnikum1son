@@ -1,0 +1,14 @@
+# Kompozitsiya va dizayn asoslari — savollar banki
+@ Kompozitsiya qonunlari
+Barcha qismlarning yaxlit birligi qaysi kompozitsiya qonuni? | Yaxlitlik (butunlik) | Tasodifiylik | Tartibsizlik | Bo'shliq
+Oltin kesim nisbati taxminan qancha? | 1 : 1,618 | 1 : 2 | 1 : 3,14 | 1 : 1
+Elementlarning o'qqa nisbatan ko'zgudek bir xil joylashuvi nima deyiladi? | Simmetriya | Asimmetriya | Ritm | Kontrast
+Elementlarning bir maromda takrorlanishi nima deyiladi? | Ritm | Simmetriya | Statika | Nyuans
+Keskin farq qiluvchi elementlarni qarama-qarshi qo'yish nima deyiladi? | Kontrast | Nyuans | Ritm | Muvozanat
+Bir-biridan juda nozik farq qiluvchi rang yoki shakllar nima deyiladi? | Nyuans | Kontrast | Dinamika | Ritm
+Kompozitsiyadagi asosiy, e'tiborni tortuvchi qism qanday ataladi? | Kompozitsion markaz | Fon | Chekka | Ramka
+Harakat, intilish taassurotini beruvchi kompozitsiya qanday ataladi? | Dinamik kompozitsiya | Statik kompozitsiya | Simmetrik kompozitsiya | Frontal kompozitsiya
+@ Milliy naqsh va zargarlik dizayni
+O'zbek milliy naqshida o'simliksimon ornament qanday ataladi? | Islimiy | Girih | Kufiy | Nastaliq
+Chiziqlar kesishuvidan hosil bo'ladigan geometrik naqsh qanday ataladi? | Girih | Islimiy | Suls | Pargori
+Zargarlik buyumi eskizi nima uchun chiziladi? | Buyumning g'oyasi, shakli va bezaklarini oldindan aniqlash uchun | Hisobot uchun | Sotish uchun | Shart emas

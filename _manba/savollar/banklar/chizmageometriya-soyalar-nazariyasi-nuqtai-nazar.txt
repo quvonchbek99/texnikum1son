@@ -1,0 +1,17 @@
+# Chizmageometriya, soyalar nazariyasi, nuqtai nazar (perspektiva) — savollar banki
+@ Proyeksiyalash
+Ortogonal proyeksiyada proyeksiyalovchi nurlar tekislikka qanday yo'nalgan? | Perpendikulyar | Qiya (45°) | Parallel | Ixtiyoriy
+Markaziy proyeksiyada nurlar qayerdan chiqadi? | Bitta nuqtadan (proyeksiya markazidan) | Parallel holda | Har xil nuqtalardan | Tekislikdan
+Frontal proyeksiya tekisligi qanday belgilanadi? | V (P2) | H (P1) | W (P3) | A
+Gorizontal proyeksiya tekisligi qanday belgilanadi? | H (P1) | V (P2) | W (P3) | F
+Profil proyeksiya tekisligi qanday belgilanadi? | W (P3) | H (P1) | V (P2) | P
+Proyeksiya tekisligiga perpendikulyar to'g'ri chiziq shu tekislikda qanday ko'rinadi? | Nuqta | To'g'ri chiziq | Aylana | Uchburchak
+Chizmageometriya fanining asoschisi hisoblangan fransuz olimi kim? | Gaspar Monj | Isaak Nyuton | Rene Dekart | Blez Paskal
+@ Perspektiva (nuqtai nazar)
+Perspektivada parallel chiziqlar qayerda tutashgandek ko'rinadi? | Ufq chizig'idagi qochish nuqtasida | Hech qachon tutashmaydi | Kuzatuvchi oyog'ida | Rasm chekkasida
+Perspektivadagi ufq chizig'i nimaga mos keladi? | Kuzatuvchi ko'zi balandligiga | Yer sathiga | Rasm tepasiga | Buyum soyasiga
+Frontal (bir nuqtali) perspektivada nechta qochish nuqtasi bo'ladi? | 1 ta | 2 ta | 3 ta | 0
+Burchakli perspektivada odatda nechta qochish nuqtasi bo'ladi? | 2 ta | 1 ta | 4 ta | 0
+@ Soyalar nazariyasi
+Quyosh yorug'ligida soya qurishda nurlar qanday qabul qilinadi? | Parallel | Bir nuqtadan tarqaluvchi | Aylanma | To'lqinsimon
+Chiroq (nuqtaviy manba) yorug'ligida soya qurishda nurlar qanday? | Bir nuqtadan tarqaluvchi (markaziy) | Parallel | Faqat vertikal | Faqat gorizontal

@@ -1,0 +1,28 @@
+# Fizika (umumta'lim) — savollar banki
+@ Mexanika
+Tekis harakatda tezlik formulasi qaysi? | v = s / t | v = s · t | v = t / s | v = a · s
+Nyutonning ikkinchi qonuni qaysi? | F = m · a | F = m / a | F = a / m | F = m + a
+Kuchning SI dagi birligi qaysi? | Nyuton (N) | Joul (J) | Vatt (W) | Paskal (Pa)
+Ish va energiyaning SI dagi birligi qaysi? | Joul (J) | Nyuton (N) | Vatt (W) | Kelvin (K)
+Quvvatning SI dagi birligi qaysi? | Vatt (W) | Joul (J) | Nyuton (N) | Amper (A)
+Erkin tushish tezlanishi taxminan nechaga teng? | 9,8 m/s² | 98 m/s² | 0,98 m/s² | 1 m/s²
+72 km/soat necha m/s ga teng? | 20 m/s | 72 m/s | 7,2 m/s | 36 m/s ## 72 · 1000 / 3600 = 20 m/s
+Bosim formulasi qaysi? | p = F / S | p = F · S | p = m · g | p = S / F
+Kinetik energiya formulasi qaysi? | E = mv²/2 | E = mgh | E = mv | E = Fs
+Yer ustidagi jismning potensial energiyasi formulasi qaysi? | E = mgh | E = mv²/2 | E = Pt | E = F/S
+Impuls formulasi qaysi? | p = m · v | p = F · t² | p = m / v | p = mgh
+@ Issiqlik hodisalari
+Suv normal atmosfera bosimida necha gradusda qaynaydi? | 100 °C | 0 °C | 50 °C | 120 °C
+0 °C necha Kelvinga teng? | 273 K | 0 K | 100 K | −273 K
+Jismni qizdirish uchun kerak bo'lgan issiqlik miqdori formulasi qaysi? | Q = c · m · Δt | Q = m · g | Q = U · I | Q = F · s
+Suvning solishtirma issiqlik sig'imi qancha? | 4200 J/(kg·°C) | 1000 J/(kg·°C) | 420 J/(kg·°C) | 42 000 J/(kg·°C)
+@ Elektr va magnetizm
+Zanjir qismi uchun Om qonuni qaysi? | I = U / R | U = I / R | R = I · U | I = R / U
+Elektr zaryadining SI dagi birligi qaysi? | Kulon (C) | Amper (A) | Volt (V) | Om
+Elektromagnit induksiya hodisasini kim kashf etgan? | Maykl Faradey | Isaak Nyuton | Albert Eynshteyn | Galileo Galiley
+@ Optika va to'lqinlar
+Yorug'likning vakuumdagi tezligi qancha? | 300 000 km/s | 340 m/s | 3 000 km/s | 30 000 km/s
+Tovushning havodagi tezligi taxminan qancha? | 340 m/s | 300 000 km/s | 34 m/s | 3 400 m/s
+Yorug'likning bir muhitdan ikkinchisiga o'tishda yo'nalishini o'zgartirishi nima deyiladi? | Sinish (refraksiya) | Qaytish | Difraksiya | Interferensiya
+Yassi ko'zguda tushish burchagi va qaytish burchagi qanday bo'ladi? | Teng | Qaytish burchagi 2 marta katta | Tushish burchagi katta | Bog'liq emas
+Chastotaning SI dagi birligi qaysi? | Gers (Hz) | Vatt (W) | Joul (J) | Metr (m)

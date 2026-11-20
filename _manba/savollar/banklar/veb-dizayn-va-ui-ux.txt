@@ -1,0 +1,21 @@
+# Veb dizayn va UI/UX — savollar banki
+@ HTML va CSS asoslari
+Veb-sahifaning tuzilishini (strukturasini) belgilovchi til qaysi? | HTML | CSS | JavaScript | SQL
+Veb-sahifaning tashqi ko'rinishini (rang, shrift, joylashuv) belgilovchi til qaysi? | CSS | HTML | PHP | Python
+Veb-sahifaga interaktivlik qo'shuvchi dasturlash tili qaysi? | JavaScript | CSS | HTML | XML
+HTML'da eng katta sarlavha tegi qaysi? | <h1> | <h6> | <p> | <head>
+HTML'da havola (ssilka) yaratuvchi teg qaysi? | <a> | <img> | <div> | <ul>
+HTML'da rasm qo'yuvchi teg qaysi? | <img> | <a> | <pic> | <src>
+CSS'da matn rangini o'zgartiruvchi xususiyat qaysi? | color | font-size | background | margin
+Element atrofidagi tashqi bo'sh joyni belgilaydigan CSS xususiyati qaysi? | margin | padding | border | width
+Element chegarasi bilan ichidagi matn orasidagi ichki bo'shliq qaysi xususiyat bilan beriladi? | padding | margin | outline | gap
+@ UI/UX dizayn
+UX nimani anglatadi? | Foydalanuvchi tajribasi (User Experience) | Foydalanuvchi interfeysi | Universal XML | Unikal eksport
+UI nimani anglatadi? | Foydalanuvchi interfeysi (User Interface) | Foydalanuvchi tajribasi | Universal Internet | Unikal identifikator
+Saytning turli ekran o'lchamlariga moslashuvchanligi qanday ataladi? | Responsiv (adaptiv) dizayn | Statik dizayn | Flat dizayn | Skeuomorfizm
+Sahifaning dastlabki, oddiy chiziqli sxematik maketi qanday ataladi? | Wireframe (karkas) | Mockup | Favikon | Logotip
+UI/UX dizaynerlar eng ko'p ishlatadigan onlayn dizayn dasturi qaysi? | Figma | Excel | Audacity | AutoCAD
+Foydalanuvchini harakatga undovchi tugma (masalan, "Ro'yxatdan o'tish") nima deyiladi? | CTA (Call to Action) tugmasi | Favikon | Futer | Breadcrumb
+Veb-sahifaning eng pastki qismi (kontaktlar, mualliflik) qanday ataladi? | Futer (footer) | Xeder (header) | Sidebar | Banner
+Brauzer yorlig'ida ko'rinadigan kichik sayt belgisi nima deyiladi? | Favikon | Banner | Logotip-maket | Watermark
+Matn va fon ranglari orasidagi yetarli kontrast nima uchun kerak? | O'qilishi oson bo'lishi va ko'rishi zaif foydalanuvchilar uchun | Sayt tezligi uchun | SEO uchun shart emas | Faqat chiroy uchun

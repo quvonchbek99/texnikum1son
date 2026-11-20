@@ -1,0 +1,19 @@
+# Yong'in avariya-qutqaruv taktikasi — savollar banki
+@ Yonish va yong'in sinflari
+Yonish sodir bo'lishi uchun zarur uchta shart qaysi? | Yonuvchi modda, kislorod, alanga manbai (issiqlik) | Suv, havo, tuproq | Elektr, gaz, yog' | Shamol, yomg'ir, quyosh
+"A" sinfidagi yong'inlar qanday moddalarga tegishli? | Qattiq yonuvchi moddalar (yog'och, qog'oz, mato) | Yonuvchi suyuqliklar | Gazlar | Metallar
+"B" sinfidagi yong'inlar qanday moddalarga tegishli? | Yonuvchi suyuqliklar (benzin, moy, bo'yoq) | Qattiq moddalar | Gazlar | Metallar
+Yonayotgan benzin yoki moyni suv bilan o'chirish mumkinmi? | Yo'q, suyuqlik suv ustida tarqalib, yong'in kengayadi | Ha, eng yaxshi usul | Ha, sovuq suv bilan | Faqat kechasi
+@ O't o'chirish vositalari
+Yong'in haqida xabar berish uchun O'zbekistondagi telefon raqami qaysi? | 101 | 102 | 103 | 104
+Kukunli o't o'chirgich qanday belgilanadi? | OP | OU | OVP | OV
+Kuchlanish ostidagi elektr qurilmasini o'chirish uchun qaysi o't o'chirgich mos? | Karbonat angidridli (OU) yoki kukunli | Suvli | Havo-ko'pikli | Nam latta
+O't o'chirgich oqimi qayerga yo'naltiriladi? | Alanganing asosiga (yonayotgan moddaga) | Alanga uchiga | Tepaga | Odamlarga
+Yong'in gidranti nimaga xizmat qiladi? | Suv ta'minoti tarmog'idan yong'in o'chirish uchun suv olishga | Yoqilg'i quyishga | Havo berishga | Elektr berishga
+O't o'chiruvchining nafas olish organlarini himoya qiluvchi apparat qaysi? | Siqilgan havoli nafas olish apparati | Doka niqob | Ko'zoynak | Kaska
+@ Taktika va harakatlar
+Yong'in joyiga kelgan birinchi bo'linma birinchi navbatda nima qiladi? | Razvedka o'tkazadi va odamlarni qutqarishni tashkil etadi | Mashinani yuvadi | Kutadi | Hisobot yozadi
+Yong'in tarqalish yo'llarini to'sib, uni cheklash qanday ataladi? | Yong'inni lokalizatsiya qilish | Razvedka | Evakuatsiya | Dezaktivatsiya
+Elektr simlari yonayotganda birinchi navbatda nima qilinadi? | Elektr ta'minoti o'chiriladi | Suv sepiladi | Eshik ochiladi | Kutiladi
+Tutunli xonada qanday harakatlanish kerak? | Engashib yoki emaklab, og'iz-burunni nam mato bilan to'sib | Tik turib yugurib | Ko'zni yumib | Liftdan foydalanib
+Yong'in paytida binodan chiqishda liftdan foydalanish mumkinmi? | Yo'q, faqat zinapoyadan | Ha | Faqat yuqoriga | Faqat pastga

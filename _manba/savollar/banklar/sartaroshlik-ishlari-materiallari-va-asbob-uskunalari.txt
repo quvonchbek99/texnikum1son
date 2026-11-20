@@ -1,0 +1,14 @@
+# Sartaroshlik ishlari materiallari va asbob-uskunalari — savollar banki
+@ Asbob-uskunalar
+Sochni kesib shakl berish uchun asosiy asbob qaysi? | To'g'ri qaychi | Filirovka qaychisi | Taroq | Fen
+Sochni quritish va turmaklashda ishlatiladigan elektr asbob qaysi? | Fen | Trimmer | Ustara | Pulverizator
+Sochni namlash uchun ishlatiladigan purkagich qaysi? | Pulverizator | Fen | Ployka | Qisqich
+Sochni bo'laklarga ajratib ushlab turish uchun nima ishlatiladi? | Qisqichlar | Ustara | Fen | Bigudi
+Mijozning kiyimini soch va kimyoviy moddalardan himoya qiluvchi vosita qaysi? | Peleringa (yopinchiq) | Faqat sochiq | Kepka | Hech narsa
+Qaychilar qanday saqlanadi? | Toza, quruq va g'ilofda | Nam holda | Ochiq holda stol ustida | Suvda
+Elektr mashinkani ishlatishdan oldin nima tekshiriladi? | Sim va vilka butligi, pichoqlar tozaligi | Rangi | Og'irligi | Hech narsa
+Ultrabinafsha kamerasi nima uchun ishlatiladi? | Toza asboblarni mikroblardan saqlash uchun | Sochni quritish uchun | Bo'yoq aralashtirish uchun | Yoritish uchun
+@ Materiallar
+Oksidantning asosiy faol moddasi qaysi? | Vodorod peroksidi | Spirt | Sirka | Tuz
+Oksidantning 3, 6, 9, 12 % lik bo'lishi nimani belgilaydi? | Rangni ochish (oqartirish) kuchini | Hidini | Narxini | Rangini
+Bo'yashdan oldin allergiyaga qanday tekshiriladi? | Bilak yoki quloq orqasiga oz miqdor surtilib, 24–48 soat kuzatiladi | Tekshirilmaydi | Ko'zga tomiziladi | Ichib ko'riladi

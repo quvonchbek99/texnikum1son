@@ -1,0 +1,21 @@
+# Texnikaviy chizmachilik — savollar banki
+@ Formatlar, chiziqlar va masshtab
+A4 formatning o'lchamlari qancha? | 210 × 297 mm | 297 × 420 mm | 148 × 210 mm | 420 × 594 mm
+A3 formatning o'lchamlari qancha? | 297 × 420 mm | 210 × 297 mm | 594 × 841 mm | 100 × 200 mm
+Chizmada ko'rinadigan kontur qaysi chiziq bilan chiziladi? | Yo'g'on asosiy yaxlit chiziq | Shtrix chiziq | Shtrix-punktir chiziq | Ingichka to'lqinsimon chiziq
+Ko'rinmas kontur chiziqlari qaysi chiziq bilan ko'rsatiladi? | Shtrix chiziq | Yo'g'on yaxlit chiziq | Shtrix-punktir chiziq | Ingichka yaxlit chiziq
+O'q va markaz chiziqlari qaysi chiziq bilan chiziladi? | Ingichka shtrix-punktir chiziq | Yo'g'on yaxlit chiziq | Shtrix chiziq | To'lqinsimon chiziq
+Chizmadagi o'lchamlar birligi yozilmaganda qaysi birlikda beriladi? | Millimetrda | Santimetrda | Metrda | Dyuymda
+1:2 masshtab nimani bildiradi? | Tasvir haqiqiy o'lchamdan 2 marta kichraytirilgan | 2 marta kattalashtirilgan | Haqiqiy o'lchamda | 20 marta kichraytirilgan
+2:1 masshtab nimani bildiradi? | Tasvir 2 marta kattalashtirilgan | 2 marta kichraytirilgan | Haqiqiy o'lchamda | 20 marta kattalashtirilgan
+Diametr o'lchami oldidan qaysi belgi qo'yiladi? | ⌀ | R | □ | ∠
+Radius o'lchami oldidan qaysi harf qo'yiladi? | R | D | ⌀ | M
+Metrik rezba chizmada qanday belgilanadi? | M10 kabi | R10 kabi | ⌀10 kabi | T10 kabi
+@ Proyeksiyalar, ko'rinishlar va qirqimlar
+Ustdan ko'rinish asosiy (old) ko'rinishga nisbatan qayerda joylashadi (ESKD bo'yicha)? | Ostida | Ustida | Chapda | O'ngda
+Chapdan ko'rinish asosiy ko'rinishga nisbatan qayerda joylashadi (ESKD bo'yicha)? | O'ngda | Chapda | Ostida | Ustida
+Detalning ichki tuzilishini ko'rsatish uchun uni xayolan kesib tasvirlash nima deyiladi? | Qirqim | Ko'rinish | Aksonometriya | Eskiz
+Qirqimda kesilgan metall sirt qanday belgilanadi? | 45° qiyalikdagi ingichka parallel shtrixlar bilan | Rangli bo'yoq bilan | Nuqtalar bilan | Belgilanmaydi
+Chizmachilik asboblarisiz, qo'lda, ko'z bilan chamalab chiziladigan chizma nima deyiladi? | Eskiz | Ishchi chizma | Yig'ish chizmasi | Aksonometriya
+Detalning yaqqol (uch o'lchamli) tasviri qanday ataladi? | Aksonometrik proyeksiya | Frontal ko'rinish | Profil ko'rinish | Qirqim
+Chizmaning o'ng pastki burchagidagi detal nomi, material, masshtab yoziladigan jadval? | Asosiy yozuv (shtamp) | Spetsifikatsiya | Ramka | Izoh

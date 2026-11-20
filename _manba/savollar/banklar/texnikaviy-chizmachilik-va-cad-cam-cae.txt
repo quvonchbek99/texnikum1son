@@ -1,0 +1,13 @@
+# Texnikaviy chizmachilik va CAD/CAM/CAE — savollar banki
++fan: texnikaviy-chizmachilik
+@ CAD/CAM/CAE tizimlari
+CAD nimani anglatadi? | Kompyuterli loyihalash (chizma va 3D model yaratish) | Kompyuterli ishlab chiqarish | Muhandislik tahlili | Ma'lumotlar bazasi
+CAM nimani anglatadi? | Kompyuterli ishlab chiqarish (stanoklar uchun dastur tayyorlash) | Kompyuterli loyihalash | Kompyuterli tahlil | Kompyuter animatsiyasi
+CAE nimani anglatadi? | Kompyuterli muhandislik tahlili (mustahkamlik, issiqlik hisobi) | Kompyuterli loyihalash | Ishlab chiqarishni rejalashtirish | Animatsiya
+Keng tarqalgan 2D/3D chizmachilik dasturi qaysi? | AutoCAD | Photoshop | Excel | Audacity
+3D parametrik modellash dasturlariga misol qaysi qatorda? | SolidWorks, KOMPAS-3D, Fusion 360 | Paint, Word | Notepad, Excel | Audacity, VLC
+Raqamli dastur bilan boshqariladigan (CNC) stanoklar uchun dastur kodi qaysi? | G-kod | HTML | SQL | CSS
+AutoCAD fayllarining asosiy formati qaysi? | DWG | PSD | MP4 | DOCX
+AutoCADda chiziq chizish buyrug'i qaysi? | LINE | CIRCLE | TRIM | COPY
+AutoCADda ortiqcha chiziq qismlarini kesib tashlash buyrug'i qaysi? | TRIM | EXTEND | MOVE | ZOOM
+3D printerda chop etish uchun model odatda qaysi formatda saqlanadi? | STL | DWG | PDF | MP3

@@ -1,0 +1,19 @@
+# Avtomobil dvigatellariga servis xizmat ko'rsatish va ta'mirlash — savollar banki
+@ Texnik xizmat ko'rsatish
+Dvigatel moyi qachon almashtiriladi? | Ishlab chiqaruvchi belgilagan yurish (km) yoki muddatda | Faqat dvigatel buzilganda | Hech qachon | Har kuni
+Dvigatel moyi almashtirilganda odatda yana nima almashtiriladi? | Moy filtri | Shamlar | Tormoz kolodkasi | Akkumulyator
+Dvigatel moyining qovushqoqlik sinfi qanday belgilanadi? | SAE 5W-30 kabi | DOT 4 kabi | R16 kabi | 12 V kabi
+Gaz taqsimlash mexanizmi tasmasi uzilsa, ko'p dvigatellarda nima yuz berishi mumkin? | Klapanlar porshenga urilib egiladi | Hech narsa bo'lmaydi | Faqat chiroqlar o'chadi | Tormoz ishlamay qoladi
+Sovitish tizimiga qanday suyuqlik quyiladi? | Antifriz (sovituvchi suyuqlik) | Tormoz suyuqligi | Dvigatel moyi | Benzin
+Dvigatel qizib turganda radiator qopqog'ini ochish nima uchun xavfli? | Bosim ostidagi qaynoq suyuqlik otilib chiqib, kuydiradi | Moy to'kiladi | Akkumulyator portlaydi | Hech qanday xavf yo'q
+@ Ta'mirlash ishlari
+Silindr kallagi boltlari qanday tartibda tortiladi? | Markazdan chetga, belgilangan tartib va moment bilan, bir necha bosqichda | Chetdan markazga, ixtiyoriy kuch bilan | Faqat bitta boltni | Istalgan tartibda
+Boltlarni belgilangan kuch (moment) bilan tortish uchun qaysi asbob ishlatiladi? | Dinamometrik kalit | Bolg'a | Ombir | Shtangensirkul
+Silindrdagi kompressiyani o'lchash asbobi qaysi? | Kompressometr | Ampermetr | Areometr | Multimetr
+Kompressiyaning pastligi nimadan dalolat beradi? | Porshen halqalari yoki klapanlar yeyilgani (germetiklik buzilgani) | Moy yangi ekanidan | Akkumulyator to'laligidan | Shinalar dami pastligidan
+Klapan bilan kulachok orasidagi issiqlik tirqishi nima bilan o'lchanadi? | Shchup (tirqish o'lchagich) | Lineyka | Manometr | Termometr
+@ Nosozlik belgilari
+Chiqindi gazdan ko'k tutun chiqishi ko'pincha nimani bildiradi? | Moy yonish kamerasiga tushib yonayotganini | Yoqilg'i juda kamligini | Antifriz kamligini | Normal holatni
+Benzinli dvigatelda qora tutun ko'pincha nimani bildiradi? | Aralashma haddan tashqari boy (yoqilg'i ortiqcha) | Moy kamligini | Akkumulyator zaryadsizligini | Shina dami pastligini
+Dvigatel qizigandan keyin ham davom etadigan quyuq oq tutun nimani bildirishi mumkin? | Sovituvchi suyuqlik silindrga tushayotganini (kallak prokladkasi shikastlangan) | Normal holatni | Yangi moy quyilganini | Tormoz nosozligini
+Moy bosimi nazorat chirog'i yurish paytida yonsa nima qilish kerak? | Darhol dvigatelni o'chirib, moy sathi va bosimini tekshirish | Tezlikni oshirish | E'tibor bermaslik | Konditsionerni yoqish

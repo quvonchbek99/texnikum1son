@@ -1,0 +1,14 @@
+# Fizika va astronomiya (umumta'lim) — savollar banki
++fan: fizika
+@ Astronomiya
+Quyosh sistemasidagi eng katta sayyora qaysi? | Yupiter | Saturn | Yer | Mars
+Quyoshga eng yaqin sayyora qaysi? | Merkuriy | Venera | Yer | Mars
+"Qizil sayyora" deb qaysi sayyora ataladi? | Mars | Venera | Yupiter | Saturn
+Yorqin halqalari bilan mashhur sayyora qaysi? | Saturn | Mars | Merkuriy | Venera
+Yerdan Quyoshgacha o'rtacha masofa (1 astronomik birlik) taxminan qancha? | 150 mln km | 15 mln km | 1,5 mlrd km | 384 ming km
+Yer o'z o'qi atrofida necha soatda bir marta aylanadi? | Taxminan 24 soatda | 12 soatda | 365 kunda | 1 soatda
+Yorug'lik yili nima? | Yorug'lik bir yilda bosib o'tadigan masofa | Vaqt birligi | Yulduz yoshi | Sayyora massasi
+Biz yashaydigan galaktika qanday ataladi? | Somon yo'li | Andromeda | Magellan bulutlari | Orion
+Mirzo Ulug'bek rasadxonasi qaysi shaharda joylashgan? | Samarqand | Buxoro | Toshkent | Xiva
+Koinotga birinchi bo'lib uchgan inson kim? | Yuriy Gagarin | Nil Armstrong | Valentina Tereshkova | German Titov
+Oyga birinchi qadam qo'ygan inson kim? | Nil Armstrong | Yuriy Gagarin | Bazz Oldrin | Aleksey Leonov

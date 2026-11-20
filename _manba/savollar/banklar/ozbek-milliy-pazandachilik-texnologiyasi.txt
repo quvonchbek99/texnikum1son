@@ -1,0 +1,19 @@
+# O'zbek milliy pazandachilik texnologiyasi — savollar banki
+@ Palov va quyuq taomlar
+Palovda yog'da go'sht, piyoz va sabzi qovurilib, ziravor bilan qaynatiladigan asos nima deyiladi? | Zirvak | Qatiq | Qaymoq | Sho'rva
+Toshkent palovi uchun guruch solishdan oldin nima qilinadi? | Guruch saralab yuviladi va ivitiladi, zirvak tayyorlanadi | Guruch qovuriladi | Guruch quritiladi | Guruch muzlatiladi
+Dimlama qanday tayyorlanadi? | Go'sht va sabzavotlar qatlam-qatlam terilib, past olovda dimlanadi | Qaynoq yog'da qovuriladi | Tandirda yopiladi | Muzlatiladi
+Qozon kabob qanday tayyorlanadi? | Go'sht va kartoshka qozonda qovurib pishiriladi | Bug'da pishiriladi | Tandirda yopiladi | Qaynatiladi
+Shashlik uchun go'sht pishirishdan oldin nima qilinadi? | Ziravor va piyoz bilan marinadlanadi | Qaynatiladi | Muzlatiladi | Tuzsiz qoldiriladi
+@ Xamirli taomlar
+Manti qanday usulda pishiriladi? | Bug'da (mantiqasqonda) | Qovurib | Tandirda | Qaynoq yog'da
+Somsa qanday pishiriladi? | Tandirda yoki pechda | Qozonda qaynatib | Bug'da | Muzlatib
+Chuchvara qanday pishiriladi? | Qaynab turgan suvda yoki sho'rvada | Tandirda | Bug'da | Qovurib
+Lag'mon xamiri qanday tayyorlanadi? | Qattiq xamir qorilib, cho'zib ingichka uzun tortiladi | Achitqili yumshoq xamir | Suyuq xamir | Qumloq xamir
+Tandir non xamiri qanday xamir? | Achitqili (xamirturushli) xamir | Qumloq xamir | Biskvit xamiri | Qatlamli xamir
+Norin qanday taom? | Qaynatilgan go'sht va ingichka kesilgan xamirdan tayyorlanadigan taom | Sho'rva | Shirinlik | Ichimlik
+@ Suyuq taomlar, salatlar va bayram taomlari
+Mastava qanday taom? | Guruchli suyuq taom | Qovurilgan go'sht | Shirinlik | Salat
+Achchiq-chuchuk salatining tarkibi qaysi? | Pomidor, piyoz, achchiq qalampir, rayhon | Kartoshka, sabzi, mayonez | Karam va olma | Bodring va qatiq
+Sumalak nimadan tayyorlanadi? | Undirilgan bug'doy sharbati va undan | Guruchdan | Go'shtdan | Sutdan
+Halim qanday tayyorlanadi? | Bug'doy va go'sht uzoq qaynatilib, bir xil massa bo'lguncha eziladi | Xamir qovuriladi | Sabzavot dimlanadi | Mevalar quritiladi

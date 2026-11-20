@@ -1,0 +1,27 @@
+# Axborot texnologiyalari asoslari — savollar banki
+@ Axborot va uning o'lchov birliklari
+Axborotning eng kichik o'lchov birligi qaysi? | Bit | Bayt | Kilobayt | Piksel
+1 bayt necha bitga teng? | 8 bit | 4 bit | 16 bit | 1024 bit
+1 kilobayt (KB) necha baytga teng (ikkilik tizimda)? | 1024 bayt | 1000 bayt | 512 bayt | 2048 bayt
+1 gigabayt (GB) necha megabaytga teng? | 1024 MB | 1000 MB | 100 MB | 512 MB ## Ikkilik tizimda har bir keyingi birlik 1024 marta katta.
+Ikkilik sanoq sistemasida qaysi raqamlar ishlatiladi? | Faqat 0 va 1 | 0 dan 9 gacha | 1 va 2 | 0 dan 7 gacha
+@ Kompyuter qurilmalari
+Buyruqlarni bajaruvchi, kompyuterning "miyasi" deb ataladigan qurilma qaysi? | Markaziy protsessor (CPU) | Operativ xotira (RAM) | Qattiq disk | Monitor
+Kompyuter o'chirilganda ma'lumotlari o'chib ketadigan xotira qaysi? | Operativ xotira (RAM) | Qattiq disk (HDD) | SSD disk | Fleshka
+Qaysi qurilma ma'lumot kiritish qurilmasi? | Klaviatura | Monitor | Printer | Karnay
+Qaysi qurilma ma'lumot chiqarish qurilmasi? | Printer | Sichqoncha | Skaner | Mikrofon
+Qog'ozdagi matn yoki rasmni kompyuterga raqamli ko'rinishda kirituvchi qurilma? | Skaner | Plotter | Proyektor | Modem
+@ Dasturiy ta'minot
+Kompyuter qurilmalarini boshqaradigan va boshqa dasturlarni ishga tushiradigan asosiy dastur qaysi? | Operatsion tizim | Matn muharriri | Brauzer | Antivirus
+Quyidagilardan qaysi biri operatsion tizim? | Windows | Microsoft Word | Google Chrome | Adobe Photoshop
+Elektron jadvallar bilan ishlash uchun mo'ljallangan dastur? | Microsoft Excel | Microsoft Word | Paint | PowerPoint
+Taqdimot (slaydlar) tayyorlash uchun qaysi dastur ishlatiladi? | Microsoft PowerPoint | Microsoft Excel | Notepad | WinRAR
+Excelda A1 dan A10 gacha bo'lgan kataklar yig'indisini hisoblaydigan formula? | =SUM(A1:A10) | =A1+A10 | =COUNT(A1:A10) | =MAX(A1:A10) ## SUM — yig'indi, COUNT — sonlar miqdori, MAX — eng katta qiymat.
+Fayllarni siqib arxivlash uchun qaysi dastur ishlatiladi? | WinRAR | Paint | Excel | Skype
+Word hujjatining fayl kengaytmasi qaysi? | .docx | .xlsx | .pptx | .mp3
+@ Internet va tarmoq
+Veb-sahifalarni ko'rish uchun mo'ljallangan dastur nima deb ataladi? | Brauzer | Server | Provayder | Router
+Elektron pochta manzilida albatta qaysi belgi bo'ladi? | @ | # | & | %
+Internetdagi sahifa yoki faylning manzili nima deb ataladi? | URL | HTML | USB | BIOS
+"WWW" qisqartmasi nimani anglatadi? | World Wide Web — Butunjahon o'rgimchak to'ri | Wireless World Web | Windows Web Work | Web Write Word
+Bulutli xizmatga misol qaysi? | Google Drive | Microsoft Paint | Kalkulyator | Notepad

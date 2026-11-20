@@ -1,0 +1,16 @@
+# Umumiy ovqatlanish korxonalarida texnologik jihozlar — savollar banki
+@ Mexanik jihozlar
+Go'shtni qiyma qilish uchun ishlatiladigan mashina qaysi? | Go'sht qiymalagich | Kartoshka tozalagich | Xamir qorgich | Mikser
+Kartoshkani mexanik tozalovchi mashinaning ishchi qismi qanday? | Abraziv sirtli aylanuvchi disk | Pichoq panjarasi | Shnek | Qorgich parrak
+Xamir qorgich mashinasining asosiy ishchi qismlari qaysi? | Qorgich parrak va dejja (idish) | Pichoq panjarasi | Abraziv disk | Shnek
+Qiymalagichga go'sht nima bilan itariladi? | Maxsus itargich (tolkatel) bilan | Pichoq bilan | Qoshiq bilan | Barmoq bilan
+Mexanik jihozni tozalashdan oldin nima qilish shart? | Elektrdan uzish va to'liq to'xtashini kutish | Ishlab turgan holda tozalash | Qo'l bilan to'xtatish | Ustidan suv quyish
+@ Issiqlik jihozlari
+Mahsulotlarni issiq havo oqimi va bug' bilan pishiradigan universal jihoz qaysi? | Parokonvektomat | Muzlatkich | Qiymalagich | Tarozi
+Mahsulotni ko'p miqdordagi qaynoq yog'da qovuradigan jihoz qaysi? | Fritur (fritoz) | Parokonvektomat | Mikser | Kipyatilnik
+Taomlarni issiq holda saqlab, tarqatish uchun jihoz qaysi? | Marmit | Muzlatkich | Qiymalagich | Tozalagich
+Elektr plitalar qizdirish usuli bo'yicha qanday turlarga bo'linadi? | Konforkali (cho'yan), shishakeramik, induksion | Gazli va ko'mirli | Faqat suvli | Faqat bug'li
+Induksion plita qanday idishlar bilan ishlaydi? | Magnitlanuvchi (ferromagnit) tubli idishlar | Faqat shisha idishlar | Faqat alyuminiy idishlar | Faqat sopol idishlar
+@ Sovitish jihozlari
+Tayyor taomni tez sovitish va muzlatish uchun jihoz qaysi? | Shok sovitkich (blast chiller) | Marmit | Fritur | Kipyatilnik
+Sovitish jihozlarida haroratni nazorat qilish nima uchun muhim? | Mahsulotlar buzilmasligi va sanitariya talablariga rioya uchun | Faqat chiroy uchun | Shovqinni kamaytirish uchun | Ahamiyati yo'q

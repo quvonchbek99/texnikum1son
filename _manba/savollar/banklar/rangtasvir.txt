@@ -1,0 +1,17 @@
+# Rangtasvir — savollar banki
+@ Ranglar
+Bo'yoqlarda asosiy (birlamchi) ranglar qaysi? | Qizil, sariq, ko'k | Yashil, binafsha, to'q sariq | Oq, qora, kulrang | Pushti, jigarrang, qora
+Sariq va ko'k bo'yoq aralashtirilsa qanday rang hosil bo'ladi? | Yashil | Binafsha | To'q sariq | Jigarrang
+Qizil va sariq bo'yoq aralashtirilsa qanday rang hosil bo'ladi? | To'q sariq | Yashil | Binafsha | Ko'k
+Qizil va ko'k bo'yoq aralashtirilsa qanday rang hosil bo'ladi? | Binafsha | Yashil | To'q sariq | Sariq
+Iliq ranglarga misol qaysi qatorda? | Qizil, to'q sariq, sariq | Ko'k, havorang, binafsha | Oq va kulrang | Qora va kulrang
+Sovuq ranglarga misol qaysi qatorda? | Ko'k, havorang, ko'kish-yashil | Qizil, sariq | To'q sariq, qizil | Jigarrang, qizil
+Komplementar (to'ldiruvchi) ranglar juftligi qaysi? | Qizil — yashil | Qizil — to'q sariq | Ko'k — havorang | Sariq — oq
+Rangning to'yinganligi nimani bildiradi? | Rangning sofligi va jadalligini (kulrangdan uzoqligini) | Rangning narxini | Bo'yoq miqdorini | Mo'yqalam o'lchamini
+@ Materiallar va janrlar
+Suvda eriydigan shaffof bo'yoq qaysi? | Akvarel | Moy bo'yoq | Guash | Tempera
+Moy bo'yoqda ishlash uchun asos qaysi? | Grunt surtilgan kanvas (xolst) | Gazeta | Shisha | Folga
+Moy bo'yoqdan keyin mo'yqalam nima bilan yuviladi? | Uayt-spirit yoki skipidar | Faqat suv | Sut | Sirka
+Natyurmort nima? | Jonsiz buyumlar (meva, idish va h.k.) tasviri | Tabiat manzarasi | Inson portreti | Tarixiy voqea
+Peyzaj nima? | Tabiat manzarasi tasviri | Portret | Natyurmort | Interyer
+Kamoliddin Behzod qaysi san'at turida mashhur? | Miniatyura rangtasviri | Haykaltaroshlik | Me'morchilik | Musiqa

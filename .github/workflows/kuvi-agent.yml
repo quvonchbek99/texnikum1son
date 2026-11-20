@@ -1,6 +1,7 @@
 # Kuvi agent — o'qituvchilar yuklagan majmualarni (800+ bet) PDF'ga aylantiradi, bo'limlarga ajratadi va saytga joylaydi.
 # Navbat: Firestore t1_navbat (kabinetdagi «AI agentga yuborish»). Natija: fayl/ va agent/ papkalari (GitHub Pages orqali).
 # AI: GEMINI_API_KEY (repo Secrets, ixtiyoriy) → bo'lmasa GitHub Models (GITHUB_TOKEN) → bo'lmasa qoidalar.
+# Fan viktorinasi: har majmuadan testlar (agent/t/) — majmuadagi testlar ajratib olinadi va AI dars matnlaridan qo'shimcha savollar tuzadi.
 name: Kuvi agent
 
 on:
@@ -59,12 +60,19 @@ jobs:
             python3 _manba/agent/ishla.py
           fi
 
+      - name: Fan viktorinasi testlari (majmualardan)
+        id: t
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 _manba/agent/ishla.py --testlar
+
       - name: Natijani saytga joylash
-        if: steps.n.outputs.bor == '1'
+        if: steps.n.outputs.bor == '1' || steps.t.outputs.t == '1'
         run: |
           git config user.name "Kuvi agent"
           git config user.email "kuvi-agent@users.noreply.github.com"
           git add -A agent fayl
           if git diff --cached --quiet; then echo "O'zgarish yo'q"; exit 0; fi
-          git commit -q -m "Kuvi agent: majmualar yangilandi"
+          git commit -q -m "Kuvi agent: majmualar va testlar yangilandi"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done

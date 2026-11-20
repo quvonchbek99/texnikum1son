@@ -1,0 +1,18 @@
+# Umumiy ovqatlanish korxonalarida sanitariya, gigiyena va ovqatlanish fiziologiyasi — savollar banki
+@ Shaxsiy gigiyena va sanitariya
+Oshxonada xom va pishgan mahsulotlar uchun alohida taxta va pichoqlar nima uchun kerak? | Mikroblar bir mahsulotdan boshqasiga o'tmasligi uchun | Chiroy uchun | Tejash uchun | Shart emas
+Oshpaz ishga kelganda birinchi navbatda nima qiladi? | Maxsus kiyim kiyib, qo'lini yuvib, ishga tayyorlanadi | Darhol taom tayyorlaydi | Telefonda gaplashadi | Qo'l yuvmaydi
+Oshpazning shaxsiy gigiyenasiga nimalar kiradi? | Toza maxsus kiyim, bosh kiyim, kalta tirnoq, qo'l yuvish | Zargarlik taqish | Uzun tirnoq | Uy kiyimida ishlash
+Tibbiy ko'rikdan o'tmagan xodim oshxonada ishlashi mumkinmi? | Yo'q | Ha | Faqat dam olish kuni | Faqat kechasi
+Ichak infeksiyalarining asosiy sabablari qaysi? | Iflos qo'l, yuvilmagan mahsulot va noto'g'ri saqlash | Ko'p suv ichish | Sport | Uyqu
+Mikroblar eng tez ko'payadigan xavfli harorat oralig'i qaysi? | +5 °C dan +60 °C gacha | −18 °C dan past | +100 °C dan yuqori | Faqat 0 °C
+Binodagi hasharot va kemiruvchilarga qarshi kurash qanday ataladi? | Dezinseksiya va deratizatsiya | Dezinfeksiya | Sterilizatsiya | Pasterizatsiya
+Idish-tovoq va jihozlardagi mikroblarni yo'qotish nima deyiladi? | Dezinfeksiya | Deratizatsiya | Marinadlash | Blanshirovka
+@ Mahsulotlarga ishlov berish
+Sutni 60–90 °C da qizdirib, mikroblarni kamaytirish usuli qaysi? | Pasterizatsiya | Sterilizatsiya | Muzlatish | Quritish
+Sterilizatsiya nimani anglatadi? | 100 °C dan yuqori haroratda barcha mikroblarni yo'qotishni | Sovutishni | Tuzlashni | Qovurishni
+@ Ovqatlanish fiziologiyasi
+Organizm uchun asosiy energiya manbai bo'lgan ozuqa moddalari qaysi? | Uglevodlar va yog'lar | Mineral tuzlar | Suv | Vitaminlar
+C vitamini ko'p bo'lgan mahsulotlar qaysi qatorda? | Na'matak, limon, qora smorodina, bulg'or qalampiri | Go'sht va baliq | Guruch | Shakar
+D vitamini yetishmasligi bolalarda qanday kasallikka olib keladi? | Raxit | Singa | Kamqonlik | Kariyes
+Kunlik ovqatlanish odatda necha mahal tavsiya etiladi? | 3–4 mahal | 1 mahal | 8 mahal | Ovqatlanmaslik

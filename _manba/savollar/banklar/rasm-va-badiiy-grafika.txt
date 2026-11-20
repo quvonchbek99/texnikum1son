@@ -1,0 +1,16 @@
+# Rasm va badiiy grafika — savollar banki
+@ Rasm asoslari
+Asosan chiziq va shtrixlar bilan bajariladigan tasviriy san'at turi qaysi? | Grafika | Rangtasvir | Haykaltaroshlik | Me'morchilik
+Buyumning yorug'lik tushgan eng yorqin nuqtasi nima deyiladi? | Blik | Xususiy soya | Tushgan soya | Refleks
+Buyumning o'zida, yorug'lik tushmagan tomonidagi soya nima deyiladi? | Xususiy soya | Tushgan soya | Blik | Yarim ton
+Buyumdan stol yoki devorga tushgan soya nima deyiladi? | Tushgan soya | Xususiy soya | Refleks | Blik
+Atrofdagi yuzalardan qaytgan yorug'likning soyadagi aksi nima deyiladi? | Refleks | Blik | Yarim ton | Kontrast
+Uzoqlashgan sari buyumlarning kichrayib ko'rinish qonuniyati nima? | Perspektiva | Simmetriya | Ritm | Kontrast
+Qalam rasmda qattiq qalam qanday belgilanadi? | H (T) | B (M) | HB (TM) | 8B
+Tez, qisqa vaqtda bajariladigan dastlabki rasm nima deyiladi? | Qoralama (nabrosok, eskiz) | Kartina | Freska | Mozaika
+@ Inson qomati va moda grafikasi
+Inson qomatini chizishda o'lchov birligi sifatida ko'pincha nima olinadi? | Bosh balandligi | Qo'l kafti | Oyoq uzunligi | Ko'z kengligi
+Katta yoshli odam qomati taxminan necha bosh balandligiga teng? | 7–8 | 3–4 | 12 | 2
+Moda illyustratsiyasida qomat odatda qanday cho'zib chiziladi? | 9–10 bosh balandligigacha | 4 bosh | 2 bosh | 5 bosh
+Grafikada tush (siyoh) bilan ishlash uchun qaysi asboblar ishlatiladi? | Pero va mo'yqalam | Pastel | Akvarel bo'yog'i | Moy bo'yoq
+Kiyim modelini qomatda ko'rsatib chiziladigan badiiy rasm nima deyiladi? | Moda eskizi | Texnik chizma | Lekalo | Spetsifikatsiya

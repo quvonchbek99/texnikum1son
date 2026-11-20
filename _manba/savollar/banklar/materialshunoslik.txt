@@ -1,0 +1,16 @@
+# Materialshunoslik (zargarlik) — savollar banki
+@ Qimmatbaho metallar va probalar
+Sof oltinning probasi (metrik tizimda) qancha? | 999 | 585 | 750 | 375
+585-proba nimani bildiradi? | Qotishmaning 1000 qismidan 585 qismi sof oltin | 58,5 gramm oltin | 585 yillik | 5,85 % oltin
+Zargarlikda keng tarqalgan kumush probasi qaysi? | 925 | 585 | 375 | 500
+Oltin qotishmasiga qattiqlik va rang berish uchun asosan qaysi metallar qo'shiladi? | Kumush va mis (ligatura) | Temir va qo'rg'oshin | Faqat alyuminiy | Simob
+Qizil (pushti) oltin rangi qaysi metall ko'pligidan? | Mis | Kumush | Palladiy | Rux
+Oq oltin qanday olinadi? | Oltinga palladiy, nikel yoki kumush qo'shib | Oltinni bo'yab | Oltinni muzlatib | Oltinni kuydirib
+Sof oltin magnitga tortiladimi? | Yo'q | Ha | Ba'zan | Faqat qizdirilganda
+Metall probasini tekshirish uchun nima ishlatiladi? | Sinov (proba) toshi va reaktivlar | Lupa | Tarozi | Magnit
+@ Qimmatbaho toshlar
+Eng qattiq tabiiy mineral qaysi? | Olmos | Kvars | Feruza | Marvarid
+Minerallarning qattiqligi qaysi shkala bo'yicha baholanadi? | Moos shkalasi | Selsiy shkalasi | Rixter shkalasi | Bofort shkalasi
+Marvarid qayerda hosil bo'ladi? | Mollyuskalar (chig'anoqlar) ichida | Vulqon lavasida | Ko'mir konida | Daraxt qatronida
+Qahrabo (yantar) nima? | Qadimiy daraxtlarning qotib qolgan qatroni | Metall | Shisha | Tosh tuz
+Qimmatbaho toshning massasi qaysi birlikda o'lchanadi? | Karat (0,2 g) | Tonna | Unsiya | Pud

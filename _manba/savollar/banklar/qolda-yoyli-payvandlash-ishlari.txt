@@ -1,0 +1,17 @@
+# Qo'lda yoyli payvandlash ishlari — savollar banki
+@ Payvandlash asoslari
+Qo'lda yoyli payvandlashda metall nima hisobiga eritiladi? | Elektrod va detal orasidagi elektr yoyi issiqligi | Gaz alangasi | Ishqalanish | Lazer
+Elektrod qoplamasining vazifasi nima? | Yoyni barqarorlashtirish va choklarni havodan himoyalash | Elektrodni bo'yash | Tokni oshirish | Hech qanday vazifasi yo'q
+3 mm diametrli elektrod uchun taxminiy payvandlash toki qancha? | 90–130 A | 10–20 A | 300–400 A | 1000 A
+Yoyni yoqish usullari qaysi? | Chaqmoq (urib) va tegizib-tortib | Gugurt bilan | Suv bilan | Yoqib bo'lmaydi
+Payvandlash invertori qanday qurilma? | Payvandlash yoyi uchun tok beradigan ixcham elektron manba | Gaz ballon | Kompressor | Chiroq
+Massa (yerga ulash) qisqichi qayerga ulanadi? | Payvandlanadigan detalga yoki payvand stoliga | Elektrodga | Payvandchining kiyimiga | Hech qayerga
+@ Chok va birikmalar
+Detallar chetlari yonma-yon qo'yilib payvandlanadigan birikma qanday ataladi? | Uchma-uch birikma | Ustma-ust birikma | Burchakli birikma | Tavr birikma
+Chokdagi "erimay qolish" nuqsoni nimani bildiradi? | Metall to'liq erimagan, chok asosga yetmagan | Chok juda chiroyli | Chok yaltiroq | Nuqson emas
+Payvandlashdan keyin shlak qanday tozalanadi? | Bolg'acha va metall cho'tka bilan | Qo'l bilan | Suv bilan | Tozalanmaydi
+Elektrodlar ishlatishdan oldin nima uchun quritiladi (prokalka)? | Qoplamadagi namlik chokda g'ovak va yoriqlar hosil qilmasligi uchun | Og'irligini oshirish uchun | Rangi uchun | Kerak emas
+@ Xavfsizlik
+Payvandchining ko'zi va yuzini himoya qiluvchi vosita qaysi? | Svetofiltrli payvandlash niqobi | Oddiy ko'zoynak | Kepka | Respirator
+Ho'l kiyimda yoki yomg'ir ostida payvandlash mumkinmi? | Yo'q, tok urish xavfi bor | Ha | Faqat yozda | Faqat qishda
+Payvandlash joyida qanday yong'inga qarshi vositalar bo'lishi shart? | O't o'chirgich va qum | Faqat bir chelak suv | Hech narsa | Benzin

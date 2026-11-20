@@ -1,0 +1,13 @@
+# Kiyim dizaynini yaratish — savollar banki
+@ Dizayn elementlari
+Kiyimning umumiy tashqi shakli (konturi) nima deyiladi? | Siluet | Faktura | Dekor | Aksessuar
+X-siluetli kiyim qanday ko'rinishga ega? | Belda qisilgan, yelka va etak kengroq | To'g'ri | Pastga qarab kengayadi | Yuqoriga qarab kengayadi
+Mato yuzasining tashqi tuzilishi (silliq, g'adir-budur, tukli) nima deyiladi? | Faktura | Siluet | Ritm | Proporsiya
+Kiyimni bo'laklarga ajratib turuvchi relyef va vitochka chiziqlari qanday ataladi? | Konstruktiv chiziqlar | Ornament | Faktura | Aksessuar
+Kiyim kompozitsiyasida elementlarning bir maromda takrorlanishi nima? | Ritm | Kontrast | Nyuans | Statika
+@ Rang va moda
+Rang doirasida qarama-qarshi joylashgan ranglar qanday ataladi? | Komplementar (to'ldiruvchi) ranglar | Analog ranglar | Axromatik ranglar | Iliq ranglar
+Oq, qora va kulrang ranglar qanday ataladi? | Axromatik ranglar | Xromatik ranglar | Iliq ranglar | Asosiy ranglar
+Kolleksiyani podiumda namoyish etish qanday ataladi? | Defile | Inventarizatsiya | Gradatsiya | Dekatirovka
+Eng nufuzli moda haftaliklari o'tkaziladigan shaharlar qaysi qatorda? | Parij, Milan, London, Nyu-York | Toshkent va Samarqand | Faqat Moskva | Pekin va Seul
+Aksessuarlarga nimalar kiradi? | Sumka, kamar, ro'mol, zargarlik buyumlari | Mato va ip | Tikuv mashinasi | Lekalo

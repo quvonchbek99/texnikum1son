@@ -1,0 +1,10 @@
+# Tikuv mahsulotlari uchun tekstil materiallarini tanlash — savollar banki
++fan: tikuvchilik-materialshunosligi
+@ Materiallarni tanlash
+Yozgi kiyim uchun qanday mato tanlanadi? | Havo va namlik o'tkazuvchi tabiiy (paxta, zig'ir) mato | Qalin jun mato | Kirza | Plastik plyonka
+Qishki palto uchun asosiy mato qanday bo'lishi kerak? | Issiqni saqlaydigan qalin (jun yoki aralash) mato | Yupqa shifon | Tyul | Organza
+Astar (podkladka) matosiga qo'yiladigan asosiy talab qaysi? | Silliq, sirpanchiq va ishqalanishga chidamli bo'lishi | Juda qalin bo'lishi | Qattiq bo'lishi | Kuchli cho'zilishi
+Yoqa va bort detallarini qattiqlashtirish uchun ishlatiladigan yelimli material? | Dublerin (yelimli qistirma) | Shifon | Organza | Velyur
+Bolalar kiyimi uchun materialga qo'yiladigan asosiy talab qaysi? | Gigiyenik, tabiiy va allergiya chaqirmaydigan bo'lishi | Faqat yaltiroq bo'lishi | Faqat sintetik bo'lishi | Og'ir bo'lishi
+Ish kiyimi (maxsus kiyim) materiali qanday bo'lishi kerak? | Mustahkam, ishqalanishga chidamli va ish xavfiga mos | Yupqa va nozik | Faqat chiroyli | Tez yirtiladigan
+Mato tanlashda kiyim ip va furnituralari qanday tanlanadi? | Mato rangi, tolasi va qalinligiga moslab | Tasodifiy | Faqat eng arzonini | Faqat eng qimmatini

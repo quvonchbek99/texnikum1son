@@ -1,0 +1,16 @@
+# "B" va "C" toifadagi avtotransport vositalarining tuzilishi va ularga servis xizmat ko'rsatish — savollar banki
+@ Toifalar va transport vositalari
+"B" toifasiga qaysi transport vositalari kiradi? | Ruxsat etilgan maksimal massasi 3500 kg gacha, haydovchidan tashqari o'rindiqlari 8 tadan oshmaydigan avtomobillar | Mototsikllar | Massasi 3500 kg dan ortiq yuk avtomobillari | Avtobuslar
+"C" toifasiga qaysi transport vositalari kiradi? | Ruxsat etilgan maksimal massasi 3500 kg dan ortiq yuk avtomobillari | Yengil avtomobillar | Mototsikllar | Tramvaylar
+"D" toifasi qaysi transport vositalarini boshqarish huquqini beradi? | Avtobuslarni (haydovchidan tashqari 8 tadan ortiq o'rindiq) | Yengil avtomobillarni | Mototsikllarni | Traktorlarni
+Og'ir tirkama ulangan yuk avtomobilini (avtopoyezdni) boshqarish uchun qaysi toifa kerak? | CE | B | A | D1
+Yarim tirkamani tortish uchun egarli qurilmaga ega transport vositasi qanday ataladi? | Egarli tyagach | Furgon | Pikap | Miniven
+Yuk avtomobilining g'ildirak formulasi 6×4 nimani bildiradi? | Jami 6 ta g'ildirakdan 4 tasi yetakchi | 6 tonna, 4 o'rindiq | 6 silindr, 4 klapan | 6 metr, 4 metr
+@ Tuzilish xususiyatlari
+Yuk avtomobillarida ko'pincha qaysi tormoz yuritmasi qo'llanadi? | Pnevmatik (siqilgan havo bilan) | Faqat mexanik tros | Faqat elektr | Magnitli
+Pnevmatik tormoz tizimida siqilgan havoni hosil qiluvchi qurilma qaysi? | Kompressor | Generator | Starter | Radiator
+Yuk avtomobili ressorasi qanday vazifani bajaradi? | Osmaning elastik elementi — zarbalarni yumshatadi | Rulni buradi | Tormozlaydi | Yoqilg'i uzatadi
+@ Servis xizmat ko'rsatish
+Kundalik texnik xizmat ko'rsatish (KXK) qachon bajariladi? | Har kuni reysdan oldin va keyin | Yiliga bir marta | Faqat buzilganda | Har 100 000 km da
+Shinadagi havo bosimi qanday tekshiriladi? | Sovuq shinada, manometr bilan | Uzoq yo'ldan keyin issiq holda ko'z bilan | Tepib ko'rib | Tekshirilmaydi
+Pnevmatik tormozli avtomobilda harakatni qachon boshlash mumkin? | Tizimdagi havo bosimi me'yorga yetgandan keyin | Darhol, bosimga qaramay | Faqat qishda | Kompressor o'chirilganda

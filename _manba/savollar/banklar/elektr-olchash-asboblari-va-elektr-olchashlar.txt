@@ -1,0 +1,21 @@
+# Elektr o'lchash asboblari va elektr o'lchashlar — savollar banki
+@ O'lchash asboblari
+Tok kuchini o'lchaydigan asbob qaysi? | Ampermetr | Voltmetr | Ommetr | Vattmetr
+Kuchlanishni o'lchaydigan asbob qaysi? | Voltmetr | Ampermetr | Ommetr | Chastotomer
+Qarshilikni o'lchaydigan asbob qaysi? | Ommetr | Ampermetr | Voltmetr | Chastotomer
+Izolyatsiya qarshiligini o'lchaydigan asbob qaysi? | Megaommetr | Ampermetr | Lyuksmetr | Termometr
+Elektr quvvatini o'lchaydigan asbob qaysi? | Vattmetr | Voltmetr | Ommetr | Fazometr
+Elektr energiyasi sarfini hisoblaydigan asbob qaysi? | Elektr hisoblagich | Ampermetr | Ommetr | Osiloskop
+Zanjirni uzmasdan tokni o'lchash imkonini beradigan asbob qaysi? | Tok o'lchovchi qisqich (kleshchi) | Ommetr | Megaommetr | Voltmetr
+O'zgaruvchan tok chastotasini o'lchaydigan asbob qaysi? | Chastotomer | Ommetr | Megaommetr | Areometr
+@ O'lchash qoidalari
+Ampermetr zanjirga qanday ulanadi? | Ketma-ket | Parallel | Aralash | Ulanmaydi
+Voltmetr zanjirga qanday ulanadi? | Parallel | Ketma-ket | Aralash | Faqat yerga
+Ampermetrning ichki qarshiligi qanday bo'lishi kerak? | Juda kichik | Juda katta | Cheksiz | Voltmetrnikidek
+Voltmetrning ichki qarshiligi qanday bo'lishi kerak? | Juda katta | Juda kichik | Nolga teng | Ampermetrnikidek
+Ommetr bilan o'lchashdan oldin qanday shart bajariladi? | Zanjir kuchlanishdan uziladi | Zanjir kuchlanish ostida qoldiriladi | Tok oshiriladi | Asbob qizdiriladi
+Multimetrda o'zgaruvchan kuchlanishni o'lchash rejimi qanday belgilanadi? | V~ (ACV) | V– (DCV) | A– | Ω
+@ O'lchash xatoliklari
+Asbobning aniqlik sinfi 1,5 nimani bildiradi? | Keltirilgan xatolik shkala chegarasining 1,5 % idan oshmaydi | 1,5 V gacha o'lchaydi | 1,5 A gacha o'lchaydi | 1,5 marta aniq
+Shkala chegarasi 10 A, aniqlik sinfi 2,5 bo'lgan ampermetrning eng katta absolyut xatoligi qancha? | 0,25 A | 2,5 A | 0,025 A | 25 A ## Δ = 10 · 2,5 / 100 = 0,25 A
+O'lchangan va haqiqiy qiymat orasidagi farq nima deyiladi? | Absolyut xatolik | Nisbiy xatolik | Aniqlik sinfi | Sezgirlik

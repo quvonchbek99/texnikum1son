@@ -1,0 +1,16 @@
+# Konstruksion materiallar — savollar banki
+@ Qotishmalar
+Po'lat temirning qaysi element bilan qotishmasi? | Uglerod (2,14 % gacha) | Mis | Alyuminiy | Qalay
+Cho'yanda uglerod miqdori qancha? | 2,14 % dan ko'p | 0,1 % dan kam | 0,5 % | Uglerod yo'q
+Bronza qaysi metallarning qotishmasi? | Mis va qalay | Mis va rux | Temir va uglerod | Alyuminiy va magniy
+Latun qaysi metallarning qotishmasi? | Mis va rux | Mis va qalay | Temir va nikel | Alyuminiy va mis
+Zanglamaydigan po'lat tarkibida asosan qaysi element ko'p? | Xrom (12 % dan ortiq) | Uglerod | Oltingugurt | Fosfor
+Alyuminiyning asosiy afzalligi nima? | Yengil va korroziyaga chidamli | Juda og'ir | Magnitlanadi | Eng qattiq metall
+Plastmassalarning asosiy afzalligi nima? | Yengil, korroziyaga chidamli, oson shakl beriladi | Juda issiqqa chidamli | Elektrni yaxshi o'tkazadi | Juda og'ir
+@ Termik ishlov va xossalar
+Po'latni qizdirib, keyin suv yoki moyda tez sovitish qanday ataladi? | Toblash | Bo'shatish | Yumshatish | Normallash
+Toblangan po'latni qayta qizdirib, mo'rtligini kamaytirish qanday ataladi? | Bo'shatish (otpusk) | Toblash | Sementitlash | Azotlash
+Metallning tashqi kuch ta'sirida yemirilmasdan qarshilik ko'rsatish xossasi nima? | Mustahkamlik | Elastiklik | Plastiklik | Issiqlik o'tkazuvchanlik
+Metall qattiqligini o'lchash usullari qaysi qatorda? | Brinell, Rokvell, Vikkers | Selsiy, Kelvin | Rixter | Om
+Korroziya nima? | Metallning atrof-muhit ta'sirida yemirilishi (zanglashi) | Metallning erishi | Metallning qattiqlashishi | Metallning yaltirashi
+Po'latni korroziyadan himoyalash usuli qaysi? | Bo'yash, ruxlash yoki zanglamaydigan po'lat ishlatish | Suvda saqlash | Tuz sepish | Kislota surtish

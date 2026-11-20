@@ -1,0 +1,26 @@
+# Kimyo (umumta'lim) — savollar banki
+@ Kimyoviy elementlar va formulalar
+Suvning kimyoviy formulasi qaysi? | H₂O | CO₂ | O₂ | NaCl
+Osh tuzining kimyoviy formulasi qaysi? | NaCl | KCl | HCl | NaOH
+Karbonat angidridning formulasi qaysi? | CO₂ | CO | C₂O | H₂CO₃
+Kislorodning kimyoviy belgisi qaysi? | O | K | Ko | Ox
+Temirning kimyoviy belgisi qaysi? | Fe | Te | Tm | F
+Oltinning kimyoviy belgisi qaysi? | Au | Ag | Al | Ot
+Kumushning kimyoviy belgisi qaysi? | Ag | Au | Si | K
+Kimyoviy elementlar davriy jadvalini kim yaratgan? | D. I. Mendeleyev | M. V. Lomonosov | A. Lavuazye | R. Boyl
+Vodorodning tartib raqami nechaga teng? | 1 | 2 | 8 | 6
+Inert (nodir) gazga misol qaysi? | Geliy | Kislorod | Azot | Xlor
+@ Atom tuzilishi va moddalar
+Atomning musbat zaryadli zarrachasi qaysi? | Proton | Elektron | Neytron | Foton
+Atomning manfiy zaryadli zarrachasi qaysi? | Elektron | Proton | Neytron | Yadro
+H₂O ning molyar massasi qancha? | 18 g/mol | 16 g/mol | 20 g/mol | 10 g/mol
+Avogadro soni nechaga teng? | 6,02 · 10²³ | 3 · 10⁸ | 9,8 | 1,6 · 10⁻¹⁹
+Metallarning umumiy xossasi qaysi? | Elektr va issiqlikni yaxshi o'tkazadi, metall yaltiroqligiga ega | Elektr o'tkazmaydi | Hammasi gaz | Mo'rt va shaffof
+Havoning asosiy qismini qaysi gaz tashkil etadi? | Azot (~78 %) | Kislorod (~78 %) | Karbonat angidrid | Vodorod
+@ Kislota, asos va reaksiyalar
+pH = 7 qanday muhitni bildiradi? | Neytral | Kislotali | Ishqoriy | Kuchli kislotali
+pH < 7 qanday muhitni bildiradi? | Kislotali | Ishqoriy | Neytral | Tuzli
+Kislotalar formulasida doim qaysi element bo'ladi? | Vodorod | Natriy | Temir | Uglerod
+NaOH qanday modda? | Ishqor (asos) | Kislota | Tuz | Oksid
+Fenolftalein ishqoriy muhitda qanday rangga kiradi? | Pushti (to'q qizil-binafsha) | Ko'k | Sariq | Rangsiz qoladi
+Yonish reaksiyasida qaysi gaz ishtirok etadi? | Kislorod | Azot | Geliy | Argon

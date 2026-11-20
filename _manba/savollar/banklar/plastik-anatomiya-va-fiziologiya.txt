@@ -1,0 +1,17 @@
+# Plastik anatomiya va fiziologiya — savollar banki
+@ Bosh suyagi va muskullar
+Bosh suyagi qanday qismlarga bo'linadi? | Miya qismi va yuz qismi | Faqat jag' | Faqat peshona | Ko'krak va bel
+Bosh suyagidagi yagona harakatchan suyak qaysi? | Pastki jag' suyagi | Peshona suyagi | Ensa suyagi | Burun suyagi
+Mimika muskullari qayerda joylashgan? | Yuzda | Oyoqda | Qorinda | Yelkada
+@ Teri va soch
+Teri nechta asosiy qatlamdan iborat? | 3 ta: epidermis, derma, teri osti yog' qatlami | 1 ta | 2 ta | 5 ta
+Terining tashqi qatlami qanday ataladi? | Epidermis | Derma | Teri osti kletchatkasi | Muskul
+Soch follikulalari terining qaysi qatlamida joylashgan? | Dermada | Epidermis yuzasida | Suyakda | Muskulda
+Teri yog' bezlarining vazifasi nima? | Teri va sochni yog'lab, himoya qiladi | Ter chiqaradi | Qon ishlab chiqaradi | Ovqat hazm qiladi
+Soch to'kilishining tibbiy nomi nima? | Alopesiya | Seboreya | Dermatit | Kariyes
+Kepak ko'pincha qaysi holat bilan bog'liq? | Seboreya | Alopesiya | Raxit | Angina
+@ Yuz proporsiyalari
+Klassik kanonda yuz balandligi necha teng qismga bo'linadi? | 3 qismga | 2 qismga | 5 qismga | 7 qismga
+Ko'zlar odatda bosh balandligining qayerida joylashadi? | Taxminan o'rtasida | Eng yuqorisida | Iyak yonida | Quloq ostida
+Turmak tanlashda ideal hisoblanadigan yuz shakli qaysi? | Oval | Dumaloq | To'rtburchak | Uzunchoq
+Dumaloq yuzga qanday turmak tavsiya etiladi? | Yuzni vizual cho'zuvchi, tepasi hajmli, yonlari silliq turmak | Yonlari juda hajmli turmak | Juda keng dumaloq turmak | Iyakkacha kalta kare

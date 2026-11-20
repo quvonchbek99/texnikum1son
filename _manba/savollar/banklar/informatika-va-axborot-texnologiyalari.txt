@@ -1,0 +1,27 @@
+# Informatika va axborot texnologiyalari (umumta'lim) — savollar banki
+@ Axborot va sanoq sistemalari
+1 bayt necha bitga teng? | 8 bit | 10 bit | 1024 bit | 2 bit
+Ikkilik sanoq sistemasidagi 101 sonining o'nlik qiymati nechaga teng? | 5 | 3 | 101 | 7 ## 1·4 + 0·2 + 1·1 = 5
+O'nlik 10 soni ikkilik sistemada qanday yoziladi? | 1010 | 1001 | 1100 | 0110
+Mantiqiy "VA" (AND) amali qachon rost bo'ladi? | Ikkala shart ham rost bo'lganda | Kamida bittasi rost bo'lganda | Ikkalasi yolg'on bo'lganda | Har doim
+Mantiqiy "YOKI" (OR) amali qachon yolg'on bo'ladi? | Ikkala shart ham yolg'on bo'lganda | Bittasi rost bo'lganda | Ikkalasi rost bo'lganda | Hech qachon
+Algoritmning muhim xossalaridan biri qaysi? | Aniqlik (har bir qadam bir ma'noli) | Noaniqlik | Cheksizlik | Tasodifiylik
+@ Kompyuter va dasturlar
+Kompyuterning asosiy hisoblash qurilmasi qaysi? | Protsessor | Monitor | Klaviatura | Printer
+Operatsion tizimga misol qaysi? | Linux | Excel | Chrome | Telegram
+Elektron jadvallar bilan ishlaydigan dastur qaysi? | Excel | Word | Paint | Telegram
+Excelda formula qaysi belgi bilan boshlanadi? | = | + | # | @
+Excelda B2 yozuvi nimani bildiradi? | B ustun va 2-qator kesishmasidagi katakni | 2-ustun va B qatorni | Varaq nomini | Formulani
+Kompyuter viruslaridan himoya qiluvchi dastur qaysi? | Antivirus | Arxivator | Brauzer | Drayver
+Veb-sahifalarni yaratish uchun ishlatiladigan belgilash tili qaysi? | HTML | Excel | MP3 | Paint
+.mp3 kengaytmali fayl qanday fayl? | Audio fayl | Video fayl | Rasm | Matn
+.jpg kengaytmali fayl qanday fayl? | Rasm | Audio | Jadval | Dastur
+@ Klaviatura buyruqlari
+Nusxa olish (copy) uchun qaysi tugmalar bosiladi? | Ctrl + C | Ctrl + V | Ctrl + X | Ctrl + Z
+Nusxani joylashtirish (paste) uchun qaysi tugmalar bosiladi? | Ctrl + V | Ctrl + C | Ctrl + P | Ctrl + A
+Oxirgi amalni bekor qilish uchun qaysi tugmalar bosiladi? | Ctrl + Z | Ctrl + Y | Ctrl + S | Alt + F4
+Hujjatni saqlash uchun qaysi tugmalar bosiladi? | Ctrl + S | Ctrl + O | Ctrl + N | Ctrl + Q
+@ Internet va zamonaviy texnologiyalar
+Internet tarmog'ida qurilmaning noyob raqamli manzili nima deyiladi? | IP manzil | URL | E-mail | Parol
+Sun'iy intellekt nima? | Inson kabi o'rganib, qaror qabul qila oladigan kompyuter tizimlari | Faqat kalkulyator | Printer turi | Internet kabeli
+Robototexnikada robotning "sezgi a'zolari" vazifasini nima bajaradi? | Datchiklar (sensorlar) | Motorlar | G'ildiraklar | Batareya

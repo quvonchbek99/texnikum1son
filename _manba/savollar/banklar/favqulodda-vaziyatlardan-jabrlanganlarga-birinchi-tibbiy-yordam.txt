@@ -1,0 +1,18 @@
+# Favqulodda vaziyatlardan jabrlanganlarga birinchi tibbiy yordam ko'rsatish — savollar banki
+@ Umumiy qoidalar
+Tez tibbiy yordamni chaqirish raqami (O'zbekiston) qaysi? | 103 | 101 | 102 | 104
+Birinchi yordam ko'rsatishdan oldin birinchi navbatda nima qilinadi? | Voqea joyi o'zingiz va jabrlanuvchi uchun xavfsizligiga ishonch hosil qilinadi | Jabrlanuvchi darhol sudraladi | Suratga olinadi | Ketib qolinadi
+Hushsiz, lekin nafas olayotgan jabrlanuvchi qanday holatga yotqiziladi? | Yonboshlatib barqaror (tiklanish) holatiga | Chalqanchasiga, boshini ko'tarib | Qorniga, yuzini pastga | O'tirg'izib
+Elektr toki urgan odamga yordam nimadan boshlanadi? | Tok manbai uziladi yoki quruq yog'och bilan jabrlanuvchi tokdan ajratiladi | Qo'l bilan tortib olinadi | Suv sepiladi | Kutiladi
+@ Qon ketish
+Arterial qon ketishning belgisi qaysi? | Qon och qizil rangda, otilib (pulsatsiyalanib) oqadi | To'q qizil, sekin oqadi | Qon tomchilab sizadi | Qon ketmaydi
+Kuchli arterial qon ketishda vaqtinchalik to'xtatish usuli qaysi? | Jarohatdan yuqorida jgut qo'yish yoki tomirni barmoq bilan bosish | Jarohatni yuvish | Suv ichirish | Isitish
+Jgut qo'yilganda unga nima yozib qo'yiladi? | Qo'yilgan vaqti | Jabrlanuvchi ismi | Ob-havo | Hech narsa
+Venoz qon ketishda qanday bog'lam qo'yiladi? | Bosib turuvchi bog'lam | Bo'yinga jgut | Hech qanday | Isituvchi kompress
+Burundan qon ketganda nima qilinadi? | Bosh biroz oldinga egiladi, burun qanotlari bosiladi va sovuq qo'yiladi | Bosh orqaga tashlanadi | Yotqiziladi | Issiq choy ichiriladi
+@ Shikastlanishlar va reanimatsiya
+Kuyganda birinchi yordam qanday ko'rsatiladi? | Kuygan joy 10–20 daqiqa sovuq oqar suvda sovitiladi | Yog' surtiladi | Pufakchalar yoriladi | Muz bilan ishqalanadi
+Suyak sinishida birinchi yordam qanday? | Shina qo'yib, shikastlangan joy harakatsizlantiriladi | Suyak o'zi to'g'rilanadi | Massaj qilinadi | Yurishga majburlanadi
+Kattalarda yurak-o'pka reanimatsiyasida ko'krakni bosishlar soni daqiqasiga qancha? | 100–120 marta | 20–30 marta | 200 marta | 10 marta
+Kattalarda reanimatsiyada ko'krak bosish va sun'iy nafas nisbati qanday? | 30 : 2 | 15 : 1 | 5 : 1 | 2 : 30
+Nafas yo'liga yot jism tiqilganda kattalarga qo'llanadigan usul qaysi? | Geymlix usuli (qorin yuqorisiga keskin bosish) | Suv ichirish | Boshni orqaga tashlab kutish | Yotqizib qo'yish

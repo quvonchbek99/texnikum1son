@@ -1,0 +1,18 @@
+# Avtomobil elektr va elektron jihozlari tuzilishi, ularga texnik xizmat ko'rsatish va ta'mirlash — savollar banki
+@ Elektr ta'minoti manbalari
+Yengil avtomobil akkumulyatorining nominal kuchlanishi qancha? | 12 V | 6 V | 24 V | 220 V
+Dvigatel ishlaganda iste'molchilarni ta'minlab, akkumulyatorni zaryadlovchi qurilma? | Generator | Starter | Kommutator | Rele
+Ishlayotgan dvigatelda akkumulyator klemmalaridagi me'yoriy kuchlanish qancha? | 13,8–14,5 V | 10–11 V | 12,0 V dan past | 18–20 V
+Akkumulyatorni avtomobildan yechishda birinchi qaysi klemma uziladi? | Manfiy (−) klemma | Musbat (+) klemma | Ikkalasi bir vaqtda | Farqi yo'q ## Avval manfiy uzilsa, kalit kuzovga tegib ketganda qisqa tutashuv bo'lmaydi.
+Akkumulyator elektrolitining zichligi qaysi asbob bilan o'lchanadi? | Areometr | Ampermetr | Manometr | Spidometr
+@ Ishga tushirish va o't oldirish
+Dvigatelni ishga tushirish uchun tirsakli valni aylantiruvchi elektr dvigatel qaysi? | Starter | Generator | Ventilyator | Yoqilg'i nasosi
+Benzinli dvigatelda shamga yuqori kuchlanish beruvchi qurilma qaysi? | O't oldirish g'altagi | Generator | Rele-regulyator | Akkumulyator
+Kalit burilganda faqat rele chiqillab, starter aylanmasa, ehtimoliy sabab? | Akkumulyator zaryadsiz yoki klemmalar oksidlangan | Yoqilg'i tugagan | Shina teshilgan | Moy ortiqcha
+@ Himoya, boshqaruv va o'lchash
+Elektr zanjirlarini qisqa tutashuvdan himoya qiluvchi element qaysi? | Saqlagich (predoxranitel) | Rele | Diod | Lampochka
+Bir xil saqlagich qayta-qayta kuyayotgan bo'lsa nima qilish kerak? | Zanjirdagi qisqa tutashuv sababini topish | Kattaroq nominaldagi saqlagich qo'yish | Sim bilan ulab qo'yish | E'tibor bermaslik
+Kichik tok bilan katta tokli zanjirni (masalan, faralarni) ulab-uzuvchi element? | Rele | Rezistor | Saqlagich | Kondensator
+Zamonaviy avtomobilda dvigatelni boshqaruvchi elektron blok qanday ataladi? | ECU (dvigatelni boshqarish bloki) | ABS bloki | Generator | Starter
+Avtomobildagi elektron bloklarni o'zaro bog'lovchi raqamli tarmoq qaysi? | CAN shina | USB | HDMI | Wi-Fi
+Kuchlanish, tok va qarshilikni o'lchaydigan universal asbob qaysi? | Multimetr | Areometr | Manometr | Kompressometr

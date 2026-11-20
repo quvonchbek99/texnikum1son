@@ -1,0 +1,14 @@
+# Jangovor va maxsus taktik tayyorgarlik — savollar banki
+@ Jangovar yoyilish va jihozlar
+O't o'chiruvchining jangovar kiyimi asosan nimadan himoya qiladi? | Yuqori harorat, issiqlik nurlanishi va suvdan | Faqat sovuqdan | Faqat changdan | Shovqindan
+Jangovar yoyilish nima? | Yong'in joyida texnika va jihozlarni ish holatiga keltirib, suv berishga tayyorlash | Kiyim kiyish | Ovqatlanish | Hisobot yozish
+Yeng liniyasi qanday tuziladi? | Nasosdan stvolgacha yenglar ulanadi, kerak bo'lsa tarmoqlagich qo'yiladi | Faqat bitta yengdan | Yengsiz | Elektr kabelidan
+Yong'in-texnik qurollardan foydalanishdan oldin nima qilinadi? | Ularning sozligi va butligi tekshiriladi | Hech narsa | Bo'yaladi | Yuviladi
+Ko'chma radiostansiya nimaga xizmat qiladi? | Yong'in joyida bo'linmalar o'rtasidagi aloqa uchun | Musiqa tinglash uchun | Yoritish uchun | Suv berish uchun
+@ Qutqaruv ishlari
+Narvon bilan ishlashda asosiy xavfsizlik talabi qaysi? | Narvonni barqaror o'rnatish va xavfsizlik kamaridan foydalanish | Narvonni qiyshiq qo'yish | Kamar taqmaslik | Narvonda yugurish
+Qutqaruv arqoni nima uchun ishlatiladi? | Odamlarni balandlikdan tushirish va o'zini sug'urtalash uchun | Yeng ulash uchun | Suv tashish uchun | Yoritish uchun
+Gidravlik qutqaruv asbobi qayerda ishlatiladi? | Avariyaga uchragan transportdan odamlarni chiqarishda metallni kesish va kengaytirish uchun | Ovqat pishirishda | Suv o'lchashda | Signalizatsiyada
+Tutunli muhitda ishlaydigan zveno kamida necha kishidan iborat bo'ladi? | Kamida 3 kishi | 1 kishi | 2 kishi | 10 kishi
+@ Jismoniy tayyorgarlik
+O't o'chiruvchi uchun jismoniy tayyorgarlik nima uchun muhim? | Og'ir sharoitda chidamlilik, kuch va tezkorlik talab qilinadi | Ahamiyati yo'q | Faqat musobaqalar uchun | Faqat ko'rinish uchun

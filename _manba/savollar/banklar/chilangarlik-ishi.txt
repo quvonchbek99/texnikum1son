@@ -1,0 +1,17 @@
+# Chilangarlik ishi — savollar banki
+@ Asboblar
+Detalni mahkam qisib turish uchun qaysi moslama ishlatiladi? | Iskanja (tiski) | Egov | Kernyor | Shtangensirkul
+Metall sirtidan qatlam olib, shakl berish uchun qaysi asbob ishlatiladi? | Egov | Bolg'a | Kernyor | Chizgich
+Metallni qo'lda kesish uchun qaysi asbob ishlatiladi? | Metall arrasi (nojovka) | Egov | Kernyor | Iskanja
+Teshik markazini belgilash uchun qaysi asbob ishlatiladi? | Kernyor | Chizgich | Egov | Ombir
+Detal sirtiga belgilash chiziqlarini chizish asbobi qaysi? | Chizgich (chertilka) | Kernyor | Bolg'a | Arra
+Ichki rezba ochish asbobi qaysi? | Metchik | Plashka | Parma | Zenker
+Tashqi rezba ochish asbobi qaysi? | Plashka | Metchik | Razvyortka | Kernyor
+Teshikni yuqori aniqlik va silliqlikka keltirish uchun nima ishlatiladi? | Razvyortka | Parma | Metchik | Egov
+@ O'lchash
+O'lchamni 0,1 mm aniqlikda o'lchaydigan asbob qaysi? | Shtangensirkul | Chizg'ich | Ruletka | Transportir
+O'lchamni 0,01 mm aniqlikda o'lchaydigan asbob qaysi? | Mikrometr | Shtangensirkul | Ruletka | Lineyka
+@ Xavfsizlik
+Parmalash dastgohida qo'lqop kiyib ishlash mumkinmi? | Yo'q, aylanuvchi parma qo'lqopni ilib oladi | Ha, albatta | Faqat charm qo'lqop | Faqat paxta qo'lqop
+Parmalashda detal qanday ushlanadi? | Iskanja yoki moslamada mahkamlanadi | Qo'lda | Oyoq bilan | Ushlanmaydi
+Egovni dastasiz ishlatish mumkinmi? | Yo'q, dum qismi qo'lni jarohatlaydi | Ha | Faqat kichik egovni | Faqat yumshoq metallda

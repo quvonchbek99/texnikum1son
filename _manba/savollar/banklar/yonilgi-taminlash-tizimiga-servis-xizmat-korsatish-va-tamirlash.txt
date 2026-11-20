@@ -1,0 +1,15 @@
+# Yonilg'i ta'minlash tizimiga servis xizmat ko'rsatish va ta'mirlash — savollar banki
+@ Tizim tuzilishi
+Injektorli dvigatelda yoqilg'ini purkovchi element qaysi? | Forsunka (injektor) | Karburator | Sham | Termostat
+Benzinni bakdan dvigatelga uzatuvchi qurilma qaysi? | Yoqilg'i nasosi | Suv nasosi | Moy nasosi | Kompressor
+Dizel dvigatellarda yoqilg'ini juda yuqori bosim bilan purkaydigan zamonaviy tizim? | Common Rail | Karburator | Monoinjektor | Gaz ballon
+Dvigatelga kirayotgan havo miqdorini o'lchaydigan datchik qaysi? | Havo massasi sarfi datchigi | Lambda-zond | Detonatsiya datchigi | Tezlik datchigi
+@ Yoqilg'i xossalari
+Benzinning detonatsiyaga chidamliligi qanday ko'rsatkich bilan belgilanadi? | Oktan soni | Setan soni | Qovushqoqlik | Zichlik
+Dizel yoqilg'ining alangalanish xususiyati qanday ko'rsatkich bilan belgilanadi? | Setan soni | Oktan soni | Qaynash harorati | Kislota soni
+@ Servis va xavfsizlik
+Yoqilg'i tizimini ochishdan oldin nima qilinadi? | Tizimdagi bosim tushiriladi | Dvigatel yuqori aylanishda ishlatiladi | Bak to'ldiriladi | Hech narsa
+Yoqilg'i bilan ishlaganda eng muhim xavfsizlik qoidasi qaysi? | Ochiq olov va uchqun manbalaridan uzoq, yaxshi shamollatiladigan joyda ishlash | Isitgich yonida ishlash | Ish vaqtida chekish | Yoqilg'ini idishsiz to'kish
+Havo filtri ifloslansa nima yuz beradi? | Dvigatelga havo kam kiradi, quvvat pasayib, yoqilg'i sarfi oshadi | Quvvat oshadi | Moy sarfi kamayadi | Hech narsa
+Yoqilg'i filtrini o'rnatishda nimaga e'tibor beriladi? | Korpusdagi strelka (oqim yo'nalishi) bo'yicha o'rnatishga | Istalgan tomonga qo'yishga | Filtrsiz ishlatishga | Filtrni moylashga
+Ishlayotgan dvigatelda forsunkalar ishini tekshirishning oddiy usuli qaysi? | Stetoskop bilan bir tekis chiqillashini eshitish | Ko'z bilan qarash | Moyni tekshirish | Shinani tekshirish

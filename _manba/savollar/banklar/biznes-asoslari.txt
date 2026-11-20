@@ -1,0 +1,16 @@
+# Biznes asoslari — savollar banki
+@ Asosiy tushunchalar
+Biznes rejaning asosiy maqsadi nima? | Biznes g'oyasi, xarajat va daromadlarni rejalashtirish | Faqat kredit olish | Faqat reklama | Soliqdan qochish
+Tannarx nima? | Mahsulot ishlab chiqarishga ketgan barcha xarajatlar | Sotuvdan olingan pul | Foyda | Soliq
+Foyda qanday hisoblanadi? | Tushumdan xarajatlar ayiriladi | Xarajatga tushum qo'shiladi | Tushum xarajatga bo'linadi | Narx ikkiga ko'paytiriladi
+Mahsulot 50 000 so'mdan 100 dona sotildi, jami xarajat 3 000 000 so'm. Foyda qancha? | 2 000 000 so'm | 5 000 000 so'm | 3 000 000 so'm | 8 000 000 so'm ## Tushum: 50 000 × 100 = 5 000 000 so'm; foyda: 5 000 000 − 3 000 000.
+Biznesni boshlash uchun zarur boshlang'ich mablag' nima deyiladi? | Boshlang'ich (startap) kapital | Oylik maosh | Soliq | Jarima
+Mahsulot narxi tushganda talab odatda qanday o'zgaradi? | Oshadi | Kamayadi | O'zgarmaydi | Yo'qoladi
+@ Marketing va tahlil
+Marketingning "4P" kompleksi qaysi elementlardan iborat? | Mahsulot, narx, sotuv joyi, rag'batlantirish | Pul, foyda, reja, ish | Ishchi, rahbar, mijoz, soliq | Plan, pul, pochta, pasport
+SWOT-tahlilda "S" nimani anglatadi? | Kuchli tomonlar | Zaif tomonlar | Imkoniyatlar | Tahdidlar
+SWOT-tahlilda "T" nimani anglatadi? | Tahdidlar | Kuchli tomonlar | Imkoniyatlar | Zaif tomonlar
+Raqobatchilarni o'rganishdan maqsad nima? | Bozordagi o'z o'rni va afzalliklarini aniqlash | Ularni ko'chirish | Ularga xalaqit berish | Shart emas
+@ Rasmiylashtirish
+Yakka tartibdagi tadbirkor sifatida ro'yxatdan o'tish qayerda amalga oshiriladi? | Davlat xizmatlari markazi yoki my.gov.uz orqali | Maktabda | Kasalxonada | Do'konda
+Bankdan kredit olish uchun odatda nimalar taqdim etiladi? | Ariza, biznes reja va garov (ta'minot) hujjatlari | Faqat pasport nusxasi | Hech narsa | Faqat telefon raqami

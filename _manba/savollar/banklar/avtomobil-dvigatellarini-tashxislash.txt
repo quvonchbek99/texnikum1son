@@ -1,0 +1,15 @@
+# Avtomobil dvigatellarini tashxislash — savollar banki
+@ Elektron tashxis
+Zamonaviy avtomobillarda xato kodlarini o'qish uchun ishlatiladigan standart ulagich qaysi? | OBD-II | USB-A | HDMI | RJ-45
+"P" harfi bilan boshlanadigan OBD-II xato kodlari qaysi tizimga tegishli? | Kuch agregati (dvigatel va transmissiya) | Kuzov | Shassi | Bloklar tarmog'i
+OBD-II xato kodi P0300 nimani bildiradi? | Tasodifiy yoki bir nechta silindrda o't olmaslik (misfire) | Yoqilg'i baki bo'shligini | Eshik ochiqligini | Akkumulyator to'laligini
+"Check Engine" chirog'i yonsa, birinchi qadam qaysi? | Diagnostika skaneri bilan xato kodlarini o'qish | Darhol dvigatelni almashtirish | Chiroqni o'chirib qo'yish | Moyni to'kib tashlash
+Lambda-zond (kislorod datchigi) nimani o'lchaydi? | Chiqindi gazlardagi kislorod miqdorini | Moy bosimini | Antifriz haroratini | Tezlikni
+Tirsakli valning holati va aylanish chastotasini aniqlovchi datchik qaysi? | Tirsakli val holati datchigi | Sovituvchi suyuqlik harorati datchigi | Lambda-zond | Detonatsiya datchigi
+Detonatsiya datchigi nimani aniqlaydi? | Silindrlardagi portlashsimon (detonatsion) yonishni | Moy sathini | Yoqilg'i darajasini | Havo haroratini
+@ Mexanik tashxis
+Silindr ichini ochmasdan ko'zdan kechirish uchun qaysi asbob ishlatiladi? | Texnik endoskop | Kompressometr | Ampermetr | Pipetka
+Kompressiyani to'g'ri o'lchash uchun qaysi shartlar bajariladi? | Dvigatel ish haroratigacha qizdiriladi, barcha shamlar olinadi, drossel to'liq ochiladi | Dvigatel ishlab turadi | Faqat bitta sham olinadi | Akkumulyator uziladi
+Benzinli dvigatelda kompressiyaning taxminiy me'yori qancha? | 10–14 bar | 1–2 bar | 30–40 bar | 100 bar ## Aniq qiymat dvigatel modeliga bog'liq; silindrlar orasidagi farq ham muhim.
+Texnik stetoskop yordamida nima aniqlanadi? | Dvigatel qismlaridagi begona taqillash va shovqin manbai | Elektr kuchlanishi | Moy rangi | Shina bosimi
+Silindrlar orasida kompressiya farqi katta bo'lsa, bu nimani bildiradi? | Past silindrda halqa, klapan yoki prokladka nosozligi borligini | Hammasi joyidaligini | Yoqilg'i yaxshiligini | Akkumulyator yangiligini

@@ -1,0 +1,19 @@
+# Mehnat muhofazasi va xavfsizlik texnikasi — savollar banki
+@ Yo'riqnomalar va qonunchilik
+Ish joyida xavfsizlik bo'yicha birinchi yo'riqnoma qachon o'tkaziladi? | Ishga qabul qilinganda (kirish yo'riqnomasi) | Bir yildan keyin | Avariyadan keyin | Hech qachon
+O'zbekistonda mehnatni muhofaza qilish qaysi qonun bilan tartibga solinadi? | "Mehnatni muhofaza qilish to'g'risida"gi Qonun | "Avtomobil yo'llari to'g'risida"gi Qonun | Oila kodeksi | Bojxona kodeksi
+Ishlab chiqarishda baxtsiz hodisa yuz bersa, birinchi navbatda nima qilinadi? | Jabrlanuvchiga birinchi yordam ko'rsatilib, rahbarga xabar beriladi | Hech kimga aytilmaydi | Ish davom ettiriladi | Hodisa yashiriladi
+@ Xavfsizlik belgilari
+Taqiqlovchi xavfsizlik belgisi qanday ko'rinishda? | Qizil hoshiyali doira, qiya chiziq bilan | Sariq uchburchak | Ko'k doira | Yashil to'rtburchak
+Ogohlantiruvchi xavfsizlik belgisi qanday ko'rinishda? | Qora hoshiyali sariq uchburchak | Qizil doira | Ko'k doira | Yashil kvadrat
+Buyuruvchi (majburiy) belgi qanday ko'rinishda? | Ko'k doira, oq rasm bilan | Sariq uchburchak | Qizil doira | Yashil kvadrat
+Evakuatsiya (chiqish yo'li) belgilari qaysi rangda? | Yashil | Qizil | Sariq | Ko'k
+@ Himoya vositalari
+Shaxsiy himoya vositalariga misol qaysi qatorda? | Kaska, himoya ko'zoynagi, qo'lqop, respirator | Stol va stul | Kompyuter | Telefon
+Elektr qurilmalarida dielektrik qo'lqop nima uchun kiyiladi? | Tok urishidan himoyalanish uchun | Isinish uchun | Chiroy uchun | Kerak emas
+Shovqinli ishda qanday himoya vositasi ishlatiladi? | Quloqchin yoki quloq tiqinlari | Ko'zoynak | Qo'lqop | Kaska
+1,8 metrdan yuqori balandlikda ishlashda qaysi vosita majburiy? | Xavfsizlik (sug'urta) kamari | Quloqchin | Qo'lqop | Fartuk
+@ Ish joyi xavfsizligi
+Yong'in xavfi bor ish joyida chekish mumkinmi? | Yo'q, taqiqlanadi | Ha | Faqat tushlikda | Faqat kechasi
+Kimyoviy moddalar bilan ishlaganda nimaga rioya qilinadi? | Shamollatish, himoya vositalari va modda yorlig'idagi ko'rsatmalarga | Hidlab ko'rishga | Qo'l bilan aralashtirishga | Ovqat yonida saqlashga
+Ish joyini to'g'ri tashkil etish nimani o'z ichiga oladi? | Yetarli yoritish, tartib, soz jihozlar va qulay holat (ergonomika) | Ortiqcha narsalar to'plash | Qorong'ilik | Sochilgan simlar

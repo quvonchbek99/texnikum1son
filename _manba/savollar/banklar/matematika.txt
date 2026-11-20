@@ -1,0 +1,41 @@
+# Matematika (umumta'lim) — savollar banki
+@ Sonlar, kasrlar va foizlar
+25 ning 20 % i nechaga teng? | 5 | 20 | 2,5 | 12,5
+Narx 80 000 so'mdan 10 % ga tushirildi. Yangi narx qancha? | 72 000 so'm | 70 000 so'm | 79 000 so'm | 88 000 so'm
+0,75 oddiy kasr ko'rinishida qanday yoziladi? | 3/4 | 7/5 | 1/75 | 75/10
+2/3 + 1/6 nechaga teng? | 5/6 | 3/9 | 1/2 | 3/6
+2 dan 30 gacha bo'lgan tub sonlar nechta? | 10 ta | 8 ta | 12 ta | 9 ta ## 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.
+12 va 18 ning eng katta umumiy bo'luvchisi (EKUB) nechaga teng? | 6 | 3 | 36 | 2
+12 va 18 ning eng kichik umumiy karralisi (EKUK) nechaga teng? | 36 | 6 | 216 | 72
+@ Algebra: tenglama va ifodalar
+3x − 7 = 11 tenglamaning ildizi nechaga teng? | 6 | 4/3 | 18 | −6
+x² − 9 = 0 tenglamaning ildizlari qaysi? | 3 va −3 | 9 va −9 | Faqat 3 | 0 va 9
+x² − 5x + 6 = 0 tenglamaning ildizlari qaysi? | 2 va 3 | −2 va −3 | 1 va 6 | −1 va 6 ## Viyet teoremasi: x1 + x2 = 5, x1 · x2 = 6.
+ax² + bx + c = 0 kvadrat tenglamaning diskriminanti formulasi qaysi? | D = b² − 4ac | D = b² + 4ac | D = 4ac − b | D = b − 4a
+(a + b)² nimaga teng? | a² + 2ab + b² | a² + b² | a² − 2ab + b² | 2a + 2b
+2³ · 2⁴ nimaga teng? | 2⁷ | 2¹² | 4⁷ | 2¹
+√144 nechaga teng? | 12 | 14 | 72 | 16
+log₂ 8 nechaga teng? | 3 | 4 | 2 | 8
+lg 1000 nechaga teng? | 3 | 10 | 100 | 4
+2x + 3 > 7 tengsizlikning yechimi qaysi? | x > 2 | x < 2 | x > 5 | x < 5
+@ Progressiyalar va funksiyalar
+3, 7, 11, ... arifmetik progressiyaning 10-hadi nechaga teng? | 39 | 43 | 40 | 37 ## a10 = 3 + 9 · 4 = 39
+2, 6, 18, ... geometrik progressiyaning maxraji nechaga teng? | 3 | 4 | 2 | 6
+y = 2x + 1 funksiyaning grafigi qanday chiziq? | To'g'ri chiziq | Parabola | Giperbola | Aylana
+y = x² funksiyaning grafigi qanday chiziq? | Parabola | To'g'ri chiziq | Giperbola | Sinusoida
+y = x² funksiyaning hosilasi nimaga teng? | 2x | x | x³/3 | 2
+@ Trigonometriya
+sin 30° nechaga teng? | 1/2 | √3/2 | 1 | 0
+cos 60° nechaga teng? | 1/2 | √3/2 | 0 | 1
+tg 45° nechaga teng? | 1 | 0 | √3 | 1/2
+sin²α + cos²α nimaga teng? | 1 | 0 | 2 | sin 2α
+180° necha radianga teng? | π | 2π | π/2 | 1
+@ Geometriya
+To'g'ri burchakli uchburchak uchun Pifagor teoremasi qaysi? | c² = a² + b² | c = a + b | c² = a² − b² | a² = b · c
+Katetlari 3 va 4 bo'lgan to'g'ri burchakli uchburchakning gipotenuzasi nechaga teng? | 5 | 7 | 6 | 25
+Uchburchak ichki burchaklarining yig'indisi nechaga teng? | 180° | 360° | 90° | 270°
+Radiusi r bo'lgan doiraning yuzi formulasi qaysi? | S = πr² | S = 2πr | S = πd | S = r²/2
+Aylana uzunligi formulasi qaysi? | C = 2πr | C = πr² | C = r² | C = 2r
+Tomoni 5 sm bo'lgan kvadratning yuzi qancha? | 25 sm² | 20 sm² | 10 sm² | 15 sm²
+Qirrasi a bo'lgan kubning hajmi formulasi qaysi? | V = a³ | V = 6a² | V = a² | V = 3a
+Silindr hajmi formulasi qaysi? | V = πr²h | V = 2πrh | V = πr³ | V = r²h/3

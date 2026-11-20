@@ -378,72 +378,69 @@ n.textContent=k+' ta laboratoriya';document.getElementById('lbosh').hidden=k>0;}
 q.addEventListener('input',go);go();}})();</script>"""
     page("lab/index.html", "Virtual laboratoriyalar", "Har bir fan uchun virtual laboratoriya: jihozlar bilan tanishish, slaydlar, virtual ishlatish va sinov — Toshkent tuman 1-son texnikumi.", b, active="lab/", scripts=("t1-kuvi.js",))
 
-# ---------- kuvonch.uz sinf o'yinlari (Jonli viktorina, Arqon tortish…) — jonli ulanadi, u yerda yangilansa bu yerda ham yangilanadi ----------
+# ---------- Fan viktorinasi (viktorina/) — har bir fan FAQAT o'z savollari bilan ----------
+# Savollar banki: _manba/savollar/yig.py → data/test/<kalit>.json (+ Kuvi agent testlari agent/t/, sahifada qo'shiladi).
+# Kalit: kasbiy va umumta'lim fanlari — fan id; amaliyot — <yonalish>--<fan> (mutaxassislik kasbiy fanlaridan meros).
+sys.path.insert(0, os.path.join(SRC, "savollar"))
+import yig as _yig  # noqa: E402
+TEST_SONI = _yig.yig(MAL, OUT, ynom=lambda y: ynom(y), log=print)
+def test_kalit(yid, f):
+    return f"{yid}--{f['id']}" if f["toifa"] == "amaliyot" else f["id"]
+def vik_url(R, yid, f, rej=""):
+    return f'{R}viktorina/?fan={test_kalit(yid, f)}&amp;y={yid}' + (f"&amp;rej={rej}" if rej else "")
+def oyin_qator(R, yid, f):
+    n = TEST_SONI.get(test_kalit(yid, f), 0)
+    if not n:
+        return ""
+    return (f'<div class="oyin-q"><span class="oyin-q-t">🎯 Fan viktorinasi · <b>{n} ta savol</b><small style="display:block;color:var(--muted);font-size:13px">Faqat shu fanning savollari: jonli viktorina, arqon tortish, yakka test va chop etiladigan test varaqasi</small></span>'
+            f'<a class="btn sm" href="{vik_url(R, yid, f, "host")}">Jonli viktorina</a>'
+            f'<a class="btn ghost sm" href="{vik_url(R, yid, f, "arqon")}">Arqon tortish</a>'
+            f'<a class="btn ghost sm" href="{vik_url(R, yid, f, "solo")}">Yakka test</a>'
+            f'<a class="kv-l" href="{vik_url(R, yid, f, "test")}">Test varaqasi</a>'
+            f'<a class="kv-l" href="{vik_url(R, yid, f)}">Barcha o‘yinlar</a></div>')
+
+# kuvonch.uz umumiy o'yinlari (oyin/ — avtomatik sinxron): fanlarga bog'lanmagan, «Sinf o'yinlari» sahifasida qo'shimcha sifatida
 KUV = "https://kuvonch.uz/"
-KFAN = json.load(open(os.path.join(SRC, "kuvonch-oyinlar.json"), encoding="utf-8"))   # kuvonch.uz viktorina fanlari va arqon mavzu ID lari
-FANMOS = [("chqbt", r"chaqiruv|chqbt|harbiy|favqulodda|fuqaro muhofaza|birinchi tibbiy"), ("sport", r"jismoniy tarbiya"), ("tarbiya", r"^tarbiya"), ("mat", r"matematika|algebra|geometriya"),
-          ("fizika", r"fizika|elektrotexnika|elektr "), ("kimyo", r"kimyo"), ("biologiya", r"biolog|sanitariya|gigiyena"), ("geografiya", r"geografiya"),
-          ("tarix", r"tarix"), ("informatika", r"informatika|kompyuter|axborot|dasturlash|tarmoq|veb|it-servis|raqamli"), ("ona", r"ona tili"),
-          ("adabiyot", r"adabiyot"), ("rus", r"rus tili"), ("ingliz", r"ingliz|chet tili"), ("huquq", r"huquq|qonunchilik"),
-          ("iqtisod", r"biznes|iqtisod|tadbirkor|marketing|menejment"), ("chizma", r"chizma"), ("ekologiya", r"ekolog"),
-          ("avto", r"yo.?l harakati|haydovchi|avtotransport|toifadagi"), ("astronomiya", r"astronom")]
-def kfan(nomi):
-    n = norm(nomi)
-    for k, rx in FANMOS:
-        if k in KFAN and re.search(rx, n):
-            return k
-    return None
-OYINLAR = [("viktorina", "Jonli viktorina", "Kahoot uslubida: savollar doskada, o‘quvchilar telefondan javob beradi. Shohsupa, reyting va natijalarni yuklab olish."),
-           ("arqon", "Arqon tortish", "1–10 jamoa bellashadi: to‘g‘ri javob arqonni o‘z tomoniga tortadi. Doska, telefon yoki aqlli doskada."),
-           ("jamoa", "Jamoaviy o‘yin", "Har bir o‘yin uchun xona kodi bilan 2–4 jamoa: o‘quvchilar o‘z telefonlaridan qo‘shiladi."),
-           ("sinf", "Sinf o‘yinlari markazi", "Arqon tortish va jonli viktorina haqida qo‘llanma va sozlamalar."),
-           ("barcha", "Barcha o‘yinlar", "Kuvonch Academy’dagi barcha ta’limiy o‘yinlar: mantiq, xotira, milliy o‘yinlar va boshqalar.")]
-OYIN_FAYL = {"viktorina": "viktorina.html", "arqon": "arqon.html", "jamoa": "jamoa.html", "sinf": "sinf-oyinlari.html", "barcha": "oyinlar.html"}
-OYIN_DIR = "oyin/"   # kuvonch.uz o'yinlarining shu saytdagi nusxasi (_manba/kuvonch/sinxron.py, avtomatik yangilanadi)
-def kuv_url(o, fan=None, R=""):
-    """Sinf o'yinlari shu saytning o'zida (oyin/) ochiladi; «Barcha o'yinlar» — kuvonch.uz'da. Fan/mavzu oldindan tanlanadi."""
-    u = (KUV if o == "barcha" else R + OYIN_DIR) + OYIN_FAYL[o]
-    if fan and o == "viktorina":
-        u += "?fan=" + fan
-    elif fan and o == "arqon" and 0 < len(KFAN[fan]["a"]) <= 30:
-        u += "?mavzu=" + ",".join(KFAN[fan]["a"])
-    return u
-def oyin_qator(R, nomi):
-    k = kfan(nomi)
-    if k:
-        return (f'<div class="oyin-q"><span class="oyin-q-t">Sinf o‘yini · <b>{e(KFAN[k]["nom"])}</b></span>'
-                f'<a class="btn sm" href="{e(kuv_url("viktorina", k, R))}">Jonli viktorina</a>'
-                f'<a class="btn ghost sm" href="{e(kuv_url("arqon", k, R))}">Arqon tortish</a>'
-                f'<a class="kv-l" href="{R}oyinlar/">Boshqa o‘yinlar</a></div>')
-    return f'<div class="oyin-q"><span class="oyin-q-t">Sinf o‘yinlari — jonli viktorina, arqon tortish</span><a class="btn ghost sm" href="{R}oyinlar/">O‘yinni tanlash</a></div>'
+OYIN_DIR = "oyin/"
+KUV_OYIN = [("viktorina.html", "Umumiy jonli viktorina", "Kuvonch Academy savollari (matematika, mantiq, zakovat va boshq.)."),
+            ("arqon.html", "Umumiy arqon tortish", "1–10 jamoa, Kuvonch Academy mavzulari bo‘yicha."),
+            ("jamoa.html", "Jamoaviy o‘yin (xona kodi)", "2–4 jamoa o‘quvchilar telefonidan."),
+            ("sinf-oyinlari.html", "Sinf o‘yinlari markazi", "Qo‘llanma va sozlamalar.")]
+VIK_REJ = [("host", "📺", "Jonli viktorina", "Savollar doskada, o‘quvchilar telefondan kod yoki QR bilan qo‘shiladi. Shohsupa, reyting va natijalarni yuklab olish."),
+           ("arqon", "🪢", "Arqon tortish", "Ikki jamoa bitta ekranda (aqlli doska, proyektor): birinchi to‘g‘ri javob arqonni o‘z tomoniga tortadi."),
+           ("team", "👥", "Jamoaviy o‘yin", "Bitta ekranda 2–4 jamoa bellashadi. Telefon va internet shart emas."),
+           ("solo", "🎯", "Yakka o‘yin", "O‘quvchi o‘zini sinaydi: vaqt, bonuslar va xatolar tahlili."),
+           ("test", "🖨️", "Test varaqasi", "1–4 variantli test va javoblar kaliti — oq-qora printerga mos.")]
 
 def oyinlar():
     R = "../"
-    opts = '<option value="">Fan tanlanmagan (o‘yin ichida tanlanadi)</option>' + "".join(f'<option value="{k}">{e(v["nom"])}</option>' for k, v in sorted(KFAN.items(), key=lambda kv: norm(kv[1]["nom"])))
-    def tugma(o):
-        if o == "barcha":
-            return f'<a class="btn ghost sm" data-o="{o}" target="_blank" rel="noopener" href="{e(kuv_url(o))}">kuvonch.uz’da ochish ↗</a>'
-        return f'<a class="btn sm" data-o="{o}" href="{e(kuv_url(o, None, R))}">Boshlash</a>'
-    cards = "".join(f'<div class="card oyin-k"><span class="oyin-i">{i + 1:02d}</span><h3>{t}</h3><p class="muted small">{d}</p>{tugma(o)}</div>' for i, (o, t, d) in enumerate(OYINLAR))
-    # Yo'l harakati qoidalari viktorinasi (yhq/ — mustaqil ilova, build.py unga tegmaydi)
-    cards += (f'<div class="card oyin-k"><span class="oyin-i">{len(OYINLAR) + 1:02d}</span><h3>Yo‘l harakati viktorinasi</h3><p class="muted small">Yo‘l belgilari, chiziqlar, qoidalar va jarimalar bo‘yicha: jonli (o‘quvchilar telefondan), '
-              'jamoaviy (bitta ekranda) va yakka o‘yin. Savollar har safar yangidan tuziladi.</p>'
-              f'<a class="btn sm" href="{R}yhq/viktorina.html">Boshlash</a> <a class="btn ghost sm" href="{R}yhq/">Qoidalar va belgilar</a></div>')
-    # Avtotest — YHQ Test 2026 (avtotest/ — mustaqil ilova, build.py unga tegmaydi)
-    cards += (f'<div class="card oyin-k"><span class="oyin-i">{len(OYINLAR) + 2:02d}</span><h3>Avtotest — imtihon biletlari</h3><p class="muted small">40 ta bilet, 1272 ta savol, imtihon rejimi (20 savol, 25 daqiqa), '
-              'avtodrom simulyatori va AI xulosa. Haydovchilik guvohnomasi nazariy imtihoniga tayyorgarlik.</p>'
-              f'<a class="btn sm" href="{R}avtotest/">Boshlash</a> <a class="btn ghost sm" href="{R}avtotest/#/imtihon">Imtihon rejimi</a></div>')
-    cfg = {"loc": R + OYIN_DIR, "f": OYIN_FAYL, "a": {k: v["a"] for k, v in KFAN.items() if 0 < len(v["a"]) <= 30}}
-    b = hero("", "Sinf o‘yinlari", "Jonli viktorina, arqon tortish va jamoaviy o‘yin — butun sinf bilan, proyektor, aqlli doska va o‘quvchilar telefonlarida. O‘yinlar shu saytning o‘zida ochiladi; kuvonch.uz’da kuchaytirilsa yoki yangi savollar qo‘shilsa, bu yerga ham avtomatik o‘tadi.", crumbs=[("Fanlar", R), ("Sinf o‘yinlari", None)])
+    og = f'<optgroup label="Umumta’lim fanlari">' + "".join(f'<option value="{test_kalit("umumtalim", f)}" data-y="umumtalim">{e(f["nomi"])} ({TEST_SONI.get(test_kalit("umumtalim", f), 0)})</option>' for f in UMF if TEST_SONI.get(test_kalit("umumtalim", f))) + "</optgroup>"
+    for y in YS:
+        fs = [f for f in y["fanlar"] if f["toifa"] != "umumtalim" and TEST_SONI.get(test_kalit(y["id"], f))]
+        if fs:
+            og += f'<optgroup label="{e(ynom(y))}">' + "".join(f'<option value="{test_kalit(y["id"], f)}" data-y="{y["id"]}">{e(f["nomi"])} ({TEST_SONI.get(test_kalit(y["id"], f), 0)})</option>' for f in fs) + "</optgroup>"
+    cards = "".join(f'<div class="card oyin-k"><span class="oyin-i">{i + 1:02d}</span><h3>{ic} {t}</h3><p class="muted small">{d}</p><a class="btn sm" data-rej="{k}" href="{R}viktorina/">Boshlash</a></div>' for i, (k, ic, t, d) in enumerate(VIK_REJ))
+    jami = sum(v for k, v in TEST_SONI.items() if "--" not in k)
+    ext = (f'<div class="card oyin-k"><span class="oyin-i">YHQ</span><h3>🚦 Yo‘l harakati viktorinasi</h3><p class="muted small">Yo‘l belgilari, chiziqlar, qoidalar va jarimalar bo‘yicha: jonli (o‘quvchilar telefondan), jamoaviy va yakka o‘yin.</p>'
+           f'<a class="btn sm" href="{R}yhq/viktorina.html">Boshlash</a> <a class="btn ghost sm" href="{R}yhq/">Qoidalar va belgilar</a></div>'
+           f'<div class="card oyin-k"><span class="oyin-i">AVTO</span><h3>🚗 Avtotest — imtihon biletlari</h3><p class="muted small">40 ta bilet, 1272 ta savol, imtihon rejimi (20 savol, 25 daqiqa), avtodrom simulyatori va AI xulosa.</p>'
+           f'<a class="btn sm" href="{R}avtotest/">Boshlash</a> <a class="btn ghost sm" href="{R}avtotest/#/imtihon">Imtihon rejimi</a></div>')
+    kuv = "".join(f'<a class="chip" href="{R}{OYIN_DIR}{fn}" title="{e(d)}">{t}</a>' for fn, t, d in KUV_OYIN) + f'<a class="chip" href="{KUV}oyinlar.html" target="_blank" rel="noopener">Barcha o‘yinlar — kuvonch.uz ↗</a>'
+    b = hero("", "Sinf o‘yinlari", "Fan viktorinasi, arqon tortish va jamoaviy o‘yinlar — har bir fan faqat o‘z savollari bilan. Proyektor, aqlli doska va o‘quvchilar telefonlarida.", crumbs=[("Fanlar", R), ("Sinf o‘yinlari", None)])
     b += f"""<section class="blk"><div class="wrap">
-<div class="fbar"><label class="fsel"><span class="sr">Fan</span><select id="oyin-fan">{opts}</select></label><span class="muted small">Fanni tanlasangiz, viktorina va arqon tortish shu fan savollari bilan ochiladi.</span></div>
+<h2 style="margin:0 0 6px">Fan viktorinasi</h2>
+<p class="muted small" style="margin:0 0 12px">{len([k for k in TEST_SONI if "--" not in k])} ta fan, {jami} ta savol. Fanni tanlang — o‘yinlar faqat shu fanning savollari bilan ochiladi (savollar banki, fanning virtual laboratoriyasi va o‘qituvchi majmuasidagi testlar).</p>
+<div class="fbar"><label class="fsel"><span class="sr">Fan</span><select id="vik-fan"><option value="">— Fanni tanlang —</option>{og}</select></label><a class="kv-l" id="vik-all" href="{R}viktorina/">Barcha fanlar ro‘yxati</a></div>
 <div class="grid g3" style="margin-top:14px">{cards}</div>
-<p class="small muted" style="margin-top:18px">Har bir fan sahifasida ham shu fanga mos «Jonli viktorina» va «Arqon tortish» tugmalari bor. O‘yinlar: Kuvonch Academy (kuvonch.uz).</p>
+<h2 style="margin:28px 0 10px">Boshqa viktorinalar</h2>
+<div class="grid g3">{ext}</div>
+<details class="mv" style="margin-top:24px"><summary>Qo‘shimcha: Kuvonch Academy umumiy o‘yinlari (fanlarga bog‘lanmagan)</summary><div class="ic"><p class="small muted">Bu o‘yinlarda texnikum fanlariga emas, Kuvonch Academy (kuvonch.uz) ning umumiy savollari ishlatiladi.</p><div class="chips">{kuv}</div></div></details>
 </div></section>
-<script>(function(){{var C={json.dumps(cfg, ensure_ascii=False)},s=document.getElementById('oyin-fan');
-function u(o,f){{var x=C.loc+C.f[o];if(f&&o==='viktorina')x+='?fan='+f;else if(f&&o==='arqon'&&C.a[f])x+='?mavzu='+C.a[f].join(',');return x;}}
-s.addEventListener('change',function(){{Array.prototype.forEach.call(document.querySelectorAll('[data-o]'),function(a){{var o=a.getAttribute('data-o');if(o!=='barcha')a.href=u(o,s.value);}});}});}})();</script>"""
-    page("oyinlar/index.html", "Sinf o‘yinlari", "Jonli viktorina, arqon tortish va boshqa sinf o‘yinlari — fanlar bo‘yicha, butun sinf bilan.", b, active="oyinlar/")
+<script>(function(){{var s=document.getElementById('vik-fan'),a=[].slice.call(document.querySelectorAll('[data-rej]'));
+function go(){{var o=s.options[s.selectedIndex],k=s.value,y=o&&o.getAttribute('data-y');a.forEach(function(x){{x.href='{R}viktorina/'+(k?'?fan='+encodeURIComponent(k)+'&y='+encodeURIComponent(y||'')+'&rej='+x.getAttribute('data-rej'):'');}});try{{localStorage.setItem('t1_vik_fan',k);}}catch(e){{}}}}
+try{{var v=localStorage.getItem('t1_vik_fan');if(v&&s.querySelector('option[value="'+v+'"]'))s.value=v;}}catch(e){{}}
+s.addEventListener('change',go);go();}})();</script>"""
+    page("oyinlar/index.html", "Sinf o‘yinlari", "Fan viktorinasi, arqon tortish, jamoaviy va yakka o‘yin hamda test varaqasi — har bir fan faqat o‘z savollari bilan.", b, active="oyinlar/")
 
 # ---------- Bosh sahifa: fanlar katalogi ----------
 def bosh():
@@ -453,7 +450,7 @@ def bosh():
     extra = (f'<p class="lead">Kasbiy fanlar har bir mutaxassislik bo‘yicha alohida, umumta’lim fanlari esa hammasi uchun bitta. Har bir fan: TMR, texnologik xaritalar, ma’ruzalar va o‘quv-uslubiy majmua.</p>'
              f'<div class="fq"><label for="fq" class="sr">Fanni qidirish</label>'
              f'<input type="search" id="fq" class="q-big" placeholder="Fan, mavzu yoki mutaxassislik nomi…" autocomplete="off"></div>'
-             + (f'<div class="chips" style="margin-top:14px"><a class="chip" href="lab/">🔬 Virtual laboratoriyalar — {len([1 for L in LABS.values() if not L.get("_hub")])} ta</a><a class="chip" href="kasblar/">🌍 Kasblar xaritasi</a><a class="chip" href="oyinlar/">🎮 Sinf o‘yinlari</a><a class="chip" href="yhq/">🚦 Yo‘l harakati qoidalari 2026</a><a class="chip" href="avtotest/">🚗 Avtotest — imtihon biletlari</a></div>' if LABS else ""))
+             + (f'<div class="chips" style="margin-top:14px"><a class="chip" href="lab/">🔬 Virtual laboratoriyalar — {len([1 for L in LABS.values() if not L.get("_hub")])} ta</a><a class="chip" href="kasblar/">🌍 Kasblar xaritasi</a><a class="chip" href="viktorina/">🎯 Fan viktorinasi</a><a class="chip" href="oyinlar/">🎮 Sinf o‘yinlari</a><a class="chip" href="yhq/">🚦 Yo‘l harakati qoidalari 2026</a><a class="chip" href="avtotest/">🚗 Avtotest — imtihon biletlari</a></div>' if LABS else ""))
     b = hero("", "Fanlar", "", extra=extra, small=False, fasl=True)
     seg = (f'<button type="button" data-tf="" aria-pressed="true">Hammasi</button>'
            f'<button type="button" data-tf="kasbiy" aria-pressed="false">Kasbiy fanlar <span>{nk}</span></button>'
@@ -516,7 +513,7 @@ def fan_page(y, f, cur=None, um=None):
         soat_jad = (f'<details class="mv" style="margin-top:22px"><summary>Soatlar mutaxassisliklar bo‘yicha</summary><div class="ic"><p class="small muted">Yuqoridagi soatlar — ko‘pchilik mutaxassisliklardagi qiymat. Ayrim o‘quv rejalarda farq qiladi:</p>'
                     f'<div class="tbl-w"><table><thead><tr><th>Mutaxassislik</th>' + "".join(f"<th class=n>{s}-sem</th>" for s in sems) + f"</tr></thead><tbody>{rows}</tbody></table></div></div></details>")
     b += f"""<section class="blk"><div class="wrap">
-{lab_qator(R, y["id"], f)}{oyin_qator(R, f["nomi"])}
+{lab_qator(R, y["id"], f)}{oyin_qator(R, y["id"], f)}
 <div id="fan" data-y="{y['id']}" data-f="{f['id']}" data-fan="{e(f['nomi'])}" data-yn="{e(ynom(y) if not um else 'Umumta’lim (barcha mutaxassisliklar)')}" data-toifa="{f['toifa']}" data-def="{cur}" data-plan='{e(json.dumps(plan_of(f)))}' data-rtr='{e(json.dumps(rtr, ensure_ascii=False))}'>
 {semtabs}
 <p class="note" data-soat style="margin-bottom:18px"></p>
@@ -610,6 +607,7 @@ def data_files():
         for j in L["jihozlar"]:
             Q.append({"k": "m", "t": f'{j.get("e", "")} {j["nomi"]}'.strip(), "s": "Virtual laboratoriya · " + L["nomi"], "u": f'lab/{lid}/#j-{j["id"]}'})
     Q.append({"k": "m", "t": "Yo‘l harakati qoidalari 2026", "s": "Qoidalar, yo‘l belgilari, chiziqlar, jarimalar (o‘zbekcha, lotin/kirill)", "u": "yhq/"})
+    Q.append({"k": "m", "t": "Fan viktorinasi", "s": "Har bir fan o‘z savollari bilan: jonli viktorina, arqon tortish, yakka test, test varaqasi", "u": "viktorina/"})
     Q.append({"k": "m", "t": "Yo‘l harakati viktorinasi", "s": "Kahoot uslubidagi jonli, jamoaviy va yakka o‘yinlar", "u": "yhq/viktorina.html"})
     Q.append({"k": "m", "t": "Avtotest — YHQ Test 2026", "s": "Haydovchilik imtihoni biletlari: 40 bilet, 1272 savol, imtihon rejimi, avtodrom simulyatori, AI xulosa", "u": "avtotest/"})
     json.dump(Q, open(os.path.join(OUT, "data", "qidiruv.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
@@ -618,7 +616,7 @@ def data_files():
         json.dump(RTR_TIKUV, open(os.path.join(OUT, "data", "rtr", "zamonaviy-tikuv-jihozlari.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 def extras():
-    urls = ["", "lab/", "kasblar/", "oyinlar/", "yhq/", "yhq/viktorina.html", "avtotest/"] + [f"lab/{k}/" for k in LABS] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
+    urls = ["", "lab/", "kasblar/", "oyinlar/", "viktorina/", "yhq/", "yhq/viktorina.html", "avtotest/"] + [f"lab/{k}/" for k in LABS] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{DOMEN}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nDisallow: /eski/\nDisallow: /oyin/\nSitemap: {DOMEN}/sitemap.xml\n")
     open(os.path.join(OUT, "CNAME"), "w").write("texnikum1son.uz\n")

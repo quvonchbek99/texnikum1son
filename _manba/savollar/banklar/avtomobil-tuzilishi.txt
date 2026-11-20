@@ -1,0 +1,23 @@
+# Avtomobil tuzilishi — savollar banki
+@ Umumiy tuzilish va dvigatel
+Avtomobil qanday asosiy qismlardan iborat? | Dvigatel, transmissiya, yurish qismi, boshqaruv mexanizmlari, kuzov va elektr jihozlari | Faqat dvigatel va kuzov | Faqat g'ildiraklar va rul | Dvigatel va yoqilg'i baki
+To'rt taktli dvigatelning taktlari to'g'ri tartibda qaysi? | So'rish, siqish, ishchi yo'l, chiqarish | Siqish, so'rish, chiqarish, ishchi yo'l | Ishchi yo'l, so'rish, siqish, chiqarish | So'rish, ishchi yo'l, siqish, chiqarish
+Porshenning ilgarilanma-qaytma harakatini tirsakli valning aylanma harakatiga aylantiruvchi mexanizm? | Krivoship-shatun mexanizmi | Gaz taqsimlash mexanizmi | Uzatmalar qutisi | Differensial
+Silindrlarga yonuvchi aralashmani o'z vaqtida kiritib, ishlatilgan gazlarni chiqaruvchi mexanizm? | Gaz taqsimlash mexanizmi | Krivoship-shatun mexanizmi | Ilashish muftasi | Kardan uzatma
+Benzinli dvigatelda ishchi aralashma nima bilan alangalanadi? | Shamdagi elektr uchquni bilan | Siqilgan havoning yuqori haroratidan | Starter yordamida | Generator yordamida
+Dizel dvigatelda yoqilg'i qanday alangalanadi? | Siqilib qizigan havoga purkalganda o'z-o'zidan | Sham uchqunidan | Starterdan | Akkumulyatordan
+Dvigatelni qizib ketishdan saqlaydigan tizim qaysi? | Sovitish tizimi | Moylash tizimi | O't oldirish tizimi | Tormoz tizimi
+Sovitish tizimida suyuqlik haroratini avtomatik rostlaydigan qism? | Termostat | Radiator qopqog'i | Suv nasosi | Ventilyator belbog'i
+Ishqalanuvchi detallarni moy bilan ta'minlab, yeyilishni kamaytiruvchi tizim qaysi? | Moylash tizimi | Sovitish tizimi | Ta'minlash tizimi | Chiqarish tizimi
+Dvigateldagi moy sathi nima yordamida tekshiriladi? | Moy o'lchagich (shchup) | Manometr | Termometr | Ampermetr
+@ Transmissiya
+Dvigatel bilan uzatmalar qutisini vaqtincha ajratib-ulaydigan agregat? | Ilashish muftasi (stsepleniye) | Differensial | Kardan val | Bosh uzatma
+Burilishda yetakchi g'ildiraklarning turli tezlikda aylanishini ta'minlovchi mexanizm? | Differensial | Ilashish muftasi | Uzatmalar qutisi | Rul mexanizmi
+Tortish kuchi va tezlikni o'zgartirish hamda orqaga yurishni ta'minlovchi agregat? | Uzatmalar qutisi | Differensial | Ilashish muftasi | Amortizator
+Uzatmalar qutisidan yetakchi ko'prikka momentni o'zgaruvchan burchak ostida uzatuvchi qism? | Kardan uzatma | Shatun | Taqsimlash vali | Rul tyagasi
+@ Yurish qismi va boshqaruv mexanizmlari
+Kuzov tebranishlarini so'ndiruvchi qism qaysi? | Amortizator | Rul mexanizmi | Tormoz kolodkasi | Generator
+Avtomobil harakat yo'nalishini o'zgartirishga xizmat qiladigan tizim? | Rul boshqaruvi | Tormoz tizimi | Ilashish muftasi | Osma
+Gidravlik tormoz yuritmasida pedal kuchini suyuqlik bosimiga aylantiruvchi qism? | Bosh tormoz silindri | Termostat | Karburator | Starter
+ABS tizimi nimaga xizmat qiladi? | Keskin tormozlashda g'ildiraklar blokirovkalanishining oldini oladi | Dvigatel quvvatini oshiradi | Yoqilg'i sarfini o'lchaydi | Shinalarga havo beradi
+Shina belgisi 205/55 R16 da "16" raqami nimani bildiradi? | Disk (g'ildirak) diametrini, dyuymda | Shina kengligini, mm da | Profil balandligini, % da | Tezlik indeksini

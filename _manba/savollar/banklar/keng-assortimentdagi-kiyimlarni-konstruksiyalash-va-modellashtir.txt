@@ -1,0 +1,8 @@
+# Keng assortimentdagi kiyimlarni konstruksiyalash va modellashtirish — savollar banki
++fan: tikuvchilik-mahsulotlarini-konstruksiyalash-va-modellashtirish
+@ Kiyim assortimenti
+Yelka kiyimlariga qaysi buyumlar kiradi? | Palto, kurtka, ko'ylak, bluzka | Shim va yubka | Paypoq | Bosh kiyim
+Bel kiyimlariga qaysi buyumlar kiradi? | Yubka va shim | Palto va kurtka | Bluzka | Jilet
+Shim konstruksiyasida asosiy o'lchovlardan biri qaysi? | Bel va son aylanasi, shim uzunligi | Yelka kengligi | Yeng uzunligi | Bo'yin aylanasi
+Yeng konstruksiyasi qaysi qism bilan moslab quriladi? | Yeng o'mizi (proyma) bilan | Etak bilan | Cho'ntak bilan | Tugma bilan
+Bolalar kiyimini konstruksiyalashda nimaga ko'proq e'tibor beriladi? | Erkin harakat, xavfsizlik va o'sishni hisobga olishga | Faqat chiroyga | Tor bichimga | Og'ir materialga

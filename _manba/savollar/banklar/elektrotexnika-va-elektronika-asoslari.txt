@@ -1,0 +1,22 @@
+# Elektrotexnika va elektronika asoslari — savollar banki
+@ Elektr zanjiri va Om qonuni
+Zanjir qismi uchun Om qonuni formulasi qaysi? | I = U / R | U = I / R | R = U · I | I = U · R
+Elektr qarshilik birligi qaysi? | Om | Volt | Amper | Vatt
+Elektr tok kuchi birligi qaysi? | Amper | Volt | Om | Joul
+Elektr kuchlanish birligi qaysi? | Volt | Amper | Om | Farad
+Elektr quvvat formulasi qaysi? | P = U · I | P = U / I | P = I / U | P = U + I
+220 V tarmoqqa ulangan 1100 Vt li choynakdan qancha tok o'tadi? | 5 A | 2 A | 10 A | 0,2 A ## I = P / U = 1100 / 220 = 5 A
+Ketma-ket ulangan 4 Om va 6 Om qarshiliklarning umumiy qarshiligi qancha? | 10 Om | 2,4 Om | 24 Om | 2 Om ## Ketma-ket ulanganda: R = R1 + R2.
+Parallel ulangan ikkita 10 Om li qarshilikning umumiy qarshiligi qancha? | 5 Om | 20 Om | 10 Om | 100 Om ## Parallel: 1/R = 1/R1 + 1/R2.
+O'zbekistonda maishiy elektr tarmog'ining kuchlanishi va chastotasi qancha? | 220 V, 50 Hz | 110 V, 60 Hz | 380 V, 60 Hz | 12 V, 50 Hz
+Uch fazali tarmoqda liniya kuchlanishi odatda qancha? | 380 V | 220 V | 127 V | 500 V
+Elektr tokini yaxshi o'tkazadigan material qaysi? | Mis | Rezina | Shisha | Quruq yog'och
+Elektr energiyasi hisoblagichi qaysi birlikda hisoblaydi? | Kilovatt-soat (kVt·soat) | Amper | Volt | Om
+@ Elektronika elementlari
+Tokni faqat bir yo'nalishda o'tkazuvchi yarimo'tkazgich asbob qaysi? | Diod | Rezistor | Kondensator | Induktivlik g'altagi
+Kondensator sig'imining birligi qaysi? | Farad | Genri | Om | Vatt
+Signalni kuchaytirish yoki kalit vazifasini bajaruvchi yarimo'tkazgich asbob qaysi? | Tranzistor | Saqlagich | Rezistor | Transformator
+O'zgaruvchan tokni o'zgarmas tokka aylantiruvchi qurilma qaysi? | To'g'rilagich (diod ko'prigi) | Transformator | Generator | Reostat
+Yorug'lik chiqaruvchi diod qanday ataladi? | LED (svetodiod) | Fotorezistor | Termistor | Varistor
+Qisqa tutashuvda zanjirni avtomatik uzib, simlarni himoya qiladigan qurilma qaysi? | Avtomatik o'chirgich (saqlagich) | Transformator | Rozetka | Kondensator
+Kuchlanishni oshirish yoki pasaytirish uchun ishlatiladigan qurilma qaysi? | Transformator | Diod | Rezistor | Ampermetr

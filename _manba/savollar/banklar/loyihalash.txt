@@ -1,0 +1,10 @@
+# Loyihalash (tikuvchilik mahsulotlari dizayneri) — savollar banki
+@ Kiyimni loyihalash bosqichlari
+Kiyim loyihalash jarayonining birinchi bosqichi qaysi? | Tendensiyalar va iste'molchi talablarini o'rganish | Bichish | Tikish | Sotish
+Kolleksiya g'oyasi, ranglari va fakturalarini bitta taxtada jamlash nima deyiladi? | Mudbord (ilhom taxtasi) | Lekalo | Spetsifikatsiya | Chizma
+Modelning tikish uchun barcha konstruktiv detallari ko'rsatilgan aniq chizmasi nima? | Texnik rasm (texnik eskiz) | Badiiy eskiz | Mudbord | Fotosurat
+Kolleksiya qanday elementlar bilan birlashtiriladi? | Yagona g'oya, rang palitrasi, siluet va materiallar | Faqat narx | Faqat o'lcham | Faqat tikuvchi nomi
+Modelni sinab ko'rish uchun arzon matodan tikiladigan namuna nima deyiladi? | Maket (prototip) | Yakuniy kolleksiya | Lekalo | Yorliq
+Loyiha uchun texnik topshiriqda nimalar ko'rsatiladi? | Maqsad, iste'molchi, materiallar, talablar va muddatlar | Faqat rang | Faqat rasm | Hech narsa
+Matoni manekenda to'g'ridan-to'g'ri shakllantirib loyihalash usuli qaysi? | Muloj (drapirovka) usuli | Gradatsiya | Dekatirovka | Ko'klash
+Dizaynda "funksionallik" nimani anglatadi? | Kiyimning qulayligi va vazifasiga mosligini | Faqat chiroyini | Faqat narxini | Faqat brendini

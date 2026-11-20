@@ -1,0 +1,17 @@
+# Tikuvchilik mahsulotlarini konstruksiyalash va modellashtirish — savollar banki
+@ O'lchovlar va qo'shimchalar
+Gavda o'lchamlarini olish uchun qaysi asbob ishlatiladi? | Santimetrli tasma | Shtangensirkul | Transportir | Sirkul
+"Sg" belgisi nimani bildiradi? | Ko'krak aylanasining yarmi | Bel aylanasining yarmi | Son aylanasining yarmi | Bo'y uzunligi
+"St" belgisi nimani bildiradi? | Bel aylanasining yarmi | Ko'krak aylanasining yarmi | Son aylanasining yarmi | Yelka kengligi
+"Sb" belgisi nimani bildiradi? | Son (bo'ksa) aylanasining yarmi | Bel aylanasining yarmi | Yelka kengligi | Yeng uzunligi
+Kiyim erkin bo'lishi uchun o'lchamga qo'shiladigan miqdor nima deyiladi? | Erkin kiyish qo'shimchasi | Chok haqi | Kirishish | Dekatirovka
+Andazaga qo'shiladigan chok haqi nima uchun kerak? | Detallarni bir-biriga tikish uchun zaxira | Rang uchun | Bezak uchun | Og'irlik uchun
+@ Konstruksiya va modellashtirish
+Kiyim konstruksiyasining asosiy (bazaviy) chizmasi nima deyiladi? | Asos to'r (bazaviy konstruksiya) | Eskiz | Mudbord | Fotosurat
+Kiyim lekalosi (andazasi) nima? | Kiyim detallarining qog'oz yoki kartondagi namunasi | Mato turi | Tikuv mashinasi | Ip turi
+Andazada tanda ipi yo'nalishi qanday ko'rsatiladi? | Detal bo'ylab chizilgan strelkali chiziq bilan | Rang bilan | Doira bilan | Ko'rsatilmaydi
+Konstruksiyani bir o'lchamdan boshqa o'lchamlarga o'tkazish nima deyiladi? | Gradatsiya | Modellashtirish | Ko'klash | Dekatirovka
+Asosiy konstruksiyaga o'zgartirish kiritib yangi model yaratish nima deyiladi? | Konstruktiv modellashtirish | Gradatsiya | Bichish | Dazmollash
+Vitochkani boshqa joyga ko'chirish yoki relyef chiziqqa aylantirish qaysi ish turiga kiradi? | Konstruktiv modellashtirish | Bichish | Dazmollash | Dekatirovka
+A-siluetli kiyim qanday shaklga ega? | Yelkada tor, pastga qarab kengayadi | Belda qisilgan | To'g'ri | Pastga qarab torayadi
+Kompyuterda kiyim konstruksiyalash va gradatsiya tizimlariga misol qaysi? | Gerber, Lectra, Grafis kabi CAD tizimlari | Photoshop | Excel | Audacity

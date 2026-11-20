@@ -1,0 +1,22 @@
+# Axborot xavfsizligi — savollar banki
+@ Asosiy tushunchalar
+Axborot xavfsizligining uchta asosiy tamoyili (CIA uchligi) qaysi? | Maxfiylik, yaxlitlik, foydalanish imkoniyati | Tezlik, arzonlik, qulaylik | Shifrlash, arxivlash, nusxalash | Login, parol, email
+Ma'lumotni faqat ruxsat etilgan shaxslar ko'ra olishi qaysi tamoyil? | Maxfiylik (konfidensiallik) | Yaxlitlik | Foydalanish imkoniyati | Masshtablilik
+Ma'lumot ruxsatsiz o'zgartirilmaganini kafolatlash qaysi tamoyil? | Yaxlitlik | Maxfiylik | Foydalanish imkoniyati | Anonimlik
+Foydalanuvchi shaxsini tekshirish (login va parol orqali) jarayoni nima deyiladi? | Autentifikatsiya | Avtorizatsiya | Arxivlash | Formatlash
+@ Tahdidlar va hujumlar
+Foydalanuvchini aldab, soxta sayt orqali login va parolini o'g'irlash usuli nima deb ataladi? | Fishing | Spam | Bekap | Firewall
+Fayllarni shifrlab, ochish uchun pul talab qiladigan zararli dastur qaysi? | Ransomware (to'lov talab qiluvchi dastur) | Antivirus | Brauzer | Drayver
+Foydali dastur ko'rinishida yashirinib, zararli harakat qiladigan dastur nima deyiladi? | Troyan | Firewall | Kompilyator | Arxivator
+Ko'plab qurilmalardan bir vaqtda so'rov yuborib serverni ishdan chiqarish hujumi qaysi? | DDoS hujumi | Fishing | Spam | Bekap
+Odamlarning ishonuvchanligidan foydalanib maxfiy ma'lumot olish usuli nima deb ataladi? | Ijtimoiy muhandislik | Kriptografiya | Autentifikatsiya | Shifrlash
+Telegramda "bankdan" yozib, kartangizdagi SMS-kodni so'rashsa, nima qilish kerak? | Kodni hech kimga aytmaslik va bankning rasmiy raqamiga qo'ng'iroq qilish | Tezda kodni yuborish | Karta raqamini ham yuborish | Havolani ochib tekshirish
+@ Himoya vositalari
+Qaysi parol eng ishonchli? | Kt7#mQ9!vL2p | 123456 | qwerty | Ism va tug'ilgan yil
+Ikki bosqichli autentifikatsiya (2FA) nimani anglatadi? | Paroldan tashqari ikkinchi tasdiq (SMS-kod, ilova) talab qilinishi | Parolni ikki marta kiritish | Ikkita brauzerdan kirish | Ikkita antivirus o'rnatish
+Tarmoqqa kiruvchi va chiquvchi trafikni qoidalar asosida filtrlaydigan vosita? | Tarmoqlararo ekran (firewall) | Router | Skaner | Monitor
+Ma'lumotni kalit yordamida begonalar o'qiy olmaydigan ko'rinishga keltirish nima deyiladi? | Shifrlash | Arxivlash | Formatlash | Defragmentatsiya
+Muhim ma'lumotlarni yo'qotmaslik uchun nima qilish kerak? | Muntazam zaxira nusxa (bekap) olish | Faqat bitta diskda saqlash | Parolsiz saqlash | Faqat ish stolida saqlash
+Saytga xavfsiz (shifrlangan) ulanishni bildiruvchi protokol qaysi? | HTTPS | HTTP | FTP | SMTP
+O'zbekistonda shaxsga doir ma'lumotlarni himoya qilishni qaysi qonun tartibga soladi? | "Shaxsga doir ma'lumotlar to'g'risida"gi Qonun | "Yo'l harakati xavfsizligi to'g'risida"gi Qonun | Mehnat kodeksi | Soliq kodeksi
+Dasturlar va operatsion tizimni yangilab turish nima uchun kerak? | Xavfsizlik zaifliklari yopiladi | Kompyuter sekinlashadi | Internet o'chadi | Fayllar o'chib ketadi

@@ -1,0 +1,21 @@
+# Elektr mashinalari va transformatorlar — savollar banki
+@ Transformatorlar
+Transformator qaysi hodisaga asoslanib ishlaydi? | Elektromagnit induksiya | Fotoeffekt | Termoelektrik effekt | Elektroliz
+Transformator qanday tokda ishlaydi? | Faqat o'zgaruvchan tokda | Faqat o'zgarmas tokda | Ikkalasida bir xil | Tokda ishlamaydi
+Transformatsiya koeffitsienti qanday aniqlanadi? | k = U1/U2 = w1/w2 | k = I1 · I2 | k = U1 · U2 | k = w1 + w2
+Birlamchi chulg'ami 1000 o'ram, ikkilamchisi 100 o'ram, birlamchi kuchlanish 220 V. Ikkilamchi kuchlanish qancha? | 22 V | 2200 V | 220 V | 2,2 V ## U2 = U1 · w2/w1 = 220 · 100/1000 = 22 V
+Transformator o'zagi nima uchun yupqa izolyatsiyalangan po'lat plastinalardan yig'iladi? | Uyurma (Fuko) toklari isrofini kamaytirish uchun | Og'irlikni oshirish uchun | Chiroyli bo'lishi uchun | Tokni oshirish uchun
+Kuchlanishni pasaytiruvchi transformatorda ikkilamchi chulg'am o'ramlari soni qanday bo'ladi? | Birlamchidan kam | Birlamchidan ko'p | Teng | Nolga teng
+Kuch transformatorining bakiga sovitish va izolyatsiya uchun nima quyiladi? | Transformator moyi | Dvigatel moyi | O'simlik yog'i | Tormoz suyuqligi
+Transformatorning salt ishlash rejimi nima? | Ikkilamchi chulg'amga yuklama ulanmagan holat | Qisqa tutashuv holati | To'liq yuklama | O'chirilgan holat
+@ Elektr mashinalar
+Elektr dvigatel qanday energiyani qanday energiyaga aylantiradi? | Elektr energiyasini mexanik energiyaga | Mexanik energiyani elektr energiyasiga | Issiqlikni yorug'likka | Kimyoviy energiyani elektrga
+Generator qanday energiyani qanday energiyaga aylantiradi? | Mexanik energiyani elektr energiyasiga | Elektrni mexanik energiyaga | Yorug'likni issiqlikka | Elektrni kimyoviy energiyaga
+Asinxron dvigatelning qo'zg'almas qismi qanday ataladi? | Stator | Rotor | Kollektor | Cho'tka
+Asinxron dvigatelning aylanuvchi qismi qanday ataladi? | Rotor | Stator | Klemma qutisi | Podshipnik qalqoni
+Eng ko'p tarqalgan asinxron dvigatel rotori turi qaysi? | Qisqa tutashtirilgan ("olmaxon g'ildiragi") rotor | Faza rotori | Kollektorli rotor | Doimiy magnitli rotor
+Uch fazali asinxron dvigatelning aylanish yo'nalishi qanday o'zgartiriladi? | Istalgan ikkita faza o'rni almashtiriladi | Kuchlanish oshiriladi | Bitta faza uziladi | Chastota oshiriladi
+50 Hz tarmoqda bir juft qutbli dvigatel magnit maydonining sinxron aylanish chastotasi qancha? | 3000 ayl/min | 1500 ayl/min | 1000 ayl/min | 750 ayl/min ## n = 60 · f / p = 60 · 50 / 1 = 3000 ayl/min
+Asinxron dvigatelda rotor tezligining maydon tezligidan orqada qolishi nima deyiladi? | Sirpanish | Rezonans | Gisterezis | Kommutatsiya
+O'zgarmas tok mashinasida tok yo'nalishini almashtiruvchi qism qaysi? | Kollektor va cho'tkalar | Stator chulg'ami | Ventilyator | Val
+Dvigatel pasportidagi "Δ/Y 220/380 V" yozuvi nimani bildiradi? | 220 V da uchburchak, 380 V da yulduz sxemada ulanadi | Faqat 220 V da ishlaydi | Faqat o'zgarmas tokda ishlaydi | 600 V da ishlaydi

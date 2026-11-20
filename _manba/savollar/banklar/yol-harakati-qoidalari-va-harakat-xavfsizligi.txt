@@ -1,0 +1,10 @@
+# Yo'l harakati qoidalari va harakat xavfsizligi — savollar banki
+# Qoidalar, yo'l belgilari va chiziqlar saytdagi «Yo'l harakati qoidalari 2026» ilovasidan (yhq/) olinadi.
++yhq
+@ Harakat xavfsizligi
+Xavfsizlik kamari asosan nimadan himoya qiladi? | To'qnashuvda inersiya bilan oldinga otilib ketishdan | Yomg'irdan | Shovqindan | Charchoqdan
+Ho'l va sirpanchiq yo'lda tormozlash yo'li qanday o'zgaradi? | Uzayadi | Qisqaradi | O'zgarmaydi | Nolga teng bo'ladi
+Tezlik 2 marta oshganda tormozlash yo'li taxminan necha marta ortadi? | 4 marta | 2 marta | 8 marta | O'zgarmaydi ## Tormozlash yo'li tezlikning kvadratiga proporsional.
+Haydovchining o'rtacha reaksiya vaqti qancha? | 0,8–1 soniya | 0,01 soniya | 5 soniya | 10 soniya
+Uzoq yo'lda charchoq sezilsa, haydovchi nima qilishi kerak? | Xavfsiz joyda to'xtab dam olishi | Tezlikni oshirishi | Musiqani balandlatishi | Yo'lni davom ettirishi
+Haydash paytida telefonni qo'lda ushlab gaplashish qanday xavf tug'diradi? | Diqqat chalg'iydi, reaksiya sekinlashadi | Xavfsizlikni oshiradi | Ta'sir qilmaydi | Yoqilg'i tejaladi

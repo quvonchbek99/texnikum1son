@@ -1,0 +1,19 @@
+# Uch o'lchovli modellashtirish va multiplikatsiyalash asoslari — savollar banki
+@ 3D modellashtirish
+3D modelning eng kichik elementi — fazodagi nuqta qanday ataladi? | Vertex (cho'qqi) | Piksel | Kadr | Tekstura
+Uch yoki undan ortiq qirra bilan chegaralangan yassi yuza qanday ataladi? | Poligon | Vertex | Spline | Keyframe
+Yuzani tekisligiga perpendikulyar cho'zib hajm hosil qilish amali? | Ekstruziya (Extrude) | Bevel | Scale | Rotate
+Ikki shaklni kesishtirish, ayirish yoki birlashtirish orqali yangi shakl olish? | Boolean amallar | Ekstruziya | Bevel | Mirror
+Sirtga tekstura qoplash uchun modelni tekislikka yoyish nima deyiladi? | UV yoyish (UV mapping) | Ekstruziya | Rigging | Subdivision
+Kam poligonli, o'yinlar uchun yengil model qanday ataladi? | Low poly model | High poly model | Skulpt model | NURBS sirt
+Ochiq kodli, bepul 3D modellash va animatsiya dasturi qaysi? | Blender | 3ds Max | Maya | Cinema 4D
+Modelga harakat uchun skelet (suyaklar) va boshqaruvchilar qo'shish nima deyiladi? | Rigging | Rendering | Teksturalash | Modellash
+Sahnadan yakuniy tasvir yoki videoni hisoblab olish jarayoni qanday ataladi? | Render | Rigging | UV yoyish | Sculpting
+@ Multiplikatsiya (animatsiya)
+Harakatning asosiy (boshlanish va tugash) holatlari belgilangan kadrlar qanday ataladi? | Kalit kadrlar (keyframe) | Oraliq kadrlar | Render kadrlar | Statik kadrlar
+Kalit kadrlar orasidagi kadrlarni avtomatik hosil qilish nima deyiladi? | Interpolyatsiya (tvining) | Rigging | Boolean | Ekstruziya
+Kino va animatsiyada standart kadr chastotasi qancha? | 24 kadr/s | 12 kadr/s | 60 kadr/s | 100 kadr/s
+Animatsiyaning 12 asosiy tamoyili qaysi studiya animatorlari tomonidan ta'riflangan? | Walt Disney studiyasi | Pixar | DreamWorks | Soyuzmultfilm
+Har bir kadrni qo'lda chizib yaratiladigan animatsiya turi? | Klassik (kadrma-kadr chizilgan) animatsiya | 3D kompyuter animatsiyasi | Motion capture | Fotogrammetriya
+Plastilin yoki qo'g'irchoqlarni har kadrda biroz siljitib suratga olish usuli? | Stop-motion | Rotoskopiya | Motion capture | Morfing
+Aktyor harakatini datchiklar orqali yozib, 3D personajga ko'chirish texnologiyasi? | Motion capture (harakatni yozib olish) | Stop-motion | Rotoskopiya | Morfing

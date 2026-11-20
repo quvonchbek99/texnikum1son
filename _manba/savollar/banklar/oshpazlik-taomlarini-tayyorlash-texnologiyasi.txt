@@ -1,0 +1,17 @@
+# Oshpazlik taomlarini tayyorlash texnologiyasi — savollar banki
+@ Issiqlik ishlovi usullari
+Mahsulotni ko'p miqdordagi qaynoq yog'da qovurish usuli qanday ataladi? | Frityurda qovurish | Dimlash | Qaynatish | Bug'da pishirish
+Mahsulotni oz suyuqlik va yog' bilan yopiq idishda uzoq pishirish qanday ataladi? | Dimlash | Fritur | Grill | Qaynatish
+Sabzavotni qisqa vaqt qaynoq suvga solib, so'ng sovuq suvga olish qanday ataladi? | Blanshirovka | Marinadlash | Panirovka | Glazirovka
+Mahsulotni un, tuxum va non talqoniga bulab qovurish qanday ataladi? | Panirovka | Blanshirovka | Marinadlash | Dimlash
+Go'sht sho'rvasi to'yimli bo'lishi uchun go'sht qanday suvga solinadi? | Sovuq suvga | Qaynoq yog'ga | Muzli suvga va muzlatiladi | Sutga
+Bulon tiniq bo'lishi uchun nima qilinadi? | Ko'pigi olinib, past olovda qaynatiladi | Kuchli olovda shiddat bilan qaynatiladi | Un qo'shiladi | Sut qo'shiladi
+Sous uchun un va yog'ni qovurib tayyorlangan quyultiruvchi nima deyiladi? | Un passerovkasi | Bulon | Marinad | Glazur
+@ Taom tayyorlash qoidalari
+Go'shtni tolalariga ko'ndalang kesish nima uchun kerak? | Pishganda yumshoq va oson chaynaladigan bo'lishi uchun | Tez buzilishi uchun | Rang uchun | Sababi yo'q
+Kartoshka pyuresi qanday tayyorlanadi? | Qaynatilgan kartoshka issiq holda eziladi, sut va sariyog' qo'shiladi | Xom kartoshka eziladi | Kartoshka qovuriladi | Kartoshka muzlatiladi
+Bir porsiya taom uchun mahsulot sarfi qaysi hujjatda ko'rsatiladi? | Texnologik karta (retseptura) | Pasport | Menyu taxtasi | Kassa cheki
+Baliqni qovurishdan oldin nima qilinadi? | Tozalanib, yuvilib, tuz va ziravor sepiladi, unga bulanadi | Muzlatiladi | Qaynatiladi | Quritiladi
+@ Taomlarni tarqatish
+Ikkinchi issiq taomlar tarqatilganda harorati qancha bo'lishi kerak? | +65 °C dan past emas | +20 °C | +40 °C | 0 °C
+Sovuq taomlar va salatlar qanday haroratda tarqatiladi? | +7…+14 °C | +40 °C | +65 °C | −18 °C

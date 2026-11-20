@@ -1,0 +1,16 @@
+# Koloristika — savollar banki
+@ Ton darajalari va nuanslar
+Soch rangining ton darajalari shkalasi qanday? | 1 dan 10 (12) gacha | 1 dan 3 gacha | 1 dan 100 gacha | Faqat 5 ta
+1-ton darajasi qanday rang? | Qora | Eng och sariq | Qizil | Kulrang
+10-ton darajasi qanday rang? | Eng och (platina) sariq | Qora | To'q kashtan | Qizil
+Bo'yoqdagi "7.1" kabi belgida nuqtadan keyingi raqam nimani bildiradi? | Asosiy nuans (rang ottenkasi) | Ton darajasini | Oksidant foizini | Narxni
+Tabiiy soch rangini qaysi pigmentlar belgilaydi? | Eumelanin va feomelanin | Xlorofill | Gemoglobin | Karotin
+@ Neytrallash qoidalari
+Sochdagi sariq ottenkani neytrallash uchun qaysi rang qo'llanadi? | Binafsha | Yashil | Qizil | To'q sariq
+Qizil ottenkani neytrallovchi rang qaysi? | Yashil | Binafsha | Ko'k | Sariq
+To'q sariq (mis) ottenkani neytrallovchi rang qaysi? | Ko'k | Qizil | Sariq | Yashil
+Rang doirasidagi qarama-qarshi ranglar koloristikada nima uchun muhim? | Bir-birini neytrallaydi | Bir-birini kuchaytiradi | Ahamiyati yo'q | Sochni kesadi
+@ Bo'yash texnologiyasi
+To'q sochni och rangga o'tkazish uchun avval nima qilinadi? | Oqartirish (blondirovka) | Tonirovka | Laminatsiya | Kimyoviy jingalak
+Oqargan (sedoy) sochni bo'yashda nimaga e'tibor beriladi? | Oqarish foiziga va tabiiy ton qo'shishga | Faqat och rang tanlashga | Oksidant ishlatmaslikka | Hech narsaga
+Tonirovka doimiy bo'yashdan nimasi bilan farq qiladi? | Tonirovka yuzaki va qisqa muddatli, doimiy bo'yoq soch ichiga kiradi | Farqi yo'q | Tonirovka abadiy | Doimiy bo'yoq tez yuvilib ketadi

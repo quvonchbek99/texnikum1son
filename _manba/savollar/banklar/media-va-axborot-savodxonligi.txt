@@ -1,0 +1,18 @@
+# Media va axborot savodxonligi — savollar banki
+@ Axborot va manbalar
+Ataylab tarqatilgan yolg'on axborot qanday ataladi? | Dezinformatsiya | Misinformatsiya | Infografika | Press-reliz
+Bilmasdan tarqatilgan noto'g'ri axborot qanday ataladi? | Misinformatsiya | Dezinformatsiya | Reklama | Lid
+Shubhali yangilikni tekshirishda birinchi navbatda nima tekshiriladi? | Manba va muallifning ishonchliligi | Sarlavhaning uzunligi | Rasm rangi | Layklar soni
+Axborotni tekshirishning eng to'g'ri yo'li qaysi? | Bir nechta mustaqil ishonchli manbalar bilan solishtirish | Faqat bitta postga ishonish | Do'stlar fikriga tayanish | Layklar soniga qarash
+Rasmning asl manbasini topish uchun qaysi usuldan foydalaniladi? | Rasm bo'yicha teskari qidiruv (Google Lens, TinEye) | Rasmni kattalashtirish | Rasmni chop etish | Rasm rangini o'zgartirish
+@ Media matnlari va ta'sir usullari
+Bosishga undovchi, bo'rttirilgan sarlavha nima deyiladi? | Klikbeyt | Heshteg | Podkast | Lid
+Algoritmlar foydalanuvchiga faqat uning fikriga mos kontentni ko'rsatishi natijasida yuzaga keladigan holat? | Filtr pufagi (axborot pufagi) | Media reja | Kontent-plan | Brending
+Yangilik matnining eng muhim ma'lumotni beruvchi birinchi xatboshisi qanday ataladi? | Lid | Epilog | Annotatsiya | Kolontitul
+Sun'iy intellekt yordamida yaratilgan soxta (birovning yuzi yoki ovozi qo'yilgan) video qanday ataladi? | Dipfeyk | Strim | Vlog | Treyler
+Jamiyatda foydali g'oyalarni (sog'lom turmush, xavfsizlik) targ'ib qiluvchi reklama turi? | Ijtimoiy reklama | Yashirin reklama | Kontekst reklama | Tijoriy reklama
+@ Raqamli xavfsizlik va huquq
+Muallifning asaridan ruxsatsiz, o'zinikidek foydalanish nima deyiladi? | Plagiat (mualliflik huquqini buzish) | Iqtibos keltirish | Taqriz | Reklama
+Ijtimoiy tarmoqda shaxsiy ma'lumotlarni himoya qilishning to'g'ri usuli qaysi? | Uy manzili va telefon raqamini ochiq e'lon qilmaslik | Parolni do'stlarga aytish | Har qanday havolani ochish | Barcha so'rovlarni qabul qilish
+Internetda boshqalarni muntazam haqorat qilish va ta'qib qilish qanday ataladi? | Kiberbulling | Bloging | Strimming | Trending
+Ommaviy axborot vositalariga misol qaysi qatorda? | Televideniye, radio, gazeta, internet nashrlar | Faqat telefon | Faqat kitob do'koni | Faqat kinoteatr

@@ -1,0 +1,18 @@
+# Oziq-ovqat mahsulotlari tovarshunosligi — savollar banki
+@ Saqlash sharoitlari
+Muzlatilgan go'sht qanday haroratda saqlanadi? | −18 °C va undan past | 0…+4 °C | +10 °C | +20 °C
+Sovutilgan go'sht qanday haroratda saqlanadi? | 0…+4 °C | −18 °C | +15 °C | +25 °C
+Kartoshka va sabzini saqlashda havo namligi qanday bo'lishi kerak? | Yuqori (85–95 %) | Juda past (20–30 %) | 50 % | Ahamiyati yo'q
+Mahsulotlarni saqlashda "FIFO" tamoyili nimani anglatadi? | Birinchi kelgan mahsulot birinchi ishlatiladi | Oxirgi kelgan birinchi ishlatiladi | Eng qimmati birinchi | Tasodifiy tartibda
+Yaroqlilik muddati o'tgan mahsulot bilan nima qilinadi? | Sotuvdan va ishlatishdan chiqariladi | Arzonlashtirib sotiladi | Qayta qadoqlanadi | Yorlig'i almashtiriladi
+Konserva qopqog'ining shishishi (bombaj) nimani bildiradi? | Mikroblar faoliyati tufayli buzilganini — iste'mol qilinmaydi | Sifatli ekanini | Yangi ekanini | Muzlatilganini
+@ Sifat nazorati
+Tuxum yangiligini yorug'likda tekshiruvchi asbob qaysi? | Ovoskop | pH-metr | Refraktometr | Areometr
+Sutning zichligini o'lchaydigan asbob qaysi? | Laktodensimetr (areometr) | Ovoskop | Refraktometr | Barometr
+Mahsulotdagi quruq moddalar (shakar) miqdorini aniqlaydigan asbob qaysi? | Refraktometr | Ovoskop | Laktodensimetr | Barometr
+Organoleptik baholash nimalar asosida bajariladi? | Tashqi ko'rinish, rang, hid, ta'm va konsistensiya | Faqat narx | Faqat og'irlik | Faqat laboratoriya asboblari
+Mahsulot yorlig'ida albatta ko'rsatiladigan ma'lumot qaysi? | Nomi, tarkibi, ishlab chiqarilgan sanasi va yaroqlilik muddati | Faqat narxi | Faqat rasmi | Sotuvchi ismi
+@ Mahsulotlar tarkibi
+Oqsillarga boy mahsulotlar qaysi qatorda? | Go'sht, baliq, tuxum, dukkaklilar | Shakar va asal | Yog' va sariyog' | Faqat mevalar
+Uglevodlarga boy mahsulotlar qaysi qatorda? | Don, un, kartoshka, shakar | Go'sht va baliq | O'simlik yog'i | Tuz
+Unning navi asosan nimaga qarab belgilanadi? | Kepak miqdori, rangi va maydalik darajasiga | Qadoq rangiga | Narxiga | Ishlab chiqaruvchi nomiga

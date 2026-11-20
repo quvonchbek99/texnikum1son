@@ -1,0 +1,9 @@
+# Milliy va sharq shirinliklari qandolatchiligi — savollar banki
+# O'qituvchi majmuasidagi oraliq va yakuniy nazorat testlari Kuvi agent orqali qo'shiladi (agent/t/milliy-sharq-shirinliklari-2026.json).
+@ Milliy shirinliklar
+Parvarda qanday tayyorlanadi? | Shakar qiyomidan karamel massasi qaynatilib, tortib oqartiriladi va kesiladi | Undan xamir qorib pishiriladi | Sut qaynatiladi | Muzlatiladi
+Novvot qanday hosil qilinadi? | To'yingan shakar qiyomi iplarda kristallanadi | Un bilan pishiriladi | Tuxum oqi ko'pirtiriladi | Mevalar quritiladi
+Pashmak qanday shirinlik? | Ingichka tolali oq shakar shirinligi | Qatlamli xamir | Muzqaymoq | Sharbat
+Nisholdaga ko'pik va oqlik beruvchi o'simlik ildizi qaysi? | Yetmak ildizi | Zanjabil | Qizilmiya | Sabzi
+Holva tayyorlashda asosiy xomashyo qaysi? | Shakar va yog'li urug'lar (kunjut, yong'oq) yoki un | Go'sht | Sabzavot | Faqat sut kukuni
+Chak-chak qanday tayyorlanadi? | Qovurilgan xamir bo'laklari asal yoki qiyom bilan biriktiriladi | Muzlatiladi | Qaynatiladi | Bug'da pishiriladi

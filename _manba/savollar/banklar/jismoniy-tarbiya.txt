@@ -1,0 +1,22 @@
+# Jismoniy tarbiya (umumta'lim) — savollar banki
+@ Sport o'yinlari qoidalari
+Futbol jamoasidan maydonda bir vaqtda nechta o'yinchi o'ynaydi? | 11 ta | 9 ta | 7 ta | 12 ta
+Basketbol jamoasidan maydonda nechta o'yinchi o'ynaydi? | 5 ta | 6 ta | 7 ta | 11 ta
+Voleybol jamoasidan maydonda nechta o'yinchi o'ynaydi? | 6 ta | 5 ta | 7 ta | 11 ta
+Basketbolda jarima to'pi necha ochko beradi? | 1 ochko | 2 ochko | 3 ochko | 0 ochko
+Futbol o'yinining asosiy vaqti qancha? | 2 × 45 daqiqa | 2 × 30 daqiqa | 4 × 15 daqiqa | 60 daqiqa
+Shaxmat taxtasida nechta katak bor? | 64 ta | 32 ta | 100 ta | 81 ta
+@ Olimpiya harakati va milliy sport
+Yozgi Olimpiya o'yinlari necha yilda bir marta o'tkaziladi? | 4 yilda | 2 yilda | 5 yilda | Har yili
+Olimpiya ramzida nechta halqa bor? | 5 ta | 4 ta | 6 ta | 7 ta
+Zamonaviy Olimpiya o'yinlarining asoschisi kim? | Pyer de Kuberten | Pele | Muhammad Ali | Xuan Antonio Samaranch
+O'zbekiston terma jamoasi mustaqil ravishda ilk bor qaysi yozgi Olimpiya o'yinlarida qatnashgan? | 1996-yil, Atlanta | 1992-yil, Barselona | 2000-yil, Sidney | 2004-yil, Afina
+Kurash qaysi xalqning milliy sport turi? | O'zbek | Yapon | Braziliya | Ingliz
+@ Jismoniy sifatlar va sog'lom turmush
+Mashg'ulotdan oldingi badan qizdirish (razminka) nima uchun kerak? | Muskul va bo'g'imlarni yuklamaga tayyorlab, jarohatning oldini olish uchun | Charchash uchun | Vaqt o'tkazish uchun | Kerak emas
+Tinch holatda kattalarda yurak urishining me'yori daqiqasiga qancha? | 60–80 marta | 20–30 marta | 150–180 marta | 200 marta
+Jismoniy sifatlarga nimalar kiradi? | Kuch, tezlik, chidamlilik, egiluvchanlik, chaqqonlik | Faqat bo'y | Faqat vazn | Ko'z rangi
+100 metrga yugurish qaysi sport turiga kiradi? | Yengil atletika (sprint) | Og'ir atletika | Gimnastika | Suzish
+Uzunlikka sakrashda natija qanday o'lchanadi? | Depsinish chizig'idan qumdagi eng yaqin izgacha | Qumning o'rtasidan | Yugurish boshlanishidan | Ixtiyoriy
+Sportda lat yeyishda birinchi yordam qanday? | Sovuq qo'yish, tinch holat va bosib turuvchi bog'lam | Issiq qo'yish va massaj | Yugurishni davom ettirish | E'tibor bermaslik
+Gimnastikadagi "ko'prik" mashqi qaysi sifatni rivojlantiradi? | Egiluvchanlik | Tezlik | Chidamlilik | Mo'ljalga olish

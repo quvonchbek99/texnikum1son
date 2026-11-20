@@ -1,0 +1,14 @@
+# Diagnostika apparatlarini tuzilishi va ishlash prinsiplari — savollar banki
+@ Diagnostika asboblari
+Avtomobil elektron bloklaridan xato kodlarini o'qiydigan qurilma qaysi? | Diagnostika skaneri (OBD-II adapter) | Areometr | Kompressometr | Dinamometrik kalit
+Kuchlanish, tok va qarshilikni o'lchaydigan asbob qaysi? | Multimetr | Osiloskop | Stroboskop | Manometr
+Elektr signalining vaqt bo'yicha o'zgarishini (shaklini) ko'rsatuvchi asbob qaysi? | Osiloskop | Multimetr | Areometr | Gazoanalizator
+Chiqindi gazlar tarkibini (CO, CH, CO2, O2) o'lchaydigan qurilma qaysi? | Gazoanalizator | Kompressometr | Endoskop | Multimetr
+O't oldirishni ilgarilatish burchagini tekshirish uchun ishlatiladigan asbob qaysi? | Stroboskop | Osiloskop | Areometr | Manometr
+Yoqilg'i tizimidagi bosimni o'lchaydigan asbob qaysi? | Yoqilg'i bosimi manometri | Ampermetr | Lyuksmetr | Termometr
+Akkumulyatorni yuklama ostida tekshiruvchi asbob qaysi? | Yuklama vilkasi (akkumulyator testeri) | Kompressometr | Stroboskop | Endoskop
+@ Stendlar
+G'ildiraklarning o'rnatish burchaklarini (razval-sxojdeniye) tekshiruvchi stend qaysi? | Razval-sxojdeniye (3D geometriya) stendi | Balansirovka stanogi | Tormoz stendi | Shina montaji stanogi
+G'ildirak muvozanatini tekshirib, toshlar bilan tuzatadigan qurilma qaysi? | Balansirovka stanogi | Razval stendi | Kompressor | Gazoanalizator
+Tormoz samaradorligini tekshiruvchi uskuna qaysi? | Rolikli tormoz stendi | Endoskop | Areometr | Osiloskop
+Diagnostika skaneri qanday ulanadi? | O't oldirish o'chiq holda OBD ulagichiga ulanadi, so'ng o't oldirish yoqiladi | Dvigatel yuqori aylanishda ishlab turganda | Akkumulyator yechilgan holda | Saqlagichlar olib qo'yilgan holda

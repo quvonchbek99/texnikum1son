@@ -43,6 +43,28 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
 Muhim: saytni qayta yig'ishda (`build.py`) `agent/`, `fayl/`, `eski/`, `materiallar/`, `oyin/` papkalariga tegilmaydi; push qilishdan oldin
 `git pull --rebase` (agent ham commit qiladi). Qo'lda sinov: Actions → «Kuvi agent» → Run workflow → `sinov_url`.
 
+## Fan viktorinasi — har bir fan faqat o‘z savollari bilan (20.11.2026)
+
+`viktorina/` — jonli viktorina (o‘quvchilar telefondan, xona kodi + QR; `viktorina/js/net/ka-tarmoq.js` — MQTT reley), arqon tortish
+(2 jamoa bitta ekranda; klaviatura: chap 1–4, o‘ng 7–0), jamoaviy (2–4 jamoa), yakka o‘yin va chop etiladigan test varaqasi
+(1–4 variant + javoblar kaliti, oq-qora). Manzil: `viktorina/?fan=<kalit>&y=<yonalish>[&rej=host|arqon|team|solo|test]`;
+`?fan` bo‘lmasa — fan tanlash ro‘yxati, `?kod=ABCDE` — o‘quvchi qo‘shilishi. Fan sahifalaridagi «Fan viktorinasi» qatori va
+«Sinf o‘yinlari» sahifasi shu yerga olib boradi (kuvonch.uz umumiy o‘yinlari «Sinf o‘yinlari»da faqat qo‘shimcha sifatida qoldi).
+
+Savollar banki: `_manba/savollar/yig.py` (build.py chaqiradi) → `data/test/<kalit>.json` + `data/test/index.json`. Manbalar:
+1. `_manba/savollar/banklar/<fan-id>.txt` — qo‘lda yozilgan savollar, mavzular bo‘yicha. Format:
+   `@ Mavzu nomi`, keyin har qatorda `Savol? | To‘g‘ri javob | Xato | Xato | Xato ## izoh`. `+fan: boshqa-fan` — boshqa fan savollarini
+   qo‘shish, `+yhq` — yhq/ ilovasidagi qoidalar, belgilar (rasm bilan) va chiziqlar, `%en` — inglizcha bank. Oddiy apostrof (o' g')
+   avtomatik o‘ g‘ ga almashadi.
+2. Fanning virtual laboratoriyasi (`_manba/lab/*.json`): jihozlar, atamalar (moslash), vaziyatlar (tanlash), ish tartibi.
+3. Tayyor RTR paketi testlari (`data/rtr/<fan>.json`: mavzu testlari va yakuniy test).
+4. Kuvi agent testlari — `agent/t/<majmua>.json` (sahifa ochilganda qo‘shiladi): majmuadagi testlar qoidalar bilan ajratib olinadi
+   («A) … D)» + «To‘g‘ri javoblar kaliti» yoki «*» belgisi), AI bo‘lsa (GEMINI_API_KEY yoki GitHub Models) ma’ruza va amaliy darslar
+   matnidan qo‘shimcha savollar tuziladi (bir marta; xato bo‘lsa kuniga bir urinish). `_manba/agent/testlar.py`,
+   `python3 _manba/agent/ishla.py --testlar [--qayta]`; workflow «Kuvi agent» har ishga tushganda tekshiradi.
+Kalit: kasbiy va umumta’lim fanlari — fan id (barcha mutaxassisliklarga umumiy); amaliyot — `<yonalish>--<fan>`
+(o‘z savollari + mutaxassislik kasbiy fanlaridan «meros», har biri alohida mavzu).
+
 ## Sinf o'yinlari — kuvonch.uz bilan avtomatik sinxron (14.11.2026)
 
 Jonli viktorina, arqon tortish, jamoaviy o'yin va «Sinf o'yinlari» markazi `oyin/` papkasida — shu saytning o'zida, e-baza sarlavhasi
@@ -98,6 +120,7 @@ Yangi lab qo‘shish: JSON faylni `_manba/lab/` ga qo‘ying va saytni qayta yig
 | `materiallar/zamonaviy-tikuv-jihozlari/` | «Zamonaviy tikuv jihozlari» (UKM.4) interaktiv RTR paketi |
 | `data/` | `malumot.json` (yo‘nalish/fan/soat), `qidiruv.json`, `rtr/*.json` (tayyor fan materiallari) |
 | `lab/` | Virtual laboratoriyalar (generator yasaydi; manba — `_manba/lab/*.json`) |
+| `viktorina/` | Fan viktorinasi (qo‘lda yozilgan ilova); savollar — `data/test/` (generator), `agent/t/` (Kuvi agent) |
 | `_manba/` | Generator (`build.py`), asl JS/CSS, kasb-emis ma’lumoti, laboratoriyalar (`lab/`), sozlash fayllari, agent uchun buyruq |
 
 ## Qayta yig‘ish

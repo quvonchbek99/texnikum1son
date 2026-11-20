@@ -1,0 +1,20 @@
+# Tikuv buyumlarini tikish texnologiyasi — savollar banki
+@ Tayyorlov ishlari va bichish
+Tikishdan oldin mato nima uchun namlab-isitib ishlov beriladi (dekatirovka)? | Keyin kirishib qolmasligi uchun | Rangini o'zgartirish uchun | Qattiqroq bo'lishi uchun | Hidini ketkazish uchun
+Kiyim detallarini andaza bo'yicha matodan kesib olish jarayoni nima deyiladi? | Bichish | Tikish | Dazmollash | Ko'klash
+Bichishdan oldin andazalar mato ustiga qanday joylashtiriladi? | Tanda ipi yo'nalishiga moslab, tejamkor joylashtiriladi | Ixtiyoriy | Faqat ko'ndalang | Faqat qiyshiq
+Matoning tanda iplari qaysi yo'nalishda joylashgan? | Mato bo'yi bo'ylab (milkka parallel) | Ko'ndalang | Qiyshiq (45°) | Aylana bo'ylab
+Matoning to'qilgan zich chekkasi nima deb ataladi? | Milk (kromka) | Qirqim | Chok | Yoqa
+@ Choklar va tikish jarayoni
+Ikki detalni qo'lda vaqtincha biriktiruvchi chok nima deyiladi? | Ko'klama chok | Qaviq chok | Yo'rma chok | Bezak chok
+Mashina choki zichligi qanday ifodalanadi? | 1 sm (yoki 10 mm) dagi baxyalar soni bilan | Ip rangi bilan | Mato kengligi bilan | Igna raqami bilan
+Detal qirqimini so'kilishdan saqlash uchun qaysi mashinada ishlov beriladi? | Overlok (yo'rmash mashinasi) | Tugma qadash mashinasi | Dazmol | Bichish pichog'i
+Kiyimning bel qismiga shakl berish uchun tikiladigan uchburchak buklama nima? | Vitochka | Cho'ntak | Yoqa | Manjet
+Detallarni mashinada tikishdan oldin vaqtincha mahkamlash uchun nima ishlatiladi? | To'g'nog'ich yoki ko'klash | Yelim | Dazmol | Bo'yoq
+Ingichka ipak mato uchun qanday igna tanlanadi? | Ingichka (kichik raqamli) igna | Juda yo'g'on igna | Teri ignasi | Igna ishlatilmaydi
+Qo'lda tikishda barmoqni igna sanchilishidan himoya qiluvchi vosita? | Angishvona | Bigiz | Lekalo | Bo'r
+Tikuv mashinasida baxya tushib qolishining keng tarqalgan sababi qaysi? | Igna noto'g'ri o'rnatilgan yoki egilgan | Mato juda chiroyli | Ip rangi | Dazmol issiqligi
+@ Namlab-isitib ishlov berish va sifat
+Namlab-isitib ishlov berishga nimalar kiradi? | Dazmollash, presslash, bug'lash | Bichish va kesish | Tugma qadash | Belgilash
+Tugma ilgagi (petlya) qanday jihozda ochiladi? | Ilgak ochish yarim avtomatida | Overlokda | Dazmolda | Kopir g'ildiragida
+Tayyor kiyim sifatini nazorat qilishda nimalar tekshiriladi? | Chok tekisligi, o'lchamlar mosligi, nuqsonlar yo'qligi | Faqat rangi | Faqat narxi | Faqat yorlig'i

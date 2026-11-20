@@ -1,0 +1,34 @@
+# Chet tili (ingliz tili) — savollar banki
+%en
+@ Grammar: tenses
+She ___ to school every day. | goes | go | going | gone
+They ___ football now. | are playing | plays | play | played
+I ___ in Tashkent last year. | lived | live | living | lives
+We ___ already finished our homework. | have | has | had | having
+If it rains, we ___ at home. | will stay | stayed | stay | would stayed
+He can ___ English very well. | speak | speaks | speaking | to speak
+There ___ many students in the classroom. | are | is | am | be
+“Go” fe’lining o‘tgan zamon shakli (Past Simple) qaysi? | went | goed | gone | going
+“Write” fe’lining uchinchi shakli (Past Participle) qaysi? | written | wrote | writed | writing
+@ Grammar: adjectives, nouns, prepositions
+She is ___ than her sister. | taller | tallest | more tall | tall
+This is the ___ book I have ever read. | best | better | good | most good
+“Book” so‘zining ko‘plik shakli qaysi? | books | bookes | bookies | book
+“Child” so‘zining ko‘plik shakli qaysi? | children | childs | childrens | childes
+I'm interested ___ music. | in | on | at | for
+My birthday is ___ May. | in | on | at | by
+The lesson starts ___ 9 o'clock. | at | in | on | by
+@ Vocabulary: professions and work
+“Mechanic” so‘zining tarjimasi qaysi? | mexanik (ta’mirchi usta) | oshpaz | tikuvchi | haydovchi
+“Cook” so‘zining tarjimasi qaysi? | oshpaz | haydovchi | sotuvchi | o‘qituvchi
+“Hairdresser” so‘zining tarjimasi qaysi? | sartarosh | shifokor | dizayner | quruvchi
+“Firefighter” so‘zining tarjimasi qaysi? | o‘t o‘chiruvchi | politsiyachi | uchuvchi | dehqon
+“Tailor” so‘zining tarjimasi qaysi? | tikuvchi | duradgor | payvandchi | elektrchi
+“Electrician” so‘zining tarjimasi qaysi? | elektromontyor (elektrchi) | oshpaz | sartarosh | haydovchi
+“Safety” so‘zining tarjimasi qaysi? | xavfsizlik | tezlik | sifat | narx
+“Kitob” ingliz tilida qanday aytiladi? | book | pen | desk | bag
+@ Everyday English
+Opposite of “hot” is ___. | cold | warm | big | fast
+Choose the correct greeting for the morning. | Good morning! | Good night! | Goodbye! | Good evening!
+“How old are you?” savoliga to‘g‘ri javob qaysi? | I'm seventeen. | I'm fine. | I'm from Tashkent. | I'm a student.
+“Where are you from?” savoliga to‘g‘ri javob qaysi? | I'm from Uzbekistan. | I'm seventeen. | I'm fine, thanks. | It's Monday.

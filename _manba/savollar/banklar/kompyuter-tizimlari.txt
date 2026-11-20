@@ -1,0 +1,25 @@
+# Kompyuter tizimlari — savollar banki
+@ Kompyuter arxitekturasi va qismlari
+Kompyuterning barcha qurilmalari ulanadigan asosiy plata qanday ataladi? | Ona plata (motherboard) | Videokarta | Quvvat bloki | Tarmoq kartasi
+Protsessorning takt chastotasi qaysi birlikda o'lchanadi? | Gigagers (GHz) | Gigabayt (GB) | Vatt (W) | Volt (V)
+BIOS/UEFI qanday vazifani bajaradi? | Kompyuter yoqilganda qurilmalarni tekshirib, operatsion tizimni yuklashni boshlaydi | Internetga ulaydi | Rasmlarni tahrirlaydi | Fayllarni arxivlaydi
+SSD diskning HDD dan asosiy afzalligi nima? | Tezligi yuqori, harakatlanuvchi qismlari yo'q | Har doim sig'imi katta | Magnit plastinalari bor | Elektr talab qilmaydi
+Kompyuter qismlarini elektr bilan ta'minlovchi blok qaysi? | Quvvat bloki (blok pitaniya) | Ona plata | Protsessor | Kuller
+Protsessorni sovitish uchun nima ishlatiladi? | Radiator va kuller (termopasta bilan) | Videokarta | Operativ xotira | Tarmoq kabeli
+Zamonaviy operativ xotira modullari qanday belgilanadi? | DDR4, DDR5 | SATA, NVMe | USB 3.0 | HDMI
+Monitorni ulash uchun mo'ljallangan raqamli port qaysi? | HDMI | RJ-45 | PS/2 | 3,5 mm audio
+Tasvirni hisoblab, monitorga chiqaruvchi plata qaysi? | Videokarta | Tovush kartasi | Tarmoq kartasi | Ona plata
+@ Tarmoqlar
+Lokal tarmoqda kompyuterlarni kabel bilan ulash uchun qaysi ulagich ishlatiladi? | RJ-45 | HDMI | USB-C | VGA
+Bitta bino yoki xona doirasidagi kichik tarmoq qanday ataladi? | LAN (lokal tarmoq) | WAN (global tarmoq) | Internet | MAN (shahar tarmog'i)
+IPv4 manzil necha bitdan iborat? | 32 bit | 64 bit | 128 bit | 16 bit
+IPv4 manzilga to'g'ri misol qaysi? | 192.168.1.10 | 256.300.1.1 | 192.168.1 | AB:CD:EF:12
+Tarmoqdagi qurilmalarga IP manzilni avtomatik beruvchi xizmat qaysi? | DHCP | DNS | FTP | HTTP
+Domen nomini (masalan, google.com) IP manzilga aylantiruvchi xizmat qaysi? | DNS | DHCP | SMTP | VPN
+Turli tarmoqlarni bog'lab, paketlarni yo'naltiruvchi qurilma qaysi? | Marshrutizator (router) | Monitor | Skaner | Klaviatura
+Windowsda kompyuterning IP manzilini ko'rish buyrug'i qaysi? | ipconfig | ping | format | dir
+Tarmoq orqali boshqa qurilma bilan aloqani tekshirish buyrug'i qaysi? | ping | copy | cls | del
+@ Texnik xizmat va xavfsizlik
+Kompyuter ichini tozalash yoki qism almashtirishdan oldin nima qilish kerak? | Elektr tarmog'idan uzish | Ventilyatorni yoqib qo'yish | Monitorni yoqish | Hech narsa qilmaslik
+Statik elektrdan qismlarni himoya qilish uchun nima ishlatiladi? | Antistatik bilakuzuk | Jun qo'lqop | Plastik taroq | Nam latta
+Protsessor va radiator orasiga issiqlik o'tkazishni yaxshilash uchun nima surtiladi? | Termopasta | Yelim | Moy | Spirt

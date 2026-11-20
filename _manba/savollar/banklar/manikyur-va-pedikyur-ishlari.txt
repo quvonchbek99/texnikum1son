@@ -1,0 +1,15 @@
+# Manikyur va pedikyur ishlari (o'quv amaliyoti) — savollar banki
+@ Asosiy tushunchalar
+Manikyur nima? | Qo'l tirnoqlari va qo'l terisini parvarishlash | Oyoq tirnoqlarini parvarishlash | Soch kesish | Yuz massaji
+Pedikyur nima? | Oyoq tirnoqlari va oyoq terisini parvarishlash | Qo'l tirnoqlari parvarishi | Soch bo'yash | Qosh terish
+Kutikula nima? | Tirnoq asosidagi yupqa teri | Tirnoq uchi | Tirnoq ostidagi tomir | Lak turi
+@ Asboblar va texnologiya
+Tirnoq atrofidagi terini surish uchun asbob qaysi? | Pusher (kurakcha) | Qaychi | Fen | Taroq
+Tirnoq shaklini to'g'rilash uchun asbob qaysi? | Tirnoq egovi (pilka) | Pinset | Ustara | Cho'tka
+Gel-lak qanday quritiladi? | UV yoki LED lampa ostida | Havoda 1 soat | Fen bilan | Suvda
+Klassik (kesuvchi) manikyurda kutikula nima bilan yumshatiladi? | Iliq vanna (suv) bilan | Muz bilan | Spirt bilan | Fen bilan
+Apparat manikyurida nima ishlatiladi? | Frezalar (nasadkalar) bilan aylanuvchi apparat | Faqat qaychi | Faqat suv | Faqat lak
+@ Sanitariya va xavfsizlik
+Manikyur asboblari qanday qayta ishlanadi? | Dezinfeksiya, tozalash va sterilizatsiya qilinadi | Faqat suvda yuviladi | Artib qo'yiladi | Ishlov berilmaydi
+Bir martalik egov (pilka)ni boshqa mijozda ishlatish mumkinmi? | Yo'q, bir mijozdan keyin tashlanadi | Ha | Yuvib ishlatsa bo'ladi | Faqat tanishga
+Tirnoqda zamburug' kasalligi belgilari bo'lsa usta nima qiladi? | Xizmat ko'rsatmay, mijozni shifokorga yo'naltiradi | Lak bilan yopadi | E'tibor bermaydi | Kesib tashlaydi

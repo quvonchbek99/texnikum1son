@@ -1,0 +1,14 @@
+# Erkaklar va ayollar sartaroshi — savollar banki
+@ Soch turmaklari
+"Kare" soch turmagi qanday? | Teng uzunlikdagi, odatda iyak darajasidagi to'g'ri qirqim | Juda kalta "kirpi" | Uzun kaskad | Sochni qirib tashlash
+"Kaskad" turmagi qanday? | Har xil uzunlikdagi pog'onali qatlamlar | Teng uzunlik | Sochni qirish | Faqat uchlarini tekislash
+Erkaklar turmagi "boks" qanday? | Chakka va ensa juda kalta, tepa qismi biroz uzunroq | Uzun soch | Kare | Kaskad
+"Polubox"ning "boks"dan farqi nima? | Tepa qismidagi soch uzunroq va o'tish chizig'i pastroq | Butunlay sochsiz | Ayollar turmagi | Farqi yo'q
+Sochni bir uzunlikdan boshqasiga silliq o'tkazish qanday ataladi? | Fade (silliq o'tish) | Filirovka | Mellirovka | Kimyoviy jingalak
+@ Asboblar va usullar
+Soch zichligini kamaytirish uchun qaysi qaychi ishlatiladi? | Filirovka qaychisi | To'g'ri qaychi | Ustara | Fen
+Mashinka nasadkasidagi raqam nimani bildiradi? | Qoladigan soch uzunligini (mm da) | Tezlikni | Narxni | Rangni
+Soqol va mo'ylovga shakl berish uchun qaysi asboblar ishlatiladi? | Trimmer, qaychi, ustara | Fen | Ployka | Bigudi
+Sochni jingalak qilish uchun ishlatiladigan elektr asbob qaysi? | Ployka (jingalak qisqich) | Trimmer | Ustara | Filirovka qaychisi
+Sochni uzoq muddatga kimyoviy usulda jingalak qilish qanday ataladi? | Doimiy jingalak (perm) | Laminatsiya | Mellirovka | Bo'yash
+Sochni ingichka tutamlarga ajratib qisman oqartirish qanday ataladi? | Mellirovka | Koloratsiya | Tonirovka | Kimyoviy jingalak

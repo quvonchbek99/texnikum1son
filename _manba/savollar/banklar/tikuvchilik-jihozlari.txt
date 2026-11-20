@@ -1,0 +1,3 @@
+# Tikuvchilik jihozlari — savollar banki
+# «Zamonaviy tikuv jihozlari» (UKM.4) raqamli resursidagi mavzu testlari (data/rtr) shu fanga ham ulanadi.
++fan: zamonaviy-tikuv-jihozlari

@@ -1,0 +1,14 @@
+# Multimedia va animatsiya texnologiyalari — savollar banki
+# (O'qituvchi majmuasidagi mavzu testlari Kuvi agent orqali alohida qo'shiladi: agent/t/multimedia-animatsiya-2026.json)
+@ Multimedia elementlari va formatlar
+Multimedia qaysi elementlarni birlashtiradi? | Matn, grafika, audio, video va animatsiyani | Faqat matn va rasmni | Faqat videoni | Faqat audioni
+Audio faylning keng tarqalgan siqilgan formati qaysi? | MP3 | DOCX | PNG | SVG
+Video faylning keng tarqalgan formati qaysi? | MP4 | MP3 | JPG | TXT
+Bir necha kadrdan iborat oddiy animatsiyali rasm formati qaysi? | GIF | PDF | DOCX | XLSX
+1920×1080 video o'lchami qanday nomlanadi? | Full HD (1080p) | HD (720p) | 4K (2160p) | SD (480p)
+Video bir soniyadagi kadrlar soni qanday belgilanadi? | fps | dpi | kbps | ppi
+@ Dasturlar va qo'llanilishi
+Video tahrirlash dasturi qaysi? | Adobe Premiere Pro | Microsoft Excel | Notepad | WinRAR
+Audio tahrirlash uchun bepul dastur qaysi? | Audacity | Photoshop | PowerPoint | Paint
+Chiziqli multimedia (masalan, kino) va interaktiv multimedianing farqi nimada? | Interaktivda foydalanuvchi jarayonni o'zi boshqaradi | Chiziqlida foydalanuvchi boshqaradi | Farqi yo'q | Interaktivda tovush bo'lmaydi
+Animatsiya qaysi ko'rish xususiyatiga asoslanadi? | Ko'rish inertsiyasiga | Rangni ajratishga | Uzoqni ko'rishga | Chuqurlikni sezishga

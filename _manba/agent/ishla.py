@@ -11,6 +11,7 @@ Ish tartibi (GitHub Actions, har 10 daqiqada yoki qo'lda):
        fayl/<id>.pdf        — majmua PDF
        agent/m/<id>.json    — tuzilma (qismlar)
        agent/k/<id>.json    — Kuvi AI uchun matn bo'laklari (bet raqami bilan)
+       agent/t/<id>.json    — fan viktorinasi uchun testlar: majmuadagi testlar + AI tuzgan savollar (testlar.py)
        agent/index.json     — fan bo'yicha ro'yxat
        agent/holat.json     — har navbat elementining holati (tayyor / xato)
 
@@ -18,9 +19,13 @@ Ishga tushirish:
   python3 ishla.py --tekshir            # navbatda yangi ish bormi (GITHUB_OUTPUT ga bor=0/1)
   python3 ishla.py                      # navbatni qayta ishlash
   python3 ishla.py --fayl majmua.docx --yonalish moda-tikuv-texnologiyasi --fan zamonaviy-tikuv-jihozlari --sem 1   # lokal sinov
+  python3 ishla.py --testlar            # testi yo'q (yoki AI savollari hali tuzilmagan) majmualar uchun agent/t/ ni yig'ish
+  python3 ishla.py --testlar --qayta    # barcha majmualar testlarini qaytadan yig'ish (AI savollari saqlanadi)
 """
 import argparse, datetime, hashlib, json, os, re, shutil, subprocess, sys, tempfile, time, zipfile
 import urllib.request, urllib.error
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import testlar  # noqa: E402  (fan viktorinasi uchun testlar)
 
 LOYIHA = "kuvonch-academy"
 FS = f"https://firestore.googleapis.com/v1/projects/{LOYIHA}/databases/(default)/documents"
@@ -545,10 +550,61 @@ def ishlov(x, manba_fayl=None):
             "usul": usul, "sana": hozir(), "qismlar": qism,
         }
         yoz(os.path.join(ILDIZ, "agent", "m", x["id"] + ".json"), meta)
-        yoz(os.path.join(ILDIZ, "agent", "k", x["id"] + ".json"), {"id": x["id"], "betlar": n, "b": kuvi_bolaklar(sahifalar)})
+        kuvi = kuvi_bolaklar(sahifalar)
+        yoz(os.path.join(ILDIZ, "agent", "k", x["id"] + ".json"), {"id": x["id"], "betlar": n, "b": kuvi})
+        try:
+            test_yoz(meta, kuvi)
+        except Exception as e:
+            log("  testlar xatosi:", e)
         return meta
     finally:
         shutil.rmtree(ish, ignore_errors=True)
+
+
+def ai_bormi():
+    return bool(os.environ.get("GEMINI_API_KEY", "").strip() or os.environ.get("GITHUB_TOKEN", "").strip())
+
+
+def test_yoz(meta, kuvi, majbur=False):
+    """agent/t/<id>.json — majmuadagi testlar (qoidalar) + AI savollari (kalit bo'lsa, bir marta; xato bo'lsa kuniga bir urinish)."""
+    tp = os.path.join(ILDIZ, "agent", "t", meta["id"] + ".json")
+    eski = oqi(tp, None)
+    bugun = hozir()[:10]
+    ai = ai_bormi() and not (eski and (eski.get("ai_sana") or (eski.get("ai_urinish") == bugun and not majbur)))
+    meta = dict(meta, _sana=bugun)
+    t = testlar.yig(meta, kuvi, ai_sorov if ai else None, log, eski=eski)
+    if not t:
+        if eski:
+            os.remove(tp)
+        return 0
+    if ai and not t.get("ai_sana"):
+        t["ai_urinish"] = bugun
+    elif eski and eski.get("ai_urinish") and not t.get("ai_sana"):
+        t["ai_urinish"] = eski["ai_urinish"]
+    yoz(tp, t)
+    return sum(len(m["q"]) for m in t["mavzular"])
+
+
+def testlar_hammasi(qayta=False):
+    """--testlar: testi yo'q yoki AI savollari hali tuzilmagan majmualar. Qaytaradi: o'zgargan majmualar soni."""
+    papka = os.path.join(ILDIZ, "agent", "m")
+    n = 0
+    for f in sorted(os.listdir(papka)) if os.path.isdir(papka) else []:
+        m = oqi(os.path.join(papka, f), None)
+        k = oqi(os.path.join(ILDIZ, "agent", "k", f), None)
+        if not m or not k:
+            continue
+        tp = os.path.join(ILDIZ, "agent", "t", f)
+        eski = oqi(tp, None)
+        kerak = qayta or eski is None or (ai_bormi() and not eski.get("ai_sana") and eski.get("ai_urinish") != hozir()[:10])
+        if not kerak:
+            continue
+        log(f"→ testlar: {m['id']}")
+        oldin = json.dumps(eski, sort_keys=True) if eski else ""
+        test_yoz(m, k.get("b", []))
+        if (json.dumps(oqi(tp, None), sort_keys=True) if os.path.isfile(tp) else "") != oldin:
+            n += 1
+    return n
 
 
 def indeks_yangila():
@@ -559,12 +615,16 @@ def indeks_yangila():
             m = oqi(os.path.join(papka, f), None)
             if not m:
                 continue
-            out.setdefault(f"{m['yonalish']}|{m['fan']}", []).append({k: m[k] for k in ("id", "sem", "nom", "oqituvchi", "betlar", "sana")})
+            e = {k: m[k] for k in ("id", "sem", "nom", "oqituvchi", "betlar", "sana")}
+            t = oqi(os.path.join(ILDIZ, "agent", "t", f), None)
+            if t:
+                e["t"] = sum(len(x.get("q", [])) for x in t.get("mavzular", []))
+            out.setdefault(f"{m['yonalish']}|{m['fan']}", []).append(e)
     yoz(os.path.join(ILDIZ, "agent", "index.json"), out)
 
 
 def ochir(i):
-    for p in (f"fayl/{i}.pdf", f"agent/m/{i}.json", f"agent/k/{i}.json"):
+    for p in (f"fayl/{i}.pdf", f"agent/m/{i}.json", f"agent/k/{i}.json", f"agent/t/{i}.json"):
         try:
             os.remove(os.path.join(ILDIZ, p))
         except FileNotFoundError:
@@ -580,7 +640,16 @@ def main():
     ap.add_argument("--tekshir", action="store_true")
     ap.add_argument("--fayl"); ap.add_argument("--url", help="sinov: ochiq havoladagi faylni qayta ishlash"); ap.add_argument("--yonalish", default="sinov"); ap.add_argument("--fan", default="sinov"); ap.add_argument("--sem", default="1")
     ap.add_argument("--id"); ap.add_argument("--max", type=int, default=6, help="bir ishga tushishda nechta element")
+    ap.add_argument("--testlar", action="store_true", help="majmualardan fan viktorinasi testlarini yig'ish (agent/t)")
+    ap.add_argument("--qayta", action="store_true", help="--testlar bilan: barcha majmualar uchun qaytadan")
     a = ap.parse_args()
+    if a.testlar:
+        n = testlar_hammasi(a.qayta)
+        indeks_yangila()
+        log(f"testlar: {n} ta majmua yangilandi")
+        with open(os.environ.get("GITHUB_OUTPUT", os.devnull), "a") as f:
+            f.write(f"t={1 if n else 0}\n")
+        return
     holat_yol = os.path.join(ILDIZ, "agent", "holat.json")
     holat = oqi(holat_yol, {})
 

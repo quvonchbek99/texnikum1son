@@ -1,0 +1,18 @@
+# Elektr stansiya elektr jihozlari — savollar banki
+@ Elektr stansiyalari
+Issiqlik elektr stansiyasida (IES) elektr energiyasi qanday hosil qilinadi? | Yoqilg'i yonishidan bug' hosil qilinib, turbina va generator aylantiriladi | Quyosh panellari bilan | Shamol parraklari bilan | Batareyalar bilan
+GES da generator nima bilan aylantiriladi? | Suv oqimi aylantiradigan gidroturbina bilan | Bug' turbinasi bilan | Dizel dvigatel bilan | Shamol parragi bilan
+O'zbekistondagi eng yirik issiqlik elektr stansiyalaridan biri qaysi? | Sirdaryo IES | Chorvoq GES | Farhod GES | Tuyamo'yin GES
+Elektr energiyasini uzoq masofaga uzatishda kuchlanish nima uchun oshiriladi? | Simlardagi isroflarni kamaytirish uchun | Tokni oshirish uchun | Simlarni qizdirish uchun | Hisoblagich uchun
+Sinxron generator statorida qanday tok hosil bo'ladi? | Uch fazali o'zgaruvchan tok | O'zgarmas tok | Impuls tok | Tok hosil bo'lmaydi
+@ Taqsimlash qurilmalari va himoya
+Podstansiyada kuchlanishni o'zgartiruvchi asosiy jihoz qaysi? | Kuch transformatori | Generator | Akkumulyator | Kompressor
+Yuklama ostida zanjirni uzib, qisqa tutashuvda avtomatik o'chiradigan apparat qaysi? | Yuqori kuchlanishli o'chirgich | Ajratgich | Izolyator | Shina
+Ajratgichni qachon ochish mumkin? | Faqat yuklama toki yo'q (zanjir o'chirgich bilan uzilgan) holatda | Yuklama ostida | Qisqa tutashuv paytida | Istalgan vaqtda
+O'lchov asboblarini yuqori kuchlanishli zanjirga xavfsiz ulash uchun nima ishlatiladi? | Tok va kuchlanish o'lchov transformatorlari | Oddiy rezistor | Kondensator | Lampochka
+Chaqmoq va almashlab ulash ortiqcha kuchlanishidan himoya qiluvchi apparat qaysi? | Razryadnik (ortiqcha kuchlanish cheklagichi) | Ampermetr | Rubilnik | Rozetka
+Elektr qurilmalarida himoya yerga ulash nima uchun kerak? | Korpusga kuchlanish tushganda odamni tok urishidan himoya qilish uchun | Tokni ko'paytirish uchun | Energiya tejash uchun | Shovqinni kamaytirish uchun
+@ Xavfsizlik
+Elektr qurilmalarida almashlab ulashlar qanday bajariladi? | Almashlab ulash blankasi, naryad yoki farmoyish asosida | Og'zaki iltimos bilan | SMS orqali | Ruxsatsiz
+1000 V dan yuqori qurilmalarda ishlatiladigan dielektrik himoya vositalariga misol qaysi? | Dielektrik qo'lqop, bot, gilamcha, izolyatsiyalovchi shtanga | Paxta qo'lqop | Charm etik | Plastik idish
+Qurilmani ta'mirlashdan oldin kuchlanish yo'qligi qanday tekshiriladi? | Kuchlanish ko'rsatkichi bilan, keyin ko'chma yerga ulagich o'rnatiladi | Qo'l tekkizib | Ko'z bilan qarab | Tekshirilmaydi

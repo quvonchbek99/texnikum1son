@@ -1,0 +1,21 @@
+# Tikuvchilik materialshunosligi — savollar banki
+@ Tolalar
+Paxta tolasi qanday tolalar guruhiga kiradi? | Tabiiy o'simlik tolasi | Tabiiy hayvon tolasi | Sintetik tola | Mineral tola
+Jun va ipak qanday tolalar? | Tabiiy hayvon (oqsil) tolalari | O'simlik tolalari | Sintetik tolalar | Sun'iy tolalar
+Poliester qanday tola? | Sintetik tola | Tabiiy tola | Sun'iy (viskoza) tola | Mineral tola
+Viskoza qaysi xomashyodan olinadi? | Yog'och sellyulozasidan | Neftdan | Qo'y junidan | Paxta chigitidan
+Paxta tolasi yonganda qanday hid chiqadi? | Kuygan qog'oz hidi | Kuygan soch (pat) hidi | Sirka hidi | Hid chiqmaydi
+Jun tolasi yonganda qanday hid chiqadi? | Kuygan soch (pat) hidi | Kuygan qog'oz hidi | Atir hidi | Benzin hidi
+Sintetik tola yonganda qanday holat kuzatiladi? | Erib, qattiq sharcha hosil qiladi | Kul bo'lib sochiladi | Umuman yonmaydi | Bug'ga aylanadi
+@ To'quv va mato tuzilishi
+Matoda bo'ylama yo'nalishdagi iplar qanday ataladi? | Tanda iplari | Arqoq iplari | Milk iplari | Tukli qatlam
+Matoda ko'ndalang yo'nalishdagi iplar qanday ataladi? | Arqoq iplari | Tanda iplari | Milk iplari | Asos iplari
+Tanda va arqoq navbatma-navbat chirmashadigan eng oddiy to'quv qaysi? | Polotno (oddiy) to'quv | Sarja to'quv | Atlas to'quv | Trikotaj
+Diagonal chiziqchalar hosil qiluvchi to'quv (masalan, jinsi matosi) qaysi? | Sarja to'quv | Polotno to'quv | Atlas to'quv | Krep to'quv
+Silliq, yaltiroq yuzali mato beradigan to'quv qaysi? | Atlas (satin) to'quv | Polotno to'quv | Sarja to'quv | To'r to'quv
+Trikotaj matoning asosiy xususiyati nima? | Ilmoqlardan tuzilgani uchun yaxshi cho'ziladi | Umuman cho'zilmaydi | Juda qattiq | Suv o'tkazmaydi
+@ Xossalar va parvarish belgilari
+Matoning gigroskopikligi nima? | Namlikni o'ziga singdirish xususiyati | Cho'zilishi | Rangi | Og'irligi
+Kiyim yorlig'idagi ichida "30" yozilgan tog'ora belgisi nimani bildiradi? | 30 °C dan yuqori bo'lmagan haroratda yuvish | 30 daqiqa yuvish | 30 marta yuvish | Yuvish taqiqlangan
+Dazmol belgisidagi bitta nuqta nimani bildiradi? | Past haroratda (taxminan 110 °C) dazmollash | Yuqori haroratda dazmollash | Dazmollash taqiqlangan | Faqat bug' bilan
+Ustiga qiya chiziq tortilgan dazmol belgisi nimani bildiradi? | Dazmollash mumkin emas | Bug' bilan dazmollash | Yuqori haroratda dazmollash | Teskari tomondan dazmollash

@@ -1,0 +1,23 @@
+# Rastr va vektor grafikasi asoslari — savollar banki
+@ Rastr grafika
+Rastr tasvir nimalardan tashkil topgan? | Piksellardan | Vektor egri chiziqlardan | Poligonlardan | Shriftlardan
+Rastr tasvir kuchli kattalashtirilganda nima yuz beradi? | Sifat yo'qoladi, piksellar ko'rinib qoladi | Sifat oshadi | Hech narsa o'zgarmaydi | Fayl hajmi kichrayadi
+Tasvirning aniqligi (ruxsati) qaysi birlikda o'lchanadi? | dpi / ppi — bir dyuymdagi nuqtalar | Gers | Bayt | Lyumen
+Bosmaxonada chop etish uchun odatda qanday aniqlik tavsiya etiladi? | 300 dpi | 72 dpi | 30 dpi | 10 dpi
+Rastr grafika muharririga misol qaysi? | Adobe Photoshop | Adobe Illustrator | CorelDRAW | Inkscape
+Fonning shaffofligini saqlaydigan rastr format qaysi? | PNG | JPEG | BMP | DOCX
+Fotosuratlar uchun eng keng tarqalgan siqilgan rastr format qaysi? | JPEG | SVG | AI | CDR
+Photoshopda tasvir qismlarini alohida tahrirlash imkonini beruvchi tushuncha? | Qatlamlar (layers) | Shriftlar | Gistogramma | Profil
+@ Vektor grafika
+Vektor tasvir nimalar asosida quriladi? | Matematik ifodalangan nuqtalar, chiziqlar va egri chiziqlar | Piksellar | Fotosuratlar | Video kadrlar
+Vektor tasvirning asosiy afzalligi nima? | Kattalashtirilganda sifati yo'qolmaydi | Fotosurat uchun eng qulay | Hajmi doim katta | Faqat qora-oq bo'ladi
+Vektor grafika muharririga misol qaysi? | CorelDRAW | Adobe Photoshop | Paint | GIMP
+Vektor grafikaning ochiq (veb uchun) formati qaysi? | SVG | JPEG | PNG | GIF
+Logotip yaratish uchun qaysi grafika turi qulay? | Vektor grafika | Rastr grafika | Video | Audio
+Vektor muharrirlarda egri chiziqlarni chizish asbobi (Bezye egri chiziqlari) qanday ataladi? | Pero (Pen tool) | Shtamp | O'chirg'ich | Pipetka
+@ Rang modellari
+Monitor (ekran) uchun ishlatiladigan rang modeli qaysi? | RGB | CMYK | Pantone | Grayscale
+Poligrafiyada (chop etishda) ishlatiladigan rang modeli qaysi? | CMYK | RGB | HEX | sRGB
+CMYK modelidagi "K" harfi qaysi rangni bildiradi? | Qora | Ko'k | Qizil | Oq
+RGB modelida uchala rang 255 qiymatda bo'lsa, qanday rang hosil bo'ladi? | Oq | Qora | Kulrang | Sariq
+Veb-dizaynda #FF0000 rang kodi qaysi rangni bildiradi? | Qizil | Yashil | Ko'k | Qora
