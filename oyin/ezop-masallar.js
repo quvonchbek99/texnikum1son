@@ -1431,5 +1431,13 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki bulutlarga qarab yomg'ir yaqinlashayotganini tushundi", "Chunki uyasi go'zal ko'rinishga ega bo'lishini xohladi", "Chunki ikkinchi kaptar unga buyruq bergan edi"],
     javob: 0,
     izoh: "Birinchi kaptar osmondagi belgilarni o'qib, xavfni oldindan payqadi va tayyorgarlik ko'rdi. Ikkinchisi faqat hozirgi holatga qarab qaror qildi va oqibatda zarar ko'rdi."
+  },
+  {
+    id: "ez-177", mavzu: "himoya", sarlavha: "Suruvdan ajralgan qo'y",
+    matn: "Yaylovda ikki qo'y birga o'tlardi. Birinchisi suruvga yaqin turib, cho'ponning ovozini doim eshitib yurardi. Ikkinchisi esa \"Yashil o't ancha uzoqda, men o'zim topaman\" deb suruvdan ajralib ketdi. Kechqurun tog'dan bo'ri chiqib, yolg'iz qolgan qo'yni tutib oldi.",
+    savol: "Yolg'iz qolgan qo'y nima uchun bo'ri qo'liga tushib qoldi?",
+    variantlar: ["Chunki u suruvdan ajralib, himoyasiz qolgan edi", "Chunki u juda semiz va sekin yurardi", "Chunki cho'pon uni chaqirmagan edi"],
+    javob: 0,
+    izoh: "Qo'y suruvdan ajralgach, cho'pon va boshqa qo'ylarning himoyasidan chiqib qoldi. Jamoadan uzoqlashish xavfli bo'lishi mumkin; birga yurish ko'pincha xavfsizroq."
   }
 ];
