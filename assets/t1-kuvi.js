@@ -1,11 +1,38 @@
 /* Kuvi AI — texnikum1son.uz yordamchisi (kuvonch.uz'dagi Kuvi personaji).
-   Ikki rejim: «Maslahatchi» — o'qituvchilarga (TMR, texnologik xarita, dars ishlanma, metodika, nazorat);
-               «Javob beruvchi» — o'quvchilarga (fan bo'yicha savollarga sodda tushuntirish).
-   Miya: Gemini (Firebase AI Logic, t1Bulut.ai). Yuz: https://kuvonch.uz/ka-kuvi.js (kaYuz), bo'lmasa oddiy belgi. */
+   Uch rejim: «Maslahatchi» — o'qituvchilarga (TMR, texnologik xarita, dars ishlanma, metodika, nazorat);
+              «Javob beruvchi» — o'quvchilarga (fan bo'yicha savollarga sodda tushuntirish);
+              «Ilmiy» — maqola, dissertatsiya (formulalar Overleaf/MathType sifatida, LaTeX/Word eksport).
+   Miya: kuvonch.uz bilan umumiy «Kuvi serveri» (https://kuvonch.uz/kuvi-ai/kuvi-ai.js → /chat): oqim, «🧠 Fikrlash» —
+   model qanday o'ylagani ko'rinadi; formulalar KaTeX bilan. Server javob bermasa — zaxira: Gemini (Firebase AI Logic, t1Bulut.ai).
+   Agentlar va «To'liq matematik format» skill: https://kuvonch.uz/kuvi-ai/agentlar.js (ikkala sayt uchun bitta).
+   Yuz: https://kuvonch.uz/ka-kuvi.js (kaYuz), bo'lmasa oddiy belgi. */
 (function () {
   "use strict";
   if (window.__t1Kuvi || window.top !== window.self) return; window.__t1Kuvi = 1;
   var KUVI_JS = "https://kuvonch.uz/ka-kuvi.js?v=20261112d";
+  var KUVI_AI_JS = "https://kuvonch.uz/kuvi-ai/kuvi-ai.js?v=20261121a";
+  var aiP = null;
+  // umumiy Kuvi AI moduli (miya, formulalar, eksport) — panel birinchi ochilganda yuklanadi; yuklanmasa null
+  function aiYukla() {
+    if (window.KuviAI) return Promise.resolve(window.KuviAI);
+    if (!aiP) aiP = new Promise(function (res) {
+      var s = document.createElement("script"); s.src = KUVI_AI_JS; s.async = true;
+      var tm = setTimeout(function () { res(window.KuviAI || null); }, 8000);
+      s.onload = function () { clearTimeout(tm); res(window.KuviAI || null); };
+      s.onerror = function () { clearTimeout(tm); aiP = null; res(null); };
+      document.head.appendChild(s);
+    });
+    return aiP;
+  }
+  function stilQosh() {
+    if (document.getElementById("t1-kuvi-qosh")) return;
+    var st = document.createElement("style"); st.id = "t1-kuvi-qosh";
+    st.textContent = ".kv-seg{grid-template-columns:repeat(3,1fr)}.kv-seg button{padding:6px 7px}.kv-seg button b{font-size:13px}.kv-seg button small{font-size:11px}" +
+      ".kv-think{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:8px 9px;font:600 13px var(--body);cursor:pointer;white-space:nowrap}" +
+      ".kv-think[aria-pressed=true]{background:#7c3aed;border-color:#7c3aed;color:#fff}" +
+      ".kv-m.k .kv-md p{margin:0 0 .5em}.kv-m.k .kv-md p:last-child{margin:0}.kv-m.k .kv-fikr{margin:0 0 .5em}.kv-m.k .kv-amal button{font-size:11.5px}";
+    document.head.appendChild(st);
+  }
   var ROOT = document.body.getAttribute("data-root") || "";
   function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
   function ss(k, v) { try { if (v === undefined) return JSON.parse(sessionStorage.getItem(k) || "null"); sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
@@ -79,8 +106,20 @@
       sys: "Sen — Kuvi, texnikum o‘quvchilarining fanlar bo‘yicha savollariga javob beradigan mehribon AI ustozsan. " +
         "Sodda tilda, qisqa (odatda 3–8 gap) tushuntir, hayotiy yoki kasbga oid misol keltir. Atama yoki formula bo‘lsa, ma’nosini ayt. " +
         "Oxirida tushunganini tekshirish uchun bitta qisqa savol ber. Test yoki nazorat javoblarini shunchaki aytib berma — yechish yo‘lini tushuntir. " + UMUMIY,
-      tez: ["Bu fan nima haqida?", "Asosiy atamalarni tushuntir", "Oddiy misol bilan tushuntir", "Meni 3 ta savol bilan tekshir"] }
+      tez: ["Bu fan nima haqida?", "Asosiy atamalarni tushuntir", "Oddiy misol bilan tushuntir", "Meni 3 ta savol bilan tekshir"] },
+    i: { nom: "Ilmiy", kim: "maqola, dissertatsiya", salom: "Ilmiy ish ustidamisiz, ustoz? Formulalarni Overleaf/MathType sifatida yozaman, teorema-isbot tuzilmasini saqlayman, javobni LaTeX (.tex), Overleaf yoki Word’ga o‘tkazib beraman.",
+      sys: "", // kuvonch.uz/kuvi-ai/agentlar.js dagi «ilmiy» agentdan olinadi (sysOf)
+      tez: ["Maqola kirish qismining rejasi", "Mavzu bo‘yicha ilmiy maqola tuzilmasi", "Teoremani LaTeX’da rasmiylashtir", "Qaysi dasturda nima qilaman?"] }
   };
+  var ILMIY_ZAXIRA = "Sen — Kuvi, matematik va texnik fanlar bo‘yicha ilmiy ishlar (maqola, dissertatsiya, monografiya) yordamchisisan. Ilmiy matnni professional to‘liq matematik formatda yoz: aniq ta’riflar, teorema va isbot tuzilmasi, raqamlangan formulalar. ";
+  // rejimning tizim ko'rsatmasi (Ilmiy — umumiy agentdan + texnikum konteksti)
+  function sysOf(r) {
+    if (r !== "i") return R[r].sys;
+    var B = window.KUVI_BILIM, a = B && B.agent && B.agent.ilmiy;
+    return (a ? a.tizim : ILMIY_ZAXIRA) + " Suhbatdoshing — Toshkent tuman 1-son texnikumi o‘qituvchisi; hurmat bilan «ustoz» deb murojaat qil. " + UMUMIY;
+  }
+  var fikr = +(ls("t1.kuvi.fikr") || 0); if (!(fikr >= 0 && fikr <= 2)) fikr = 0;
+  var FIKR_N = ["⚡ Tez", "🧠 Fikrlash", "🧠🧠 Chuqur"], FIKR_T = ["Tez javob", "Chuqur o‘ylaydi va qanday fikrlaganini ko‘rsatadi", "Eng chuqur: qiyin masalalar uchun"];
   var rejim = ls("t1.kuvi.r") || (/\/(kabinet|admin)\//.test(location.pathname) ? "m" : "j");
   if (!R[rejim]) rejim = "j";
   var KEY = function () { return "t1.kuvi.h." + rejim + "." + (CTX.fan || "umumiy"); };
@@ -125,6 +164,11 @@
     if (!(window.t1Majmua || []).length) return h;
     return h.replace(/(\d{1,4})\s*[-–]\s*bet(lar)?\b/g, function (a, n) { return '<a href="#" class="kv-bet" data-bet="' + n + '">' + a + "</a>"; });
   }
+  // matnni chizish: Kuvi AI moduli bo'lsa — formulalar (KaTeX) bilan, bo'lmasa yengil markdown
+  function chizMatn(el, t) {
+    if (window.KuviAI) { KuviAI.chiz(el, t, function (e) { if ((window.t1Majmua || []).length) e.innerHTML = betlar(e.innerHTML); }); return; }
+    el.innerHTML = betlar(md(t));
+  }
   var MOODS = /^\s*\[(neutral|happy|love|think|strict|jealous|sad|wow|laugh|cry|shy|wink|sleepy)\]\s*/i;
   function tegsiz(t) { var m = MOODS.exec(t || ""); return { mood: m ? m[1].toLowerCase() : "neutral", t: String(t || "").replace(MOODS, "").replace(/\[(neutral|happy|love|think|wow|wink|laugh|sad|shy)\]/gi, "") }; }
 
@@ -150,9 +194,9 @@
     var voice = "https://kuvonch.uz/ai-ustoz.html?rejim=free&sinf=t1" + (CTX.fan ? "&mavzu=" + encodeURIComponent(CTX.fan) : "");
     pan.innerHTML =
       '<header class="kv-h"><span class="kv-face"></span><div><b>Kuvi AI</b><small>texnikum1son.uz yordamchisi</small></div><button type="button" class="kv-x" aria-label="Yopish">✕</button></header>' +
-      '<div class="kv-seg" role="tablist">' + ["m", "j"].map(function (k) { return '<button type="button" role="tab" data-r="' + k + '"><b>' + R[k].nom + "</b><small>" + R[k].kim + "</small></button>"; }).join("") + "</div>" +
+      '<div class="kv-seg" role="tablist">' + ["m", "j", "i"].map(function (k) { return '<button type="button" role="tab" data-r="' + k + '"><b>' + R[k].nom + "</b><small>" + R[k].kim + "</small></button>"; }).join("") + "</div>" +
       '<div class="kv-ctx"></div><div class="kv-log" aria-live="polite"></div><div class="kv-tez"></div>' +
-      '<form class="kv-in"><label class="sr" for="kv-ta">Savol</label><textarea id="kv-ta" rows="1" placeholder="Savolingizni yozing…" maxlength="2000"></textarea><button class="btn" aria-label="Yuborish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form>' +
+      '<form class="kv-in"><label class="sr" for="kv-ta">Savol</label><textarea id="kv-ta" rows="1" placeholder="Savolingizni yozing…" maxlength="4000"></textarea><button type="button" class="kv-think" aria-pressed="false"></button><button class="btn" aria-label="Yuborish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form>' +
       '<div class="kv-f"><button type="button" class="kv-l" data-ovoz></button><button type="button" class="kv-l" data-toz>Suhbatni tozalash</button><a class="kv-l" target="_blank" rel="noopener" href="' + esc(voice) + '">Ovozli Kuvi ↗</a></div>';
     document.body.appendChild(pan);
     log = pan.querySelector(".kv-log"); ta = pan.querySelector("textarea"); tez = pan.querySelector(".kv-tez"); ctxEl = pan.querySelector(".kv-ctx"); face = pan.querySelector(".kv-face");
@@ -168,13 +212,17 @@
     ta.addEventListener("keydown", function (e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); yubor(ta.value); } });
     ta.addEventListener("input", function () { ta.style.height = "auto"; ta.style.height = Math.min(ta.scrollHeight, 140) + "px"; });
     pan.querySelector("[data-toz]").addEventListener("click", function () { ss(KEY(), []); chiz(); });
+    var tb = pan.querySelector(".kv-think");
+    function fikrTxt() { tb.textContent = FIKR_N[fikr]; tb.title = FIKR_T[fikr] + " (bosib almashtiring)"; tb.setAttribute("aria-pressed", fikr > 0 ? "true" : "false"); tb.setAttribute("aria-label", "Fikrlash darajasi: " + FIKR_N[fikr]); }
+    tb.addEventListener("click", function () { fikr = (fikr + 1) % 3; ls("t1.kuvi.fikr", String(fikr)); fikrTxt(); });
+    fikrTxt();
     var ob = pan.querySelector("[data-ovoz]");
     function ovozTxt() { ob.textContent = "O‘qib berish: " + (ovoz ? "yoqiq" : "o‘chiq"); }
     ob.addEventListener("click", function () { ovoz = !ovoz; ls("t1.kuvi.ovoz", ovoz ? "1" : "0"); ovozTxt(); if (!ovoz) try { speechSynthesis.cancel(); } catch (e) {} });
     ovozTxt();
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && pan && !pan.hidden) yop(); });
   }
-  function och() { if (!pan) qur(); pan.hidden = false; document.documentElement.classList.add("kv-ochiq"); chiz(); setTimeout(function () { ta.focus(); }, 60); }
+  function och() { stilQosh(); aiYukla().then(function (K) { if (K) { K.bilim()["catch"](function () {}); K.katex()["catch"](function () {}); if (pan && !pan.hidden && !band) chiz(); } }); if (!pan) qur(); pan.hidden = false; document.documentElement.classList.add("kv-ochiq"); chiz(); setTimeout(function () { ta.focus(); }, 60); }
   function yop() { if (!pan) return; pan.hidden = true; document.documentElement.classList.remove("kv-ochiq"); try { speechSynthesis.cancel(); } catch (e) {} fab.focus(); }
   function setFace(m) { if (face) face.innerHTML = yuz(m || "neutral"); }
   function chiz() {
@@ -182,7 +230,13 @@
     var MJ = window.t1Majmua || [];
     ctxEl.innerHTML = CTX.fan ? "Fan: <b>" + esc(CTX.fan) + "</b> · " + esc(CTX.yn) + (MJ.length ? " · majmua: " + MJ.map(function (m) { return m.betlar + " bet"; }).join(", ") : "") : (rejim === "m" ? "Istalgan fan bo‘yicha o‘quv-uslubiy savol bering" : "Istalgan fan bo‘yicha savol bering");
     var H = ss(KEY()) || [];
-    log.innerHTML = '<div class="kv-m k">' + md(R[rejim].salom) + "</div>" + H.map(function (x) { return '<div class="kv-m ' + x.r + '">' + (x.r === "k" ? betlar(md(x.t)) : esc(x.t).replace(/\n/g, "<br>")) + "</div>"; }).join("");
+    log.innerHTML = '<div class="kv-m k">' + md(R[rejim].salom) + "</div>" + H.map(function (x, n) { return '<div class="kv-m ' + x.r + '" data-n="' + n + '">' + (x.r === "k" ? "" : esc(x.t).replace(/\n/g, "<br>")) + "</div>"; }).join("");
+    Array.prototype.forEach.call(log.querySelectorAll(".kv-m.k[data-n]"), function (el) {
+      var x = H[+el.getAttribute("data-n")]; if (!x) return;
+      if (x.fikr && window.KuviAI) { var fk = document.createElement("div"); el.appendChild(fk); var p = KuviAI.fikrPanel(fk); p.tugadi(x.fikr); p.el.querySelector("summary").textContent = "Kuvi qanday fikrladi"; }
+      var a = document.createElement("div"); el.appendChild(a); chizMatn(a, x.t);
+      if (window.KuviAI) KuviAI.amallar(el, x.t);
+    });
     var MT = (window.t1Majmua || []).length ? (rejim === "m" ? ["Majmua asosida 10 ta test tuz", "1-mavzuning texnologik xaritasini tahlil qil"] : ["1-mavzuni qisqacha tushuntir", "Majmuadagi asosiy atamalar"]) : [];
     tez.innerHTML = MT.concat(R[rejim].tez).map(function (t) { return '<button type="button">' + esc(t) + "</button>"; }).join("");
     Array.prototype.forEach.call(tez.querySelectorAll("button"), function (b) { b.addEventListener("click", function () { yubor(b.textContent); }); });
@@ -196,25 +250,66 @@
     ta.value = ""; ta.style.height = "auto"; tez.hidden = true;
     log.insertAdjacentHTML("beforeend", '<div class="kv-m u">' + esc(t).replace(/\n/g, "<br>") + '</div><div class="kv-m k kv-w"><span></span><span></span><span></span></div>');
     log.scrollTop = log.scrollHeight; setFace("think"); band = true;
-    var tarix = H.slice(-9, -1).map(function (x) { return (x.r === "u" ? (rejim === "m" ? "O‘qituvchi" : "O‘quvchi") : "Kuvi") + ": " + x.t; }).join("\n\n");
-    var ai = parchalar(t + " " + (H.length > 2 ? H[H.length - 3].t : ""))["catch"](function () { return null; }).then(function (P) {
+    var lv = fikr, r0 = rejim, sys = sysOf(r0), panel = null, bub = null, ans = null, mood = "";
+    var tarix = H.slice(-9, -1).map(function (x) { return (x.r === "u" ? (r0 === "j" ? "O‘quvchi" : "O‘qituvchi") : "Kuvi") + ": " + x.t; }).join("\n\n");
+    // oqim boshlanganda «yozmoqda» belgisi o'rniga Kuvi pufakchasi (fikrlash paneli + javob)
+    function pufak() {
+      if (bub) return; var w = log.querySelector(".kv-w"); if (!w) return;
+      bub = document.createElement("div"); bub.className = "kv-m k"; w.parentNode.replaceChild(bub, w);
+      var fk = document.createElement("div"); bub.appendChild(fk); ans = document.createElement("div"); bub.appendChild(ans);
+      if (lv > 0 && window.KuviAI) panel = KuviAI.fikrPanel(fk);
+    }
+    var promptP = parchalar(t + " " + (H.length > 2 ? H[H.length - 3].t : ""))["catch"](function () { return null; }).then(function (P) {
       var pr = "";
       if (P) {
         BETMAP = {};
         pr = "\n\nMajmua parchalari (o‘qituvchi joylagan majmuadan, bet raqamlari bilan):\n" + P.map(function (x) { BETMAP[x.b] = BETMAP[x.b] || x.m; return "[" + x.b + "-bet] " + x.t.replace(/\s+/g, " ").trim(); }).join("\n");
       }
-      var prompt = "Kontekst: " + ctxMatn() + (tarix ? "\n\nOldingi suhbat:\n" + tarix : "") + pr + "\n\nYangi xabar: " + t;
-      return window.t1Bulut ? t1Bulut.ai(prompt, { sys: R[rejim].sys }) : Promise.reject(new Error("bulut moduli yuklanmadi"));
+      return "Kontekst: " + ctxMatn() + (tarix ? "\n\nOldingi suhbat:\n" + tarix : "") + pr + "\n\nYangi xabar: " + t;
     });
-    ai.then(function (javob) {
-      var x = tegsiz(javob); H = ss(KEY()) || []; H.push({ r: "k", t: x.t.trim(), m: x.mood }); ss(KEY(), H.slice(-24));
-      var w = log.querySelector(".kv-w"); if (w) w.outerHTML = '<div class="kv-m k">' + betlar(md(x.t)) + "</div>";
+    var formulaSkill = function () { var B = window.KUVI_BILIM; return B && B.skill ? "\n\n" + B.skill.formula + (r0 === "i" && B.skill.ilmiy ? "\n\n" + B.skill.ilmiy : "") : ""; };
+    // 1) umumiy Kuvi serveri (oqim, fikrlash) → 2) zaxira: Gemini (t1Bulut)
+    var ai = promptP.then(function (prompt) {
+      return aiYukla().then(function (K) {
+        if (!K) throw new Error("Kuvi AI moduli yuklanmadi");
+        return K.bilim()["catch"](function () { return null; }).then(function (B) {
+          sys = sysOf(r0);
+          var tizim = K.tizim(B, { asos: sys, skill: r0 === "i" ? ["formula", "ilmiy"] : ["formula"], fikrlash: lv > 0 });
+          return K.sora({
+            tizim: tizim, xabarlar: [{ role: "user", content: prompt }], fikrlash: lv, max: lv > 1 ? 6000 : lv ? 4000 : 2500,
+            onFikr: function (f) { pufak(); if (panel) panel.yangila(f); log.scrollTop = log.scrollHeight; },
+            onJavob: function (j) { pufak(); var x = K.teg(j), tt = tegsiz(x.t).t; if (x.mood && x.mood !== mood) { mood = x.mood; setFace(mood); } if (panel && tt.trim()) panel.yigil(); K.chiz(ans, tt || " "); log.scrollTop = log.scrollHeight; }
+          });
+        });
+      }).then(function (r) { if (!String(r.javob || "").trim()) throw new Error("bo‘sh javob"); return { t: r.javob, fikr: r.fikr, model: r.model }; }, function (e) {
+        try { console.warn("[Kuvi] umumiy server:", e && e.message || e); } catch (x) {}
+        if (!window.t1Bulut) throw e;
+        return t1Bulut.ai(prompt, { sys: sys + formulaSkill() }).then(function (j) { return { t: j, model: "gemini" }; });
+      });
+    });
+    ai.then(function (r) {
+      var x = tegsiz(r.t); H = ss(KEY()) || []; H.push({ r: "k", t: x.t.trim(), m: x.mood, fikr: String(r.fikr || "").slice(0, 6000) }); ss(KEY(), H.slice(-24));
+      pufak();
+      if (bub) {
+        if (panel) panel.tugadi(r.fikr || "");
+        chizMatn(ans, x.t.trim());
+        if (window.KuviAI) KuviAI.amallar(bub, x.t.trim());
+      }
       setFace(x.mood); gapir(x.t);
     })["catch"](function (e) {
       var w = log.querySelector(".kv-w"), m = window.t1Bulut ? t1Bulut.uzXato(e) : String(e && e.message || e);
-      if (w) w.outerHTML = '<div class="kv-m k kv-err">Kuvi hozir javob bera olmadi: ' + esc(m) + ". Birozdan keyin qayta urinib ko‘ring yoki «Ovozli Kuvi» orqali so‘rang.</div>";
+      var html = "Kuvi hozir javob bera olmadi: " + esc(m) + ". Birozdan keyin qayta urinib ko‘ring yoki «Ovozli Kuvi» orqali so‘rang.";
+      if (w) w.outerHTML = '<div class="kv-m k kv-err">' + html + "</div>";
+      else if (bub) { if (panel) panel.tugadi(""); bub.classList.add("kv-err"); ans.innerHTML = html; }
       setFace("sad"); try { console.warn("[Kuvi]", e); } catch (x) {}
     }).then(function () { band = false; log.scrollTop = log.scrollHeight; });
+  }
+  // formulalarni ovoz uchun soddalashtirish: $\frac{a}{b}$ -> «a bo'lingan b», buyruqlar va qavslar olib tashlanadi
+  function oqiladigan(t) {
+    return String(t || "").replace(/\$\$([\s\S]+?)\$\$|\$([^$\n]+)\$/g, function (m, a, b) {
+      return " " + String(a || b).replace(/\\d?frac\{([^{}]*)\}\{([^{}]*)\}/g, "$1 bo‘lingan $2").replace(/\\sqrt\{([^{}]*)\}/g, "ildiz $1")
+        .replace(/\^\{?2\}?/g, " kvadrat").replace(/\^\{?3\}?/g, " kub").replace(/\\(cdot|times)/g, " ko‘paytirish ").replace(/\\[a-zA-Z]+/g, " ").replace(/[{}_^&\\]/g, " ") + " ";
+    });
   }
   function gapir(t) {
     if (!ovoz || !window.speechSynthesis) return;
@@ -222,7 +317,7 @@
       var v = speechSynthesis.getVoices().filter(function (x) { return /^uz/i.test(x.lang); })[0];
       if (!v) { log.insertAdjacentHTML("beforeend", '<div class="kv-m k kv-err">Bu qurilmada o‘zbekcha ovoz topilmadi — to‘liq ovozli suhbat uchun «Ovozli Kuvi»ni oching.</div>'); ovoz = false; ls("t1.kuvi.ovoz", "0"); pan.querySelector("[data-ovoz]").textContent = "O‘qib berish: o‘chiq"; return; }
       speechSynthesis.cancel();
-      var u = new SpeechSynthesisUtterance(t.replace(/[*#|`_>-]+/g, " ").slice(0, 1500)); u.voice = v; u.lang = v.lang; speechSynthesis.speak(u);
+      var u = new SpeechSynthesisUtterance(oqiladigan(t).replace(/[*#|`_>-]+/g, " ").slice(0, 1500)); u.voice = v; u.lang = v.lang; speechSynthesis.speak(u);
     } catch (e) {}
   }
 

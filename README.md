@@ -6,11 +6,23 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
 ## Versiyalar (13.11.2026)
 
 - **2-versiya (hozirgi, ildizda):** faqat fanlar. Kasbiy fanlar — har mutaxassislik bo‘yicha alohida; umumta’lim fanlari — hammasi uchun bitta sahifa (`yonalish/umumtalim/fan/<fan>/`, Firestore'da `yonalish = "umumtalim"`). Guruh raqamlari ko‘rsatilmaydi.
-  Kuvi AI (`assets/t1-kuvi.js`): «Maslahatchi» (o‘qituvchilar) va «Javob beruvchi» (o‘quvchilar) rejimlari, Gemini orqali.
+  Kuvi AI (`assets/t1-kuvi.js`): «Maslahatchi», «Javob beruvchi» va «Ilmiy» rejimlari — kuvonch.uz bilan umumiy miya (pastdagi bo'lim), zaxira — Gemini.
   O‘UM yig‘uvchi (`assets/rtr.js`, `assets/fan.js`): bo‘limlar va modul/mavzular tanlanadi → bitta Word hujjat, chop etish/PDF yoki ZIP (bo‘limlar yoki mavzular bo‘yicha alohida fayllar).
   Kabinet: avtomatik ro‘yxat (holat darhol «tasdiqlangan», admin bloklashi mumkin), Google bilan kirish, parolni emailga tiklash.
 - **1-versiya (eski):** `/eski/` papkasida muzlatilgan nusxa (noindex); manbasi `_manba/eski/build_v1.py`, git tegi `v1-eski`, `eski-versiya` tarmog‘i.
   Eski manzillar (`/yonalish/<id>/`, `/guruh/<g>/`, `/haqida/`, `/joylashuv/`…) yangi katalogga yoki `/eski/` ga yo‘naltiriladi.
+
+
+## Kuvi AI — kuvonch.uz bilan umumiy miya va «Fikrlash» (21.11.2026)
+
+- `assets/t1-kuvi.js` (manbasi `_manba/assets/t1-kuvi.js`, ikkalasi bir xil): uch rejim — «Maslahatchi», «Javob beruvchi», «Ilmiy»
+  (maqola, dissertatsiya). Javoblar kuvonch.uz bilan umumiy **Kuvi serveri**dan oqim bo'lib keladi
+  (`https://kuvonch.uz/kuvi-ai/kuvi-ai.js` → `https://kuvi-ovoz.quvonchmash12.workers.dev/chat`).
+- «⚡ Tez / 🧠 Fikrlash / 🧠🧠 Chuqur» tugmasi: fikrlash yoqilsa Kuvi qanday o'ylagani «Kuvi qanday fikrladi» bo'limida ko'rinadi.
+- To'liq matematik format: formulalar KaTeX bilan; har javob ostida Nusxa · Word · .tex · Overleaf.
+- Agentlar va «To'liq matematik format» skill bitta joyda: kuvonch.uz repo'sidagi `kuvi-ai/agentlar.js` (o'zgartirilsa ikkala saytda yangilanadi).
+- Server javob bermasa (masalan, Worker hali yangilanmagan) — avvalgidek Gemini (Firebase AI Logic, `t1Bulut.ai`) zaxira ishlaydi.
+- Batafsil (server, API kalitlari): quvonchbek99/quvnoqdombogchalar → `kuvi-ai/README.md`.
 
 
 ## Kuvi agent — katta majmualarni avtomatik bo'laklash (13.11.2026)
