@@ -1439,5 +1439,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u suruvdan ajralib, himoyasiz qolgan edi", "Chunki u juda semiz va sekin yurardi", "Chunki cho'pon uni chaqirmagan edi"],
     javob: 0,
     izoh: "Qo'y suruvdan ajralgach, cho'pon va boshqa qo'ylarning himoyasidan chiqib qoldi. Jamoadan uzoqlashish xavfli bo'lishi mumkin; birga yurish ko'pincha xavfsizroq."
+  },
+  {
+    id: "ez-178", mavzu: "idrok", sarlavha: "Quyon va qurbaqalar",
+    matn: "Quyon doim qo'rqardi va hech kimdan xotirjam bo'lmasdi. Bir kuni u ko'l bo'yida o'tirganda, qirg'oqdagi qurbaqalar uni ko'rib, sakrab suvga sho'ng'ib ketishdi. Quyon hayron bo'lib, \"Demak, mendan ham qo'rqadigan mavjudotlar bor ekan\" deb o'yladi.",
+    savol: "Qurbaqalar qochgach, quyon nimani tushundi?",
+    variantlar: ["O'zini eng qo'rqoq deb o'ylashi noto'g'ri ekanini", "Qurbaqalar bilan do'st bo'lish kerakligini", "Ko'lda suzishni o'rganishi kerakligini"],
+    javob: 0,
+    izoh: "Quyon o'zini hammadan qo'rqoq deb bilar edi, lekin qurbaqalar undan qochdi. Shundan u har bir mavjudot kimdir uchun xavfli, kimdir uchun esa qo'rqinchli bo'lishi mumkinligini tushundi."
+  },
+  {
+    id: "ez-179", mavzu: "do'stlik", sarlavha: "Ayiq va ikki do'st",
+    matn: "Ikki do'st birga sayohatga chiqdi. Yo'lda to'satdan ayiq paydo bo'lib qoldi. Bir do'st darhol yugurib daraxtga chiqib yashirindi, ikkinchisi esa qochishga ulgurmay yerga yotib, o'likka o'xshab nafasini tutdi. Ayiq uning yoniga kelib, quloqlarini hidlab ko'rdi, so'ng uni o'lik deb o'ylab, o'z yo'liga ketdi. Ayiq ketgach, daraxtdan tushgan do'st hamrohidan so'radi: \"Ayiq quloqlaringga nima dedi?\"",
+    savol: "Ikkinchi do'st ayiqdan qanday qutulib qoldi?",
+    variantlar: ["U o'zini o'likka solib, nafasini tutdi", "U daraxtga chiqib yashirindi", "U ayiq bilan do'stlashib oldi"],
+    javob: 0,
+    izoh: "Ikkinchi do'st qochishga ulgurmagach, o'zini o'likka solib, nafasini tutdi va ayiq uni o'lik deb o'yladi. Bu hikoya ibrat uchun aytilgan; haqiqatda ayiqqa duch kelganda tavsiya etilgan xatti-harakatlar boshqacha."
   }
 ];
