@@ -91,7 +91,10 @@ avtodrom simulyatori (VM 272-son nizomi jarima ballari). Savollar lex.uz manbala
 **AI xulosa** (`avtotest/js/ai.js`): natija sahifasida — shu test xatolari bo‘yicha, «Statistika»da — umumiy tayyorgarlik va 7 kunlik reja.
 Miya — `assets/bulut.js` (`t1Bulut.ai`, Kuvi AI bilan bir xil Firebase AI Logic + App Check); modul faqat tugma bosilganda yuklanadi,
 bir qurilmadan kuniga 30 ta so‘rov, AI’ga faqat savollar, tanlangan javoblar va natija raqamlari yuboriladi. AI ishlamasa — sababi va
-qurilmaning o‘zida tuzilgan qisqa xulosa chiqadi. `build.py` bu papkaga tegmaydi (faqat menyu, bosh sahifa, «Sinf o‘yinlari», qidiruv
+qurilmaning o‘zida tuzilgan qisqa xulosa chiqadi. **PDF faylga saqlash** (21.11.2026): natija, AI xulosa (yoki qisqa xulosa) va
+xatolar tahlili A4 PDF faylga — `avtotest/js/pdf.js` + `js/vendor/jspdf.umd.min.js` (jsPDF 4.2.1, MIT) + `fonts/DejaVuSans-*-yhq.ttf`
+(DejaVu Sans, lotin/kirill/ʻ ʼ uchun kichraytirilgan nusxa); faqat tugma bosilganda yuklanadi, faqat qora matn va chiziqlar (oq-qora printerga mos).
+`build.py` bu papkaga tegmaydi (faqat menyu, bosh sahifa, «Sinf o‘yinlari», qidiruv
 va sitemap’da havolalar bor). Yangilash: ilova manbasida `python3 scripts/sayt.py` → `sayt/avtotest/` ni shu yerga ko‘chirish.
 Menyu 8 bandga yetgani uchun `sayt.css` da «burger» menyu chegarasi 960px → 1180px qilindi.
 

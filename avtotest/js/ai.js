@@ -5,6 +5,7 @@
  *  2) Statistika sahifasi — umumiy tayyorgarlik tahlili va 7 kunlik reja.
  * AI ishlamasa (internet yoʻq, domen ruxsati yoʻq, kunlik chegara) — sababi va qurilmaning oʻzida tuzilgan qisqa xulosa chiqadi.
  * AI ga shaxsiy maʼlumot yuborilmaydi: faqat savollar, tanlangan javoblar va natija raqamlari.
+ * «PDF faylga saqlash» — natija, AI xulosa (yoki qisqa xulosa) va xatolar tahlili PDF faylga (js/pdf.js, kerak boʻlganda yuklanadi).
  * ai.js app.js dan OLDIN ulanadi (index.html); YHQApp ga faqat mount() chaqirilganda murojaat qilinadi. */
 (function () {
   'use strict';
@@ -180,16 +181,40 @@
       L.push('VAZIFA: qisqa tabrik va keyingi qadam boʻyicha 2–3 gapli maslahat ber (masalan, imtihon rejimi yoki hali yechilmagan biletlar). 600 belgidan oshmasin.');
     }
     var res = scored ? ok + '/' + n + ' — ' + (r.pass ? 'topshirdingiz' : 'topshirilmadi (koʻpi bilan 2 ta xato mumkin)') : ok + ' ta toʻgʻri, ' + wrong.length + ' ta xato' + (skip ? ', ' + skip + ' ta javobsiz' : '');
+    var lt = ['Natija: ' + res + '.'];
     var loc = '<p>' + H('Natija: ' + res + '.') + '</p>';
     if (wrong.length) {
-      loc += '<p>' + H('Xatolar mavzular boʻyicha: ' + tops.map(function (t) { return topicName(t) + ' — ' + byT[t]; }).join(', ') + '.') + '</p>';
-      if (bands.length) loc += '<p>' + H('Takrorlang: ') + bands.slice(0, 10).map(function (b) { return '<a class="bnd" data-b="' + esc(b) + '">' + H(bandTxt(b) + '-band') + '</a>'; }).join(', ') + '.</p>';
-    } else loc += '<p>' + H('Barcha javoblar toʻgʻri — imtihon rejimida ham sinab koʻring.') + '</p>';
+      var byTxt = 'Xatolar mavzular boʻyicha: ' + tops.map(function (t) { return topicName(t) + ' — ' + byT[t]; }).join(', ') + '.';
+      lt.push(byTxt); loc += '<p>' + H(byTxt) + '</p>';
+      if (bands.length) {
+        lt.push('Takrorlang: ' + bands.slice(0, 10).map(function (b) { return bandTxt(b) + '-band'; }).join(', ') + '.');
+        loc += '<p>' + H('Takrorlang: ') + bands.slice(0, 10).map(function (b) { return '<a class="bnd" data-b="' + esc(b) + '">' + H(bandTxt(b) + '-band') + '</a>'; }).join(', ') + '.</p>';
+      }
+    } else { lt.push('Barcha javoblar toʻgʻri — imtihon rejimida ham sinab koʻring.'); loc += '<p>' + H(lt[1]) + '</p>'; }
     if (!r.__ai) r.__ai = 'r' + (++seq);
+    // PDF uchun tuzilgan maʼlumot
+    var nomi = r.exam ? 'Imtihon simulyatsiyasi (20 savol, 25 daqiqa)' : r.mode === 'bilet' ? r.n + '-bilet' : r.mode === 'mavzu' ? 'Mavzu: ' + r.title
+      : r.mode === 'marafon' ? 'Marafon' : r.mode === 'xato' ? 'Xatolar ustida ishlash' : r.title;
+    var meta = [['Test', nomi], ['Natija', scored ? ok + ' / ' + n + ' toʻgʻri — ' + (r.pass ? 'TOPSHIRDI' : 'TOPSHIRMADI (koʻpi bilan 2 ta xato mumkin)') : ok + ' ta toʻgʻri, ' + wrong.length + ' ta xato']];
+    if (scored || skip) meta.push(['Xatolar', wrong.length + ' ta' + (skip ? ', javobsiz: ' + skip + ' ta' : '')]);
+    meta.push(['Vaqt', A().mmss(r.time || 0) + (r.limit ? ' (ruxsat: ' + Math.round(r.limit / 60) + ' daqiqa)' : '')]);
+    var MAXP = 60;
+    var doc = {
+      kind: 'natija', title: 'YHQ Test 2026 — test natijasi', meta: meta,
+      wrong: wrong.slice(0, MAXP).map(function (w, i) {
+        var q = w.q;
+        return {
+          head: (i + 1) + '. ' + qText(q), sub: 'Mavzu: ' + topicName(q.t),
+          rows: [['Sizning javobingiz', optText(q, w.c)], ['Toʻgʻri javob', optText(q, q.a)], ['Izoh', q.e ? String(q.e).replace(/\s+/g, ' ') : ''],
+            ['YHQ', q.r && q.r.length ? q.r.map(function (b) { return bandTxt(b) + '-band'; }).join(', ') : '']]
+        };
+      }),
+      more: wrong.length > MAXP ? 'Yana ' + (wrong.length - MAXP) + ' ta xato faylga kiritilmadi.' : ''
+    };
     return {
       key: r.__ai, title: 'AI xulosa', go: 'AI xulosa olish',
       lead: 'Sunʼiy intellekt natijangizni tahlil qiladi: xatolar sababi, qaysi qoidalarni takrorlash kerakligi va keyingi qadam.',
-      prompt: L.join('\n'), local: loc, topics: tops.slice(0, 3)
+      prompt: L.join('\n'), local: loc, localTxt: lt, doc: doc, topics: tops.slice(0, 3)
     };
   }
 
@@ -215,13 +240,65 @@
     L.push('3. 7 kunlik mashq rejasi — har kun uchun bitta qisqa qator («1-kun: …»), ilovadagi imkoniyatlardan foydalan: biletlar, mavzular, xatolar ustida ishlash, imtihon rejimi, avtodrom simulyatori.');
     L.push('4. Oxirida bitta ragʻbatlantiruvchi gap. Jami 1800 belgidan oshmasin.');
     var weak = started.filter(function (t) { return t.a >= 3; }).slice(0, 3);
-    var loc = '<p>' + H('Yechilgan: ' + d.a + ' ta savol, ' + pct(d.ok, d.a) + '% toʻgʻri. Biletlar: ' + d.tkPassed + '/' + d.tickets + ' topshirilgan.') + '</p>' +
-      (weak.length ? '<p>' + H('Eng zaif mavzular: ' + weak.map(function (t) { return t.n + ' — ' + pct(t.ok, t.a) + '%'; }).join(', ') + '.') + '</p>' : '') +
-      (fresh.length ? '<p>' + H('Hali boshlanmagan mavzular: ' + fresh.length + ' ta.') + '</p>' : '');
+    var lt = ['Yechilgan: ' + d.a + ' ta savol, ' + pct(d.ok, d.a) + '% toʻgʻri. Biletlar: ' + d.tkPassed + '/' + d.tickets + ' topshirilgan.'];
+    if (weak.length) lt.push('Eng zaif mavzular: ' + weak.map(function (t) { return t.n + ' — ' + pct(t.ok, t.a) + '%'; }).join(', ') + '.');
+    if (fresh.length) lt.push('Hali boshlanmagan mavzular: ' + fresh.length + ' ta.');
+    var loc = lt.map(function (t) { return '<p>' + H(t) + '</p>'; }).join('');
     base.key = 'stat-' + d.a + '-' + d.ok + '-' + d.exams.length;
-    base.prompt = L.join('\n'); base.local = loc; base.topics = weak.map(function (t) { return t.id; });
+    base.prompt = L.join('\n'); base.local = loc; base.localTxt = lt; base.topics = weak.map(function (t) { return t.id; });
+    base.doc = {
+      kind: 'stat', title: 'YHQ Test 2026 — tayyorgarlik tahlili',
+      meta: [['Yechilgan savollar', d.a + ' / ' + d.n + ' (' + pct(d.ok, d.a) + '% toʻgʻri)'],
+        ['Biletlar', d.tkTried + ' tasi yechilgan, ' + d.tkPassed + ' tasi topshirilgan (jami ' + d.tickets + ' ta)'],
+        ['Imtihon simulyatsiyasi', d.exams.length ? d.exams.length + ' marta, ' + d.exams.filter(function (e) { return e.pass; }).length + ' tasi topshirilgan' : 'hali topshirilmagan'],
+        ['Soʻnggi 14 kun', d.days + ' kun mashq qilingan']],
+      topics: started.map(function (t) { return t.n + ' — ' + t.a + '/' + t.all + ' ta yechilgan, ' + pct(t.ok, t.a) + '% toʻgʻri'; })
+        .concat(fresh.map(function (t) { return t.n + ' — hali boshlanmagan'; }))
+    };
     return base;
   }
+
+  /* ---------- PDF faylga saqlash (js/pdf.js faqat kerak boʻlganda yuklanadi) ---------- */
+  var pdfLoading = null;
+  function loadPdf() {
+    if (window.YHQPDF) return Promise.resolve();
+    if (pdfLoading) return pdfLoading;
+    pdfLoading = new Promise(function (res, rej) {
+      var s = document.createElement('script'); s.src = 'js/pdf.js'; s.async = true;
+      s.onload = function () { window.YHQPDF ? res() : rej(new Error('PDF moduli topilmadi')); };
+      s.onerror = function () { rej(new Error('PDF moduli yuklanmadi — internetni tekshiring')); };
+      document.head.appendChild(s);
+    });
+    pdfLoading['catch'](function () { pdfLoading = null; });
+    return pdfLoading;
+  }
+  function pdfSpec(info, text) {
+    var now = new Date(), p2 = function (x) { return (x < 10 ? '0' : '') + x; }, dc = info.doc, sec = [];
+    var stamp = now.getFullYear() + '-' + p2(now.getMonth() + 1) + '-' + p2(now.getDate()) + '_' + p2(now.getHours()) + '-' + p2(now.getMinutes());
+    if (text) sec.push({ h: info.title, ai: text });
+    else sec.push({ h: 'Qisqa xulosa', lines: info.localTxt });
+    if (dc.wrong && dc.wrong.length) sec.push({ h: 'Xatolar tahlili', items: dc.wrong, more: dc.more });
+    if (dc.topics && dc.topics.length) sec.push({ h: 'Mavzular boʻyicha natijalar', list: dc.topics });
+    return {
+      file: 'YHQ-Test-' + (dc.kind === 'stat' ? 'tahlil' : 'natija') + '-' + stamp + '.pdf',
+      title: dc.title,
+      sub: p2(now.getDate()) + '.' + p2(now.getMonth() + 1) + '.' + now.getFullYear() + ', ' + p2(now.getHours()) + ':' + p2(now.getMinutes()), url: 'texnikum1son.uz/avtotest',
+      meta: dc.meta, sections: sec,
+      note: (text ? 'AI xulosa sunʼiy intellekt tomonidan tuzilgan va xato qilishi mumkin — shubhali joyni YHQ matnidan tekshiring. ' : '') +
+        'Savollar rasmiy manbalar (VM 172-son qarori — Yoʻl harakati qoidalari, MJtK, VM 272-son qarori) asosida mustaqil tuzilgan.',
+      footer: 'YHQ Test 2026'
+    };
+  }
+  function savePdf(btn, info, text) {
+    if (!btn || btn.disabled) return;
+    var old = btn.innerHTML; btn.disabled = true; btn.innerHTML = H('PDF tayyorlanmoqda…');
+    loadPdf().then(function () { return window.YHQPDF.save(pdfSpec(info, text)); }).then(function () {
+      A().toast('PDF fayl saqlandi');
+    }, function (e) {
+      A().toast('PDF yaratib boʻlmadi: ' + ((e && e.message) || e));
+    }).then(function () { btn.disabled = false; btn.innerHTML = old; });
+  }
+  var PDFICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>';
 
   /* ---------- karta ---------- */
   function practice(info) {
@@ -234,9 +311,11 @@
   function showAI(el, info, text) {
     var go = $('[data-ai="go"]', el); if (go) go.style.display = 'none';
     $('.ai-body', el).innerHTML = '<div class="ai-out">' + fmt(text) + '</div>' +
-      '<div class="ai-acts">' + practice(info) + '<button class="btn sec" data-ai="copy">' + H('Nusxa olish') + '</button><button class="btn sec" data-ai="re">' + H('Qayta soʻrash') + '</button></div>' +
+      '<div class="ai-acts"><button class="btn" data-ai="pdf">' + PDFICON + H('PDF faylga saqlash') + '</button>' + practice(info) +
+      '<button class="btn sec" data-ai="copy">' + H('Nusxa olish') + '</button><button class="btn sec" data-ai="re">' + H('Qayta soʻrash') + '</button></div>' +
       '<div class="ai-note">' + H('AI xato qilishi mumkin — shubhali joyni YHQ bandidan tekshiring.') + '</div>';
     bind(el);
+    $('[data-ai="pdf"]', el).onclick = function () { savePdf(this, info, text); };
     $('[data-ai="re"]', el).onclick = function () { delete memo[info.key]; run(el, info); };
     $('[data-ai="copy"]', el).onclick = function () {
       var t = T(text);
@@ -246,8 +325,9 @@
   function showErr(el, info, msg) {
     $('.ai-body', el).innerHTML = '<div class="ai-err">' + H(msg) + '</div>' +
       '<div class="ai-loc"><b>' + H('Qurilmaning oʻzida tuzilgan qisqa xulosa') + '</b>' + info.local + '</div>' +
-      '<div class="ai-acts">' + practice(info) + '</div>';
+      '<div class="ai-acts"><button class="btn sec" data-ai="pdf">' + PDFICON + H('PDF faylga saqlash') + '</button>' + practice(info) + '</div>';
     bind(el);
+    $('[data-ai="pdf"]', el).onclick = function () { savePdf(this, info, null); };
   }
   function run(el, info) {
     var body = $('.ai-body', el), go = $('[data-ai="go"]', el);
@@ -278,5 +358,5 @@
     if (memo[info.key]) showAI(el, info, memo[info.key]);
   }
 
-  window.YHQAI = { mount: mount, _t: { runInfo: runInfo, statInfo: statInfo, fmt: fmt, SYS: SYS } };
+  window.YHQAI = { mount: mount, _t: { runInfo: runInfo, statInfo: statInfo, fmt: fmt, pdfSpec: pdfSpec, SYS: SYS } };
 })();
