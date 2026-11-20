@@ -60,6 +60,19 @@ va yakka o‘yin; savollar `yhq/js/vq-bank.js` da har safar yangidan tuziladi. `
 `build.py` bu papkaga tegmaydi (faqat menyu, bosh sahifa, «Sinf o‘yinlari», qidiruv va sitemap’da havolalar bor). Yangilash: ilova
 manbasidagi `www/` ni `yhq/` ga ko‘chirish; `index.html` va `viktorina.html` dagi `window.YHQ_WEB=1` va SEO teglari saqlansin.
 
+## Avtotest — YHQ Test 2026 (20.11.2026)
+
+`avtotest/` — haydovchilik guvohnomasi nazariy imtihoniga tayyorgarlik ilovasi: 40 ta bilet × 20 savol (jami 1272 savol, 31 mavzu),
+imtihon rejimi (20 savol, 25 daqiqa, ko‘pi bilan 2 xato), mavzular, marafon, xatolar ustida ishlash, statistika, lotin/kirill, tungi rejim,
+avtodrom simulyatori (VM 272-son nizomi jarima ballari). Savollar lex.uz manbalari (VM 172-son, MJtK, VM 272-son) asosida mustaqil tuzilgan.
+`avtotest/yuklab/YHQ-Test-2026.apk` — internetsiz Android ilova (paket `uz.yhq.test`).
+**AI xulosa** (`avtotest/js/ai.js`): natija sahifasida — shu test xatolari bo‘yicha, «Statistika»da — umumiy tayyorgarlik va 7 kunlik reja.
+Miya — `assets/bulut.js` (`t1Bulut.ai`, Kuvi AI bilan bir xil Firebase AI Logic + App Check); modul faqat tugma bosilganda yuklanadi,
+bir qurilmadan kuniga 30 ta so‘rov, AI’ga faqat savollar, tanlangan javoblar va natija raqamlari yuboriladi. AI ishlamasa — sababi va
+qurilmaning o‘zida tuzilgan qisqa xulosa chiqadi. `build.py` bu papkaga tegmaydi (faqat menyu, bosh sahifa, «Sinf o‘yinlari», qidiruv
+va sitemap’da havolalar bor). Yangilash: ilova manbasida `python3 scripts/sayt.py` → `sayt/avtotest/` ni shu yerga ko‘chirish.
+Menyu 8 bandga yetgani uchun `sayt.css` da «burger» menyu chegarasi 960px → 1180px qilindi.
+
 ## Virtual laboratoriyalar (15.11.2026)
 
 Har bir fan uchun virtual xona: `/lab/<id>/`, katalog — `/lab/`. Fan sahifasida «Virtual laboratoriya» tugmasi chiqadi.

@@ -67,7 +67,7 @@ if sys.argv[2] != "none":
 RTR_TIKUV = json.load(open(os.path.join(sys.argv[2], "zamonaviy-tikuv-jihozlari.json"), encoding="utf-8")) if sys.argv[2] != "none" else None
 
 # ---------- Sahifa qolipi ----------
-NAV = [("", "Fanlar"), ("lab/", "Virtual laboratoriya"), ("kasblar/", "Kasblar xaritasi"), ("oyinlar/", "Sinf o‘yinlari"), ("yhq/", "Yo‘l harakati"), ("eski/", "Eski versiya")]
+NAV = [("", "Fanlar"), ("lab/", "Virtual laboratoriya"), ("kasblar/", "Kasblar xaritasi"), ("oyinlar/", "Sinf o‘yinlari"), ("yhq/", "Yo‘l harakati"), ("avtotest/", "Avtotest"), ("eski/", "Eski versiya")]
 
 def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_root=False, body_cls=""):
     depth = path.count("/")
@@ -100,7 +100,7 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="{R}assets/sayt.css?v=3">
+<link rel="stylesheet" href="{R}assets/sayt.css?v=4">
 <script>(function(){{var m=new Date(Date.now()+(new Date().getTimezoneOffset()+300)*6e4).getMonth(),q=new URLSearchParams(location.search).get('fasl');document.documentElement.setAttribute('data-fasl',/^(kuz|qish|bahor|yoz)$/.test(q||'')?q:(m==11||m<2?'qish':m<5?'bahor':m<8?'yoz':'kuz'));}})();</script>
 </head>
 <body data-root="{R}"{f' class="{body_cls}"' if body_cls else ""}>
@@ -429,6 +429,10 @@ def oyinlar():
     cards += (f'<div class="card oyin-k"><span class="oyin-i">{len(OYINLAR) + 1:02d}</span><h3>Yo‘l harakati viktorinasi</h3><p class="muted small">Yo‘l belgilari, chiziqlar, qoidalar va jarimalar bo‘yicha: jonli (o‘quvchilar telefondan), '
               'jamoaviy (bitta ekranda) va yakka o‘yin. Savollar har safar yangidan tuziladi.</p>'
               f'<a class="btn sm" href="{R}yhq/viktorina.html">Boshlash</a> <a class="btn ghost sm" href="{R}yhq/">Qoidalar va belgilar</a></div>')
+    # Avtotest — YHQ Test 2026 (avtotest/ — mustaqil ilova, build.py unga tegmaydi)
+    cards += (f'<div class="card oyin-k"><span class="oyin-i">{len(OYINLAR) + 2:02d}</span><h3>Avtotest — imtihon biletlari</h3><p class="muted small">40 ta bilet, 1272 ta savol, imtihon rejimi (20 savol, 25 daqiqa), '
+              'avtodrom simulyatori va AI xulosa. Haydovchilik guvohnomasi nazariy imtihoniga tayyorgarlik.</p>'
+              f'<a class="btn sm" href="{R}avtotest/">Boshlash</a> <a class="btn ghost sm" href="{R}avtotest/#/imtihon">Imtihon rejimi</a></div>')
     cfg = {"loc": R + OYIN_DIR, "f": OYIN_FAYL, "a": {k: v["a"] for k, v in KFAN.items() if 0 < len(v["a"]) <= 30}}
     b = hero("", "Sinf o‘yinlari", "Jonli viktorina, arqon tortish va jamoaviy o‘yin — butun sinf bilan, proyektor, aqlli doska va o‘quvchilar telefonlarida. O‘yinlar shu saytning o‘zida ochiladi; kuvonch.uz’da kuchaytirilsa yoki yangi savollar qo‘shilsa, bu yerga ham avtomatik o‘tadi.", crumbs=[("Fanlar", R), ("Sinf o‘yinlari", None)])
     b += f"""<section class="blk"><div class="wrap">
@@ -449,7 +453,7 @@ def bosh():
     extra = (f'<p class="lead">Kasbiy fanlar har bir mutaxassislik bo‘yicha alohida, umumta’lim fanlari esa hammasi uchun bitta. Har bir fan: TMR, texnologik xaritalar, ma’ruzalar va o‘quv-uslubiy majmua.</p>'
              f'<div class="fq"><label for="fq" class="sr">Fanni qidirish</label>'
              f'<input type="search" id="fq" class="q-big" placeholder="Fan, mavzu yoki mutaxassislik nomi…" autocomplete="off"></div>'
-             + (f'<div class="chips" style="margin-top:14px"><a class="chip" href="lab/">🔬 Virtual laboratoriyalar — {len([1 for L in LABS.values() if not L.get("_hub")])} ta</a><a class="chip" href="kasblar/">🌍 Kasblar xaritasi</a><a class="chip" href="oyinlar/">🎮 Sinf o‘yinlari</a><a class="chip" href="yhq/">🚦 Yo‘l harakati qoidalari 2026</a></div>' if LABS else ""))
+             + (f'<div class="chips" style="margin-top:14px"><a class="chip" href="lab/">🔬 Virtual laboratoriyalar — {len([1 for L in LABS.values() if not L.get("_hub")])} ta</a><a class="chip" href="kasblar/">🌍 Kasblar xaritasi</a><a class="chip" href="oyinlar/">🎮 Sinf o‘yinlari</a><a class="chip" href="yhq/">🚦 Yo‘l harakati qoidalari 2026</a><a class="chip" href="avtotest/">🚗 Avtotest — imtihon biletlari</a></div>' if LABS else ""))
     b = hero("", "Fanlar", "", extra=extra, small=False, fasl=True)
     seg = (f'<button type="button" data-tf="" aria-pressed="true">Hammasi</button>'
            f'<button type="button" data-tf="kasbiy" aria-pressed="false">Kasbiy fanlar <span>{nk}</span></button>'
@@ -607,13 +611,14 @@ def data_files():
             Q.append({"k": "m", "t": f'{j.get("e", "")} {j["nomi"]}'.strip(), "s": "Virtual laboratoriya · " + L["nomi"], "u": f'lab/{lid}/#j-{j["id"]}'})
     Q.append({"k": "m", "t": "Yo‘l harakati qoidalari 2026", "s": "Qoidalar, yo‘l belgilari, chiziqlar, jarimalar (o‘zbekcha, lotin/kirill)", "u": "yhq/"})
     Q.append({"k": "m", "t": "Yo‘l harakati viktorinasi", "s": "Kahoot uslubidagi jonli, jamoaviy va yakka o‘yinlar", "u": "yhq/viktorina.html"})
+    Q.append({"k": "m", "t": "Avtotest — YHQ Test 2026", "s": "Haydovchilik imtihoni biletlari: 40 bilet, 1272 savol, imtihon rejimi, avtodrom simulyatori, AI xulosa", "u": "avtotest/"})
     json.dump(Q, open(os.path.join(OUT, "data", "qidiruv.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     if RTR_TIKUV:
         os.makedirs(os.path.join(OUT, "data", "rtr"), exist_ok=True)
         json.dump(RTR_TIKUV, open(os.path.join(OUT, "data", "rtr", "zamonaviy-tikuv-jihozlari.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 def extras():
-    urls = ["", "lab/", "kasblar/", "oyinlar/", "yhq/", "yhq/viktorina.html"] + [f"lab/{k}/" for k in LABS] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
+    urls = ["", "lab/", "kasblar/", "oyinlar/", "yhq/", "yhq/viktorina.html", "avtotest/"] + [f"lab/{k}/" for k in LABS] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{DOMEN}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /kabinet/\nDisallow: /admin/\nDisallow: /eski/\nDisallow: /oyin/\nSitemap: {DOMEN}/sitemap.xml\n")
     open(os.path.join(OUT, "CNAME"), "w").write("texnikum1son.uz\n")
