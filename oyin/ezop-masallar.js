@@ -1471,5 +1471,13 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki boshqa yo'l donga boyroq edi", "Chunki u ko'rgan xavfdan saboq olib, yo'lini o'zgartirdi", "Chunki u o'sha yo'lda uchishdan charchagan edi"],
     javob: 1,
     izoh: "Kaptar o'z ko'zi bilan ko'rgan xavfdan saboq oldi va xavfli joydan uzoqroq yurishni tanladi. Masal shuni o'rgatadiki, boshqalarning boshiga tushgan xavfdan ham ibrat olib, ehtiyot bo'lish kerak."
+  },
+  {
+    id: "ez-182", mavzu: "ehtiyotkorlik", sarlavha: "Sher va chivin",
+    matn: "Sher o'z kuchiga shunchalik ishongan ediki, hech kimni e'tiborga olmasdi. Bir kuni kichkina chivin uning yoniga uchib kelib, uni mazax qildi va jangga chaqirdi. Sher chivinni e'tiborsiz qoldirdi, lekin chivin uning burni ustiga qo'nib, uni qayta-qayta chaqdi. G'azablangan sher o'z panjasi bilan o'zini urishga tushdi, ammo chivin har safar uchib ketdi. Oxiri sher o'z zarbalaridan holsizlanib, chivinni yengolmay yotib qoldi.",
+    savol: "Sher nega charchab qoldi?",
+    variantlar: ["Chunki chivin uni katta kuch bilan urdi", "Chunki u chivinni e'tiborsiz qoldirib, g'azabida o'zini urdi", "Chunki u uzoq yo'l yurgan edi"],
+    javob: 1,
+    izoh: "Sher kichik dushmanni hisobga olmadi va g'azabiga berilib, kuchini behuda sarfladi. Masal shuni o'rgatadiki, hech qanday dushmanni, hatto eng kichigini ham, e'tiborsiz qoldirmaslik va o'zini nazorat qilish kerak."
   }
 ];
