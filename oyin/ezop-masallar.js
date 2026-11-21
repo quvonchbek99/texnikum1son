@@ -1495,5 +1495,13 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki bo'rining tabiati o'zgarmasligini u yaxshi bilardi", "Chunki bo'ri qo'ylarni qo'riqlashni juda yaxshi bilardi", "Chunki qo'ylar allaqachon uyga qaytib bo'lgan edi"],
     javob: 0,
     izoh: "Cho'pon bo'rining so'zlariga emas, uning avvalgi xatti-harakatlari va tabiatiga qaradi. Masal shuni o'rgatadiki, odamni so'zidan emas, amalidan va o'tmishidan baholash kerak."
+  },
+  {
+    id: "ez-185", mavzu: "ehtiyotkorlik", sarlavha: "Sayyoh va ilon",
+    matn: "Qish kunlarining birida bir sayyoh yo'l chetida sovuqdan qotib qolgan ilonni ko'rdi. U rahm qilib ilonni qo'liga oldi va issiq gulxam yoniga olib borib isitdi. Ilon isinib hushiga kelgach, sayyohning qo'lini chaqib oldi. Sayyoh og'riqdan ingrab, nega bunday qilganini so'radi. Ilon sovuq ohangda javob berdi: \"Men sening yordaming tufayli tirildim, ammo tabiatim o'zgarmagan.\"",
+    savol: "Ilon nima uchun sayyohni chaqdi?",
+    variantlar: ["Chunki sayyoh unga oldin zarar yetkazgan edi", "Chunki ilon o'zining zaharli tabiatiga sodiq qoldi", "Chunki sayyoh uni ovqatlantirmagan edi"],
+    javob: 1,
+    izoh: "Ilon zaharli tabiatini o'zgartira olmagan. Masal shuni o'rgatadiki, yaxshilik qilganda ham xavfli tabiatli kishidan ehtiyot bo'lish kerak."
   }
 ];
