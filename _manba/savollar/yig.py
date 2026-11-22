@@ -337,11 +337,12 @@ process.stdout.write(JSON.stringify(c.window.YHQRAW));"""
 
 # ---------------------------------------------------------------- 4. Yig'ish
 def agent_testlar_soni():
-    """agent/index.json: {"y|f": [{id,...,t}]} -> {(y,f): savollar soni}"""
+    """agent/index.json: {"y|f": [{id,...,t}]} -> ({(y,f): savollar soni}, {f: savollar soni — har majmua bir marta})
+    (bitta majmua «yonalishlar» orqali bir necha mutaxassislik sahifasida turishi mumkin)."""
     ix_p = os.path.join(ILDIZ, "agent", "index.json")
-    out = {}
+    out, fan, bor = {}, {}, set()
     if not os.path.isfile(ix_p):
-        return out
+        return out, fan
     ix = json.load(open(ix_p, encoding="utf-8"))
     for yk, L in ix.items():
         y, f = yk.split("|", 1)
@@ -350,10 +351,14 @@ def agent_testlar_soni():
             if os.path.isfile(tp):
                 try:
                     t = json.load(open(tp, encoding="utf-8"))
-                    out[(y, f)] = out.get((y, f), 0) + sum(len(x.get("q", [])) for x in t.get("mavzular", []))
+                    n = sum(len(x.get("q", [])) for x in t.get("mavzular", []))
                 except Exception:
-                    pass
-    return out
+                    continue
+                out[(y, f)] = out.get((y, f), 0) + n
+                if (f, m["id"]) not in bor:
+                    bor.add((f, m["id"]))
+                    fan[f] = fan.get(f, 0) + n
+    return out, fan
 
 
 def yig(mal, out_dir, ynom=None, log=print):
@@ -368,7 +373,7 @@ def yig(mal, out_dir, ynom=None, log=print):
     for lid, L in LABS.items():
         for f in L.get("fanlar", []):
             lab_by_fan.setdefault(f, []).append(lid)
-    AG = agent_testlar_soni()
+    AG, AGF = agent_testlar_soni()
     fanlar = {}   # fid -> {nomi, toifa, y:[(yid, nom)]}
     for y in Y:
         for f in y["fanlar"]:
@@ -425,7 +430,7 @@ def yig(mal, out_dir, ynom=None, log=print):
         if b["toifa"] == "amaliyot":
             c += AG.get((b["yonalish"], b["fan"]), 0)
         else:
-            c += sum(v for (yy, ff), v in AG.items() if ff == b["fan"])
+            c += AGF.get(b["fan"], 0)
         soni[k] = c
         idx.append({"k": k, "n": b["nomi"], "t": b["toifa"], "y": b.get("yonalishlar", []), "c": c})
     json.dump({"v": 1, "fanlar": idx}, open(os.path.join(td, "index.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

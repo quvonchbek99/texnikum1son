@@ -49,6 +49,13 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
    va mavzu bayoni, test, adabiyotlar, baholash mezonlari. Har mavzu va har mavzu bayoni yangi betdan boshlangan, bo'sh betlar tashlangan;
    har bet faqat o'z rasmlariga ishora qiladi (`qpdf --empty --pages a.pdf -- --remove-unreferenced-resources=yes …`), shuning uchun
    qismlarni alohida PDF qilib olish yengil. Muallifning telefoni, emaili va surati ochiq saytga qo'yilmagan.
+   Bir fanga bir nechta majmua — alohida variantlar: `elektrotexnika-maruza-2026` (1-variant: 20 mavzulik ma’ruza matni + 58 soatlik
+   mavzular rejasi, 89 bet) va `elektrotexnika-yakkabog-2021` (2-variant: Yakkabog‘ 3-son KHM majmuasi, Jo‘raeva M.G., 234 bet; muallifning
+   tug‘ilgan sanasi, telefoni va surati olib tashlangan, bo‘sh betlar tashlangan, har mavzu va har texnologik xarita yangi betdan). Har biri fan
+   sahifasida o‘z nomi bilan alohida blok bo‘lib chiqadi (22.11.2026). Meta'dagi `yonalishlar` ro‘yxati bitta majmuani shu fan bor boshqa
+   mutaxassisliklar sahifasiga ham ulaydi (`indeks_yangila` har biri uchun `agent/index.json` ga kalit yozadi; PDF, `agent/k`, `agent/t` —
+   bitta nusxa; viktorina va savollar soni majmuani bir marta sanaydi). Elektrotexnika va elektronika asoslari: Elektromontyor (asosiy),
+   Kompyuter tarmoqlari va IT-servis, Grafik va dizayn texnologiyasi, Kompyuter grafikasi va dizayn operatori.
 6. Bosh sahifa `agent/index.json` dagi fanlarni ham «material bor» deb belgilaydi (`fanlar.js`); `build.py` qayta yig'ishda agent
    majmualarining ma'ruza/amaliy mavzularini qidiruvga (`data/qidiruv.json`, havola `?sem=` bilan) qo'shadi.
 

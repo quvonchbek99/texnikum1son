@@ -619,7 +619,9 @@ def indeks_yangila():
             t = oqi(os.path.join(ILDIZ, "agent", "t", f), None)
             if t:
                 e["t"] = sum(len(x.get("q", [])) for x in t.get("mavzular", []))
-            out.setdefault(f"{m['yonalish']}|{m['fan']}", []).append(e)
+            # «yonalishlar»: shu fan bor boshqa mutaxassisliklar (masalan, umumkasbiy fan) — bitta majmua bir necha sahifada
+            for y in [m["yonalish"]] + [y for y in m.get("yonalishlar", []) if y != m["yonalish"]]:
+                out.setdefault(f"{y}|{m['fan']}", []).append(e)
     yoz(os.path.join(ILDIZ, "agent", "index.json"), out)
 
 

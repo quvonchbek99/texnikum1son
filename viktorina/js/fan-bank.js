@@ -40,13 +40,14 @@
       });
       // Kuvi agent: shu fanning majmualaridan olingan testlar
       jobs.push(getJSON(BASE + 'agent/index.json').then(function (ix) {
-        var js = [];
+        var js = [], bor = {};   // bitta majmua bir necha mutaxassislik ostida turishi mumkin — testlari bir marta olinadi
         Object.keys(ix || {}).forEach(function (yk) {
           var p = yk.split('|');
           var ok = b.yonalish ? (p[0] === b.yonalish && p[1] === b.fan) : p[1] === b.fan;
           if (!ok) return;
           (ix[yk] || []).forEach(function (m) {
-            if (!m.t) return;
+            if (!m.t || bor[m.id]) return;
+            bor[m.id] = 1;
             js.push(getJSON(BASE + 'agent/t/' + encodeURIComponent(m.id) + '.json').then(function (t) {
               (t.mavzular || []).forEach(function (mv, i) {
                 var q = (mv.q || []).filter(valid);
