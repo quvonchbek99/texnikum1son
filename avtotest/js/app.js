@@ -275,7 +275,9 @@
   function renderRun() {
     var q = Q[run.ids[run.i]], n = run.ids.length, ans = run.ch[run.i], answered = ans != null;
     var showExp = answered && !run.exam && S.set.exp;
-    var acts = (run.limit && !run.done ? '<span class="timer" id="tmr">' + mmss(run.limit - elapsed()) + '</span>' : '') +
+    var ec = run.exam && !run.done ? errCount() : 0;
+    var acts = (run.exam && !run.done ? '<span class="errc' + (ec > B.exam.err ? ' over' : '') + '" title="' + esc(T('Xatolar soni (koʻpi bilan ' + B.exam.err + ' ta mumkin)')) + '">' + esc(T('Xato')) + ': ' + ec + '</span>' : '') +
+      (run.limit && !run.done ? '<span class="timer" id="tmr">' + mmss(run.limit - elapsed()) + '</span>' : '') +
       (run.exam || run.mode === 'bilet' ? '<button class="ib" id="fin" aria-label="Yakunlash" title="' + esc(T('Yakunlash')) + '">' + svg('check') + '</button>' : '');
     setTitle(run.title, true, acts);
     var h = '';
@@ -283,7 +285,7 @@
       h += '<div class="qnav" id="qnav">';
       for (var i = 0; i < n; i++) {
         var c = run.ch[i], cls = i === run.i ? 'cur ' : '';
-        if (c != null) cls += (run.exam && !run.done) ? 'ans' : (c === Q[run.ids[i]].a ? 'ok' : 'bad');
+        if (c != null) cls += c === Q[run.ids[i]].a ? 'ok' : 'bad';
         h += '<button class="' + cls + '" data-i="' + i + '">' + (i + 1) + '</button>';
       }
       h += '</div>';
@@ -292,7 +294,7 @@
     h += '<div class="qmeta"><span>' + H((run.i + 1) + ' / ' + n) + '</span><span>·</span><span>' + H(tp ? tp.n : '') + '</span><span class="sp"></span>' +
       (canSpeak() ? '<button id="say" title="' + esc(T('Ovoz chiqarib oʻqish')) + '">' + svg('vol') + '</button>' : '') +
       '<button id="sv" class="' + (saved ? 'on' : '') + '" title="' + esc(T('Saqlash')) + '">' + svg(saved ? 'star' : 'staro') + '</button></div>';
-    h += '<div class="card qcard">' + figure(q) + '<div class="qtext">' + H(q.q) + '</div>' + optionsHtml(q, ans, run.exam && !run.done) + (showExp || (run.done && answered) ? expHtml(q, ans) : '') + '</div>';
+    h += '<div class="card qcard">' + figure(q) + '<div class="qtext">' + H(q.q) + '</div>' + optionsHtml(q, ans, false) + (showExp || (run.done && answered) ? expHtml(q, ans) : '') + '</div>';
     h += '<div class="qfoot">' +
       '<button class="btn sec" id="prev"' + (run.i === 0 ? ' disabled' : '') + '>' + svg('back') + H('Oldingi') + '</button>' +
       (run.i < n - 1 ? '<button class="btn" id="nx">' + H(answered ? 'Keyingi' : 'Oʻtkazish') + svg('next') + '</button>'
@@ -364,13 +366,18 @@
     if (navigator.vibrate && !ok) try { navigator.vibrate(60); } catch (e) { }
     if (run.mode === 'xato' && ok) { /* toʻgʻri javob xatolar roʻyxatidan chiqaradi */ }
     if (run.exam) {
-      var errs = errCount();
+      // imtihonda ham javob darhol koʻrinadi: xato — qizil, toʻgʻri — yashil; biroz kutib keyingi savolga oʻtadi
+      var errs = errCount(), r0 = run, i0 = run.i;
+      renderRun();
+      var later = function (fn, ms) { setTimeout(function () { if (run === r0 && !r0.done) fn(); }, ms); };
       if (errs === B.exam.err + 1 && !run.warned) {
-        run.warned = true; renderRun();
-        return confirmBox('Bu ' + errs + '-xato. Haqiqiy imtihonda natija «topshirmadi» boʻlardi. Imtihonni yakunlaysizmi?', function () { finishRun(); }, 'Yakunlash', 'Davom etish', function () { autoNext(); });
+        run.warned = true;
+        return later(function () {
+          confirmBox('Bu ' + errs + '-xato. Haqiqiy imtihonda natija «topshirmadi» boʻlardi. Imtihonni yakunlaysizmi?', function () { finishRun(); }, 'Yakunlash', 'Davom etish', function () { autoNext(); });
+        }, 900);
       }
-      if (Object.keys(run.ch).length === run.ids.length) { renderRun(); return finishRun(); }
-      return autoNext();
+      if (Object.keys(run.ch).length === run.ids.length) return later(finishRun, ok ? 900 : 1600);
+      return later(function () { if (run.i === i0) autoNext(); }, ok ? 700 : 1500);
     }
     renderRun();
     if (run.mode === 'bilet' && Object.keys(run.ch).length === run.ids.length) {

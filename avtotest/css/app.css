@@ -22,6 +22,8 @@ html.dark .bar{background:#1a2333}
 .ib svg{width:24px;height:24px;fill:currentColor}
 .timer{font-variant-numeric:tabular-nums;font-weight:700;background:rgba(255,255,255,.16);padding:4px 10px;border-radius:20px;font-size:15px}
 .timer.low{background:#e53935}
+.errc{font-weight:700;background:rgba(255,255,255,.16);padding:4px 10px;border-radius:20px;font-size:14px;margin-right:6px;white-space:nowrap}
+.errc.over{background:#e53935}
 .body{flex:1;display:flex;min-height:0}
 nav.side{display:none}
 main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px 96px}
@@ -105,9 +107,9 @@ html.dark .qfig{background:#e9edf2}
 .opt:hover{border-color:var(--pri)}
 .opt .k{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:var(--chip);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--mut)}
 .opt.sel{border-color:var(--pri);background:var(--sel)}
-.opt.ok{border-color:var(--ok);background:var(--okbg)}
+.opt.ok{border-color:var(--ok);background:var(--okbg);box-shadow:inset 0 0 0 1px var(--ok)}
 .opt.ok .k{background:var(--ok);color:#fff}
-.opt.bad{border-color:var(--bad);background:var(--badbg)}
+.opt.bad{border-color:var(--bad);background:var(--badbg);box-shadow:inset 0 0 0 1px var(--bad)}
 .opt.bad .k{background:var(--bad);color:#fff}
 .opt[disabled]{cursor:default}
 .opt .fine{display:block;font-size:.85em;color:var(--mut);font-weight:600;margin-top:2px}

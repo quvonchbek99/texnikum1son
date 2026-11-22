@@ -109,6 +109,7 @@ xatolar tahlili A4 PDF faylga — `avtotest/js/pdf.js` + `js/vendor/jspdf.umd.mi
 `build.py` bu papkaga tegmaydi (faqat menyu, bosh sahifa, «Sinf o‘yinlari», qidiruv
 va sitemap’da havolalar bor). Yangilash: ilova manbasida `python3 scripts/sayt.py` → `sayt/avtotest/` ni shu yerga ko‘chirish.
 Menyu 8 bandga yetgani uchun `sayt.css` da «burger» menyu chegarasi 960px → 1180px qilindi.
+**1.0.1 (22.11.2026):** imtihon rejimida ham javob darhol rangli (xato — qizil, to‘g‘ri — yashil), sarlavhada «Xato: N»; `yuklab/` dagi APK — 1.0.1 (versionCode 2).
 
 ## Virtual laboratoriyalar (15.11.2026)
 
