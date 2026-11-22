@@ -1,0 +1,58 @@
+nomi: Ma'lumotlar validatsiyasi va verifikatsiyasi. Qidirish amallari. Murakkab querylar. Ichki va jamlanma querylar
+modul: 3-modul
+ac: 3.10 MB maydonlariga validatsiya qoidalari va kiritish niqoblarini o'rnatadi; bir va bir necha jadval bo'yicha shartli, murakkab, ichma-ich va jamlanma so'rovlar (query) yaratadi.
+maqsad: O'quvchilarda ma'lumotlar bazasida ma'lumot kiritishni validatsiya qoidalari va kiritish niqoblari bilan nazorat qilish hamda so'rovlar yordamida bir necha shart va jadval bo'yicha ma'lumot qidirish, natijalarni guruhlab jamlash ko'nikmasini shakllantirish.
+natija: maydonga validatsiya qoidasi, xato matni va kiritish niqobini o'rnatadi;
+natija: so'rov konstruktorida maydonlar, shartlar va saralashni belgilaydi;
+natija: taqqoslash, `Between ... And`, `Like`, `In` operatorlari va «VA», «YOKI» mantig'idan foydalanadi;
+natija: bir nechta bog'langan jadval bo'yicha murakkab so'rov va boshqa so'rov asosida ichma-ich so'rov tuzadi;
+natija: guruhlash va yig'indi, son, o'rtacha funksiyalari bilan jamlanma so'rov yaratadi va uning SQL ko'rinishini o'qiydi.
+reja: MB da validatsiya va verifikatsiya. Kiritish niqobi
+reja: So'rovlar: shartlar, operatorlar, murakkab so'rovlar
+reja: Ichma-ich va jamlanma so'rovlar
+tayanch: validatsiya qoidasi; xato matni; kiritish niqobi; so'rov (query); so'rov konstruktori; shart (mezon); Between; Like; In; murakkab so'rov; ichma-ich so'rov; jamlanma so'rov; guruhlash; SQL
+metod: Savol-javob | O'qituvchi «Avtoservis» bazasiga oid savollar beradi («2015-yildan eski Chevrolet avtomobillari qaysilar?», «Noyabrda qaysi xizmatdan qancha daromad tushgan?»), o'quvchilar har bir savol uchun so'rovda qaysi jadval, maydon va shart kerakligini aytadi.
+metod: Juftlikda tekshirish | Har bir juftlik bitta so'rov yaratib, natijasini qo'lda (jadvalni ko'zdan kechirib) tekshiradi — bu verifikatsiyaning amaliy ko'rinishi.
+ajihoz: Kompyuter; MS Access yoki LibreOffice Base; oldingi darslarda yaratilgan «Avtoservis» bazasi (to'rt jadval va yozuvlar); proyektor
+
+## MB da validatsiya va kiritish niqobi
+MB da validatsiya jadval konstruktorida har bir maydon uchun o'rnatiladi. **Validatsiya qoidasi** — maydonga kiritiladigan qiymat sharti: `>=0` (yurgan masofa manfiy bo'lmasin), `Between 1980 And 2026` (ishlab chiqarilgan yil), `<=Date()` (sana bugundan keyin bo'lmasin). **Xato matni** qoida buzilganda chiqadigan tushunarli xabar. **Kiritish niqobi** ma'lumot qaysi shaklda kiritilishini belgilaydi: telefon uchun `"+998 "00" "000" "00" "00`, unda foydalanuvchi faqat raqamlarni yozadi. Ro'yxatdan tanlash (qidiruv maydoni) xizmat turi kabi qiymatlarni xatosiz kiritish imkonini beradi. Verifikatsiya esa kiritilgan yozuvlarni hujjat bilan solishtirish va so'rov natijalarini qo'lda tekshirish orqali bajariladi. 25-darsda o'rganilgan bog'lanishlar yaxlitligi ham validatsiyaning bir turi: u mavjud bo'lmagan yozuvga ishorani taqiqlaydi.
+
+## So'rovlar
+**So'rov** (query) — MB dan belgilangan shartlar bo'yicha ma'lumot tanlash, saralash va hisoblash vositasi. So'rov konstruktorida jadvallar qo'shiladi, kerakli maydonlar tanlanadi va «Shart» qatoriga mezonlar yoziladi: `="Chevrolet"`, `>500000`, `Between #01.11.2026# And #30.11.2026#`, `Like "Ka*"` (Ka bilan boshlanadi), `In ("Diagnostika"; "Moy almashtirish")`, `Is Null` (bo'sh). Bir qatordagi shartlar «VA», turli qatorlardagilar «YOKI» ma'nosini beradi. Bir nechta bog'langan jadvaldan maydon olgan yoki bir nechta shartli so'rov **murakkab so'rov** deyiladi. Har bir so'rov aslida SQL tilidagi buyruq: `SELECT Marka, Model FROM Avtomobillar WHERE IshlabChiqarilganYil < 2015 ORDER BY Marka;`.
+
+## Ichma-ich va jamlanma so'rovlar
+**Ichma-ich so'rov** boshqa so'rov natijasini manba sifatida ishlatadi: avval «Noyabr buyurtmalari» so'rovi tuziladi, so'ng uning asosida «Noyabrda har bir ustaning buyurtmalari soni» so'rovi yaratiladi. **Jamlanma so'rovda** «Guruh amallari» (Σ) tugmasi yoqiladi: bir maydon bo'yicha guruhlanadi, boshqasi uchun `Sum` (yig'indi), `Count` (son), `Avg` (o'rtacha), `Max`, `Min` tanlanadi. SQL da bu `GROUP BY` bilan yoziladi: `SELECT Nomi, Sum(Narxi) FROM ... GROUP BY Nomi;`.
+
+amaliy: Avtoservis bazasida validatsiya va so'rovlar
+amaqsad: «Avtoservis» bazasi maydonlariga validatsiya qoidalari va kiritish niqobini o'rnatish, shartli, murakkab, ichma-ich va jamlanma so'rovlar yaratish va natijalarini tekshirish.
+qadam: «Avtomobillar» jadvalida YurganMasofa uchun `>=0`, IshlabChiqarilganYil uchun `Between 1980 And 2026` qoidalarini xato matni bilan o'rnating; «Mijozlar» jadvalidagi Telefon maydoniga kiritish niqobini qo'ying. Noto'g'ri qiymatlar bilan sinab, natijani yozing.
+qadam: 1-so'rov: bitta markadagi avtomobillar — DavlatRaqami, Marka, Model, IshlabChiqarilganYil; shart: Marka = tanlangan marka; yil bo'yicha o'sish tartibida saralang.
+qadam: 2-so'rov (murakkab): noyabr oyida bajarilgan «Diagnostika» xizmatlari — Buyurtmalar, Xizmatlar va Avtomobillar jadvallaridan; shartlar: Sana `Between #01.11.2026# And #30.11.2026#` VA Xizmat nomi = "Diagnostika".
+qadam: 3-so'rov («YOKI» mantig'i): familiyasi «Ka» bilan boshlanadigan YOKI telefoni «+998 90» bilan boshlanadigan mijozlar (`Like "Ka*"`, `Like "+998 90*"` shartlarini turli qatorlarga yozing).
+qadam: 4-so'rov (ichma-ich): avval «Noyabr_buyurtmalari» so'rovini saqlang, so'ng uning asosida har bir ustaning buyurtmalari sonini hisoblovchi so'rov tuzing.
+qadam: 5-so'rov (jamlanma): har bir xizmat turi bo'yicha buyurtmalar soni va jami daromad (Count, Sum); daromad bo'yicha kamayish tartibida saralang.
+qadam: Har bir so'rovning SQL ko'rinishini oching va 2-so'rov SQL matnini daftaringizga ko'chiring; 1- va 5-so'rov natijalarini jadvalni ko'zdan kechirib, qo'lda tekshiring.
+anatija: Validatsiya qoidalari va kiritish niqobi o'rnatilgan jadvallar, beshta saqlangan so'rov (shartli, murakkab, «YOKI», ichma-ich, jamlanma), SQL matni va natijalarni qo'lda tekshirish qaydlari.
+baho5: Validatsiya va niqob to'g'ri ishlaydi, barcha so'rovlarda jadvallar, maydonlar va shartlar to'g'ri, «VA»/«YOKI» mantig'i to'g'ri joylashtirilgan, ichma-ich va jamlanma so'rov ishlaydi, natijalar tekshirilgan.
+masala: «Mahsulotlar» jadvalidan narxi 50 000 dan 150 000 so'mgacha bo'lgan va kategoriyasi «Ehtiyot qism» bo'lgan mahsulotlarni tanlovchi so'rov shartlarini yozing.
+yechim: Narxi maydoni shartiga: `Between 50000 And 150000`; Kategoriya maydoni shartiga (xuddi shu qatorga): `="Ehtiyot qism"`. Ikkala shart bir qatorda bo'lgani uchun «VA» mantig'i ishlaydi.
+masala: Har bir guruhdagi o'quvchilar soni va o'rtacha balini chiqaruvchi jamlanma so'rovning SQL ko'rinishini yozing («Oquvchilar» jadvali: Guruh, Ball).
+yechim: `SELECT Guruh, Count(*) AS Soni, Avg(Ball) AS OrtachaBall FROM Oquvchilar GROUP BY Guruh;`
+savol: Validatsiya qoidasi va kiritish niqobining farqi nimada?
+savol: So'rovda «VA» va «YOKI» shartlari qanday yoziladi?
+savol: `Like "Ka*"` va `Between ... And` shartlari nimani bildiradi?
+savol: Jamlanma so'rov qanday hisobotlar uchun kerak? Misol keltiring.
+test: MB dan belgilangan shartlar bo'yicha ma'lumot tanlash vositasi? | So'rov (query) | Shakl (forma) | Hisobot | Makros
+test: Familiyasi «Ka» bilan boshlanadigan yozuvlarni tanlovchi shart? | Like "Ka*" | ="Ka" | >"Ka" | In ("Ka")
+test: Har bir xizmat turi bo'yicha jami daromadni hisoblaydigan so'rov turi? | Jamlanma so'rov | Oddiy tanlash so'rovi | O'chirish so'rovi | Kiritish niqobi
+test: So'rov konstruktorida turli qatorlarga yozilgan shartlar qanday bog'lanadi? | YOKI | VA | EMAS | Bog'lanmaydi
+test: SQL tilida guruhlash qaysi kalit so'z bilan yoziladi? | GROUP BY | ORDER BY | WHERE | SELECT
+uyga: Mavzu yuzasidan o'qib o'rganing. Uyda kasbingizga oid kichik jadval (kamida 15 yozuv) asosida 3 ta so'rovni qog'ozda loyihalang: bitta shartli, bitta «YOKI» mantiqli va bitta jamlanma so'rov; har birining SQL ko'rinishini yozishga harakat qiling.
+gloss: Validatsiya qoidasi | MB maydoniga kiritiladigan qiymat bajarishi kerak bo'lgan shart.
+gloss: Kiritish niqobi | Ma'lumot kiritilish shaklini belgilaydigan andoza (masalan, telefon raqami uchun).
+gloss: So'rov (query) | MB dan shartlar bo'yicha ma'lumot tanlash, saralash va hisoblash vositasi.
+gloss: Murakkab so'rov | Bir nechta jadval yoki bir nechta shartdan foydalanadigan so'rov.
+gloss: Ichma-ich so'rov | Boshqa so'rov natijasini manba sifatida ishlatadigan so'rov.
+gloss: Jamlanma so'rov | Yozuvlarni guruhlab, yig'indi, son, o'rtacha kabi umumlashtiruvchi qiymatlarni hisoblaydigan so'rov.
+gloss: SQL | Relyatsion MB bilan ishlash uchun so'rovlar tili (SELECT, WHERE, GROUP BY, ORDER BY).

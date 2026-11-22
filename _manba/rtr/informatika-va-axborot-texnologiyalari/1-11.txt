@@ -1,0 +1,65 @@
+nomi: Raqamli tengsizlik tushunchasi va sabablari
+modul: 2-modul
+ac: 2.1 Raqamli tengsizlik tushunchasi, sabablari va oqibatlarini tushuntiradi; ma'lumotlar asosida hududlar va guruhlar o'rtasidagi farqni tahlil qiladi.
+maqsad: O'quvchilarda raqamli tengsizlikning mohiyati, sabablari va oqibatlarini tushuntirish, statistik ma'lumotlarni elektron jadvalda tahlil qilib, uni kamaytirish yo'llarini taklif etish ko'nikmasini shakllantirish.
+natija: raqamli tengsizlikka ta'rif beradi va uning ko'rinishlarini (qurilma, internet, ko'nikma) ajratadi;
+natija: hududiy, ijtimoiy-iqtisodiy, yosh, ta'lim va nogironlik bilan bog'liq sabablarni misollar bilan tushuntiradi;
+natija: samarasi yuqori va past texnologiyalarning farqini va qo'llanishini biladi;
+natija: elektron jadvalda ma'lumotlarni tahlil qilib, diagramma tuzadi va xulosa chiqaradi.
+reja: Raqamli tengsizlik: tushuncha, ko'rinishlari va sabablari
+reja: Samarasi yuqori va past texnologiyalar. Raqamli tengsizlikni kamaytirish yo'llari
+reja: Amaliy ish: hududlar bo'yicha ma'lumotlarni tahlil qilish
+tayanch: raqamli tengsizlik; internetdan foydalanish imkoniyati; raqamli savodxonlik; sanoati rivojlangan hudud; ijtimoiy-iqtisodiy guruh; samarasi yuqori texnologiya; samarasi past texnologiya; inklyuziya
+metod: Muhokama | «Agar bir hafta davomida internet va smartfoningiz bo'lmasa, o'qish, ish va kundalik hayotingizda nimalar o'zgaradi?» savoli bilan raqamli imkoniyatlarning ahamiyati muhokama qilinadi.
+metod: Kichik guruhlarda ishlash | Har bir guruh bitta sabab (hudud, daromad, yosh, ta'lim, nogironlik) bo'yicha misol va yechim taklif qilib, «muammo — sabab — yechim» jadvalini to'ldiradi.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; internet (rasmiy statistika saytlari); o'qituvchi tarqatgan shartli ma'lumotlar jadvali; topshiriq varaqasi
+
+## Raqamli tengsizlik: tushuncha va sabablari
+**Raqamli tengsizlik** — kompyuter, smartfon va internetdan foydalanish imkoniyati hamda ularni qo'llay olish ko'nikmasi bo'yicha odamlar, hududlar va davlatlar o'rtasidagi farq. U uch darajada namoyon bo'ladi: qurilmaga ega bo'lish, sifatli va arzon internetga ulanish va raqamli savodxonlik — texnologiyadan foydali maqsadda foydalana olish.
+Asosiy sabablar:
+- **hududiy**: sanoati rivojlangan va shahar hududlarida tezkor internet keng tarqalgan, chekka qishloq va tog'li hududlarda esa aloqa tarmoqlari kam yoki sifatsiz;
+- **ijtimoiy-iqtisodiy**: daromadi past oilalar uchun qurilma va internet to'lovi qimmatlik qiladi;
+- **yosh va ta'lim**: keksalar va ta'lim darajasi pastroq kishilar yangi texnologiyalarni o'rganishda qiynaladi;
+- **nogironlik**: maxsus imkoniyatlarga mos dastur va qurilmalar bo'lmasa, ko'rish yoki eshitish qobiliyati cheklangan insonlar xizmatlardan foydalana olmaydi;
+- **til**: kerakli xizmat va ma'lumotlar o'z ona tilida bo'lmasligi.
+Oqibatlari: masofaviy ta'lim, onlayn ish, davlat xizmatlari va elektron tijoratdan teng foydalana olmaslik; ish topish imkoniyatining kamayishi; hududlar rivojlanishidagi farqning chuqurlashishi.
+
+## Samarasi yuqori va past texnologiyalar
+**Samarasi yuqori** (yuqori texnologiyali) yechimlar — optik tolali internet, 4G/5G tarmoqlari, zamonaviy kompyuterlar — katta imkoniyat beradi, lekin qimmat va infratuzilma talab qiladi. **Samarasi past** (oddiy, arzon) texnologiyalar — oddiy mobil telefon, SMS xizmatlari, radio, quyosh panelli zaryadlagich — kam imkoniyatli, lekin arzon va ko'p joyda ishlaydi; ular raqamli tengsizlikni kamaytirishda birinchi qadam bo'ladi (masalan, fermerga ob-havo va narxlar haqida SMS-xabarnoma). Davlat va jamiyat tengsizlikni kamaytirish uchun chekka hududlarga aloqa tarmoqlarini yetkazadi, ijtimoiy tariflar, jamoat joylarida bepul Wi-Fi, kutubxona va ta'lim muassasalarida kompyuter xonalari va raqamli savodxonlik kurslarini tashkil etadi.
+jadval: Amaliy ish uchun shartli ma'lumotlar (o'quv maqsadida tuzilgan, haqiqiy statistika emas)
+| Hudud | Aholi, ming kishi | Internetdan foydalanuvchilar, ming kishi | Kompyuteri bor oilalar, % | O'rtacha internet tezligi, Mbit/s |
+| A (yirik shahar) | 1200 | 1032 | 64 | 48 |
+| B (sanoat shaharchasi) | 540 | 405 | 51 | 32 |
+| C (qishloq tumani) | 760 | 486 | 33 | 14 |
+| D (tog'li hudud) | 75 | 40,5 | 18 | 6 |
+
+amaliy: Hududlar bo'yicha raqamli imkoniyatlarni tahlil qilish
+amaqsad: Raqamli imkoniyatlar bo'yicha ma'lumotlarni elektron jadvalga kiritish, ko'rsatkichlarni hisoblash, diagramma tuzish va raqamli tengsizlikni kamaytirish bo'yicha asoslangan takliflar tayyorlash.
+qadam: O'qituvchi bergan shartli ma'lumotlar jadvalini elektron jadvalga kiriting: hudud (A, B, C, D), aholi soni (ming kishi), internetdan foydalanuvchilar (ming kishi), kompyuteri bor oilalar ulushi (%), o'rtacha internet tezligi (Mbit/s).
+qadam: Har bir hudud uchun internetdan foydalanuvchilar ulushini hisoblang: `=C2/B2` va foiz formatini qo'llang.
+qadam: Ulush bo'yicha eng yuqori va eng past hududni `=MAX(...)` va `=MIN(...)` funksiyalari bilan toping hamda ular orasidagi farqni foiz punktlarda hisoblang.
+qadam: Hududlar bo'yicha internetdan foydalanish ulushini ustunli diagrammada tasvirlang; diagrammaga sarlavha va o'q nomlarini qo'shing.
+qadam: Rasmiy statistika saytidan (masalan, stat.uz) yoki Xalqaro elektraloqa ittifoqi (ITU) ma'lumotlaridan O'zbekiston bo'yicha internetdan foydalanish haqida bitta haqiqiy ko'rsatkichni toping va manbasi, yili bilan yozing.
+qadam: Eng past ko'rsatkichli hudud uchun guruhda kamida 3 ta taklif tayyorlang: qaysi sabab, qanday yechim (samarasi yuqori yoki past texnologiya), kim amalga oshiradi.
+qadam: Natijalarni jadval, diagramma va 5–6 gapli xulosa ko'rinishida rasmiylashtirib, guruh oldida 2 daqiqada taqdim eting.
+anatija: Ulushlar hisoblangan jadval, ustunli diagramma, manbasi ko'rsatilgan haqiqiy ko'rsatkich, eng past hudud uchun asoslangan takliflar va qisqa xulosa.
+baho5: Formulalar to'g'ri, foizlar to'g'ri formatlangan, diagramma sarlavha va o'q nomlari bilan, haqiqiy ko'rsatkich manbasi va yili ko'rsatilgan, takliflar sabablarga mos va asosli.
+masala: Hududda 820 ming kishi yashaydi, ulardan 574 ming kishi internetdan foydalanadi. Internetdan foydalanuvchilar ulushini va foydalanmaydiganlar sonini toping.
+yechim: Ulush: 574 : 820 = 0,7 → 70 %. Foydalanmaydiganlar: 820 − 574 = 246 ming kishi (30 %).
+masala: A hududda foydalanuvchilar ulushi 86 %, D hududda 54 %. Farq necha foiz punkt? D hududda aholi 75 ming kishi bo'lsa, u A hudud darajasiga yetishi uchun yana qancha kishi internetga ulanishi kerak?
+yechim: Farq: 86 − 54 = 32 foiz punkt. D hududda hozir 75 · 0,54 = 40,5 ming foydalanuvchi bor, 86 % uchun 75 · 0,86 = 64,5 ming kerak. Qo'shimcha: 64,5 − 40,5 = 24 ming kishi.
+savol: Raqamli tengsizlik nima va u qanday darajalarda namoyon bo'ladi?
+savol: Raqamli tengsizlikning beshta sababini ayting.
+savol: Samarasi past texnologiyalar raqamli tengsizlikni kamaytirishga qanday yordam beradi?
+savol: Kasbingizda raqamli savodxonlik nima uchun kerak?
+test: Raqamli tengsizlik deganda nima tushuniladi? | Raqamli texnologiyalardan foydalanish imkoniyati va ko'nikmasidagi farq | Kompyuterlar narxidagi farq | Ikkilik va o'nlik sanoq sistemasidagi farq | Dasturlash tillari orasidagi farq
+test: Qaysi biri raqamli tengsizlikning hududiy sababiga kiradi? | Chekka qishloqda aloqa tarmog'ining yo'qligi | Keksa yoshdagi insonning texnologiyani bilmasligi | Oilaning daromadi pastligi | Dasturning ona tilida bo'lmasligi
+test: Qaysi biri samarasi past (oddiy, arzon) texnologiyaga misol? | SMS orqali ob-havo xabarnomasi | Optik tolali internet | 5G tarmog'i | Superkompyuter
+test: Raqamli savodxonlik nima? | Raqamli texnologiyalardan foydali va xavfsiz maqsadda foydalana olish ko'nikmasi | Faqat kompyuter yig'a olish | Faqat tez yozish | Dasturlash tillarini yoddan bilish
+test: Hududda 500 ming aholidan 350 ming kishi internetdan foydalansa, ulush qancha? | 70 % | 35 % | 50 % | 15 %
+uyga: Oilangiz yoki qo'shnilaringiz orasida kichik so'rovnoma o'tkazing (5–10 kishi): qanday qurilmasi bor, internetdan nima uchun foydalanadi, qaysi onlayn xizmatdan foydalana olmaydi. Natijani jadvalga yozib, raqamli tengsizlikning qaysi sababi ko'proq uchraganini aniqlang.
+gloss: Raqamli tengsizlik | Raqamli texnologiyalarga ega bo'lish, internetga ulanish va ulardan foydalana olish ko'nikmasi bo'yicha odamlar va hududlar o'rtasidagi farq.
+gloss: Raqamli savodxonlik | Raqamli qurilma va xizmatlardan foydali va xavfsiz maqsadda foydalana olish ko'nikmasi.
+gloss: Samarasi yuqori texnologiya | Katta imkoniyat beradigan, lekin qimmat va murakkab infratuzilma talab qiladigan texnologiya.
+gloss: Samarasi past texnologiya | Imkoniyati cheklangan, lekin arzon va keng tarqalgan oddiy texnologiya (SMS, radio).
+gloss: Inklyuziya | Barcha insonlar, shu jumladan imkoniyati cheklanganlar uchun xizmat va texnologiyalarning teng ochiq bo'lishi.

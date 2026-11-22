@@ -1,0 +1,59 @@
+nomi: Relyatsion ma'lumotlar bazasini yaratish
+modul: 3-modul
+ac: 3.9 Oddiy (bir jadvalli) va relyatsion MB ni farqlaydi; birlamchi, murakkab va tashqi kalitlarni belgilab, jadvallar orasida bog'lanishlar yaratadi va ma'lumotlarni import qiladi.
+maqsad: O'quvchilarda bir jadvalli MB kamchiliklarini aniqlash, relyatsion MB ni loyihalash, birlamchi, murakkab va tashqi kalitlarni to'g'ri tanlash, bog'lanishlarni yaratish va tashqi fayldan ma'lumot import qilish ko'nikmasini shakllantirish.
+natija: oddiy (bir jadvalli) MB dagi takrorlanish va xatolar muammosini tushuntiradi;
+natija: relyatsion MB ning tuzilishi va afzalliklarini biladi;
+natija: birlamchi, murakkab va tashqi kalitlarni farqlaydi va belgilaydi;
+natija: bog'lanishlar oynasida birga-ko'p bog'lanishlarni yaratadi;
+natija: Excel yoki CSV fayldan jadvalga ma'lumot import qiladi.
+reja: Oddiy va relyatsion ma'lumotlar bazasi
+reja: Kalitlar: birlamchi, murakkab va tashqi kalit
+reja: Bog'lanishlar yaratish va ma'lumotlarni import qilish
+tayanch: oddiy (bir jadvalli) ma'lumotlar bazasi; relyatsion ma'lumotlar bazasi; takrorlanish; birlamchi kalit; murakkab kalit; tashqi kalit; bog'lanishlar oynasi; ma'lumotlar yaxlitligi; import
+metod: Muammoli vaziyat | O'qituvchi bitta jadvalda saqlangan buyurtmalar ro'yxatini ko'rsatadi: bitta mijozning telefoni 7 marta takrorlangan va ikki joyda turlicha yozilgan. «Mijoz telefonini o'zgartirsa, nechta joyni tuzatish kerak?» degan savol muhokama qilinadi.
+metod: Juftlikda loyihalash | Juftliklar bitta katta jadvalni qog'ozda bir nechta jadvalga ajratib, har biriga kalit belgilaydi va bog'lanish chiziqlarini chizadi.
+ajihoz: Kompyuter; MS Access yoki LibreOffice Base; oldingi darsda yaratilgan «Avtoservis» bazasi; xizmatlar.xlsx (yoki xizmatlar.csv) fayli; proyektor
+
+## Oddiy va relyatsion ma'lumotlar bazasi
+**Oddiy (bir jadvalli) MB** barcha ma'lumotni bitta jadvalda saqlaydi. Kichik ro'yxatlar uchun bu qulay, lekin ma'lumot ko'paygan sari muammolar paydo bo'ladi: bir xil ma'lumot (mijoz ismi, telefoni) ko'p marta takrorlanadi va joy egallaydi; bir joyda o'zgartirib, boshqasida unutish natijasida ziddiyatli ma'lumot paydo bo'ladi; buyurtmani o'chirganda mijoz haqidagi yagona ma'lumot ham yo'qolishi mumkin. **Relyatsion MB** esa ma'lumotlarni mavzular bo'yicha bir nechta jadvalga ajratadi («Mijozlar», «Avtomobillar», «Buyurtmalar», «Xizmatlar») va ularni kalit maydonlar orqali bog'laydi. Har bir fakt faqat bir joyda saqlanadi, shuning uchun takrorlanish kamayadi, ma'lumot izchil bo'ladi va istalgan jadvallar birikmasidan so'rov orqali kerakli ma'lumot olinadi.
+
+## Kalitlar
+- **Birlamchi kalit** — jadvaldagi har bir yozuvni noyob aniqlaydi, bo'sh bo'lishi mumkin emas (MijozID, DavlatRaqami).
+- **Murakkab kalit** — bitta maydon noyob bo'lmaganda ikki yoki undan ortiq maydon birgalikda kalit bo'ladi: «Baholar» jadvalida O'quvchiID va FanID birga; «Smenalar» jadvalida XodimID va Sana birga.
+- **Tashqi kalit** — boshqa jadvalning birlamchi kalitiga ishora qiladigan maydon: «Avtomobillar» jadvalidagi MijozID «Mijozlar» jadvalining birlamchi kalitiga ishora qiladi. Bog'lanish aynan birlamchi va tashqi kalit orqali o'rnatiladi; ularning ma'lumot turi bir xil bo'lishi shart.
+
+## Bog'lanishlar va import
+Bog'lanishlar «Ma'lumotlar bazasi asboblari → Bog'lanishlar» oynasida yaratiladi: jadvallar oynaga qo'shiladi va birlamchi kalit tashqi kalit ustiga sudrab olib boriladi. «Ma'lumotlar yaxlitligini ta'minlash» belgisi yoqilsa, mavjud bo'lmagan mijoz uchun avtomobil kiritib bo'lmaydi va avtomobili bor mijozni o'chirib bo'lmaydi. Tayyor ma'lumotlar «Tashqi ma'lumotlar → Import» buyrug'i bilan Excel yoki CSV fayldan yangi yoki mavjud jadvalga qo'shiladi; bunda ustun nomlari, ma'lumot turlari va kalit maydon tekshiriladi.
+
+amaliy: Avtoservis relyatsion bazasini yaratish
+amaqsad: «Avtoservis» bazasini relyatsion tuzilmaga keltirish: «Xizmatlar» jadvalini import qilish, «Buyurtmalar» jadvalini yaratish, kalitlarni belgilash, bog'lanishlarni ma'lumotlar yaxlitligi bilan o'rnatish va ishlashini sinash.
+qadam: O'qituvchi bergan bir jadvalli «buyurtmalar ro'yxati»ni tahlil qiling va takrorlanayotgan ma'lumotlarni (mijoz, telefon, avtomobil, xizmat narxi) belgilab, ulardan qanday muammolar kelib chiqishini 3 ta misol bilan yozing.
+qadam: xizmatlar.xlsx (yoki .csv) faylidan «Xizmatlar» jadvalini import qiling: XizmatID (birlamchi kalit), Nomi, Narxi (pul); import qilingan ma'lumot turlarini tekshiring.
+qadam: «Buyurtmalar» jadvalini yarating: BuyurtmaID (hisoblagich, birlamchi kalit), DavlatRaqami (qisqa matn, 8 — tashqi kalit), XizmatID (son — tashqi kalit), Sana (sana/vaqt), Usta (qisqa matn), Izoh (uzun matn).
+qadam: Bog'lanishlar oynasiga to'rt jadvalni qo'shing va bog'lanishlarni yarating: Mijozlar.MijozID → Avtomobillar.MijozID; Avtomobillar.DavlatRaqami → Buyurtmalar.DavlatRaqami; Xizmatlar.XizmatID → Buyurtmalar.XizmatID. Har biri uchun «Ma'lumotlar yaxlitligini ta'minlash» belgisini yoqing va bog'lanish turi «birga-ko'p» ekanini tekshiring.
+qadam: «Buyurtmalar» jadvaliga kamida 12 ta yozuv kiriting (bir avtomobil uchun bir nechta buyurtma bo'lsin).
+qadam: Yaxlitlikni sinang: bazada yo'q davlat raqami bilan buyurtma kiritishga va buyurtmasi bor avtomobilni o'chirishga urinib ko'ring; MBBT javobini yozing.
+qadam: Relyatsion tuzilmaning sxemasini (jadvallar, kalitlar, bog'lanish turlari) chop etib yoki skrinshot qilib, ishingizga ilova qiling.
+anatija: To'rt jadvalli relyatsion «Avtoservis» bazasi: import qilingan «Xizmatlar», yangi «Buyurtmalar», birlamchi va tashqi kalitlar, ma'lumotlar yaxlitligi yoqilgan birga-ko'p bog'lanishlar, sinov natijalari va bog'lanishlar sxemasi.
+baho5: Takrorlanish muammolari to'g'ri tahlil qilingan, import to'g'ri bajarilgan, barcha kalit va bog'lanishlar to'g'ri, yaxlitlik sinovi o'tkazilgan va tushuntirilgan, sxema aniq.
+masala: Bir jadvalli bazada 500 ta buyurtma bor, ularda 80 ta mijozning ismi va telefoni har bir buyurtmada takrorlanadi. Mijoz telefoni o'rtacha 13 belgi. Relyatsion bazaga o'tilganda telefonlar uchun saqlanadigan belgilar soni qanchaga kamayadi?
+yechim: Bir jadvalda: 500 · 13 = 6500 belgi. Relyatsion bazada telefon faqat «Mijozlar» jadvalida: 80 · 13 = 1040 belgi. Tejamkorlik: 6500 − 1040 = 5460 belgi. Bundan tashqari, telefonni o'zgartirish uchun faqat bitta joyni tuzatish yetarli.
+masala: «Smenalar» jadvalida XodimID, Sana, BoshlanishVaqti, TugashVaqti maydonlari bor. Bitta xodim kuniga faqat bitta smenada ishlaydi. Qaysi kalitni birlamchi kalit sifatida tanlash kerak?
+yechim: XodimID ham, Sana ham alohida noyob emas (xodim ko'p kunlar ishlaydi, bir kunda ko'p xodim ishlaydi). Shuning uchun murakkab kalit kerak: XodimID + Sana. XodimID esa «Xodimlar» jadvaliga ishora qiluvchi tashqi kalit hamdir.
+savol: Bir jadvalli ma'lumotlar bazasining qanday kamchiliklari bor?
+savol: Relyatsion MB ning afzalliklarini ayting.
+savol: Murakkab kalit qachon ishlatiladi? Misol keltiring.
+savol: Tashqi kalit nima va u bog'lanishda qanday rol o'ynaydi?
+test: Boshqa jadvalning birlamchi kalitiga ishora qiladigan maydon? | Tashqi kalit | Murakkab kalit | Hisoblagich | Indeks
+test: Ikki yoki undan ortiq maydon birgalikda noyob bo'lgan kalit? | Murakkab kalit | Tashqi kalit | Oddiy maydon | Izoh maydoni
+test: Ma'lumotlar yaxlitligi yoqilgan bo'lsa, qaysi amalni bajarib bo'lmaydi? | Bazada yo'q mijoz uchun avtomobil kiritish | Yangi mijoz qo'shish | Mijoz familiyasini o'zgartirish | Jadvalni saralash
+test: Relyatsion MB ning asosiy afzalligi? | Ma'lumotlar takrorlanishi kamayadi va izchil bo'ladi | Faqat bitta jadval ishlatiladi | Kalit kerak emas | Ma'lumot turi tekshirilmaydi
+test: Excel faylidagi tayyor ro'yxatni MB jadvaliga qo'shish amali? | Import | Eksport | Normallashtirish | Saralash
+uyga: Mavzuni konspekt qiling: oddiy va relyatsion MB farqi, kalitlar turlari va ma'lumotlar yaxlitligi. Kasbingizdagi ma'lumotlar uchun (masalan, oshxona: taomlar, mahsulotlar, retseptlar) uch jadvalli relyatsion tuzilma loyihasini chizing: kalitlar va bog'lanish turlarini ko'rsating.
+gloss: Oddiy (bir jadvalli) MB | Barcha ma'lumotlar bitta jadvalda saqlanadigan, takrorlanishga moyil ma'lumotlar bazasi.
+gloss: Relyatsion MB | Ma'lumotlar bir nechta jadvalga ajratilib, kalit maydonlar orqali bog'langan ma'lumotlar bazasi.
+gloss: Murakkab kalit | Ikki yoki undan ortiq maydon birgalikda yozuvni noyob aniqlaydigan kalit.
+gloss: Tashqi kalit | Boshqa jadvalning birlamchi kalitiga ishora qilib, jadvallarni bog'laydigan maydon.
+gloss: Ma'lumotlar yaxlitligi | Bog'langan jadvallarda mavjud bo'lmagan yozuvga ishora qiluvchi ma'lumotlar paydo bo'lishiga yo'l qo'ymaslik qoidasi.
+gloss: Import | Tashqi fayldagi (Excel, CSV) ma'lumotlarni MB jadvaliga olib kirish.

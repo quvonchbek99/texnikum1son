@@ -69,7 +69,7 @@ Savollar banki: `_manba/savollar/yig.py` (build.py chaqiradi) → `data/test/<ka
    qo‘shish, `+yhq` — yhq/ ilovasidagi qoidalar, belgilar (rasm bilan) va chiziqlar, `%en` — inglizcha bank. Oddiy apostrof (o' g')
    avtomatik o‘ g‘ ga almashadi.
 2. Fanning virtual laboratoriyasi (`_manba/lab/*.json`): jihozlar, atamalar (moslash), vaziyatlar (tanlash), ish tartibi.
-3. Tayyor RTR paketi testlari (`data/rtr/<fan>.json`: mavzu testlari va yakuniy test).
+3. Tayyor RTR paketi testlari (`data/rtr/<fan>.json` va `<fan>-<N>sem.json`: mavzu testlari; mavzu testlaridan yig‘ilgan yakuniy test qayta qo‘shilmaydi).
 4. Kuvi agent testlari — `agent/t/<majmua>.json` (sahifa ochilganda qo‘shiladi): majmuadagi testlar qoidalar bilan ajratib olinadi
    («A) … D)» + «To‘g‘ri javoblar kaliti» yoki «*» belgisi), AI bo‘lsa (GEMINI_API_KEY yoki GitHub Models) ma’ruza va amaliy darslar
    matnidan qo‘shimcha savollar tuziladi (bir marta; xato bo‘lsa kuniga bir urinish). `_manba/agent/testlar.py`,
@@ -144,6 +144,15 @@ Yangi lab qo‘shish: JSON faylni `_manba/lab/` ga qo‘ying va saytni qayta yig
 python3 _manba/build.py _manba/texnikum1-malumot.json data/rtr .
 ```
 Yangi tayyor fan materiali (RTR JSON) qo‘shish: faylni `data/rtr/<fan-id>.json` ga qo‘ying va `_manba/build.py` dagi `STATIK` ro‘yxatiga yozing.
+
+### Modulli fanlar — RTR paketlari manbadan yig‘iladi (22.11.2026)
+`_manba/rtr/<fan-id>/` papkasidagi ixcham matnli manba `_manba/rtr/rtr_yig.py` orqali (build.py o‘zi chaqiradi) semestr paketlariga
+aylanadi: `data/rtr/<fan-id>-<N>sem.json` va fan sahifasidagi semestr tugmalari. Papka tarkibi:
+`meta.json` (modullar, paketlar: semestr → kurs, darslar, auditoriya soati, nazorat), `tmr-<kurs>kurs.tsv` (o‘qituvchi TMR’i: №, mavzu,
+tur N/A/NA, mustaqil ish, baholash), `<kurs>-<NN>.txt` (har bir dars — kalitlar konvertor docstring’ida), `mustaqil.txt`, `biletlar.txt`.
+Konvertor soatlarni rejaga solishtiradi, NA (nazariy-amaliy) darslarni ma’ruza va amaliy bo‘limlarida ko‘rsatadi, yakuniy/oraliq
+nazorat testini mavzu testlaridan yig‘adi; paket darslari to‘liq yozilmaguncha u chiqarilmaydi. Birinchi fan: «Informatika va axborot
+texnologiyalari» (umumta’lim, 1–6-modullar, 120 soat).
 
 ## Bir martalik sozlash
 1. **Domen DNS** (texnikum1son.uz): `@` uchun A yozuvlar — 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153; `www` uchun CNAME — `quvonchbek99.github.io`.

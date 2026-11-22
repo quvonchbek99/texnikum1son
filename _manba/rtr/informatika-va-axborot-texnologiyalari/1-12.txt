@@ -1,0 +1,59 @@
+nomi: Tarmoq kompyuterlari
+modul: 2-modul
+ac: 2.2 Lokal va global tarmoqlarni, kliyent-server va peer-to-peer tarmoqlarni farqlaydi; tarmoq sozlamalarini aniqlaydi va VPN vazifasini tushuntiradi.
+maqsad: O'quvchilarda kompyuter tarmoqlari turlarini farqlash, tarmoq sozlamalarini operatsion tizim buyruqlari orqali aniqlash, o'quv xonasi tarmog'ining sxemasini chizish va vaziyatga mos tarmoq turini tanlash ko'nikmasini shakllantirish.
+natija: kompyuter tarmog'ining afzallik va kamchiliklarini tushuntiradi;
+natija: LAN va WAN ni hajmi, egasi va qo'llanishi bo'yicha farqlaydi;
+natija: kliyent-server va peer-to-peer tarmoqlarini taqqoslaydi;
+natija: `ipconfig`, `ping`, `tracert` buyruqlari yordamida tarmoq sozlamalari va aloqa holatini aniqlaydi;
+natija: VPN nima uchun ishlatilishini tushuntiradi.
+reja: Kompyuter tarmog'i. LAN va WAN
+reja: Kliyent-server va peer-to-peer tarmoqlar. VPN
+reja: Amaliy ish: tarmoq sozlamalarini aniqlash va tarmoq sxemasini chizish
+tayanch: kompyuter tarmog'i; lokal tarmoq (LAN); global tarmoq (WAN); server; kliyent; kliyent-server tarmog'i; peer-to-peer (P2P) tarmog'i; VPN; IP manzil; MAC manzil; marshrutizator (router); kommutator (switch)
+metod: Aqliy hujum | «Texnikumda kompyuterlar o'zaro qanday bog'langan va nima uchun?» savoli bilan o'quv xonasidagi tarmoq qurilmalari (kabellar, kommutator, Wi-Fi) kuzatiladi va tarmoq tushunchasiga o'tiladi.
+metod: Juftlikda ishlash | Juftliklar buyruq satrida o'z kompyuteri va qo'shni kompyuterning IP manzilini aniqlab, `ping` orqali bir-biri bilan aloqani tekshiradi va natijani solishtiradi.
+ajihoz: Kompyuterlar (lokal tarmoqqa ulangan); internet; buyruq satri (cmd yoki terminal); qog'oz va qalam (sxema uchun); topshiriq varaqasi
+
+## Kompyuter tarmog'i. LAN va WAN
+**Kompyuter tarmog'i** — ma'lumot va resurslar almashish uchun kabel yoki simsiz aloqa orqali bog'langan kompyuterlar va qurilmalar. Afzalliklari: printer, fayl va internetdan birgalikda foydalanish, xabar almashish, ma'lumotlarni markazlashgan holda saqlash va zaxiralash, dasturlarni bir joydan yangilash. Kamchiliklari: jihozlar va o'rnatish xarajati, tarmoq administratori zarurligi, viruslar va buzg'unchilar tarmoq orqali tez tarqalishi, markaziy qurilma ishdan chiqsa ko'pchilik ishlay olmasligi.
+- **Lokal tarmoq (LAN)** — bitta bino yoki kichik hudud (o'quv xonasi, ofis, ustaxona) ichidagi tarmoq. Uning jihozlari (kabellar, kommutator, Wi-Fi nuqtasi) shu tashkilotga tegishli, tezligi yuqori.
+- **Global tarmoq (WAN)** — shaharlar va davlatlar bo'ylab joylashgan lokal tarmoqlarni bog'laydigan katta tarmoq. U aloqa kompaniyalarining kabellari, optik tolalari va sun'iy yo'ldoshlaridan foydalanadi. Eng katta WAN — Internet; bankning barcha filiallarini bog'laydigan tarmoq ham WAN ga misol.
+Tarmoqdagi har bir qurilmaning **IP manzili** (masalan, 192.168.1.15) va tarmoq kartasining o'zgarmas **MAC manzili** bo'ladi. **Kommutator** (switch) lokal tarmoq ichidagi qurilmalarni bog'laydi, **marshrutizator** (router) esa lokal tarmoqni boshqa tarmoqlarga va internetga ulaydi.
+
+## Kliyent-server va peer-to-peer tarmoqlar. VPN
+**Kliyent-server tarmog'ida** kuchli kompyuter — **server** — fayllar, ma'lumotlar bazasi, pochta, sayt yoki chop etish xizmatini beradi, oddiy kompyuterlar — **kliyentlar** — undan xizmat so'raydi. Afzalliklari: ma'lumotlar markazda saqlanadi va zaxiralanadi, xavfsizlik va kirish huquqlari bir joydan boshqariladi. Kamchiliklari: server qimmat, mutaxassis talab qiladi va u ishdan chiqsa, xizmatlar to'xtaydi.
+**Peer-to-peer (P2P) tarmog'ida** barcha kompyuterlar teng huquqli: har biri o'z fayl va printerini boshqalarga ochib berishi mumkin. U arzon va oson sozlanadi, kichik ofis yoki oila uchun qulay; lekin kompyuterlar ko'payganda boshqarish, zaxiralash va himoya qiyinlashadi.
+**VPN** (virtual xususiy tarmoq) — internet orqali tashkilot tarmog'iga shifrlangan «tunnel» yaratish. Uydan ishlayotgan xodim VPN orqali ofis serveriga xuddi ofisda o'tirgandek xavfsiz ulanadi. VPN xizmatini faqat ishonchli manbadan (tashkilot yoki rasmiy provayder) olish kerak: noma'lum bepul VPN ilovalari ma'lumotlarni yig'ishi mumkin.
+
+amaliy: Tarmoq sozlamalarini aniqlash va o'quv xonasi tarmog'ining sxemasini chizish
+amaqsad: Operatsion tizim buyruqlari yordamida kompyuterning tarmoq sozlamalari va aloqa holatini aniqlash, o'quv xonasi tarmog'ining sxemasini chizish hamda tarmoq turlarini vaziyatga qarab tanlash.
+qadam: Buyruq satrini oching (Win + R → `cmd`; Linux'da terminal) va `ipconfig /all` (Linux'da `ip addr`) buyrug'i bilan kompyuteringizning IP manzili, tarmoq niqobi, asosiy shlyuz, DNS server va MAC manzilini yozib oling.
+qadam: `ping` buyrug'i bilan avval asosiy shlyuzni, so'ng qo'shni kompyuterni va internetdagi bitta saytni tekshiring (masalan, `ping google.com`); javob vaqti (ms) va yo'qolgan paketlar sonini jadvalga yozing.
+qadam: `tracert google.com` (Linux'da `traceroute`) buyrug'i bilan ma'lumot saytgacha nechta oraliq marshrutizatordan o'tishini aniqlang.
+qadam: O'quv xonasidagi tarmoq qurilmalarini kuzating va sxemani chizing: kompyuterlar, kommutator, marshrutizator, Wi-Fi nuqtasi, printer, server (agar bo'lsa); kabel va simsiz ulanishlarni turli chiziqlar bilan belgilang.
+qadam: O'qituvchidan texnikum tarmog'ida server bor-yo'qligini so'rab, tarmoq kliyent-server yoki peer-to-peer ekanini aniqlang va sababini yozing.
+qadam: O'qituvchi ruxsati bilan umumiy papkadan (yoki o'qituvchi ochgan tarmoq papkasidan) fayl nusxalab oling va bu qaysi tarmoq imkoniyatiga misol ekanini yozing.
+qadam: LAN va WAN, kliyent-server va P2P tarmoqlar bo'yicha taqqoslash jadvalini to'ldiring va «Uydan ishlaydigan buxgalter ofis serveriga qanday xavfsiz ulanadi?» savoliga javob yozing.
+anatija: Tarmoq sozlamalari jadvali (IP, niqob, shlyuz, DNS, MAC), `ping` va `tracert` natijalari, o'quv xonasi tarmog'ining sxemasi, tarmoq turi haqidagi asoslangan xulosa va taqqoslash jadvali.
+baho5: Barcha buyruqlarni to'g'ri bajarib, natijalarni tushuntiradi, sxemada barcha qurilmalar va ulanish turlari aniq, tarmoq turini to'g'ri aniqlaydi va VPN ishlatilishini asoslaydi.
+masala: Hajmi 700 MB bo'lgan faylni tezligi 100 Mbit/s bo'lgan lokal tarmoq va tezligi 10 Mbit/s bo'lgan internet orqali uzatish uchun (ideal holatda) qancha vaqt ketadi?
+yechim: 700 MB = 700 · 8 = 5600 Mbit. Lokal tarmoqda: 5600 : 100 = 56 sekund. Internetda: 5600 : 10 = 560 sekund ≈ 9,3 daqiqa. Amalda vaqt biroz ko'proq bo'ladi, chunki tarmoq boshqa foydalanuvchilar bilan bo'lishiladi.
+masala: Mos tarmoq turini tanlang: a) oilaviy tikuv ustaxonasida 3 ta kompyuter bitta printerdan foydalanadi; b) 200 ta filiali bo'lgan bank; c) o'qituvchi uydan texnikum serveridagi jurnalga ulanmoqchi.
+yechim: a) peer-to-peer lokal tarmoq — arzon va oddiy; b) kliyent-server asosidagi global tarmoq (WAN), filiallar shifrlangan kanallar orqali bog'lanadi; c) VPN orqali texnikum tarmog'iga xavfsiz ulanish.
+savol: LAN va WAN ning farqi nimada? Har biriga misol keltiring.
+savol: Kliyent-server tarmog'ining afzallik va kamchiliklarini ayting.
+savol: Qaysi holatda peer-to-peer tarmoq qulayroq?
+savol: VPN qanday vazifani bajaradi?
+test: Bitta bino ichidagi kompyuterlarni bog'laydigan tarmoq qanday ataladi? | Lokal tarmoq (LAN) | Global tarmoq (WAN) | Internet | Sun'iy yo'ldosh tarmog'i
+test: Barcha kompyuterlar teng huquqli bo'lib, resurslarini bevosita bo'lishadigan tarmoq? | Peer-to-peer tarmoq | Kliyent-server tarmog'i | Global tarmoq | VPN
+test: Lokal tarmoqni internetga ulaydigan qurilma? | Marshrutizator (router) | Monitor | Skaner | Klaviatura
+test: Uydan ishlayotgan xodimning ofis tarmog'iga internet orqali shifrlangan ulanishi qanday ataladi? | VPN | LAN | Pharming | Drayver
+test: Kompyuterning IP manzili va asosiy shlyuzini ko'rsatadigan Windows buyrug'i? | ipconfig | ping | dir | cls
+uyga: Uyingizdagi Wi-Fi tarmog'i (yoki telefoningizdagi mobil internet) sozlamalarini ko'rib chiqing: IP manzil, tarmoq nomi, ulangan qurilmalar soni. Uy tarmog'ingizning sxemasini chizing va u LAN, WAN, kliyent-server yoki P2P belgilaridan qaysilariga ega ekanini yozing.
+gloss: Kompyuter tarmog'i | Ma'lumot va resurslar almashish uchun o'zaro bog'langan kompyuterlar va qurilmalar.
+gloss: Lokal tarmoq (LAN) | Bitta bino yoki kichik hudud ichidagi, tashkilotga tegishli jihozlardagi tarmoq.
+gloss: Global tarmoq (WAN) | Uzoq masofadagi lokal tarmoqlarni aloqa kompaniyalari infratuzilmasi orqali bog'laydigan tarmoq; eng kattasi — Internet.
+gloss: Server | Tarmoqdagi boshqa kompyuterlarga fayl, ma'lumotlar bazasi, pochta yoki sayt xizmatini beradigan kompyuter.
+gloss: Peer-to-peer tarmog'i | Barcha kompyuterlar teng huquqli bo'lib, resurslarini bevosita bo'lishadigan tarmoq.
+gloss: VPN | Internet orqali tashkilot tarmog'iga yaratiladigan shifrlangan xavfsiz ulanish (virtual xususiy tarmoq).

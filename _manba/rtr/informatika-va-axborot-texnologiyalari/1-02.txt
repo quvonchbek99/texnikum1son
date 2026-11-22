@@ -1,0 +1,59 @@
+nomi: Kod berish, kodlash va shifrlash
+modul: 1-modul
+ac: 1.2 Ma'lumotga kod beradi, matnni kodlaydi, simmetrik va asimmetrik shifrlashni farqlaydi va qo'llaydi.
+maqsad: O'quvchilarda ma'lumotga kod berish, belgilarni raqamli kodga aylantirish hamda oddiy va zamonaviy shifrlash usullaridan amalda foydalanish ko'nikmasini shakllantirish.
+natija: kod berish, kodlash va shifrlashning farqini misollar bilan tushuntiradi;
+natija: kod berishning afzallik va kamchiliklarini ayta oladi;
+natija: elektron jadvalda belgining ASCII/Unicode va ikkilik kodini aniqlaydi;
+natija: Sezar shifrida xabarni shifrlaydi va ochadi, faylni parol bilan (AES) shifrlaydi;
+natija: simmetrik va asimmetrik shifrlashning qo'llanish sohalarini (arxiv, HTTPS) ajratadi.
+reja: Kod berish va kodlash: tushuncha, afzallik va kamchiliklar
+reja: Shifrlash: simmetrik va asimmetrik usullar
+reja: Amaliy ish: kodlash va shifrlashni kompyuterda bajarish
+tayanch: kod berish; kodlash; ASCII; Unicode; shifrlash; ochiq matn; shifrlangan matn; kalit; simmetrik shifrlash; asimmetrik shifrlash; HTTPS
+metod: Juftlikda ishlash | Juftliklar bir-biriga Sezar shifrida qisqa xabar yozadi, kalitni (siljish sonini) faqat og'zaki aytadi. Kalitni bilmagan boshqa juftlik xabarni ochishga urinadi — shu orqali kalitni saqlash muammosi muhokama qilinadi.
+metod: Insert | Qisqa nazariy matn o'qilayotganda o'quvchilar hoshiyaga belgi qo'yadi: «✓» — bilaman, «+» — yangi, «?» — tushunarsiz. «?» belgilari dars oxirida birgalikda aniqlashtiriladi.
+ajihoz: Kompyuter (Windows yoki Linux); elektron jadval dasturi (MS Excel yoki LibreOffice Calc); 7-Zip arxivatori (bepul); veb-brauzer; topshiriq varaqasi
+
+## Kod berish va kodlash
+**Kod berish** — uzun yoki turli ko'rinishda yozilishi mumkin bo'lgan ma'lumotni qisqa, bir xil shakldagi belgi bilan almashtirish. Masalan, jins «E/A», viloyatlar «TS — Toshkent viloyati, SM — Samarqand», mahsulotlar artikul raqami bilan belgilanadi. Afzalliklari: kam joy egallaydi, tez kiritiladi, kiritishdagi xatolar kamayadi (kodni tekshirish oson), saralash va qidirish tezlashadi. Kamchiliklari: kodlarni yodlash yoki jadvaldan qarash kerak; aniqlik yo'qolishi mumkin (masalan, «Q» — qizil kodi qizilning barcha tuslarini bitta qiladi); yangi holat paydo bo'lsa, kod yetmay qolishi mumkin.
+**Kodlash** — ma'lumotni kompyuter saqlay oladigan raqamli ko'rinishga aylantirish. Matndagi har bir belgiga son mos qo'yiladi: ASCII jadvalida «A» — 65, «B» — 66, «a» — 97; Unicode jadvali esa dunyodagi deyarli barcha yozuvlarni (o'zbekcha «ʻ» belgisi, kirill, arab harflari, emoji) qamraydi. Son esa ikkilik ko'rinishda saqlanadi: 65 = 01000001.
+
+## Shifrlash
+**Shifrlash** — ma'lumotni maxsus qoida (algoritm) va kalit yordamida begona odam o'qiy olmaydigan ko'rinishga keltirish. Dastlabki matn **ochiq matn**, natija esa **shifrlangan matn** deyiladi. Eng oddiy misol — Sezar shifri: har bir harf alifboda bir necha o'ringa suriladi (kalit 3 bo'lsa, A→D, B→E). Zamonaviy shifrlar ancha murakkab va kompyuter yordamida bajariladi.
+- **Simmetrik shifrlash** — shifrlash va ochish uchun bitta kalit ishlatiladi (masalan, AES algoritmi). U tez ishlaydi va fayl, arxiv, disklarni himoyalashda qo'llanadi. Kamchiligi — kalitni qabul qiluvchiga xavfsiz yetkazish qiyin.
+- **Asimmetrik shifrlash** — ikki kalit ishlatiladi: hamma biladigan **ochiq kalit** bilan shifrlanadi, faqat egasida turadigan **yopiq kalit** bilan ochiladi (masalan, RSA). U kalit almashish muammosini hal qiladi, lekin sekinroq. Saytlardagi HTTPS aloqa, elektron raqamli imzo shunga asoslangan; amalda ikkala usul birga ishlatiladi.
+
+amaliy: Ma'lumotga kod berish, kodlash va shifrlash
+amaqsad: Kasbiy ma'lumotlar uchun kodlar jadvalini tuzish, belgilarni ASCII/Unicode va ikkilik kodga aylantirish, Sezar shifri va AES bilan shifrlashni bajarib, simmetrik va asimmetrik usullarni amalda ko'rish.
+qadam: Kasbingizga oid 6 ta mahsulot yoki xizmat (masalan, oshpaz uchun taomlar, avtoservis uchun xizmat turlari) uchun 3 belgili kodlar jadvalini elektron jadvalda tuzing: ustunlar — «Kod», «Nomi», «Narxi».
+qadam: Yangi varaqning A ustuniga ismingizning harflarini bittadan (bosh harflarda) yozing.
+qadam: B ustunida har bir harfning kodini toping: `=CODE(A1)` (LibreOffice'da ham `=CODE(A1)`), o'zbekcha maxsus belgilar uchun `=UNICODE(A1)`.
+qadam: C ustunida kodni 8 bitli ikkilik ko'rinishga o'tkazing: `=DEC2BIN(B1;8)` (mintaqaviy sozlamaga qarab argumentlar vergul yoki nuqtali vergul bilan ajratiladi).
+qadam: D ustunida Sezar shifrini qo'llang (kalit — 3): `=CHAR(MOD(CODE(A1)-65+3;26)+65)`. E ustunida shifrlangan harfni qayta oching: `=CHAR(MOD(CODE(D1)-65-3;26)+65)` va natija A ustun bilan bir xil ekanini tekshiring.
+qadam: Kodlar jadvali faylini 7-Zip yordamida arxivlang: «Shifrlash» bo'limida parol kiriting, usul — AES-256. Arxivni parolsiz ochishga urinib ko'ring, so'ng to'g'ri parol bilan oching.
+qadam: Brauzerda istalgan https sayt manzilidagi qulf belgisini bosib, sertifikatni kim bergani va amal qilish muddatini yozib oling — bu asimmetrik shifrlash ishlatilayotgan aloqaning belgisi.
+qadam: Topshiriq varaqasida har bir bosqich natijasini qayd eting va kod berish, kodlash hamda shifrlashning farqini 3–4 gap bilan yozing.
+anatija: Kodlar jadvali; ismingizning ASCII/Unicode va ikkilik kodi; Sezar shifrida shifrlangan va qayta ochilgan matn; parol bilan shifrlangan arxiv; sayt sertifikati haqidagi qayd va qisqa xulosa.
+baho5: Barcha bosqichlarni to'g'ri bajaradi, formulalar xatosiz ishlaydi, arxiv AES-256 bilan shifrlangan, simmetrik va asimmetrik shifrlash farqini misol bilan tushuntiradi.
+masala: «INFORMATIKA» so'zini Sezar shifrida 5 ga siljitib shifrlang.
+yechim: Lotin alifbosida har bir harfni 5 o'ringa suramiz: I→N, N→S, F→K, O→T, R→W, M→R, A→F, T→Y, I→N, K→P, A→F. Javob: NSKTWRFYNPF.
+masala: «OK» so'zining har bir harfini 8 bitli ikkilik kodda yozing (O — 79, K — 75).
+yechim: 79 = 64 + 8 + 4 + 2 + 1 → 01001111; 75 = 64 + 8 + 2 + 1 → 01001011. Javob: 01001111 01001011.
+masala: Kalit 3 bo'lgan Sezar shifrida yozilgan «KDYR» so'zini oching.
+yechim: Har bir harfni 3 o'ringa orqaga suramiz: K→H, D→A, Y→V, R→O. Javob: HAVO.
+savol: Kod berish va kodlashning farqi nimada?
+savol: Kod berishning ikki afzalligi va ikki kamchiligini ayting.
+savol: Simmetrik shifrlashda kalitni yetkazish nima uchun muammo hisoblanadi?
+savol: Asimmetrik shifrlashda ochiq va yopiq kalit qanday vazifani bajaradi?
+test: Simmetrik shifrlashning asosiy belgisi qaysi? | Shifrlash va ochish uchun bitta kalit ishlatiladi | Ochiq va yopiq kalit ishlatiladi | Kalit umuman ishlatilmaydi | Faqat matnli fayllar shifrlanadi
+test: Ochiq kalit bilan shifrlangan xabarni nima bilan ochish mumkin? | Faqat mos yopiq kalit bilan | O'sha ochiq kalit bilan | Istalgan parol bilan | Antivirus dasturi bilan
+test: Kod berishning kamchiligi qaysi? | Ma'lumotning aniqligi yo'qolishi mumkin | Ma'lumot ko'proq joy egallaydi | Kiritish sekinlashadi | Ma'lumotni saralab bo'lmaydi
+test: ASCII jadvalida «A» harfining kodi 65 bo'lsa, «C» harfining kodi nechaga teng? | 67 | 66 | 68 | 99
+test: Sayt manzili oldidagi https va qulf belgisi nimani bildiradi? | Brauzer va sayt o'rtasidagi aloqa shifrlangan | Saytda hech qanday virus yo'q | Sayt davlat tashkilotiga tegishli | Saytdan bepul foydalanish mumkin
+uyga: Kasbingizdagi 10 ta tushuncha uchun kodlar ro'yxatini tuzing va bu kodlar qaysi holatda aniqlikni yo'qotishini yozing. Do'stingizga 4–5 so'zli xabarni Sezar shifrida yozib, kalitni alohida yo'l bilan yuboring.
+gloss: Kod berish | Ma'lumotni qisqa, bir xil shakldagi belgi bilan almashtirish (masalan, viloyat kodi, mahsulot artikuli).
+gloss: Kodlash | Ma'lumotni kompyuter saqlay oladigan raqamli (ikkilik) ko'rinishga aylantirish; masalan, ASCII va Unicode jadvallari.
+gloss: Shifrlash | Ma'lumotni algoritm va kalit yordamida begona o'qiy olmaydigan ko'rinishga keltirish.
+gloss: Simmetrik shifrlash | Shifrlash va ochish uchun bitta kalit ishlatiladigan usul (masalan, AES).
+gloss: Asimmetrik shifrlash | Ochiq kalit bilan shifrlanib, faqat yopiq kalit bilan ochiladigan usul (masalan, RSA); HTTPS va elektron imzo asosi.

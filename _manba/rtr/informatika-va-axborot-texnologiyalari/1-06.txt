@@ -1,0 +1,104 @@
+nomi: Amaliy dasturiy ta'minot. Fotosuratni tahrirlash dasturiy ta'minoti. Video tahrirlash dasturiy ta'minoti
+modul: 1-modul
+ac: 1.6 Amaliy dasturiy ta'minot turlarini va litsenziya shakllarini ajratadi; vazifaga mos foto, video va veb-sahifa yaratish dasturini tanlaydi.
+maqsad: O'quvchilarda amaliy dasturiy ta'minot turlari va litsenziya shakllarini farqlash, fotosurat, video va veb-sahifa yaratish dasturlarining asosiy imkoniyatlarini tushuntirish hamda kasbiy vazifaga mos dasturni asoslab tanlash ko'nikmasini shakllantirish.
+natija: amaliy dasturiy ta'minot turlarini sanab, har biriga kasbidan misol keltiradi;
+natija: tijorat, bepul, ochiq kodli, obuna va sinov litsenziyalarini farqlaydi;
+natija: fotosurat muharririning asosiy amallarini va rasm formatlarini (JPEG, PNG, WebP, RAW) tushuntiradi;
+natija: video muharririning asosiy amallari, ruxsat, kadr chastotasi va tomonlar nisbatini tushuntiradi;
+natija: veb-sahifa yaratish uchun kod muharriri, vizual muharrir va CMS ning farqini biladi.
+reja: Amaliy dasturiy ta'minot turlari va litsenziya shakllari
+reja: Fotosuratni tahrirlash dasturiy ta'minoti
+reja: Video tahrirlash dasturiy ta'minoti
+reja: Veb-sahifa ishlab chiqish dasturiy ta'minoti
+tayanch: amaliy dasturiy ta'minot; ofis paketi; litsenziya; ochiq kodli dastur; obuna; fotosurat muharriri; qatlam; piksel; ruxsat; video muharriri; montaj; kadr chastotasi; tomonlar nisbati; CMS
+metod: Aqliy hujum | «Bugun telefon yoki kompyuterda qaysi dasturlardan foydalandingiz va ular qanday vazifani bajardi?» savoli bilan boshlanadi; javoblar turlarga ajratilib, amaliy dasturiy ta'minot tasnifi tuziladi.
+metod: Klaster | Guruhlar «Fotosurat muharriri» va «Video muharriri» klasterlarini chizib, har bir amalni (kesish, yorqinlik, o'tish, titr) va ularga mos dasturlarni shoxlarga yozadi.
+metod: Keys-stadi | Dars oxirida kichik oshxona yoki ustaxona uchun dastur tanlash keysi guruhlarda yechiladi va natijalar solishtiriladi.
+
+## 1. Amaliy dasturiy ta'minot turlari va litsenziya shakllari
+**Amaliy dasturiy ta'minot** — foydalanuvchining aniq vazifasini bajarish uchun yaratilgan dasturlar. Agar tizimli dasturiy ta'minot kompyuterning o'zini ishlatsa, amaliy dasturlar inson uchun foydali natija beradi: hujjat, hisob-kitob, rasm, video, sayt, buyurtma. Amaliy dasturlarni vazifasiga ko'ra quyidagi guruhlarga ajratish mumkin.
+jadval: Amaliy dasturiy ta'minot turlari
+| Turi | Vazifasi | Misollar |
+| Matn muharriri | Hujjat, xat, hisobot tayyorlash | MS Word, LibreOffice Writer, Google Docs |
+| Elektron jadval | Hisob-kitob, jadval, diagramma | MS Excel, LibreOffice Calc, Google Sheets |
+| Taqdimot | Slaydlar tayyorlash va namoyish | MS PowerPoint, LibreOffice Impress, Google Slides |
+| Ma'lumotlar bazasini boshqarish | Katta hajmdagi yozuvlarni saqlash va qidirish | MS Access, LibreOffice Base, MySQL |
+| Grafik muharrir | Rasm chizish va tahrirlash | GIMP, Adobe Photoshop, Inkscape |
+| Multimedia | Video va audio tahrirlash | Shotcut, DaVinci Resolve, Audacity |
+| Aloqa | Pochta, xabar, videoqo'ng'iroq | Gmail, Telegram, Zoom, Google Meet |
+| Kasbiy dasturlar | Muayyan soha vazifalari | AutoCAD (chizma), 1C (buxgalteriya), kassa dasturlari, avtomobil diagnostikasi dasturlari |
+Bir nechta amaliy dasturlar bitta **ofis paketi** sifatida tarqatiladi: Microsoft Office (Word, Excel, PowerPoint, Access), bepul LibreOffice paketi va brauzerda ishlaydigan Google ofis xizmatlari. Paket ichidagi dasturlarning interfeysi o'xshash bo'ladi va ular o'zaro ma'lumot almashadi: masalan, Excel diagrammasini Word hisobotiga qo'yish mumkin.
+Bugungi kunda ko'plab amaliy dasturlar kompyuterga o'rnatilmasdan, brauzer orqali **bulutli xizmat** sifatida ishlaydi: hujjat internetdagi serverda saqlanadi, uni istalgan qurilmadan ochish va bir nechta kishi bir vaqtda tahrirlash mumkin. Telefonlar uchun esa **mobil ilovalar** Google Play va App Store do'konlari orqali o'rnatiladi. Bulutli xizmatlar uchun barqaror internet kerak, o'rnatilgan dasturlar esa internetsiz ham ishlaydi.
+Bundan tashqari, **umumiy maqsadli** dasturlar (matn muharriri hamma uchun) va **maxsus** dasturlar (tikuv sexi uchun andoza loyihalash dasturi, oshxona uchun buyurtma va kalkulyatsiya dasturi) farqlanadi. Maxsus dasturlar muayyan kasb vazifalarini tezroq bajaradi, lekin ularni o'rganish va sotib olish qimmatroq bo'lishi mumkin.
+### Litsenziya shakllari
+Dasturdan foydalanish shartlari **litsenziya** bilan belgilanadi. Dasturni o'rnatishdan oldin litsenziya shartlarini o'qish kerak, chunki ruxsatsiz nusxa ko'chirish mualliflik huquqini buzadi.
+- **Tijorat (pullik)** litsenziya — dastur sotib olinadi; masalan, ayrim professional grafik dasturlar.
+- **Obuna** — dastur oylik yoki yillik to'lov evaziga ishlatiladi va to'lov to'xtasa, foydalanish ham to'xtaydi (masalan, Microsoft 365, Adobe Creative Cloud).
+- **Bepul (freeware)** — dastur tekin tarqatiladi, lekin uning kodini o'zgartirib bo'lmaydi.
+- **Ochiq kodli** — dastur bepul va uning manba kodi ochiq: uni o'rganish, o'zgartirish va tarqatish mumkin (LibreOffice, GIMP, Inkscape, Shotcut).
+- **Sinov (trial)** — dastur ma'lum muddat (masalan, 30 kun) yoki cheklangan imkoniyatlar bilan bepul ishlatiladi.
+Ta'lim muassasasi yoki kichik korxona uchun dastur tanlashda narx, kompyuter talablari, o'zbek yoki rus tilidagi interfeys, o'rganish qulayligi va boshqa dasturlar bilan fayl almashish imkoniyati hisobga olinadi.
+
+## 2. Fotosuratni tahrirlash dasturiy ta'minoti
+Raqamli fotosurat — bu **piksellardan**, ya'ni rangli nuqtalardan iborat tasvir. Masalan, 4000 × 3000 o'lchamli fotosuratda 12 million piksel (12 megapiksel) bor. Fotosurat muharriri har bir pikselning rangini o'zgartirish orqali tasvirni tahrirlaydi. Bunday dasturlarga professional Adobe Photoshop, bepul va ochiq kodli GIMP, brauzerda ishlaydigan onlayn muharrirlar va telefon ilovalari kiradi.
+### Asosiy amallar
+- **Kesish (crop)** — tasvirning keraksiz chetlarini olib tashlash va kompozitsiyani yaxshilash;
+- **o'lchamni o'zgartirish** — piksellar sonini kamaytirish yoki oshirish (masalan, sayt uchun 1200 piksel kenglik);
+- **aylantirish va ko'zgu tasvir** — qiyshiq olingan rasmni tekislash;
+- **yorqinlik, kontrast va rang balansi** — qorong'i yoki sarg'ish chiqqan suratni tuzatish;
+- **retush** — dog', chang va mayda nuqsonlarni yo'qotish, qizil ko'zni olib tashlash;
+- **qatlamlar** bilan ishlash — matn, logotip va fonni alohida qatlamda tahrirlash; qatlam o'chirilsa yoki surilsa, qolgan qismlar buzilmaydi;
+- **filtr va effektlar** — xiralashtirish, keskinlashtirish, oq-qora ko'rinish.
+### Rasm formatlari va ruxsat
+Fotosuratni saqlashda format to'g'ri tanlanishi kerak. **JPEG** — fotosuratlar uchun eng keng tarqalgan format: fayl hajmini kichraytirish uchun ma'lumotning bir qismi yo'qotiladi (yo'qotishli siqish), har gal qayta saqlanganda sifat biroz pasayadi. **PNG** — siqishda sifat yo'qolmaydi va shaffof fon saqlanadi, shuning uchun logotip, chizma va ekran rasmlari uchun qulay. **WebP** — saytlar uchun zamonaviy format, kichik hajmda yaxshi sifat beradi. **RAW** — fotoapparat sensoridan olingan xom ma'lumot, professional tahrirlash uchun eng ko'p imkoniyat beradi. Muharrirning o'z formati (masalan, GIMP'da XCF, Photoshop'da PSD) qatlamlarni saqlaydi va tahrirni davom ettirish uchun kerak.
+Chop etish uchun **ruxsat** muhim: odatda bir dyuymga 300 nuqta (300 dpi) talab qilinadi. Masalan, 10 × 15 sm fotosuratni sifatli chop etish uchun taxminan 1200 × 1800 piksel kerak; ekranda ko'rish uchun esa kamroq piksel ham yetadi.
+### Kasbiy qo'llanish va odob
+Oshpaz menyu uchun taomlarni suratga olib, yorug'lik va rangni tuzatadi; tikuvchi tayyor kiyimni katalog uchun oq fonda tayyorlaydi; avtoservis ustasi nosoz detal suratini mijozga yuboradi. Fotosuratni tahrirlashda haqiqatni buzmaslik kerak: mahsulot reklamasida uning ko'rinishini o'zgartirib ko'rsatish xaridorni aldash hisoblanadi. Boshqa odamning suratini uning roziligisiz tahrirlash va tarqatish, internetdagi rasmlardan muallif ruxsatisiz tijorat maqsadida foydalanish ham taqiqlanadi.
+
+## 3. Video tahrirlash dasturiy ta'minoti
+Video — bu sekundiga ma'lum sonda almashinadigan tasvirlar (kadrlar) ketma-ketligi va ovoz yo'lagi. **Kadr chastotasi** (fps) bir sekunddagi kadrlar sonini ko'rsatadi: kino uchun odatda 24 fps, televideniye va internet videolari uchun 25 yoki 30 fps, sport va o'yin videolari uchun 60 fps. **Ruxsat** kadr o'lchamini bildiradi: 1280 × 720 (HD), 1920 × 1080 (Full HD), 3840 × 2160 (4K). **Tomonlar nisbati** — kadr kengligining balandligiga nisbati: kompyuter va televizor uchun 16:9, telefonda vertikal videolar uchun 9:16, kvadrat videolar uchun 1:1.
+Video muharrirlariga professional Adobe Premiere Pro va DaVinci Resolve (bepul versiyasi ham bor), bepul va ochiq kodli Shotcut va Kdenlive, shuningdek telefon ilovalari kiradi. Ularning ko'pchiligida **vaqt chizig'i** (timeline) bor: kliplar, ovoz va matnlar yo'laklarda ketma-ket joylashtiriladi.
+### Asosiy amallar
+- **Montaj**: klipni kesish (trim), bo'laklarga bo'lish (split), kerakli qismlarni tartib bilan birlashtirish;
+- **o'tishlar** (transitions) — bir klipdan ikkinchisiga silliq o'tish, masalan, xiralashib almashish;
+- **titr va matn** — sarlavha, ism-familiya, subtitr qo'shish;
+- **ovoz** — musiqa va diktor ovozini qo'shish, ovoz balandligini tenglashtirish, shovqinni kamaytirish;
+- **tezlik** — sekinlashtirish yoki tezlashtirish (masalan, 2 soatlik pishirish jarayonini 1 daqiqaga siqish);
+- **rang tuzatish** — turli vaqtda olingan kliplar rangini bir xil qilish;
+- **eksport** — tayyor loyihani video faylga (ko'pincha MP4 formatida, H.264 kodek bilan) saqlash.
+Video fayllar katta hajmli bo'ladi: Full HD ruxsatdagi bir daqiqalik video bir necha o'n megabaytdan yuzlab megabaytgacha joy egallashi mumkin. Taxminiy hajmni **bit tezligi** (bitreyt) orqali hisoblash mumkin: agar video sekundiga 8 megabit tezlikda kodlangan bo'lsa, bir daqiqada 8 · 60 = 480 megabit, ya'ni 480 : 8 = 60 megabayt hosil bo'ladi. Bit tezligi qancha past bo'lsa, fayl shuncha kichik, lekin sifat ham shuncha past bo'ladi. Shuning uchun eksportda maqsadga mos sozlama tanlanadi: ijtimoiy tarmoq uchun 1080p va o'rtacha sifat, arxiv uchun yuqori sifat. Video tahrirlash kuchli protsessor, yetarli operativ xotira va tez disk talab qiladi; zaif kompyuterda ishni osonlashtirish uchun past ruxsatli nusxalar (proksi) bilan montaj qilinadi. Video va audio tahrirlashni 2-kursning 4-modulida amalda chuqur o'rganasiz.
+
+## 4. Veb-sahifa ishlab chiqish dasturiy ta'minoti
+Veb-sahifa HTML (tuzilma), CSS (ko'rinish) va JavaScript (harakat va interaktivlik) tillarida yoziladi va brauzerda ochiladi. Sahifa yaratishning uch asosiy yo'li bor:
+- **Kod muharrirlari** (Visual Studio Code, Notepad++) — dasturchi HTML, CSS va JavaScript kodini o'zi yozadi; muharrir kodni ranglab ko'rsatadi, xatolarni belgilaydi va avtomatik to'ldiradi. To'liq nazorat beradi, lekin bilim talab qiladi.
+- **Vizual (WYSIWYG) muharrirlar** — sahifa elementlari sichqoncha bilan joylashtiriladi va «nima ko'rinsa, o'sha chiqadi»; kod avtomatik yaratiladi. Tez va oson, lekin kod ortiqcha va murakkab bo'lishi mumkin.
+- **Kontentni boshqarish tizimlari (CMS)** va sayt konstruktorlari (masalan, WordPress) — tayyor andozalar asosida sayt yaratiladi, matn va rasmlar boshqaruv paneli orqali qo'shiladi. Kichik biznes saytlari, bloglar va onlayn do'konlar uchun qulay.
+Tayyor sayt internetda ko'rinishi uchun u **xosting** — doimiy ishlaydigan serverga joylanadi va unga **domen** nomi (masalan, texnikum1son.uz) biriktiriladi. Har qanday usulda ham sahifani turli brauzerlarda va telefonda tekshirib ko'rish kerak; brauzerlardagi ishlab chiquvchi vositalari (F12 tugmasi) sahifa kodini ko'rish va xatolarni topishga yordam beradi. JavaScript asosida dasturlashni 2-kursning 6-modulida o'rganasiz.
+Xulosa: amaliy dasturni tanlashda vazifa, narx va litsenziya, kompyuter imkoniyatlari va kasbiy talablar hisobga olinadi. Fotosurat muharriri piksellar bilan ishlaydi va to'g'ri formatda saqlashni talab qiladi, video muharriri vaqt chizig'ida kliplarni montaj qiladi, veb-sahifa esa kod, vizual muharrir yoki CMS yordamida yaratiladi.
+
+keys: Kichik kafe uchun dastur tanlash
+vaziyat: Yangi ochilgan kichik kafe egasi menyu uchun taomlarning fotosuratlarini tayyorlamoqchi, Instagram uchun 30 soniyalik reklama videosi va oddiy sayt ochmoqchi. Ofisda bitta o'rta quvvatli noutbuk bor, dasturlar uchun mablag' kam. Xodimlardan biri Photoshop va Premiere Pro'ning ruxsatsiz nusxalarini internetdan yuklab olishni taklif qildi.
+ksavol: Ruxsatsiz nusxalardan foydalanish qanday muammolarga olib keladi?
+ksavol: Har bir vazifa uchun qaysi bepul yoki arzon dasturlarni tavsiya qilasiz?
+ksavol: Video va rasmlarni qanday formatda va o'lchamda saqlash kerak?
+kjavob: Ruxsatsiz nusxa mualliflik huquqini buzadi, jarimaga sabab bo'lishi va ko'pincha zararli dastur yuqtirishi mumkin. Tavsiya: fotosurat uchun GIMP yoki onlayn muharrir (natijani JPEG yoki WebP formatida, sayt uchun ~1200 piksel kenglikda saqlash, logotip — PNG); video uchun Shotcut yoki DaVinci Resolve'ning bepul versiyasi (vertikal 9:16, 1080 × 1920, 30 fps, MP4); sayt uchun CMS yoki sayt konstruktorining bepul tarifi. Noutbuk zaif bo'lsa, videoni proksi nusxalar bilan montaj qilish mumkin.
+savol: Amaliy dasturiy ta'minotning qanday turlarini bilasiz? Kasbingizga oid misollar keltiring.
+savol: Ochiq kodli dastur bepul dasturdan nimasi bilan farq qiladi?
+savol: JPEG va PNG formatlarining farqini tushuntiring. Logotipni qaysi formatda saqlash kerak?
+savol: Fotosurat muharririda qatlamlar nima uchun kerak?
+savol: Kadr chastotasi, ruxsat va tomonlar nisbati nimani bildiradi?
+savol: Veb-sahifa yaratishning qanday uch usuli bor?
+test: Qaysi dastur amaliy dasturiy ta'minotga kiradi? | Elektron jadval | Operatsion tizim | Printer drayveri | BIOS/UEFI
+test: Manba kodi ochiq, uni o'zgartirish va tarqatish mumkin bo'lgan dastur qanday litsenziyaga ega? | Ochiq kodli | Sinov (trial) | Tijorat | Obuna
+test: Shaffof fonli logotipni sifat yo'qotmasdan saqlash uchun qaysi format mos? | PNG | JPEG | MP4 | MP3
+test: Telefon uchun vertikal video qaysi tomonlar nisbatida tayyorlanadi? | 9:16 | 16:9 | 4:3 | 1:1
+test: Tayyor andozalar asosida sayt yaratib, matnni boshqaruv paneli orqali qo'shishga imkon beradigan tizim? | CMS (kontentni boshqarish tizimi) | Kompilyator | Drayver | Arxivator
+uyga: Kasbingizdagi 3 ta vazifa uchun (masalan, mahsulot surati, reklama videosi, ish e'loni sahifasi) mos dasturlarni tanlang va jadval tuzing: dastur nomi, litsenziya turi, narxi, kompyuterga talablari, tanlov sababi. Telefoningizdagi bitta fotosuratni kesib, yorqinligini tuzatib, JPEG va PNG formatlarida saqlang va fayl hajmlarini solishtiring.
+gloss: Amaliy dasturiy ta'minot | Foydalanuvchining aniq vazifasini (hujjat, hisob, rasm, video) bajarish uchun yaratilgan dasturlar.
+gloss: Ochiq kodli dastur | Manba kodi ochiq, bepul o'rganish, o'zgartirish va tarqatish mumkin bo'lgan dastur.
+gloss: Piksel | Raqamli rastr tasvirni tashkil qiluvchi eng kichik rangli nuqta.
+gloss: Qatlam | Tasvir muharririda tasvirning boshqa qismlaridan mustaqil tahrirlanadigan alohida bo'lagi.
+gloss: Kadr chastotasi | Videoda bir sekunddagi kadrlar soni (fps): 24, 25, 30, 60.
+gloss: Tomonlar nisbati | Kadr kengligining balandligiga nisbati: 16:9, 9:16, 1:1.
+gloss: CMS | Kontentni boshqarish tizimi — sayt sahifalarini boshqaruv paneli orqali yaratish va tahrirlash dasturi.

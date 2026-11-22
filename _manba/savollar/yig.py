@@ -268,9 +268,17 @@ def lab_savollar(lid):
 
 # ---------------------------------------------------------------- 2b. Tayyor RTR paketlari (data/rtr/<fan>.json) — mavzu testlari va yakuniy test
 def rtr_savollar(fid):
-    p = os.path.join(ILDIZ, "data", "rtr", fid + ".json")
-    if not os.path.isfile(p):
-        return []
+    # <fan>.json (bitta paket) yoki semestrlar bo'yicha <fan>-1sem.json, <fan>-2sem.json, ... (modulli umumta'lim fanlari)
+    rd = os.path.join(ILDIZ, "data", "rtr")
+    fl = ([fid + ".json"] if os.path.isfile(os.path.join(rd, fid + ".json")) else []) + \
+        sorted((f for f in (os.listdir(rd) if os.path.isdir(rd) else []) if re.fullmatch(re.escape(fid) + r"-\d+sem\.json", f)), key=lambda f: int(re.findall(r"(\d+)sem", f)[-1]))
+    out = []
+    for f in fl:
+        out += rtr_savollar_fayl(os.path.join(rd, f), sem=(re.findall(r"-(\d+)sem\.json$", f) or [None])[0])
+    return out
+
+
+def rtr_savollar_fayl(p, sem=None):
     d = json.load(open(p, encoding="utf-8"))
 
     def q_of(t):
@@ -282,13 +290,15 @@ def rtr_savollar(fid):
             q.append(toza(t["izoh"]))
         return q
     out = []
-    for tp in d.get("topics", []):
+    bosh = int((d.get("meta") or {}).get("dars_boshi") or 1)
+    for k, tp in enumerate(d.get("topics", [])):
         qs = [q for q in map(q_of, tp.get("test") or []) if q]
         if qs:
             nom = re.split(r"[:;]", toza(tp["nomi"]))[0]
             nom = nom if len(nom) <= 80 else nom[:77].rsplit(" ", 1)[0] + "…"
-            out.append({"nomi": f"{tp['id']}. {nom}", "manba": "t", "q": qs})
-    yq = [q for q in map(q_of, (d.get("yakuniy") or {}).get("test") or []) if q]
+            out.append({"nomi": (f"{sem}-sem, {k + bosh}-dars. {nom}" if sem else f"{tp['id']}. {nom}"), "manba": "t", "q": qs})
+    Y = d.get("yakuniy") or {}
+    yq = [] if Y.get("yigma") else [q for q in map(q_of, Y.get("test") or []) if q]  # yigma — mavzu testlaridan yig'ilgan: takrorlanmasin
     if yq:
         out.append({"nomi": "Yakuniy nazorat testi", "manba": "t", "q": yq})
     return out

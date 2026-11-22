@@ -1,0 +1,126 @@
+nomi: Ekspert tizimi haqida
+modul: 2-modul
+ac: 2.5 Ekspert tizimning tuzilishi (bilimlar bazasi, qoidalar bazasi, yakunlovchi mexanizm, tushuntirish tizimi, interfeys) va ishlash tamoyilini tushuntiradi; sodda qoidalar asosida xulosa chiqaradi.
+maqsad: O'quvchilarda ekspert tizim tushunchasi, uning tarkibiy qismlari, ishlash va yaratish bosqichlarini tushuntirish, «agar ..., u holda ...» qoidalari asosida xulosa chiqarish hamda ekspert tizimlarning afzallik va kamchiliklarini baholash ko'nikmasini shakllantirish.
+natija: ekspert tizimga ta'rif beradi va uning qo'llanish sohalariga misollar keltiradi;
+natija: bilimlar bazasi, qoidalar bazasi, yakunlovchi mexanizm, tushuntirish tizimi va foydalanuvchi interfeysining vazifasini tushuntiradi;
+natija: oldinga va orqaga qarab xulosa chiqarish usullarini farqlaydi;
+natija: sodda qoidalar to'plami bo'yicha xulosa chiqaradi va qaror daraxtini chizadi;
+natija: ekspert tizim yaratish bosqichlarini va uning afzallik hamda kamchiliklarini baholaydi.
+reja: Ekspert tizim tushunchasi va qo'llanish sohalari
+reja: Ekspert tizimning tuzilishi: bilimlar bazasi va yakunlovchi mexanizm
+reja: Ekspert tizim qanday ishlaydi va qanday yaratiladi
+reja: Ekspert tizimlarning afzallik va kamchiliklari
+tayanch: ekspert tizim; bilimlar bazasi; qoidalar bazasi; fakt; «agar ..., u holda ...» qoidasi; yakunlovchi mexanizm; oldinga qarab xulosa chiqarish; orqaga qarab xulosa chiqarish; tushuntirish tizimi; bilim muhandisi; ekspert tizim qobig'i; qaror daraxti
+metod: Aqliy hujum | «Avtomobil o't olmasa, tajribali usta birinchi navbatda nimani so'raydi?» savoliga javoblar doskaga yoziladi va ular «agar ..., u holda ...» ko'rinishidagi qoidalarga aylantiriladi — bu ekspert bilimining kompyuterga qanday o'tkazilishini ko'rsatadi.
+metod: Qaror daraxti | Juftliklar berilgan 5–6 ta qoida asosida qaror daraxtini chizadi va uchta vaziyat uchun tizim qanday savollar berib, qanday xulosaga kelishini ko'rsatadi.
+metod: Keys-stadi | Guruhlar ekspert tizim noto'g'ri maslahat bergan vaziyatni tahlil qilib, xatoning sababi va kim javobgar ekanini muhokama qiladi.
+jihoz: Kompyuter va proyektor; qaror daraxti va qoidalar to'plami yozilgan tarqatma material; taqdimot; doska
+
+## 1. Ekspert tizim tushunchasi va qo'llanish sohalari
+Har bir sohada tajribali mutaxassislar bor: ko'p yillik amaliyotga ega shifokor, avtomobil nosozligini ovozidan aniqlaydigan usta, taomning ta'mini bir qarashda bilib oladigan bosh oshpaz. Ularning bilimi juda qimmatli, ammo bunday mutaxassislar kam, ular har doim ham yonimizda bo'lmaydi va bir kun nafaqaga chiqadi. Ekspert tizimlar aynan shu muammoni hal qilish uchun yaratilgan.
+**Ekspert tizim** — muayyan tor soha bo'yicha mutaxassis (ekspert) bilimlarini o'zida saqlaydigan va shu bilimlar asosida xuddi ekspert kabi savol berib, maslahat beradigan yoki qaror qabul qilishga yordam beradigan kompyuter dasturi. U sun'iy intellektning dastlabki va eng ko'p qo'llangan yo'nalishlaridan biri hisoblanadi.
+Oddiy dasturdan farqli ravishda ekspert tizim aniq formula bo'yicha hisoblash bilan cheklanmaydi: u faktlar va qoidalardan mantiqiy xulosa chiqaradi, to'liq bo'lmagan ma'lumot bilan ham ishlay oladi (masalan, «ehtimolligi 80 %»), va eng muhimi — nima uchun shunday xulosaga kelganini tushuntirib bera oladi.
+Tarixdagi mashhur ekspert tizimlardan biri — 1970-yillarda yaratilgan MYCIN: u qondagi bakterial infeksiyalarni aniqlash va antibiotik tanlashda shifokorlarga maslahat bergan. Shundan keyin ekspert tizimlar ko'plab sohalarga kirib keldi.
+jadval: Ekspert tizimlarning qo'llanish sohalari
+| Soha | Ekspert tizim nima qiladi |
+| Tibbiyot | Belgilar asosida kasallikni taxmin qiladi, tekshiruv va davolashni tavsiya qiladi |
+| Avtomobil ta'miri | Nosozlik belgilari va diagnostika kodlari bo'yicha sababini va tekshirish tartibini ko'rsatadi |
+| Qishloq xo'jaligi | O'simlik kasalligi va zararkunandani aniqlaydi, ishlov berish usulini tavsiya qiladi |
+| Geologiya | Tuproq va jinslar namunalari bo'yicha foydali qazilma joylashuvini baholaydi |
+| Moliya va bank | Kredit so'rovchining to'lov qobiliyatini baholaydi, firibgarlik belgilarini aniqlaydi |
+| Huquq va soliq | Soliq imtiyozlari yoki hujjat talablari bo'yicha maslahat beradi |
+| Ta'lim | O'quvchi javoblariga qarab keyingi mashqni tanlaydi, xatolarini tushuntiradi |
+| Texnik xizmat | Uskunalar nosozligini aniqlaydi, ehtiyot qismni tavsiya qiladi |
+Kasblarga yaqin misollar: elektromontyor uchun elektr tarmog'idagi nosozlikni topish bo'yicha maslahatchi dastur; oshpaz uchun mijozning allergiyasi va parhezini hisobga olib taom tanlaydigan tizim; tikuvchi uchun gazlama turi va mahsulot vazifasiga qarab chok, igna va ip tanlashni tavsiya qiluvchi tizim.
+
+## 2. Ekspert tizimning tuzilishi: bilimlar bazasi va yakunlovchi mexanizm
+Ekspert tizim bir nechta o'zaro bog'langan qismdan iborat.
+### Bilimlar bazasi
+**Bilimlar bazasi** — soha bo'yicha faktlar va qoidalar to'plami. Faktlar — haqiqat deb qabul qilingan ma'lumotlar (masalan, «akkumulyator kuchlanishi 12,6 V — to'liq zaryadlangan»). Qoidalar esa **«agar ..., u holda ...»** ko'rinishida yoziladi va **qoidalar bazasi** deb ataladi. Masalan:
+- AGAR starter aylanmasa VA chiroqlar xira yonsa, U HOLDA akkumulyator zaryadsizlangan bo'lishi mumkin;
+- AGAR starter aylansa VA dvigatel o't olmasa VA yonilg'i hidi kelmasa, U HOLDA yonilg'i tizimini tekshirish kerak;
+- AGAR starter aylansa VA yonilg'i yetib kelsa VA shamlar quruq bo'lsa, U HOLDA o't oldirish tizimini tekshirish kerak.
+Bilimlar bazasi oddiy ma'lumotlar bazasidan farq qiladi: ma'lumotlar bazasi faqat yozuvlarni saqlaydi, bilimlar bazasi esa ular orasidagi mantiqiy bog'lanishlarni ham saqlab, yangi xulosa chiqarishga imkon beradi.
+### Yakunlovchi mexanizm
+**Yakunlovchi mexanizm** (xulosa chiqarish mexanizmi) — ekspert tizimning «miyasi». U foydalanuvchi kiritgan faktlarni qoidalar bazasidagi qoidalar bilan solishtiradi, qaysi qoida bajarilishini aniqlaydi va xulosa chiqaradi; xulosa uchun ma'lumot yetmasa, foydalanuvchiga keyingi savolni tanlaydi. Xulosa chiqarishning ikki asosiy usuli bor:
+- **oldinga qarab xulosa chiqarish** — ma'lum faktlardan boshlab qoidalarni ketma-ket qo'llab, xulosaga kelish («starter aylanmaydi» va «chiroqlar xira» → «akkumulyator zaryadsiz»);
+- **orqaga qarab xulosa chiqarish** — taxmin (gipoteza) dan boshlab, uni tasdiqlash uchun kerakli faktlarni tekshirish («balki akkumulyator zaryadsizdir? Buni tasdiqlash uchun chiroqlar xira yonishini so'rash kerak»).
+### Tushuntirish tizimi va foydalanuvchi interfeysi
+**Tushuntirish tizimi** foydalanuvchiga tizim nima uchun bu savolni bergani va qanday qoidalar asosida xulosaga kelganini ko'rsatadi. Bu tizimga ishonchni oshiradi va xatolarni topishga yordam beradi: masalan, «Xulosa: akkumulyator zaryadsiz. Sabab: 1-qoida — starter aylanmaydi va chiroqlar xira yonadi».
+**Foydalanuvchi interfeysi** savollarni ekranga chiqaradi va javoblarni qabul qiladi. Savollar odatda «ha / yo'q» tugmalari, ochiladigan ro'yxatlar yoki variantlar ko'rinishida bo'ladi, shunda mutaxassis bo'lmagan foydalanuvchi ham tizim bilan oson ishlaydi. Ba'zi tizimlar tabiiy tildagi yozma yoki ovozli savollarni ham tushunadi. Natija oddiy tilda, zarur bo'lsa ehtimollik darajasi bilan ko'rsatiladi.
+Bulardan tashqari **bilimlar bazasi muharriri** bo'ladi — u orqali mutaxassislar yangi qoida qo'shadi, eskirganini o'zgartiradi yoki o'chiradi.
+jadval: Ekspert tizimning tarkibiy qismlari
+| Qism | Vazifasi |
+| Bilimlar bazasi | Soha bo'yicha faktlarni saqlaydi |
+| Qoidalar bazasi | «Agar ..., u holda ...» qoidalarini saqlaydi |
+| Yakunlovchi mexanizm | Faktlarga qoidalarni qo'llab xulosa chiqaradi, keyingi savolni tanlaydi |
+| Tushuntirish tizimi | Xulosa qanday qoidalar asosida chiqarilganini ko'rsatadi |
+| Foydalanuvchi interfeysi | Savollarni beradi, javoblarni qabul qiladi, natijani ko'rsatadi |
+| Bilimlar bazasi muharriri | Qoida va faktlarni qo'shish, o'zgartirish, o'chirish imkonini beradi |
+
+## 3. Ekspert tizim qanday ishlaydi va qanday yaratiladi
+### Ishlash tartibi
+#. Foydalanuvchi interfeys orqali muammoni tanlaydi (masalan, «Dvigatel o't olmayapti»).
+#. Yakunlovchi mexanizm qoidalar bazasidan mos qoidalarni topadi va xulosa uchun yetishmayotgan ma'lumotni aniqlaydi.
+#. Interfeys foydalanuvchiga savol beradi («Starter aylanyaptimi?»), javob yangi fakt sifatida qo'shiladi.
+#. Mexanizm yangi faktlar asosida qoidalarni yana tekshiradi; jarayon xulosa topilguncha yoki savollar tugaguncha takrorlanadi.
+#. Natija va tavsiya ko'rsatiladi; tushuntirish tizimi foydalanilgan qoidalarni ko'rsatadi.
+jadval: Ekspert tizim bilan muloqot namunasi (avtomobil o't olmayapti)
+| Qadam | Tizim savoli yoki xabari | Foydalanuvchi javobi | Yakunlovchi mexanizm ichida nima bo'ladi |
+| 1 | Kalit burilganda starter aylanyaptimi? | Yo'q | «Starter aylanmaydi» fakti qo'shiladi; 1-qoida tekshiriladi |
+| 2 | Asboblar panelidagi chiroqlar qanday yonadi? | Xira | 1-qoidaning ikkala sharti bajarildi |
+| 3 | Xulosa: akkumulyator zaryadsizlangan bo'lishi mumkin (ehtimolligi yuqori). Tavsiya: kuchlanishni o'lchang, klemmalarni tekshiring | — | Xulosa 1-qoida asosida chiqarildi |
+| 4 | Nima uchun? (tushuntirish) | — | «1-qoida: starter aylanmasa va chiroqlar xira yonsa — akkumulyator zaryadsiz» ko'rsatiladi |
+Agar foydalanuvchi 1-savolga «Ha» deb javob berganda, tizim boshqa shoxga o'tib, yonilg'i hidi va shamlar holati haqida so'ragan bo'lardi. Orqaga qarab xulosa chiqarishda esa tizim avval eng ko'p uchraydigan taxminni tanlaydi («akkumulyator zaryadsiz») va faqat shu taxminni tasdiqlash yoki rad etish uchun kerakli savollarni beradi — bu savollar sonini kamaytiradi va tashxisni tezlashtiradi.
+Bu jarayonni **qaror daraxti** ko'rinishida tasvirlash qulay: har bir tugunda savol, har bir shoxda javob («ha» yoki «yo'q»), barglarda esa xulosa joylashadi. Daraxtning yuqorisidan pastga qarab yurish oldinga qarab xulosa chiqarishga mos keladi.
+### Yaratish bosqichlari
+Ekspert tizimni dasturchi yolg'iz yarata olmaydi — buning uchun soha mutaxassislari va **bilim muhandisi** birga ishlaydi. Bilim muhandisi mutaxassislardan suhbat va kuzatish orqali bilim yig'ib, uni qoidalar ko'rinishiga keltiradi.
+#. Muammo va tizimning chegaralari aniqlanadi: qaysi masalalarni hal qiladi, kim foydalanadi.
+#. Bilim muhandisi ekspertlar bilan intervyu o'tkazadi, hujjatlar va o'tmishdagi holatlarni o'rganadi.
+#. Bilimlar faktlar va qoidalarga aylantirilib, bilimlar bazasi tuziladi.
+#. Foydalanuvchi interfeysi va savollar ketma-ketligi loyihalanadi.
+#. Tizim ko'pincha tayyor **ekspert tizim qobig'i** (bo'sh yakunlovchi mexanizm va interfeysga ega dastur) yordamida quriladi — unga faqat soha bilimlari kiritiladi.
+#. Tizim natijasi oldindan javobi ma'lum holatlar va ekspertlar xulosasi bilan solishtirilib sinovdan o'tkaziladi, xatolar tuzatiladi.
+#. Tizim joriy etiladi, foydalanuvchilar o'qitiladi va bilimlar bazasi muntazam yangilanib boriladi.
+
+## 4. Ekspert tizimlarning afzallik va kamchiliklari
+Afzalliklari:
+- bir xil vaziyatda har doim bir xil, izchil javob beradi — charchamaydi va kayfiyatga bog'liq emas;
+- kecha-kunduz ishlaydi va bir vaqtda ko'p foydalanuvchiga xizmat qiladi;
+- bir nechta ekspertning bilimini birlashtiradi va mutaxassis nafaqaga chiqsa ham uning tajribasi saqlanib qoladi;
+- tez ishlaydi, mutaxassisga murojaat xarajatini kamaytiradi, uzoq hududlarda ham maslahat olish imkonini beradi;
+- xulosasini tushuntiradi, shuning uchun yangi xodimlarni o'qitishda ham ishlatiladi.
+Kamchiliklari:
+- yaratish va bilimlar bazasini yangilab turish qimmat va ko'p vaqt talab qiladi;
+- tizim faqat bilimlar bazasidagi qoidalar doirasida ishlaydi: kutilmagan, yangi vaziyatda noto'g'ri javob berishi mumkin;
+- inson kabi «sog'lom aql», sezgi va hamdardlikka ega emas;
+- bilimlar bazasidagi xato barcha foydalanuvchilarga noto'g'ri maslahat sifatida tarqaladi;
+- foydalanuvchi tizimga haddan tashqari ishonib, o'z tekshiruvidan voz kechishi mumkin; noto'g'ri tavsiya uchun javobgarlik masalasi murakkab.
+Shuning uchun muhim sohalarda (tibbiyot, qurilish, moliya) ekspert tizim yakuniy qarorni emas, balki maslahatni beradi, qarorni esa mutaxassis qabul qiladi. Bugungi kunda sun'iy intellektning boshqa turlari ham keng tarqalmoqda: ular qoidalarni inson yozib bermasdan, katta hajmdagi ma'lumotlardan o'zi «o'rganadi». Biroq bunday tizimlar ko'pincha xulosasini tushuntira olmaydi, qoidalarga asoslangan ekspert tizimlar esa shaffofligi bilan qadrlanadi. Sun'iy intellekt haqida 2-kursda batafsil gaplashamiz.
+Xulosa: ekspert tizim — bilimlar bazasi, qoidalar bazasi, yakunlovchi mexanizm, tushuntirish tizimi va foydalanuvchi interfeysidan iborat dastur bo'lib, u «agar ..., u holda ...» qoidalari yordamida ekspert kabi xulosa chiqaradi. U mutaxassisning o'rnini to'liq bosmaydi, lekin uning bilimini ko'pchilikka yetkazadi.
+
+keys: Issiqxona uchun maslahatchi tizim
+vaziyat: Fermer xo'jaligida pomidor barglarida sariq dog'lar paydo bo'ldi. Agronom yo'qligi sababli ishchi telefondagi ekspert tizim ilovasidan foydalandi. Ilova «zamburug' kasalligi» xulosasini berib, kimyoviy ishlov berishni tavsiya qildi. Keyin kelgan agronom esa sabab ortiqcha sug'orish va o'g'it yetishmasligi ekanini aniqladi — kimyoviy ishlov keraksiz xarajat bo'lgan. Ilovada sug'orish rejimi haqida birorta savol berilmagan edi.
+ksavol: Ekspert tizim nima uchun noto'g'ri xulosa chiqardi?
+ksavol: Bu holatda tizimning qaysi qismi (bilimlar bazasi, yakunlovchi mexanizm, interfeys) takomillashtirilishi kerak?
+ksavol: Fermer ekspert tizimdan qanday foydalanishi to'g'ri bo'lardi?
+kjavob: Bilimlar bazasida sug'orish va o'g'itlash bilan bog'liq qoidalar yo'q edi, shuning uchun tizim barcha sariq dog'larni faqat zamburug' kasalligi bilan bog'ladi — tizim faqat o'zidagi qoidalar doirasida xulosa chiqaradi. Bilimlar bazasiga yangi qoidalar (sug'orish, o'g'it, harorat) qo'shilishi, interfeys esa bu omillar haqida savol berishi kerak; tushuntirish tizimi xulosaning ehtimolligini ko'rsatsa, foydalanuvchi ehtiyot bo'lardi. To'g'ri foydalanish: tizim maslahatini dastlabki taxmin deb qabul qilish, qimmat yoki xavfli choralarni mutaxassis bilan maslahatlashib qo'llash.
+savol: Ekspert tizim nima va u oddiy dasturdan nimasi bilan farq qiladi?
+savol: Bilimlar bazasi va qoidalar bazasining vazifasini tushuntiring.
+savol: Yakunlovchi mexanizm qanday ishlaydi? Oldinga va orqaga qarab xulosa chiqarishning farqi nimada?
+savol: Tushuntirish tizimi nima uchun kerak?
+savol: Ekspert tizim yaratishda bilim muhandisi qanday vazifani bajaradi?
+savol: Ekspert tizimlarning uchta afzalligi va uchta kamchiligini ayting.
+test: Ekspert tizimning faktlarga qoidalarni qo'llab xulosa chiqaradigan qismi? | Yakunlovchi mexanizm | Foydalanuvchi interfeysi | Bilimlar bazasi muharriri | Tushuntirish tizimi
+test: «AGAR starter aylanmasa VA chiroqlar xira yonsa, U HOLDA akkumulyator zaryadsiz» — bu nima? | Qoidalar bazasidagi qoida | Foydalanuvchi interfeysi | Fakt emas, savol | Dastur xatosi
+test: Ma'lum faktlardan boshlab qoidalarni ketma-ket qo'llab xulosaga kelish usuli? | Oldinga qarab xulosa chiqarish | Orqaga qarab xulosa chiqarish | Validatsiya | Shifrlash
+test: Mutaxassislardan bilim yig'ib, uni qoidalar ko'rinishiga keltiradigan shaxs? | Bilim muhandisi | Tizim administratori | Foydalanuvchi | Operator
+test: Ekspert tizimning kamchiligi qaysi? | Bilimlar bazasida yo'q yangi vaziyatda noto'g'ri javob berishi mumkin | Har doim charchab qoladi | Faqat bitta foydalanuvchiga xizmat qiladi | Xulosasini hech qachon tushuntirmaydi
+uyga: Kasbingizdagi bitta muammo uchun (masalan, «Taom kuyib qoldi», «Tikuv mashinasi ipni uzadi», «Chiroq yonmayapti») kamida 6 ta «agar ..., u holda ...» qoidasini yozing va ular asosida qaror daraxtini chizing. Daraxt bo'yicha ikki xil vaziyatda tizim qanday savollar berib, qanday xulosaga kelishini ko'rsating.
+gloss: Ekspert tizim | Tor soha bo'yicha mutaxassis bilimlarini saqlab, ular asosida ekspert kabi maslahat beradigan dastur.
+gloss: Qoidalar bazasi | Bilimlar bazasining «agar ..., u holda ...» ko'rinishidagi qoidalar saqlanadigan qismi.
+gloss: Yakunlovchi mexanizm | Faktlarga qoidalarni qo'llab xulosa chiqaradigan va keyingi savolni tanlaydigan ekspert tizim qismi.
+gloss: Tushuntirish tizimi | Xulosa qanday qoidalar asosida chiqarilganini foydalanuvchiga ko'rsatadigan qism.
+gloss: Bilim muhandisi | Ekspertlardan bilim yig'ib, ularni ekspert tizim uchun qoidalarga aylantiradigan mutaxassis.
+gloss: Qaror daraxti | Tugunlarda savollar, shoxlarda javoblar, barglarda xulosalar joylashgan daraxtsimon sxema.

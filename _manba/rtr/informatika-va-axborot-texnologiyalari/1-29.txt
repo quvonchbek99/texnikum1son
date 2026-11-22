@@ -1,0 +1,122 @@
+nomi: Ma'lumotlar lug'ati. Ma'lumot turlari
+modul: 3-modul
+ac: 3.13 Ma'lumotlar bazasi uchun ma'lumotlar lug'atini tuzadi, maydonlar uchun ma'lumot turlarini asoslab tanlaydi va MB hajmini taxminiy hisoblaydi.
+maqsad: O'quvchilarda ma'lumotlar lug'atining vazifasi va tarkibini tushunish, MB maydonlari uchun ma'lumot turlarini asoslab tanlash, noto'g'ri tanlangan tur oqibatlarini oldindan ko'ra bilish hamda yozuv va fayl hajmini taxminiy hisoblash ko'nikmasini shakllantirish.
+natija: ma'lumotlar lug'ati (metama'lumot) tushunchasini va uning tarkibini tushuntiradi;
+natija: matn, butun son, o'nli son, pul, sana/vaqt, mantiqiy, hisoblagich, ikkilik va havola turlarini farqlaydi;
+natija: har bir maydon uchun ma'lumot turi va hajmini asoslab tanlaydi;
+natija: noto'g'ri tanlangan ma'lumot turining oqibatlarini misollar bilan tushuntiradi;
+natija: yozuv hajmi va MB fayli hajmini taxminiy hisoblaydi.
+reja: Ma'lumotlar lug'ati va uning tarkibi
+reja: Ma'lumot turlari
+reja: Ma'lumot turini noto'g'ri tanlash oqibatlari
+reja: Yozuv va fayl hajmini hisoblash
+tayanch: ma'lumotlar lug'ati; metama'lumot; maydon tavsifi; ma'lumot turi; matn (satr); belgi; butun son; o'nli son; pul turi; sana/vaqt; mantiqiy tur; hisoblagich; ikkilik ma'lumot; yozuv hajmi
+metod: Aqliy hujum | «Yangi ishga kelgan dasturchi bazadagi «Tel2» maydoni nimani bildirishini va unga qanday qiymat yozish kerakligini qayerdan biladi?» savoli bilan ma'lumotlar lug'ati zarurati muhokama qilinadi.
+metod: Xatoni top | O'quvchilarga ma'lumot turlari noto'g'ri tanlangan jadval tuzilmasi beriladi (telefon — son, narx — matn, sana — matn); guruhlar xatolarni va ularning oqibatini topadi.
+metod: Amaliy mashq | Darsning ikkinchi yarmida «Avtoservis» bazasi uchun ma'lumotlar lug'ati tuziladi va bazaning taxminiy hajmi hisoblanadi.
+jihoz: Kompyuter va proyektor; MS Access yoki LibreOffice Base; elektron jadval dasturi; «Avtoservis» bazasi; taqdimot
+
+## 1. Ma'lumotlar lug'ati va uning tarkibi
+Ma'lumotlar bazasi o'sib borgan sari unda o'nlab jadval va yuzlab maydon paydo bo'ladi. Bazani yaratgan dasturchi har bir maydon nima uchun kerakligini eslab qolishi mumkin, lekin boshqa xodim, yangi dasturchi yoki bir yildan keyin uning o'zi ham «KodT», «Tel2», «SnB» kabi qisqa nomlarning ma'nosini unutishi mumkin. Bu muammoni **ma'lumotlar lug'ati** hal qiladi.
+**Ma'lumotlar lug'ati** — ma'lumotlar bazasidagi barcha jadvallar va maydonlar haqidagi ma'lumotlar to'plami, ya'ni «ma'lumotlar haqidagi ma'lumot» (**metama'lumot**). U bazaning o'zidagi foydalanuvchi ma'lumotlarini (mijozlar ismlari, narxlar) emas, balki ularning tuzilishi va qoidalarini tavsiflaydi. Ma'lumotlar lug'atida har bir maydon uchun odatda quyidagilar yoziladi:
+- jadval nomi va maydon nomi;
+- ma'lumot turi va maydon hajmi (masalan, qisqa matn, 30 belgi);
+- format va kiritish niqobi (sana — KK.OO.YYYY, telefon — +998 XX XXX XX XX);
+- standart qiymat va maydon majburiy yoki ixtiyoriyligi;
+- validatsiya qoidasi va xato matni;
+- kalit belgisi: birlamchi kalit (BK) yoki tashqi kalit (TK) va u qaysi jadvalga ishora qilishi;
+- maydon tavsifi (izoh) va namunaviy qiymat.
+Ma'lumotlar lug'ati bir nechta vazifani bajaradi. Birinchidan, u bazani **hujjatlashtiradi**: har bir maydonning ma'nosi va qoidasi yozilgan bo'ladi. Ikkinchidan, **izchillikni** ta'minlaydi: barcha jadvallarda bir xil ma'lumot (masalan, telefon raqami) bir xil turda va formatda saqlanadi, bog'lanadigan birlamchi va tashqi kalitlar turi mos tushadi. Uchinchidan, bazani **o'zgartirish va kuzatib borishni** osonlashtiradi: yangi maydon qo'shish yoki turini o'zgartirishdan oldin u qayerda ishlatilishi ko'rinadi. To'rtinchidan, dasturchilar, testchilar va buyurtmachi o'rtasida **umumiy til** bo'lib xizmat qiladi.
+Ma'lumotlar lug'ati ikki xil bo'ladi. **Faol** lug'atni MBBT ning o'zi yuritadi: jadval konstruktoridagi maydon xossalari aslida shu lug'atning bir qismi va ular avtomatik yangilanadi. **Passiv** lug'at alohida hujjat (elektron jadval yoki matnli hujjat) ko'rinishida tuziladi va uni odamlar yangilab borishi kerak. Kichik loyihalarda ko'pincha MS Access'dagi «Hujjatlashtiruvchi» yoki elektron jadvaldagi oddiy jadval yetarli bo'ladi.
+Ma'lumotlar lug'ati bilan birga **nomlash qoidalari** ham kelishib olinadi: jadval nomlari ko'plikda va ma'noli («Mijozlar», «Buyurtmalar»), maydon nomlari bo'sh joysiz va bir xil uslubda (MijozID, Familiya, TugilganSana), kalit maydonlar oxiriga «ID» qo'shiladi, tashqi kalit esa u ishora qiladigan birlamchi kalit bilan bir xil nomlanadi. «Tel2», «X1», «Yangi maydon» kabi nomlar lug'atsiz tushunarsiz bo'lgani uchun ishlatilmaydi. Yaxshi nom va aniq tavsif bazani keyinchalik boshqa dasturchiga topshirishni, so'rov va hisobotlar yozishni ancha osonlashtiradi.
+jadval: Ma'lumotlar lug'ati namunasi — «Mijozlar» jadvali
+| Maydon | Turi | Hajmi | Kalit | Majburiy | Validatsiya / format | Tavsif | Namuna |
+| MijozID | Hisoblagich | Uzun butun (4 bayt) | BK | Ha | Avtomatik | Mijozning noyob raqami | 1027 |
+| Familiya | Qisqa matn | 30 | — | Ha | Kamida 2 belgi | Mijoz familiyasi | Karimov |
+| Ism | Qisqa matn | 20 | — | Ha | Kamida 2 belgi | Mijoz ismi | Sardor |
+| Telefon | Qisqa matn | 13 | — | Ha | Niqob +998 XX XXX XX XX | Aloqa telefoni | +998901234567 |
+| RoyxatSanasi | Sana/vaqt | 8 bayt | — | Yo'q | <=Date(), format KK.OO.YYYY | Ro'yxatdan o'tgan sana | 12.11.2026 |
+
+## 2. Ma'lumot turlari
+**Ma'lumot turi** maydonda qanday qiymat saqlanishini, uning xotirada qancha joy egallashini va u bilan qanday amallar bajarish mumkinligini belgilaydi. Ma'lumot turlari faqat ma'lumotlar bazasida emas, elektron jadval va dasturlash tillarida ham bor: 2-kursda JavaScript'da shu tushunchalar bilan yana uchrashasiz.
+- **Matn (satr)** — harflar, raqamlar va belgilar ketma-ketligi: familiya, manzil, davlat raqami, telefon. Bitta belgidan iborat qiymat ba'zan **belgi** turi deb ataladi (masalan, jins uchun «E» yoki «A»). Qisqa matnda odatda 255 belgigacha, uzun matnda (izoh) ancha ko'p belgi saqlanadi.
+- **Butun son** — kasr qismisiz sonlar: soni, yil, yurgan masofa. Qiymat oralig'iga qarab bayt (0–255), butun (taxminan ±32 ming), uzun butun (taxminan ±2,1 milliard) hajmlari tanlanadi.
+- **O'nli (haqiqiy) son** — kasr qismli sonlar: og'irlik (2,75 kg), kuchlanish (12,6 V), o'lcham (96,5 sm).
+- **Pul** — pul summalari uchun maxsus tur: kasr qismi aniq saqlanadi va yaxlitlash xatolari bo'lmaydi.
+- **Sana/vaqt** — sanalar va vaqt; ular ustida ayirish (kunlar farqi) va to'g'ri saralash mumkin.
+- **Mantiqiy (ha/yo'q)** — faqat ikki qiymat: rost/yolg'on, ha/yo'q (kafolat bormi, to'lov qilinganmi).
+- **Hisoblagich (avtoraqam)** — har bir yangi yozuvga avtomatik beriladigan noyob butun son; odatda birlamchi kalit uchun.
+- **Ikkilik ma'lumot (biriktirma)** — rasm, hujjat, tovush fayllari; katta hajmli fayllarni ko'pincha bazaga emas, alohida papkaga saqlab, bazada faqat fayl manzili yoziladi.
+- **Havola** — veb-sahifa yoki fayl manzili.
+Dasturlash tillarida ham shu turlar bor, faqat nomlari biroz boshqacha: butun son — integer, haqiqiy son — float yoki real, satr — string, mantiqiy — boolean. Masalan, JavaScript'da `let soni = 5` (son), `let ism = "Dilnoza"` (satr), `let tolandi = true` (mantiqiy). Turlarni bilish dasturda xatolarning oldini oladi: `"5" + 5` ifodasi 10 emas, balki «55» satrini beradi, chunki birinchi qiymat matn turida.
+jadval: Ma'lumot turini tanlash
+| Ma'lumot | To'g'ri tur | Sababi |
+| Telefon raqami, pochta indeksi, pasport seriyasi | Matn | Hisoblanmaydi, + belgisi va boshidagi 0 saqlanishi kerak |
+| Mahsulot soni, ishlab chiqarilgan yil | Butun son | Butun qiymat, hisob-kitob qilinadi |
+| Og'irlik, hajm, harorat | O'nli son | Kasr qismi bor |
+| Narx, maosh, to'lov | Pul | Aniq hisob, yaxlitlash xatosiz |
+| Buyurtma sanasi, tug'ilgan sana | Sana/vaqt | Saralash va kunlar farqini hisoblash |
+| Kafolat bormi, to'landimi | Mantiqiy | Faqat ikki qiymat |
+| Mahsulot surati | Ikkilik yoki fayl manzili (matn) | Rasm fayli |
+
+## 3. Ma'lumot turini noto'g'ri tanlash oqibatlari
+Ma'lumot turini noto'g'ri tanlash bazada sezilmaydigan, lekin keyinchalik qimmatga tushadigan xatolarga olib keladi. Masalan:
+- **telefon raqami son turida saqlansa**, «+» belgisi kiritilmaydi, boshidagi nol yo'qoladi va katta sonlar ilmiy ko'rinishda (9,98E+11) chiqishi mumkin;
+- **narx matn turida saqlansa**, uni qo'shib bo'lmaydi va saralash noto'g'ri bo'ladi: matn sifatida «90 000» «100 000» dan katta deb hisoblanadi, chunki «9» belgisi «1» dan keyin keladi;
+- **sana matn turida saqlansa**, saralash sanalar bo'yicha emas, harflar bo'yicha bajariladi («02.12.2026» «10.01.2026» dan oldin turadi) va kunlar farqini hisoblab bo'lmaydi;
+- **pul o'nli son turida saqlansa**, ko'p marta qo'shish natijasida kichik yaxlitlash xatolari to'planib, hisobotda tiyinlik farqlar paydo bo'ladi;
+- **maydon hajmi juda kichik tanlansa**, uzun familiyalar yoki manzillar kesilib qoladi; juda katta tanlansa — ortiqcha joy band bo'ladi;
+- **bog'lanadigan kalitlar turi har xil bo'lsa** (bir jadvalda son, boshqasida matn), bog'lanish yaratib bo'lmaydi.
+Agar baza ishlab turgan paytda maydon turi o'zgartirilsa, mavjud ma'lumotlar yangi turga avtomatik o'giriladi va bu jarayonda ular yo'qolishi mumkin: masalan, matn maydonidagi «12 dona» yozuvini son turiga o'tkazib bo'lmaydi va u bo'sh qoladi, o'nli sonni butun songa o'tkazganda kasr qismi tashlab yuboriladi. Shuning uchun turni o'zgartirishdan oldin bazaning zaxira nusxasi olinadi va natija kichik namunada sinab ko'riladi.
+Shuning uchun ma'lumot turlari jadval yaratishdan oldin, ma'lumotlar lug'atida rejalashtiriladi va kelishib olinadi.
+
+## 4. Yozuv va fayl hajmini hisoblash
+MB qancha joy egallashini oldindan bilish server va zaxira nusxa uchun disk tanlashda, ma'lumotni tarmoq orqali uzatish vaqtini hisoblashda kerak bo'ladi. Taxminiy hisob quyidagicha bajariladi:
+#. Har bir maydon hajmi baytlarda aniqlanadi: oddiy hisob uchun matnning har bir belgisi — 1 bayt; mantiqiy tur — 1 bayt; uzun butun son — 4 bayt; o'nli son, pul va sana — 8 baytdan.
+#. Maydonlar hajmlari qo'shilib, **bitta yozuv hajmi** topiladi.
+#. Yozuv hajmi yozuvlar soniga ko'paytiriladi.
+#. Indekslar va xizmat ma'lumotlari uchun natijaga taxminan 10–20 % qo'shiladi.
+Misol: «Mijozlar» jadvalida MijozID (4) + Familiya (30) + Ism (20) + Telefon (13) + Manzil (60) + RoyxatSanasi (8) = 135 bayt. 5000 ta mijoz uchun: 135 · 5000 = 675 000 bayt ≈ 659 KB; 10 % qo'shimcha bilan taxminan 725 KB. Ikkinchi misol: «Buyurtmalar» jadvalida BuyurtmaID (4) + DavlatRaqami (8) + XizmatID (4) + Sana (8) + Usta (25) = 49 bayt (uzun matnli «Izoh» maydoni alohida saqlanadi va hisobga olinmadi). Yiliga 20 000 ta buyurtma bo'lsa: 49 · 20 000 = 980 000 bayt ≈ 957 KB, ya'ni taxminan 1 MB. Demak, bunday baza o'n yil ishlasa ham hajmi 10–15 MB atrofida bo'ladi — oddiy fleshkaga ham bemalol sig'adi; ko'p joyni esa odatda rasm va hujjat biriktirmalari egallaydi.
+Haqiqiy fayl hajmi MBBT turiga, matn kodlashiga (Unicode'da bitta belgi 2 baytgacha bo'lishi mumkin) va to'ldirilmagan maydonlarga qarab farq qiladi, lekin bunday hisob tartibini to'g'ri baholashga yordam beradi.
+Xulosa: ma'lumotlar lug'ati bazaning «pasporti» bo'lib, har bir maydonning turi, hajmi, qoidalari va ma'nosini tavsiflaydi. Ma'lumot turini to'g'ri tanlash hisob-kitob, saralash va bog'lanishlarning to'g'ri ishlashini ta'minlaydi, maydon hajmlari esa bazaning qancha joy egallashini oldindan baholash imkonini beradi.
+
+keys: Do'kon bazasidagi g'alati hisobot
+vaziyat: Qurilish mollari do'konining bazasini bir dasturchi yaratgan va hujjat qoldirmagan. Yangi kelgan xodim oylik hisobotni tuzganda bir nechta muammoga duch keldi: narxlar bo'yicha saralashda 90 000 so'mlik mahsulot 150 000 so'mlikdan yuqorida turibdi; mijozlarning telefon raqamlari «9,98E+11» ko'rinishida chiqmoqda; «Sana» bo'yicha saralangan sotuvlar oylar bo'yicha aralashib ketgan; «Holat2» maydonida «1» va «0» yozilgan, lekin uning ma'nosini hech kim bilmaydi.
+ksavol: Har bir muammoning sababi nima?
+ksavol: Ularni qanday tuzatish mumkin?
+ksavol: Kelgusida bunday muammolarning oldini olish uchun nima qilish kerak?
+kjavob: Narx matn turida saqlangan — saralash belgilar bo'yicha bajarilmoqda; telefon son turida — + va boshidagi raqamlar yo'qolgan va ilmiy ko'rinishga o'tgan; sana matn turida — sanalar bo'yicha emas, harflar bo'yicha saralanmoqda; «Holat2» maydoni hujjatlashtirilmagan. Tuzatish: narxni pul turiga, sanani sana/vaqt turiga, telefonni matn turiga o'tkazish (avval ma'lumot nusxasini olib, konvertatsiyani tekshirish), «Holat2» ni ma'noli nom bilan (masalan, «Tolandi», mantiqiy tur) qayta nomlash. Oldini olish: ma'lumotlar lug'atini tuzish va yangilab borish, maydonlarga tushunarli nom va tavsif berish.
+savol: Ma'lumotlar lug'ati nima va unda qanday ma'lumotlar yoziladi?
+savol: Faol va passiv ma'lumotlar lug'atining farqi nimada?
+savol: Pul summalari uchun nima uchun maxsus pul turi ishlatiladi?
+savol: Telefon raqamini son turida saqlash qanday muammolarga olib keladi?
+savol: Sana matn turida saqlansa, qanday muammolar paydo bo'ladi?
+savol: Yozuv hajmi qanday hisoblanadi? Misol keltiring.
+amaliy: «Avtoservis» bazasi uchun ma'lumotlar lug'ati va hajm hisobi
+amaqsad: «Avtoservis» bazasining barcha jadvallari uchun ma'lumotlar lug'atini tuzish, ma'lumot turlarini tekshirish va asoslash, noto'g'ri tur oqibatlarini sinab ko'rish hamda bazaning taxminiy hajmini hisoblash.
+ajihoz: Kompyuter; MS Access yoki LibreOffice Base; elektron jadval dasturi; «Avtoservis» bazasi
+qadam: Elektron jadvalda ma'lumotlar lug'ati shablonini tuzing: Jadval, Maydon, Turi, Hajmi, Kalit (BK/TK), Majburiy, Validatsiya/format, Tavsif, Namuna.
+qadam: «Mijozlar», «Avtomobillar», «Xizmatlar» va «Buyurtmalar» jadvallarining barcha maydonlarini konstruktor rejimidan ko'chirib, lug'atni to'ldiring; tashqi kalitlar qaysi jadvalga ishora qilishini yozing.
+qadam: Har bir maydon turini tekshiring va asoslang; noto'g'ri yoki noqulay tanlangan turlar bo'lsa, tuzatish taklifini yozing (masalan, Narxi — pul, Telefon — qisqa matn).
+qadam: Sinov jadvali yarating: bir xil telefon raqamlari va narxlarni bir ustunda son turida, boshqasida matn turida saqlab, saralash va ko'rinishdagi farqlarni yozing.
+qadam: Har bir jadval uchun bitta yozuv hajmini baytlarda hisoblang (matn — belgilar soni, sana va pul — 8, uzun butun — 4, mantiqiy — 1 bayt).
+qadam: Mijozlar — 2000, avtomobillar — 2500, buyurtmalar — 20 000, xizmatlar — 50 ta deb olib, bazaning taxminiy hajmini KB va MB da hisoblang (+15 % xizmat ma'lumotlari).
+anatija: To'liq to'ldirilgan ma'lumotlar lug'ati (4 jadval), ma'lumot turlari bo'yicha asoslangan xulosalar, son va matn turlarini solishtirish natijasi, yozuvlar va bazaning taxminiy hajmi hisobi.
+baho5: Lug'atda barcha maydonlar to'liq va aniq tavsiflangan, kalitlar va bog'lanishlar to'g'ri ko'rsatilgan, turlar asoslangan, sinov natijalari tushuntirilgan, hajm hisobi to'g'ri bajarilgan.
+masala: «Mahsulotlar» jadvalida: Kod (qisqa matn, 8), Nomi (qisqa matn, 40), Narxi (pul, 8 bayt), Soni (uzun butun, 4 bayt), Mavjud (mantiqiy, 1 bayt), KelganSana (sana, 8 bayt). 12 000 ta mahsulot uchun jadval taxminan qancha joy egallaydi (+10 %)?
+yechim: Yozuv hajmi: 8 + 40 + 8 + 4 + 1 + 8 = 69 bayt. 69 · 12 000 = 828 000 bayt ≈ 808,6 KB. 10 % qo'shimcha bilan: ≈ 889 KB, ya'ni taxminan 0,87 MB.
+masala: Quyidagi maydonlar uchun ma'lumot turi va hajmini taklif qiling: a) VIN-kod; b) dvigatel hajmi (litrda, masalan 1,5); c) mijoz roziligi olinganmi; d) ta'mir narxi; e) keyingi texnik ko'rik sanasi.
+yechim: a) qisqa matn, 17 belgi; b) o'nli son; c) mantiqiy (ha/yo'q); d) pul; e) sana/vaqt.
+test: Ma'lumotlar bazasidagi maydonlarning turi, hajmi va qoidalarini tavsiflovchi hujjat? | Ma'lumotlar lug'ati | Hisobot | So'rov | Shakl
+test: «Ma'lumotlar haqidagi ma'lumot» qanday ataladi? | Metama'lumot | Ikkilik ma'lumot | Tranzaksiya | Arxiv
+test: Pochta indeksi uchun qaysi ma'lumot turi mos? | Matn | O'nli son | Pul | Mantiqiy
+test: Narxlar matn turida saqlansa, qanday muammo bo'ladi? | Ularni qo'shib bo'lmaydi va saralash noto'g'ri bo'ladi | Ular avtomatik yaxlitlanadi | Ular sanaga aylanadi | Hech qanday muammo bo'lmaydi
+test: Maydonlar hajmi 4, 30, 20, 13 va 8 bayt bo'lgan yozuvning hajmi qancha? | 75 bayt | 67 bayt | 55 bayt | 100 bayt
+uyga: Mavzuni konspekt qiling. Kasbingizga oid kichik baza (masalan, oshxona ombori yoki tikuv buyurtmalari) uchun bitta jadvalning ma'lumotlar lug'atini tuzing (kamida 7 maydon) va 3000 ta yozuv uchun jadval hajmini hisoblang.
+gloss: Ma'lumotlar lug'ati | MB dagi barcha jadval va maydonlarning turi, hajmi, qoidalari va ma'nosi yozilgan metama'lumotlar to'plami.
+gloss: Metama'lumot | Ma'lumotlarning o'zi haqidagi ma'lumot: tuzilishi, turi, formati, qoidalari.
+gloss: Ma'lumot turi | Maydonda saqlanadigan qiymat turi: matn, son, pul, sana/vaqt, mantiqiy va boshqalar.
+gloss: Mantiqiy tur | Faqat ikki qiymat — rost/yolg'on (ha/yo'q) saqlanadigan ma'lumot turi.
+gloss: Pul turi | Pul summalarini kasr qismi bilan aniq, yaxlitlash xatosiz saqlaydigan ma'lumot turi.
+gloss: Yozuv hajmi | Bitta yozuvdagi barcha maydonlar hajmlari yig'indisi (baytlarda).

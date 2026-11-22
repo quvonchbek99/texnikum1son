@@ -1,0 +1,105 @@
+nomi: Tizimli dasturiy ta'minot va foydalanuvchi interfeysi. Drayverlar
+modul: 1-modul
+ac: 1.5 Tizimli dasturiy ta'minot turlari va vazifalarini, foydalanuvchi interfeysi turlarini hamda drayverlarning vazifasini tushuntiradi.
+maqsad: O'quvchilarda dasturiy ta'minotni tizimli va amaliy turlarga ajratish, operatsion tizim, tarjimon dasturlar va drayverlarning vazifasini tushuntirish hamda foydalanuvchi interfeysi turlarini taqqoslash ko'nikmasini shakllantirish.
+natija: tizimli va amaliy dasturiy ta'minotni farqlaydi va har biriga misol keltiradi;
+natija: operatsion tizimning asosiy vazifalarini sanab beradi;
+natija: kompilyator, interpretator va bog'lovchi (linker) vazifasini tushuntiradi;
+natija: buyruq satri, menyu, grafik va sensorli/ovozli interfeyslarni afzallik va kamchiliklari bo'yicha taqqoslaydi;
+natija: drayver nima uchun kerakligini va uni qanday yangilashni tushuntiradi.
+reja: Dasturiy ta'minot turlari. Operatsion tizim va uning vazifalari
+reja: Tarjimon dasturlar va drayverlar
+reja: Foydalanuvchi interfeysi turlari
+tayanch: dasturiy ta'minot; tizimli dasturiy ta'minot; amaliy dasturiy ta'minot; operatsion tizim; kompilyator; interpretator; bog'lovchi (linker); drayver; foydalanuvchi interfeysi; buyruq satri (CLI); grafik interfeys (GUI)
+metod: Aqliy hujum | «Telefoningizda qanday dasturlar bor va ularning qaysi biri telefon ishlashi uchun albatta kerak?» savoli beriladi. Javoblar doskada ikki ustunga — «telefonning o'zi uchun kerak» va «foydalanuvchi uchun kerak» — ajratilib, tizimli va amaliy dasturiy ta'minot tushunchasiga o'tiladi.
+metod: Namoyish | O'qituvchi bir xil amalni (papka yaratish va undagi fayllarni ko'rish) avval grafik interfeysda, so'ng buyruq satrida (`mkdir`, `dir` yoki `ls`) bajarib ko'rsatadi; o'quvchilar qaysi biri tezroq va qaysi biri osonroq ekanini muhokama qiladi.
+metod: Venn diagrammasi | Juftliklar buyruq satri va grafik interfeysni taqqoslab, umumiy jihatlarni (ikkalasi ham OTni boshqaradi) kesishmaga, farqlarini alohida doiralarga yozadi.
+
+## 1. Dasturiy ta'minot turlari. Operatsion tizim va uning vazifalari
+Kompyuter apparat qismlari o'z-o'zidan hech narsa qilmaydi — ularni dasturlar boshqaradi. **Dasturiy ta'minot** — kompyuter bajaradigan dasturlar va ularga tegishli ma'lumotlar, hujjatlar majmui. Vazifasiga ko'ra u ikki katta guruhga bo'linadi.
+**Tizimli dasturiy ta'minot** kompyuterning o'zini ishlatish, apparat qurilmalarini boshqarish va boshqa dasturlar uchun muhit yaratish uchun xizmat qiladi. Unga operatsion tizim, drayverlar, utilita dasturlar (antivirus, arxivator, diskni tozalash), tarjimon dasturlar (kompilyator, interpretator) va bog'lovchilar kiradi. Foydalanuvchi ularni ko'pincha sezmaydi, lekin ularsiz kompyuter ishlamaydi.
+**Amaliy dasturiy ta'minot** foydalanuvchining aniq vazifalarini bajarish uchun mo'ljallangan: matn muharriri, elektron jadval, taqdimot, grafik va video muharrirlar, brauzer, buxgalteriya dasturi, o'yinlar. Ular tizimli dasturiy ta'minot ustida ishlaydi; masalan, Excel Windows yoki macOS'siz ishga tushmaydi. Amaliy dasturlar haqida keyingi darsda batafsil gaplashamiz.
+### Operatsion tizim
+**Operatsion tizim** (OT) — kompyuter yoqilganda birinchi bo'lib yuklanadigan va kompyuter ishlayotgan butun vaqt davomida apparat qurilmalari, dasturlar va foydalanuvchi o'rtasida vositachilik qiladigan asosiy tizimli dastur. Kompyuterlar uchun keng tarqalgan OT lar — Windows, macOS va Linux oilasi (Ubuntu, Debian va boshqalar); mobil qurilmalarda Android va iOS; serverlarda asosan Linux ishlatiladi. Bankomat, kassa apparati, avtomobilning boshqaruv bloki va aqlli televizorlarda ham o'z OT lari bor.
+OT ning asosiy vazifalari:
+- **jarayonlarni boshqarish** — bir vaqtda ishlayotgan dasturlar orasida protsessor vaqtini taqsimlaydi; brauzer, musiqa pleeri va matn muharriri bir paytda ishlashi shunga bog'liq;
+- **xotirani boshqarish** — har bir dasturga operativ xotiradan joy ajratadi va dastur yopilganda bo'shatadi;
+- **fayl tizimini boshqarish** — fayl va papkalarni yaratish, nomlash, ko'chirish, o'chirish, diskda joylashtirish;
+- **qurilmalarni boshqarish** — drayverlar orqali printer, klaviatura, kamera va boshqa qurilmalar bilan ishlaydi;
+- **xavfsizlikni ta'minlash** — foydalanuvchi akkauntlari, parollar, kirish huquqlari, yangilanishlar va o'rnatilgan himoya vositalari;
+- **foydalanuvchi interfeysini taqdim etish** — foydalanuvchi kompyuterga buyruq beradigan muhit (ish stoli, oynalar, menyular yoki buyruq satri);
+- **xatolarni qayta ishlash** — dastur yoki qurilma ishdan chiqqanda foydalanuvchiga xabar berish va tizimni barqaror saqlash.
+OT tanlash qurilmaning maqsadiga bog'liq: grafik dizayner uchun professional dasturlar ishlaydigan Windows yoki macOS, serverlar uchun barqaror va bepul Linux, oshxona yoki do'kon kassasi uchun esa ishlab chiqaruvchi tavsiya qilgan maxsus tizim mos keladi.
+### Kompyuter qanday yuklanadi
+Kompyuter yoqilganda avval doimiy xotiradagi BIOS yoki UEFI dasturi ishga tushadi. U protsessor, operativ xotira, klaviatura va disklar ishlayotganini tekshiradi (bu o'z-o'zini sinash deyiladi), so'ng qaysi diskdan yuklash kerakligini aniqlaydi. Diskdagi yuklovchi dastur OT ning yadrosini operativ xotiraga yuklaydi. Yadro drayverlarni ishga tushiradi, xizmat dasturlarini yoqadi va oxirida foydalanuvchiga kirish oynasini ko'rsatadi. Yuklanish bosqichlaridan birida xato bo'lsa (masalan, disk ishdan chiqqan bo'lsa), ekranda tegishli xabar chiqadi — bu nosozlik qayerda ekanini aniqlashga yordam beradi.
+### Litsenziya va yangilanishlar
+Dasturiy ta'minotdan foydalanish huquqi litsenziya bilan belgilanadi. Windows va macOS tijorat tizimlari hisoblanadi: ular qurilma bilan birga yoki alohida sotib olinadi. Linux oilasidagi tizimlarning ko'pchiligi bepul va ochiq kodli — ularning dastur matnini istalgan kishi ko'rishi va o'zgartirishi mumkin. Qaysi OT bo'lmasin, uni muntazam yangilab turish kerak: yangilanishlar xavfsizlik teshiklarini yopadi, xatolarni tuzatadi va yangi qurilmalarni qo'llab-quvvatlaydi. Ishlab chiqaruvchi qo'llab-quvvatlashni to'xtatgan eski OT larda xavfsizlik yangilanishlari chiqmaydi, shuning uchun ular internetga ulanganda xavfli bo'ladi.
+
+## 2. Tarjimon dasturlar va drayverlar
+Dasturchilar dasturlarni inson tushunadigan **yuqori darajali tillarda** (Python, JavaScript, C++, Java) yozadi. Protsessor esa faqat ikkilik kodlardagi **mashina buyruqlarini** bajaradi. Bu ikki til orasida tarjimon dasturlar ishlaydi.
+- **Kompilyator** butun dastur matnini (manba kodini) bir martada mashina kodiga tarjima qiladi va alohida bajariladigan fayl (masalan, Windows'da .exe) yaratadi. Natijada dastur tez ishlaydi va manba kodisiz tarqatiladi; lekin xatolar haqida xabar butun tarjima tugagach olinadi va dasturdagi har bir o'zgarishdan keyin qayta kompilyatsiya qilish kerak.
+- **Interpretator** dasturni qatorma-qator tarjima qilib, darhol bajaradi. Xato bo'lgan qatorda to'xtaydi, bu dasturni sinash va o'rganishni osonlashtiradi. Biroq dastur har safar interpretator orqali ishga tushiriladi va kompilyatsiya qilingan dasturga nisbatan sekinroq ishlaydi. JavaScript va Python odatda interpretator (yoki ular asosidagi maxsus mexanizmlar) orqali bajariladi. Ko'p zamonaviy tizimlar ikkala usulni birlashtiradi: dastur avval oraliq kodga tarjima qilinadi, so'ng bajarilish paytida tezlashtiriladi.
+- **Bog'lovchi (linker)** alohida kompilyatsiya qilingan dastur qismlari (modullar) va tayyor kutubxonalarni bitta bajariladigan faylga birlashtiradi. Katta dasturlar bir necha dasturchi tomonidan qismlarga bo'lib yoziladi va oxirida bog'lovchi yordamida yig'iladi.
+jadval: Kompilyator va interpretatorni taqqoslash
+| Belgi | Kompilyator | Interpretator |
+| Tarjima usuli | Butun dastur bir martada | Qatorma-qator |
+| Natija | Alohida bajariladigan fayl | Fayl yaratilmaydi, darhol bajariladi |
+| Ishlash tezligi | Tez | Sekinroq |
+| Xatolarni topish | Tarjima tugagach ro'yxat | Xato qatorida to'xtaydi |
+| Tarqatish | Manba kodisiz tarqatiladi | Manba kodi va interpretator kerak |
+### Drayverlar
+**Drayver** — operatsion tizimga muayyan qurilma bilan qanday «gaplashish»ni o'rgatadigan kichik tizimli dastur. Har bir printer, videokarta, skaner yoki tarmoq kartasining o'z buyruqlari bor; OT ularning hammasini oldindan bila olmaydi. Drayver OT ning umumiy buyruqlarini («sahifani chop et») aynan shu qurilma tushunadigan signallarga aylantiradi.
+Ko'pchilik oddiy qurilmalar (sichqoncha, klaviatura, fleshka) uchun drayverlar OT tarkibida bo'ladi va qurilma ulanishi bilan avtomatik o'rnatiladi — bu «ulang va ishlating» (plug and play) tamoyili. Murakkab qurilmalar (professional printer, grafik planshet, diagnostika skaneri) uchun drayver ishlab chiqaruvchi saytidan yuklab olinadi. Drayver eskirsa yoki noto'g'ri o'rnatilsa, qurilma ishlamaydi yoki xato bilan ishlaydi; drayverlarni yangilash xatolarni tuzatadi va ba'zan yangi imkoniyatlar qo'shadi. Windows'da qurilmalar va ularning drayverlari «Qurilmalar dispetcheri» (Device Manager) orqali ko'riladi va yangilanadi. Drayverni faqat rasmiy manbadan yuklab olish kerak: noma'lum saytlardagi «drayver yangilovchi» dasturlar ko'pincha zararli dastur tarqatadi.
+Avtoservisda bu ayniqsa muhim: avtomobil diagnostikasi skaneri noutbukka ulanishi uchun uning maxsus drayveri va dasturi o'rnatilgan bo'lishi kerak, aks holda kompyuter qurilmani «noma'lum qurilma» deb ko'rsatadi.
+
+## 3. Foydalanuvchi interfeysi turlari
+**Foydalanuvchi interfeysi** — inson va kompyuter o'zaro muloqot qiladigan vositalar: inson buyruq beradi, kompyuter natijani ko'rsatadi. Interfeys qulay bo'lsa, foydalanuvchi kam xato qiladi va tez ishlaydi.
+### Buyruq satri interfeysi (CLI)
+Foydalanuvchi buyruqlarni klaviaturada matn ko'rinishida yozadi, masalan, Windows'da `dir` (papka tarkibini ko'rish), `ipconfig` (tarmoq sozlamalari), Linux'da `ls`, `cd`, `cp`. Afzalliklari: kam xotira va protsessor resursi talab qiladi; tajribali foydalanuvchi uchun juda tez; bir buyruq bilan yuzlab fayl ustida amal bajarish va jarayonni avtomatlashtirish (skript yozish) mumkin; serverlarni masofadan boshqarishda qulay. Kamchiliklari: buyruqlarni yodlash kerak, bitta harf xato bo'lsa buyruq bajarilmaydi yoki kutilmagan natija beradi, yangi foydalanuvchi uchun qiyin.
+jadval: Keng tarqalgan buyruqlar
+| Vazifa | Windows (cmd) | Linux (terminal) |
+| Papka tarkibini ko'rish | dir | ls |
+| Boshqa papkaga o'tish | cd papka | cd papka |
+| Yangi papka yaratish | mkdir nom | mkdir nom |
+| Faylni nusxalash | copy a.txt b.txt | cp a.txt b.txt |
+| Tarmoq sozlamalarini ko'rish | ipconfig | ip addr |
+### Menyu asosidagi interfeys
+Foydalanuvchi ekrandagi ro'yxatdan kerakli bandni tanlaydi. Bankomat, maishiy texnika (kir yuvish mashinasi, mikroto'lqinli pech), oddiy telefonlar va avtomobil multimedia tizimlari shunday ishlaydi. O'rganish oson va xato kam bo'ladi, lekin imkoniyatlar menyudagi bandlar bilan cheklangan va ko'p qavatli menyularda kerakli bandni topish vaqt oladi.
+### Grafik foydalanuvchi interfeysi (GUI)
+Oynalar, belgilar (ikonkalar), menyular va ko'rsatkich (sichqoncha) ishlatiladi; bu WIMP (windows, icons, menus, pointer) tamoyili deb ham ataladi. Windows, macOS, Android va iOS grafik interfeysga ega. Afzalliklari: intuitiv, o'rganish oson, buyruqlarni yodlash shart emas, bir vaqtda bir nechta dastur oynasi bilan ishlash qulay. Kamchiliklari: ko'p xotira va protsessor resursi sarflaydi, ayrim murakkab amallar buyruq satriga qaraganda sekinroq bajariladi.
+### Sensorli va ovozli interfeyslar
+Smartfon va planshetlarda barmoq harakatlari (bosish, surish, ikki barmoq bilan kattalashtirish) ishlatiladi. Ovozli interfeysda foydalanuvchi tabiiy tilda gapiradi va ovozli yordamchi buyruqni tushunib bajaradi. Bu haydovchi, nogironligi bo'lgan insonlar yoki qo'li band bo'lgan oshpaz uchun qulay; biroq shovqinli joyda, shevada yoki noaniq talaffuzda xato tushunishi mumkin.
+### Yaxshi interfeys qanday bo'ladi
+Interfeys turidan qat'i nazar, uni loyihalashda bir nechta tamoyilga amal qilinadi. **Izchillik**: bir xil amallar hamma joyda bir xil ko'rinishda bo'ladi (masalan, «Saqlash» tugmasi har doim bir joyda). **Qayta aloqa**: har bir amaldan keyin foydalanuvchi natijani ko'radi — yuklanish belgisi, «Saqlandi» xabari. **Xatodan himoya**: o'chirish kabi qaytarib bo'lmaydigan amallardan oldin tasdiq so'raladi. **Hamma uchun qulaylik**: shrift kattaligini o'zgartirish, ekranni o'qib beruvchi dasturlar, yuqori kontrast rejimi ko'rish qobiliyati past insonlarga yordam beradi. Interfeys elementlari — tugmalar, menyular, belgilash katakchalari va boshqalar bilan 7-darsda batafsil tanishamiz.
+jadval: Interfeys turlarini taqqoslash
+| Interfeys | Qayerda ishlatiladi | Afzalligi | Kamchiligi |
+| Buyruq satri | Serverlar, tarmoq sozlash, dasturlash | Tez, kam resurs, avtomatlashtirish | Buyruqlarni yodlash kerak |
+| Menyu | Bankomat, maishiy texnika | Oson, xato kam | Imkoniyatlar cheklangan |
+| Grafik (GUI) | Kompyuter, telefon | Intuitiv, o'rganish oson | Ko'p resurs talab qiladi |
+| Sensorli / ovozli | Smartfon, avtomobil, aqlli uy | Qo'l bo'sh bo'lmasa ham ishlatish mumkin | Shovqin va talaffuzga sezgir |
+Xulosa: tizimli dasturiy ta'minot kompyuterning «poydevori» hisoblanadi. Operatsion tizim resurslarni boshqaradi va foydalanuvchiga interfeys beradi, tarjimon dasturlar dasturchi yozgan kodni mashina tiliga o'giradi, drayverlar esa OT ga qurilmalar bilan ishlashni o'rgatadi. Interfeys turi foydalanuvchining tajribasi va ish sharoitiga qarab tanlanadi.
+
+keys: Yangi printer chop etmayapti
+vaziyat: Tikuv sexi ofisiga yangi rangli printer olib kelindi. Kompyuterga USB kabel orqali ulangach, Windows uni «Noma'lum qurilma» deb ko'rsatdi va hujjat chop etilmadi. Xodim internetdan «universal drayver yangilovchi» degan dasturni topib o'rnatmoqchi.
+ksavol: Printer nima uchun ishlamayapti?
+ksavol: Xodimning tanlagan yo'li qanday xavf tug'diradi?
+ksavol: Muammoni hal qilishning to'g'ri tartibini yozing.
+kjavob: OT printer bilan ishlashni bilmaydi — mos drayver o'rnatilmagan. Noma'lum saytdagi «drayver yangilovchi» dasturlar ko'pincha reklama yoki zararli dastur tarqatadi. To'g'ri tartib: printer modelini qutidan yoki korpusdagi yorliqdan aniqlash → ishlab chiqaruvchining rasmiy saytidan shu model va OT versiyasi uchun drayverni yuklab olish → o'rnatib, kompyuterni qayta ishga tushirish → «Qurilmalar dispetcheri» va «Printerlar» bo'limida printer paydo bo'lganini tekshirish → sinov sahifasini chop etish.
+savol: Tizimli va amaliy dasturiy ta'minotning farqini misollar bilan tushuntiring.
+savol: Operatsion tizimning kamida beshta vazifasini sanang.
+savol: Kompilyator va interpretator qanday farq qiladi?
+savol: Bog'lovchi (linker) nima uchun kerak?
+savol: Drayver qanday vazifani bajaradi va uni qayerdan yuklab olish kerak?
+savol: Buyruq satri interfeysi qaysi holatlarda grafik interfeysdan qulayroq?
+test: Qaysi biri tizimli dasturiy ta'minotga kiradi? | Operatsion tizim | Matn muharriri | Fotosurat muharriri | Kompyuter o'yini
+test: Butun dastur matnini bir martada mashina kodiga tarjima qilib, bajariladigan fayl yaratadigan dastur? | Kompilyator | Interpretator | Drayver | Antivirus
+test: Operatsion tizimga muayyan qurilma bilan ishlashni ta'minlaydigan dastur? | Drayver | Bog'lovchi | Arxivator | Brauzer
+test: Buyruq satri interfeysining afzalligi qaysi? | Kam resurs talab qiladi va amallarni avtomatlashtirish mumkin | Buyruqlarni yodlash shart emas | Yangi foydalanuvchi uchun eng oson | Sichqoncha bilan boshqariladi
+test: Bankomatda qanday interfeys turi ishlatiladi? | Menyu asosidagi interfeys | Buyruq satri interfeysi | Faqat ovozli interfeys | Interfeys yo'q
+uyga: Telefoningiz va kompyuteringizdagi operatsion tizim nomi va versiyasini aniqlang. Har biridan 3 tadan tizimli va amaliy dasturni yozing. Buyruq satrida (Win + R → `cmd`) `dir`, `ver` va `ipconfig` buyruqlarini bajarib, ular nima ko'rsatganini qisqacha yozing.
+gloss: Tizimli dasturiy ta'minot | Kompyuter va qurilmalarni boshqaradigan, boshqa dasturlar uchun muhit yaratadigan dasturlar (OT, drayverlar, utilitalar, tarjimonlar).
+gloss: Operatsion tizim | Apparat, dasturlar va foydalanuvchi o'rtasida vositachilik qiladigan, resurslarni boshqaradigan asosiy tizimli dastur.
+gloss: Kompilyator | Butun dastur matnini bir martada mashina kodiga tarjima qilib, bajariladigan fayl yaratadigan dastur.
+gloss: Interpretator | Dasturni qatorma-qator tarjima qilib, darhol bajaradigan dastur.
+gloss: Drayver | Operatsion tizimga muayyan qurilma bilan ishlashni ta'minlaydigan kichik tizimli dastur.
+gloss: Grafik foydalanuvchi interfeysi (GUI) | Oynalar, belgilar, menyular va ko'rsatkich yordamida boshqariladigan interfeys.

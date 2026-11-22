@@ -1,0 +1,56 @@
+nomi: Elektron jadvalni formatlash
+modul: 3-modul
+ac: 3.2 Elektron jadvalni son formatlari, tekislash, chegaralar va shartli formatlash yordamida formatlaydi; panellarni mahkamlaydi va jadvalni chop etishga tayyorlaydi.
+maqsad: O'quvchilarda elektron jadval ma'lumotlarini o'qish oson bo'ladigan ko'rinishga keltirish: son va sana formatlari, tekislash, chegaralar, shartli formatlash, panellarni mahkamlash va oq-qora chop etishga tayyorlash ko'nikmasini shakllantirish.
+natija: son, pul, foiz, sana va matn formatlarini to'g'ri tanlaydi;
+natija: tekislash, kataklarni birlashtirish, matnni o'rash va chegaralardan foydalanadi;
+natija: shartli formatlash qoidalarini (qiymat, matn, takroriy qiymatlar, formula) o'rnatadi va boshqaradi;
+natija: sarlavha qatori va birinchi ustunni mahkamlaydi;
+natija: jadvalni sahifaga sig'diradi, sarlavha qatorini har sahifada takrorlaydi va oq-qora printerga moslab chop etadi.
+reja: Kataklarni formatlash: son formatlari, tekislash, chegaralar
+reja: Shartli formatlash
+reja: Panellarni mahkamlash va chop etishga tayyorlash
+tayanch: formatlash; son formati; pul formati; foiz formati; sana formati; tekislash; kataklarni birlashtirish; matnni o'rash; chegara; shartli formatlash; panellarni mahkamlash; sahifa sozlamalari
+metod: Solishtirish | Ekranda bir xil ma'lumotli ikki jadval ko'rsatiladi: formatlanmagan va formatlangan. O'quvchilar qaysi birida 5 soniyada eng katta summani topish osonligini aytadi va formatlash nima uchun kerakligini xulosa qiladi.
+metod: Mustaqil ish va o'zaro baholash | O'quvchilar jadvalni formatlagach, qo'shnisining ishini «o'qishga qulaylik» mezoni bo'yicha 5 ballik shkalada baholab, bitta taklif yozadi.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; oldingi darsda yaratilgan jadval yoki o'qituvchi bergan namunaviy jadval; oq-qora printer (bo'lsa)
+
+## Kataklarni formatlash
+Format katakdagi qiymatni o'zgartirmaydi, faqat uning ko'rinishini o'zgartiradi. **Son formatlari**: umumiy, son (kasr belgilar soni bilan), pul (masalan, «so'm» qo'shimchasi bilan), foiz (0,15 → 15 %), sana (22.11.2026), vaqt, matn (telefon raqami kabi hisoblanmaydigan raqamlar uchun). **Tekislash**: chapga, markazga, o'ngga, yuqori va pastki chiziq bo'yicha; matnni o'rash uzun matnni katak ichida bir necha qatorga bo'ladi; «birlashtirish va markazlashtirish» jadval sarlavhasini bir nechta ustun ustiga joylaydi. **Chegaralar** jadvalni qog'ozda aniq ko'rsatadi. Oq-qora printerda chop etiladigan jadvallarda rangli fon o'rniga qalin shrift va chegaralardan foydalanish ma'qul.
+
+## Shartli formatlash
+**Shartli formatlash** — katak ko'rinishini uning qiymatiga qarab avtomatik o'zgartirish. Masalan: 1 000 000 so'mdan katta summalarni qalin shriftda ko'rsatish, «2» bahoni ajratib ko'rsatish, takroriy qiymatlarni belgilash, eng katta 10 ta qiymatni topish. Ma'lumotlar ustunlari (katak ichidagi chiziq) va belgilar to'plami qiymatlarni vizual taqqoslashga yordam beradi. Murakkab shart formula bilan yoziladi: masalan, `=$F2>1000000` qoidasi butun qatorni ajratadi. Qoidalar «Shartli formatlash → Qoidalarni boshqarish» oynasida o'zgartiriladi yoki o'chiriladi.
+
+## Panellarni mahkamlash va chop etish
+Uzun jadvalni pastga aylantirganda sarlavhalar ko'rinmay qoladi. «Ko'rinish → Panellarni mahkamlash» buyrug'i yuqori qatorni, birinchi ustunni yoki tanlangan katakdan yuqori va chapdagi qismni joyida ushlab turadi. Chop etishdan oldin «Sahifa sozlamalari»da yo'nalish (kitob yoki albom), chekka maydonlar, «sahifaga sig'dirish» va har sahifada takrorlanadigan sarlavha qatori belgilanadi; natija oldindan ko'rish rejimida tekshiriladi.
+
+amaliy: Jadvalni formatlash va chop etishga tayyorlash
+amaqsad: Oldingi darsdagi (yoki o'qituvchi bergan) jadvalni son formatlari, tekislash, chegaralar va shartli formatlash yordamida o'qishga qulay ko'rinishga keltirish, panellarni mahkamlash va oq-qora chop etishga tayyorlash.
+qadam: Jadval tepasiga sarlavha qo'shing (masalan, «Oshxona uchun xarid ro'yxati, noyabr 2026»), uni jadval kengligi bo'yicha birlashtirib markazlashtiring va 14 pt qalin shrift qiling.
+qadam: Narx va summa ustunlariga ming ajratuvchili son formatini «so'm» belgisi bilan qo'llang; sana ustuniga «KK.OO.YYYY» formatini, ulush ustuniga foiz formatini qo'llang.
+qadam: Sarlavha qatorini qalin qiling, matnni o'rashni yoqing, matnli ustunlarni chapga, sonli ustunlarni o'ngga tekislang; butun jadvalga ingichka, tashqi chegarasiga qalin chiziq qo'ying.
+qadam: Shartli formatlash: summasi 500 000 so'mdan katta kataklarni qalin shriftda ajrating; summa ustuniga ma'lumotlar ustunlarini qo'shing; nomlar ustunidagi takroriy qiymatlarni belgilang.
+qadam: Formula asosidagi qoida yarating: `=$E2>=10` — soni 10 va undan ko'p bo'lgan qatorlarni to'liq ajratsin; qoidalarni boshqarish oynasida qoidalar tartibini tekshiring.
+qadam: Sarlavha qatorini va birinchi ustunni mahkamlang, jadvalni pastga va o'ngga aylantirib tekshiring.
+qadam: Sahifa sozlamalarini belgilang: albom yo'nalishi, «barcha ustunlarni bitta sahifaga sig'dirish», 1-qator har sahifada takrorlansin, pastki kolontitulda sahifa raqami va familiyangiz; oldindan ko'rish rejimida natijani tekshiring.
+anatija: Sarlavhali, to'g'ri son formatlari va chegaralarga ega jadval; kamida uchta shartli formatlash qoidasi; mahkamlangan panellar; bitta sahifaga sig'adigan, oq-qora chop etishga tayyor ko'rinish.
+baho5: Barcha formatlar mazmunga mos, shartli formatlash qoidalari to'g'ri ishlaydi, formula asosidagi qoida butun qatorni ajratadi, panellar mahkamlangan, chop etish ko'rinishi bitta sahifada va o'qish oson.
+masala: Katakdagi qiymat 0,075. Foiz formatida (bitta kasr belgi bilan) qanday ko'rinadi? Katakning haqiqiy qiymati o'zgaradimi?
+yechim: 7,5 % bo'lib ko'rinadi. Katakning qiymati o'zgarmaydi — 0,075 bo'lib qoladi, formulalarda ham shu son ishlatiladi; format faqat ko'rinishni o'zgartiradi.
+masala: B2:B30 diapazonida o'quvchilar baholari bor. «2» bahoni ajratish va 4 dan yuqori baholarni (5) qalin qilish uchun qanday shartli formatlash qoidalari kerak?
+yechim: 1-qoida: «Katak qiymati teng 2» → qalin va tagiga chizilgan shrift. 2-qoida: «Katak qiymati katta 4» (yoki `=B2=5` formulasi) → qalin shrift. Qoidalar B2:B30 diapazoniga qo'llanadi.
+savol: Son formati katakdagi qiymatni o'zgartiradimi? Misol bilan tushuntiring.
+savol: Shartli formatlash qanday vazifani bajaradi? Kasbingizdan misol keltiring.
+savol: Panellarni mahkamlash qachon kerak bo'ladi?
+savol: Oq-qora printer uchun jadvalni formatlashda nimalarga e'tibor berish kerak?
+test: Katakdagi 0,25 qiymatini 25 % ko'rinishida ko'rsatish uchun qaysi format qo'llanadi? | Foiz formati | Pul formati | Sana formati | Matn formati
+test: Katak ko'rinishini uning qiymatiga qarab avtomatik o'zgartirish qanday ataladi? | Shartli formatlash | Panellarni mahkamlash | Avtoto'ldirish | Saralash
+test: Jadvalni pastga aylantirganda sarlavha qatori ko'rinib turishi uchun nima qilinadi? | Panellar mahkamlanadi | Kataklar birlashtiriladi | Shrift kattalashtiriladi | Varaq himoyalanadi
+test: Telefon raqamlari hisoblanmasligi va boshidagi belgilar yo'qolmasligi uchun qaysi format mos? | Matn formati | Pul formati | Foiz formati | Vaqt formati
+test: `=$F2>1000000` qoidasi qo'llanganda nima ajratiladi? | F ustunidagi qiymati 1 000 000 dan katta bo'lgan qatorlar | Faqat F2 katak | Faqat 1 000 000 ga teng kataklar | Barcha bo'sh kataklar
+uyga: Mavzu yuzasidan o'qib o'rganing va uyda tuzgan haftalik xarajatlar jadvalingizni formatlang: pul formati, chegaralar, eng katta xarajatni ajratuvchi shartli formatlash. Jadvalni bitta sahifaga sig'adigan qilib oldindan ko'rish rejimida tekshiring.
+gloss: Formatlash | Katak qiymatini o'zgartirmasdan uning ko'rinishini (shrift, son formati, tekislash, chegara) o'zgartirish.
+gloss: Son formati | Sonning ko'rinish shakli: son, pul, foiz, sana, vaqt, matn.
+gloss: Shartli formatlash | Katak ko'rinishini uning qiymati yoki formula shartiga qarab avtomatik o'zgartirish.
+gloss: Panellarni mahkamlash | Jadval aylantirilganda tanlangan qator yoki ustunlarni ekranda joyida ushlab turish.
+gloss: Kataklarni birlashtirish | Bir nechta qo'shni katakni bitta katakka aylantirish, odatda sarlavha uchun.

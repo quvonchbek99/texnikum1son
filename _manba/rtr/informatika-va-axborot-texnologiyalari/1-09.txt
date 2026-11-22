@@ -1,0 +1,67 @@
+nomi: Elektron xavfsizlik tushunchasi
+modul: 1-modul
+ac: 1.9 Phishing, pharming, smishing, vishing va zararli dastur turlarini aniqlaydi; shaxsiy ma'lumotlar va qurilmani himoya qilish choralarini qo'llaydi.
+maqsad: O'quvchilarda internetdagi firibgarlik va zararli dasturlarning belgilarini aniqlash, kuchli parol va ikki bosqichli autentifikatsiyadan foydalanish hamda shaxsiy ma'lumotlarni himoya qilish ko'nikmasini shakllantirish.
+natija: phishing, pharming, smishing va vishingning farqini misollar bilan tushuntiradi;
+natija: troyan, chuvalchang (worm), josus dastur (spyware), rootkit, reklama dasturi (adware) va tovlamachi dasturni (ransomware) ajratadi;
+natija: shubhali xabar va havolalarni belgilari bo'yicha aniqlaydi;
+natija: kuchli parol tuzadi, ikki bosqichli autentifikatsiyani yoqadi va zaxira nusxa rejasini tuzadi.
+reja: Elektron xavfsizlik va ijtimoiy muhandislik: phishing, pharming, smishing, vishing
+reja: Zararli dasturlar turlari
+reja: Amaliy ish: tahdidlarni aniqlash va himoya choralarini qo'llash
+tayanch: elektron xavfsizlik; shaxsiy ma'lumotlar; ijtimoiy muhandislik; phishing; pharming; smishing; vishing; zararli dastur; troyan; chuvalchang (worm); josus dastur (spyware); rootkit; adware; ransomware; ikki bosqichli autentifikatsiya
+metod: Vaziyatli o'yin | O'qituvchi «bank xodimi» rolida o'quvchiga qo'ng'iroq qilgandek «kartangiz bloklandi, SMS kodni ayting» deydi; o'quvchilar firibgarlik belgilarini (shoshiltirish, maxfiy kod so'rash, qo'rqitish) topadi.
+metod: Kartochkalar bilan ishlash | Guruhlarga 10 ta haqiqiy va soxta xabar kartochkasi tarqatiladi; guruh ularni «xavfsiz» va «xavfli» ga ajratadi va har bir soxta xabardagi belgilarni ko'rsatadi.
+ajihoz: Kompyuter va internet; namunaviy shubhali xabarlar kartochkalari (bosma yoki ekranda); brauzer; Windows xavfsizlik markazi yoki boshqa antivirus; topshiriq varaqasi
+
+## Elektron xavfsizlik va ijtimoiy muhandislik
+**Elektron xavfsizlik** — internetda va raqamli qurilmalardan foydalanganda shaxsiy ma'lumotlar, pul va qurilmani himoya qilish. **Shaxsiy ma'lumotlar** — insonni aniqlash mumkin bo'lgan har qanday ma'lumot: ism-familiya, manzil, telefon, pasport va JShShIR, bank kartasi raqami, fotosurat, parollar. Firibgarlar ko'pincha texnik «buzish»dan ko'ra insonni aldashni afzal ko'radi — bu **ijtimoiy muhandislik** deyiladi.
+- **Phishing** — bank, do'kon yoki davlat xizmati nomidan soxta xat yoki sayt orqali login, parol va karta ma'lumotlarini olish.
+- **Pharming** — foydalanuvchi to'g'ri manzilni yozsa ham, uni soxta saytga yo'naltirish (kompyuterdagi zararli dastur yoki buzilgan nom serveri orqali).
+- **Smishing** — SMS yoki messenjer xabari orqali phishing: «Siz sovrin yutdingiz, havolaga o'ting».
+- **Vishing** — telefon qo'ng'irog'i orqali aldash: «Bank xavfsizlik xizmatidanman, kartangiz bloklandi, SMS kodni ayting».
+Haqiqiy bank xodimi hech qachon karta PIN-kodi, CVV yoki SMS-kodni so'ramaydi. Shubha tug'ilsa, qo'ng'iroqni tugatib, karta orqasidagi rasmiy raqamga o'zingiz qo'ng'iroq qiling.
+
+## Zararli dasturlar turlari
+jadval: Zararli dasturlar
+| Turi | Qanday ishlaydi | Belgisi |
+| Troyan | Foydali dastur (o'yin, «bepul» kalit) qiyofasida o'rnatiladi va yashirin zarar keltiradi | Noma'lum dastur fon rejimida ishlaydi |
+| Chuvalchang (worm) | Tarmoq orqali o'zini o'zi ko'paytirib tarqaladi, foydalanuvchi harakatisiz | Tarmoq va kompyuter sekinlashadi |
+| Josus dastur (spyware) | Bosilgan tugmalar, parollar, saytlarni yashirincha yozib, egasiga yuboradi | Akkauntlarga begona kirishlar |
+| Rootkit | OT ichiga chuqur yashirinib, buzg'unchiga to'liq boshqaruv beradi va boshqa zararli dasturlarni yashiradi | Antivirus o'chib qoladi, aniqlash qiyin |
+| Reklama dasturi (adware) | Doimiy reklama oynalarini chiqaradi, ko'pincha kuzatadi | Brauzerda keraksiz reklamalar |
+| Tovlamachi (ransomware) | Fayllarni shifrlab, ochish uchun pul talab qiladi | Fayllar ochilmaydi, «to'lov» xabari |
+Himoya choralari: OT va dasturlarni yangilab turish, antivirus va fayrvolni yoqish, dasturni faqat rasmiy do'kon va saytlardan o'rnatish, har bir xizmat uchun alohida kuchli parol (kamida 12 belgi, harf, raqam va belgilar aralash), **ikki bosqichli autentifikatsiya** (paroldan tashqari SMS-kod yoki ilova kodi), muhim fayllarning zaxira nusxasi («3-2-1» qoidasi: 3 nusxa, 2 xil saqlovchida, 1 tasi boshqa joyda yoki bulutda).
+
+amaliy: Elektron tahdidlarni aniqlash va himoya choralarini qo'llash
+amaqsad: Shubhali xabarlar va havolalarni belgilariga ko'ra aniqlash, kuchli parol tuzish, ikki bosqichli autentifikatsiyani yoqish va shaxsiy xavfsizlik rejasini tuzish.
+qadam: 10 ta namunaviy xabar kartochkasini tahlil qiling. Har biri uchun jadvalga yozing: xabar turi (xat, SMS, qo'ng'iroq, sayt), xavfsiz yoki xavfli, qaysi tahdid turi (phishing, smishing, vishing va h.k.) va qanday belgilar sezildi (shoshiltirish, sovrin va'dasi, imlo xatosi, g'alati manzil, ilova fayl, maxfiy kod so'rash).
+qadam: Havolani ochmasdan tekshiring: sichqonchani havola ustiga olib boring (telefonda havolani bosib turing) va haqiqiy manzilni o'qing; soxta domenlarni (masalan, harf almashtirilgan yoki ortiqcha so'z qo'shilgan nomlar) rasmiy manzil bilan solishtiring.
+qadam: Uchta parolni baholang: `qwerty123`, `Alisher2009`, `Qor!Yog'di-7Mart` — har biri uchun uzunligi, belgi turlari va taxmin qilish osonligini yozing; o'zingiz uchun yodda qoladigan, lekin kamida 12 belgili parol-ibora tuzing (uni hech kimga ko'rsatmang).
+qadam: O'z akkauntingizdan birida (Google, Telegram yoki boshqa) ikki bosqichli himoyani yoqing yoki yoqish yo'lini topib yozing: masalan, Telegram'da «Sozlamalar → Maxfiylik va xavfsizlik → Ikki bosqichli tasdiqlash».
+qadam: Kompyuteringizda xavfsizlik holatini tekshiring: antivirus yoqilganmi, oxirgi tekshiruv sanasi, OT yangilanishlari o'rnatilganmi, fayrvol faolmi — natijani yozing.
+qadam: Shaxsiy zaxira nusxa rejasini «3-2-1» qoidasi bo'yicha tuzing: qaysi fayllar, qayerga, qancha vaqtda bir marta nusxalanadi.
+qadam: Guruh bilan birga «Raqamli xavfsizlikning 10 qoidasi» eslatmasini oq-qora chop etishga mos shaklda tayyorlang.
+anatija: Xabarlar tahlili jadvali, havolalarni tekshirish natijasi, parollar bahosi va o'zingiz tuzgan parol qoidasi, ikki bosqichli himoya yoqilgani haqidagi qayd, kompyuter xavfsizligi holati, zaxira nusxa rejasi va guruh eslatmasi.
+baho5: Barcha xabarlarni to'g'ri tasniflaydi va belgilarini asoslaydi, havolalarni ochmasdan tekshiradi, kuchli parol qoidasini to'g'ri qo'llaydi, ikki bosqichli himoyani yoqadi va aniq zaxira nusxa rejasini tuzadi.
+masala: Parol faqat lotin harflari (katta va kichik — 52 ta) va raqamlardan (10 ta) iborat, ya'ni har bir belgi uchun 62 variant bor. 8 belgili parolda nechta variant bo'ladi? Kompyuter sekundiga 1 milliard variantni sinasa, barchasini tekshirishga qancha vaqt ketadi?
+yechim: Variantlar soni 62⁸ ≈ 2,18 · 10¹⁴. Vaqt: 2,18 · 10¹⁴ : 10⁹ ≈ 218 000 sekund ≈ 60 soat, ya'ni taxminan 2,5 kun. Parol 12 belgili bo'lsa, 62¹² ≈ 3,2 · 10²¹ variant va 100 ming yildan ortiq vaqt kerak bo'ladi — shuning uchun parol uzunligi juda muhim.
+masala: Tahdid turini aniqlang: a) «Bank xodimiman, kartangizni saqlab qolish uchun SMS kodni ayting» degan qo'ng'iroq; b) «Siz 5 million so'm yutdingiz, olish uchun havolaga o'ting» degan SMS; c) kompyuterdagi barcha fayllar ochilmay qolib, ekranda to'lov talabi chiqdi; d) internetdan «bepul» o'yin o'rnatilgach, ijtimoiy tarmoq paroli o'g'irlandi.
+yechim: a) vishing; b) smishing; c) tovlamachi dastur (ransomware); d) troyan (ichida josus dastur bo'lishi mumkin).
+savol: Phishing va pharmingning farqi nimada?
+savol: Chuvalchang troyandan qanday farq qiladi?
+savol: Firibgar qo'ng'iroq qilganda qanday belgilar sezilishi mumkin va nima qilish kerak?
+savol: Ikki bosqichli autentifikatsiya nima uchun parolning o'zidan ishonchliroq?
+test: SMS yoki messenjer xabari orqali shaxsiy ma'lumotlarni olishga urinish qanday ataladi? | Smishing | Vishing | Pharming | Rootkit
+test: Foydali dastur qiyofasida o'rnatilib, yashirin zarar keltiradigan dastur? | Troyan | Chuvalchang | Antivirus | Drayver
+test: Fayllarni shifrlab, ularni ochish uchun pul talab qiladigan zararli dastur? | Tovlamachi dastur (ransomware) | Reklama dasturi (adware) | Josus dastur (spyware) | Arxivator
+test: Quyidagilardan qaysi biri eng kuchli parol? | Qor!Yog'di-7Mart | qwerty123 | 12345678 | Alisher2009
+test: Bank xodimi deb tanishtirgan odam SMS-kodni so'rasa, nima qilish kerak? | Kodni aytmasdan qo'ng'iroqni tugatib, bankning rasmiy raqamiga o'zingiz qo'ng'iroq qilish | Kodni aytish, chunki u bank xodimi | Karta raqamini ham aytish | Xabarni do'stlarga yuborish
+uyga: Oilangiz a'zolari uchun «Telefon firibgarligidan qanday saqlanish kerak» mavzusida 5–7 qoidadan iborat qisqa eslatma yozing va ular bilan muhokama qiling. Telefoningizdagi ilovalar ro'yxatini ko'rib chiqing: kerak bo'lmagan yoki noma'lum manbadan o'rnatilgan ilovalarni aniqlang.
+gloss: Elektron xavfsizlik | Internet va raqamli qurilmalardan foydalanganda shaxsiy ma'lumotlar, pul va qurilmani himoya qilish.
+gloss: Phishing | Soxta xat yoki sayt orqali login, parol va karta ma'lumotlarini aldab olish.
+gloss: Pharming | Foydalanuvchini to'g'ri manzil yozilgan bo'lsa ham soxta saytga yashirin yo'naltirish.
+gloss: Vishing | Telefon qo'ng'irog'i orqali aldab, maxfiy ma'lumot yoki pul olish.
+gloss: Troyan | Foydali dastur qiyofasida o'rnatilib, yashirin zarar keltiruvchi zararli dastur.
+gloss: Tovlamachi dastur (ransomware) | Fayllarni shifrlab, ularni ochish evaziga to'lov talab qiluvchi zararli dastur.
+gloss: Ikki bosqichli autentifikatsiya | Paroldan tashqari qo'shimcha tasdiq (SMS-kod, ilova kodi) talab qiluvchi kirish usuli.

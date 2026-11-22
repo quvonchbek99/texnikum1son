@@ -164,6 +164,9 @@ details.mv > .ic { padding: 4px 18px 18px; border-top: 1px solid var(--line); }
 .doc figure img { background: #fff; border: 1px solid var(--line); border-radius: 8px; }
 .doc figcaption { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
 .doc table { margin: 10px 0 16px; }
+.doc pre.kod { background: var(--tint); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin: 8px 0 14px; overflow-x: auto; font: 13.5px/1.5 var(--mono); white-space: pre; tab-size: 2; }
+.doc code { font: .92em var(--mono); background: var(--tint); border: 1px solid var(--line); padding: 0 4px; border-radius: 4px; }
+.doc pre.kod code { background: none; border: 0; padding: 0; font: inherit; }
 .kv { display: grid; grid-template-columns: minmax(140px, 220px) 1fr; border: 1px solid var(--line); border-radius: var(--r-s); overflow: hidden; background: var(--card); margin-bottom: 14px; }
 .kv > div { padding: 9px 12px; border-bottom: 1px solid var(--line); }
 .kv > div:nth-child(odd) { background: var(--tint); font-weight: 600; font-size: 14px; color: var(--hero1); }
@@ -241,6 +244,7 @@ dialog .db { padding: 16px 20px; overflow: auto; }
   a { color: #000 !important; text-decoration: none; }
   video, iframe { display: none !important; }
   .print-only { display: block !important; }
+  .doc pre.kod, .doc code { background: #fff !important; border-color: #000 !important; white-space: pre-wrap; }
 }
 .print-only { display: none; }
 #chop { display: none; }

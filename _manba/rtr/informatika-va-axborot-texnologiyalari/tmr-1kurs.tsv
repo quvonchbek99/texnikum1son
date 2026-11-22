@@ -1,0 +1,31 @@
+# O‘qituvchi TMR’idan (asl yozuv): № 	 mavzu 	 tur (N/A/NA) 	 mustaqil ish 	 baholash
+1	Ma`lumot, axborot va bilimlar bazasi.	N	Mavzu yuzasidan o‘qib o’rganish	Og‘zaki so‘rov, Amaliy topshiriq
+2	Kod berish, kodlash va shifrlash.	A	Misol va mashqlar ishlash	Savol-javob, amaliy topshiriq
+3	Ma’lumotlarning toʻgʻriligini tekshirish	NA	Mavzuni konspekt qilish	Amaliy topshiriq, savol-javob
+4	Apparat ta`minot. Ichki va tashqi qurilmalar. Xotira qurilmalari.	A	Kodlash va shifrlashni o’rganish	Amaliy topshiriq
+5	Tizim dastur va foydalanuvchi interfiysi. Drayverlar	N	Takrorlash	Amaliy topshiriq, savol-javob
+6	Amaliy dasturiy ta`minot. Fotosuratni tahrirlash dasturiy taʼminoti. Video tahrirlash dasturiy ta’minoti.	N	Misol va mashqlar ishlash	Amaliy topshiriq
+7	Foydalanuvchi interfeysi dizaynidagi boshqaruv elementlari. Utilit dasturlar. Buyurtma yoki tayyor dasturiy ta`minot.	A	Fotosuratni tahrirlash	Amaliy topshiriq
+8	Kuzatish va boshqarish.	N	Mavzu yuzasidan o‘qib o’rganish	Amaliy topshiriq, test
+9	Elektron xavfsizlik tushunchasi.	A	Misol va mashqlar ishlash	Og‘zaki so‘rov, savol-javob
+10	Salomatlik va xavfsizlik. Oraliq nazorat	N	Mavzuni konspekt qilish	Og‘zaki so‘rov, savol-javob
+11	Raqamli tengsizlik tushunchasi va sabablari.	A	Mavzu yuzasidan o‘qib o’rganish	Amaliy topshiriq, savol-javob
+12	Tarmoq kompyuterlari.	A	Misol va mashqlar ishlash	Og‘zaki so‘rov, savol-javob
+13	Intranet va ekstranet.	NA	Mavzuni konspekt qilish	Amaliy topshiriq
+14	Video va veb konferinsiya.	A	Mavzu yuzasidan o‘qib o’rganish	Amaliy topshiriq, savol-javob
+15	Ekspert tizimi haqida.	N	Misol va mashqlar ishlash	Og‘zaki so‘rov, savol-javob
+16	Ma’lumotlarni qayta ishlash tizimlari.	N	Mavzu yuzasidan o‘qib o’rganish	
+17	Elektron jadval yaratish.	A	Mavzuni konspekt qilish	Amaliy topshiriq
+18	Elektron jadvalni formatlash.	A	Mavzu yuzasidan o‘qib o’rganish	Amaliy topshiriq, test
+19	Katakka absolyut va nisbiy murojaat.	A	Misol va mashqlar ishlash	Og‘zaki so‘rov, savol-javob
+20	Funksiyalar	A		
+21	INDEX va MATCH funksiyalari. Shartli statistik funksiyalar.	A	Mavzuni konspekt qilish	Og‘zaki so‘rov, savol-javob
+22	Validatsiya qoidalari. Elektron jadvalga qoʻllanadigan validatsiya. Maʼlumotlar kiritilishini tekshirish. Maʼlumotlarni filtrlash va saralash.	A	Misol va mashqlar ishlash	Og‘zaki so‘rov, savol-javob
+23	Grafik va diagrammalar	NA	Mavzu yuzasidan o‘qib o’rganish	Amaliy topshiriq, savol-javob
+24	Ma’lumotlar bazasini yaratish.	A	Misol va mashqlar ishlash	Amaliy topshiriq, savol-javob
+25	Relyatsion maʼlumotlar bazasini yaratish.	A	Mavzuni konspekt qilish	Amaliy topshiriq
+26	Ma’lumotlar validatsiyasi va verifikatsiyasi. Qidirish amallari. Murakkab querylar. Ichki va jamlanma querylar	A	Mavzu yuzasidan o‘qib o’rganish	Amaliy topshiriq, savol-javob
+27	Statik va dinamik parametrlar. Ma’lumotlar bazasi doirasida hisoblashlarni amalga oshirish. .	A	Misol va mashqlar ishlash	Amaliy topshiriq, savol-javob
+28	Formni normallashtirish. Maʼlumotlar bazasini 3NFga normallashtirish..	A	Misol va mashqlar ishlash	Amaliy topshiriq
+29	Ma’lumotlar lugʻati. Maʼlumot turlari.	NA	Mavzuni konspekt qilish	Amaliy topshiriq, savol-javob
+30	Fayl va ma’lumotlarni boshqarish. Yakuniy nazorat	NA	Test	Amaliy topshiriq, savol-javob

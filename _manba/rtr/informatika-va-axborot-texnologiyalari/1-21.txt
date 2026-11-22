@@ -1,0 +1,60 @@
+nomi: INDEX va MATCH funksiyalari. Shartli statistik funksiyalar
+modul: 3-modul
+ac: 3.5 INDEX va MATCH funksiyalari bilan jadvaldan ma'lumot qidiradi; COUNTIF, SUMIF, AVERAGEIF va ularning ko'p shartli turlari bilan shartli statistik hisob-kitob qiladi.
+maqsad: O'quvchilarda INDEX va MATCH funksiyalarini birgalikda qo'llab moslashuvchan qidiruv formulalari tuzish hamda shartli statistik funksiyalar yordamida savdo, davomat va xarajatlar bo'yicha hisobotlar tayyorlash ko'nikmasini shakllantirish.
+natija: INDEX va MATCH funksiyalarining vazifasi va argumentlarini tushuntiradi;
+natija: INDEX va MATCH birikmasi bilan VLOOKUP qila olmaydigan qidiruvni (chap tomondagi ustundan) bajaradi;
+natija: COUNTIF, SUMIF, AVERAGEIF bilan bitta shart bo'yicha hisoblaydi;
+natija: COUNTIFS, SUMIFS, AVERAGEIFS, MAXIFS bilan bir nechta shart bo'yicha hisoblaydi;
+natija: shartlarda taqqoslash belgilari, matn va yulduzcha (*) belgisidan foydalanadi.
+reja: INDEX va MATCH funksiyalari
+reja: Shartli statistik funksiyalar
+reja: Amaliy ish: savdo hisobotini tayyorlash
+tayanch: INDEX; MATCH; qidiruv; shartli statistika; COUNTIF; SUMIF; AVERAGEIF; COUNTIFS; SUMIFS; AVERAGEIFS; MAXIFS; mezon (shart)
+metod: Muammoli savol | «Mahsulot kodi jadvalning o'ng tomonida, nomi esa chapda bo'lsa, kod bo'yicha nomni qanday topamiz? VLOOKUP bu yerda nima uchun ishlamaydi?» savoli bilan INDEX va MATCH ga o'tiladi.
+metod: Juftlikda mashq | Juftliklarga savdo jadvali bo'yicha 6 ta savol kartochkasi beriladi («Noyabrda nechta palov sotildi?», «Kassir A ning jami savdosi?»); juftlik har biriga mos shartli funksiyani tanlab, formulani yozadi.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; kafe savdosi bo'yicha namunaviy jadval (sana, taom, kategoriya, soni, narxi, summa, kassir — kamida 40 qator); proyektor
+
+## INDEX va MATCH funksiyalari
+`=INDEX(diapazon; qator_raqami; [ustun_raqami])` diapazondagi ko'rsatilgan o'rindagi qiymatni qaytaradi: `=INDEX(A2:A20; 5)` — A ustunidagi 5-qiymat. `=MATCH(qidiriladigan; diapazon; 0)` esa qiymatning diapazondagi o'rnini (tartib raqamini) topadi; 0 — aniq moslik. Ikkalasi birga ishlatilganda kuchli qidiruv formulasi hosil bo'ladi: `=INDEX(B2:B20; MATCH(F2; D2:D20; 0))` — F2 dagi kodni D ustunidan topib, shu qatordagi B ustun qiymatini (masalan, mahsulot nomini) qaytaradi. VLOOKUP'dan farqli ravishda bu birikma qidiruv ustunining o'ng yoki chap tomonidagi istalgan ustundan qiymat oladi, ustunlar qo'shilganda ham buzilmaydi va katta jadvallarda tezroq ishlaydi. Ruscha Excel'da: ИНДЕКС va ПОИСКПОЗ.
+
+## Shartli statistik funksiyalar
+- `=COUNTIF(diapazon; shart)` — shartga mos kataklar soni: `=COUNTIF(C2:C41; "Ichimlik")`.
+- `=SUMIF(shart_diapazoni; shart; yig'indi_diapazoni)` — shartga mos qatorlar yig'indisi: `=SUMIF(C2:C41; "Ichimlik"; F2:F41)`.
+- `=AVERAGEIF(...)` — shartga mos qiymatlarning o'rtachasi.
+- Bir nechta shart uchun: `COUNTIFS`, `SUMIFS`, `AVERAGEIFS`, `MAXIFS`, `MINIFS`: `=SUMIFS(F2:F41; C2:C41; "Taom"; G2:G41; "Kassir A")`.
+Shartlar matn ("Ichimlik"), son (5), taqqoslash (">100000", "<>0") yoki katak bilan birikma (">"&H1) ko'rinishida yoziladi; yulduzcha istalgan belgilar ketma-ketligini bildiradi: "Palov*". Ruscha Excel'da: СЧЁТЕСЛИ, СУММЕСЛИ, СРЗНАЧЕСЛИ, СЧЁТЕСЛИМН, СУММЕСЛИМН.
+
+amaliy: Kafe savdosi bo'yicha qidiruv va shartli hisobot tayyorlash
+amaqsad: Savdo jadvalidan INDEX va MATCH bilan ma'lumot qidirish hamda shartli statistik funksiyalar yordamida kategoriya, kassir va sana bo'yicha hisobot tayyorlash.
+qadam: Namunaviy savdo jadvalini oching (yoki o'zingiz 40 qatorli jadval tuzing): Sana, Taom, Kategoriya (Taom / Ichimlik / Shirinlik), Soni, Narxi, Summa, Kassir.
+qadam: Alohida «Menyu» jadvalida taom kodi D ustunida, nomi B ustunida bo'lsin; kod kiritilganda nomi va narxini topuvchi formulalar yozing: `=INDEX(B2:B15; MATCH(H2; D2:D15; 0))` va narx uchun shunday formula.
+qadam: «Hisobot» varag'ida har bir kategoriya bo'yicha sotuvlar sonini (`COUNTIF`), jami summani (`SUMIF`) va o'rtacha chek summasini (`AVERAGEIF`) hisoblang.
+qadam: Har bir kassirning jami savdosini va «Taom» kategoriyasidagi savdosini `SUMIFS` bilan hisoblang.
+qadam: 100 000 so'mdan katta buyurtmalar sonini `=COUNTIF(F2:F41; ">100000")` va nomi «Palov» bilan boshlanadigan taomlar savdosini `=SUMIF(B2:B41; "Palov*"; F2:F41)` bilan toping.
+qadam: Ma'lum sana oralig'idagi savdoni hisoblang: boshlanish va tugash sanalari J1 va J2 kataklarida bo'lsin, `=SUMIFS(F2:F41; A2:A41; ">="&J1; A2:A41; "<="&J2)`.
+qadam: Hisobot jadvalini formatlang va eng ko'p savdo qilingan kategoriyani shartli formatlash bilan ajrating; natijalar asosida 3 gapli xulosa yozing.
+anatija: Kod bo'yicha nom va narxni topuvchi INDEX/MATCH formulalari; kategoriyalar, kassirlar va sana oralig'i bo'yicha shartli statistik hisobot; formatlangan jadval va xulosa.
+baho5: INDEX va MATCH to'g'ri birga ishlatilgan, barcha shartli funksiyalarning diapazonlari va shartlari to'g'ri, sana oralig'i bo'yicha formula ishlaydi, xulosa raqamlarga asoslangan.
+masala: A2:A6 da ismlar: Ali, Vali, Zarina, Hasan, Dilnoza; C2:C6 da ballar: 78, 92, 85, 64, 99. «Hasan»ning ballini topadigan INDEX va MATCH formulasini yozing va natijani ayting.
+yechim: `=INDEX(C2:C6; MATCH("Hasan"; A2:A6; 0))`. MATCH «Hasan» ni 4-o'rinda topadi, INDEX C ustunidagi 4-qiymatni qaytaradi: 64.
+masala: Yuqoridagi ballar bo'yicha 80 dan yuqori ball olganlar soni va ularning o'rtacha balini hisoblovchi formulalarni yozing.
+yechim: `=COUNTIF(C2:C6; ">80")` → 3 (92, 85, 99). `=AVERAGEIF(C2:C6; ">80")` → (92 + 85 + 99) : 3 = 92.
+masala: B ustunida avtoservis xizmatlari turi («Diagnostika», «Moy almashtirish», ...), C ustunida summa, D ustunida usta. «Moy almashtirish» xizmatini «Usta 2» bajargan holatlar summasini hisoblovchi formulani yozing (ma'lumotlar 2–100-qatorlarda).
+yechim: `=SUMIFS(C2:C100; B2:B100; "Moy almashtirish"; D2:D100; "Usta 2")`.
+savol: INDEX va MATCH funksiyalari alohida qanday vazifani bajaradi?
+savol: INDEX va MATCH birikmasining VLOOKUP'dan afzalligi nimada?
+savol: SUMIF va SUMIFS funksiyalarining argumentlari tartibidagi farqni tushuntiring.
+savol: Shartda yulduzcha (*) belgisi nimani bildiradi? Misol keltiring.
+test: Qiymatning diapazondagi tartib raqamini topadigan funksiya? | MATCH | INDEX | SUMIF | ROUND
+test: `=INDEX(A2:A10; 3)` formulasi nimani qaytaradi? | A2:A10 diapazonidagi 3-qiymatni (A4 katak) | A3 katakni | Diapazondagi kataklar sonini | 3 sonini
+test: Shartga mos kataklar sonini hisoblaydigan funksiya? | COUNTIF | SUMIF | AVERAGEIF | MAXIFS
+test: Bir nechta shart bo'yicha yig'indini hisoblaydigan funksiya? | SUMIFS | SUMIF | COUNT | MATCH
+test: «100 000 dan katta» shart COUNTIF'da qanday yoziladi? | ">100000" | >100000 | "=>100000" | (100000>)
+uyga: Misol va mashqlar: oilangizning bir oylik xarajatlarini toifalar bo'yicha (oziq-ovqat, transport, kommunal, boshqa) jadvalga kiriting va har bir toifa bo'yicha jami va o'rtacha xarajatni SUMIF va AVERAGEIF bilan hisoblang; eng katta xarajat toifasini INDEX va MATCH bilan toping.
+gloss: INDEX | Diapazondagi ko'rsatilgan qator va ustun o'rnidagi qiymatni qaytaradigan funksiya.
+gloss: MATCH | Qiymatning diapazondagi tartib raqamini (o'rnini) topadigan funksiya.
+gloss: COUNTIF | Diapazondagi shartga mos kataklar sonini hisoblaydigan funksiya.
+gloss: SUMIF | Shartga mos qatorlardagi qiymatlar yig'indisini hisoblaydigan funksiya.
+gloss: SUMIFS | Bir nechta shart bajarilgan qatorlardagi qiymatlar yig'indisini hisoblaydigan funksiya.
+gloss: Mezon (shart) | Shartli funksiyada qaysi kataklar hisobga olinishini belgilaydigan ifoda, masalan ">100000" yoki "Palov*".

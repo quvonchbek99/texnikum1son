@@ -1,0 +1,60 @@
+nomi: Katakka absolyut va nisbiy murojaat
+modul: 3-modul
+ac: 3.3 Nisbiy, absolyut va aralash murojaatlardan, nomlangan katak va diapazonlardan foydalanib formulalar yaratadi va nusxalaydi.
+maqsad: O'quvchilarda formulalarni to'g'ri tuzish, nisbiy, absolyut va aralash murojaatlarning farqini tushunib, formulani nusxalashda kerakli turini tanlash hamda nomlangan katak va diapazonlardan foydalanish ko'nikmasini shakllantirish.
+natija: amallar tartibi va qavslarni hisobga olib formula tuzadi;
+natija: nisbiy, absolyut va aralash murojaatlarni farqlaydi va F4 tugmasi bilan almashtiradi;
+natija: formulani nusxalaganda murojaatlar qanday o'zgarishini oldindan aytib beradi;
+natija: katak va diapazonga nom beradi va nomlardan formulalarda foydalanadi;
+natija: keng tarqalgan formula xatolarini (#DIV/0!, #NAME?, #REF!, #VALUE!) aniqlab tuzatadi.
+reja: Formula tuzish qoidalari va amallar tartibi
+reja: Nisbiy, absolyut va aralash murojaat
+reja: Nomlangan katak va diapazon. Formula xatolari
+tayanch: formula; operator; amallar tartibi; nisbiy murojaat; absolyut murojaat; aralash murojaat; F4 tugmasi; nomlangan katak; nomlangan diapazon; nomlar dispetcheri; formula xatosi
+metod: Muammoli savol | O'qituvchi dollar kursi bitta katakda turgan narxlar ro'yxatida `=B2*E1` formulasini pastga nusxalaydi va natijalar nolga aylanishini ko'rsatadi; o'quvchilar sababini topishga harakat qiladi.
+metod: Mashq-musobaqa | Juftliklar ko'paytirish jadvalini bitta formula bilan tuzishda musobaqalashadi: kim aralash murojaatni birinchi bo'lib to'g'ri yozsa, usulini doskada tushuntiradi.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; proyektor; topshiriq varaqasi
+
+## Formula tuzish qoidalari
+Formula `=` bilan boshlanadi va son, katak manzili, funksiya hamda operatorlardan iborat bo'ladi: `+` qo'shish, `-` ayirish, `*` ko'paytirish, `/` bo'lish, `^` darajaga ko'tarish. Amallar tartibi matematikadagidek: avval qavslar ichidagi amallar, so'ng daraja, keyin ko'paytirish va bo'lish, oxirida qo'shish va ayirish. Masalan, `=B2+C2*2` va `=(B2+C2)*2` turli natija beradi. Formulalarni tekshirish uchun Ctrl + ` (orqa tirnoq) tugmasi natijalar o'rniga formulalarni ko'rsatadi.
+
+## Nisbiy, absolyut va aralash murojaat
+**Nisbiy murojaat** (A1) formula nusxalanganda o'z joyiga mos ravishda o'zgaradi: C2 dagi `=A2*B2` pastga nusxalansa, C3 da `=A3*B3` bo'ladi. Bu bir xil hisobni ko'p qatorga takrorlash uchun qulay.
+**Absolyut murojaat** ($A$1) nusxalanganda o'zgarmaydi. U hamma qatorlar uchun umumiy bo'lgan qiymatga — valyuta kursi, chegirma foizi, soliq stavkasi, soatlik stavka — murojaat qilishda ishlatiladi: `=B2*$E$1`.
+**Aralash murojaat**da faqat ustun ($A1) yoki faqat qator (A$1) qotiriladi. Masalan, ko'paytirish jadvalida `=$A2*B$1` formulasi barcha kataklarga nusxalanadi: A ustuni va 1-qator doim saqlanadi. Formula yozishda katak manzilidan keyin **F4** tugmasini bosib, A1 → $A$1 → A$1 → $A1 ko'rinishlari ketma-ket almashtiriladi.
+
+## Nomlangan katak va diapazon. Formula xatolari
+Katak yoki diapazonga ma'noli nom berish mumkin: katakni tanlab, formulalar qatori chapidagi nom maydoniga `Kurs` deb yozing. Shundan so'ng `=B2*Kurs` formulasi `=B2*$E$1` bilan bir xil ishlaydi, lekin uni o'qish ancha oson. Nomlar har doim absolyut murojaat kabi ishlaydi va «Nomlar dispetcheri» oynasida tahrirlanadi. Keng tarqalgan xatolar: `#DIV/0!` — nolga bo'lish; `#NAME?` — funksiya yoki nom noto'g'ri yozilgan; `#REF!` — formula murojaat qilgan katak o'chirilgan; `#VALUE!` — formulada son o'rniga matn ishlatilgan.
+
+amaliy: Absolyut, nisbiy va aralash murojaatlar bilan hisob-kitob
+amaqsad: Valyuta kursi, chegirma va soliq stavkasi bitta katakda turgan narxlar jadvalini yaratish, aralash murojaat bilan ko'paytirish jadvalini tuzish va nomlangan kataklardan foydalanish.
+qadam: «Narxlar» varag'ida kasbingizga oid 8 ta mahsulot yoki ehtiyot qismning AQSh dollaridagi narxini B ustuniga kiriting; E1 katakka dollar kursini (o'qituvchi aytgan yoki bugungi rasmiy kursni) yozing.
+qadam: C2 katakka so'mdagi narxni hisoblovchi `=B2*$E$1` formulasini yozib, pastga nusxalang; so'ng $ belgilarini olib tashlab nusxalang va natijalar nima uchun noto'g'ri chiqqanini yozib, yana tuzating.
+qadam: E2 katakka chegirma foizini (masalan, 5 %), E3 katakka qo'shilgan qiymat solig'i stavkasini (masalan, 12 %) yozing; D ustunida chegirmali narxni `=C2*(1-$E$2)`, E ustunida soliq bilan narxni `=D2*(1+$E$3)` formulasi bilan hisoblang.
+qadam: E1 katakka `Kurs` nomini bering va C ustunidagi formulalarni `=B2*Kurs` ko'rinishiga o'zgartiring; natija o'zgarmaganini tekshiring. Narxlar diapazoniga `Narxlar` nomini berib, `=SUM(Narxlar)` bilan jami narxni toping.
+qadam: Har bir mahsulot narxining jami narxdagi ulushini `=C2/$C$10` formulasi bilan hisoblang va foiz formatini qo'llang (C10 — jami narx katagi).
+qadam: Yangi varaqda 1 dan 10 gacha ko'paytirish jadvalini tuzing: B1:K1 va A2:A11 ga sonlarni yozing, B2 katakka `=$A2*B$1` formulasini kiritib, butun jadvalga nusxalang.
+qadam: Ctrl + ` tugmasi bilan formulalarni ko'rsatib, uchta turdagi murojaat qanday nusxalanganini tekshiring; ataylab `#DIV/0!` va `#NAME?` xatolarini hosil qilib, ularni tuzating.
+anatija: Kurs, chegirma va soliq stavkasi absolyut murojaat orqali ishlatilgan narxlar jadvali, nomlangan katak va diapazon, ulushlar ustuni, bitta formula bilan tuzilgan ko'paytirish jadvali va xatolarni tuzatish haqidagi qayd.
+baho5: Barcha formulalar to'g'ri turdagi murojaat bilan yozilgan va xatosiz nusxalanadi, nomlar ishlatilgan, ko'paytirish jadvali bitta formula bilan tuzilgan, o'quvchi har bir murojaat turini tushuntira oladi.
+masala: C1 katakda `=A1*$B$1` formulasi bor. U C5 katakka nusxalansa, formula qanday ko'rinadi?
+yechim: Nisbiy qism qatorlar soniga mos o'zgaradi, absolyut qism o'zgarmaydi: `=A5*$B$1`.
+masala: B2 katakdagi `=$A2*B$1` formulasi D4 katakka nusxalansa, qanday ko'rinishga keladi?
+yechim: Ustun 2 ga (B→D), qator 2 ga (2→4) siljiydi. $A — ustun qotirilgan, B$1 — qator qotirilgan. Natija: `=$A4*D$1`.
+masala: Dollar kursi E1 katakda (12 650 so'm), mahsulot narxi B2 da (24 dollar). So'mdagi narxni hisoblab, formulani yozing.
+yechim: Formula: `=B2*$E$1`. Natija: 24 · 12 650 = 303 600 so'm.
+savol: Nisbiy va absolyut murojaatning farqini misol bilan tushuntiring.
+savol: Aralash murojaat qachon kerak bo'ladi?
+savol: Katakka nom berishning qanday afzalliklari bor?
+savol: `#REF!` va `#DIV/0!` xatolari qachon paydo bo'ladi va qanday tuzatiladi?
+test: Formula nusxalanganda o'zgarmaydigan murojaat qaysi? | $E$1 | E1 | E$1 | $E1
+test: C2 dagi `=A2*B2` formulasi C3 ga nusxalansa, qanday bo'ladi? | =A3*B3 | =A2*B2 | =A3*B2 | =B3*C3
+test: Formula yozishda murojaat turlarini almashtiradigan tugma? | F4 | F1 | F12 | Esc
+test: `=(2+3)*4` formulasining natijasi nechaga teng? | 20 | 14 | 24 | 9
+test: Formulada nolga bo'linganda qanday xato chiqadi? | #DIV/0! | #NAME? | #REF! | #N/A
+uyga: Misol va mashqlar ishlang: kasbingizga oid xizmatlar narxi jadvalini tuzing, unda chegirma va qo'shimcha to'lov foizlari alohida kataklarda tursin va absolyut murojaat orqali ishlatilsin. Uchta formulani boshqa joyga nusxalab, natijasini oldindan qog'ozda yozing, so'ng kompyuterda tekshiring.
+gloss: Nisbiy murojaat | Formula nusxalanganda yangi joyga mos ravishda o'zgaradigan katak manzili (A1).
+gloss: Absolyut murojaat | Formula nusxalanganda o'zgarmaydigan, $ belgisi bilan qotirilgan katak manzili ($A$1).
+gloss: Aralash murojaat | Faqat ustuni ($A1) yoki faqat qatori (A$1) qotirilgan katak manzili.
+gloss: Nomlangan katak | Formulalarda manzil o'rniga ishlatiladigan ma'noli nom berilgan katak yoki diapazon.
+gloss: Amallar tartibi | Formulada qavslar, daraja, ko'paytirish va bo'lish, so'ng qo'shish va ayirish bajarilish ketma-ketligi.

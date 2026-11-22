@@ -1,0 +1,111 @@
+nomi: Ma'lumotlarni qayta ishlash tizimlari
+modul: 2-modul
+ac: 2.6 Paketli, onlayn va real vaqt rejimidagi qayta ishlash tizimlarini farqlaydi va vazifaga mos tizimni tanlaydi.
+maqsad: O'quvchilarda ma'lumotlarni qayta ishlash jarayoni, asosiy va tranzaksiya fayllari, paketli, onlayn va real vaqt rejimidagi qayta ishlash tizimlarining ishlash tamoyilini tushuntirish hamda vaziyatga mos tizimni asoslab tanlash ko'nikmasini shakllantirish.
+natija: ma'lumotlarni qayta ishlash jarayonining bosqichlarini (kiritish, qayta ishlash, chiqarish, saqlash) tushuntiradi;
+natija: asosiy fayl va tranzaksiya faylini, yozuv, maydon va kalit maydonni farqlaydi;
+natija: paketli qayta ishlash tizimida asosiy faylni yangilash tartibini tushuntiradi;
+natija: onlayn va real vaqt rejimidagi tizimlarning farqini va qo'llanish sohalarini biladi;
+natija: kasbiy vaziyat uchun mos qayta ishlash tizimini tanlab asoslaydi.
+reja: Ma'lumotlarni qayta ishlash jarayoni. Asosiy va tranzaksiya fayllari
+reja: Paketli qayta ishlash tizimlari
+reja: Onlayn qayta ishlash tizimlari
+reja: Real vaqt rejimidagi qayta ishlash tizimlari. Tizimlarni taqqoslash
+tayanch: ma'lumotlarni qayta ishlash; kiritish; chiqarish; yozuv; maydon; kalit maydon; asosiy fayl; tranzaksiya fayli; paketli qayta ishlash; onlayn qayta ishlash; real vaqt rejimi; yozuvni bloklash; zaxira nusxa (bobo–ota–o'g'il)
+metod: Aqliy hujum | «Oylik maosh, elektr uchun kvitansiya, bankomat va svetofor — ularning hammasi ma'lumotni qayta ishlaydi. Ularning qaysi biri darhol javob berishi shart?» savoli bilan uch xil tizim turiga kirish qilinadi.
+metod: Klaster | Juftliklar «Qayta ishlash tizimlari» markazidan uchta shox — paketli, onlayn, real vaqt — chizib, har biriga 3 tadan misol va 2 tadan belgi yozadi.
+metod: Keys-stadi | Dars oxirida guruhlar oshxonalar tarmog'i uchun ombor hisobi tizimini tanlash keysini yechadi va tanlovini asoslaydi.
+jihoz: Kompyuter va proyektor; taqdimot; asosiy va tranzaksiya fayllari namunasi yozilgan tarqatma material; doska
+
+## 1. Ma'lumotlarni qayta ishlash jarayoni. Asosiy va tranzaksiya fayllari
+Har qanday tashkilot — do'kon, bank, kasalxona, ta'lim muassasasi — har kuni juda ko'p ma'lumot bilan ishlaydi: sotuvlar, to'lovlar, buyurtmalar, davomat, baholar. **Ma'lumotlarni qayta ishlash** — ma'lumotlarni yig'ish, tekshirish, saralash, hisoblash, umumlashtirish, saqlash va uzatish orqali ulardan foydali axborot hosil qilish jarayoni. Uni to'rt bosqichli sikl sifatida tasavvur qilish mumkin:
+#. **Kiritish** — ma'lumot klaviatura, shtrix-kod o'quvchi, sensor, onlayn shakl yoki fayl orqali tizimga kiritiladi; bu bosqichda validatsiya (3-dars) muhim.
+#. **Qayta ishlash** — hisoblash, saralash, qidirish, solishtirish, guruhlash.
+#. **Chiqarish** — natija ekranda, chop etilgan hujjatda, SMS yoki elektron xatda ko'rsatiladi.
+#. **Saqlash** — natijalar va yangilangan ma'lumotlar keyingi foydalanish uchun saqlanadi.
+Ma'lumotlar fayllarda **yozuvlar** ko'rinishida saqlanadi. Yozuv — bitta obyekt (xodim, mijoz, mahsulot) haqidagi barcha ma'lumot; u **maydonlardan** iborat (familiya, lavozim, soatlik stavka). Har bir yozuvni boshqalardan ajratib turadigan noyob maydon **kalit maydon** deyiladi: xodim raqami, mahsulot kodi, hisob raqami.
+Qayta ishlash tizimlarida ikki turdagi fayl ishlatiladi:
+- **Asosiy fayl** (master file) — tashkilotning doimiy, nisbatan kam o'zgaradigan asosiy ma'lumotlari: xodimlar ro'yxati va ularning stavkalari, mahsulotlar va ularning qoldig'i, mijozlar va hisob raqamlari.
+- **Tranzaksiya fayli** (transaction file) — muayyan davrda sodir bo'lgan o'zgarishlar: bu oy ishlangan soatlar, bugungi sotuvlar, kelgan to'lovlar. U asosiy faylni yangilash uchun ishlatiladi.
+jadval: Maosh hisoblash misoli (asosiy fayl + tranzaksiya fayli)
+| Xodim raqami (kalit) | Familiya | Soatlik stavka, so'm | Bu oy ishlangan soat | Hisoblangan maosh, so'm |
+| 1001 | Karimov | 25 000 | 168 | 4 200 000 |
+| 1002 | Saidova | 30 000 | 160 | 4 800 000 |
+| 1003 | Rahimov | 22 000 | 172 | 3 784 000 |
+Jadvalning birinchi uch ustuni asosiy fayldan, «ishlangan soat» ustuni tranzaksiya faylidan olinadi, oxirgi ustun esa qayta ishlash natijasidir (168 · 25 000 = 4 200 000). Haqiqiy tizimlarda bundan tashqari soliq va boshqa ushlanmalar hisoblanadi.
+Masalan, oylik maosh hisoblashda asosiy faylda xodimning raqami, ismi, soatlik stavkasi va oyning boshidagi jami to'lovlari bo'ladi; tranzaksiya faylida esa har bir xodim shu oyda necha soat ishlagani yoziladi. Ikkalasi birlashtirilib, maosh hisoblanadi va asosiy fayl yangilanadi.
+
+## 2. Paketli qayta ishlash tizimlari
+**Paketli qayta ishlash** (batch processing) — ma'lumotlar ma'lum vaqt davomida yig'ilib, keyin bitta «paket» sifatida, odatda inson aralashuvisiz, bir martada qayta ishlanadi. Ko'pincha bu ish tunda yoki dam olish kunlari, kompyuterlar band bo'lmagan paytda bajariladi.
+Misollar:
+- **oylik ish haqi** — oy davomidagi ish soatlari yig'iladi va oy oxirida barcha xodimlar uchun maosh bir vaqtda hisoblanadi;
+- **kommunal to'lov kvitansiyalari** — elektr, gaz va suv hisoblagichlari ko'rsatkichlari yig'ilib, barcha abonentlar uchun hisob-varaqlar bir paytda tayyorlanadi;
+- **imtihon natijalarini qayta ishlash** — barcha javob varaqalari skanerlangach, natijalar birdaniga hisoblanadi;
+- **bank operatsiyalarini kun yakunida hisoblash** — kun davomidagi operatsiyalar bo'yicha hisobotlar va foizlar tunda hisoblanadi.
+### Asosiy faylni yangilash tartibi
+#. Tranzaksiyalar yig'iladi va validatsiyadan o'tkaziladi; xato yozuvlar alohida xatolar hisobotiga chiqariladi.
+#. Tranzaksiya fayli asosiy fayl bilan bir xil tartibda — kalit maydon bo'yicha saralanadi.
+#. Kompyuter asosiy fayldan va tranzaksiya faylidan yozuvlarni ketma-ket o'qiydi; kalitlar mos kelsa, hisob-kitob bajariladi (masalan, soat × stavka).
+#. Hisoblangan natija chiqariladi (to'lov qaydnomasi, kvitansiya) va yangilangan yozuv **yangi asosiy faylga** yoziladi; tranzaksiyasi yo'q yozuvlar o'zgarishsiz ko'chiriladi.
+#. Jarayon oxirida eski asosiy fayl va tranzaksiya fayli zaxira sifatida saqlanadi.
+Paketli tizimlarda xatolarni aniqlash uchun **paket yig'indisi** (nazorat yig'indisi) ishlatiladi: operator kiritishdan oldin qog'ozdagi hujjatlar bo'yicha, masalan, jami ishlangan soatlarni hisoblab yozadi, kompyuter esa kiritilgan yozuvlar bo'yicha shu yig'indini qayta hisoblaydi. Ikkala natija mos kelmasa, paketda tushib qolgan yoki xato kiritilgan yozuv bor degani — u qayta ishlashdan oldin topiladi.
+Bu usulda zaxira nusxalarning **«bobo–ota–o'g'il»** tizimi qo'llanadi: eng yangi asosiy fayl — «o'g'il», undan oldingisi — «ota», undan ham oldingisi — «bobo». Agar yangi fayl buzilsa, «ota» fayl va tegishli tranzaksiya faylidan uni qayta tiklash mumkin.
+Paketli qayta ishlashning afzalliklari: katta hajmdagi bir xil ishlar tez va arzon bajariladi; kompyuter bo'sh paytdan foydalaniladi; operator doimiy ishtirok etishi shart emas; zaxira nusxalar tizimli saqlanadi. Kamchiliklari: asosiy fayl faqat davr oxirida yangilanadi, shuning uchun oraliq vaqtda ma'lumot eskirgan bo'ladi; tranzaksiyadagi xato faqat qayta ishlash vaqtida aniqlanadi; shoshilinch so'rovga darhol javob berib bo'lmaydi.
+
+## 3. Onlayn qayta ishlash tizimlari
+**Onlayn qayta ishlash** (online yoki interaktiv qayta ishlash) — har bir tranzaksiya kiritilishi bilan darhol qayta ishlanadi va asosiy fayl shu zahoti yangilanadi. Foydalanuvchi tizim bilan muloqot qiladi va natijani bir necha soniyada oladi.
+Misollar:
+- **chipta va mehmonxona band qilish** — avia yoki temir yo'l chiptasi, kinoteatr o'rindig'i;
+- **bankomat va onlayn bank** — karta balansi to'lovdan so'ng darhol o'zgaradi;
+- **internet-do'kon** — buyurtma berilgach, mahsulot qoldig'i darhol kamayadi;
+- **kassa (POS) tizimi** — tovar shtrix-kodi o'qilganda narx chiqadi va ombor qoldig'i yangilanadi;
+- **elektron jurnal** — o'qituvchi qo'ygan baho darhol ota-onaga ko'rinadi.
+### Yozuvni bloklash
+Onlayn tizimlarda bir vaqtda ko'p foydalanuvchi ishlaydi. Agar ikki kishi bir paytda bitta oxirgi chiptani sotib olmoqchi bo'lsa, tizim ikkalasiga ham sotib yubormasligi kerak. Buning uchun **yozuvni bloklash** qo'llanadi: birinchi foydalanuvchi o'rindiqni tanlagan zahoti bu yozuv vaqtincha bloklanadi, boshqa foydalanuvchi uni «band» deb ko'radi; to'lov amalga oshmasa, belgilangan vaqtdan keyin blok yechiladi.
+Onlayn tizimlarda har bir operatsiya **tranzaksiya** sifatida bajariladi: u yoki to'liq bajariladi, yoki umuman bajarilmaydi. Masalan, bir kartadan ikkinchisiga pul o'tkazishda birinchi kartadan pul yechilib, ikkinchisiga tushishi bitta tranzaksiya hisoblanadi. Agar o'rtada aloqa uzilsa, tizim yechilgan pulni avtomatik qaytaradi — pul «yo'qolib» qolmaydi. Bu tamoyil bank, do'kon va chipta tizimlarida ma'lumotlar yaxlitligini ta'minlaydi.
+Onlayn qayta ishlashning afzalliklari: ma'lumot doimo dolzarb; mijozga darhol javob beriladi; xatolar kiritish paytidayoq aniqlanadi; ikki marta sotish kabi holatlarning oldi olinadi. Kamchiliklari: tizim doimiy ishlab turishi, tezkor tarmoq va kuchli serverlar talab qiladi, shuning uchun qimmat; server yoki internet to'xtasa, ish to'xtaydi; ko'p foydalanuvchi ishlagani sababli xavfsizlik va zaxiralash murakkablashadi.
+
+## 4. Real vaqt rejimidagi qayta ishlash tizimlari. Tizimlarni taqqoslash
+**Real vaqt rejimidagi qayta ishlash** — kiritilgan ma'lumot shu zahoti qayta ishlanib, natija keyingi kiritilgan ma'lumotga ta'sir qiladigan darajada tez, qat'iy belgilangan vaqt ichida javob beriladigan tizim. Bunday tizimda javobning kechikishi xavf tug'diradi, shuning uchun u kafolatlangan tezlikda ishlaydi. Aslida 8-darsda o'rgangan boshqarish tizimlari — real vaqt tizimlaridir.
+Misollar:
+- **havo harakatini boshqarish** — radar ma'lumotlari asosida samolyotlarning joylashuvi soniya ichida yangilanadi;
+- **avtomobilning tormozni bloklashga qarshi tizimi (ABS)** — g'ildirak sensori bloklanishni sezgach, tizim tormoz bosimini sekundiga ko'p marta o'zgartiradi;
+- **aqlli svetoforlar** va **sanoatdagi texnologik jarayonlarni boshqarish**;
+- **raketa va avtopilot tizimlari**, **reanimatsiya bo'limidagi monitorlar**.
+Real vaqt tizimlariga juda yuqori ishonchlilik talablari qo'yiladi. Ularda muhim sensor va kompyuterlar ko'pincha takrorlanadi (zaxiralanadi): biri ishdan chiqsa, ikkinchisi darhol ishni davom ettiradi. Elektr ta'minoti uzilishiga qarshi uzluksiz quvvat manbalari o'rnatiladi, dasturlar esa juda qattiq sinovdan o'tkaziladi, chunki ulardagi xato inson hayotiga xavf tug'dirishi mumkin.
+Onlayn va real vaqt tizimlari ko'pincha adashtiriladi. Onlayn tizimda bir necha soniyalik kechikish ruxsat etiladi — chipta 3 soniya kechroq band qilinsa, hech narsa bo'lmaydi. Real vaqt tizimida esa javob millisekundlarda va har doim belgilangan muddatda bo'lishi shart: ABS tizimi kechiksa, avtomobil sirpanib ketadi.
+jadval: Qayta ishlash tizimlarini taqqoslash
+| Belgi | Paketli | Onlayn | Real vaqt |
+| Qachon qayta ishlanadi | Davr oxirida, bir martada | Har bir tranzaksiya kiritilganda | Darhol, qat'iy belgilangan vaqt ichida |
+| Foydalanuvchi ishtiroki | Deyarli yo'q | Muloqot qiladi | Ko'pincha inson aralashuvisiz |
+| Ma'lumot dolzarbligi | Davr oxirigacha eskirgan | Doimo dolzarb | Doimo dolzarb |
+| Javob tezligi | Soatlar | Soniyalar | Millisekundlar |
+| Narxi | Arzon | Qimmatroq | Eng qimmat |
+| Misollar | Ish haqi, kvitansiyalar | Chipta band qilish, bankomat, kassa | ABS, havo harakatini boshqarish, svetofor |
+Tashkilotlar ko'pincha bir nechta usulni birga qo'llaydi: do'kon kassasi onlayn ishlaydi, kunlik savdo hisobotlari va buxgalteriya esa tunda paketli tarzda tayyorlanadi; avtomobilning ABS tizimi real vaqtda ishlaydi, servis markazidagi texnik xizmat yozuvlari esa onlayn tizimda saqlanadi.
+Xulosa: ma'lumotlarni qayta ishlash tizimi vazifa talablariga qarab tanlanadi. Katta hajmdagi bir xil ishlarni davr oxirida bajarish uchun paketli, mijozlarga darhol xizmat ko'rsatish uchun onlayn, jarayonlarni xavfsiz boshqarish uchun esa real vaqt rejimidagi tizimlar qo'llanadi.
+
+keys: Oshxonalar tarmog'ida ombor hisobi
+vaziyat: Shahardagi 6 ta oshxonadan iborat tarmoq mahsulot qoldig'ini qog'ozdagi daftarlarda yuritadi va har hafta oxirida natijalarni bosh ofisga topshiradi. Ko'pincha hafta o'rtasida go'sht yoki guruch tugab qoladi, ba'zi mahsulotlar esa ortiqcha xarid qilinib, muddati o'tib buziladi. Direktor yangi tizim tanlamoqchi: bir xodim hafta oxirida barcha ma'lumotni kompyuterga kiritishni, boshqasi esa har bir kassa va omborni markaziy serverga ulashni taklif qildi.
+ksavol: Birinchi taklif qaysi turdagi qayta ishlash tizimi? Nima uchun u muammoni to'liq hal qilmaydi?
+ksavol: Ikkinchi taklif qanday afzallik beradi va qanday talablarni qo'yadi?
+ksavol: Qaysi hisobotlarni paketli usulda tayyorlash maqsadga muvofiq?
+kjavob: Birinchi taklif — paketli qayta ishlash: ma'lumot faqat hafta oxirida yangilanadi, shuning uchun hafta o'rtasidagi tanqislik va ortiqcha xarid oldindan ko'rinmaydi. Ikkinchi taklif — onlayn tizim: har bir sotuv va kirim darhol qoldiqni o'zgartiradi, mahsulot belgilangan minimumdan kamaysa, avtomatik ogohlantirish chiqadi va buyurtma o'z vaqtida beriladi; buning uchun barqaror internet, server, zaxira nusxa va xodimlarni o'qitish kerak. Haftalik va oylik savdo, xarajat va foyda hisobotlari esa tunda paketli usulda tayyorlanishi mumkin.
+savol: Ma'lumotlarni qayta ishlash jarayonining to'rt bosqichini tushuntiring.
+savol: Asosiy fayl va tranzaksiya fayli qanday farq qiladi? Ish haqi misolida tushuntiring.
+savol: Paketli qayta ishlashda asosiy fayl qanday tartibda yangilanadi?
+savol: «Bobo–ota–o'g'il» zaxira tizimi nima uchun kerak?
+savol: Onlayn tizimda yozuvni bloklash qanday muammoning oldini oladi?
+savol: Onlayn va real vaqt rejimidagi tizimlarning farqi nimada? Har biriga misol keltiring.
+test: Oy davomida yig'ilgan ma'lumotlar asosida barcha xodimlarga maosh bir vaqtda hisoblanadi. Bu qaysi qayta ishlash turi? | Paketli | Onlayn | Real vaqt | Interaktiv o'yin
+test: Avia chiptani band qilish tizimi qaysi turga kiradi? | Onlayn qayta ishlash | Paketli qayta ishlash | Faqat qo'lda hisob | Real vaqt boshqaruvi
+test: Avtomobilning ABS tizimi qaysi rejimda ishlaydi? | Real vaqt rejimida | Paketli rejimda | Haftada bir marta | Faqat servis markazida
+test: Tashkilotning doimiy, kam o'zgaradigan asosiy ma'lumotlari saqlanadigan fayl? | Asosiy fayl | Tranzaksiya fayli | Vaqtinchalik fayl | Xatolar hisoboti
+test: Ikki xaridor bir vaqtda oxirgi chiptani sotib olmasligi uchun onlayn tizimda nima qo'llanadi? | Yozuvni bloklash | Paketli qayta ishlash | Defragmentatsiya | Kodlash
+uyga: Mavzu yuzasidan o'qib o'rganing va kundalik hayotingizdan 6 ta tizimni (masalan, maosh kartasi, kommunal to'lov, onlayn do'kon, svetofor, elektron jurnal, liftlar) jadvalga yozing: tizim nomi, qayta ishlash turi, qaysi belgisiga ko'ra aniqladingiz.
+gloss: Ma'lumotlarni qayta ishlash | Ma'lumotlarni yig'ish, tekshirish, saralash, hisoblash va saqlash orqali ulardan axborot hosil qilish jarayoni.
+gloss: Asosiy fayl | Tashkilotning doimiy, kam o'zgaradigan asosiy ma'lumotlari (xodimlar, mahsulotlar, mijozlar) saqlanadigan fayl.
+gloss: Tranzaksiya fayli | Muayyan davrdagi o'zgarishlar (sotuvlar, ishlangan soatlar, to'lovlar) yoziladigan va asosiy faylni yangilash uchun ishlatiladigan fayl.
+gloss: Paketli qayta ishlash | Ma'lumotlar yig'ilib, davr oxirida bir martada inson aralashuvisiz qayta ishlanishi.
+gloss: Onlayn qayta ishlash | Har bir tranzaksiyaning kiritilishi bilan darhol qayta ishlanishi va asosiy faylning shu zahoti yangilanishi.
+gloss: Real vaqt rejimi | Ma'lumot qat'iy belgilangan juda qisqa vaqt ichida qayta ishlanib, natija keyingi kiritishga ta'sir qiladigan rejim.

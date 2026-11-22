@@ -1,0 +1,69 @@
+nomi: Funksiyalar
+modul: 3-modul
+ac: 3.4 Yaxlitlash, sana va vaqt, shartli va qidiruv funksiyalaridan foydalanib kasbiy hisob-kitoblarni bajaradi.
+maqsad: O'quvchilarda elektron jadvalning yaxlitlash (ROUND, ROUNDUP, ROUNDDOWN, INT), sana va vaqt (TODAY, DATE, YEAR, DATEDIF, WEEKDAY), shartli (IF, AND, OR, IFERROR) va qidiruv (VLOOKUP, HLOOKUP) funksiyalaridan foydalanib amaliy masalalarni yechish ko'nikmasini shakllantirish.
+natija: funksiya sintaksisi va argumentlarini to'g'ri yozadi, funksiyalar ustasidan foydalanadi;
+natija: sonlarni kerakli aniqlikda yaxlitlaydi;
+natija: sanalar bo'yicha yosh, staj va kunlar sonini hisoblaydi;
+natija: IF, AND, OR va ichma-ich joylashgan IF bilan shartli hisob-kitob qiladi;
+natija: VLOOKUP yordamida ma'lumotnoma jadvalidan qiymat topadi va xatolarni IFERROR bilan boshqaradi.
+reja: Funksiya tuzilishi. Yaxlitlash funksiyalari
+reja: Sana va vaqt funksiyalari
+reja: Shartli va qidiruv funksiyalari
+tayanch: funksiya; argument; funksiyalar ustasi; ROUND; ROUNDUP; ROUNDDOWN; INT; TODAY; DATE; DATEDIF; WEEKDAY; IF; AND; OR; IFERROR; VLOOKUP; HLOOKUP
+metod: Namoyish va takrorlash | O'qituvchi har bir funksiya guruhidan bittadan misolni ekranda bajaradi, o'quvchilar uni darhol o'z kompyuterida takrorlaydi («men bajaraman — biz bajaramiz — siz bajarasiz»).
+metod: Kartochkalar | Har bir juftlikka kasbiy vaziyat yozilgan kartochka beriladi (masalan, «mijozga 3 kundan ortiq kechikkan buyurtma uchun chegirma»); juftlik mos funksiyani tanlab, formulani yozadi.
+
+## Funksiya tuzilishi. Yaxlitlash funksiyalari
+Funksiya — oldindan tayyorlangan formula: `=NOMI(argument1; argument2; ...)`. Argumentlar son, katak, diapazon, matn yoki boshqa funksiya bo'lishi mumkin. Funksiyani yodlash shart emas: «fx» tugmasi (funksiyalar ustasi) har bir argumentni izoh bilan ko'rsatadi. Rus tilidagi Excel'da funksiyalar nomi ham ruscha bo'ladi (pastdagi jadvalga qarang), LibreOffice esa odatda inglizcha nomlarni ishlatadi.
+`=ROUND(son; xona)` — oddiy yaxlitlash: `=ROUND(1234,567; 1)` → 1234,6; `=ROUND(1234,567; -2)` → 1200 (yuzlikkacha). `ROUNDUP` doim yuqoriga, `ROUNDDOWN` doim pastga yaxlitlaydi; `INT` sonning butun qismini oladi: `=INT(7,9)` → 7. Masalan, 23 metr gazlama 5 metrli o'ramlarda sotilsa, kerakli o'ramlar soni `=ROUNDUP(23/5; 0)` → 5.
+
+## Sana va vaqt funksiyalari
+Elektron jadvalda sana — bu son (kunlar soni), shuning uchun sanalarni ayirib, kunlar farqini topish mumkin: `=C2-B2`. `TODAY()` — bugungi sana, `NOW()` — sana va vaqt, `DATE(2026; 11; 22)` — sanani yaratadi, `YEAR`, `MONTH`, `DAY` — sananing qismlarini ajratadi, `WEEKDAY(sana; 2)` — hafta kuni (1 — dushanba). `=DATEDIF(boshlanish; tugash; "y")` to'liq yillar sonini (yosh, staj) hisoblaydi; "m" — oylar, "d" — kunlar.
+
+## Shartli va qidiruv funksiyalari
+`=IF(shart; rost_bo'lsa; yolg'on_bo'lsa)`: `=IF(D2>=55; "o'tdi"; "o'tmadi")`. Bir nechta shart `AND` (hammasi bajarilsin) va `OR` (bittasi yetarli) bilan birlashtiriladi; ko'p variantli tanlov uchun IF ichma-ich yoziladi. `IFERROR(formula; "xabar")` xato o'rniga tushunarli matn chiqaradi. `=VLOOKUP(qidiriladigan; jadval; ustun_raqami; 0)` ma'lumotnoma jadvalining birinchi ustunidan qiymatni topib, ko'rsatilgan ustundagi mos qiymatni qaytaradi (0 — aniq moslik); `HLOOKUP` xuddi shunday, lekin qatorlar bo'yicha qidiradi. Yangi versiyalarda yanada qulay `XLOOKUP` ham bor.
+jadval: Funksiyalarning inglizcha va ruscha nomlari
+| Inglizcha (LibreOffice, ingliz Excel) | Ruscha Excel | Vazifasi |
+| SUM / AVERAGE | СУММ / СРЗНАЧ | Yig'indi / o'rta qiymat |
+| ROUND / ROUNDUP / INT | ОКРУГЛ / ОКРУГЛВВЕРХ / ЦЕЛОЕ | Yaxlitlash |
+| TODAY / DATE / YEAR | СЕГОДНЯ / ДАТА / ГОД | Sana funksiyalari |
+| DATEDIF / WEEKDAY | РАЗНДАТ / ДЕНЬНЕД | Sanalar farqi / hafta kuni |
+| IF / AND / OR | ЕСЛИ / И / ИЛИ | Shartli funksiyalar |
+| IFERROR | ЕСЛИОШИБКА | Xatoni almashtirish |
+| VLOOKUP / HLOOKUP | ВПР / ГПР | Qidiruv |
+
+amaliy: Funksiyalar yordamida xodimlar ma'lumotlarini qayta ishlash
+amaqsad: Xodimlar jadvalida yaxlitlash, sana, shartli va qidiruv funksiyalaridan foydalanib maosh, yosh, staj, ustama va baholarni avtomatik hisoblash.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; namunaviy fayl: 10 ta xodim (F.I.Sh., lavozim, tug'ilgan sana, ishga kirgan sana, ishlagan soat) va lavozimlar stavkasi jadvali
+qadam: Alohida diapazonda (masalan, H2:I6) lavozimlar va soatlik stavkalar ma'lumotnomasini yarating (masalan, oshpaz, oshpaz yordamchisi, ofitsiant, kassir, omborchi) va unga `Stavkalar` nomini bering.
+qadam: Har bir xodim uchun stavkani `=VLOOKUP(B2; Stavkalar; 2; 0)` formulasi bilan toping; mavjud bo'lmagan lavozim yozilsa, `=IFERROR(VLOOKUP(B2; Stavkalar; 2; 0); "lavozim topilmadi")` xabarini chiqaring.
+qadam: Maoshni hisoblang va yuz so'mgacha yaxlitlang: `=ROUND(E2*F2; -2)`.
+qadam: Xodimning yoshini `=DATEDIF(C2; TODAY(); "y")`, ish stajini `=DATEDIF(D2; TODAY(); "y")` formulalari bilan, ishga kirgan kuni haftaning qaysi kuni bo'lganini `=WEEKDAY(D2; 2)` bilan aniqlang.
+qadam: Staji 5 yildan ko'p bo'lgan xodimlarga 10 % ustama: `=IF(H2>5; G2*0,1; 0)`; staji 3 yildan ko'p VA oyiga 160 soatdan ko'p ishlaganlarga «mukofot» yozuvi: `=IF(AND(H2>3; E2>160); "mukofot"; "-")`.
+qadam: Ish sifati bali (0–100) ustuni qo'shing va uni ichma-ich IF bilan bahoga aylantiring: `=IF(K2>=86; 5; IF(K2>=71; 4; IF(K2>=55; 3; 2)))`.
+qadam: Jadval ostida jami maosh fondini, o'rtacha yoshni (`=ROUND(AVERAGE(...); 1)`) va bugungi sanani `=TODAY()` bilan chiqaring; formulalarni Ctrl + ` orqali tekshiring.
+anatija: Barcha ustunlari funksiyalar yordamida avtomatik hisoblanadigan xodimlar jadvali: stavka, yaxlitlangan maosh, yosh, staj, hafta kuni, ustama, mukofot belgisi va baho, jami ko'rsatkichlar.
+baho5: Barcha funksiyalar to'g'ri argumentlar bilan yozilgan, VLOOKUP aniq moslik bilan ishlaydi va xato IFERROR bilan boshqarilgan, sanalar va shartlar to'g'ri hisoblanadi, o'quvchi har bir funksiyani tushuntira oladi.
+masala: Quyidagi formulalar natijasini toping: a) `=ROUND(2567,849; 2)`; b) `=ROUND(2567,849; -1)`; c) `=ROUNDUP(2,01; 0)`; d) `=INT(-3,2)`.
+yechim: a) 2567,85; b) 2570; c) 3; d) −4 (INT sonni kichik tomonga yaxlitlaydi, shuning uchun −3,2 → −4).
+masala: Mijoz 4 900 000 so'mlik buyurtma berdi. Buyurtma 3 000 000 so'mdan ko'p bo'lsa 5 % chegirma, aks holda chegirma yo'q. Summa B2 da bo'lsa, to'lanadigan summani hisoblovchi formulani yozing va natijani toping.
+yechim: `=IF(B2>3000000; B2*0,95; B2)`. 4 900 000 · 0,95 = 4 655 000 so'm.
+masala: Avtomobil servisga 10.11.2026 da qabul qilinib, 22.11.2026 da topshirildi. Necha kun ta'mirda turganini va topshirilgan kun haftaning qaysi kuni ekanini aniqlovchi formulalarni yozing (sanalar B2 va C2 da).
+yechim: Kunlar: `=C2-B2` → 12 kun. Hafta kuni: `=WEEKDAY(C2; 2)` → 7 (yakshanba).
+savol: Funksiya va argument nima? Funksiyalar ustasi qanday yordam beradi?
+savol: ROUND, ROUNDUP va INT funksiyalarining farqini misol bilan tushuntiring.
+savol: DATEDIF funksiyasi qanday hisob-kitoblarda ishlatiladi?
+savol: VLOOKUP funksiyasining to'rtta argumenti nimani bildiradi?
+test: `=ROUND(15,476; 1)` formulasining natijasi qancha? | 15,5 | 15,4 | 15,48 | 16
+test: Bugungi sanani qaytaradigan funksiya? | TODAY() | NOW(1) | DATE() | YEAR()
+test: `=IF(B2>=55; "o'tdi"; "o'tmadi")` formulasida B2 = 40 bo'lsa, natija qanday? | o'tmadi | o'tdi | 40 | #VALUE!
+test: Ma'lumotnoma jadvalining birinchi ustunidan qiymat topib, boshqa ustundagi mos qiymatni qaytaradigan funksiya? | VLOOKUP | ROUND | COUNT | WEEKDAY
+test: Barcha shartlar bajarilganda «rost» qaytaradigan funksiya? | AND | OR | IFERROR | INT
+uyga: Oilangiz a'zolarining tug'ilgan sanalari bo'yicha jadval tuzing: yoshi (`DATEDIF`), keyingi tug'ilgan kunigacha necha kun qolgani va tug'ilgan kuni haftaning qaysi kuniga to'g'ri kelishi. Kasbingizdan bitta narx-navo jadvalini tuzib, VLOOKUP bilan mahsulot kodi bo'yicha narxini toping.
+gloss: Funksiya | Nomi va argumentlari bilan chaqiriladigan, oldindan tayyorlangan formula.
+gloss: Argument | Funksiyaga beriladigan qiymat: son, katak, diapazon, matn yoki boshqa funksiya.
+gloss: ROUND | Sonni ko'rsatilgan xonagacha yaxlitlaydigan funksiya.
+gloss: DATEDIF | Ikki sana orasidagi to'liq yillar, oylar yoki kunlar sonini hisoblaydigan funksiya.
+gloss: IF | Shart bajarilsa bir qiymatni, bajarilmasa boshqa qiymatni qaytaradigan shartli funksiya.
+gloss: VLOOKUP | Ma'lumotnoma jadvalining birinchi ustunidan qiymatni topib, boshqa ustundagi mos qiymatni qaytaradigan qidiruv funksiyasi.

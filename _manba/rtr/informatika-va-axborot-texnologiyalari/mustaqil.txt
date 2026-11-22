@@ -1,0 +1,342 @@
+# Mustaqil ta'lim topshiriqlari: @@ ID | semestr | modul | soat
+# 1-kurs: 1-semestr 7 × 2 soat, 2-semestr 3 × 2 soat (jami 20); 2-kurs: 10 × 2 soat (jami 20) — TMR bo'yicha
+
+@@ M1 | 1 | 1-modul | 2
+nomi: Kasbimdagi ma'lumot, axborot va bilim
+maqsad: Ma'lumot, axborot va bilim tushunchalarini o'z mutaxassisligidagi real misollar orqali farqlash, ma'lumot manbalarini bevosita va bilvositaga ajratib baholash.
+p: O'z mutaxassisligingizdagi (oshpaz, avtoservis, tikuvchi, elektromontyor va h.k.) ish jarayonidan 5 ta misol tanlang. Har bir misolda kontekstsiz «xom» ma'lumot, unga ma'no berilgandan keyingi axborot va undan kelib chiqadigan bilim (qaror yoki xulosa) ko'rsatilsin.
+p: Misol: «38» — ma'lumot; «Dvigatel harorati 38 °C» — axborot; «Dvigatel hali qizimagan, yuklamani oshirmaslik kerak» — bilim. Har bir misol uchun ma'lumot qayerdan olinganini (o'lchov asbobi, hujjat, internet, suhbat) va u bevosita yoki bilvosita manba ekanini yozing.
+qadam: Mutaxassisligingizdagi 5 ta ish vaziyatini tanlang va har biri uchun bitta raqam, so'z yoki belgi ko'rinishidagi ma'lumotni yozing.
+qadam: Har bir ma'lumotga kontekst qo'shib, uni axborotga aylantiring.
+qadam: Axborot asosida qanday xulosa yoki qaror qabul qilinishini (bilim) yozing.
+qadam: Ma'lumot manbasini ko'rsating va uni bevosita yoki bilvosita manbaga ajrating; har biri uchun bittadan afzallik va kamchilik yozing.
+qadam: Natijani quyidagi jadval ko'rinishida rasmiylashtiring va oxirida 3–4 gaplik xulosa yozing.
+namuna: Ma'lumot → axborot → bilim (namuna)
+| № | Ma'lumot | Axborot | Bilim (xulosa) | Manba turi |
+| 1 | 38 | Dvigatel harorati 38 °C | Dvigatel hali qizimagan, yuklamani oshirmaslik kerak | Bevosita (datchik) |
+| 2 | 1,2 | Bitta porsiya uchun 1,2 kg go'sht kerak | 25 porsiya uchun 30 kg go'sht buyurtma qilinadi | Bilvosita (retsept kitobi) |
+shakl: Jadval va xulosa yozilgan hujjat (qo'lda yoki elektron), keyingi darsda og'zaki himoya.
+manba: 1-dars ma'ruzasi: «Ma'lumot, axborot va bilimlar bazasi»
+manba: Long P., Lawrey S., Ellis V. Cambridge International AS & A Level IT Coursebook, 1-bob
+
+@@ M2 | 1 | 1-modul | 2
+nomi: Kodlash, shifrlash va tekshirish raqamlari bo'yicha mashqlar
+maqsad: Matnni ikkilik kodga o'tkazish, oddiy shifrlash usullarini qo'llash va nazorat raqami yordamida ma'lumot to'g'riligini tekshirish ko'nikmasini mustahkamlash.
+p: Topshiriq uch qismdan iborat: (1) ismingizni ASCII kodlari va ikkilik ko'rinishda yozish; (2) qisqa gapni Sezar usulida shifrlash va sinfdoshingiz yuborgan shifrni ochish; (3) shtrix-kodlarning nazorat raqamini hisoblash va xatoni aniqlash.
+p: Hisob-kitoblarni qo'lda bajaring, so'ng natijani onlayn kodlovchi yoki elektron jadval yordamida tekshiring. Xato chiqsa, uning sababini yozing.
+qadam: Ismingizdagi har bir harfning ASCII kodini (A = 65, a = 97) va 8 bitli ikkilik ko'rinishini jadvalga yozing; jami necha bayt bo'lishini hisoblang.
+qadam: 5–7 so'zli gapni 3 ga siljitish bilan Sezar usulida shifrlang; kalitni alohida yozing.
+qadam: Sinfdoshingiz bilan shifrlangan gaplarni almashib, kalit yordamida oching.
+qadam: Kalit noma'lum bo'lsa, Sezar shifri qanday buzilishini (barcha 25 siljishni sinash) tushuntiring va nima uchun zamonaviy tizimlarda murakkabroq shifrlar ishlatilishini yozing.
+qadam: Uydagi 3 ta mahsulot qadog'idagi EAN-13 shtrix-kodning nazorat raqamini qo'lda hisoblab tekshiring; so'ng bitta kodning bitta raqamini o'zgartirib, xato qanday aniqlanishini ko'rsating.
+namuna: ASCII kodlash (namuna)
+| Harf | ASCII kodi | Ikkilik ko'rinish |
+| A | 65 | 01000001 |
+| l | 108 | 01101100 |
+| i | 105 | 01101001 |
+shakl: Daftarda yoki elektron hujjatda yechimlar; shifrlangan va ochilgan gaplar juftligi.
+manba: 2–3-darslar: «Kod berish, kodlash va shifrlash», «Ma'lumotlarning to'g'riligini tekshirish»
+manba: ASCII jadvali (istalgan ma'lumotnoma yoki darslik ilovasi)
+
+@@ M3 | 1 | 1-modul | 2
+nomi: Mutaxassislik uchun kompyuter konfiguratsiyasini tanlash
+maqsad: Apparat va dasturiy ta'minotni vazifaga mos tanlash, qurilmalar tavsiflarini taqqoslash va tanlovni byudjet doirasida asoslash ko'nikmasini shakllantirish.
+p: Tasavvur qiling: siz ishlaydigan korxona (oshxona, avtoservis, tikuv sexi, dizayn studiyasi va h.k.) uchun bitta ish joyi kompyuterini sotib olish kerak. Byudjet o'qituvchi tomonidan beriladi (masalan, 8 mln so'm). Kompyuterda qanday ishlar bajarilishini aniqlang va shunga mos konfiguratsiya tuzing.
+p: Narxlarni kamida ikkita do'kon yoki onlayn savdo maydonchasidan oling va manbasini yozing. Narxlar o'zgarib turishi sababli sanani ham ko'rsating.
+qadam: Ish joyida bajariladigan 4–5 ta asosiy vazifani yozing (hisob yuritish, chizma, fotosurat tahriri, kassa, videokonferensiya).
+qadam: Har bir vazifa uchun kerakli dasturiy ta'minotni (tizim dasturi, amaliy dasturlar, utilitlar) aniqlang.
+qadam: Protsessor, operativ xotira, doimiy xotira (SSD/HDD), video karta, monitor, kiritish-chiqarish qurilmalari va zaxira qurilmasi bo'yicha tanlov jadvalini tuzing.
+qadam: Har bir tanlovni bir gap bilan asoslang (nima uchun aynan shu hajm yoki tur).
+qadam: Umumiy narxni hisoblang; byudjetdan oshsa, qaysi qismdan tejash mumkinligini va bu ishga qanday ta'sir qilishini yozing.
+namuna: Konfiguratsiya jadvali (namuna)
+| Qism | Tanlangan model / tavsif | Narxi (so'm) | Asoslash |
+| Operativ xotira | 16 GB DDR4 | ... | Bir vaqtda brauzer, jadval va fotomuharrir ishlaydi |
+| Doimiy xotira | 512 GB SSD | ... | Tizim va dasturlar tez yuklanadi |
+shakl: Jadval va qisqa asoslash (elektron hujjat yoki elektron jadval), 3 daqiqalik taqdimot.
+manba: 4–7-darslar: apparat ta'minot, tizim va amaliy dasturiy ta'minot
+manba: Ishlab chiqaruvchilarning rasmiy saytlaridagi texnik tavsiflar
+
+@@ M4 | 1 | 1-modul | 2
+nomi: Shaxsiy elektron xavfsizlik va ish joyi ergonomikasi auditi
+maqsad: O'z qurilmalari va akkauntlari xavfsizligini tekshirish, aniqlangan zaif joylarni bartaraf etish hamda kompyuterda ishlashda sog'liqni saqlash qoidalarini amalda qo'llash.
+p: Audit o'zingizning telefoningiz, kompyuteringiz va 2–3 ta onlayn akkauntingiz (pochta, ijtimoiy tarmoq, messenjer) bo'yicha o'tkaziladi. Hech qanday parol, kod yoki shaxsiy ma'lumotni hisobotga yozmang — faqat «bor / yo'q / tuzatildi» belgilarini qo'ying.
+p: Ikkinchi qismda uydagi yoki o'quv xonasidagi ish joyingizni ergonomika talablariga ko'ra baholang va yaxshilash bo'yicha 3 ta aniq taklif yozing.
+qadam: Parollar mustahkamligini (uzunligi, takrorlanmasligi) va ikki bosqichli autentifikatsiya yoqilganini tekshiring.
+qadam: Operatsion tizim, brauzer va ilovalar yangilanganini, antivirus yoqilganini tekshiring.
+qadam: Ilovalarga berilgan ruxsatlarni (kamera, mikrofon, joylashuv) ko'rib chiqing va keraksizlarini o'chiring.
+qadam: Muhim fayllar zaxira nusxasi borligini tekshiring; yo'q bo'lsa, zaxira oling.
+qadam: Ish joyini baholang: monitor masofasi va balandligi, stul, yoritish, tanaffuslar; 3 ta yaxshilash taklifini yozing.
+qadam: Natijani jadvalga kiriting va «tuzatildi» ustunini to'ldiring.
+namuna: Xavfsizlik va ergonomika audit varaqasi (namuna)
+| Tekshiruv bandi | Holat (bor / yo'q) | Ko'rilgan chora |
+| Ikki bosqichli autentifikatsiya (pochta) | yo'q | Yoqildi |
+| Monitor ko'z darajasida, 50–70 sm masofada | yo'q | Monitor ko'tarildi |
+shakl: To'ldirilgan audit varaqasi va 5–6 gaplik xulosa.
+manba: 8–10-darslar: «Kuzatish va boshqarish», «Elektron xavfsizlik tushunchasi», «Salomatlik va xavfsizlik»
+manba: O'zbekiston Respublikasi qonunchilik ma'lumotlari milliy bazasi — https://lex.uz («Shaxsga doir ma'lumotlar to'g'risida»gi Qonun)
+
+@@ M5 | 1 | 2-modul | 2
+nomi: Raqamli tengsizlik: kichik so'rovnoma va tahlil
+maqsad: Raqamli tengsizlikning sabablarini real ma'lumotlar asosida aniqlash, natijalarni jadval va diagrammada ko'rsatish hamda uni kamaytirish bo'yicha takliflar ishlab chiqish.
+p: Oilangiz, qo'shnilaringiz yoki tanishlaringiz orasida 8–10 kishi bilan anonim so'rovnoma o'tkazing. Ism-familiya, telefon raqami va boshqa shaxsiy ma'lumotlarni yozmang — faqat yosh guruhi va javoblarni qayd eting. Ishtirokchilardan avval rozilik so'rang.
+p: Savollar: internetdan foydalanish imkoniyati, qurilma turi, kunlik foydalanish vaqti, davlat elektron xizmatlaridan foydalana olishi, eng katta qiyinchilik (narx, tezlik, ko'nikma, til).
+qadam: 6–8 ta savoldan iborat so'rovnoma tuzing (javob variantlari bilan).
+qadam: So'rovni o'tkazing va javoblarni elektron jadvalga kiriting.
+qadam: Javoblarni yosh guruhlari bo'yicha umumlashtiring (soni va foizi).
+qadam: Natijani bitta ustunli yoki doiraviy diagrammada ko'rsating.
+qadam: Raqamli tengsizlikning eng ko'p uchragan 2–3 sababini aniqlang va har biri uchun yechim taklif qiling.
+namuna: So'rovnoma natijalari (namuna)
+| Savol | 14–30 yosh | 31–55 yosh | 56+ yosh |
+| Internetdan har kuni foydalanadi | 4 / 4 | 3 / 4 | 0 / 2 |
+| Davlat elektron xizmatlaridan mustaqil foydalanadi | 3 / 4 | 2 / 4 | 0 / 2 |
+shakl: So'rovnoma varaqasi, natijalar jadvali, diagramma va takliflar (elektron hujjat).
+manba: 11-dars: «Raqamli tengsizlik tushunchasi va sabablari»
+manba: Davlat interaktiv xizmatlari portali — https://my.gov.uz
+
+@@ M6 | 1 | 2-modul | 2
+nomi: Kasbga oid oddiy ekspert tizimning qoidalar bazasi
+maqsad: Ekspert tizim tarkibiy qismlarini (bilimlar bazasi, xulosa chiqarish mexanizmi, interfeys) amaliy misolda tushunish va mutaxassislikka oid «AGAR ... U HOLDA ...» qoidalarini tuzish.
+p: Mutaxassisligingizdagi bitta tashxis yoki tanlov muammosini oling: masalan, «avtomobil o't olmayapti», «printer chop etmayapti», «xamir ko'tarilmadi», «tikuv mashinasi ip uzyapti». Tajribali usta yoki o'qituvchidan suhbat orqali bilim to'plang.
+p: Qoidalar bazasi kamida 10 ta qoidadan iborat bo'lsin. Har bir qoidada shart (belgilar) va xulosa (sabab yoki tavsiya) aniq yozilsin. So'ng tizim foydalanuvchiga qanday savollar berishini ketma-ketlik ko'rinishida yozing.
+qadam: Muammo sohasini tanlang va 5–6 ta mumkin bo'lgan sababni yozing.
+qadam: Har bir sababni aniqlaydigan belgilarni (alomatlarni) yozing.
+qadam: 10–12 ta «AGAR ... VA ... U HOLDA ...» qoidasini tuzing.
+qadam: Foydalanuvchiga beriladigan savollar ketma-ketligini (dialog) tuzing.
+qadam: Bitta misol vaziyatda tizim qanday xulosaga kelishini qoidalar orqali qadamba-qadam ko'rsating.
+qadam: Ekspert tizimning bu muammoda afzalligi va cheklovini yozing.
+namuna: Qoidalar bazasi (namuna)
+| № | AGAR (shartlar) | U HOLDA (xulosa) |
+| 1 | Kalit burilganda hech qanday tovush yo'q VA chiroqlar xira | Akkumulyator zaryadi past — zaryadlang yoki almashtiring |
+| 2 | Starter aylanadi VA yoqilg'i ko'rsatkichi 0 da | Yoqilg'i tugagan |
+shakl: Qoidalar jadvali va dialog sxemasi (elektron hujjat), sinfda boshqa juftlik bilan sinab ko'rish.
+manba: 15–16-darslar: «Ekspert tizimi haqida», «Ma'lumotlarni qayta ishlash tizimlari»
+
+@@ M7 | 1 | 3-modul | 2
+nomi: Oylik shaxsiy byudjet elektron jadvali
+maqsad: Elektron jadvalda formulalar, nisbiy va absolyut murojaat, asosiy funksiyalar (SUM, AVERAGE, MAX, MIN, IF) va formatlashdan foydalanib amaliy hisob-kitob jadvalini yaratish.
+p: Talaba yoki yosh oila uchun bir oylik byudjet jadvalini tuzing. Daromadlar (stipendiya, ish haqi, yordam) va xarajatlar (oziq-ovqat, yo'l, aloqa, kommunal, kiyim, o'qish) bo'yicha haftalik ustunlar bo'lsin. Raqamlar shartli bo'lishi mumkin — haqiqiy shaxsiy summalaringizni yozish shart emas.
+p: Jadval yuqorisida «Jamg'arma ulushi» katagi (masalan, 10 %) bo'lsin va jamg'arma summasi absolyut murojaat yordamida hisoblansin.
+qadam: Sarlavha, haftalar (1–4) va toifalar ustun-qatorlarini tuzing; pul formatini qo'llang.
+qadam: Har bir toifa va hafta bo'yicha jami summalarni SUM bilan hisoblang.
+qadam: Oylik o'rtacha haftalik xarajatni AVERAGE, eng katta va eng kichik xarajatni MAX va MIN bilan toping.
+qadam: Jamg'arma summasini `=Daromad*$B$2` ko'rinishidagi absolyut murojaat bilan hisoblang.
+qadam: IF funksiyasi bilan «Xarajat daromaddan oshdi» yoki «Byudjet me'yorida» degan xabar chiqaring.
+qadam: Jadvalni chegaralar, ustun kengligi va qalin sarlavhalar bilan formatlang; chop etishga tayyorlang (oq-qora chop etishda ham o'qiladigan bo'lsin).
+namuna: Byudjet jadvali tuzilishi (namuna)
+| Toifa | 1-hafta | 2-hafta | 3-hafta | 4-hafta | Jami |
+| Oziq-ovqat | 250 000 | 230 000 | 260 000 | 240 000 | `=SUM(B5:E5)` |
+| Yo'l | 60 000 | 60 000 | 55 000 | 65 000 | `=SUM(B6:E6)` |
+shakl: Elektron jadval fayli (XLSX yoki ODS) va bitta sahifali chop etilgan nusxa.
+manba: 17–20-darslar: elektron jadval yaratish, formatlash, murojaatlar, funksiyalar
+manba: LibreOffice Calc qo'llanmasi — https://help.libreoffice.org
+
+@@ M8 | 2 | 3-modul | 2
+nomi: Ma'lumotlar tahlili: shartli funksiyalar, filtr va diagramma asosida hisobot
+maqsad: Shartli statistik funksiyalar, INDEX va MATCH, validatsiya, saralash, filtrlash va diagrammalardan foydalanib ma'lumotlar to'plamini tahlil qilish va xulosa yozish.
+p: Kamida 30 qatorli ma'lumotlar to'plamini tayyorlang: masalan, do'kondagi bir oylik sotuvlar (sana, mahsulot, toifa, soni, narxi) yoki oshxonaning haftalik mahsulot sarfi. Ma'lumotlar shartli bo'lishi mumkin, lekin real hayotga yaqin bo'lsin.
+p: Ma'lumot kiritiladigan ustunlarga validatsiya qoidalarini qo'ying, so'ng tahlil natijalarini alohida «Hisobot» varag'ida jamlang.
+qadam: Ma'lumotlar varag'ini yarating; «Toifa» ustuniga ro'yxatli validatsiya, «Soni» ustuniga musbat butun son validatsiyasini qo'ying.
+qadam: «Hisobot» varag'ida har bir toifa bo'yicha savdo summasini SUMIF, sotuvlar sonini COUNTIF, o'rtacha narxni AVERAGEIF bilan hisoblang.
+qadam: Mahsulot nomi kiritilganda uning narxini INDEX va MATCH yordamida topadigan qidiruv katagini yarating.
+qadam: Ma'lumotlarni summa bo'yicha kamayish tartibida saralang va filtr yordamida bitta toifani ajrating.
+qadam: Toifalar bo'yicha summalar uchun mos diagramma tuzing va unga sarlavha hamda o'q nomlarini qo'shing.
+qadam: Tahlil asosida 4–5 gaplik xulosa yozing: qaysi toifa eng ko'p daromad keltirdi, qaysi biri kam, nimani o'zgartirish kerak.
+shakl: Elektron jadval fayli (ma'lumotlar va «Hisobot» varaqlari bilan).
+manba: 21–23-darslar: INDEX va MATCH, validatsiya, saralash va filtrlash, diagrammalar
+manba: Microsoft Excel yordami — https://support.microsoft.com
+
+@@ M9 | 2 | 3-modul | 2
+nomi: Kichik relyatsion ma'lumotlar bazasi loyihasi
+maqsad: Mutaxassislikka oid soha uchun relyatsion ma'lumotlar bazasini loyihalash, jadvallar, kalitlar va bog'lanishlarni yaratish, 3NF ga keltirish va so'rovlar tuzish.
+p: Sohani tanlang: kutubxona, ehtiyot qismlar ombori, tikuv buyurtmalari, oshxona menyusi va mahsulotlari, sport to'garagi a'zolari. Baza kamida 3 ta bog'langan jadvaldan iborat bo'lsin va har birida 8–10 ta yozuv kiritilsin.
+p: Loyihani avval qog'ozda (ER sxema) chizing, so'ng MBBT da (MS Access yoki LibreOffice Base) yarating. Har bir jadval uchun birlamchi kalit, bog'lanishlar uchun tashqi kalit belgilansin.
+qadam: Sohadagi obyektlar (mavjudliklar) va ularning xususiyatlarini (atributlarini) aniqlang.
+qadam: ER sxema chizing: jadvallar, maydonlar, birlamchi va tashqi kalitlar, bog'lanish turlari (1:N).
+qadam: Jadvallarni 1NF, 2NF va 3NF talablariga tekshiring; takrorlanuvchi ma'lumotlarni alohida jadvalga ajrating.
+qadam: MBBT da jadvallarni yarating, maydon turlari va validatsiya qoidalarini belgilang, bog'lanishlarni (ma'lumot yaxlitligi bilan) o'rnating.
+qadam: Har bir jadvalga 8–10 ta yozuv kiriting.
+qadam: 2 ta so'rov tuzing: bittasi shartli tanlash, ikkinchisi hisoblanadigan maydon yoki jamlanma (masalan, har bir mijozning jami buyurtmasi).
+namuna: Jadvallar tuzilishi (namuna: ehtiyot qismlar ombori)
+| Jadval | Maydonlar | Kalitlar |
+| Qismlar | QismID, Nomi, Narxi, YetkazuvchiID | BK: QismID; TK: YetkazuvchiID |
+| Yetkazuvchilar | YetkazuvchiID, Nomi, Telefon | BK: YetkazuvchiID |
+shakl: MB fayli, ER sxema (rasm yoki qog'ozda) va so'rovlar natijalari skrinshotlari.
+manba: 24–28-darslar: ma'lumotlar bazasini yaratish, relyatsion MB, so'rovlar, normallashtirish
+manba: LibreOffice Base qo'llanmasi — https://help.libreoffice.org
+
+@@ M10 | 2 | 3-modul | 2
+nomi: Ma'lumotlar lug'ati, fayllar tartibi va yakuniy takrorlash
+maqsad: O'z loyihasi uchun ma'lumotlar lug'atini tuzish, fayllarni nomlash va zaxiralash rejasini ishlab chiqish hamda 1-kurs mavzularini yakuniy nazoratga tayyorgarlik uchun tizimlashtirish.
+p: M9 topshirig'ida yaratilgan baza uchun to'liq ma'lumotlar lug'atini tuzing va bazaning taxminiy hajmini hisoblang. Agar M9 bajarilmagan bo'lsa, o'qituvchi bergan namunaviy bazadan foydalaning.
+p: Ikkinchi qismda 1-kursdagi barcha ish fayllaringiz uchun papkalar tuzilmasi, nomlash qoidasi va zaxiralash rejasini yozing, so'ng har bir moduldan 5 tadan o'z-o'zini tekshirish savoli tuzing (javoblari bilan).
+qadam: Har bir jadvaldagi har bir maydon uchun lug'at qatorini to'ldiring: tur, hajm, kalit, majburiylik, validatsiya, tavsif, namuna.
+qadam: Bitta yozuv hajmini va bazaning taxminiy hajmini hisoblang.
+qadam: Ish fayllaringiz uchun papkalar tuzilmasini chizing va 5 ta fayl nomini «yil-oy-kun_mavzu_versiya» qoidasi bo'yicha yozing.
+qadam: Zaxiralash rejasini yozing: nima, qachon, qayerga va qanday tekshiriladi («3-2-1» qoidasi).
+qadam: 1, 2 va 3-modullar bo'yicha 5 tadan test savoli tuzing (to'g'ri javobi bilan).
+namuna: Ma'lumotlar lug'ati (namuna qator)
+| Jadval | Maydon | Turi | Hajmi | Kalit | Majburiy | Tavsif |
+| Qismlar | Narxi | Pul | 8 bayt | — | Ha | Bitta qismning sotish narxi |
+shakl: Lug'at (elektron jadval), zaxiralash rejasi va 15 ta test savoli (elektron hujjat).
+manba: 29–30-darslar: «Ma'lumotlar lug'ati. Ma'lumot turlari», «Fayl va ma'lumotlarni boshqarish»
+
+@@ M11 | 3 | 4-modul | 2
+nomi: «Mening kasbim» 60 soniyalik videorolik
+maqsad: Video tahrirlash dasturida kliplarni montaj qilish, tezlik, o'tish effektlari va titrlardan foydalanish hamda videoni maqsadga mos formatda eksport qilish ko'nikmasini mustahkamlash.
+p: Mutaxassisligingiz haqida 45–60 soniyalik qisqa videorolik tayyorlang: kasb nima bilan shug'ullanadi, qanday asbob va texnologiyalardan foydalanadi, nima uchun u muhim. Telefonda 8–12 ta qisqa klip suratga oling (gorizontal yoki vertikal — bitta yo'nalishda).
+p: Montajni bepul dasturda (Shotcut, CapCut yoki boshqa) bajaring. Musiqa faqat litsenziyasi ruxsat beradigan manbadan (dasturning bepul kutubxonasi yoki mualliflik huquqisiz musiqa) olinsin; begona odamlar yuzini ularning roziligisiz suratga olmang.
+qadam: 6–8 kadrli qisqa ssenariy (raskadrovka) yozing: har kadrda nima ko'rinadi, necha soniya, qanday matn.
+qadam: Kliplarni suratga oling va loyiha uchun mutanosiblikni (16:9 yoki 9:16) belgilang.
+qadam: Kliplarni tartiblang, keraksiz qismlarini kesing, 2–3 joyda o'tish effektini qo'llang.
+qadam: Bitta klipni sekinlashtiring yoki tezlashtiring, boshlanishiga nom titri va oxiriga muallif titrini qo'shing.
+qadam: Fon musiqasini qo'shib, ovoz balandligini nutq yoki tabiiy ovozdan pastroq qiling.
+qadam: Videoni MP4 (H.264), 1080p formatida eksport qiling va fayl hajmini yozing.
+shakl: MP4 fayl va ssenariy varag'i; sinfda namoyish.
+manba: 1–2-darslar: «Videoni tahrirlash dasturi», «Videoklip tezligini o'zgartirish. Eksport»
+manba: Shotcut rasmiy qo'llanmasi — https://shotcut.org
+
+@@ M12 | 3 | 4-modul | 2
+nomi: Audio e'lon yoki qisqa podkast tayyorlash
+maqsad: Audio tahrirlash dasturida yozib olish, shovqinni kamaytirish, ovoz balandligini me'yorlash, fade effektlari va eksport sozlamalaridan foydalanish.
+p: Texnikum radiosi yoki guruh kanali uchun 60–90 soniyalik audio e'lon yoki qisqa podkast (masalan, «Kasbim sirlari», «Bir daqiqalik xavfsizlik maslahati») tayyorlang. Matnni oldindan yozing va ovoz chiqarib mashq qiling.
+p: Yozuvni tinch xonada telefon yoki mikrofonda bajaring, tahrirni Audacity dasturida qiling. Fon musiqasi litsenziyasi ruxsat beradigan manbadan bo'lsin.
+qadam: E'lon yoki podkast matnini yozing (120–180 so'z).
+qadam: Ovozni yozib oling; xato joylarini qayta yozing.
+qadam: Shovqinni kamaytirish effektini qo'llang, keraksiz pauzalar va xatolarni kesing.
+qadam: Ovoz balandligini me'yorlang (normalizatsiya), boshida va oxirida fade in / fade out qo'llang.
+qadam: Fon musiqasini qo'shing va uni nutqdan 10–15 dB pastroq qiling.
+qadam: MP3 (128–192 kbit/s) formatida eksport qiling va WAV bilan hajmini solishtiring.
+shakl: MP3 fayl, matn va qisqa hisobot (qo'llangan effektlar, fayl hajmlari).
+manba: 3–4-darslar: «Audioni tahrirlash dasturlari», «Audiokliplarning tezligi va ovoz balandligi»
+manba: Audacity rasmiy qo'llanmasi — https://www.audacityteam.org
+
+@@ M13 | 3 | 4-modul | 2
+nomi: Yangi texnologiyaning kasbimga ta'siri: tahliliy taqdimot
+maqsad: Yangi axborot texnologiyalaridan birini o'rganib, uning ishlash tamoyili, afzallik va xavflarini hamda mutaxassislikda qo'llanishini tahlil qilish va asosli taqdimot tayyorlash.
+p: Quyidagilardan birini tanlang: 3D printer, 5G aloqa, sun'iy intellekt, boyitilgan yoki virtual reallik, biometrik tizimlar, bulutli texnologiyalar, robototexnika, taqiladigan qurilmalar, avtomatlashtirilgan tarjima. Texnologiya sizning mutaxassisligingizda qanday ishlatilayotgani yoki ishlatilishi mumkinligini o'rganing.
+p: Kamida 3 ta ishonchli manbadan foydalaning (ishlab chiqaruvchi sayti, rasmiy yangiliklar, ilmiy-ommabop maqola) va ularni oxirgi slaydda ko'rsating. Sun'iy intellekt vositasidan foydalansangiz, uning javobini manbalar bilan tekshiring va buni taqdimotda qayd eting.
+qadam: Texnologiyani tanlang va uning qisqa ta'rifi hamda ishlash tamoyilini yozing.
+qadam: Mutaxassisligingizda qo'llanishiga 2–3 ta aniq misol toping.
+qadam: Afzalliklar va xavflar (ish o'rinlari, xavfsizlik, narx, maxfiylik) jadvalini tuzing.
+qadam: 5 yildan keyin bu texnologiya kasbingizni qanday o'zgartirishi mumkinligi haqida o'z fikringizni yozing.
+qadam: 8–10 slayddan iborat taqdimot tayyorlang va 4–5 daqiqalik chiqishni mashq qiling.
+shakl: Taqdimot fayli va manbalar ro'yxati; sinfda himoya.
+manba: 5–10-darslar: «Texnologiya va bizning turmush tarzimiz» va yangi texnologiyalar mavzulari
+
+@@ M14 | 3 | 4-modul | 2
+nomi: Elektron tijorat va internet-bankingda xavfsiz xarid qilish qo'llanmasi
+maqsad: Elektron tijorat va elektron to'lov usullarini taqqoslash, onlayn xaridda xavfsizlik belgilarini aniqlash va boshqalar uchun tushunarli qo'llanma tayyorlash.
+p: Uchta onlayn savdo maydonchasi yoki internet-do'konni hamda ikki xil to'lov usulini (bank kartasi, elektron hamyon, yetkazib berilganda to'lash) solishtiring. Haqiqiy xarid qilish shart emas — faqat saytlar va ilovalardagi ochiq ma'lumotlarni tahlil qiling.
+p: Natija asosida oila a'zolaringiz yoki keksa qo'shnilaringiz uchun «Xavfsiz onlayn xarid: 10 qoida» degan bir sahifali qo'llanma tayyorlang.
+qadam: Uchta maydonchani yetkazib berish, qaytarish shartlari, to'lov usullari va xaridor himoyasi bo'yicha jadvalda solishtiring.
+qadam: Xavfsiz sayt belgilarini (https, rasmiy domen, aloqa ma'lumotlari, sharhlar) tekshiring.
+qadam: Firibgarlikning 3 ta keng tarqalgan usulini (soxta sayt, SMS-kod so'rash, «yutuq» xabari) va ulardan himoyalanishni yozing.
+qadam: Mutaxassisligingizga oid mahsulot yoki xizmatni onlayn sotish g'oyasini 4–5 gapda tavsiflang.
+qadam: «Xavfsiz onlayn xarid: 10 qoida» qo'llanmasini oq-qora chop etishga mos ko'rinishda tayyorlang.
+namuna: Maydonchalarni solishtirish (namuna)
+| Mezon | 1-maydoncha | 2-maydoncha | 3-maydoncha |
+| To'lov usullari | ... | ... | ... |
+| Qaytarish muddati | ... | ... | ... |
+shakl: Solishtirish jadvali va bir sahifali qo'llanma (PDF yoki chop etilgan).
+manba: 11–13-darslar: elektron tijorat va internet banking, masofadan ishlash va sohalardagi texnologiyalar
+
+@@ M15 | 3 | 4-modul | 2
+nomi: Kichik ofis tarmog'ining sxemasi va sozlash rejasi
+maqsad: Tarmoq komponentlari (router, kommutator, simsiz ulanish nuqtasi, fayervol) vazifasini amaliy loyihada qo'llash, tarmoq sxemasini chizish va xavfsiz sozlash rejasini tuzish.
+p: Kichik tashkilot uchun (masalan, 6 ta kompyuter, 1 ta tarmoq printeri, mijozlar uchun Wi-Fi bo'lgan avtoservis yoki oshxona ofisi) tarmoq loyihasini tuzing. Xodimlar va mijozlar tarmog'i alohida bo'lishi kerak.
+p: Sxemani chizish dasturida (draw.io, LibreOffice Draw) yoki qog'ozda chizing. Har bir qurilmaning vazifasini va ular qanday ulanishini (kabel yoki simsiz) ko'rsating.
+qadam: Tarmoqdagi barcha qurilmalar ro'yxatini tuzing.
+qadam: Router, kommutator, simsiz ulanish nuqtasi va fayervolning sxemadagi o'rnini belgilang.
+qadam: Tarmoq sxemasini chizing; xodimlar va mehmonlar tarmog'ini ajrating.
+qadam: Qurilmalar uchun IP manzillar rejasini (masalan, 192.168.1.x) jadvalda yozing.
+qadam: Simsiz tarmoq xavfsizligi sozlamalarini yozing: WPA2/WPA3, kuchli parol, mehmon tarmog'i, router parolini almashtirish, dasturini yangilash.
+qadam: Taxminiy jihozlar ro'yxati va narxini hisoblang.
+namuna: IP manzillar rejasi (namuna)
+| Qurilma | Ulanish | IP manzil |
+| Router | — | 192.168.1.1 |
+| Buxgalter kompyuteri | Kabel | 192.168.1.10 |
+| Tarmoq printeri | Kabel | 192.168.1.50 |
+shakl: Tarmoq sxemasi, IP rejasi va xavfsizlik sozlamalari ro'yxati.
+manba: 14–15-darslar: tarmoq komponentlari, kommutatsiya va ma'lumot uzatish usullari
+
+@@ M16 | 3 | 5-modul | 2
+nomi: Shaxsga doir ma'lumotlarni himoya qilish bo'yicha tavsiyanoma
+maqsad: Tarmoq xavfsizligi usullari va shaxsga doir ma'lumotlarni himoya qilish tamoyillarini real tashkilot misolida qo'llash, xavflarni aniqlash va himoya choralarini taklif qilish.
+p: Kichik tashkilotni tanlang (o'quv markazi, poliklinika qabulxonasi, avtoservis, do'kon). U qanday shaxsga doir ma'lumotlarni to'playdi (ism, telefon, manzil, pasport ma'lumoti, avtomobil raqami) va ular qayerda saqlanishini tasavvur qilib, ro'yxat tuzing.
+p: «Shaxsga doir ma'lumotlar to'g'risida»gi Qonunning asosiy tamoyillari (qonuniylik, maqsadga muvofiqlik, ortiqcha ma'lumot to'plamaslik, aniqlik, saqlash muddati, himoya) asosida tashkilot rahbari uchun bir sahifali tavsiyanoma yozing.
+qadam: Tashkilot to'playdigan ma'lumotlar ro'yxatini tuzing va har biri nima uchun kerakligini yozing; keraksizlarini belgilang.
+qadam: 5 ta xavfni aniqlang (ruxsatsiz kirish, parol oshkor bo'lishi, zararli dastur, qurilma yo'qolishi, xodim xatosi).
+qadam: Har bir xavf uchun texnik (parol, shifrlash, fayervol, zaxira) va tashkiliy (kirish huquqlari, o'qitish) chorani yozing.
+qadam: Mijozdan rozilik olish uchun 3–4 gaplik namunaviy matn tayyorlang.
+qadam: Tavsiyanomani bir sahifada rasmiylashtiring.
+namuna: Xavflar va choralar (namuna)
+| Xavf | Oqibati | Texnik chora | Tashkiliy chora |
+| Umumiy parol ishlatiladi | Kim nima qilgani noma'lum | Har bir xodimga alohida akkaunt | Parol siyosati, o'qitish |
+shakl: Bir sahifali tavsiyanoma va xavflar jadvali.
+manba: 16-dars: «Tarmoq xavfsizligi. Ma'lumotlarni himoya qilish haqidagi qonun tamoyillari»
+manba: O'zbekiston Respublikasi qonunchilik ma'lumotlari milliy bazasi — https://lex.uz
+
+@@ M17 | 3 | 5-modul | 2
+nomi: Kichik loyiha rejasi va Gantt diagrammasi
+maqsad: Loyiha bosqichlarini rejalashtirish, vazifalar davomiyligi va bog'liqligini aniqlash, kritik yo'lni topish va elektron jadvalda Gantt diagrammasini tuzish.
+p: Guruhingiz uchun real kichik loyihani tanlang: kasb ko'rgazmasi, sport musobaqasi, guruh videorolikini tayyorlash, xayriya aksiyasi. Loyiha 2–4 haftaga mo'ljallangan bo'lsin.
+p: Vazifalarni 10–12 taga ajrating, har biri uchun mas'ul, davomiylik (kunda) va oldingi vazifani belgilang. Gantt diagrammasini elektron jadvalda yig'ma ustunli diagramma yoki shartli formatlash yordamida yarating.
+qadam: Loyiha maqsadi, natijasi va muddatini 3–4 gapda yozing (konsepsiya).
+qadam: Vazifalar ro'yxatini tuzing: nomi, mas'ul, davomiylik, oldingi vazifa.
+qadam: Har bir vazifaning eng erta boshlanish va tugash kunini hisoblang.
+qadam: Kritik yo'lni aniqlang va loyihaning umumiy davomiyligini toping.
+qadam: Gantt diagrammasini tuzing; kritik vazifalarni qalin chegara yoki shtrix bilan belgilang (oq-qora chop etishda ham ajralib tursin).
+qadam: Muddatga xavf soladigan 2 ta vaziyatni va ularga qarshi chorani yozing.
+namuna: Vazifalar jadvali (namuna)
+| № | Vazifa | Davomiylik (kun) | Oldingi vazifa | Mas'ul |
+| 1 | G'oyani tasdiqlash | 1 | — | Guruh sardori |
+| 2 | Ssenariy yozish | 3 | 1 | 2 nafar o'quvchi |
+shakl: Elektron jadval fayli (vazifalar va Gantt diagrammasi).
+manba: 18–19-darslar: «Loyiha boshqaruvining bosqichlari», «Kritik bosqichlarni tahlil qilish. Gantt diagrammalari»
+
+@@ M18 | 3 | 5-modul | 2
+nomi: Kichik tashkilot uchun axborot tizimini tahlil qilish va loyihalash
+maqsad: Tizimni ishlab chiqish sikli bosqichlarini (tahlil, dizayn, sinov, joriy etish, hujjatlashtirish) kichik real misolda qo'llash.
+p: Qog'oz daftarda ish yuritadigan kichik tashkilotni tanlang: sartaroshxona yozuvlari, avtoservis buyurtmalari, kutubxona, tikuv ustaxonasi. Hozirgi jarayonni o'rganing (kuzatish, suhbat, hujjatlar tahlili) va kompyuterlashtirilgan tizim loyihasini tuzing.
+p: Loyihada ma'lumotlar oqimi diagrammasi (DFD), bitta ekran formasi eskizi, sinov rejasi va joriy etish usuli bo'lsin. Barcha ma'lumotlar shartli bo'lishi mumkin.
+qadam: Hozirgi jarayonni tavsiflang va uning 3–4 ta muammosini yozing (tahlil).
+qadam: Yangi tizim talablarini yozing: kirish ma'lumotlari, chiqish (hisobotlar), foydalanuvchilar.
+qadam: 0-darajali ma'lumotlar oqimi diagrammasini chizing.
+qadam: Buyurtma yoki yozuv kiritish uchun ekran formasi eskizini chizing (maydonlar, tugmalar, validatsiya).
+qadam: Sinov rejasini tuzing: normal, chegaraviy va noto'g'ri ma'lumotlar bilan 5 ta test holati.
+qadam: Joriy etish usulini (to'g'ridan-to'g'ri, parallel, bosqichma-bosqich, pilot) tanlang va asoslang; foydalanuvchi qo'llanmasining mundarijasini yozing.
+namuna: Sinov rejasi (namuna)
+| № | Tekshiriladigan holat | Kiritiladigan ma'lumot | Kutilgan natija |
+| 1 | Normal | Sana: 12.12.2026 | Qabul qilinadi |
+| 2 | Noto'g'ri | Sana: 32.12.2026 | Xato xabari chiqadi |
+shakl: Loyiha hujjati (elektron hujjat) va sxemalar.
+manba: 20–24-darslar: tizimni tahlil qilish, dizayn, sinov, instalyatsiya va hujjatlashtirish
+
+@@ M19 | 3 | 6-modul | 2
+nomi: Vektorli logotip va oddiy animatsiya
+maqsad: Vektorli grafik muharrirda shakllar, guruhlash, tekislash va transformatsiya uskunalaridan foydalanib logotip yaratish hamda uni oddiy animatsiya bilan jonlantirish.
+p: Mutaxassisligingiz to'garagi, kichik biznes g'oyangiz yoki guruhingiz uchun logotip yarating (Inkscape yoki boshqa vektorli muharrir). Logotip oq-qora ko'rinishda ham tushunarli bo'lsin; boshqa kompaniyalar logotiplaridan nusxa olmang.
+p: So'ng logotipdan 2–3 soniyalik oddiy animatsiya tayyorlang: masalan, element aylanib chiqishi, kattalashishi yoki yozuvning paydo bo'lishi (GIF, taqdimot animatsiyasi yoki CSS animatsiyasi).
+qadam: 3 ta qo'lda chizilgan eskiz tayyorlang va bittasini tanlang.
+qadam: Vektorli muharrirda asosiy shakllarni chizing; guruhlash, tekislash va burish uskunalaridan foydalaning.
+qadam: Matnni qo'shib, uni shaklga mos joylashtiring; ranglar soni 2–3 tadan oshmasin.
+qadam: Logotipni SVG va PNG (shaffof fonli) formatlarida eksport qiling; ikkalasini 32 px va 512 px o'lchamda solishtiring.
+qadam: Logotipdan 2–3 soniyalik animatsiya yarating va eksport qiling.
+shakl: SVG, PNG va animatsiya fayllari; eskizlar.
+manba: 25–26-darslar: «Vektorli va rastrli tasvirlar», «Animatsiyalar»
+manba: Inkscape rasmiy qo'llanmasi — https://inkscape.org
+
+@@ M20 | 3 | 6-modul | 2
+nomi: JavaScript'da interaktiv veb-sahifa: mini-viktorina
+maqsad: HTML shakli, JavaScript o'zgaruvchilari, massivlar, shartlar, sikllar, funksiyalar va hodisalardan foydalanib ishlaydigan interaktiv veb-sahifa yaratish.
+p: Mutaxassisligingiz bo'yicha 5 savollik mini-viktorina sahifasini yarating. Savollar va to'g'ri javoblar massivda saqlansin, foydalanuvchi javobni shakl orqali tanlasin, «Tekshirish» tugmasi bosilganda natija hisoblanib chiqsin.
+p: Kodni oddiy matn muharririda yozing, faylni `index.html` nomi bilan saqlab, brauzerda oching. Xatolarni brauzerning dasturchi konsoli (F12) yordamida toping.
+qadam: HTML tuzilmasini yozing: sarlavha, 5 ta savol (radio tugmalar bilan) va «Tekshirish» tugmasi.
+qadam: To'g'ri javoblarni massivda saqlang, masalan `const javoblar = ["b", "a", "c", "a", "b"];`.
+qadam: `tekshir()` funksiyasini yozing: sikl yordamida har bir savolni tekshirib, ballni hisoblasin.
+qadam: Shart operatori bilan ballga qarab xabar chiqaring (masalan, 5 — «A'lo», 3–4 — «Yaxshi», 0–2 — «Qayta o'qing»).
+qadam: Natijani sahifadagi elementga yozing; javob tanlanmagan savol bo'lsa, ogohlantiruvchi oyna chiqaring.
+qadam: Sahifani 3 xil javoblar to'plami bilan sinab ko'ring va natijalarni yozing.
+shakl: `index.html` fayli va sinov natijalari; sinfda namoyish.
+manba: 28–30-darslar: JavaScript, massivlar, shartlar, sikllar, funksiyalar, HTML shakllari va hodisalar
+manba: MDN Web Docs — https://developer.mozilla.org

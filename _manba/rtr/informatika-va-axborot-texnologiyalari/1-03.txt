@@ -1,0 +1,113 @@
+nomi: Ma'lumotlarning to'g'riligini tekshirish
+modul: 1-modul
+ac: 1.3 Ma'lumotni kiritishda validatsiya va verifikatsiya usullarini tanlaydi va qo'llaydi.
+maqsad: O'quvchilarda ma'lumotlarni kiritish va uzatishda xatolarni oldini olish uchun validatsiya (oqilonalikni tekshirish) va verifikatsiya (asl manba bilan moslikni tekshirish) usullarini tanlash va elektron jadvalda qo'llash ko'nikmasini shakllantirish.
+natija: validatsiya va verifikatsiyaning farqini tushuntiradi va nima uchun ikkalasi ham kerakligini asoslaydi;
+natija: mavjudlik, oraliq, tur, uzunlik, format, ro'yxat va nazorat raqami tekshiruvlarini misollar bilan ajratadi;
+natija: vizual tekshirish va ikki marta kiritish usullarini qo'llaydi;
+natija: elektron jadvalda ma'lumotlarni tekshirish qoidalarini o'rnatadi va ularni normal, chegaraviy va noto'g'ri ma'lumotlar bilan sinaydi.
+reja: Ma'lumotlardagi xatolar va ularning sabablari. Validatsiya va verifikatsiya
+reja: Validatsiya turlari: mavjudlik, oraliq, tur, uzunlik, format, ro'yxat, nazorat raqami
+reja: Verifikatsiya: vizual tekshirish va ikki marta kiritish
+tayanch: validatsiya; verifikatsiya; mavjudlik tekshiruvi; oraliq tekshiruvi; tur tekshiruvi; uzunlik tekshiruvi; format tekshiruvi; ro'yxat tekshiruvi; nazorat raqami; vizual tekshirish; ikki marta kiritish
+metod: Muammoli vaziyat | Dars boshida «Bankomatdan 50 000 so'm o'rniga 500 000 so'm yechildi — xato qayerda bo'lishi mumkin?» savoli bilan xatolarning kelib chiqish manbalari (inson, qurilma, uzatish) muhokama qilinadi.
+metod: Kichik guruhlarda ishlash | Har bir guruhga ro'yxatga olish varaqasining maydonlari (ism, tug'ilgan sana, telefon, JShShIR, guruh) beriladi; guruh har bir maydon uchun mos validatsiya turini tanlab asoslaydi va natijani boshqa guruh bilan almashib tekshiradi.
+jihoz: Kompyuter va proyektor; elektron jadval dasturi (MS Excel yoki LibreOffice Calc); qog'ozdagi namunaviy ro'yxatga olish varaqalari; taqdimot
+
+## 1. Ma'lumotlardagi xatolar va ularning sabablari. Validatsiya va verifikatsiya
+Har qanday axborot tizimi — bank, kasalxona, maktab elektron jurnali yoki do'kon kassasi — kiritilgan ma'lumot qanchalik to'g'ri bo'lsa, shunchalik foydali bo'ladi. Informatikada mashhur qoida bor: «Xato kiritilsa — xato chiqadi» (inglizcha GIGO — garbage in, garbage out). Eng tez kompyuter ham noto'g'ri kiritilgan sondan to'g'ri natija chiqara olmaydi.
+Xatolar turli sabablarga ko'ra yuzaga keladi: klaviaturada noto'g'ri tugmani bosish, raqamlarning o'rnini almashtirish (54 o'rniga 45), qo'lyozmani noto'g'ri o'qish, o'lchov birligini adashtirish, ma'lumotni bir tizimdan ikkinchisiga ko'chirishda yoki tarmoq orqali uzatishda buzilish. Masalan, oshxonada retseptdagi «0,5 kg» ni «5 kg» deb kiritish mahsulot isrofiga, avtoservisda VIN-kodning bitta belgisini adashtirish esa noto'g'ri ehtiyot qism buyurtma qilinishiga olib keladi.
+Xatolarning oldini olish uchun ikki xil tekshiruv qo'llanadi:
+- **Validatsiya** — kiritilgan ma'lumot oqilona va belgilangan qoidalarga mos ekanini kompyuter avtomatik tekshirishi. Validatsiya ma'lumotning «bo'lishi mumkinligini» tekshiradi, lekin uning haqiqatan to'g'riligini kafolatlamaydi.
+- **Verifikatsiya** — kiritilgan ma'lumot asl manbadagi (qog'oz hujjat, anketa) ma'lumot bilan aynan bir xil ekanini tekshirish. Verifikatsiya ko'chirishdagi xatolarni topadi, lekin manbaning o'zidagi xatoni topa olmaydi.
+Ikkala tekshiruv bir-birini to'ldiradi. Masalan, o'quvchining yoshi 61 o'rniga 16 deb kiritilsa, «yosh 14 dan 25 gacha» degan validatsiya qoidasi xatoni sezmaydi, chunki 16 ham ruxsat etilgan qiymat. Bu xatoni faqat asl hujjat bilan solishtirish — verifikatsiya aniqlaydi. Aksincha, operator anketadagi «Tug'ilgan yil: 2099» degan xatoni aynan ko'chirsa, verifikatsiya «mos» deb ko'rsatadi, validatsiya esa bu yil kelajakda ekanini aniqlab, ogohlantiradi.
+
+## 2. Validatsiya turlari
+Validatsiya qoidalari ma'lumotlar bazasi maydonlarida, elektron jadval kataklarida, veb-shakllarda (forma) o'rnatiladi. Eng ko'p ishlatiladigan turlari quyidagilar.
+### Mavjudlik tekshiruvi
+Maydon bo'sh qoldirilmaganini tekshiradi. Masalan, onlayn ro'yxatdan o'tishda ism, telefon raqami va parol majburiy maydonlar hisoblanadi; ular to'ldirilmasa, forma yuborilmaydi va maydon yonida qizil belgi chiqadi.
+### Oraliq tekshiruvi
+Qiymat belgilangan quyi va yuqori chegaralar orasida ekanini tekshiradi. Masalan, baho 2 dan 5 gacha, oylik ish soati 0 dan 300 gacha, retseptdagi mahsulot miqdori 0 dan katta bo'lishi kerak. Chegaralar kiritiladimi yoki yo'qmi (≥ yoki >) aniq belgilanadi.
+### Tur tekshiruvi
+Ma'lumot kerakli turda ekanini tekshiradi: son maydoniga harf, sana maydoniga matn kiritilmasligi kerak. Masalan, «Soni» maydoniga «o'n» so'zi yozilsa, tizim xato beradi.
+### Uzunlik tekshiruvi
+Belgilar soni belgilangan miqdorga teng yoki oraliqda ekanini tekshiradi. Masalan, O'zbekistonda jismoniy shaxsning shaxsiy identifikatsiya raqami (JShShIR) 14 ta raqamdan, avtomobilning VIN-kodi 17 ta belgidan iborat; parol esa kamida 8 belgi bo'lishi talab qilinadi.
+### Format tekshiruvi
+Ma'lumot belgilangan andozaga mosligini tekshiradi. Masalan, telefon raqami «+998 XX XXX XX XX» ko'rinishida, pasport seriyasi 2 ta lotin harfi va 7 ta raqamdan iborat (AA1234567), sana «KK.OO.YYYY» shaklida bo'lishi kerak. Format tekshiruvi uzunlikni ham, har bir o'rindagi belgi turini ham nazorat qiladi.
+### Ro'yxat (qidiruv) tekshiruvi
+Qiymat oldindan berilgan ro'yxatdagi qiymatlardan biri ekanini tekshiradi. Masalan, guruh raqami faqat «01-26, 02-26, ..., 10-26» dan tanlanadi, jins — «erkak/ayol». Ko'pincha bunday maydon ochiladigan ro'yxat ko'rinishida beriladi, shunda xato yozish imkoni deyarli qolmaydi.
+### Nazorat raqami
+Kod oxiriga boshqa raqamlardan maxsus qoida bo'yicha hisoblangan qo'shimcha raqam qo'shiladi. Kod kiritilganda kompyuter nazorat raqamini qayta hisoblab, kiritilgani bilan solishtiradi. Bu usul raqamlarning o'rni almashishi yoki bitta raqam xato yozilishini aniqlaydi. Mahsulotlarning EAN-13 shtrix-kodi, kitoblarning ISBN raqami, bank kartalari raqami shunday himoyalangan.
+EAN-13 kodida nazorat raqami quyidagicha hisoblanadi: chapdan birinchi 12 ta raqamdan toq o'rindagilari 1 ga, juft o'rindagilari 3 ga ko'paytirilib qo'shiladi; yig'indini 10 ga bo'lgandagi qoldiq 10 dan ayiriladi (qoldiq 0 bo'lsa, nazorat raqami 0). Masalan, 400638133393 uchun yig'indi 89 ga teng, 89 ni 10 ga bo'lganda qoldiq 9, demak nazorat raqami 10 − 9 = 1 va to'liq kod 4006381333931 bo'ladi.
+### Boshqa tekshiruvlar
+Muvofiqlik tekshiruvi ikki maydonning o'zaro mosligini nazorat qiladi: masalan, ishga qabul qilingan sana tug'ilgan sanadan oldin bo'lishi mumkin emas, «Yetkazib berish sanasi» buyurtma sanasidan keyin bo'lishi kerak.
+### Validatsiya dasturlarda qanday o'rnatiladi
+Elektron jadvalda (MS Excel, LibreOffice Calc) validatsiya «Ma'lumotlar → Ma'lumotlarni tekshirish» (Data → Data Validation) buyrug'i orqali o'rnatiladi. Oynaning birinchi yorlig'ida qoida turi tanlanadi: butun son, o'nli son, ro'yxat, sana, vaqt, matn uzunligi yoki formula asosidagi qoida. Ikkinchi yorliqda **kiritish xabari** yoziladi — foydalanuvchi katakni tanlaganda paydo bo'ladigan maslahat (masalan, «Bahoni 2 dan 5 gacha kiriting»). Uchinchi yorliqda **xato xabari** va uning turi belgilanadi: «To'xtash» (noto'g'ri qiymat umuman qabul qilinmaydi), «Ogohlantirish» (foydalanuvchi so'roqdan keyin baribir kiritishi mumkin) va «Ma'lumot» (faqat xabar beriladi). Muhim ma'lumotlar uchun «To'xtash» turi tanlanadi.
+Ma'lumotlar bazasida (masalan, MS Access) har bir maydon uchun ma'lumot turi, maydon hajmi, «majburiy maydon» belgisi, kiritish niqobi (masalan, telefon uchun «+998 00 000 00 00») va validatsiya qoidasi (masalan, `>=0 And <=100`) bilan birga xato matni o'rnatiladi. Veb-shakllarda esa brauzer o'zi tekshiradi: majburiy maydon, elektron pochta formati, sonlar oralig'i; qo'shimcha qoidalar JavaScript yordamida yoziladi.
+Yaxshi validatsiya qoidasi foydalanuvchiga xatoni tuzatishda yordam beradi. Xato xabari tushunarli bo'lishi kerak: «Xato!» degan yozuvdan ko'ra «Telefon raqami +998 bilan boshlanib, 13 belgidan iborat bo'lsin» degan xabar ancha foydali. Shuningdek, qoidalar haddan tashqari qattiq bo'lmasligi kerak: masalan, familiyada faqat harflar bo'lsin degan qoida «O'g'li» yoki tirelik familiyalarni rad etib, to'g'ri ma'lumotni ham kiritib bo'lmaydigan qilib qo'yishi mumkin.
+jadval: Validatsiya turlari — qisqacha
+| Tekshiruv | Nima tekshiriladi | Misol |
+| Mavjudlik | Maydon bo'sh emasligi | Ism-familiya kiritilgan |
+| Oraliq | Qiymat chegaralar ichida | Baho 2–5 oralig'ida |
+| Tur | Ma'lumot turi to'g'ri | Narx — son, sana — sana |
+| Uzunlik | Belgilar soni | JShShIR — 14 ta raqam |
+| Format | Andozaga mosligi | +998 90 123 45 67 |
+| Ro'yxat | Ruxsat etilgan qiymatlardan biri | Guruh: 01-26 ... 10-26 |
+| Nazorat raqami | Qo'shimcha raqam qayta hisoblanadi | EAN-13 shtrix-kod |
+
+## 3. Verifikatsiya: vizual tekshirish va ikki marta kiritish
+### Vizual tekshirish
+Ma'lumot kiritilgach, operator ekrandagi yozuvni asl hujjat bilan ko'z bilan solishtirib chiqadi yoki ikkinchi kishi o'qib beradi, birinchisi esa ekrandan kuzatadi. Bu usul oddiy va qo'shimcha dastur talab qilmaydi, lekin charchagan odam xatoni o'tkazib yuborishi mumkin. Ko'p onlayn xizmatlarda buyurtma yoki ariza yuborishdan oldin «Ma'lumotlaringizni tekshiring» sahifasi chiqadi — bu ham vizual tekshirish.
+### Ikki marta kiritish
+Ma'lumot ikki marta kiritiladi va kompyuter ikkala nusxani solishtiradi; farq bo'lsa, ogohlantiradi. Eng tanish misol — yangi parol o'rnatishda uni ikki marta yozish yoki elektron pochta manzilini «takrorlang» maydoniga qayta kiritish. Katta hajmdagi muhim ma'lumotlarni (masalan, imtihon natijalari) ikki xil operator alohida kiritadi va dastur ikki faylni solishtiradi. Bu usul ishonchli, lekin ikki baravar ko'p vaqt va mehnat talab qiladi.
+Ma'lumotlar tarmoq orqali uzatilganda verifikatsiya avtomatik bajariladi: juftlik biti (paritet), nazorat yig'indisi kabi usullar yordamida qabul qilingan ma'lumot yuborilgani bilan bir xil ekani tekshiriladi va buzilgan bo'lak qayta so'raladi.
+Juftlik biti qanday ishlashini misolda ko'raylik. Juftlik tizimida har bir baytdagi birlar soni juft bo'lishi kerak. 7 bitli 1011001 kodida 4 ta bir bor — bu juft son, shuning uchun oxiriga 0 qo'shiladi va 10110010 yuboriladi. Agar uzatishda bitta bit o'zgarib, 10100010 qabul qilinsa, birlar soni 3 ga — toq songa aylanadi va qabul qiluvchi kompyuter xato borligini darhol aniqlaydi. Biroq ikkita bit bir vaqtda o'zgarsa, birlar soni yana juft bo'lib qoladi va xato sezilmaydi; shuning uchun muhim tizimlarda murakkabroq nazorat yig'indilari ishlatiladi.
+jadval: Validatsiya va verifikatsiyani taqqoslash
+| Belgi | Validatsiya | Verifikatsiya |
+| Maqsadi | Ma'lumot oqilona va qoidaga mos | Ma'lumot asl manba bilan bir xil |
+| Kim bajaradi | Kompyuter, avtomatik | Inson yoki kompyuter (solishtirish) |
+| Nimani topa olmaydi | Ruxsat etilgan, lekin noto'g'ri qiymatni | Manbaning o'zidagi xatoni |
+| Misol | Baho 2–5 oralig'ida | Parolni ikki marta kiritish |
+Xulosa: sifatli axborot tizimida ma'lumot kiritilayotganda validatsiya qoidalari ishlaydi, muhim ma'lumotlar esa qo'shimcha ravishda verifikatsiya qilinadi. Tekshiruv qoidalarini tuzgach, ularni sinab ko'rish kerak: **normal** ma'lumot (masalan, baho 4), **chegaraviy** ma'lumot (2 va 5) va **noto'g'ri** ma'lumot (7, −1, «besh») bilan. Bu yondashuv tizimlarni sinovdan o'tkazishda ham qo'llanadi va 2-kursda batafsil o'rganiladi.
+
+keys: Kasalxonadagi xato
+vaziyat: Poliklinikada bemor kartasini elektron tizimga kiritishda hamshira bemorning yoshini 7 o'rniga 70 deb yozdi. Tizimda «yosh 0 dan 120 gacha» degan qoida bor edi, shuning uchun xato e'tiborsiz qoldi. Shifokor dori miqdorini kattalar me'yori bo'yicha tavsiya qildi, faqat dorixonadagi farmatsevt bola bilan kelgan onaga savol bergach, xato aniqlandi.
+ksavol: Nima uchun validatsiya qoidasi xatoni aniqlamadi?
+ksavol: Bu xatoni qaysi verifikatsiya usuli bilan oldini olish mumkin edi?
+ksavol: Tizimga yana qanday muvofiqlik tekshiruvi qo'shishni taklif qilasiz?
+kjavob: 70 qiymati «0–120» oralig'ida bo'lgani uchun validatsiya uni to'g'ri deb qabul qildi — validatsiya qiymatning haqiqatan to'g'riligini kafolatlamaydi. Kiritilgan ma'lumotni hujjat bilan vizual tekshirish yoki yosh va tug'ilgan sanani alohida kiritib, ularning mosligini tekshirish xatoni aniqlar edi. Taklif: yoshni qo'lda kiritmasdan tug'ilgan sanadan avtomatik hisoblash va bolalar bo'limiga yozilgan bemor uchun yosh 18 dan katta bo'lsa ogohlantirish chiqarish (muvofiqlik tekshiruvi).
+savol: Validatsiya va verifikatsiyaning farqini misol bilan tushuntiring.
+savol: Nima uchun validatsiya ma'lumotning to'g'riligini to'liq kafolatlamaydi?
+savol: Uzunlik va format tekshiruvlari bir-biridan nimasi bilan farq qiladi?
+savol: Nazorat raqami qanday xatolarni aniqlashga yordam beradi?
+savol: Ikki marta kiritish usulining afzallik va kamchiligini ayting.
+savol: Tekshiruv qoidalarini sinashda qanday uch xil ma'lumotdan foydalaniladi?
+amaliy: Ro'yxatga olish varaqasi uchun tekshiruv qoidalarini o'rnatish va sinash
+amaqsad: Elektron jadvalda o'quvchilarni ro'yxatga olish varaqasini yaratib, har bir maydonga mos validatsiya qoidasini o'rnatish, ularni sinov ma'lumotlari bilan tekshirish va ikki marta kiritish orqali verifikatsiya qilish.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; qog'ozdagi 10 ta namunaviy ro'yxatga olish varaqasi; topshiriq varaqasi
+qadam: Varaqqa ustun sarlavhalarini yozing: Ism, Familiya, Tug'ilgan yil, Guruh, Telefon, Baho.
+qadam: «Tug'ilgan yil» ustuniga oraliq tekshiruvi o'rnating: Ma'lumotlar → Ma'lumotlarni tekshirish (Data Validation) → Butun son, 2005 dan 2012 gacha; xato xabari matnini yozing.
+qadam: «Guruh» ustuniga ro'yxat tekshiruvi o'rnating: Ro'yxat → manba sifatida alohida varaqdagi guruhlar ro'yxatini (01-26 ... 10-26) ko'rsating.
+qadam: «Telefon» ustuniga formula bilan format tekshiruvi o'rnating: Boshqa (Custom) → `=AND(LEFT(E2;4)="+998";LEN(E2)=13)` (raqam bo'shliqsiz, masalan +998901234567 ko'rinishida kiritiladi).
+qadam: «Baho» ustuniga 2 dan 5 gacha butun son, «Ism» va «Familiya» ustunlariga 2 dan 30 gacha belgi uzunligi qoidasini o'rnating.
+qadam: Har bir qoidani sinang: normal (masalan, 2009), chegaraviy (2005, 2012) va noto'g'ri (2015, «ikki ming») qiymatlarni kiritib, natijani sinov jadvaliga yozing: kiritilgan qiymat, kutilgan natija, haqiqiy natija.
+qadam: Ikki marta kiritish: siz va sherigingiz bir xil 10 ta varaqani ikki alohida varaqqa kiriting; uchinchi varaqda `=IF(Varaq1!A2=Varaq2!A2;"mos";"FARQ")` formulasi bilan solishtiring va farqlarni asl hujjat bo'yicha tuzating.
+qadam: Ishni «Familiya_tekshiruv» nomi bilan saqlang va qaysi xatolarni validatsiya, qaysilarini verifikatsiya topganini 3–4 gap bilan yozing.
+anatija: Validatsiya qoidalari o'rnatilgan ro'yxatga olish varaqasi, to'ldirilgan sinov jadvali (normal, chegaraviy, noto'g'ri ma'lumotlar), ikki marta kiritish natijasi va xulosa.
+baho5: Barcha maydonlarga mos validatsiya turi o'rnatilgan, har bir qoida uch xil sinov ma'lumoti bilan tekshirilgan, ikki marta kiritishdagi farqlar topilib tuzatilgan, xulosa asosli.
+masala: 478000123456 kodining EAN-13 nazorat raqamini hisoblang.
+yechim: Toq o'rindagi raqamlar (×1): 4 + 8 + 0 + 1 + 3 + 5 = 21; juft o'rindagilar (×3): (7 + 0 + 0 + 2 + 4 + 6) · 3 = 19 · 3 = 57. Yig'indi 21 + 57 = 78; 78 ni 10 ga bo'lgandagi qoldiq 8; nazorat raqami 10 − 8 = 2. To'liq kod: 4780001234562.
+masala: Onlayn do'kon buyurtma formasidagi maydonlar uchun validatsiya turini tanlang: a) mijoz ismi; b) mahsulot soni; c) yetkazib berish shahri; d) telefon raqami.
+yechim: a) mavjudlik va uzunlik tekshiruvi; b) tur (butun son) va oraliq tekshiruvi (masalan, 1 dan 50 gacha); c) ro'yxat tekshiruvi (ochiladigan ro'yxatdan tanlash); d) format tekshiruvi (+998 XX XXX XX XX) va uzunlik tekshiruvi.
+test: Kiritilgan ma'lumot asl hujjat bilan bir xil ekanini tekshirish nima deyiladi? | Verifikatsiya | Validatsiya | Shifrlash | Saralash
+test: «Baho 2 dan 5 gacha bo'lishi kerak» qoidasi qaysi tekshiruvga misol? | Oraliq tekshiruvi | Format tekshiruvi | Uzunlik tekshiruvi | Mavjudlik tekshiruvi
+test: Yangi parolni ikki marta kiritish talab qilinishi qaysi usulga misol? | Ikki marta kiritish (verifikatsiya) | Ro'yxat tekshiruvi | Nazorat raqami | Tur tekshiruvi
+test: JShShIR 14 ta raqamdan iborat bo'lishini tekshirish qaysi validatsiya turi? | Uzunlik tekshiruvi | Oraliq tekshiruvi | Ro'yxat tekshiruvi | Muvofiqlik tekshiruvi
+test: Validatsiya qaysi xatoni aniqlay olmaydi? | Ruxsat etilgan oraliqdagi, lekin noto'g'ri qiymatni | Son maydoniga yozilgan harfni | Bo'sh qoldirilgan majburiy maydonni | Ro'yxatda yo'q qiymatni ## Masalan, yosh 61 o'rniga 16 kiritilsa, qiymat oraliqqa mos bo'lgani uchun validatsiya xatoni sezmaydi.
+uyga: Uyingizdagi biror hujjat (masalan, kommunal to'lov kvitansiyasi yoki onlayn ariza) maydonlarini tahlil qiling: har bir maydon uchun qaysi validatsiya turi kerakligini jadvalda yozing. Bitta mahsulot qadog'idagi 13 raqamli shtrix-kodning nazorat raqamini qo'lda tekshiring.
+gloss: Validatsiya | Kiritilgan ma'lumot oqilona va belgilangan qoidalarga mosligini kompyuter tomonidan avtomatik tekshirish.
+gloss: Verifikatsiya | Kiritilgan yoki uzatilgan ma'lumot asl manba bilan bir xilligini tekshirish.
+gloss: Oraliq tekshiruvi | Qiymat belgilangan quyi va yuqori chegaralar orasidaligini tekshiradigan validatsiya.
+gloss: Format tekshiruvi | Ma'lumot belgilangan andozaga (masalan, +998 XX XXX XX XX) mosligini tekshiradigan validatsiya.
+gloss: Nazorat raqami | Kod raqamlaridan maxsus qoida bo'yicha hisoblanib, kod oxiriga qo'shiladigan tekshiruv raqami (EAN-13, ISBN).
+gloss: Ikki marta kiritish | Ma'lumot ikki marta kiritilib, kompyuter tomonidan solishtiriladigan verifikatsiya usuli.

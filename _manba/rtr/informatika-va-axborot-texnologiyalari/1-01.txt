@@ -1,0 +1,108 @@
+nomi: Ma'lumot, axborot va bilimlar bazasi
+modul: 1-modul
+ac: 1.1 Ma'lumot, axborot va bilimni farqlaydi; ma'lumot manbalarini va axborot sifatini baholaydi.
+maqsad: O'quvchilarda ma'lumot, axborot va bilim tushunchalarini farqlash, ma'lumotlarning bevosita va bilvosita manbalarini taqqoslash hamda axborot sifatini mezonlar asosida baholash ko'nikmasini shakllantirish.
+natija: ma'lumot, axborot va bilimga ta'rif beradi va har biriga kundalik hayot va kasbidan misol keltiradi;
+natija: ma'lumot qanday qilib kontekst orqali axborotga, axborot tajriba orqali bilimga aylanishini tushuntiradi;
+natija: bevosita va bilvosita manbalarni ajratadi, ularning afzallik va kamchiliklarini taqqoslaydi;
+natija: axborot sifatini aniqlik, dolzarblik, yangilik, batafsillik va to'liqlik mezonlari bo'yicha baholaydi.
+reja: Ma'lumot, axborot va bilim: farqi va bog'liqligi. Bilimlar bazasi
+reja: Ma'lumot manbalari: bevosita va bilvosita manbalar
+reja: Axborotning sifati va unga ta'sir qiluvchi omillar
+tayanch: ma'lumot; axborot; bilim; kontekst; bilimlar bazasi; bevosita manba; bilvosita manba; axborot sifati; dolzarblik; aniqlik
+metod: Aqliy hujum | Dars boshida doskaga «25, 30, 41» sonlari yoziladi va «Bu nima?» deb so'raladi. O'quvchilar taxminlarini aytadi (yosh, harorat, narx...). O'qituvchi kontekst bo'lmasa sonlar faqat ma'lumot ekanini, kontekst qo'shilgach axborotga aylanishini ko'rsatib, yangi mavzuga o'tadi.
+metod: Klaster | Birinchi reja tushuntirilgach, juftliklar «Ma'lumot → axborot → bilim» zanjirini o'z kasbidan misol bilan chizadi (oshpaz — retsept, avtoservis — diagnostika kodi, tikuvchi — o'lcham). 2–3 juftlik natijasini taqdim etadi.
+metod: Venn diagrammasi | Ikkinchi rejada guruhlar bevosita va bilvosita manbalarning afzallik va kamchiliklarini ikki doiraga yozadi, umumiy jihatlarni (masalan, ikkalasida ham xato bo'lishi mumkin) kesishmaga joylaydi.
+
+## 1. Ma'lumot, axborot va bilim: farqi va bog'liqligi. Bilimlar bazasi
+Kundalik hayotda «ma'lumot», «axborot» va «bilim» so'zlarini ko'pincha bir xil ma'noda ishlatamiz. Informatikada esa bu uch tushuncha aniq farqlanadi, chunki kompyuter ular bilan turlicha ishlaydi. Kompyuter sonlar va belgilarni tez saqlaydi va qayta ishlaydi, lekin ularning ma'nosini inson yoki dastur belgilab beradi. Shu sababli har qanday axborot tizimini to'g'ri qurish uchun avvalo ma'lumot qachon axborotga va axborot qachon bilimga aylanishini tushunish kerak.
+### Ma'lumot
+**Ma'lumot** — bu hali ma'no berilmagan, qayta ishlanmagan faktlar, sonlar, belgilar, tovushlar yoki tasvirlar to'plami. Masalan, «25, 30, 41» sonlari, «A1B2», «0715» yoki «qizil, sariq, yashil» so'zlari o'z-o'zidan hech narsani anglatmaydi. «25» yosh ham, harorat ham, narx ham, oyoq kiyim o'lchami ham bo'lishi mumkin. Ma'lumotning o'zi faqat «xom ashyo» vazifasini bajaradi: uni saqlash, uzatish va hisoblash mumkin, lekin undan qaror qabul qilib bo'lmaydi.
+Ma'lumot turli ko'rinishda bo'ladi: sonli (o'lchov natijalari, narxlar), matnli (ism-familiya, manzil), mantiqiy (ha/yo'q), tasvir (fotosurat, chizma), tovush (yozib olingan nutq) va video. Kompyuterda ularning hammasi oxir-oqibat ikkilik kodda — 0 va 1 lar ketma-ketligida saqlanadi.
+### Axborot
+**Axborot** — bu kontekstga qo'yilgan, ma'no berilgan va maqsadga muvofiq tartibga solingan ma'lumot. Ma'lumotga «nima», «qayerda», «qachon» va «qanday birlikda» degan savollarga javob qo'shilsa, u axborotga aylanadi. Masalan: «Toshkentda dushanba kuni havo harorati +25 °C, seshanba +30 °C, chorshanba +41 °C bo'ldi». Endi bu sonlarni tushunish, solishtirish va ular asosida xulosa chiqarish mumkin.
+Ma'lumotni axborotga aylantirish uchun uni qayta ishlash kerak: saralash, guruhlash, hisoblash, jadval yoki diagramma ko'rinishiga keltirish. Informatika fanining asosiy vazifalaridan biri ham aynan shu jarayonni avtomatlashtirishdir. Elektron jadval ustunlariga sarlavha qo'yish, o'lchov birligini ko'rsatish, sanani qo'shish — bularning hammasi ma'lumotga kontekst berishdir.
+### Bilim
+**Bilim** — bu axborotni tushunish, tajriba va qoidalar asosida qo'llay olish, ya'ni axborotdan xulosa chiqarib, qaror qabul qilish qobiliyati. Bilim «nima qilish kerak?» degan savolga javob beradi. Masalan, issiqxona ishchisi «harorat +35 °C dan oshsa, shamollatish darchalarini ochish kerak» degan qoidani biladi. Harorat haqidagi axborotni olib, bu qoidani qo'llaydi va harakat qiladi. Demak, bilim axborot va tajribaning birikmasidan hosil bo'ladi.
+Uch tushuncha o'rtasidagi bog'liqlikni quyidagi zanjir ko'rinishida tasavvur qilish mumkin: ma'lumot + kontekst = axborot; axborot + tajriba va qoidalar = bilim; bilim + vaziyat = qaror. Har bir bosqichda qiymat oshib boradi: bir xil ma'lumotdan turli kontekstda turli axborot, turli tajribali odamlarda esa turli xulosa hosil bo'lishi mumkin.
+jadval: Ma'lumot, axborot va bilim — kasbiy misollar
+| Soha | Ma'lumot | Axborot | Bilim (qaror) |
+| Oshpazlik | 500, 250, 2 | Palov uchun: guruch 500 g, sabzi 250 g, piyoz 2 dona | Guruch suvi bug'lanib ketgach, olovni pasaytirib, qozon qopqog'ini yopish kerak |
+| Avtoservis | P0301 | Diagnostika: «1-silindrda o't olishda uzilish» | Avval 1-silindr shamini va g'altagini tekshirish, so'ng forsunkani ko'rish |
+| Tikuvchilik | 96, 76, 104 | Mijoz o'lchami: ko'krak aylanasi 96 sm, bel 76 sm, son 104 sm | Andozani 48-o'lcham bo'yicha tanlab, bel qismini 2 sm toraytirish |
+| Elektromontyor | 230, 16 | Tarmoq kuchlanishi 230 V, avtomat 16 A | Quvvati 3,7 kVt dan katta isitgichni bu liniyaga ulab bo'lmaydi |
+### Bilimlar bazasi
+Bilimlarni kompyuterda saqlash va ulardan foydalanish uchun **bilimlar bazasi** yaratiladi. Bilimlar bazasi — bu ma'lum bir soha bo'yicha faktlar va «agar ..., u holda ...» ko'rinishidagi qoidalar to'plami. Masalan, avtomobil nosozliklari bo'yicha bilimlar bazasida «agar dvigatel ishga tushmasa va starter aylanmasa, u holda akkumulyator kuchlanishini tekshirish kerak» degan qoida bo'lishi mumkin. Bilimlar bazasi ekspert tizimlarning asosi hisoblanadi; bu tizimlarni 2-modulda batafsil o'rganamiz. Oddiy ma'lumotlar bazasidan farqli ravishda bilimlar bazasi nafaqat faktlarni saqlaydi, balki ulardan yangi xulosa chiqarishga imkon beradi.
+
+## 2. Ma'lumot manbalari: bevosita va bilvosita manbalar
+Har qanday axborot tizimi ma'lumot yig'ishdan boshlanadi. Ma'lumot qayerdan va qanday olinganiga qarab manbalar ikki guruhga bo'linadi: bevosita (birlamchi) va bilvosita (ikkilamchi) manbalar.
+### Bevosita manbalar
+**Bevosita manba** — ma'lumot aynan shu maqsad uchun, foydalanuvchining o'zi tomonidan birinchi marta yig'iladigan manba. Bevosita ma'lumot yig'ish usullari:
+- **so'rovnoma (anketa)** — ko'p odamdan bir xil savollarga javob olish, masalan Google Forms orqali;
+- **intervyu (suhbat)** — savollarni bevosita odamning o'ziga berish, qo'shimcha savollar bilan aniqlashtirish;
+- **kuzatish** — jarayonni ko'rib, hodisalarni qayd etish (masalan, chorrahadan bir soatda nechta mashina o'tishini sanash);
+- **datchiklar orqali yozib olish (data logging)** — harorat, namlik, bosim kabi kattaliklarni sensorlar yordamida avtomatik o'lchab borish.
+Bevosita manbaning afzalliklari: ma'lumot aynan kerakli savolga javob beradi; qanday yig'ilgani va qanchalik aniqligi ma'lum; ma'lumot yangi; keraksiz maydonlar bo'lmaydi; yig'uvchi tanlov (namuna) hajmini o'zi belgilaydi. Kamchiliklari: ko'p vaqt va mablag' talab qiladi; odamlarni jalb qilish, anketani tayyorlash va natijalarni kiritish qiyin; tanlov kichik bo'lsa, xulosa butun aholiga to'g'ri kelmasligi mumkin.
+### Bilvosita manbalar
+**Bilvosita manba** — boshqa maqsadda, boshqa shaxs yoki tashkilot tomonidan avval yig'ilgan ma'lumotdan qayta foydalanish. Masalan, rasmiy statistika hisobotlari, kompaniyalarning ochiq ma'lumotlari, ilmiy maqolalar, kitoblar, veb-saytlar, aholi ro'yxati, ob-havo arxivi va hokazo.
+Bilvosita manbaning afzalliklari: ma'lumot tayyor, tez va arzon olinadi; katta hajmdagi va ko'p yillik (tarixiy) ma'lumotlar mavjud bo'ladi; ba'zan bevosita yig'ib bo'lmaydigan ma'lumotlar ham shu yo'l bilan olinadi. Kamchiliklari: ma'lumot eskirgan bo'lishi mumkin; kerakli savolga to'liq javob bermaydi, ortiqcha maydonlar ko'p bo'ladi; qanday usulda yig'ilgani va aniqligi noma'lum; ma'lumotni tozalash va qayta formatlashga vaqt ketadi; shaxsga doir ma'lumotlardan foydalanishda qonun talablariga rioya qilish kerak.
+jadval: Bevosita va bilvosita manbalarni taqqoslash
+| Mezon | Bevosita manba | Bilvosita manba |
+| Kim yig'adi | Foydalanuvchining o'zi | Boshqa shaxs yoki tashkilot |
+| Moslik | Aynan kerakli savolga mos | Qisman mos, ortiqcha ma'lumot bor |
+| Vaqt va xarajat | Ko'p vaqt va mablag' | Tez va arzon |
+| Yangilik | Yangi | Eskirgan bo'lishi mumkin |
+| Aniqlikni tekshirish | Usul ma'lum, tekshirsa bo'ladi | Usul noma'lum bo'lishi mumkin |
+| Hajm | Odatda kichik | Katta, ko'p yillik |
+Amaliyotda ikki turdagi manba ko'pincha birga ishlatiladi. Masalan, yangi avtoservis ochmoqchi bo'lgan tadbirkor hududdagi avtomobillar soni haqida statistika ma'lumotlaridan (bilvosita) foydalanadi, so'ng mahalla aholisi orasida qanday xizmatlar kerakligini so'rovnoma orqali (bevosita) aniqlaydi.
+Bilvosita ma'lumotlarning muhim manbalaridan biri — davlat idoralari e'lon qiladigan ochiq ma'lumotlar. O'zbekistonda ochiq ma'lumotlar portali (data.gov.uz) va rasmiy statistika sayti (stat.uz) orqali aholi, ta'lim, sog'liqni saqlash, transport kabi sohalar bo'yicha jadvallarni bepul yuklab olish mumkin. Bunday ma'lumotdan foydalanganda jadval qaysi yilga tegishli ekani, o'lchov birligi va izohlarini albatta o'qish kerak: masalan, «ming kishi» birligida berilgan sonni oddiy kishi soni deb o'qish katta xatoga olib keladi.
+Bevosita ma'lumot yig'ishda ham qoidalar bor. So'rovnoma savollari aniq va bir ma'noli bo'lishi, javob variantlari bir-birini takrorlamasligi kerak. Intervyuda odamning roziligi olinadi, shaxsga doir ma'lumotlar (telefon, manzil, pasport) faqat zarur bo'lsa so'raladi va boshqalarga berilmaydi. Datchik bilan o'lchashda esa asbob oldindan tekshiriladi (kalibrlanadi) va o'lchash vaqti hamda joyi qayd etiladi — aks holda ma'lumotga ishonib bo'lmaydi.
+
+## 3. Axborotning sifati va unga ta'sir qiluvchi omillar
+Axborotdan qaror qabul qilish uchun foydalaniladi. Agar axborot sifatsiz bo'lsa, qaror ham noto'g'ri bo'ladi: noto'g'ri retsept — buzilgan taom, eskirgan narxlar — zarar ko'rgan do'kon, noaniq o'lcham — yaroqsiz kiyim. Shuning uchun axborot sifatini baholay olish har bir mutaxassis uchun zarur ko'nikmadir. Axborot sifati quyidagi asosiy omillarga bog'liq.
+### Aniqlik
+Axborot to'g'ri va xatosiz bo'lishi kerak. Ma'lumot kiritishda bitta raqam adashsa (masalan, 15 000 so'm o'rniga 150 000 so'm yozilsa) yoki o'lchov asbobi noto'g'ri sozlangan bo'lsa, butun hisob-kitob noto'g'ri chiqadi. Aniqlikni ta'minlash uchun ma'lumotlarni tekshirish usullari qo'llanadi — ularni 3-darsda o'rganamiz.
+### Dolzarblik (moslik)
+Axborot foydalanuvchining maqsadiga mos bo'lishi kerak. Masalan, tikuv sexi rahbariga butun shahar bo'yicha gazlama narxlari emas, balki o'zi ishlatadigan uch xil gazlamaning ulgurji narxlari kerak. Keraksiz axborot qaror qabul qilishni qiyinlashtiradi va vaqtni oladi.
+### Yangilik (o'z vaqtidaligi)
+Axborot eskirmagan va o'z vaqtida yetkazilgan bo'lishi kerak. Bir yil oldingi valyuta kursi yoki o'tgan haftadagi ob-havo ma'lumoti bugungi qaror uchun yaroqsiz. Ba'zi sohalarda (birja, transport, tibbiyot) axborot bir necha daqiqada eskiradi.
+### Batafsillik darajasi
+Axborot juda qisqa ham, juda batafsil ham bo'lmasligi kerak. Direktorga oylik umumiy savdo summasi yetarli bo'lsa, kassirning har bir chekini ko'rsatish ortiqcha. Aksincha, omborchiga har bir mahsulot qoldig'i kerak, umumiy summa unga foyda bermaydi.
+### To'liqlik
+Qaror uchun zarur bo'lgan barcha qismlar mavjud bo'lishi kerak. Masalan, avtomobil ehtiyot qismi buyurtmasida model, yil va dvigatel turi ko'rsatilmasa, noto'g'ri qism keladi. Yetishmayotgan axborot qo'shimcha so'rov, vaqt va xarajatga olib keladi.
+Bulardan tashqari, axborot sifatiga manbaning ishonchliligi (rasmiy sayt yoki noma'lum ijtimoiy tarmoq sahifasi), taqdim etish shakli (tushunarli jadval yoki chalkash matn) va xolislik (reklama maqsadida bo'rttirilgan ma'lumot) ham ta'sir qiladi. Internetdagi har bir axborotni bir nechta ishonchli manba bilan solishtirib tekshirish — raqamli savodxonlikning muhim qoidasi.
+Misol uchun, o'quvchi ijtimoiy tarmoqda «Yangi telefon modeli 1 million so'mga sotilmoqda» degan e'lonni ko'rdi. Sifatni tekshirish uchun u quyidagilarni qiladi: e'lon qachon joylanganini qaraydi (yangilik), ishlab chiqaruvchining rasmiy sayti va 2–3 ta yirik do'kondagi narxni solishtiradi (aniqlik va manba), e'londa model, xotira hajmi va kafolat ko'rsatilganini tekshiradi (to'liqlik). Agar narx boshqa manbalardagidan bir necha baravar arzon bo'lsa va sotuvchi oldindan pul o'tkazishni talab qilsa, bu firibgarlik belgisi bo'lishi mumkin — bunday holatlarni 9-darsda elektron xavfsizlik mavzusida ko'rib chiqamiz.
+jadval: Axborot sifatini baholash varag'i (namuna)
+| Mezon | Tekshiriladigan savol | Ha / Yo'q |
+| Aniqlik | Raqamlar va faktlar boshqa manba bilan mos keladimi? | |
+| Dolzarblik | Axborot mening savolimga javob beradimi? | |
+| Yangilik | Axborot qachon e'lon qilingan, eskirmaganmi? | |
+| Batafsillik | Qaror uchun yetarli, lekin ortiqcha emasmi? | |
+| To'liqlik | Barcha kerakli qismlar bormi? | |
+| Manba | Muallif yoki tashkilot ma'lummi, ishonchlimi? | |
+Xulosa qilib aytganda, kompyuter ma'lumotni qayta ishlaydi, inson esa undan axborot va bilim hosil qiladi. Sifatli axborot to'g'ri tanlangan manbadan olinadi va aniqlik, dolzarblik, yangilik, batafsillik hamda to'liqlik talablariga javob beradi.
+
+keys: Do'kon uchun narxlar ro'yxati
+vaziyat: Oziq-ovqat do'koni egasi ulgurji bozordan mahsulot sotib olish uchun narxlarni bilmoqchi. Sotuvchi unga ikki yil oldin internetda chop etilgan narxlar ro'yxatini topib berdi. Ro'yxatda 300 ta mahsulot bor, lekin do'kon sotadigan 40 ta mahsulotdan faqat 25 tasi bor, bir nechtasining narxi esa birlik ko'rsatilmagan (kg yoki dona ekanligi noma'lum).
+ksavol: Bu manba bevosita yoki bilvosita manbami? Nima uchun?
+ksavol: Ro'yxatdagi axborot qaysi sifat mezonlariga javob bermaydi?
+ksavol: Do'kon egasiga sifatli axborot olish uchun qanday yo'l tavsiya qilasiz?
+kjavob: Bu bilvosita manba — ma'lumot boshqa kishi tomonidan boshqa maqsadda yig'ilgan. Axborot eskirgan (yangilik yo'q), to'liq emas (40 ta mahsulotdan 25 tasi bor), ortiqcha (300 ta mahsulot — batafsillik darajasi mos emas) va ayrim joylarda noaniq (birlik ko'rsatilmagan). Tavsiya: 2–3 ta ulgurji sotuvchidan aynan kerakli 40 ta mahsulot bo'yicha bugungi narxlarni bevosita so'rash (qo'ng'iroq yoki xabar orqali), natijani birliklari bilan elektron jadvalga kiritib, solishtirish.
+savol: Ma'lumot, axborot va bilim o'rtasidagi farqni o'z kasbingizdan misol bilan tushuntiring.
+savol: Ma'lumot qanday qilib axborotga aylanadi? Kontekst deganda nima tushuniladi?
+savol: Bilimlar bazasi oddiy ma'lumotlar bazasidan nimasi bilan farq qiladi?
+savol: Bevosita ma'lumot yig'ishning qanday usullarini bilasiz? Har biriga misol keltiring.
+savol: Bilvosita manbadan foydalanishning ikki afzalligi va ikki kamchiligini ayting.
+savol: Axborot sifatiga qaysi omillar ta'sir qiladi?
+test: Qaysi biri ma'lumotga misol bo'ladi? | 25, 30, 41 | Toshkentda bugun havo harorati +25 °C | Harorat +35 °C dan oshsa, darchani ochish kerak | Palov uchun 500 g guruch kerak ## Kontekst va birlik ko'rsatilmagan sonlar — ma'lumot.
+test: Ma'lumotga kontekst va ma'no berilganda u nimaga aylanadi? | Axborotga | Bilimga | Dasturga | Shovqinga
+test: Qaysi usul bevosita ma'lumot yig'ishga kiradi? | O'quvchilar orasida so'rovnoma o'tkazish | Rasmiy statistika hisobotidan foydalanish | Gazetadagi maqoladan ko'chirish | Internetdagi tayyor jadvalni yuklab olish
+test: Bilvosita manbaning asosiy kamchiligi qaysi? | Ma'lumot eskirgan yoki kerakli savolga to'liq mos bo'lmasligi mumkin | Har doim juda qimmatga tushadi | Ma'lumotni faqat qo'lda yig'ish mumkin | Katta hajmdagi ma'lumot topib bo'lmaydi
+test: Bir yil oldingi valyuta kursi bugungi qaror uchun yaroqsiz. Bu qaysi sifat mezoni buzilganini ko'rsatadi? | Yangilik (o'z vaqtidalik) | Batafsillik | To'liqlik | Aniqlik ## Axborot to'g'ri bo'lsa ham, eskirgani uchun bugun foydasiz.
+uyga: Kasbingizga oid bitta jarayonni tanlang va «ma'lumot → axborot → bilim» zanjirini 3 ta misol bilan yozing. Bitta mavzu bo'yicha (masalan, ish haqi yoki mahsulot narxi) bevosita va bilvosita manbadan axborot topib, sifat mezonlari jadvali bo'yicha solishtiring.
+gloss: Ma'lumot | Hali ma'no berilmagan, qayta ishlanmagan faktlar, sonlar, belgilar, tovush va tasvirlar.
+gloss: Axborot | Kontekstga qo'yilgan, ma'no berilgan va tartibga solingan ma'lumot.
+gloss: Bilim | Axborotni tajriba va qoidalar asosida qo'llab, xulosa chiqarish va qaror qabul qilish qobiliyati.
+gloss: Bilimlar bazasi | Muayyan soha bo'yicha faktlar va «agar ..., u holda ...» qoidalari to'plami; ekspert tizimning asosi.
+gloss: Bevosita manba | Ma'lumot aynan shu maqsad uchun foydalanuvchining o'zi tomonidan birinchi marta yig'iladigan manba.
+gloss: Bilvosita manba | Boshqa maqsadda, boshqa shaxs yoki tashkilot tomonidan avval yig'ilgan ma'lumot.

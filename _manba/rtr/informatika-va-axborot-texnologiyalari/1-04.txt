@@ -1,0 +1,58 @@
+nomi: Apparat ta'minot. Ichki va tashqi qurilmalar. Xotira qurilmalari
+modul: 1-modul
+ac: 1.4 Kompyuterning ichki va tashqi qurilmalarini aniqlaydi, xotira qurilmalarini hajmi, tezligi va qo'llanishi bo'yicha taqqoslaydi.
+maqsad: O'quvchilarda kompyuter apparat tarkibini aniqlash, qurilmalarni vazifasiga ko'ra tasniflash va kasbiy ehtiyojga mos xotira qurilmasini asoslab tanlash ko'nikmasini shakllantirish.
+natija: ichki qurilmalar (ona plata, protsessor, RAM, ROM, videokarta, disk) va tashqi qurilmalarni ajratadi;
+natija: kiritish, chiqarish va saqlash qurilmalariga misollar keltiradi;
+natija: kompyuter tavsiflarini (protsessor, RAM, disk turi va hajmi) operatsion tizim vositalari orqali aniqlaydi;
+natija: magnitli, optik va qattiq jismli xotira qurilmalarini taqqoslaydi va xotira hajmini hisoblaydi.
+reja: Apparat ta'minot: ichki va tashqi qurilmalar
+reja: Xotira qurilmalari va xotira o'lchov birliklari
+reja: Amaliy ish: kompyuter tavsiflarini aniqlash va xotira qurilmalarini taqqoslash
+tayanch: apparat ta'minot; ona plata; protsessor; operativ xotira (RAM); doimiy xotira (ROM); kiritish qurilmasi; chiqarish qurilmasi; HDD; SSD; flesh-xotira; optik disk
+metod: Klaster | Doskaga «Kompyuter qurilmalari» so'zi yoziladi; o'quvchilar kiritish, chiqarish, saqlash va ichki qurilmalar shoxlariga misollar qo'shib boradi, o'qituvchi xatolarni birga tuzatadi.
+metod: Juftlikda ishlash | Juftliklar o'z kompyuterining tavsiflarini aniqlab, qo'shni juftlik kompyuteri bilan solishtiradi va qaysi biri dizayn dasturlari uchun mosroq ekanini asoslaydi.
+ajihoz: Kompyuter (Windows yoki Linux); demonstratsiya uchun ochiq tizim bloki yoki qurilmalar to'plami (RAM plankasi, HDD, SSD, fleshka, optik disk); veb-brauzer; topshiriq varaqasi
+
+## Ichki va tashqi qurilmalar
+**Apparat ta'minot** — kompyuterning ushlab ko'rish mumkin bo'lgan fizik qismlari. **Ichki qurilmalar** tizim bloki (noutbuk korpusi) ichida joylashadi: **ona plata** barcha qismlarni bog'laydi; **protsessor** (CPU) buyruqlarni bajaradi; **operativ xotira** (RAM) ishlayotgan dastur va ma'lumotlarni vaqtincha saqlaydi va elektr o'chganda tozalanadi; **doimiy xotira** (ROM) kompyuterni yoqishda ishga tushadigan BIOS/UEFI dasturini saqlaydi; **videokarta** tasvirni hosil qiladi; **tarmoq kartasi** kompyuterni tarmoqqa ulaydi; ichki disk (HDD yoki SSD) esa fayllarni doimiy saqlaydi.
+**Tashqi (periferik) qurilmalar** korpusdan tashqarida ulanadi: kiritish qurilmalari — klaviatura, sichqoncha, sensorli ekran, skaner, mikrofon, veb-kamera, shtrix-kod o'quvchi, datchiklar; chiqarish qurilmalari — monitor, printer, proyektor, karnay va quloqchin; tashqi saqlash qurilmalari — tashqi disk, fleshka, xotira kartasi.
+
+## Xotira qurilmalari
+- **Magnitli** (HDD, magnit lenta): katta hajm, 1 GB narxi arzon; harakatlanuvchi qismlari bor, zarbadan shikastlanadi, SSD ga qaraganda sekin.
+- **Optik** (CD — 700 MB, DVD — 4,7 GB, Blu-ray — 25 GB bir qatlam): arzon, tarqatish va arxiv uchun; tirnalishdan buziladi, hajmi kichik.
+- **Qattiq jismli (flesh)** (SSD, fleshka, xotira kartasi): juda tez, harakatlanuvchi qismlari yo'q, yengil va zarbaga chidamli; 1 GB narxi qimmatroq, yozish sikllari soni cheklangan.
+Xotira o'lchov birliklari: 1 bayt = 8 bit; 1 KB = 1024 bayt; 1 MB = 1024 KB; 1 GB = 1024 MB; 1 TB = 1024 GB. Ishlab chiqaruvchilar esa disk hajmini o'nlik tizimda yozadi (1 TB = 1 000 000 000 000 bayt), shuning uchun operatsion tizim 1 TB diskni taxminan 931 GB deb ko'rsatadi.
+
+amaliy: Kompyuter tavsiflarini aniqlash va xotira qurilmalarini taqqoslash
+amaqsad: O'z ish o'rnidagi kompyuterning apparat tarkibini aniqlash, operatsion tizim vositalari orqali tavsiflarini yozib olish va kasbiy vazifaga mos xotira qurilmasini asoslab tanlash.
+qadam: Ish o'rningizdagi barcha qurilmalarni ko'zdan kechiring va jadvalga yozing: qurilma nomi, turi (ichki / kiritish / chiqarish / saqlash), vazifasi.
+qadam: Windows'da «Sozlamalar → Tizim → Haqida» bo'limidan yoki Win + R → `msinfo32` buyrug'i orqali protsessor modeli, RAM hajmi va operatsion tizim versiyasini yozib oling (Linux'da: `lscpu`, `free -h`).
+qadam: «Bu kompyuter» oynasida (Linux'da `lsblk` yoki «Disklar» dasturi) har bir diskning umumiy hajmi va bo'sh joyini yozing.
+qadam: Vazifalar dispetcherini oching (Ctrl + Shift + Esc) → «Unumdorlik» yorlig'i: protsessor, xotira va disk yuklamasini yozing; disk turi (SSD yoki HDD) shu yerda ko'rsatiladi.
+qadam: Brauzerda 10 ta sahifa oching va operativ xotira bandligi qanchaga o'zgarganini kuzating, sahifalarni yopgach yana tekshiring — RAM vaqtinchalik xotira ekanini xulosa qiling.
+qadam: Internet-do'kondan 1 TB HDD, 1 TB SSD va 128 GB fleshkaning bugungi narxini toping; har biri uchun 1 GB narxini hisoblab, taqqoslash jadvaliga yozing (hajm, tezlik, mustahkamlik, narx, qo'llanishi).
+qadam: Kasbingizga mos kompyuter uchun (masalan, grafik dizayner, oshxona kassasi, avtoservis diagnostika noutbuki) protsessor, RAM va disk bo'yicha tavsiya yozing va tanlovingizni 3 gap bilan asoslang.
+anatija: To'ldirilgan qurilmalar jadvali, kompyuter tavsiflari (protsessor, RAM, disklar, OT), xotira qurilmalarini taqqoslash jadvali va kasbiy konfiguratsiya bo'yicha asoslangan tavsiya.
+baho5: Barcha qurilmalarni to'g'ri tasniflaydi, tavsiflarni OT vositalari bilan xatosiz aniqlaydi, 1 GB narxini to'g'ri hisoblaydi va kasbiy tavsiyani ishonchli asoslaydi.
+masala: 64 GB fleshkaga har biri 4 MB bo'lgan nechta fotosurat sig'adi?
+yechim: 64 GB = 64 · 1024 MB = 65 536 MB; 65 536 : 4 = 16 384 ta fotosurat.
+masala: Ishlab chiqaruvchi yozgan 1 TB (1 000 000 000 000 bayt) disk operatsion tizimda necha GB bo'lib ko'rinadi?
+yechim: 1 GB = 1024 · 1024 · 1024 = 1 073 741 824 bayt. 1 000 000 000 000 : 1 073 741 824 ≈ 931,3. Javob: taxminan 931 GB.
+masala: Hajmi 2 GB bo'lgan videoni yozish uchun nechta CD (700 MB) kerak? DVD (4,7 GB) bittasi yetadimi?
+yechim: 2 GB = 2048 MB; 2048 : 700 ≈ 2,9 — demak 3 ta CD kerak. DVD hajmi 2 GB dan katta, shuning uchun bitta DVD yetadi.
+savol: Ichki va tashqi qurilmalarga uchtadan misol keltiring.
+savol: RAM va ROM ning farqi nimada?
+savol: SSD ning HDD ga nisbatan afzallik va kamchiliklarini ayting.
+savol: Nima uchun 1 TB disk kompyuterda 931 GB ko'rinadi?
+test: Qaysi qurilma kiritish qurilmasi hisoblanadi? | Skaner | Monitor | Printer | Karnay
+test: Elektr o'chganda ma'lumotlar o'chib ketadigan xotira qaysi? | Operativ xotira (RAM) | Qattiq disk (HDD) | SSD | Fleshka
+test: Harakatlanuvchi qismlari yo'q, tez ishlaydigan va zarbaga chidamli xotira qurilmasi qaysi? | SSD | HDD | DVD disk | Magnit lenta
+test: 1 GB necha MB ga teng? | 1024 MB | 1000 KB | 100 MB | 1024 KB
+test: Kompyuter yoqilganda ishga tushadigan BIOS/UEFI dasturi qayerda saqlanadi? | Doimiy xotirada (ROM) | Operativ xotirada (RAM) | Videokarta xotirasida | Tashqi fleshkada
+uyga: Uyingizdagi kompyuter yoki telefonning tavsiflarini (protsessor, operativ va doimiy xotira hajmi, ekran) aniqlang va jadvalga yozing. Kasbingizdagi 3 ta kasbiy dastur uchun eng kam talab qilinadigan tavsiflarni ishlab chiqaruvchi saytidan toping.
+gloss: Apparat ta'minot | Kompyuterning fizik qismlari: ichki qurilmalar va tashqi (periferik) qurilmalar.
+gloss: Ona plata | Protsessor, xotira va boshqa qismlarni o'zaro bog'laydigan asosiy elektron plata.
+gloss: Operativ xotira (RAM) | Ishlayotgan dastur va ma'lumotlarni vaqtincha saqlaydigan, elektr o'chganda tozalanadigan xotira.
+gloss: Doimiy xotira (ROM) | Kompyuterni ishga tushirish dasturi (BIOS/UEFI) saqlanadigan, elektr o'chganda o'chmaydigan xotira.
+gloss: SSD | Flesh-xotiraga asoslangan, harakatlanuvchi qismlarsiz tez ishlaydigan qattiq jismli disk.

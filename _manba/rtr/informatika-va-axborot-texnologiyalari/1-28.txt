@@ -1,0 +1,65 @@
+nomi: Normal formalar. Ma'lumotlar bazasini 3NF ga normallashtirish
+modul: 3-modul
+ac: 3.12 Normallashtirilmagan jadvalni 1NF, 2NF va 3NF ga keltiradi; MB asosida guruhlangan hisobot yaratadi va ma'lumotlarni eksport qiladi.
+maqsad: O'quvchilarda ma'lumotlar bazasidagi takrorlanish va anomaliyalarni aniqlash, jadvalni bosqichma-bosqich birinchi, ikkinchi va uchinchi normal formaga keltirish hamda MB ma'lumotlari asosida hisobot tayyorlab, boshqa formatlarga eksport qilish ko'nikmasini shakllantirish.
+natija: normallashtirishning maqsadi va kiritish, o'zgartirish, o'chirish anomaliyalarini tushuntiradi;
+natija: 1NF, 2NF va 3NF talablarini biladi;
+natija: normallashtirilmagan jadvalni 3NF gacha bosqichma-bosqich ajratadi va kalitlarni belgilaydi;
+natija: hisobotlar ustasi yordamida guruhlangan va yakunlovchi qiymatli hisobot yaratadi;
+natija: so'rov va hisobotni Excel, CSV va PDF formatlarida eksport qiladi.
+reja: Normallashtirish va anomaliyalar
+reja: Birinchi, ikkinchi va uchinchi normal formalar
+reja: Hisobotlar va ma'lumotlarni eksport qilish
+tayanch: normallashtirish; anomaliya; takrorlanuvchi guruh; atomar qiymat; birinchi normal forma (1NF); ikkinchi normal forma (2NF); uchinchi normal forma (3NF); qisman bog'liqlik; tranzitiv bog'liqlik; hisobot; eksport
+metod: Muammoli jadval | Doskada normallashtirilmagan buyurtmalar jadvali ko'rsatiladi; o'quvchilar unda qaysi ma'lumot takrorlanayotganini, yangi xizmatni buyurtmasiz qanday kiritish mumkinligini va buyurtma o'chirilsa nima yo'qolishini topadi.
+metod: Bosqichma-bosqich ajratish | Juftliklar jadvalni qog'ozda 1NF → 2NF → 3NF ga keltiradi, har bosqichda kalitlarni belgilaydi va natijani boshqa juftlik bilan solishtiradi.
+ajihoz: Kompyuter; MS Access yoki LibreOffice Base; «Avtoservis» bazasi; normallashtirilmagan jadval yozilgan tarqatma varaq; proyektor
+
+## Normallashtirish va anomaliyalar
+**Normallashtirish** — MB tuzilmasini ma'lumotlar takrorlanmaydigan va har bir fakt bir joyda saqlanadigan holatga keltirish jarayoni. Yomon loyihalangan jadvalda uch xil **anomaliya** uchraydi: **kiritish** — yangi xizmatni hali buyurtmasi bo'lmagani uchun kiritib bo'lmaydi; **o'zgartirish** — mijoz telefoni o'zgarsa, uni o'nlab qatorda tuzatish kerak va birortasi esdan chiqsa, ziddiyat paydo bo'ladi; **o'chirish** — mijozning yagona buyurtmasi o'chirilsa, mijoz haqidagi ma'lumot ham yo'qoladi.
+
+## Normal formalar
+- **1NF**: har bir katakda bitta (atomar) qiymat, takrorlanuvchi guruhlar yo'q («Diagnostika, Moy almashtirish» kabi ro'yxatlar alohida qatorlarga ajratiladi), har bir yozuv birlamchi kalit bilan aniqlanadi.
+- **2NF**: jadval 1NF da va kalit bo'lmagan har bir maydon butun birlamchi kalitga bog'liq — murakkab kalitning faqat bir qismiga bog'liq (qisman bog'liq) maydonlar alohida jadvalga chiqariladi. Masalan, (BuyurtmaID, XizmatID) kalitli jadvalda «Xizmat nomi» faqat XizmatID ga bog'liq — u «Xizmatlar» jadvaliga ko'chiriladi.
+- **3NF**: jadval 2NF da va kalit bo'lmagan maydonlar boshqa kalit bo'lmagan maydonga bog'liq emas (tranzitiv bog'liqlik yo'q). Masalan, «Buyurtmalar» jadvalida «Mijoz telefoni» buyurtmaga emas, mijozga bog'liq — u «Mijozlar» jadvaliga chiqariladi.
+jadval: Normallashtirish natijasi (avtoservis misolida)
+| Bosqich | Jadvallar va kalitlar |
+| 0NF | Buyurtma (BuyurtmaID, Sana, MijozID, Familiya, Telefon, Xizmatlar ro'yxati, Narxlar ro'yxati) |
+| 1NF | Buyurtma (BuyurtmaID + XizmatID, Sana, MijozID, Familiya, Telefon, XizmatNomi, Narxi) |
+| 2NF | Buyurtmalar (BuyurtmaID, Sana, MijozID, Familiya, Telefon); BuyurtmaXizmatlari (BuyurtmaID + XizmatID); Xizmatlar (XizmatID, Nomi, Narxi) |
+| 3NF | Buyurtmalar (BuyurtmaID, Sana, MijozID); Mijozlar (MijozID, Familiya, Telefon); BuyurtmaXizmatlari (BuyurtmaID + XizmatID); Xizmatlar (XizmatID, Nomi, Narxi) |
+
+## Hisobotlar va eksport
+**Hisobot** — MB ma'lumotlarini chop etish yoki o'qish uchun tartibli ko'rinishda chiqarish: sarlavha, guruhlar (masalan, usta bo'yicha), har bir guruh va butun hisobot uchun yakunlovchi qiymatlar (summa, son), sahifa raqami va sana. Hisobotlar ustasi jadval yoki so'rov asosida hisobotni bir necha qadamda yaratadi. Ma'lumotlarni boshqa dasturlarga uzatish uchun **eksport** qilinadi: Excel (keyingi tahlil uchun), CSV (boshqa tizimga yuklash uchun), PDF (o'zgartirilmaydigan hujjat sifatida yuborish va chop etish uchun).
+
+amaliy: Jadvalni 3NF ga normallashtirish, hisobot va eksport
+amaqsad: Normallashtirilmagan buyurtmalar jadvalidagi anomaliyalarni aniqlab, uni 3NF gacha ajratish, MB da shu tuzilmani tekshirish, usta bo'yicha guruhlangan hisobot yaratish va natijalarni eksport qilish.
+qadam: Tarqatma varaqdagi normallashtirilmagan jadvalda kiritish, o'zgartirish va o'chirish anomaliyalariga bittadan misol yozing.
+qadam: Jadvalni 1NF ga keltiring: ro'yxatli kataklarni alohida qatorlarga ajrating va murakkab birlamchi kalitni belgilang.
+qadam: 2NF ga keltiring: murakkab kalitning bir qismiga bog'liq maydonlarni aniqlab, alohida jadvallarga chiqaring; har bir jadval kalitini yozing.
+qadam: 3NF ga keltiring: tranzitiv bog'liqliklarni toping va «Mijozlar» jadvalini ajrating; yakuniy jadvallar, kalitlar va bog'lanish turlarini sxemada chizing.
+qadam: «Avtoservis» bazasidagi tuzilmani yakuniy sxema bilan solishtiring; agar bir buyurtmada bir nechta xizmat bo'lishi kerak bo'lsa, «BuyurtmaXizmatlari» oraliq jadvalini yaratib, bog'lanishlarni yangilang.
+qadam: Hisobotlar ustasi bilan «Ustalar bo'yicha bajarilgan ishlar» hisobotini yarating: guruh — Usta, tafsilotlar — Sana, DavlatRaqami, Xizmat, Narx; har bir usta va butun hisobot uchun jami summa; sarlavha va sahifa raqami.
+qadam: Jamlanma so'rov natijasini Excel faylga, hisobotni PDF faylga eksport qiling va fayllar to'g'ri ochilishini tekshiring.
+anatija: Anomaliyalar misollari, 1NF, 2NF va 3NF bosqichlari yozilgan jadvallar va yakuniy sxema, yangilangan MB tuzilmasi, guruhlangan hisobot, Excel va PDF eksport fayllari.
+baho5: Anomaliyalar to'g'ri aniqlangan, har bir normal forma talablari bajarilgan va kalitlar to'g'ri, yakuniy tuzilma MB da amalga oshirilgan, hisobot guruhlash va yakunlovchi qiymatlar bilan, eksport fayllari ishlaydi.
+masala: «Baholar» jadvali: (O'quvchiID, FanID, O'quvchiIsmi, FanNomi, O'qituvchi, Baho). Birlamchi kalit — O'quvchiID + FanID. Qaysi maydonlar 2NF ni buzadi va jadval qanday ajratiladi?
+yechim: O'quvchiIsmi faqat O'quvchiID ga, FanNomi va O'qituvchi faqat FanID ga bog'liq — bu qisman bog'liqlik. Ajratish: O'quvchilar (O'quvchiID, O'quvchiIsmi); Fanlar (FanID, FanNomi, O'qituvchi); Baholar (O'quvchiID + FanID, Baho).
+masala: «Xodimlar» jadvali: (XodimID, Familiya, BolimKodi, BolimNomi, BolimRahbari). Jadval 3NF dami? Bo'lmasa, qanday tuzatiladi?
+yechim: BolimNomi va BolimRahbari XodimID ga emas, BolimKodi ga bog'liq — bu tranzitiv bog'liqlik, jadval 3NF da emas. Tuzatish: Xodimlar (XodimID, Familiya, BolimKodi); Bo'limlar (BolimKodi, BolimNomi, BolimRahbari).
+savol: Normallashtirish nima uchun kerak? Uchta anomaliyani tushuntiring.
+savol: 1NF ning talablari qanday?
+savol: Qisman va tranzitiv bog'liqlikning farqi nimada?
+savol: Hisobot va so'rovning farqi nimada? Hisobotni qaysi formatlarga eksport qilish mumkin?
+test: Bir katakda «Diagnostika, Moy almashtirish» yozilgan jadval qaysi normal forma talabini buzadi? | 1NF (atomar qiymat) | 2NF | 3NF | Hech birini
+test: Murakkab kalitning faqat bir qismiga bog'liq maydonlar bo'lsa, jadval qaysi formada emas? | 2NF | 1NF | 3NF | Har qanday formada
+test: Kalit bo'lmagan maydon boshqa kalit bo'lmagan maydonga bog'liq bo'lishi qanday ataladi? | Tranzitiv bog'liqlik | Qisman bog'liqlik | Atomarlik | Ma'lumotlar yaxlitligi
+test: Mijozning yagona buyurtmasi o'chirilganda mijoz haqidagi ma'lumot ham yo'qolishi qaysi anomaliya? | O'chirish anomaliyasi | Kiritish anomaliyasi | O'zgartirish anomaliyasi | Validatsiya xatosi
+test: Hisobotni o'zgartirib bo'lmaydigan hujjat sifatida yuborish uchun qaysi formatga eksport qilinadi? | PDF | CSV | MDB | TXT
+uyga: Misol va mashqlar: kasbingizga oid normallashtirilmagan jadval tuzing (masalan, «Retseptlar: taom, mahsulotlar ro'yxati, miqdorlar, yetkazuvchi, yetkazuvchi telefoni») va uni qog'ozda 3NF gacha ajrating; har bosqichda kalitlarni ko'rsating.
+gloss: Normallashtirish | MB tuzilmasini takrorlanish va anomaliyalarsiz holatga keltirish jarayoni.
+gloss: Anomaliya | Yomon loyihalangan jadvalda ma'lumot kiritish, o'zgartirish yoki o'chirishda yuzaga keladigan muammo.
+gloss: Birinchi normal forma (1NF) | Har bir katakda atomar qiymat, takrorlanuvchi guruhlar yo'q va har bir yozuv kalit bilan aniqlangan holat.
+gloss: Ikkinchi normal forma (2NF) | 1NF da bo'lgan va kalit bo'lmagan maydonlar butun birlamchi kalitga bog'liq holat.
+gloss: Uchinchi normal forma (3NF) | 2NF da bo'lgan va tranzitiv bog'liqliklar bo'lmagan holat.
+gloss: Hisobot | MB ma'lumotlarini guruhlar va yakunlovchi qiymatlar bilan chop etish yoki o'qish uchun chiqarish shakli.

@@ -1,0 +1,111 @@
+nomi: Grafik va diagrammalar
+modul: 3-modul
+ac: 3.7 Ma'lumotlar uchun mos diagramma turini tanlaydi va yaratadi, jamlovchi jadval tuzadi, ma'lumotlarni import va eksport qiladi, oddiy kompyuter modelida «agar ... bo'lsa» tahlilini bajaradi.
+maqsad: O'quvchilarda ma'lumotlarni diagramma va grafiklar yordamida tushunarli tasvirlash, katta jadvallarni jamlovchi jadval bilan umumlashtirish, ma'lumotlarni boshqa dasturlar bilan almashish hamda elektron jadvalda oddiy kompyuter modeli tuzib, «agar ... bo'lsa» tahlilini bajarish ko'nikmasini shakllantirish.
+natija: ustunli, chiziqli, doiraviy va nuqtali diagrammalarni vazifasiga ko'ra tanlaydi;
+natija: diagramma yaratadi va uning elementlarini (sarlavha, o'q nomlari, afsona, ma'lumot yorliqlari) sozlaydi;
+natija: jamlovchi jadval tuzib, ma'lumotlarni toifalar bo'yicha umumlashtiradi;
+natija: CSV fayldan ma'lumot import qiladi va jadvalni CSV va PDF formatlariga eksport qiladi;
+natija: kompyuter modeli va simulyator tushunchalarini tushuntiradi, «Parametrni tanlash» buyrug'i bilan zararsizlik nuqtasini topadi.
+reja: Diagramma turlari va ularni to'g'ri tanlash
+reja: Diagramma yaratish va sozlash. Funksiya grafigi
+reja: Jamlovchi jadvallar. Ma'lumotlarni import va eksport qilish
+reja: Modellashtirish va simulyatorlar
+tayanch: diagramma; grafik; ustunli diagramma; chiziqli diagramma; doiraviy diagramma; nuqtali diagramma; afsona; ma'lumot yorlig'i; jamlovchi jadval; CSV; import; eksport; kompyuter modeli; «agar ... bo'lsa» tahlili; parametrni tanlash; simulyator
+metod: Tanlash o'yini | Ekranda bir xil ma'lumot to'rt xil diagrammada ko'rsatiladi; o'quvchilar «Qaysi biri savolga eng yaxshi javob beradi?» degan savolga ovoz beradi va tanlovini asoslaydi.
+metod: Juftlikda tahlil | Juftliklar gazeta yoki saytdagi diagrammani olib, undagi kamchiliklarni (o'q nomi yo'q, shkala noldan boshlanmagan, juda ko'p bo'lak) topadi.
+metod: Amaliy modellashtirish | Darsning ikkinchi yarmida kafe uchun zararsizlik modeli tuziladi va narx o'zgarganda foyda qanday o'zgarishi tahlil qilinadi.
+jihoz: Kompyuter va proyektor; MS Excel yoki LibreOffice Calc; savdo bo'yicha namunaviy jadval va CSV fayl; taqdimot
+
+## 1. Diagramma turlari va ularni to'g'ri tanlash
+Jadvaldagi yuzlab sonlar orasidan qonuniyatni ko'rish qiyin, diagramma esa uni bir qarashda ko'rsatadi: qaysi oy savdo ko'p bo'lgani, qaysi xarajat eng katta ulushni egallagani, narx va talab qanday bog'langani. Diagramma — sonli ma'lumotlarning grafik tasviri. Lekin noto'g'ri tanlangan yoki chalkash tuzilgan diagramma axborotni buzib ko'rsatishi mumkin, shuning uchun avvalo savolni aniqlab olish kerak: biz nimani ko'rsatmoqchimiz — taqqoslashni, o'zgarishni, ulushni yoki bog'liqlikni?
+jadval: Diagramma turlarini tanlash
+| Savol | Mos diagramma | Misol |
+| Toifalarni taqqoslash | Ustunli (vertikal) yoki chiziqli-gorizontal (bar) | Kafe taomlari bo'yicha oylik savdo |
+| Vaqt bo'yicha o'zgarish | Chiziqli diagramma (grafik) | 12 oy davomida elektr energiyasi sarfi |
+| Butunning qismlari (ulush) | Doiraviy diagramma | Oilaviy byudjet xarajatlari tuzilishi |
+| Ikki kattalik orasidagi bog'liqlik | Nuqtali (sochma) diagramma | Avtomobil tezligi va yonilg'i sarfi |
+| Bir nechta qatorni vaqt bo'yicha solishtirish | Bir nechta chiziqli yoki guruhlangan ustunli diagramma | Uch filialning oylik savdosi |
+Ba'zan ikki xil o'lchov birligidagi ma'lumotni bitta diagrammada ko'rsatish kerak bo'ladi: masalan, oylik savdo summasi (mln so'm) va mijozlar soni (kishi). Bunda **aralash diagramma** qo'llanadi: summa ustunlar bilan, mijozlar soni esa chiziq bilan va o'ng tomondagi **ikkinchi vertikal o'q** bo'yicha ko'rsatiladi. Ikkinchi o'q bo'lmasa, kichik sonlar katta sonlar yonida deyarli ko'rinmay qoladi.
+Doiraviy diagramma faqat qismlar yig'indisi butunni (100 %) tashkil qilganda va bo'laklar soni kam (odatda 6–7 tadan oshmasa) bo'lganda ishlatiladi. Ko'p toifali ma'lumotni ustunli diagrammada ko'rsatish yaxshiroq. Vaqt bo'yicha o'zgarishni doim gorizontal o'qda vaqt (kunlar, oylar, yillar) joylashgan chiziqli diagrammada ko'rsatish qulay.
+### Yaxshi diagramma qoidalari
+- aniq sarlavha: diagramma nimani, qayerda va qachon ko'rsatishi («Kafe savdosi, 2026-yil sentabr–noyabr, mln so'm»);
+- o'q nomlari va o'lchov birliklari: «Oylar», «Savdo, mln so'm»;
+- bir nechta ma'lumotlar qatori bo'lsa — afsona (legenda);
+- ustunli diagrammada sonlar o'qi noldan boshlanishi — aks holda kichik farq katta bo'lib ko'rinadi;
+- ortiqcha bezaklardan, uch o'lchamli effektlardan va juda ko'p ranglardan voz kechish;
+- oq-qora chop etiladigan diagrammalarda ranglar o'rniga turli chiziq turlari, shtrixlash va ma'lumot yorliqlaridan foydalanish.
+
+## 2. Diagramma yaratish va sozlash. Funksiya grafigi
+Diagramma yaratish uchun sarlavhalari bilan birga ma'lumotlar diapazoni belgilanadi va «Qo'yish → Diagramma» buyrug'i tanlanadi. Elektron jadval avtomatik ravishda toifalarni (masalan, oylar) gorizontal o'qqa, qiymatlarni vertikal o'qqa joylaydi; zarur bo'lsa, «Qator va ustunlarni almashtirish» buyrug'i bilan buni o'zgartirish mumkin.
+Diagramma elementlari: **sarlavha**; **o'qlar** va ularning nomlari; **afsona** — ma'lumotlar qatorlari nomlari; **ma'lumot yorliqlari** — ustun yoki bo'lak ustidagi aniq qiymatlar; **to'r chiziqlari**; **trend chizig'i** — o'zgarish yo'nalishini ko'rsatuvchi chiziq. Diagramma ustida o'ng tugma bilan har bir elementni formatlash, diagramma turini o'zgartirish yoki ma'lumot diapazonini tahrirlash mumkin. Jadvaldagi qiymat o'zgarsa, diagramma ham avtomatik yangilanadi.
+Ba'zan katak ichidagi kichik diagrammalar — **sparklaynlar** qulay: har bir mahsulot qatorida 12 oylik o'zgarishni ko'rsatuvchi mini-chiziq.
+### Funksiya grafigi
+Matematikadagi funksiya grafigini ham elektron jadvalda chizish mumkin. A ustuniga x qiymatlari (masalan, −5 dan 5 gacha 0,5 qadam bilan), B ustuniga formula yoziladi: `=A2^2-3*A2+2`. So'ng ikkala ustun belgilanib, «Nuqtali diagramma (silliq chiziqlar bilan)» tanlanadi. Grafikdan funksiyaning nollari (grafik x o'qini kesib o'tgan nuqtalar — bu misolda x = 1 va x = 2) va eng kichik qiymati ko'rinadi. Bu usul fizika va texnik fanlarda ham ishlatiladi: masalan, avtomobil tormoz yo'lining tezlikka bog'liqlik grafigi.
+
+## 3. Jamlovchi jadvallar. Ma'lumotlarni import va eksport qilish
+### Jamlovchi jadval
+Minglab qatorli savdo jadvalidan «har bir kategoriya bo'yicha har oy qancha savdo bo'ldi?» degan savolga javob olish uchun **jamlovchi jadval** (pivot jadval) qulay. U «Qo'yish → Jamlovchi jadval» buyrug'i bilan yaratiladi. Maydonlar to'rt hududga sudrab qo'yiladi: **qatorlar** (masalan, kategoriya), **ustunlar** (oy), **qiymatlar** (summa yig'indisi, soni yoki o'rtachasi) va **filtrlar** (kassir). Bir necha soniyada tayyor hisobot hosil bo'ladi; maydonlar joyini almashtirib, ma'lumotga boshqa tomondan qarash mumkin. Asosiy jadval o'zgarganda jamlovchi jadval «Yangilash» buyrug'i bilan qayta hisoblanadi.
+jadval: Jamlovchi jadval natijasi (namuna, ming so'm)
+| Kategoriya | Sentabr | Oktabr | Noyabr | Jami |
+| Taom | 61 200 | 64 800 | 66 300 | 192 300 |
+| Ichimlik | 18 400 | 17 900 | 19 600 | 55 900 |
+| Shirinlik | 9 100 | 10 300 | 11 800 | 31 200 |
+| Jami | 88 700 | 93 000 | 97 700 | 279 400 |
+Bunday jadvalni qo'lda tuzish uchun yuzlab SUMIFS formulalari kerak bo'lardi, jamlovchi jadval esa uni bir necha sichqoncha harakati bilan yaratadi. Jamlovchi jadval asosida jamlovchi diagramma ham yaratiladi.
+### Import va eksport
+Turli dasturlar ma'lumot almashishi uchun umumiy formatlardan foydalaniladi. Eng keng tarqalgani — **CSV** (vergul bilan ajratilgan qiymatlar): oddiy matnli fayl, har bir qator — yozuv, qiymatlar vergul yoki nuqtali vergul bilan ajratilgan. Kassa dasturi, onlayn shakl yoki ma'lumotlar bazasidan olingan ma'lumot ko'pincha CSV ko'rinishida bo'ladi. CSV ni import qilishda («Ma'lumotlar → Matn/CSV dan») ajratuvchi belgi va kodlash (o'zbekcha va kirill harflari to'g'ri ko'rinishi uchun UTF-8) to'g'ri tanlanishi kerak. Eksportda jadval CSV (boshqa dasturga uzatish uchun), PDF (o'zgartirilmaydigan hujjat sifatida yuborish yoki chop etish uchun) yoki boshqa formatda saqlanadi. CSV da faqat qiymatlar saqlanadi — formulalar, formatlar, diagrammalar va bir nechta varaq yo'qoladi. Diagrammani matnli hujjat yoki taqdimotga nusxalash ham mumkin.
+Import paytida eng ko'p uchraydigan muammolar: sanalar matn bo'lib qoladi yoki kun va oy o'rni almashadi (03.04 — 3-aprelmi yoki 4-martmi?); o'nli kasrlarda nuqta va vergul aralashadi (1.5 va 1,5); telefon raqamlari va kodlarning boshidagi nollar yo'qoladi; kirill va lotin harflari «?» yoki tushunarsiz belgilarga aylanadi. Shuning uchun import qilingandan keyin ustunlar turi tekshiriladi, bir nechta qator asl fayl bilan solishtiriladi va kerak bo'lsa ustun turi qo'lda belgilanadi. Katta yoki muntazam yangilanadigan ma'lumotlar uchun manbaga ulanish (so'rov) yaratiladi: keyingi safar «Yangilash» tugmasi bosilganda yangi ma'lumot avtomatik qayta yuklanadi va jamlovchi jadval hamda diagrammalar ham yangilanadi.
+
+## 4. Modellashtirish va simulyatorlar
+**Kompyuter modeli** — real tizim yoki jarayonning formulalar va qoidalar yordamida soddalashtirilgan matematik tasviri. Elektron jadval oddiy modellar tuzish uchun qulay vosita: kirish qiymatlari (narx, xarajat, mijozlar soni) alohida kataklarda turadi, formulalar esa natijani (foyda) hisoblaydi. Kirish qiymatini o'zgartirib, natija qanday o'zgarishini kuzatish **«agar ... bo'lsa» tahlili** deyiladi: «agar narxni 10 % ga oshirsak, foyda qancha bo'ladi?», «agar elektr narxi oshsa, xarajat qanchaga ko'payadi?».
+### Misol: kafe uchun zararsizlik modeli
+Kafening oylik doimiy xarajatlari (ijara, maosh, kommunal) 12 000 000 so'm, bitta porsiya taomning o'zgaruvchan xarajati (mahsulotlar) 18 000 so'm, sotish narxi 30 000 so'm. Har bir porsiyadan qoladigan farq 30 000 − 18 000 = 12 000 so'm. Foyda nolga teng bo'lishi uchun oyiga 12 000 000 : 12 000 = 1000 porsiya sotish kerak — bu **zararsizlik nuqtasi**. Elektron jadvalda foyda formulasi `=Soni*(Narx-Xarajat)-Doimiy` ko'rinishida yoziladi. «Ma'lumotlar → «Agar ... bo'lsa» tahlili → Parametrni tanlash» (Goal Seek) buyrug'i esa kerakli natija uchun kirish qiymatini avtomatik topadi: masalan, foyda 6 000 000 so'm bo'lishi uchun necha porsiya sotish kerakligini (1500 porsiya). Bir nechta variantni (optimistik, o'rtacha, pessimistik) solishtirish uchun ssenariylardan foydalaniladi.
+Elektron jadvalda model tuzish tartibi: (1) modellashtiriladigan jarayon va uning maqsadi aniqlanadi; (2) kirish qiymatlari (o'zgaruvchilar) alohida, nomlangan kataklarga yoziladi; (3) ular orasidagi bog'liqlik formulalar bilan ifodalanadi; (4) model ma'lum natijalar bilan sinab ko'riladi; (5) kirish qiymatlari o'zgartirilib, natijalar tahlil qilinadi va xulosa chiqariladi. Model qanchalik ko'p omilni hisobga olsa, natija shunchalik aniq bo'ladi, lekin uni tuzish va tekshirish ham qiyinlashadi.
+Katta kompyuter modellariga misol — ob-havo prognozi: atmosferani millionlab kichik kataklarga bo'lib, har biri uchun harorat, bosim, namlik va shamol tezligi fizika qonunlari asosida hisoblanadi. Bunday hisob-kitoblar superkompyuterlarda bajariladi, lekin prognoz baribir bir necha kundan uzoq muddatga aniqligini yo'qotadi — chunki kirish ma'lumotlaridagi kichik xato vaqt o'tishi bilan kattalashib boradi.
+### Simulyatorlar
+**Simulyator** — real jarayonni kompyuterda takrorlaydigan model bo'lib, unda inson real sharoitdagidek harakat qilib, natijasini ko'radi. Uchuvchilar uchun parvoz simulyatori, haydovchilar uchun avtotrenajyor, payvandchi va operatorlar uchun virtual trenajyorlar, ob-havo va iqlim modellari, yong'in yoki favqulodda vaziyatlarni tahlil qiluvchi dasturlar shular jumlasidan. Texnikum saytidagi virtual laboratoriyalar va avtotest ilovasi ham o'quv simulyatorlariga misol bo'ladi.
+Modellashtirish va simulyatsiyaning afzalliklari: xavfli yoki qimmat tajribani xavfsiz va arzon bajarish; vaqtni tezlashtirish yoki sekinlashtirish (yillar davomidagi jarayonni bir necha daqiqada ko'rish); bir xil vaziyatni ko'p marta takrorlash; turli variantlarni tez solishtirish. Kamchiliklari: model real tizimni to'liq aks ettira olmaydi; natija modelga kiritilgan taxmin va formulalar to'g'riligiga bog'liq; murakkab modellarni yaratish qimmat va mutaxassis talab qiladi; simulyatordagi muvaffaqiyat real sharoitdagi tajribaning to'liq o'rnini bosmaydi.
+Xulosa: diagramma savolga mos tanlanganda ma'lumotni tez va to'g'ri tushunishga yordam beradi; jamlovchi jadval katta ma'lumotni umumlashtiradi; CSV va PDF formatlari dasturlar o'rtasida ma'lumot almashishni ta'minlaydi; kompyuter modeli esa «agar ... bo'lsa» savollariga real tajribasiz javob topish imkonini beradi.
+
+keys: Chalg'ituvchi diagramma
+vaziyat: Kafe menejeri egasiga hisobot tayyorladi: ustunli diagrammada sentabrda savdo 98 mln so'm, oktabrda 102 mln so'm bo'lgani ko'rsatilgan. Diagrammaning vertikal o'qi 95 mln dan boshlangani sababli oktabr ustuni sentabrnikidan ikki baravar baland ko'rinadi. Diagrammada sarlavha va o'lchov birligi yo'q, egasi esa «savdo ikki baravar oshibdi» deb xulosa qildi va xodimlarga katta mukofot va'da qildi.
+ksavol: Diagrammaning qaysi kamchiliklari noto'g'ri xulosaga olib keldi?
+ksavol: Savdo aslida necha foizga oshgan?
+ksavol: Diagrammani qanday tuzatish kerak?
+kjavob: Vertikal o'q noldan boshlanmagan (95 mln dan), shuning uchun 4 mln lik farq juda katta bo'lib ko'ringan; sarlavha va o'lchov birligi yo'q. Haqiqiy o'sish: (102 − 98) : 98 · 100 ≈ 4,1 %. Tuzatish: o'qni 0 dan boshlash, «Kafe savdosi, mln so'm, 2026-yil sentabr–oktabr» sarlavhasi va o'q nomlarini qo'shish, ustunlar ustiga aniq qiymatlarni yozish; xulosani diagramma bilan birga sonlar asosida tekshirish.
+savol: Vaqt bo'yicha o'zgarishni ko'rsatish uchun qaysi diagramma mos va nima uchun?
+savol: Doiraviy diagrammani qaysi hollarda ishlatish mumkin emas?
+savol: Yaxshi diagrammada qanday elementlar bo'lishi kerak?
+savol: Jamlovchi jadval qanday vazifani bajaradi? Uning to'rt hududini ayting.
+savol: CSV formatining afzallik va kamchiliklarini tushuntiring.
+savol: Kompyuter modeli va simulyator nima? «Agar ... bo'lsa» tahliliga misol keltiring.
+amaliy: Diagrammalar, jamlovchi jadval va zararsizlik modeli
+amaqsad: Savdo ma'lumotlari asosida mos diagrammalar yaratish, jamlovchi jadval bilan umumlashtirish, CSV import/eksportini bajarish va kafe uchun zararsizlik modelini tuzib, «Parametrni tanlash» buyrug'i bilan tahlil qilish.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; savdo.csv namunaviy fayli (kamida 60 qator: sana, oy, kategoriya, taom, summa, kassir); topshiriq varaqasi
+qadam: savdo.csv faylini import qiling (ajratuvchi va UTF-8 kodlashni tekshiring) va jadval sifatida formatlang.
+qadam: Jamlovchi jadval yarating: qatorlar — kategoriya, ustunlar — oy, qiymatlar — summa yig'indisi; filtr — kassir. Jamlovchi jadvaldan kategoriyalar bo'yicha ustunli diagramma tuzing.
+qadam: Oylar bo'yicha umumiy savdoning chiziqli diagrammasini va oxirgi oydagi kategoriyalar ulushining doiraviy diagrammasini yarating; har biriga sarlavha, o'q nomlari (doiraviyda — foizli ma'lumot yorliqlari) qo'shing, oq-qora chop etishga moslang.
+qadam: Yangi varaqda zararsizlik modelini tuzing: doimiy xarajat, porsiya xarajati, narx va sotilgan porsiyalar soni alohida kataklarda; foyda formulasi `=Soni*(Narx-Xarajat)-Doimiy`.
+qadam: «Parametrni tanlash» buyrug'i bilan foyda 0 ga teng bo'ladigan va 6 000 000 so'm bo'ladigan porsiyalar sonini toping; narxni 27 000 va 33 000 so'mga o'zgartirib, zararsizlik nuqtasi qanday o'zgarishini yozing.
+qadam: Porsiyalar soni 0 dan 2000 gacha (100 qadam bilan) bo'lganda foyda qanday o'zgarishini ustunda hisoblab, chiziqli grafigini chizing va zararsizlik nuqtasini grafikda ko'rsating.
+qadam: Hisobot varag'ini PDF formatida, jamlovchi jadval natijasini esa CSV formatida eksport qiling.
+anatija: Import qilingan jadval, jamlovchi jadval va jamlovchi diagramma, to'g'ri tanlangan va sozlangan uchta diagramma, zararsizlik modeli va «Parametrni tanlash» natijalari, foyda grafigi, PDF va CSV fayllar.
+baho5: Diagramma turlari savolga mos va barcha elementlari bor, jamlovchi jadval to'g'ri tuzilgan, model formulalari va «Parametrni tanlash» natijalari to'g'ri, grafikda zararsizlik nuqtasi ko'rsatilgan, eksport fayllari ochiladi.
+masala: Doimiy xarajatlar 9 000 000 so'm, bitta mahsulot tannarxi 25 000 so'm, sotish narxi 40 000 so'm. Zararsizlik nuqtasini va 1000 dona sotilgandagi foydani toping.
+yechim: Bitta mahsulotdan farq: 40 000 − 25 000 = 15 000 so'm. Zararsizlik nuqtasi: 9 000 000 : 15 000 = 600 dona. 1000 dona sotilganda foyda: 1000 · 15 000 − 9 000 000 = 6 000 000 so'm.
+masala: Uchta savol uchun diagramma turini tanlang: a) 5 ta tikuv mashinasi modelining narxini solishtirish; b) yil davomida oylik gaz sarfining o'zgarishi; c) yoqilg'i sarfining avtomobil yuki og'irligiga bog'liqligi.
+yechim: a) ustunli (yoki gorizontal ustunli) diagramma; b) chiziqli diagramma; c) nuqtali (sochma) diagramma.
+test: Yil davomida oylik savdoning o'zgarishini ko'rsatish uchun eng mos diagramma? | Chiziqli diagramma | Doiraviy diagramma | Nuqtali diagramma emas, jadval | Faqat matn
+test: Butunning qismlari ulushini ko'rsatish uchun qaysi diagramma ishlatiladi? | Doiraviy diagramma | Chiziqli diagramma | Nuqtali diagramma | Sparklayn
+test: Katta jadvalni toifalar bo'yicha tez umumlashtiradigan vosita? | Jamlovchi jadval | Avtoto'ldirish | Shartli formatlash | Validatsiya
+test: CSV formatida jadval saqlanganda nima saqlanib qoladi? | Faqat qiymatlar | Formulalar va diagrammalar | Bir nechta varaq | Formatlar va ranglar
+test: Kerakli natijaga erishish uchun kirish qiymatini avtomatik topadigan buyruq? | Parametrni tanlash (Goal Seek) | Saralash | Filtr | Panellarni mahkamlash
+uyga: Mavzu yuzasidan o'qib o'rganing. Oilangizning bir oylik xarajatlari jadvali asosida toifalar ulushining doiraviy diagrammasini va kunlik xarajatlarning chiziqli diagrammasini tuzing. Kasbingizga oid kichik biznes (masalan, uy sharoitida tort tayyorlash) uchun zararsizlik nuqtasini hisoblang.
+gloss: Diagramma | Sonli ma'lumotlarning grafik tasviri (ustunli, chiziqli, doiraviy, nuqtali va boshqalar).
+gloss: Afsona (legenda) | Diagrammadagi ma'lumotlar qatorlari nomlari va belgilarini tushuntiruvchi element.
+gloss: Jamlovchi jadval | Katta jadval ma'lumotlarini tanlangan maydonlar bo'yicha guruhlab, yig'indi, son yoki o'rtacha qiymatlarni hisoblaydigan vosita.
+gloss: CSV | Qiymatlar vergul yoki nuqtali vergul bilan ajratilgan matnli fayl formati; dasturlar o'rtasida ma'lumot almashishda ishlatiladi.
+gloss: Kompyuter modeli | Real tizim yoki jarayonning formulalar va qoidalar yordamidagi soddalashtirilgan matematik tasviri.
+gloss: Simulyator | Real jarayonni kompyuterda takrorlab, insonga real sharoitdagidek harakat qilish imkonini beruvchi model.
+gloss: Zararsizlik nuqtasi | Daromad xarajatlarga teng bo'lib, foyda nolga teng bo'ladigan sotuv hajmi.

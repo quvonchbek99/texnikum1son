@@ -1,0 +1,64 @@
+nomi: Foydalanuvchi interfeysi dizaynidagi boshqaruv elementlari. Utilita dasturlar. Buyurtma yoki tayyor dasturiy ta'minot
+modul: 1-modul
+ac: 1.7 Shakl (forma) uchun mos boshqaruv elementlarini tanlaydi, utilita dasturlardan foydalanadi, buyurtma va tayyor dasturiy ta'minotni taqqoslaydi.
+maqsad: O'quvchilarda foydalanuvchi interfeysi boshqaruv elementlarini vazifasiga ko'ra tanlash, oddiy elektron shakl loyihalash, kompyuterga xizmat ko'rsatuvchi utilitalardan foydalanish va buyurtma hamda tayyor dasturiy ta'minotni asoslab tanlash ko'nikmasini shakllantirish.
+natija: tugma, matn maydoni, ochiladigan ro'yxat, belgilash katakchasi, radiotugma, sirpang'ich va sana tanlagichni vazifasiga ko'ra qo'llaydi;
+natija: kasbiy vazifa uchun elektron shakl loyihalaydi;
+natija: antivirus, arxivator, diskni tozalash va diskni optimallashtirish utilitalaridan foydalanadi;
+natija: buyurtma asosida yozilgan va tayyor dasturiy ta'minotning afzallik va kamchiliklarini taqqoslaydi.
+reja: Interfeys boshqaruv elementlari va ularni tanlash qoidalari
+reja: Utilita dasturlar
+reja: Buyurtma va tayyor dasturiy ta'minot
+tayanch: boshqaruv elementi; matn maydoni; ochiladigan ro'yxat; belgilash katakchasi; radiotugma; sirpang'ich; utilita; arxivator; siqish; defragmentatsiya; zaxira nusxa; buyurtma dasturiy ta'minot; tayyor dasturiy ta'minot
+metod: Tahlil | O'quvchilar telefonlaridagi biror ro'yxatdan o'tish yoki buyurtma sahifasini ochib, unda qaysi boshqaruv elementlari ishlatilganini sanab chiqadi va nima uchun aynan shu element tanlanganini muhokama qiladi.
+metod: Rolli o'yin | Juftlikda biri «buyurtmachi» (avtoservis egasi), ikkinchisi «dasturchi» bo'lib, yozilish shakliga qanday maydonlar kerakligini kelishib oladi va loyihalaydi.
+ajihoz: Kompyuter (Windows yoki Linux); internet va Google Forms (yoki LibreOffice Writer shakl elementlari); 7-Zip arxivatori; Windows xavfsizlik markazi va «Diskni tozalash» utilitasi; topshiriq varaqasi
+
+## Boshqaruv elementlari
+Foydalanuvchi ma'lumot kiritadigan shakl (forma) turli boshqaruv elementlaridan tuziladi va har birining o'z vazifasi bor:
+- **matn maydoni** — erkin matn kiritish (ism, manzil, izoh);
+- **ochiladigan ro'yxat** — ko'p variantdan bittasini tanlash (viloyat, xizmat turi); xato yozish imkoni yo'q va joy tejaladi;
+- **radiotugmalar** — 2–5 ta variantdan faqat bittasini tanlash (to'lov usuli: naqd / karta);
+- **belgilash katakchalari** — bir nechta variantni bir vaqtda tanlash (qo'shimcha xizmatlar);
+- **sirpang'ich** — oraliqdan qiymat tanlash (ovoz balandligi, narx oralig'i);
+- **sana tanlagich** — sanani taqvimdan tanlash, format xatolarining oldini oladi;
+- **tugma** — amalni bajarish (Yuborish, Saqlash, Bekor qilish).
+To'g'ri tanlangan element foydalanuvchi ishini tezlashtiradi va xatolarni kamaytiradi — bu 3-darsdagi validatsiyaning davomi.
+
+## Utilita dasturlar
+**Utilita** — kompyuterga xizmat ko'rsatadigan, uni xavfsiz va tez ishlashini ta'minlaydigan kichik tizimli dastur: **antivirus** zararli dasturlarni topadi va yo'q qiladi; **arxivator** fayllarni siqib, hajmini kamaytiradi va bitta faylga yig'adi (ZIP, 7z); **diskni tozalash** vaqtinchalik va keraksiz fayllarni o'chiradi; **defragmentatsiya** HDD dagi fayl bo'laklarini ketma-ket joylab, o'qishni tezlashtiradi (SSD uchun bu kerak emas, OT uni o'zi optimallashtiradi); **zaxira nusxa** dasturi muhim fayllarni boshqa diskka yoki bulutga nusxalaydi; **fayl menejeri** fayllarni qidirish, ko'chirish va nomlash uchun xizmat qiladi.
+
+## Buyurtma va tayyor dasturiy ta'minot
+**Buyurtma asosida yozilgan** dastur muayyan tashkilot ehtiyoji uchun dasturchilar tomonidan maxsus yaratiladi: u aynan kerakli vazifalarni bajaradi va tashkilotga tegishli bo'ladi, lekin qimmat, uzoq yaratiladi, xatolari amalda aniqlanadi va qo'llab-quvvatlash shu dasturchilarga bog'liq. **Tayyor** dastur ko'p foydalanuvchi uchun ishlab chiqilib sotiladi yoki tarqatiladi: u arzonroq, darhol ishlatish mumkin, sinovdan o'tgan, qo'llanma va o'quv materiallari ko'p; lekin keraksiz funksiyalari bo'ladi, ayrim kerakli imkoniyatlari bo'lmasligi va ish jarayonini dasturga moslashtirish kerak bo'lishi mumkin.
+
+amaliy: Elektron shakl loyihalash va utilitalardan foydalanish
+amaqsad: Kasbiy vaziyat uchun boshqaruv elementlari to'g'ri tanlangan elektron shakl yaratish, utilitalar yordamida kompyuterni tozalash va fayllarni siqish, buyurtma va tayyor dasturni tanlashni asoslash.
+qadam: Telefoningiz yoki kompyuterdagi biror ro'yxatdan o'tish sahifasini oching va undagi boshqaruv elementlarini jadvalga yozing: maydon nomi, element turi, nima uchun aynan shu element tanlangan.
+qadam: «Avtoservisga yozilish» (yoki kasbingizga mos — «Kafeda stol band qilish», «Kiyim tiktirish buyurtmasi») shaklini Google Forms'da yarating: ism va telefon — matn maydoni, xizmat turi — ochiladigan ro'yxat, qo'shimcha xizmatlar — belgilash katakchalari, to'lov usuli — radiotugmalar, tashrif sanasi — sana maydoni.
+qadam: Majburiy maydonlarni belgilang va telefon maydoniga javobni tekshirish (validatsiya) qoidasini qo'shing; shaklni sherigingizga yuborib, to'ldirtirib ko'ring va javoblar jadvalini oching.
+qadam: Hujjatlar papkangizdagi 10–15 ta faylni 7-Zip yordamida ZIP va 7z formatlarida arxivlang; asl va arxiv hajmlarini yozib, siqish darajasini foizda hisoblang.
+qadam: Win + R → `cleanmgr` buyrug'i bilan «Diskni tozalash» utilitasini ishga tushiring va qancha joy bo'shatish mumkinligini yozing (o'qituvchi ruxsati bilan tozalang).
+qadam: «Windows xavfsizligi → Viruslar va tahdidlardan himoya» bo'limida tezkor tekshiruvni ishga tushirib, natijasini qayd eting; «Disklarni optimallashtirish» oynasida disklaringiz turini va holatini ko'ring.
+qadam: Vaziyatni tahlil qiling: «10 ta filiali bo'lgan oshxonalar tarmog'i buyurtma va ombor hisobini yuritmoqchi». Buyurtma va tayyor dastur bo'yicha afzallik va kamchiliklar jadvalini to'ldirib, tavsiyangizni yozing.
+anatija: Ishlaydigan elektron shakl va to'ldirilgan javoblar jadvali, arxivlash natijalari (hajm va siqish foizi), utilitalar hisoboti, buyurtma va tayyor dasturni taqqoslash jadvali va tavsiya.
+baho5: Shaklning barcha maydonlariga mos element tanlangan va asoslangan, majburiy maydon va validatsiya o'rnatilgan, siqish foizi to'g'ri hisoblangan, utilitalar natijasi qayd etilgan, tavsiya asosli.
+masala: 12 MB hajmli papka arxivlangach, arxiv hajmi 4,8 MB bo'ldi. Siqish darajasini (hajm necha foizga kamayganini) hisoblang.
+yechim: Kamaygan hajm: 12 − 4,8 = 7,2 MB. Foizda: 7,2 : 12 · 100 = 60 %. Arxiv asl hajmning 40 % ini egallaydi.
+masala: Quyidagi maydonlar uchun mos boshqaruv elementini tanlang: a) jinsi; b) sevimli taomlar (bir nechtasi); c) viloyat; d) mahsulot soni 1 dan 10 gacha; e) izoh.
+yechim: a) radiotugmalar; b) belgilash katakchalari; c) ochiladigan ro'yxat; d) sirpang'ich yoki son maydoni (oraliq tekshiruvi bilan); e) ko'p qatorli matn maydoni.
+savol: Radiotugma va belgilash katakchasining farqi nimada?
+savol: Ochiladigan ro'yxat qanday xatolarning oldini oladi?
+savol: Arxivator va antivirus qanday vazifani bajaradi?
+savol: Qaysi holatda buyurtma asosida yozilgan dastur tayyor dasturdan afzal bo'ladi?
+test: Bir nechta variantni bir vaqtning o'zida tanlash uchun qaysi element ishlatiladi? | Belgilash katakchalari | Radiotugmalar | Sirpang'ich | Tugma
+test: Fayllar hajmini kamaytirib, bitta faylga yig'adigan utilita? | Arxivator | Antivirus | Drayver | Brauzer
+test: Qaysi utilita HDD dagi fayl bo'laklarini ketma-ket joylab, ishlashni tezlashtiradi? | Defragmentatsiya | Diskni formatlash | Antivirus | Zaxira nusxa
+test: Buyurtma asosida yozilgan dasturning afzalligi qaysi? | Tashkilotning aniq ehtiyojiga to'liq mos keladi | Doim tayyor dasturdan arzon bo'ladi | Darhol ishlatish mumkin | Internetda qo'llanmalari juda ko'p
+test: To'lov usulini (naqd yoki karta) tanlash uchun eng mos element? | Radiotugmalar | Belgilash katakchalari | Ko'p qatorli matn maydoni | Sirpang'ich
+uyga: Kasbingizga oid bitta xizmat uchun (masalan, buyurtma qabul qilish) qog'ozdagi shaklni elektron shaklga aylantirish rejasini tuzing: har bir maydon, element turi va validatsiya qoidasi. Uyingizdagi kompyuter yoki telefonda keraksiz fayllarni tozalab, qancha joy bo'shaganini yozing.
+gloss: Boshqaruv elementi | Foydalanuvchi interfeysida ma'lumot kiritish yoki amal bajarish uchun xizmat qiladigan element (tugma, ro'yxat, katakcha).
+gloss: Radiotugma | Bir guruh variantlardan faqat bittasini tanlashga imkon beruvchi element.
+gloss: Belgilash katakchasi | Bir nechta variantni bir vaqtda tanlashga imkon beruvchi element.
+gloss: Utilita | Kompyuterga xizmat ko'rsatuvchi kichik tizimli dastur (antivirus, arxivator, diskni tozalash).
+gloss: Tayyor dasturiy ta'minot | Ko'p foydalanuvchi uchun ishlab chiqilib sotiladigan yoki tarqatiladigan dastur.
+gloss: Buyurtma dasturiy ta'minot | Muayyan tashkilot ehtiyoji uchun maxsus yaratilgan dastur.

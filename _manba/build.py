@@ -64,7 +64,17 @@ if sys.argv[2] != "none":
         "paket": "materiallar/zamonaviy-tikuv-jihozlari/index.html",
         "manba": "«Zamonaviy tikuv jihozlari» (UKM.4) raqamli ta’lim resursi",
     }
+    # Modulli umumta'lim fanlari: manba — _manba/rtr/<fan>/ (ixcham matn), rtr_yig.py uni RTR JSON'ga aylantiradi (data/rtr/<fan>-<N>sem.json)
+    sys.path.insert(0, os.path.join(SRC, "rtr"))
+    import rtr_yig as _rtr_yig  # noqa: E402
+    for _pk in _rtr_yig.yig(os.path.join(SRC, "rtr"), sys.argv[2], log=print):
+        STATIK[(_pk["yonalish"], _pk["fan"], _pk["sem"])] = {"json": "data/rtr/" + _pk["fayl"], "base": "", "paket": "", "manba": _pk["manba"]}
 RTR_TIKUV = json.load(open(os.path.join(sys.argv[2], "zamonaviy-tikuv-jihozlari.json"), encoding="utf-8")) if sys.argv[2] != "none" else None
+# Barcha tayyor RTR paketlari (qidiruv va data/rtr nusxasi uchun): fayl nomi -> (STATIK kaliti, JSON)
+RTR_ALL = {}
+for _k, _v in STATIK.items():
+    _fn = os.path.basename(_v["json"])
+    RTR_ALL[_fn] = (_k, json.load(open(os.path.join(sys.argv[2], _fn), encoding="utf-8")))
 
 # ---------- Sahifa qolipi ----------
 NAV = [("", "Fanlar"), ("lab/", "Virtual laboratoriya"), ("kasblar/", "Kasblar xaritasi"), ("oyinlar/", "Sinf o‘yinlari"), ("yhq/", "Yo‘l harakati"), ("avtotest/", "Avtotest"), ("eski/", "Eski versiya")]
@@ -76,7 +86,7 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
     full_title = f"{title} · {NOM} e-bazasi" if title != NOM else f"Fanlar — {NOM} e-bazasi"
     canon = DOMEN + "/" + re.sub(r"index\.html$", "", path)
     def _v(s):  # lab-3d.js tez-tez yangilanadi: versiya fayl mazmunidan olinadi (brauzer keshi eskirib qolmasin)
-        if s not in ("lab-3d.js", "kasb-xarita.js", "lab.js"): return "3"
+        if s not in ("lab-3d.js", "kasb-xarita.js", "lab.js", "rtr.js"): return "3"
         import hashlib; return hashlib.md5(open(os.path.join(SRC, "assets", s), "rb").read()).hexdigest()[:8]
     sc = "".join(f'<script src="{R}assets/{s}?v={_v(s)}" defer></script>' for s in ("sayt.js",) + tuple(scripts))
     html = f"""<!doctype html>
@@ -100,7 +110,7 @@ def page(path, title, desc, body, active=None, scripts=(), noindex=False, abs_ro
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="{R}assets/sayt.css?v=4">
+<link rel="stylesheet" href="{R}assets/sayt.css?v=5">
 <script>(function(){{var m=new Date(Date.now()+(new Date().getTimezoneOffset()+300)*6e4).getMonth(),q=new URLSearchParams(location.search).get('fasl');document.documentElement.setAttribute('data-fasl',/^(kuz|qish|bahor|yoz)$/.test(q||'')?q:(m==11||m<2?'qish':m<5?'bahor':m<8?'yoz':'kuz'));}})();</script>
 </head>
 <body data-root="{R}"{f' class="{body_cls}"' if body_cls else ""}>
@@ -492,7 +502,7 @@ def fan_page(y, f, cur=None, um=None):
     if cur is None:
         cur = "3" if (y["hozirgi_kurs"] == 2 and "3" in sems) else sems[-1] if y["hozirgi_kurs"] == 2 else sems[0]
     nom, c = TOIFA[f["toifa"]]
-    rtr = {s: {"json": R + v["json"], "base": R + v["base"], "paket": R + v["paket"], "manba": v["manba"]} for (yi, fi, s), v in STATIK.items() if yi == y["id"] and fi == f["id"]}
+    rtr = {s: {"json": R + v["json"], "base": R + v["base"], "paket": (R + v["paket"]) if v.get("paket") else "", "manba": v["manba"]} for (yi, fi, s), v in STATIK.items() if yi == y["id"] and fi == f["id"]}
     kab = f'{R}kabinet/?y={y["id"]}&amp;f={f["id"]}'
     if um:
         extra = f'<p class="lead"><span class="tag {c}" style="background:#fff">{nom}</span> &nbsp;Barcha mutaxassisliklar uchun umumiy fan</p>'
@@ -582,6 +592,15 @@ def data_files():
     if RTR_TIKUV:
         for t in RTR_TIKUV["topics"]:
             Q.append({"k": "m", "t": t["nomi"], "s": f'Zamonaviy tikuv jihozlari · {t["id"]} · {t["turi"]}', "u": "yonalish/moda-tikuv-texnologiyasi/fan/zamonaviy-tikuv-jihozlari/#" + ("amaliy" if t["turi"] == "Amaliy" else "maruza")})
+    # Boshqa RTR paketlari (masalan, modulli Informatika): har mavzu qidiruvda, havola semestr bilan
+    for _fn, ((_yi, _fi, _s), _D) in sorted(RTR_ALL.items()):
+        if _fn == "zamonaviy-tikuv-jihozlari.json":
+            continue
+        _b = int((_D.get("meta") or {}).get("dars_boshi") or 1)
+        _fn_nom = (_D.get("meta") or {}).get("fan") or _fi
+        for _i, t in enumerate(_D.get("topics", [])):
+            Q.append({"k": "m", "t": t["nomi"], "s": f'{_fn_nom} · {_s}-semestr · {_i + _b}-dars · {t["turi"]}',
+                      "u": f"yonalish/{_yi}/fan/{_fi}/?sem={_s}#" + ("amaliy" if re.fullmatch(r"(?i)amaliy|laboratoriya", t["turi"]) else "maruza")})
     # Kuvi agent joylagan majmualar (agent/m/*.json): ma'ruza va amaliy mavzulari ham qidiruvda chiqadi (har mavzudan bittadan)
     _am = os.path.join(os.path.dirname(SRC), "agent", "m")
     for _fn in sorted(os.listdir(_am)) if os.path.isdir(_am) else []:
@@ -611,9 +630,10 @@ def data_files():
     Q.append({"k": "m", "t": "Yo‘l harakati viktorinasi", "s": "Kahoot uslubidagi jonli, jamoaviy va yakka o‘yinlar", "u": "yhq/viktorina.html"})
     Q.append({"k": "m", "t": "Avtotest — YHQ Test 2026", "s": "Haydovchilik imtihoni biletlari: 40 bilet, 1272 savol, imtihon rejimi, avtodrom simulyatori, AI xulosa", "u": "avtotest/"})
     json.dump(Q, open(os.path.join(OUT, "data", "qidiruv.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-    if RTR_TIKUV:
+    if RTR_ALL:
         os.makedirs(os.path.join(OUT, "data", "rtr"), exist_ok=True)
-        json.dump(RTR_TIKUV, open(os.path.join(OUT, "data", "rtr", "zamonaviy-tikuv-jihozlari.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        for _fn, (_k, _D) in RTR_ALL.items():
+            json.dump(_D, open(os.path.join(OUT, "data", "rtr", _fn), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 def extras():
     urls = ["", "lab/", "kasblar/", "oyinlar/", "viktorina/", "yhq/", "yhq/viktorina.html", "avtotest/"] + [f"lab/{k}/" for k in LABS] + [f'yonalish/{y["id"]}/fan/{f["id"]}/' for y in Y for f in y["fanlar"] if f["toifa"] != "umumtalim"] + [f'yonalish/umumtalim/fan/{f["id"]}/' for f in UMF]

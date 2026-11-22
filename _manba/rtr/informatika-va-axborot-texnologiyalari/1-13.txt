@@ -1,0 +1,105 @@
+nomi: Intranet va ekstranet
+modul: 2-modul
+ac: 2.3 Internet, intranet va ekstranetni farqlaydi; internetda muloqot vositalaridan odob va xavfsizlik qoidalariga rioya qilib foydalanadi; mobil tarmoq avlodlarini tushuntiradi.
+maqsad: O'quvchilarda internet, intranet va ekstranetning vazifasi va farqini tushuntirish, umumiy hujjatlarga kirish huquqlarini sozlash, rasmiy elektron xat yozish hamda mobil tarmoqlarning ishlash tamoyilini tushuntirish ko'nikmasini shakllantirish.
+natija: internet va Butunjahon o'rgimchak to'ri (WWW) ning farqini, URL tuzilishini va domen nomlarini tushuntiradi;
+natija: intranet va ekstranetni foydalanuvchilari, mazmuni va xavfsizligi bo'yicha taqqoslaydi;
+natija: elektron pochta, messenjer, forum va ijtimoiy tarmoqlardan odob va xavfsizlik qoidalariga rioya qilib foydalanadi;
+natija: mobil tarmoq tuzilishi va 2G–5G avlodlarining asosiy farqlarini biladi;
+natija: bulutli umumiy papkada kirish huquqlarini (ko'rish, izoh, tahrirlash) sozlaydi va rasmiy elektron xat yozadi.
+reja: Internet va uning xususiyatlari
+reja: Intranet va ekstranet
+reja: Internetda muloqot qilish
+reja: Mobil tarmoqlar
+tayanch: internet; Butunjahon o'rgimchak to'ri (WWW); URL; domen nomi; DNS; provayder; intranet; ekstranet; fayrvol; elektron pochta; netiket; mobil tarmoq; tayanch stansiya; 4G; 5G
+metod: Taqqoslash jadvali | O'quvchilar dars davomida «Internet — Intranet — Ekstranet» jadvalini to'ldirib boradi: kim foydalanadi, qanday kiriladi, qanday ma'lumot bor, xavfsizlik darajasi.
+metod: Rolli o'yin | Juftliklar «avtoservis menejeri» va «ehtiyot qism yetkazuvchisi» rolida ekstranet orqali buyurtma berish jarayonini muhokama qiladi va qaysi ma'lumotlarni hamkorga ochish mumkinligini kelishadi.
+metod: Amaliy mashq | Darsning ikkinchi yarmida o'quvchilar bulutli papkada kirish huquqlarini sozlaydi va o'qituvchiga rasmiy elektron xat yuboradi.
+jihoz: Kompyuter va proyektor; internet; bulutli disk (Google Drive yoki OneDrive) va elektron pochta akkaunti; taqdimot; topshiriq varaqasi
+
+## 1. Internet va uning xususiyatlari
+**Internet** — butun dunyodagi millionlab kompyuter tarmoqlarini yagona qoidalar (protokollar) asosida bog'laydigan global tarmoq, ya'ni «tarmoqlar tarmog'i». Internetning yagona egasi yo'q: uning qismlari turli davlatlar, aloqa kompaniyalari va tashkilotlarga tegishli, lekin hammasi bir xil TCP/IP protokollari bo'yicha ishlagani uchun bir-biri bilan «gaplasha» oladi. Foydalanuvchi internetga **provayder** — internet xizmatlarini ko'rsatuvchi kompaniya orqali ulanadi.
+Internet va **Butunjahon o'rgimchak to'ri** (WWW) bir xil narsa emas. Internet — bu kabellar, marshrutizatorlar va serverlardan iborat infratuzilma. WWW esa internet orqali ishlaydigan xizmatlardan biri — bir-biri bilan havolalar orqali bog'langan veb-sahifalar to'plami. Internet orqali yana elektron pochta, fayl uzatish, messenjerlar, onlayn o'yinlar, video oqimlar va bulutli xizmatlar ham ishlaydi.
+### URL va domen nomlari
+Har bir veb-sahifaning o'z manzili — **URL** bor. Masalan, `https://texnikum1son.uz/kasblar/` manzilida: `https` — protokol (shifrlangan aloqa), `texnikum1son.uz` — domen nomi, `/kasblar/` — sayt ichidagi sahifa yo'li. Domen nomining oxirgi qismi yuqori darajali domen deyiladi: `.uz` — O'zbekiston, `.com` — tijorat, `.org` — tashkilotlar, `.gov.uz` — O'zbekiston davlat idoralari. Kompyuterlar aslida bir-birini raqamli IP manzil orqali topadi; inson yozgan domen nomini IP manzilga **DNS** (domen nomlari tizimi) serverlari aylantirib beradi. 1-modulda o'rgangan pharming hujumi aynan shu bosqichni buzib, foydalanuvchini soxta saytga yo'naltiradi.
+### Qidiruv tizimlari
+Internetdagi milliardlab sahifalar orasidan keraklisini **qidiruv tizimlari** topib beradi. Ular maxsus dasturlar yordamida saytlarni doimiy aylanib chiqadi, sahifalar mazmunini indekslaydi va foydalanuvchi so'roviga eng mos natijalarni tartib bilan ko'rsatadi. Samarali qidirish uchun aniq kalit so'zlar tanlanadi: «palov» o'rniga «Toshkent to'y oshi retsepti 10 kishilik». Aniq ibora qo'shtirnoq ichida yoziladi (masalan, "elektron xavfsizlik"), `site:uz` qo'shimchasi faqat O'zbekiston saytlarida qidiradi, minus belgisi esa keraksiz so'zni chiqarib tashlaydi. Natijalarning birinchi qatoridagi «Reklama» belgili havolalar to'lov evaziga yuqoriga chiqarilganini unutmang va ma'lumotni kamida ikki ishonchli manbadan tekshiring.
+### Internetning xususiyatlari
+Internetning afzalliklari: axborotga tez va keng kirish, masofadan o'qish va ishlash, arzon muloqot, onlayn savdo va davlat xizmatlari, bulutda ma'lumot saqlash. Kamchiliklari va xavflari: axborotning hammasi ham ishonchli emas, firibgarlik va zararli dasturlar, shaxsiy ma'lumotlar sizib chiqishi, internetga qaramlik, mualliflik huquqining buzilishi. Shuning uchun axborot sifatini baholash (1-dars) va elektron xavfsizlik qoidalari (9-dars) internetdan foydalanishda doim yodda bo'lishi kerak.
+
+## 2. Intranet va ekstranet
+**Intranet** — tashkilot ichidagi yopiq tarmoq bo'lib, u internet texnologiyalari (veb-sahifalar, brauzer, elektron pochta, fayl almashish) asosida ishlaydi, lekin unga faqat shu tashkilot xodimlari login va parol bilan kira oladi. Intranet tashqi dunyodan **fayrvol** (tarmoq ekrani) bilan himoyalangan. Unda ichki yangiliklar, buyruq va yo'riqnomalar, ish jadvallari, ariza shakllari, xodimlar ma'lumotnomasi, ichki hujjatlar ombori joylashadi. Masalan, katta oshxonalar tarmog'ining intranetida taomlar texnologik kartalari, gigiyena qoidalari va smenalar jadvali saqlanadi; zavod intranetida esa uskunalar bo'yicha yo'riqnomalar va texnik xizmat ko'rsatish jadvali bo'ladi.
+Texnik jihatdan intranet tashkilot ichidagi veb-server, ma'lumotlar bazasi va fayl serveridan iborat bo'ladi. Xodimlar unga oddiy brauzer orqali kiradi, ularning huquqlari esa lavozimiga qarab belgilanadi: masalan, oshpaz texnologik kartalarni ko'radi, lekin tahrirlay olmaydi; bosh oshpaz ularni tahrirlaydi; buxgalter esa moliyaviy hisobotlarga kira oladi. Bu rolga asoslangan kirish huquqlari deyiladi va maxfiy ma'lumot faqat zarur xodimlarga ko'rinishini ta'minlaydi.
+Intranetning afzalliklari: ma'lumot faqat xodimlar uchun ochiq va himoyalangan; axborot tashkilot ehtiyojiga mos va tartibli; ichki muloqot va hujjat aylanishi tezlashadi; qog'oz tejaladi. Kamchiliklari: yaratish va saqlab turish xarajat va mutaxassis talab qiladi; mazmuni muntazam yangilanmasa, eskirgan axborot to'planadi; tashkilotdan tashqarida ishlash uchun qo'shimcha xavfsiz ulanish (VPN) kerak bo'ladi.
+**Ekstranet** — intranetning tanlangan qismini tashkilotdan tashqaridagi ishonchli foydalanuvchilarga — hamkorlar, yetkazib beruvchilar, mijozlar yoki o'quvchilarning ota-onalariga — ochib berish. Tashqi foydalanuvchi ham login va parol bilan kiradi va faqat o'ziga ruxsat berilgan ma'lumotni ko'radi. Misollar: avtomobil dileri ehtiyot qism yetkazuvchining ekstranetida ombordagi qoldiqni ko'rib, buyurtma beradi; tikuv fabrikasi buyurtmachisi ekstranet orqali buyurtma qaysi bosqichda ekanini kuzatadi; ta'lim muassasasining elektron jurnali ota-onalarga farzandining baho va davomatini ko'rsatadi.
+jadval: Internet, intranet va ekstranetni taqqoslash
+| Belgi | Internet | Intranet | Ekstranet |
+| Kim foydalanadi | Hamma | Faqat tashkilot xodimlari | Xodimlar va ruxsat berilgan tashqi hamkorlar |
+| Kirish | Ochiq (ayrim saytlarda ro'yxatdan o'tish) | Login va parol, tashkilot ichida | Login va parol, tashqaridan |
+| Mazmuni | Har xil, har kim joylaydi | Ichki hujjatlar, yangiliklar, jadvallar | Hamkorlar uchun tanlangan ma'lumot (buyurtma, hisob) |
+| Ishonchliligi | Har xil, tekshirish kerak | Tashkilot nazoratida | Tashkilot nazoratida |
+| Xavfsizlik | Eng past | Yuqori, fayrvol bilan himoyalangan | Yuqori, kirish huquqlari cheklangan |
+
+## 3. Internetda muloqot qilish
+Internet muloqotning ko'plab vositalarini beradi: elektron pochta, messenjerlar (Telegram, WhatsApp), videoqo'ng'iroqlar, forumlar, ijtimoiy tarmoqlar va bloglar. Ularning har biri o'z vaziyatiga mos keladi: rasmiy murojaat, hujjat yuborish va ish yozishmalari uchun elektron pochta; tezkor kelishuv uchun messenjer; ko'pchilik bilan fikr almashish uchun forum yoki guruh.
+### Elektron pochta
+Elektron xat tarkibi: «Kimga» — asosiy qabul qiluvchi; «Nusxa» (Cc) — xabardor qilinadigan shaxslar; «Yashirin nusxa» (Bcc) — manzili boshqalarga ko'rinmaydigan qabul qiluvchilar; «Mavzu» — xat mazmunini qisqa aks ettiruvchi sarlavha; matn va ilova fayllar. Ko'p kishiga, masalan, barcha ota-onalarga bir xil xat yuborilganda «Yashirin nusxa» ishlatiladi, shunda ularning manzillari bir-biriga oshkor bo'lmaydi.
+### Netiket — tarmoq odobi
+Internetdagi muloqot qoidalari **netiket** deb ataladi:
+- rasmiy xatda salomlashish, o'zini tanishtirish, aniq mavzu va imzo yozish;
+- matnni faqat bosh harflarda yozmaslik — bu baqirish deb qabul qilinadi;
+- boshqalarni haqorat qilmaslik, mish-mish va tekshirilmagan axborot tarqatmaslik;
+- birovning surati yoki shaxsiy ma'lumotini uning roziligisiz joylamaslik;
+- guruh chatlarida mavzudan chetga chiqmaslik va kechasi keraksiz xabar yubormaslik;
+- noma'lum shaxslardan kelgan ilova va havolalarni ochmaslik.
+jadval: Muloqot vositasini tanlash
+| Vaziyat | Mos vosita | Sababi |
+| Ish beruvchiga rezyume yuborish | Elektron pochta | Rasmiy, ilova fayl va imzo bilan |
+| Guruhdoshlar bilan tezkor kelishuv | Messenjer guruhi | Tez, hamma bir vaqtda ko'radi |
+| Uzoqdagi mijoz bilan buyurtmani muhokama qilish | Videoqo'ng'iroq | Yuzma-yuz suhbat, ekran ko'rsatish mumkin |
+| Ko'pchilikka foydali savol-javob | Forum yoki rasmiy kanal | Javoblar saqlanadi, boshqalar ham o'qiydi |
+Internetda yozilgan har bir xabar, joylangan surat va qoldirilgan izoh **raqamli iz** hosil qiladi. Ular uzoq yillar saqlanib qolishi, skrinshot qilinib tarqalishi va kelajakda ish beruvchi yoki o'qish joyi tomonidan ko'rilishi mumkin. Shuning uchun xabarni yuborishdan oldin «Buni ota-onam yoki bo'lajak ish beruvchim ko'rsa, uyalmaymanmi?» deb o'ylab ko'rish foydali.
+Rasmiy va norasmiy uslub farqlanadi: do'stingizga yozgan xabarda qisqartmalar va emoji ishlatish mumkin, lekin ish beruvchiga, o'qituvchiga yoki tashkilotga yozilgan xat rasmiy uslubda, imlo qoidalariga rioya qilib yoziladi.
+
+## 4. Mobil tarmoqlar
+**Mobil (uyali) tarmoq** hududni ko'plab kichik qismlarga — **uyalarga** bo'ladi. Har bir uyada antennali **tayanch stansiya** joylashgan bo'lib, u telefonlar bilan radio to'lqinlar orqali aloqa qiladi, o'zi esa operatorning kabel va optik tolali tarmog'iga ulangan. Foydalanuvchi bir uyadan ikkinchisiga o'tganda (masalan, avtomobilda ketayotganda) aloqa uzilmasdan keyingi stansiyaga avtomatik o'tadi.
+Mobil tarmoqlar avlodlarga bo'linadi: **2G** — raqamli ovozli aloqa va SMS; **3G** — mobil internet va videoqo'ng'iroq; **4G (LTE)** — yuqori tezlikdagi internet, onlayn video va xaritalar; **5G** — juda yuqori tezlik va kam kechikish, ko'plab qurilmalarni bir vaqtda ulash, aqlli shahar va buyumlar interneti uchun. Har bir yangi avlod tezlikni oshiradi, lekin ko'proq tayanch stansiya va yangi qurilmalar talab qiladi. Mobil internet uy yoki ofisdagi Wi-Fi'dan farqli ravishda istalgan joyda ishlaydi, lekin tarif va qamrov hududiga bog'liq. Boshqa davlatga borganda telefon o'sha davlat operatori tarmog'idan **rouming** orqali foydalanadi, bu esa odatda qimmatroq bo'ladi. Mobil tarmoqlar avlodlari haqida 2-kursda batafsil gaplashamiz.
+Mobil internetdan tejamli va xavfsiz foydalanish uchun ilovalarning fon rejimida internet sarflashini cheklash, katta yangilanish va videolarni Wi-Fi orqali yuklash, tarifdagi qolgan hajmni operator ilovasi orqali kuzatib borish tavsiya etiladi. Kafe, aeroport va boshqa jamoat joylaridagi ochiq Wi-Fi tarmoqlarida bank ilovasi yoki muhim akkauntlarga kirmaslik kerak: bunday tarmoqda boshqa foydalanuvchi ma'lumotlaringizni ushlab qolishi mumkin. Zarur bo'lsa, o'z mobil internetingizdan yoki ishonchli VPN dan foydalaning.
+Xulosa: internet hamma uchun ochiq global tarmoq, intranet — tashkilot ichidagi yopiq tarmoq, ekstranet esa intranetning ishonchli tashqi hamkorlarga ochilgan qismi. Internetda muloqot qilishda netiket va xavfsizlik qoidalariga amal qilish, mobil tarmoqlardan foydalanishda esa tarif va qamrovni hisobga olish kerak.
+
+keys: Tikuv fabrikasining mijozlar portali
+vaziyat: Tikuv fabrikasi do'konlardan keladigan buyurtmalarni telefon va qog'oz orqali qabul qiladi. Ko'pincha buyurtmalar adashib ketadi, do'konlar esa buyurtma qaysi bosqichda ekanini bilish uchun kuniga bir necha marta qo'ng'iroq qiladi. Direktor barcha ma'lumotlarni — ichki narxlar, ishchilar maoshi va buyurtmalar holatini — bitta ochiq saytga joylashni taklif qildi.
+ksavol: Direktor taklifining xavfli tomoni nimada?
+ksavol: Fabrikaga intranet va ekstranet qanday yordam beradi?
+ksavol: Ekstranetda do'konlar qaysi ma'lumotlarni ko'rishi kerak, qaysilarini ko'rmasligi kerak?
+kjavob: Ochiq saytda maosh va ichki narxlar kabi maxfiy ma'lumotlar raqobatchilar va begonalarga oshkor bo'ladi. Yechim: xodimlar uchun intranet (ichki narxlar, ish jadvali, texnologik kartalar) va do'konlar uchun login-parolli ekstranet (buyurtma berish shakli, o'z buyurtmalarining holati, yetkazish sanasi, hisob-faktura). Do'konlar faqat o'z buyurtmalari va narxlarini ko'radi; ishchilar maoshi, boshqa mijozlar ma'lumotlari va ichki hujjatlar ularga ko'rinmaydi.
+savol: Internet va WWW ning farqi nimada?
+savol: `https://my.gov.uz/oz` manzilining qismlarini tushuntiring.
+savol: Intranet va ekstranet qanday farq qiladi? Har biriga kasbingizdan misol keltiring.
+savol: Elektron xatda «Nusxa» va «Yashirin nusxa» maydonlari qachon ishlatiladi?
+savol: Netiketning kamida beshta qoidasini ayting.
+savol: Mobil tarmoqda tayanch stansiya qanday vazifani bajaradi? 4G va 5G ning farqi nimada?
+amaliy: Umumiy papkada kirish huquqlarini sozlash va rasmiy elektron xat yozish
+amaqsad: Bulutli diskda intranet va ekstranet tamoyiliga mos kirish huquqlarini sozlash, rasmiy elektron xat yozish va URL tuzilishini tahlil qilish.
+ajihoz: Kompyuter yoki smartfon; internet; Google Drive (yoki OneDrive) va elektron pochta akkaunti; topshiriq varaqasi
+qadam: Bulutli diskda «Guruh_loyihasi» papkasini yarating va unga kasbingizga oid bitta hujjat (masalan, xizmatlar narxlari ro'yxati) joylang.
+qadam: Papkaga uch xil kirish huquqini sozlang: sherigingizga — «tahrirlash», o'qituvchiga — «izoh qoldirish», «tashqi hamkor» rolidagi boshqa guruh o'quvchisiga — faqat «ko'rish»; havola orqali hammaga ochiq kirishni o'chiring.
+qadam: Sozlamalaringizni jadvalga yozing va har bir holat intranet, ekstranet yoki internetga qaysi biri o'xshashligini izohlang.
+qadam: O'qituvchiga rasmiy elektron xat yozing: aniq mavzu, salomlashish, xat maqsadi (papkaga havola va qisqa tavsif), xushmuomala yakun va imzo (ism-familiya, guruh); sherigingizni «Nusxa» ga qo'shing.
+qadam: Quyidagi manzillarni qismlarga ajrating (protokol, domen, yuqori darajali domen, sahifa yo'li): `https://texnikum1son.uz/kasblar/`, `https://my.gov.uz/oz`, `https://developer.mozilla.org/en-US/docs/Web/JavaScript`.
+qadam: Imkon bo'lsa, internet tezligini o'lchash xizmati orqali Wi-Fi va mobil internet tezligini o'lchang va natijalarni solishtiring.
+anatija: Kirish huquqlari to'g'ri sozlangan bulutli papka va izohli jadval, rasmiy elektron xat, URL tahlili jadvali va internet tezligi natijalari.
+baho5: Kirish huquqlari aniq sozlangan va intranet/ekstranet bilan to'g'ri bog'langan, elektron xat rasmiy uslubda xatosiz yozilgan, URL qismlari to'g'ri aniqlangan.
+test: Tashkilot xodimlari uchun internet texnologiyalari asosida ishlaydigan yopiq tarmoq? | Intranet | Ekstranet | Internet | WWW
+test: Intranetning ishonchli tashqi hamkorlar uchun ochilgan qismi qanday ataladi? | Ekstranet | Internet | LAN | Domen
+test: Domen nomini IP manzilga aylantirib beradigan tizim? | DNS | URL | HTML | VPN
+test: Ko'p kishiga xat yuborilganda ularning manzillarini bir-biridan yashirish uchun qaysi maydon ishlatiladi? | Yashirin nusxa (Bcc) | Kimga | Mavzu | Nusxa (Cc)
+test: Juda yuqori tezlik va kam kechikishga ega, ko'plab qurilmalarni bir vaqtda ulash uchun mo'ljallangan mobil tarmoq avlodi? | 5G | 2G | 3G | 1G
+uyga: Mavzuni konspekt qiling: internet, intranet va ekstranetni taqqoslovchi jadval tuzing va har biriga kasbingizdan bittadan misol yozing. Telefoningizdagi mobil tarmoq turini (4G yoki 5G) va operator tarifidagi internet hajmini aniqlang.
+gloss: Internet | Butun dunyodagi tarmoqlarni yagona protokollar asosida bog'laydigan global tarmoq.
+gloss: URL | Internetdagi resurs manzili: protokol, domen nomi va sahifa yo'lidan iborat.
+gloss: DNS | Domen nomlarini kompyuterlar tushunadigan IP manzillarga aylantiruvchi tizim.
+gloss: Intranet | Tashkilot xodimlari uchun internet texnologiyalari asosida ishlaydigan, tashqaridan himoyalangan yopiq tarmoq.
+gloss: Ekstranet | Intranetning login va parol orqali ishonchli tashqi hamkorlar va mijozlarga ochilgan qismi.
+gloss: Netiket | Internetda muloqot qilish odobi va qoidalari.
+gloss: Tayanch stansiya | Mobil tarmoq uyasidagi telefonlar bilan radio aloqani ta'minlaydigan antennali qurilma.

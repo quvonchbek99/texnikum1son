@@ -1,0 +1,106 @@
+nomi: Salomatlik va xavfsizlik. Oraliq nazorat
+modul: 1-modul
+ac: 1.10 Kompyuterda ishlashda sog'liq va xavfsizlik uchun xavflarni aniqlaydi, ularning oldini olish choralarini qo'llaydi; 1-modul bo'yicha bilimlarini oraliq nazoratda ko'rsatadi.
+maqsad: O'quvchilarda kompyuter va raqamli qurilmalardan foydalanishda sog'liq uchun xavflarni (ko'z charchashi, takroriy zo'riqish shikastlanishi, bel va bo'yin og'rig'i) hamda xavfsizlik xavflarini (elektr toki, yong'in, qoqilish) aniqlash va ish o'rnini ergonomik tashkil etish ko'nikmasini shakllantirish; 1-modul bo'yicha o'zlashtirish darajasini oraliq nazorat orqali aniqlash.
+natija: kompyuterda uzoq ishlash keltirib chiqaradigan sog'liq muammolarini, ularning sabablari va oldini olish choralarini tushuntiradi;
+natija: ish o'rnidagi elektr, yong'in va jismoniy shikastlanish xavflarini aniqlaydi va bartaraf etish yo'llarini ko'rsatadi;
+natija: ergonomik ish o'rnini tashkil etish talablarini qo'llaydi;
+natija: raqamli qurilmalardan oqilona foydalanish (vaqt, uyqu, tanaffus) qoidalariga amal qiladi;
+natija: 1-modul (1–10-darslar) bo'yicha oraliq nazorat test va amaliy topshirig'ini bajaradi.
+reja: Kompyuterda ishlash va sog'liq: asosiy xavflar va ularning oldini olish
+reja: Ish o'rnidagi xavfsizlik: elektr toki, yong'in, jismoniy shikastlanish
+reja: Ergonomik ish o'rni va raqamli gigiyena
+reja: Oraliq nazorat: 1-modul bo'yicha test va amaliy topshiriq
+tayanch: salomatlik; xavfsizlik; ergonomika; ko'z charchashi; 20-20-20 qoidasi; takroriy zo'riqish shikastlanishi (RSI); karpal kanal sindromi; qomat (postura); elektr xavfsizligi; yong'in xavfsizligi; raqamli gigiyena
+metod: Aqliy hujum | «Telefon yoki kompyuterda uzoq o'tirgandan keyin nimani his qilasiz?» savoli bilan o'quvchilar shikoyatlari (ko'z achishishi, bo'yin og'rig'i, bosh og'rig'i) yig'iladi va ular «sog'liq» va «xavfsizlik» xavflariga ajratiladi.
+metod: Auditoriyada tekshiruv | Juftliklar kompyuter xonasidagi ikki ish o'rnini tekshiruv varag'i bo'yicha ko'zdan kechiradi (kabellar, rozetka, stul, monitor balandligi, yoritish) va topilgan kamchiliklarni yozadi.
+metod: Test va amaliy topshiriq | Darsning ikkinchi yarmida oraliq nazorat o'tkaziladi: 1–10-darslar bo'yicha 20 savollik test va amaliy bilet («Nazorat» bo'limida).
+jihoz: Kompyuter va proyektor; to'g'ri va noto'g'ri o'tirish holatlari tasvirlangan plakatlar; ish o'rnini tekshirish varag'i; oraliq nazorat test varaqalari (2 variant) va amaliy biletlar
+
+## 1. Kompyuterda ishlash va sog'liq: asosiy xavflar va ularning oldini olish
+Kompyuter va telefon bugun o'qish, ish va dam olishning ajralmas qismiga aylandi. Ko'plab kasblarda — dizayner, buxgalter, kassir, dispetcher, diagnostika ustasi — inson kuniga bir necha soat ekran oldida o'tiradi. Raqamli qurilmalarning o'zi zararli emas, ammo ulardan noto'g'ri foydalanish sog'liq muammolariga olib keladi. Ularning ko'pchiligi asta-sekin, sezilmasdan rivojlanadi, shuning uchun oldini olish qoidalarini yoshlikdan odat qilish muhim.
+### Ko'z charchashi
+Ekranga uzoq tikilganda inson odatdagidan kamroq ko'z qisadi, ko'z yuzasi quriydi, ko'z mushaklari esa bir xil masofaga uzoq vaqt moslashib charchaydi. Natijada ko'z achishishi, qizarishi, xira ko'rish va bosh og'rig'i paydo bo'ladi. Xonadagi yorug'lik noto'g'ri bo'lsa (ekran ortida derazadan tushayotgan kuchli yorug'lik, ekranda chiroq aksi) yoki ekran juda yorqin yoki xira bo'lsa, ko'z tezroq charchaydi.
+Oldini olish choralari:
+- **20-20-20 qoidasi**: har 20 daqiqada 20 soniya davomida 6 metr (20 fut) uzoqlikdagi narsaga qarang;
+- ekranni ko'zdan 50–70 sm masofada, uning yuqori chetini ko'z sathida yoki biroz pastroq joylashtiring;
+- ekran yorqinligi va kontrastini xona yorug'ligiga moslang, shriftni yetarlicha katta qiling;
+- monitorni derazaga yon tomoni bilan qo'ying, chiroq aksi tushmasligiga e'tibor bering; zarur bo'lsa, aks qaytarmaydigan (mat) ekrandan foydalaning;
+- ko'zni tez-tez qisib turing, ko'z uchun mashqlar bajaring va yiliga kamida bir marta ko'z shifokoriga ko'rining.
+### Takroriy zo'riqish shikastlanishi
+Klaviatura va sichqoncha bilan uzoq vaqt bir xil harakatni bajarish barmoqlar, bilak va tirsak paylari hamda mushaklarida og'riq, uvishish va zaiflikka olib keladi. Bu **takroriy zo'riqish shikastlanishi** (inglizcha RSI) deyiladi. Uning keng tarqalgan turi — **karpal kanal sindromi**: bilakdagi nerv siqilib, barmoqlar uvishadi va og'riydi. Oldini olish uchun bilakni tekis tutib yozish, bilak tayanchi va qo'lga qulay sichqonchadan foydalanish, tez-tez tanaffus qilib, qo'l va barmoqlar uchun mashqlar bajarish, ko'p matn yozadiganlarga esa klaviatura yorliqlari (Ctrl + C, Ctrl + V) va ovozli kiritishdan foydalanish tavsiya etiladi.
+### Bel, bo'yin va yelka og'rig'i
+Noto'g'ri o'tirish — oldinga engashish, boshni ekranga cho'zish, oyoqlarni chalishtirish, past stulda o'tirish — umurtqa pog'onasiga ortiqcha yuk tushiradi. Vaqt o'tishi bilan bel, bo'yin va yelka og'riydi, qomat buziladi. Bunga qarshi sozlanadigan stul (balandligi va suyanchig'i), bel tayanchi, oyoq tayanchi va ekran balandligini to'g'ri tanlash yordam beradi. Noutbukda uzoq ishlaganda uni maxsus tagliq ustiga qo'yib, alohida klaviatura va sichqoncha ulash kerak, aks holda bosh doim pastga egilgan bo'ladi.
+### Eshitish
+Quloqchinda baland ovozda uzoq vaqt musiqa tinglash eshitish qobiliyatini asta-sekin pasaytiradi va bu jarayon qaytarib bo'lmaydi. Mutaxassislar «60/60» qoidasini tavsiya qiladi: ovoz balandligi eng yuqori darajaning 60 foizidan oshmasin va bir martada 60 daqiqadan ortiq tinglanmasin. Shovqinli joyda ovozni baland qilish o'rniga tashqi shovqinni to'sadigan quloqchindan foydalanish xavfsizroq. Ko'chada, ayniqsa yo'lni kesib o'tayotganda quloqchin taqib yurish transport ovozini eshitmaslikka va baxtsiz hodisaga olib kelishi mumkin.
+### Harakatsizlik, uyqu va ruhiy salomatlik
+Kun bo'yi o'tirib ishlash qon aylanishini sekinlashtiradi, ortiqcha vazn va charchoqqa sabab bo'ladi. Har 45–60 daqiqada o'rningizdan turib, bir necha daqiqa yurish yoki cho'zilish mashqlarini bajarish foydali. Uxlashdan oldin telefon va kompyuterda uzoq o'tirish uyquni buzadi: ekran yorug'ligi va qiziqarli kontent miyani hushyor holatda ushlab turadi. Shuning uchun uxlashdan kamida bir soat oldin ekrandan uzoqlashish, kechqurun «tungi rejim»ni yoqish tavsiya etiladi. Ijtimoiy tarmoq va o'yinlarga haddan tashqari berilish diqqat, o'qish va oilaviy munosabatlarga salbiy ta'sir qiladi; telefondagi «ekran vaqti» hisobotini ko'rib, kunlik chegarani o'zingiz belgilashingiz mumkin.
+
+## 2. Ish o'rnidagi xavfsizlik: elektr toki, yong'in, jismoniy shikastlanish
+Salomatlik muammolari asta-sekin rivojlansa, xavfsizlik xavflari bir lahzada jiddiy jarohatga olib kelishi mumkin. Kompyuter xonasi, ofis yoki uydagi ish o'rnida quyidagi xavflar uchraydi.
+### Elektr toki urishi
+Sabablari: izolyatsiyasi shikastlangan kabel va vilkalar, ho'l qo'l bilan qurilmaga tegish, qurilma ustiga suyuqlik to'kilishi, korpusni ochib ichiga tegish. Oldini olish: kabellarni muntazam ko'zdan kechirish, shikastlanganini darhol almashtirish, ish stolida ichimlik saqlamaslik, qurilmalarni ochish va ta'mirlashni faqat mutaxassisga topshirish, elektr tarmog'iga himoya avtomatlari va differensial himoya qurilmasini o'rnatish. Elektromontyor va avtoservis ustalari uchun bu qoidalar kasbiy xavfsizlik texnikasining ham asosi hisoblanadi.
+### Yong'in
+Sabablari: bitta rozetkaga ko'p uzaytirgich va qurilma ulash (tarmoqning ortiqcha yuklanishi), shamollatish teshiklari yopilib qizib ketgan kompyuter, sifatsiz yoki original bo'lmagan quvvatlagich, shishgan batareya, qurilmani kecha bo'yi yumshoq ko'rpa ustida zaryadlash. Oldini olish: tarmoqni ortiqcha yuklamaslik, qurilma atrofida havo aylanishini ta'minlash, faqat original yoki sertifikatlangan quvvatlagichlardan foydalanish, ish tugagach keraksiz qurilmalarni o'chirish. Xonada elektr jihozlari yonganda ishlatish mumkin bo'lgan o't o'chirgich (karbonat angidridli yoki kukunli) bo'lishi kerak: kuchlanish ostidagi qurilmani suv bilan o'chirish taqiqlanadi, avval imkon bo'lsa tokni uzish kerak.
+### Batareyalar
+Telefon, noutbuk va boshqa ko'chma qurilmalardagi litiy-ion batareyalar kuchli qizish, zarba yoki teshilishdan yonib ketishi mumkin. Batareya shishib qolsa, qurilma korpusi ko'tarilsa yoki zaryadlashda haddan tashqari qizisa, undan foydalanishni darhol to'xtatib, servis markaziga murojaat qilish kerak. Qurilmani quyosh tig'ida yoki issiq avtomobil ichida qoldirmaslik, zaryadlash paytida yostiq va ko'rpa ostiga qo'ymaslik, arzon va sertifikatsiz quvvatlagichlardan foydalanmaslik kerak.
+### Qoqilish va jismoniy shikastlanish
+Yerdagi kabellar odamni qoqiltirib yiqitishi, og'ir monitor yoki printer beqaror stoldan tushib ketishi mumkin. Kabellarni kabel kanallari yoki stol ostidagi tutqichlarga joylash, imkon bo'lsa simsiz qurilmalardan foydalanish, og'ir uskunani mustahkam stolga qo'yish, o'tish yo'llarini bo'sh qoldirish kerak.
+jadval: Sog'liq va xavfsizlik xavflari — qisqacha
+| Xavf | Sababi | Oldini olish |
+| Ko'z charchashi | Ekranga uzoq tikilish, noto'g'ri yorug'lik | 20-20-20 qoidasi, ekran masofasi va yorqinligini sozlash |
+| Takroriy zo'riqish (RSI) | Klaviatura va sichqonchada bir xil harakat | Bilak tayanchi, tanaffus, mashqlar |
+| Bel va bo'yin og'rig'i | Noto'g'ri o'tirish, past ekran | Sozlanadigan stul, ekran ko'z sathida |
+| Elektr toki urishi | Shikastlangan kabel, suyuqlik | Kabellarni tekshirish, ichimlikni uzoqda saqlash |
+| Yong'in | Tarmoqning ortiqcha yuklanishi, qizib ketish | Uzaytirgichlarni ko'paytirmaslik, shamollatish |
+| Qoqilish | Yerdagi kabellar | Kabel kanallari, simsiz qurilmalar |
+
+## 3. Ergonomik ish o'rni va raqamli gigiyena
+**Ergonomika** — ish joyi, asbob-uskuna va ish usullarini inson tanasining tuzilishi va imkoniyatlariga moslashtirish haqidagi fan. Ergonomik ish o'rni charchoqni kamaytiradi, mehnat unumdorligini oshiradi va kasbiy kasalliklarning oldini oladi. Kompyuter ish o'rni uchun asosiy talablar:
+- stul balandligi shunday sozlanadiki, oyoqlar polda (yoki tayanchda) tekis turadi, tizzalar taxminan to'g'ri burchak hosil qiladi;
+- bel stul suyanchig'iga tayanadi, yelkalar bo'shashgan;
+- tirsaklar tanaga yaqin, bilak tekis va klaviatura bilan bir sathda;
+- monitor ro'parada, ko'zdan 50–70 sm masofada, yuqori cheti ko'z sathida;
+- xona yaxshi yoritilgan va shamollatiladi, ekranga to'g'ridan-to'g'ri yorug'lik tushmaydi;
+- sichqoncha va klaviatura qo'l yetadigan joyda, cho'zilish talab qilinmaydi.
+jadval: Ish o'rnini tekshirish varag'i (namuna)
+| Tekshiriladigan band | Talab | Ha / Yo'q |
+| Stul | Balandligi va suyanchig'i sozlanadi, oyoqlar polda tekis turadi | |
+| Monitor | Ko'zdan 50–70 sm, yuqori cheti ko'z sathida | |
+| Yoritish | Ekranda aks yo'q, xona yetarli yoritilgan | |
+| Kabellar | Shikastlanmagan, o'tish yo'lida yotmaydi | |
+| Rozetka | Ortiqcha yuklanmagan, uzaytirgichlar ketma-ket ulanmagan | |
+| Ichimlik | Ish stolida suyuqlik yo'q | |
+| Tanaffus | Har 45–60 daqiqada qisqa dam olinadi | |
+**Raqamli gigiyena** — raqamli qurilmalardan sog'liq va vaqtga zarar yetkazmasdan foydalanish odatlari: ish va dam olish vaqtini rejalash, har 45–60 daqiqada tanaffus, kechqurun ekran vaqtini cheklash, bildirishnomalarni tartibga solish, o'qish paytida telefonni ovozsiz rejimga o'tkazish. Ish beruvchilar ham xodimlarga ergonomik jihozlar, tanaffus va muntazam tibbiy ko'rikni ta'minlashi kerak — bu mehnat muhofazasi talablarining bir qismi.
+Turli kasblarda bu qoidalar o'ziga xos ko'rinishda bo'ladi: oshxona kassiri sensorli ekranni tik turib ishlatgani uchun ekran balandligi tirsak sathida bo'lishi kerak; tikuv sexida andoza loyihalash kompyuteri uchun yaxshi yoritish va aks qaytarmaydigan ekran muhim; avtoservisda esa diagnostika noutbuki moy va suyuqliklardan uzoqda, mustahkam aravacha ustida turishi kerak.
+
+## 4. Oraliq nazorat: 1-modul bo'yicha test va amaliy topshiriq
+Ushbu dars bilan 1-modul — «Ma'lumot, axborot, bilimlar bazasi va ma'lumotni qayta ishlash. Apparat va dasturiy ta'minot. Elektron xavfsizlik, salomatlik va xavfsizlik» yakunlanadi. Darsning ikkinchi yarmida oraliq nazorat o'tkaziladi. U ikki qismdan iborat: 1–10-darslar bo'yicha 20 savollik test (har bir darsdan 2 tadan savol) va bitta amaliy bilet (masalan, elektron jadvalda validatsiya qoidalarini o'rnatish yoki kompyuter tavsiflarini aniqlash). Test va biletlar fan sahifasining «Nazorat» bo'limida berilgan.
+Nazoratga tayyorgarlik uchun quyidagilarni takrorlang: ma'lumot, axborot va bilim farqi hamda axborot sifati mezonlari; kod berish, kodlash va shifrlash turlari; validatsiya va verifikatsiya usullari; ichki va tashqi qurilmalar, xotira qurilmalari; tizimli va amaliy dasturiy ta'minot, interfeys turlari va drayverlar; boshqaruv elementlari va utilitalar; kuzatish va boshqarish tizimlari; elektron tahdidlar va himoya choralari; salomatlik va xavfsizlik qoidalari.
+Xulosa: kompyuterdan uzoq va samarali foydalanish uchun sog'liq xavflarining (ko'z, qo'l, umurtqa pog'onasi) va xavfsizlik xavflarining (elektr, yong'in, qoqilish) oldini olish kerak. Ergonomik ish o'rni, muntazam tanaffus va raqamli gigiyena qoidalari bunga yordam beradi.
+
+keys: Dizaynerning shikoyatlari
+vaziyat: Grafik dizayn yo'nalishida o'qiyotgan o'quvchi kechqurun 4–5 soat noutbukda buyurtma ustida ishlaydi: noutbuk divan ustida, ekran yorqinligi eng yuqori darajada, xonada faqat ekran yorug'i bor. Bir oydan beri uning ko'zlari achishadi, bo'yni va o'ng bilagi og'riydi, kechasi uxlay olmaydi. Noutbuk zaryadlagichi esa ko'rpa ustida qizib yotadi.
+ksavol: O'quvchida qanday sog'liq muammolari paydo bo'lgan va ularning sababi nima?
+ksavol: Bu vaziyatda qanday xavfsizlik xavfi bor?
+ksavol: Ish o'rni va ish tartibini qanday o'zgartirishni tavsiya qilasiz?
+kjavob: Ko'z charchashi (qorong'i xona, juda yorqin ekran, tanaffussiz ish), bo'yin og'rig'i (noutbuk past, bosh pastga egilgan), takroriy zo'riqish (bilak noqulay holatda), uyqu buzilishi (kechqurun uzoq ekran oldida o'tirish). Xavfsizlik xavfi — yumshoq sirtda qizib yotgan zaryadlagich yong'inga sabab bo'lishi mumkin. Tavsiya: stol va sozlanadigan stulda ishlash, noutbukni tagliq ustiga qo'yib alohida klaviatura va sichqoncha ulash, xonani yoritish va ekran yorqinligini moslash, 20-20-20 qoidasi va har soatda tanaffus, ishni kunduzi bajarish yoki uxlashdan bir soat oldin to'xtatish, zaryadlagichni qattiq sirtda ishlatish.
+savol: Ko'z charchashining sabablari va oldini olish choralari qanday?
+savol: Takroriy zo'riqish shikastlanishi nima va undan qanday saqlanish mumkin?
+savol: Ergonomik ish o'rni qanday talablarga javob berishi kerak?
+savol: Kompyuter xonasida yong'in xavfini kamaytirish uchun nimalar qilinadi?
+savol: Nima uchun kuchlanish ostidagi elektr qurilmasini suv bilan o'chirib bo'lmaydi?
+savol: Raqamli gigiyena deganda nimani tushunasiz? O'zingiz uchun 3 ta qoida yozing.
+test: Ekranga uzoq qarashdan ko'z charchamasligi uchun qaysi qoida tavsiya etiladi? | 20-20-20 qoidasi: har 20 daqiqada 20 soniya 6 metr uzoqqa qarash | Ekran yorqinligini eng yuqori darajaga qo'yish | Ekranni ko'zga 20 sm yaqin qo'yish | Faqat qorong'i xonada ishlash
+test: Klaviatura va sichqoncha bilan uzoq bir xil harakat qilish natijasida paydo bo'ladigan muammo? | Takroriy zo'riqish shikastlanishi (RSI) | Ko'rish o'tkirligining oshishi | Elektr toki urishi | Kompyuter virusi
+test: Monitorni qanday joylashtirish to'g'ri? | Ko'zdan 50–70 sm masofada, yuqori cheti ko'z sathida | Ko'zdan 20 sm masofada | Ko'z sathidan ancha yuqorida | Derazaga orqa tomoni bilan, yorug'lik ekranga tushadigan qilib
+test: Kompyuter xonasida yong'in xavfini kamaytirish uchun nima qilish kerak? | Bitta rozetkaga ko'p uzaytirgich ulamaslik | Kabellarni yerda ochiq qoldirish | Shamollatish teshiklarini yopib qo'yish | Ish stolida ichimlik saqlash
+test: Kuchlanish ostidagi elektr qurilmasi yonganda qaysi o't o'chirgich ishlatiladi? | Karbonat angidridli yoki kukunli o't o'chirgich | Suvli o't o'chirgich | Ko'pikli suv purkagich | Oddiy chelakdagi suv ## Suv tokni o'tkazadi, shuning uchun elektr jihozlarini suv bilan o'chirish taqiqlanadi.
+uyga: Uyingizdagi ish o'rningizni (stol, stul, kompyuter yoki telefon bilan ishlash joyi) ergonomika talablari bo'yicha tekshiring va 5 ta kamchilik hamda ularni bartaraf etish yo'lini yozing. Telefoningizdagi «Ekran vaqti» hisobotidan oxirgi hafta natijasini ko'rib, kunlik chegarani belgilang. Oraliq nazoratga tayyorgarlik uchun 1–9-darslar savollarini takrorlang.
+gloss: Ergonomika | Ish joyi, uskuna va ish usullarini inson tanasi tuzilishi va imkoniyatlariga moslashtirish haqidagi fan.
+gloss: Takroriy zo'riqish shikastlanishi (RSI) | Bir xil harakatni uzoq takrorlash natijasida barmoq, bilak va tirsak mushak va paylarining shikastlanishi.
+gloss: Karpal kanal sindromi | Bilakdagi nervning siqilishi natijasida barmoqlarning uvishishi va og'rishi.
+gloss: 20-20-20 qoidasi | Har 20 daqiqada 20 soniya davomida 6 metr (20 fut) uzoqlikka qarash orqali ko'z charchashining oldini olish usuli.
+gloss: Raqamli gigiyena | Raqamli qurilmalardan sog'liq va vaqtga zarar yetkazmasdan foydalanish odatlari.
+gloss: Oraliq nazorat | Modul yoki semestrning bir qismi yakunlangach, o'zlashtirishni aniqlash uchun o'tkaziladigan nazorat.

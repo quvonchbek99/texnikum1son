@@ -1,0 +1,57 @@
+nomi: Validatsiya qoidalari. Elektron jadvalga qo'llanadigan validatsiya. Ma'lumotlar kiritilishini tekshirish. Ma'lumotlarni filtrlash va saralash
+modul: 3-modul
+ac: 3.6 Elektron jadvalda validatsiya qoidalarini o'rnatadi va noto'g'ri ma'lumotlarni aniqlaydi; ma'lumotlarni bir va bir necha mezon bo'yicha saralaydi va filtrlaydi.
+maqsad: O'quvchilarda elektron jadvalda ma'lumot kiritishni validatsiya qoidalari bilan nazorat qilish, mavjud noto'g'ri ma'lumotlarni topish hamda katta jadvallarni saralash va filtrlash orqali kerakli ma'lumotni tez ajratib olish ko'nikmasini shakllantirish.
+natija: son, ro'yxat, sana, matn uzunligi va formula asosidagi validatsiya qoidalarini o'rnatadi;
+natija: kiritish xabari va xato xabarini sozlaydi, noto'g'ri ma'lumotlarni aylana bilan belgilaydi;
+natija: ma'lumotlarni bitta va bir necha darajali mezon bo'yicha saralaydi;
+natija: avtofiltr va kengaytirilgan filtr yordamida yozuvlarni tanlaydi;
+natija: filtrlangan ma'lumotlar bo'yicha `SUBTOTAL` funksiyasi bilan hisoblaydi.
+reja: Elektron jadvalda validatsiya va ma'lumotlarni tekshirish
+reja: Ma'lumotlarni saralash
+reja: Ma'lumotlarni filtrlash
+tayanch: validatsiya; ma'lumotlarni tekshirish; kiritish xabari; xato xabari; noto'g'ri ma'lumotlarni belgilash; saralash; ko'p darajali saralash; avtofiltr; kengaytirilgan filtr; shartlar diapazoni; SUBTOTAL
+metod: Takrorlash va bog'lash | 3-darsdagi validatsiya turlari (oraliq, ro'yxat, uzunlik, format) qisqacha takrorlanadi va ularning har biri elektron jadvalda qaysi buyruq bilan o'rnatilishi ko'rsatiladi.
+metod: Musobaqa | Guruhlarga 100 qatorli buyurtmalar jadvali va 5 ta savol beriladi («Noyabrdagi eng qimmat 3 ta buyurtma?», «Usta 2 bajargan diagnostikalar soni?»); filtr va saralash yordamida birinchi to'g'ri javob bergan guruh g'olib bo'ladi.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; avtoservis (yoki kafe) buyurtmalari bo'yicha 100 qatorli namunaviy jadval; proyektor
+
+## Elektron jadvalda validatsiya
+3-darsda o'rganilgan validatsiya qoidalari elektron jadvalda «Ma'lumotlar → Ma'lumotlarni tekshirish» buyrug'i bilan o'rnatiladi. Qoida turlari: butun yoki o'nli son (oraliq bilan), ro'yxat (variantlar vergul bilan yoki boshqa varaqdagi nomlangan diapazondan), sana va vaqt oralig'i, matn uzunligi va **formula asosidagi qoida**. Formula bilan murakkab shartlar yoziladi: buyurtma raqami takrorlanmasin — `=COUNTIF($A$2:$A$200; A2)=1`; sana bugungidan keyin bo'lmasin — `=A2<=TODAY()`. Kiritish xabari foydalanuvchiga nima kiritish kerakligini oldindan aytadi, xato xabari esa noto'g'ri qiymatni to'xtatadi yoki ogohlantiradi. Qoida o'rnatilgunga qadar kiritilgan yoki boshqa joydan nusxalab qo'yilgan ma'lumotlar tekshirilmaydi — ularni «Noto'g'ri ma'lumotlarni aylana bilan belgilash» buyrug'i orqali topish mumkin.
+
+## Ma'lumotlarni saralash
+Saralash yozuvlarni tanlangan ustun bo'yicha tartiblaydi: matnni A dan Ya gacha, sonlarni kichikdan kattaga yoki aksincha, sanalarni eskisidan yangisiga. Bir nechta mezon bo'yicha saralashda darajalar qo'shiladi: masalan, avval xizmat turi bo'yicha (A→Z), so'ng har bir xizmat ichida summa bo'yicha (kattadan kichikka). Saralashdan oldin butun jadval belgilanishi yoki kursor jadval ichida turishi kerak, aks holda faqat bitta ustun saralanib, qatorlardagi ma'lumotlar aralashib ketadi.
+
+## Ma'lumotlarni filtrlash
+Filtr shartga mos qatorlarni ko'rsatadi, qolganlarini vaqtincha yashiradi (o'chirmaydi). **Avtofiltr** (Ctrl + Shift + L) har bir sarlavhaga ochiladigan ro'yxat qo'shadi: qiymatlar bo'yicha belgilash, matn filtri («... bilan boshlanadi», «... ni o'z ichiga oladi»), son filtri («dan katta», «eng katta 10 ta»), sana filtri («shu oy»). **Kengaytirilgan filtr**da shartlar alohida diapazonga yoziladi: bir qatordagi shartlar «VA», turli qatordagilar «YOKI» ma'nosini beradi; natijani boshqa joyga nusxalash ham mumkin. Filtrlangan ma'lumotlar bo'yicha hisoblashda `=SUBTOTAL(109; F2:F200)` faqat ko'rinib turgan qatorlarni qo'shadi, oddiy `SUM` esa yashiringanlarni ham hisoblaydi.
+
+amaliy: Buyurtmalar jadvalida validatsiya, saralash va filtrlash
+amaqsad: Buyurtmalar jadvaliga validatsiya qoidalarini o'rnatish va sinash, mavjud noto'g'ri ma'lumotlarni topish, jadvalni bir necha mezon bo'yicha saralash va filtrlash yordamida savollarga javob topish.
+qadam: Namunaviy buyurtmalar jadvalini oching: Buyurtma №, Sana, Mijoz, Telefon, Xizmat turi, Usta, Summa.
+qadam: Validatsiya qoidalarini o'rnating: «Buyurtma №» — formula bilan takrorlanmaslik (`=COUNTIF($A$2:$A$200; A2)=1`); «Sana» — 01.09.2026 dan bugungacha; «Xizmat turi» — boshqa varaqdagi ro'yxatdan; «Summa» — 0 dan katta o'nli son; «Telefon» — matn uzunligi 13. Har biriga kiritish va xato xabarini yozing.
+qadam: Har bir qoidani normal, chegaraviy va noto'g'ri qiymat bilan sinab, natijani sinov jadvaliga yozing.
+qadam: O'qituvchi bergan, xatolar ataylab qo'shilgan 20 qatorni jadval oxiriga nusxalab qo'ying va «Noto'g'ri ma'lumotlarni aylana bilan belgilash» buyrug'i bilan xato kataklarni toping va tuzating.
+qadam: Jadvalni ko'p darajali saralang: 1-daraja — «Xizmat turi» (A→Z), 2-daraja — «Summa» (kattadan kichikka); so'ng «Sana» bo'yicha qayta saralab, eng oxirgi 5 ta buyurtmani yozing.
+qadam: Avtofiltr yordamida quyidagilarni toping: a) «Usta 2» bajargan diagnostikalar; b) summasi 500 000 so'mdan katta buyurtmalar; c) mijoz familiyasi «Ka» bilan boshlanadiganlar; d) joriy oydagi buyurtmalar. Har biri uchun `=SUBTOTAL(109; G2:G200)` va `=SUBTOTAL(103; A2:A200)` bilan summa va sonini yozing.
+qadam: Kengaytirilgan filtr bilan «Xizmat turi = Moy almashtirish VA Summa > 300 000» YOKI «Usta = Usta 3» shartli yozuvlarni boshqa varaqqa nusxalang.
+anatija: Validatsiya qoidalari o'rnatilgan va sinov jadvali bilan tekshirilgan jadval, topilib tuzatilgan xato yozuvlar, ko'p darajali saralangan ro'yxat, filtr savollariga javoblar (summa va son) va kengaytirilgan filtr natijasi.
+baho5: Barcha validatsiya qoidalari ishlaydi va sinovdan o'tgan, xato yozuvlarning hammasi topilgan, saralash qatorlarni aralashtirmagan, filtr javoblari va SUBTOTAL natijalari to'g'ri, kengaytirilgan filtr shartlari to'g'ri yozilgan.
+masala: Kengaytirilgan filtr uchun shartlar diapazonini yozing: «Kategoriya = Ichimlik va Summa 50 000 dan katta» yoki «Kategoriya = Shirinlik».
+yechim: Birinchi qatorda sarlavhalar: Kategoriya | Summa. 2-qator: Ichimlik | >50000. 3-qator: Shirinlik | (bo'sh). Bir qatordagi shartlar «VA», turli qatorlardagilar «YOKI» deb tushuniladi.
+masala: Filtrlangan jadvalda faqat 12 ta qator ko'rinmoqda, lekin `=SUM(F2:F101)` barcha 100 ta qator yig'indisini ko'rsatmoqda. Faqat ko'rinayotgan qatorlar yig'indisi uchun qanday formula kerak?
+yechim: `=SUBTOTAL(109; F2:F101)` — 109 kodi yashirilgan va filtrlab yashirilgan qatorlarni hisobga olmasdan yig'indi hisoblaydi.
+savol: Formula asosidagi validatsiya qoidasiga ikki misol keltiring.
+savol: Validatsiya qoidasi o'rnatilgunga qadar kiritilgan noto'g'ri ma'lumotlarni qanday topish mumkin?
+savol: Ko'p darajali saralash qachon kerak bo'ladi?
+savol: Avtofiltr va kengaytirilgan filtrning farqi nimada?
+test: Buyurtma raqami takrorlanmasligi uchun qaysi validatsiya turi ishlatiladi? | Formula asosidagi qoida (COUNTIF bilan) | Sana oralig'i | Matn uzunligi | Ro'yxat
+test: Filtr shartga mos kelmagan qatorlarni nima qiladi? | Vaqtincha yashiradi | Butunlay o'chiradi | Boshqa faylga ko'chiradi | Rangga bo'yaydi
+test: Kengaytirilgan filtrning shartlar diapazonida turli qatorlarga yozilgan shartlar qanday ma'noni bildiradi? | YOKI | VA | EMAS | TENG
+test: Faqat ko'rinib turgan (filtrlangan) qatorlar yig'indisini hisoblaydigan formula? | =SUBTOTAL(109; F2:F101) | =SUM(F2:F101) | =COUNT(F2:F101) | =SUMIF(F2:F101)
+test: Avtofiltrni yoqish uchun klaviatura yorlig'i? | Ctrl + Shift + L | Ctrl + C | Ctrl + Z | Alt + F4
+uyga: Misol va mashqlar ishlang: guruhingiz o'quvchilari ro'yxati (familiya, ism, tug'ilgan sana, telefon, yo'nalish) uchun validatsiya qoidalarini o'rnating; ro'yxatni familiya bo'yicha saralab, filtr yordamida qishda tug'ilganlarni ajrating.
+gloss: Ma'lumotlarni tekshirish | Elektron jadvalda katakka kiritiladigan qiymatlarga validatsiya qoidasi o'rnatish buyrug'i.
+gloss: Xato xabari | Validatsiya qoidasiga mos kelmagan qiymat kiritilganda chiqadigan to'xtatuvchi yoki ogohlantiruvchi xabar.
+gloss: Saralash | Yozuvlarni tanlangan ustun qiymatlari bo'yicha o'sish yoki kamayish tartibida joylashtirish.
+gloss: Avtofiltr | Har bir sarlavhaga qo'shiladigan ro'yxat orqali shartga mos qatorlarni ko'rsatib, qolganlarini yashirish.
+gloss: Kengaytirilgan filtr | Shartlari alohida diapazonda «VA» va «YOKI» mantig'i bilan yoziladigan filtr.
+gloss: SUBTOTAL | Faqat ko'rinib turgan qatorlar bo'yicha yig'indi, son va boshqa natijalarni hisoblaydigan funksiya.

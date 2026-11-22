@@ -1,0 +1,60 @@
+nomi: Elektron jadval yaratish
+modul: 3-modul
+ac: 3.1 Elektron jadval yaratadi, ma'lumot kiritadi, qator, ustun va varaqlarni boshqaradi, oddiy formulalar yozadi va jadvalni himoyalaydi.
+maqsad: O'quvchilarda elektron jadval tuzilishini tushunish, kasbiy ma'lumotlar jadvalini yaratish, qator, ustun va varaqlarni boshqarish, oddiy formula va funksiyalardan foydalanish hamda jadvalni parol bilan himoyalash ko'nikmasini shakllantirish.
+natija: kitob, varaq, katak, katak manzili va diapazon tushunchalarini qo'llaydi;
+natija: ma'lumotlarni kiritadi, avtoto'ldirish bilan ketma-ketlik hosil qiladi;
+natija: qator va ustunlarni qo'shadi, o'chiradi, kengligini o'zgartiradi, yashiradi; varaqlarni nomlaydi va nusxalaydi;
+natija: SUM, AVERAGE, MAX, MIN, COUNT funksiyalari va arifmetik formulalarni yozadi;
+natija: kataklarni qulflash, varaq va faylni parol bilan himoyalashni bajaradi.
+reja: Elektron jadval tuzilishi va ma'lumot turlari
+reja: Qator, ustun va varaqlarni boshqarish. Oddiy formulalar
+reja: Elektron jadval xavfsizligi
+tayanch: elektron jadval; kitob; varaq; katak; katak manzili; diapazon; formula; funksiya; avtoto'ldirish; varaqni himoyalash; katakni qulflash; parol
+metod: Namoyish | O'qituvchi ekranda kafe xarid ro'yxatini 3–4 daqiqada yaratib, avtoto'ldirish va formulani nusxalash qanday vaqt tejashini ko'rsatadi.
+metod: Juftlikda tekshirish | Juftliklar tayyor jadvallarini almashib, himoyalangan kataklarni o'zgartirishga urinib ko'radi va himoya to'g'ri o'rnatilganini tekshiradi.
+ajihoz: Kompyuter; MS Excel yoki LibreOffice Calc; proyektor; topshiriq varaqasi (kasbga mos ma'lumotlar)
+
+## Elektron jadval tuzilishi
+Elektron jadval fayli **kitob** deyiladi, u bir nechta **varaqdan** iborat. Varaq ustunlar (A, B, C, ...) va qatorlardan (1, 2, 3, ...) tuzilgan; ularning kesishmasi **katak**, uning nomi esa **katak manzili** (masalan, B3). To'rtburchak kataklar guruhi **diapazon** deb ataladi va ikki nuqta bilan yoziladi: A1:D10. Katakka son, matn, sana yoki **formula** kiritiladi; formula doim `=` belgisi bilan boshlanadi: `=B2*C2`, `=SUM(D2:D11)`. Katakning pastki o'ng burchagidagi kichik kvadrat — **avtoto'ldirish markeri**: uni tortib, formulani nusxalash yoki 1, 2, 3 ... va sanalar ketma-ketligini hosil qilish mumkin.
+
+## Qator, ustun va varaqlarni boshqarish
+Qator yoki ustun sarlavhasini o'ng tugma bilan bosib, qo'shish, o'chirish, yashirish va qayta ko'rsatish mumkin; ustun chegarasini ikki marta bosish kenglikni matnga moslaydi. Varaq yorlig'i nomlanadi, rangi o'zgartiriladi, nusxalanadi va ko'chiriladi. Asosiy funksiyalar: `SUM` — yig'indi, `AVERAGE` — o'rta qiymat, `MAX` va `MIN` — eng katta va eng kichik qiymat, `COUNT` — sonli kataklar soni. Mintaqaviy sozlamaga qarab funksiya argumentlari vergul yoki nuqtali vergul bilan ajratiladi.
+
+## Elektron jadval xavfsizligi
+Jadvaldagi formulalar tasodifan o'chirilmasligi uchun **varaq himoyalanadi**: avval o'zgartirish mumkin bo'lgan kataklar «Katak formati → Himoya» oynasida qulfdan chiqariladi, so'ng «Ko'rib chiqish → Varaqni himoyalash» buyrug'i bilan parol o'rnatiladi. Kitob tuzilishini (varaqlarni o'chirish va qo'shishni) alohida himoyalash, faylni esa ochish paroli bilan shifrlash mumkin. Parol unutilsa, faylni tiklash juda qiyin, shuning uchun uni ishonchli joyda saqlang va muhim jadvallarning zaxira nusxasini oling.
+
+amaliy: Kasbiy ma'lumotlar jadvalini yaratish va himoyalash
+amaqsad: Kasbingizga mos ma'lumotlar jadvalini yaratish, qator va ustunlarni boshqarish, formula va funksiyalar bilan hisob-kitob qilish hamda jadvalni himoyalash.
+qadam: Yangi kitob yarating va uni «Familiya_jadval» nomi bilan saqlang; birinchi varaqni «Xarid», ikkinchisini «Hisobot» deb nomlang.
+qadam: «Xarid» varag'iga sarlavhalarni yozing: №, Nomi, Birlik, Narxi (so'm), Soni, Summa (so'm). Kasbingizga mos 10 ta mahsulot yoki xizmat kiriting (masalan, oshpaz — oziq-ovqat mahsulotlari, avtoservis — ehtiyot qismlar, tikuvchi — gazlama va furnitura).
+qadam: № ustunini avtoto'ldirish markeri bilan 1 dan 10 gacha to'ldiring; ustunlar kengligini matnga moslang.
+qadam: F2 katakka `=D2*E2` formulasini yozing va uni avtoto'ldirish bilan F11 gacha nusxalang.
+qadam: Jadval ostida jami summa (`=SUM(F2:F11)`), o'rtacha narx (`=AVERAGE(D2:D11)`), eng qimmat va eng arzon narx (`=MAX(D2:D11)`, `=MIN(D2:D11)`) hamda mahsulotlar sonini (`=COUNT(D2:D11)`) hisoblang.
+qadam: «Birlik» ustunidan keyin yangi «Yetkazuvchi» ustunini qo'shing, bitta keraksiz qatorni o'chiring va formulalar to'g'ri qayta hisoblanganini tekshiring; «Yetkazuvchi» ustunini yashirib, so'ng qayta ko'rsating.
+qadam: «Soni» ustunidagi kataklarni qulfdan chiqaring, varaqni parol bilan himoyalang va formulali kataklarni o'zgartirishga urinib ko'ring; faqat «Soni» o'zgarishi mumkinligini tekshiring.
+qadam: «Xarid» varag'ining nusxasini yaratib, unda narxlarni 10 % ga oshirilgan holda qayta hisoblang (masalan, `=D2*1,1`) va natijalarni «Hisobot» varag'ida solishtiring.
+anatija: Ikki varaqli, nomlangan kitob: 10 ta yozuvli to'g'ri hisoblangan jadval, jami va statistik ko'rsatkichlar, qo'shilgan va yashirilgan ustun, faqat kerakli kataklari ochiq himoyalangan varaq.
+baho5: Jadval kasbga mos va to'liq, barcha formulalar to'g'ri va nusxalangan, qator va ustunlar bilan amallar bajarilgan, himoya to'g'ri o'rnatilgan va tekshirilgan.
+masala: A2:D11 diapazonida nechta katak bor?
+yechim: Ustunlar: A, B, C, D — 4 ta; qatorlar: 2 dan 11 gacha — 10 ta. Kataklar soni: 4 · 10 = 40 ta.
+masala: Narxi 18 500 so'm bo'lgan mahsulotdan 12 dona olindi. Summani hisoblovchi formulani yozing (narx — D5, soni — E5) va natijani toping.
+yechim: Formula: `=D5*E5`. Natija: 18 500 · 12 = 222 000 so'm.
+masala: B2:B31 diapazonida bir oylik kunlik savdo yozilgan. Oylik jami, kunlik o'rtacha va eng yaxshi kun savdosini topuvchi formulalarni yozing.
+yechim: Jami: `=SUM(B2:B31)`; o'rtacha: `=AVERAGE(B2:B31)`; eng yaxshi kun: `=MAX(B2:B31)`.
+savol: Kitob, varaq, katak va diapazon tushunchalarini tushuntiring.
+savol: Formula qanday belgi bilan boshlanadi? Formula va oddiy son kiritishning farqi nimada?
+savol: Avtoto'ldirish markeri qanday ishlarda yordam beradi?
+savol: Varaqni himoyalashda nima uchun avval ayrim kataklar qulfdan chiqariladi?
+test: B ustuni va 3-qator kesishmasidagi katak manzili qanday yoziladi? | B3 | 3B | B:3 | 3:B
+test: Elektron jadvalda formula qaysi belgi bilan boshlanadi? | = | # | @ | %
+test: D2 dan D11 gacha kataklar yig'indisini topadigan formula? | =SUM(D2:D11) | =AVERAGE(D2:D11) | =COUNT(D2:D11) | =D2+D11
+test: Formulali kataklarni tasodifiy o'zgartirishdan himoyalash uchun nima qilinadi? | Varaq himoyalanadi (parol bilan) | Ustun kengaytiriladi | Varaq nomi o'zgartiriladi | Kataklar ranglanadi
+test: A1:C4 diapazonida nechta katak bor? | 12 | 7 | 4 | 3
+uyga: Mavzuni konspekt qiling: elektron jadval tuzilishi, 5 ta asosiy funksiya va himoya turlari. Oilangiz uchun bir haftalik oziq-ovqat xarajatlari jadvalini tuzing (kun, mahsulot, narx, soni, summa) va haftalik jami hamda kunlik o'rtacha xarajatni hisoblang.
+gloss: Elektron jadval | Ma'lumotlarni katakli jadvalda saqlash va formulalar yordamida avtomatik hisoblash dasturi.
+gloss: Katak manzili | Katakning ustun harfi va qator raqamidan iborat nomi, masalan B3.
+gloss: Diapazon | Bir nechta katakdan iborat to'rtburchak guruh; masalan, A1:D10.
+gloss: Formula | `=` belgisi bilan boshlanadigan, katak qiymatini hisoblaydigan ifoda.
+gloss: Avtoto'ldirish | Katak markerini tortish orqali formula yoki qiymatlar ketma-ketligini qo'shni kataklarga avtomatik nusxalash.
+gloss: Varaqni himoyalash | Varaqdagi qulflangan kataklarni parol bilan o'zgartirishdan himoya qilish.

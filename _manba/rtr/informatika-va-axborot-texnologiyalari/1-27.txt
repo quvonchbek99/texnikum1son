@@ -1,0 +1,57 @@
+nomi: Statik va dinamik parametrlar. Ma'lumotlar bazasi doirasida hisoblashlarni amalga oshirish
+modul: 3-modul
+ac: 3.11 Statik va dinamik (parametrli) so'rovlar tuzadi, so'rovlarda hisoblanadigan maydonlar yaratadi, natijalarni saralaydi va ma'lumot kiritish shaklini (forma) yaratadi.
+maqsad: O'quvchilarda statik va dinamik parametrli so'rovlarni farqlash va tuzish, so'rovlarda formulali (hisoblanadigan) maydonlar yaratish, natijalarni bir necha daraja bo'yicha saralash hamda foydalanuvchi uchun qulay ma'lumot kiritish shaklini yaratish ko'nikmasini shakllantirish.
+natija: statik va dinamik parametrning farqini misol bilan tushuntiradi;
+natija: foydalanuvchidan qiymat so'raydigan parametrli so'rov tuzadi;
+natija: so'rovda hisoblanadigan maydon (narx bilan soliq, yosh, holat) yaratadi;
+natija: so'rov natijalarini bir necha maydon bo'yicha saralaydi;
+natija: shakllar ustasi yordamida ma'lumot kiritish shakli va ichki shakl yaratadi.
+reja: Statik va dinamik parametrlar. Parametrli so'rovlar
+reja: So'rovlarda hisoblashlar va saralash
+reja: Ma'lumot kiritish shakllari
+tayanch: statik parametr; dinamik parametr; parametrli so'rov; hisoblanadigan maydon; ifoda; IIf; saralash; shakl (forma); shakllar ustasi; boshqaruv elementi; ichki shakl
+metod: Muammoli savol | «Har bir marka uchun alohida so'rov yaratamizmi? Agar 30 ta marka bo'lsa-chi?» savoli bilan statik shartning noqulayligi va parametrli so'rov zarurati ko'rsatiladi.
+metod: Rolli o'yin | Bir o'quvchi «qabulxona xodimi» bo'lib, yaratilgan shakl orqali yangi mijoz va avtomobilni kiritadi, ikkinchisi «mijoz» bo'lib ma'lumotlarini aytadi; keyin shakl qulayligi muhokama qilinadi.
+ajihoz: Kompyuter; MS Access yoki LibreOffice Base; «Avtoservis» bazasi; proyektor; topshiriq varaqasi
+
+## Statik va dinamik parametrlar
+**Statik parametr** — so'rov konstruktorida qat'iy yozilgan shart: `="Chevrolet"`. Bunday so'rov har safar bir xil natija beradi; boshqa marka kerak bo'lsa, so'rovni o'zgartirish yoki yangisini yaratish kerak. **Dinamik parametr** esa so'rov ishga tushirilganda foydalanuvchidan so'raladi. Shart qatoriga kvadrat qavs ichida savol yoziladi: `[Markani kiriting:]`. So'rov ochilganda oyna chiqadi, foydalanuvchi qiymatni kiritadi va natija shu qiymat bo'yicha tanlanadi. Sana oralig'i uchun: `Between [Boshlanish sanasi:] And [Tugash sanasi:]`; familiyaning boshi bo'yicha: `Like [Familiya boshlanishi:] & "*"`. Parametrli so'rov bitta so'rov bilan ko'p xil savolga javob beradi va bazani bilmaydigan xodim uchun ham qulay.
+
+## So'rovlarda hisoblashlar va saralash
+So'rovda jadvalda yo'q, lekin boshqa maydonlardan hisoblanadigan **hisoblanadigan maydon** yaratish mumkin: bo'sh ustunga `NomiYangi: ifoda` ko'rinishida yoziladi. Masalan: `NarxSoliqBilan: [Narxi]*1,12`; `Yoshi: Year(Date())-[IshlabChiqarilganYil]`; `Holati: IIf([YurganMasofa]>200000; "Ko'p yurgan"; "Oddiy")` (IIf — shartli funksiya, elektron jadvaldagi IF kabi). Hisoblangan qiymat jadvalda saqlanmaydi — u so'rov ochilganda har safar yangidan hisoblanadi, shuning uchun narx o'zgarsa, natija ham avtomatik o'zgaradi. Natijalar «Saralash» qatorida o'sish yoki kamayish tartibida, bir nechta maydon bo'yicha (chapdan o'ngga ustuvorlik bilan) saralanadi.
+
+## Ma'lumot kiritish shakllari
+**Shakl** (forma) — jadvalga ma'lumot kiritish, ko'rish va tahrirlash uchun qulay oyna: har bir yozuv alohida ekranda, maydonlar tushunarli nomlar bilan, ochiladigan ro'yxatlar va tugmalar bilan ko'rsatiladi. Shakllar ustasi jadval yoki so'rov asosida shaklni bir necha qadamda yaratadi; konstruktor rejimida boshqaruv elementlari (matn maydoni, ochiladigan ro'yxat, tugma, yorliq) qo'shiladi va joylashtiriladi. Birga-ko'p bog'langan jadvallar uchun **ichki shakl** qulay: masalan, yuqorida avtomobil ma'lumotlari, pastdagi jadvalda shu avtomobilning barcha buyurtmalari. Yaxshi shakl xatolarni kamaytiradi — bu 7-darsdagi interfeys dizayni tamoyillarining MB dagi qo'llanishi.
+
+amaliy: Parametrli so'rovlar, hisoblashlar va kiritish shakli
+amaqsad: «Avtoservis» bazasida dinamik parametrli so'rovlar yaratish, hisoblanadigan maydonlar va saralashdan foydalanish hamda ichki shaklli ma'lumot kiritish shaklini tuzish.
+qadam: Statik so'rov yarating: Marka = "Chevrolet" bo'lgan avtomobillar; so'ng shu so'rov nusxasida shartni `[Markani kiriting:]` ga almashtirib, dinamik parametrli so'rovga aylantiring va uch xil marka bilan sinab ko'ring.
+qadam: Sana oralig'i bo'yicha parametrli so'rov tuzing: `Between [Boshlanish sanasi:] And [Tugash sanasi:]` — tanlangan davrdagi buyurtmalar (sana, davlat raqami, xizmat, narx).
+qadam: Xizmatlar narxi bo'yicha so'rovga hisoblanadigan maydonlar qo'shing: `NarxSoliqBilan: [Narxi]*1,12` va `Chegirmali: [Narxi]*0,9`.
+qadam: Avtomobillar so'roviga `Yoshi: Year(Date())-[IshlabChiqarilganYil]` va `Holati: IIf([YurganMasofa]>200000; "Ko'p yurgan"; "Oddiy")` maydonlarini qo'shing; natijani avval «Holati», so'ng «Yoshi» (kamayish) bo'yicha saralang.
+qadam: Shakllar ustasi bilan «Mijozlar» jadvali uchun kiritish shaklini yarating: sarlavha, tushunarli yorliqlar, telefon maydonida kiritish niqobi ishlashini tekshiring.
+qadam: «Avtomobillar» asosida ichki shaklli shakl yarating: yuqori qismda avtomobil, pastda uning buyurtmalari; shakl orqali bitta yangi avtomobil va unga ikkita buyurtma kiriting.
+qadam: Shaklga «Keyingi yozuv», «Yangi yozuv» va «Saqlash» tugmalarini qo'shing va sherigingizga shakl orqali ma'lumot kiritib ko'rishni taklif qiling; uning fikrini yozing.
+anatija: Statik va dinamik so'rovlar, sana oralig'i bo'yicha parametrli so'rov, hisoblanadigan maydonli va saralangan so'rovlar, mijozlar kiritish shakli va ichki shaklli avtomobillar shakli.
+baho5: Parametrli so'rovlar turli qiymatlar bilan to'g'ri ishlaydi, hisoblanadigan maydonlar ifodalari xatosiz, saralash talabga mos, shakllar qulay va ichki shakl buyurtmalarni to'g'ri ko'rsatadi.
+masala: Narxi 250 000 so'm bo'lgan xizmat uchun `NarxSoliqBilan: [Narxi]*1,12` va `Chegirmali: [Narxi]*0,9` maydonlari qanday qiymat ko'rsatadi?
+yechim: 250 000 · 1,12 = 280 000 so'm; 250 000 · 0,9 = 225 000 so'm.
+masala: Familiyaning birinchi harflarini so'raydigan va shu harflar bilan boshlanadigan mijozlarni ko'rsatadigan parametrli shartni yozing. Foydalanuvchi «Ra» kiritsa, qaysi familiyalar chiqadi: Rahimov, Karimov, Rashidova, Raxmatov, Sobirov?
+yechim: Shart: `Like [Familiya boshlanishi:] & "*"`. «Ra» kiritilsa: Rahimov, Rashidova, Raxmatov.
+savol: Statik va dinamik parametrning farqi nimada?
+savol: Parametrli so'rov qanday yaratiladi? Misol keltiring.
+savol: Nima uchun hisoblanadigan maydon qiymatini jadvalda saqlash shart emas?
+savol: Ma'lumot kiritish shaklining jadval rejimiga nisbatan afzalliklarini ayting.
+test: So'rov ishga tushirilganda foydalanuvchidan qiymat so'raydigan shart? | Dinamik parametr | Statik parametr | Validatsiya qoidasi | Kiritish niqobi
+test: Parametrli shart so'rov konstruktorida qanday yoziladi? | [Markani kiriting:] | "Markani kiriting:" | (Markani kiriting:) | {Markani kiriting:}
+test: So'rovda shart bajarilishiga qarab ikki xil qiymat qaytaradigan funksiya? | IIf | Sum | Count | Like
+test: Birga-ko'p bog'langan jadvallarni bitta oynada ko'rsatish uchun nima ishlatiladi? | Ichki shakl | Jamlanma so'rov | Import | Indeks
+test: `Yoshi: Year(Date())-[IshlabChiqarilganYil]` qanday maydon? | Hisoblanadigan maydon | Birlamchi kalit | Tashqi kalit | Parametr
+uyga: Misol va mashqlar: uydagi kichik bazangiz uchun (yoki qog'ozda) bitta parametrli so'rov va ikkita hisoblanadigan maydon loyihalang; masalan, oshxona uchun «Taom nomini kiriting» parametri va «Porsiya tannarxi», «Ustama bilan narx» maydonlari.
+gloss: Statik parametr | So'rov konstruktorida qat'iy yozilgan, o'zgarmas shart.
+gloss: Dinamik parametr | So'rov ishga tushirilganda foydalanuvchidan so'raladigan shart qiymati.
+gloss: Parametrli so'rov | Har safar ishga tushganda foydalanuvchidan qiymat so'rab, shu qiymat bo'yicha natija beradigan so'rov.
+gloss: Hisoblanadigan maydon | So'rovda boshqa maydonlar asosida ifoda bilan hisoblanadigan, jadvalda saqlanmaydigan maydon.
+gloss: Shakl (forma) | MB jadvaliga ma'lumot kiritish, ko'rish va tahrirlash uchun qulay oyna.
+gloss: Ichki shakl | Asosiy shakl ichida bog'langan jadval yozuvlarini ko'rsatadigan shakl.

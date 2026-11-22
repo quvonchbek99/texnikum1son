@@ -1,0 +1,41 @@
+# Amaliy biletlar: @@ B | semestr | modul | vaqt  + topshiriq: (baho5..baho2 ixtiyoriy, bo'lmasa umumiy mezon)
+# 1-semestr — oraliq nazorat (10-dars, 1-modul); 2-semestr — 1-kurs yakuniy nazorati (30-dars); 3-semestr — 2-kurs yakuniy nazorati (30-dars)
+
+@@ B | 1 | 1-modul | 20 daqiqa
+topshiriq: **Kodlash va tekshirish.** a) «KASB» so'zini ASCII kodlari va 8 bitli ikkilik ko'rinishda yozing (K = 75, A = 65, S = 83, B = 66) va necha bayt joy egallashini hisoblang. b) «TEXNIKUM» so'zini 3 ga siljitish bilan Sezar usulida shifrlang. c) 590123412345 kodi uchun EAN-13 nazorat raqamini hisoblang va bitta raqam xato kiritilsa, u qanday aniqlanishini tushuntiring.
+
+@@ B | 1 | 1-modul | 20 daqiqa
+topshiriq: **Apparat va dasturiy ta'minot.** Kompyuterning tizim blokidagi va unga ulangan qurilmalarni (o'qituvchi ko'rsatgan kompyuterda) aniqlab, jadval tuzing: qurilma nomi, turi (kiritish / chiqarish / xotira / ishlov berish), vazifasi. Kompyuterdagi operatsion tizim versiyasini, operativ xotira hajmini va diskdagi bo'sh joyni toping. O'rnatilgan dasturlardan 3 tasini tizim, amaliy va utilit dasturlarga ajrating.
+
+@@ B | 1 | 1-modul | 20 daqiqa
+topshiriq: **Elektron xavfsizlik va salomatlik.** Berilgan 6 ta parolni (o'qituvchi varaqasida) mustahkamlik bo'yicha tartiblang va eng kuchsizini qoidaga ko'ra kuchli parolga aylantiring. Berilgan 3 ta xabardan qaysi biri fishing ekanini 2 ta belgisi bilan asoslang. Ish joyingizni ergonomika talablariga ko'ra baholab, 3 ta kamchilik va ularni tuzatish yo'lini yozing.
+
+@@ B | 2 | 3-modul (elektron jadval) | 25 daqiqa
+topshiriq: **Elektron jadval: formulalar va murojaatlar.** «Ombor» jadvalini yarating: Mahsulot, Soni, Narxi, Summa (5 qator). Summa ustunini formulada hisoblang; alohida katakka QQS stavkasi 12 % ni yozib, «QQS bilan summa» ustunini absolyut murojaat yordamida (`=D2*(1+$G$1)`) hisoblang. Jami, o'rtacha va eng katta summalarni SUM, AVERAGE, MAX bilan toping. Pul formatini va chegaralarni qo'llang.
+
+@@ B | 2 | 3-modul (elektron jadval) | 25 daqiqa
+topshiriq: **Shartli funksiyalar va diagramma.** Berilgan 15 qatorli savdo jadvalida (Sana, Toifa, Summa) har bir toifa bo'yicha jami savdoni SUMIF, sotuvlar sonini COUNTIF bilan hisoblang. Toifalar bo'yicha natijalar uchun mos diagramma tuzing (sarlavha va o'q nomlari bilan). Jadvalni summa bo'yicha kamayish tartibida saralang va bitta toifani filtr bilan ajrating.
+
+@@ B | 2 | 3-modul (elektron jadval) | 25 daqiqa
+topshiriq: **INDEX, MATCH va validatsiya.** «Narxlar» jadvali (Kod, Mahsulot, Narxi — 8 qator) tuzing. Alohida katakka mahsulot kodi kiritilganda uning nomi va narxini INDEX va MATCH yordamida chiqaring. Kod katagiga ro'yxatli validatsiya, «Soni» katagiga 1 dan 100 gacha butun son validatsiyasini va xato xabarini qo'ying. IF funksiyasi bilan «Ulgurji» (soni ≥ 20) yoki «Chakana» belgisini chiqaring.
+
+@@ B | 2 | 3-modul (ma'lumotlar bazasi) | 25 daqiqa
+topshiriq: **Relyatsion ma'lumotlar bazasi.** «Kutubxona» bazasini yarating: «Kitoblar» (KitobID, Nomi, Muallif, Yili) va «Berilganlar» (BerishID, KitobID, Oquvchi, Sana) jadvallari. Maydon turlarini to'g'ri tanlang, birlamchi kalitlarni belgilang va ma'lumot yaxlitligi bilan 1:N bog'lanish o'rnating. Har bir jadvalga 5 tadan yozuv kiriting va 2020-yildan keyin nashr etilgan kitoblarni chiqaradigan so'rov tuzing.
+
+@@ B | 2 | 3-modul (ma'lumotlar bazasi) | 25 daqiqa
+topshiriq: **Normallashtirish va ma'lumotlar lug'ati.** O'qituvchi bergan normallashtirilmagan «Buyurtmalar» jadvalini (mijoz, telefon, xizmatlar ro'yxati bir katakda) 1NF, 2NF va 3NF ga keltiring: hosil bo'lgan jadvallar va ularning kalitlarini yozing. Hosil bo'lgan jadvallardan biri uchun ma'lumotlar lug'atini tuzing (maydon, tur, hajm, kalit, tavsif) va bitta yozuv hajmini baytlarda hisoblang.
+
+@@ B | 3 | 4-modul | 25 daqiqa
+topshiriq: **Video montaj.** Berilgan 4 ta videoklipdan 30–40 soniyalik rolik tayyorlang: loyiha mutanosibligini 16:9 qilib belgilang, kliplarni tartiblang va keraksiz qismlarini kesing, 2 ta o'tish effekti qo'shing, bitta klipni 2 marta sekinlashtiring, boshlanishiga nom titrini qo'ying. Rolikni MP4 (H.264, 1080p) formatida eksport qiling va fayl hajmini yozing.
+
+@@ B | 3 | 4-modul | 25 daqiqa
+topshiriq: **Audio tahrir.** 30–40 soniyalik nutqni yozib oling (yoki berilgan faylni oching). Shovqinni kamaytiring, ovoz balandligini me'yorlang, xato qismini kesing, boshida va oxirida fade in / fade out qo'llang. Fon musiqasini nutqdan pastroq qilib qo'shing va natijani MP3 hamda WAV formatlarida eksport qilib, hajmlarini solishtiring.
+
+@@ B | 3 | 5-modul | 25 daqiqa
+topshiriq: **Loyiha boshqaruvi.** Berilgan 7 ta vazifa (davomiylik va oldingi vazifalar bilan) asosida har bir vazifaning eng erta boshlanish va tugash kunini hisoblang, kritik yo'lni va loyihaning umumiy davomiyligini aniqlang. Elektron jadvalda Gantt diagrammasini tuzing va kritik vazifalarni belgilang. Bitta kritik vazifa 2 kunga kechiksa, loyiha muddati qanday o'zgarishini yozing.
+
+@@ B | 3 | 5–6-modul | 25 daqiqa
+topshiriq: **Tizim tahlili va grafika.** «Sartaroshxona yozuvi» tizimi uchun 0-darajali ma'lumotlar oqimi diagrammasini chizing (tashqi obyektlar, jarayon, ma'lumotlar ombori, oqimlar). Yozuv kiritish ekran formasi eskizini 5 ta maydon va validatsiya qoidalari bilan chizing. Vektorli muharrirda tizim uchun oddiy logotip yarating (kamida 3 ta shakl, guruhlash va matn) va SVG formatida saqlang.
+
+@@ B | 3 | 6-modul | 25 daqiqa
+topshiriq: **JavaScript.** HTML sahifada son kiritiladigan maydon va «Hisoblash» tugmasini yarating. Tugma bosilganda funksiya: kiritilgan son juft yoki toqligini shart operatori bilan aniqlasin; 1 dan shu songacha bo'lgan sonlar yig'indisini sikl yordamida hisoblasin; natijani sahifadagi elementga chiqarsin. Son kiritilmagan bo'lsa, `alert()` oynasida ogohlantirish chiqsin.

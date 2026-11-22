@@ -1,0 +1,112 @@
+nomi: Fayl va ma'lumotlarni boshqarish. Yakuniy nazorat
+modul: 3-modul
+ac: 3.14 Fayl formatlari va fayllarni tashkil etish usullarini farqlaydi, fayllarni tartibli saqlaydi va zaxiralaydi, boshqaruv axborot tizimining vazifasini tushuntiradi; 1-kurs bo'yicha bilimlarini yakuniy nazoratda ko'rsatadi.
+maqsad: O'quvchilarda xususiy va ochiq fayl formatlarini farqlash, fayllarni tashkil etish va ularga murojaat qilish usullarini tushuntirish, fayl va papkalarni tartibli nomlash, zaxiralash va arxivlash, boshqaruv axborot tizimlari hisobotlarining turini aniqlash ko'nikmasini shakllantirish; 1-kurs (1–3-modullar) bo'yicha o'zlashtirishni yakuniy nazorat orqali aniqlash.
+natija: xususiy va ochiq (umumiy) fayl formatlarini farqlaydi va ma'lumot almashish uchun mosini tanlaydi;
+natija: ketma-ket, tartiblangan ketma-ket, indeksli ketma-ket va bevosita (tasodifiy) murojaatli fayllarni taqqoslaydi;
+natija: fayl va papkalarni tartibli nomlaydi, versiyalaydi, zaxira nusxa oladi va arxivlaydi;
+natija: boshqaruv axborot tizimining vazifasi va hisobot turlarini (davriy, istisno, talab bo'yicha) tushuntiradi;
+natija: 1–30-darslar bo'yicha yakuniy nazorat test va amaliy biletini bajaradi.
+reja: Fayl formatlari: xususiy va ochiq formatlar
+reja: Fayllarni tashkil etish va ularga murojaat qilish usullari
+reja: Fayl va ma'lumotlarni boshqarish amaliyoti
+reja: Boshqaruv axborot tizimlari. Yakuniy nazorat
+tayanch: fayl; fayl kengaytmasi; xususiy format; ochiq (umumiy) format; ketma-ket fayl; tartiblangan ketma-ket fayl; indeksli ketma-ket fayl; bevosita (tasodifiy) murojaat; xeshlash; zaxira nusxa; arxivlash; versiya; boshqaruv axborot tizimi; istisno hisoboti
+metod: Muammoli vaziyat | «Siz yuborgan fayl hamkasbingizda ochilmadi — nima sababdan?» savoli bilan xususiy va ochiq formatlar muammosi muhokama qilinadi.
+metod: Klaster | Juftliklar «Fayllarga murojaat usullari» klasterini chizib, har bir usulga bittadan hayotiy misol (video lenta, lug'at, kutubxona katalogi, mehmonxona xonasi raqami) qo'shadi.
+metod: Yakuniy nazorat | Darsning ikkinchi yarmida 1–30-darslar bo'yicha 30 savollik test va amaliy bilet («Nazorat» bo'limida) o'tkaziladi.
+jihoz: Kompyuter va proyektor; fayl menejeri; arxivator; elektron jadval va MBBT; yakuniy nazorat test varaqalari va amaliy biletlar
+
+## 1. Fayl formatlari: xususiy va ochiq formatlar
+**Fayl** — diskda nomlangan holda saqlanadigan ma'lumotlar to'plami. Fayl nomining nuqtadan keyingi qismi **kengaytma** deyiladi va u fayl formatini, ya'ni ma'lumot qanday tartibda yozilganini ko'rsatadi: .docx — matnli hujjat, .xlsx — elektron jadval, .jpg — fotosurat, .mp4 — video, .accdb — Access bazasi.
+**Xususiy formatlar** ma'lum bir kompaniya yoki dasturga tegishli bo'lib, ularni asosan o'sha dastur to'liq ochadi: masalan, ayrim grafik muharrirlarning qatlamli fayllari, Access bazasi, ba'zi chizmachilik dasturlari formatlari. Ular dasturning barcha imkoniyatlarini (qatlamlar, makroslar, formulalar) saqlaydi, lekin boshqa dasturda ochilmasligi yoki noto'g'ri ochilishi mumkin; dastur eskirsa, faylni ochish qiyinlashadi.
+**Ochiq (umumiy) formatlar** ommaviy standartga asoslangan va ko'plab dasturlarda ochiladi: TXT (oddiy matn), CSV (jadval ma'lumotlari), RTF (formatlangan matn), PDF (o'zgarmas hujjat ko'rinishi), PNG va JPEG (rasmlar), MP3 (tovush), shuningdek ochiq ofis formatlari ODT va ODS. Ular turli dasturlar va tashkilotlar o'rtasida ma'lumot almashish hamda uzoq muddatli arxiv uchun qulay, lekin ayrim maxsus imkoniyatlar saqlanmasligi mumkin (masalan, CSV da formulalar, formatlash va bir nechta varaq yo'qoladi).
+Amalda ish jarayonida fayl o'z dasturining formatida saqlanadi (tahrir qilish uchun), boshqalarga yuborish va arxivlash uchun esa ochiq formatda nusxa olinadi: hisobot — PDF, jadval ma'lumotlari — CSV. Fayllarni yuborishdan oldin hajmini kamaytirish uchun ZIP yoki 7z arxivi ishlatiladi — bunda ma'lumot yo'qotilmaydi.
+jadval: Keng tarqalgan ochiq formatlar
+| Format | Nimani saqlaydi | Qachon ishlatiladi |
+| TXT | Faqat matn, formatlashsiz | Eslatmalar, sozlama fayllari, dastur kodi |
+| CSV | Jadval qiymatlari (formulalarsiz) | Dasturlar va bazalar o'rtasida ma'lumot almashish |
+| RTF | Shriftlar va oddiy formatlash bilan matn | Turli matn muharrirlari o'rtasida hujjat almashish |
+| PDF | Hujjatning aniq ko'rinishi (sahifalar) | Rasmiy hujjat, hisobot, chop etish uchun |
+| PNG / JPEG | Rasm (PNG — sifat yo'qotmasdan, JPEG — siqilgan) | Sxema va skrinshot / fotosuratlar |
+Siqish ham ikki xil bo'ladi. **Yo'qotishsiz siqish** (ZIP, PNG) faylni asl holiga to'liq tiklaydi — hujjat, jadval va dastur fayllari uchun faqat shu usul yaroqli. **Yo'qotishli siqish** (JPEG, MP3, MP4) inson ko'zi va qulog'i deyarli sezmaydigan tafsilotlarni olib tashlaydi va hajmni bir necha barobar kamaytiradi, lekin har safar qayta saqlaganda sifat biroz pasayadi. Shuning uchun fotosuratni ko'p marta tahrir qilish kerak bo'lsa, asl nusxasi alohida saqlab qo'yiladi.
+
+## 2. Fayllarni tashkil etish va ularga murojaat qilish usullari
+Ma'lumotlar bazasi va axborot tizimlari ichida yozuvlar fayllarda turli usulda joylashtiriladi. Tanlangan usul yozuvni qanchalik tez topish mumkinligini belgilaydi.
+- **Ketma-ket fayl** — yozuvlar kelish tartibida, hech qanday saralashsiz yoziladi: tranzaksiyalar jurnali, kassadagi cheklar ro'yxati. Yangi yozuv qo'shish juda oson (faylning oxiriga), lekin kerakli yozuvni topish uchun boshidan boshlab hammasini o'qish kerak.
+- **Tartiblangan ketma-ket fayl** — yozuvlar kalit maydon bo'yicha saralangan: paketli qayta ishlashdagi asosiy fayllar (16-dars). Butun faylni tartib bilan qayta ishlash qulay, lekin yangi yozuvni o'z joyiga qo'shish uchun faylni qayta yozish kerak bo'ladi.
+- **Indeksli ketma-ket fayl** — yozuvlar tartiblangan va qo'shimcha **indeks** (kitob mundarijasi kabi) bor: indeksdan yozuv joylashgan qism topiladi va o'sha qismdan qidiriladi. Ham butun faylni ketma-ket qayta ishlash, ham alohida yozuvni tez topish mumkin.
+- **Bevosita (tasodifiy) murojaatli fayl** — yozuvning joyi uning kalitidan maxsus formula (**xeshlash**) yordamida hisoblanadi va kompyuter to'g'ridan-to'g'ri o'sha joyga murojaat qiladi. Masalan, mehmonxonaning xona raqami bo'yicha yozuv darhol topiladi. Onlayn tizimlarda (bilet band qilish, bankomat) shu usul qo'llanadi, chunki javob bir zumda kerak.
+Xeshlashning oddiy misoli: faylda 100 ta joy bo'lsa, yozuv joyi kalitni 100 ga bo'lgandagi qoldiq bilan topiladi. 4527 kalitli yozuv 27-joyga, 3802 kalitli yozuv 2-joyga yoziladi; qidirishda ham xuddi shu hisob bajarilib, to'g'ri o'sha joy o'qiladi. Ikki xil kalit bir joyga tushsa (masalan, 4527 va 1327 — ikkalasi ham 27), **to'qnashuv** yuz beradi va ikkinchi yozuv keyingi bo'sh joyga yoki qo'shimcha sohaga yoziladi. Yaxshi xesh formulasi yozuvlarni joylar bo'yicha teng taqsimlaydi va to'qnashuvlarni kamaytiradi.
+jadval: Fayllarga murojaat usullarini taqqoslash
+| Usul | Yozuvlar tartibi | Bitta yozuvni topish | Qo'llanishi |
+| Ketma-ket | Kelish tartibida | Sekin (boshidan o'qiladi) | Jurnallar, cheklar ro'yxati |
+| Tartiblangan ketma-ket | Kalit bo'yicha saralangan | Sekin, lekin ketma-ket ishlov tez | Paketli tizimlar asosiy fayli |
+| Indeksli ketma-ket | Saralangan va indeksli | Tez | Kutubxona katalogi, mahsulotlar ro'yxati |
+| Bevosita (tasodifiy) | Xesh formulasi bo'yicha | Juda tez | Bilet band qilish, bank hisoblari |
+Hayotiy o'xshatish: ketma-ket fayl — video lentadagi kerakli joyni oldinga aylantirib izlash; indeksli fayl — lug'atda avval harfni, so'ng so'zni topish; bevosita murojaat — mehmonxonada xona raqamini bilib, to'g'ri o'sha eshikka borish.
+
+## 3. Fayl va ma'lumotlarni boshqarish amaliyoti
+Fayllar ko'paygan sari ularni tartibli saqlash odati vaqtni tejaydi va ma'lumot yo'qolishining oldini oladi.
+- **Nomlash qoidasi**: fayl nomidan mazmuni, sanasi va versiyasi bilinsin: `2026-11-22_ombor_hisobot_v2.xlsx`. Sanani «yil-oy-kun» tartibida yozish fayllarni nomi bo'yicha saralaganda xronologik tartibni beradi; «yangi», «oxirgi», «ishlaydigan» kabi noaniq nomlardan qochish kerak.
+- **Papkalar tuzilmasi**: loyiha yoki fan bo'yicha asosiy papka, ichida «Manbalar», «Ish fayllari», «Tayyor», «Arxiv» kabi kichik papkalar.
+- **Versiyalash**: muhim hujjatning har bir katta o'zgarishidan keyin yangi versiya (v1, v2, v3) saqlanadi yoki bulutli xizmatlardagi versiyalar tarixidan foydalaniladi.
+- **Zaxira nusxa**: muhim fayllar muntazam ravishda boshqa diskka yoki bulutga nusxalanadi («3-2-1» qoidasi: 3 nusxa, 2 xil saqlovchida, 1 tasi boshqa joyda). To'liq zaxira barcha fayllarni, qo'shimcha (inkremental) zaxira esa oxirgi zaxiradan keyin o'zgarganlarini nusxalaydi va tezroq bajariladi. Zaxiradan tiklash vaqti-vaqti bilan sinab ko'riladi.
+- **Arxivlash**: kundalik ishda kerak bo'lmagan, lekin saqlanishi lozim bo'lgan eski ma'lumotlar (o'tgan yillar hisobotlari) asosiy tizimdan alohida, uzoq muddatli saqlovchiga ko'chiriladi. Arxiv zaxira nusxadan farq qiladi: zaxira — joriy ma'lumotning nusxasi, arxiv — asosiy joydan olib qo'yilgan eski ma'lumot.
+- **Xavfsiz o'chirish va maxfiylik**: shaxsga doir ma'lumotlar faqat kerakli muddat saqlanadi, keraksiz bo'lganda xavfsiz o'chiriladi; bulutli papkalarga kirish huquqlari (13-dars) aniq beriladi.
+
+Uzoq muddatli saqlashda saqlovchi turi ham muhim. Fleshka va arzon xotira kartalari bir necha yildan keyin ishdan chiqishi mumkin, qattiq disklar zarbaga sezgir, optik disklar tirnaladi, bulutli xizmatda esa akkaunt paroli unutilsa yoki obuna to'xtasa, ma'lumotga kirish yo'qoladi. Shu sababli muhim arxivlar kamida ikki xil saqlovchida saqlanadi, har yili bir marta ochilib tekshiriladi va eskirgan formatlardagi fayllar o'z vaqtida ochiq formatlarga o'tkaziladi.
+
+## 4. Boshqaruv axborot tizimlari. Yakuniy nazorat
+**Boshqaruv axborot tizimi** (BAT) — tashkilotdagi kundalik operatsiyalar (sotuvlar, buyurtmalar, davomat, ombor) ma'lumotlarini yig'ib, rahbarlar uchun qaror qabul qilishga yordam beradigan umumlashtirilgan hisobotlar tayyorlaydigan tizim. U 16-darsda o'rganilgan qayta ishlash tizimlari to'plagan ma'lumotlardan foydalanadi: kassa har bir cheki onlayn qayd etadi, BAT esa ularning asosida «qaysi filial, qaysi mahsulot, qaysi oy» savollariga javob beradi.
+BAT hisobotlari turlari:
+- **davriy hisobotlar** — belgilangan vaqtda avtomatik tayyorlanadi: kunlik savdo, haftalik davomat, oylik moliyaviy natija;
+- **istisno hisobotlari** — faqat me'yordan chetga chiqqan holatlarni ko'rsatadi: qoldig'i minimumdan kam mahsulotlar, 3 kundan ortiq kechikkan buyurtmalar, darsni ko'p qoldirgan o'quvchilar; rahbar minglab qator orasidan muammoni izlamaydi;
+- **talab bo'yicha hisobotlar** — rahbar so'raganda tayyorlanadi: «o'tgan yilning shu oyi bilan solishtiring»;
+- **boshqaruv paneli** (dashbord) — asosiy ko'rsatkichlar diagramma va raqamlar ko'rinishida bitta ekranda.
+Misollar: ta'lim muassasasidagi elektron tizim guruhlar bo'yicha davomat va o'zlashtirish hisobotini beradi; savdo tarmog'ida filiallar bo'yicha savdo va ombor qoldig'i ko'rsatiladi; avtoservisda har bir ustaning bajargan ishlari, o'rtacha ta'mir muddati va daromad hisoblanadi. BAT dan yuqori darajadagi tizimlar ham bor. **Qaror qabul qilishni qo'llab-quvvatlash tizimlari** «agar ... bo'lsa» tahlili, modellar va prognozlar yordamida rahbarga variantlarni solishtirishga yordam beradi (23-darsdagi modellashtirish shu tizimlarning oddiy ko'rinishi). **Rahbariyat axborot tizimlari** esa tashkilotning eng muhim ko'rsatkichlarini va tashqi ma'lumotlarni (bozor narxlari, raqobatchilar) bir ekranda jamlaydi. Barcha bu tizimlarning asosida kundalik operatsiyalarni qayd etuvchi qayta ishlash tizimlari va to'g'ri tashkil etilgan ma'lumotlar bazasi turadi — 3-modulda aynan shu poydevor o'rganildi.
+BAT ning afzalliklari: qarorlar tez va asosli qabul qilinadi, muammolar erta aniqlanadi, hisobot tayyorlashga vaqt kam ketadi. Kamchiliklari: tizimni joriy etish qimmat, hisobot sifati kiritilgan ma'lumot sifatiga bog'liq va juda ko'p hisobot rahbarni chalg'itishi mumkin.
+### Yakuniy nazorat
+Ushbu dars bilan 1-kurs dasturi (1–3-modullar) yakunlanadi. Darsning ikkinchi yarmida yakuniy nazorat o'tkaziladi: 1–30-darslar bo'yicha 30 savollik test (har bir darsdan bittadan savol) va amaliy bilet (elektron jadval yoki ma'lumotlar bazasida topshiriq). Test va biletlar «Nazorat» bo'limida berilgan. Tayyorgarlik uchun har bir modul bo'yicha asosiy tushunchalarni, elektron jadval funksiyalari va MB so'rovlarini takrorlang.
+Xulosa: ma'lumot almashish va arxivlash uchun ochiq formatlar, tezkor qidiruv uchun indeksli va bevosita murojaatli fayllar ishlatiladi; fayllarni tartibli nomlash, versiyalash va zaxiralash ma'lumotni yo'qotishdan saqlaydi; boshqaruv axborot tizimi esa kundalik ma'lumotlarni rahbar uchun foydali hisobotlarga aylantiradi.
+
+keys: Tikuv sexidagi yo'qolgan buyurtma fayli
+vaziyat: Tikuv sexi buyurtmachilar ro'yxatini bitta kompyuterda «buyurtmalar_yangi_oxirgi.xlsx» nomli faylda yuritadi. Kompyuter disk buzilib ishdan chiqdi, zaxira nusxa yo'q edi. Bir xodimda faylning ikki hafta oldingi nusxasi fleshkada topildi, lekin u maxsus dasturda yaratilgan va boshqa kompyuterlarda ochilmadi. Direktor har oy qancha buyurtma bajarilgani va qaysi buyurtmalar kechikayotganini bilmaydi.
+ksavol: Qanday xatolar ma'lumot yo'qolishiga olib keldi?
+ksavol: Fayllarni boshqarishning qaysi qoidalari joriy etilishi kerak?
+ksavol: Direktorga qanday hisobotlar kerak va ularni qanday olish mumkin?
+kjavob: Xatolar: zaxira nusxa olinmagan; fayl nomi noaniq va versiyasiz; fayl faqat bitta joyda va xususiy formatda saqlangan. Qoidalar: nomlash qoidasi (sana va versiya bilan), kunlik avtomatik zaxira (tashqi disk va bulut), muhim ro'yxatning haftalik CSV yoki PDF nusxasi, zaxiradan tiklashni sinash. Direktor uchun: oylik davriy hisobot (bajarilgan buyurtmalar soni va summasi) va istisno hisoboti (muddati o'tgan yoki 3 kundan kam qolgan buyurtmalar) — ularni elektron jadvaldagi jamlovchi jadval va filtr yoki MB dagi so'rovlar asosida tayyorlash mumkin.
+savol: Xususiy va ochiq fayl formatlarining farqi nimada? Har biriga misol keltiring.
+savol: Ketma-ket va bevosita murojaatli fayllarni taqqoslang.
+savol: Indeksli ketma-ket fayl qanday ishlaydi?
+savol: Zaxira nusxa va arxivning farqi nimada?
+savol: Fayllarni nomlashda qanday qoidalarga amal qilish kerak?
+savol: Boshqaruv axborot tizimi qanday hisobotlar beradi? Istisno hisobotiga misol keltiring.
+amaliy: Fayllarni tartiblash, formatlar va boshqaruv hisobotlari
+amaqsad: Loyiha fayllarini nomlash qoidasi va papkalar tuzilmasi bo'yicha tartiblash, bir xil ma'lumotni turli formatlarda saqlab solishtirish, zaxira nusxa va arxiv yaratish hamda «Avtoservis» bazasi asosida davriy va istisno hisobotlarini tayyorlash.
+ajihoz: Kompyuter; fayl menejeri; MS Excel yoki LibreOffice Calc; MS Access yoki LibreOffice Base; 7-Zip; fleshka yoki bulutli disk
+qadam: 1-kurs davomidagi ish fayllaringiz uchun papkalar tuzilmasini yarating: «Informatika_1-kurs» → «Manbalar», «Ish fayllari», «Tayyor», «Arxiv»; kamida 6 ta faylni nomlash qoidasi (yil-oy-kun_mavzu_versiya) bo'yicha qayta nomlab, mos papkalarga joylang.
+qadam: Bitta jadvalni XLSX, ODS, CSV va PDF formatlarida saqlang; fayl hajmlarini va har bir formatda nima saqlanib, nima yo'qolganini (formulalar, formatlash, varaqlar) jadvalga yozing.
+qadam: «Tayyor» papkasini ZIP arxivga joylang va zaxira nusxani fleshkaga yoki bulutli diskka ko'chiring; arxivdan bitta faylni tiklab, ochilishini tekshiring.
+qadam: «Avtoservis» bazasida oylik davriy hisobot uchun jamlanma so'rov tuzing: har bir usta bo'yicha buyurtmalar soni va jami summa.
+qadam: Istisno hisoboti uchun so'rov tuzing: summasi belgilangan miqdordan katta yoki izohida «kechikdi» so'zi bor buyurtmalar.
+qadam: Ikkala natijani elektron jadvalga eksport qilib, rahbar uchun bitta varaqli «boshqaruv paneli» tayyorlang: asosiy ko'rsatkichlar va bitta diagramma.
+anatija: Tartiblangan papkalar va qoida bo'yicha nomlangan fayllar, formatlarni solishtirish jadvali, ZIP arxiv va tiklash sinovi natijasi, davriy va istisno so'rovlari, bitta varaqli boshqaruv paneli.
+baho5: Papkalar va nomlar qoidaga to'liq mos, formatlar farqi to'g'ri tahlil qilingan, zaxira va tiklash sinovdan o'tgan, so'rovlar to'g'ri ishlaydi, boshqaruv paneli aniq va tushunarli.
+masala: Bitta yozuvni topish uchun ketma-ket faylda o'rtacha yozuvlarning yarmini o'qish kerak. Faylda 200 000 ta yozuv bo'lsa va kompyuter sekundiga 50 000 ta yozuvni o'qisa, bitta yozuvni topishga o'rtacha qancha vaqt ketadi? Bevosita murojaatda-chi?
+yechim: Ketma-ket faylda: 200 000 : 2 = 100 000 ta yozuv o'qiladi; 100 000 : 50 000 = 2 sekund. Bevosita murojaatda yozuv joyi kalitdan hisoblanadi va odatda bitta (yoki bir necha) o'qish yetarli — bir zumda topiladi.
+masala: Quyidagi fayllarni nomlash qoidasi bo'yicha qayta nomlang: «hisobot yangi.docx» (22-noyabr 2026, ombor bo'yicha, 3-versiya), «rasm1.jpg» (oshxona menyusi uchun palov surati), «jadval oxirgi.xlsx» (noyabr oyi xarajatlari, 1-versiya).
+yechim: `2026-11-22_ombor_hisobot_v3.docx`; `menyu_palov_surati.jpg` (yoki sana bilan: `2026-11-22_menyu_palov.jpg`); `2026-11_xarajatlar_v1.xlsx`.
+test: Ko'plab dasturlarda ochiladigan va ma'lumot almashish uchun qulay format? | CSV | Faqat bitta dasturning qatlamli fayli | ACCDB | Dasturning ichki formati
+test: Yozuv joyi kalitdan formula yordamida hisoblanadigan fayl turi? | Bevosita (tasodifiy) murojaatli fayl | Ketma-ket fayl | Tartiblangan ketma-ket fayl | Matnli fayl
+test: Kundalik ishda kerak bo'lmagan eski ma'lumotlarni uzoq muddatli saqlovchiga ko'chirish nima deyiladi? | Arxivlash | Zaxira nusxa | Normallashtirish | Validatsiya
+test: Faqat me'yordan chetga chiqqan holatlarni ko'rsatadigan BAT hisoboti? | Istisno hisoboti | Davriy hisobot | Talab bo'yicha hisobot | Tranzaksiya fayli
+test: Qaysi fayl nomi nomlash qoidasiga eng mos? | 2026-11-22_ombor_hisobot_v2.xlsx | yangi oxirgi.xlsx | hisobot.xlsx | aaa1.xlsx
+uyga: Yakuniy nazoratga tayyorlaning: har bir modul bo'yicha 5 tadan asosiy tushunchani yozib, ularga qisqa ta'rif bering. Telefoningiz yoki kompyuteringizdagi fayllarni nomlash qoidasi va papkalar tuzilmasi bo'yicha tartiblang hamda muhim fayllarning zaxira nusxasini oling.
+gloss: Xususiy format | Muayyan kompaniya yoki dasturga tegishli, asosan o'sha dasturda to'liq ochiladigan fayl formati.
+gloss: Ochiq (umumiy) format | Ommaviy standartga asoslangan, ko'plab dasturlarda ochiladigan fayl formati (TXT, CSV, PDF, PNG).
+gloss: Indeksli ketma-ket fayl | Yozuvlari saralangan va qo'shimcha indeks yordamida tez topiladigan fayl.
+gloss: Bevosita (tasodifiy) murojaat | Yozuv joyi kalitdan xeshlash formulasi bilan hisoblanib, to'g'ridan-to'g'ri o'qiladigan murojaat usuli.
+gloss: Arxivlash | Kundalik ishda kerak bo'lmagan eski ma'lumotlarni asosiy tizimdan uzoq muddatli saqlovchiga ko'chirish.
+gloss: Boshqaruv axborot tizimi | Operatsion ma'lumotlarni rahbarlar uchun umumlashtirilgan hisobotlarga aylantiruvchi tizim.
+gloss: Istisno hisoboti | Faqat me'yordan chetga chiqqan holatlarni ko'rsatadigan hisobot.

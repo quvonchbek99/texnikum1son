@@ -1,0 +1,69 @@
+nomi: Ma'lumotlar bazasini yaratish
+modul: 3-modul
+ac: 3.8 Ma'lumotlar bazasi jadvalini yaratadi: maydonlar uchun mos ma'lumot turi va hajmini tanlaydi, birlamchi kalit belgilaydi; bog'lanishning uch turini (birga-bir, birga-ko'p, ko'pga-ko'p) farqlaydi.
+maqsad: O'quvchilarda ma'lumotlar bazasini boshqarish tizimida jadval yaratish, maydonlar uchun to'g'ri ma'lumot turi, hajm va xossalarni tanlash, birlamchi kalitni belgilash va jadvallar orasidagi bog'lanish turlarini aniqlash ko'nikmasini shakllantirish.
+natija: ma'lumotlar bazasi, MBBT, jadval, yozuv, maydon va birlamchi kalit tushunchalarini qo'llaydi;
+natija: matn, son, pul, sana/vaqt, ha/yo'q va hisoblagich (avtoraqam) ma'lumot turlarini to'g'ri tanlaydi;
+natija: maydon hajmi, formati, majburiylik va standart qiymat xossalarini o'rnatadi;
+natija: jadvalni konstruktor rejimida yaratib, jadval rejimida yozuvlar kiritadi;
+natija: birga-bir, birga-ko'p va ko'pga-ko'p bog'lanishlarni misollar bilan farqlaydi.
+reja: Ma'lumotlar bazasi va MBBT tushunchasi
+reja: Ma'lumot turlari va maydon xossalari
+reja: Jadvallar orasidagi bog'lanish turlari
+tayanch: ma'lumotlar bazasi; MBBT; jadval; yozuv; maydon; birlamchi kalit; ma'lumot turi; maydon hajmi; hisoblagich (avtoraqam); konstruktor rejimi; birga-bir; birga-ko'p; ko'pga-ko'p
+metod: Taqqoslash | Elektron jadvaldagi avtoservis mijozlari ro'yxati va shu ma'lumotning MB dagi jadvali ekranda solishtiriladi: qaysi biri ma'lumot turini qat'iy nazorat qiladi, qaysi birida takrorlanish ko'p.
+metod: Juftlikda loyihalash | Juftliklar avval qog'ozda jadval tuzilmasini (maydon nomi, turi, hajmi, izoh) loyihalaydi, so'ng uni kompyuterda yaratadi va qo'shni juftlik loyihasi bilan solishtiradi.
+ajihoz: Kompyuter; MS Access yoki LibreOffice Base; proyektor; avtoservis bo'yicha namunaviy ma'lumotlar (mijozlar va avtomobillar); topshiriq varaqasi
+
+## Ma'lumotlar bazasi va MBBT
+**Ma'lumotlar bazasi** (MB) — o'zaro bog'liq ma'lumotlarning tartibli, kompyuterda saqlanadigan to'plami. MB bilan ishlash uchun **ma'lumotlar bazasini boshqarish tizimi** (MBBT) ishlatiladi: MS Access, LibreOffice Base, katta tizimlarda MySQL, PostgreSQL. MB ma'lumotlari **jadvallarda** saqlanadi: har bir **yozuv** (qator) — bitta obyekt (mijoz, avtomobil), har bir **maydon** (ustun) — uning bitta xususiyati (familiya, telefon). Har bir yozuvni boshqalardan ajratib turadigan noyob maydon **birlamchi kalit** deyiladi (mijoz raqami, davlat raqami belgisi). Elektron jadvaldan farqli ravishda MB katta hajmdagi ma'lumotni tez qidiradi, ma'lumot turini qat'iy nazorat qiladi, bir vaqtda ko'p foydalanuvchiga xizmat qiladi va ma'lumotlarning takrorlanishini kamaytiradi.
+
+## Ma'lumot turlari va maydon xossalari
+jadval: Asosiy ma'lumot turlari
+| Turi | Nima uchun | Misol |
+| Qisqa matn | 255 belgigacha matn va hisoblanmaydigan raqamlar | Familiya, telefon, davlat raqami |
+| Uzun matn | Katta izohlar | Nosozlik tavsifi |
+| Son (butun, o'nli) | Hisoblanadigan sonlar | Yurgan masofa, soni |
+| Pul | Pul summalari | Xizmat narxi |
+| Sana/vaqt | Sanalar va vaqt | Qabul sanasi |
+| Ha/Yo'q | Ikki qiymatli belgi | Kafolat bormi |
+| Hisoblagich (avtoraqam) | Avtomatik o'suvchi noyob raqam | Buyurtma raqami |
+Har bir maydonga xossalar beriladi: **maydon hajmi** (masalan, familiya uchun 30 belgi — ortiqcha joy egallamaydi), **format** (sana: KK.OO.YYYY), **majburiy maydon**, **standart qiymat** (masalan, bugungi sana), **indeks** (tez qidirish uchun), shuningdek validatsiya qoidasi (26-darsda). Telefon va pasport raqami son emas, matn turida saqlanadi — ular ustida arifmetik amal bajarilmaydi va boshidagi «0» yo'qolmasligi kerak.
+
+## Jadvallar orasidagi bog'lanish turlari
+Relyatsion MB bir nechta jadvaldan iborat bo'lib, ular umumiy maydonlar orqali bog'lanadi. Bog'lanishning uch turi bor:
+- **birga-bir (1:1)** — birinchi jadvaldagi bitta yozuvga ikkinchisida faqat bitta yozuv mos keladi: xodim va uning shaxsiy kartochkasi;
+- **birga-ko'p (1:M)** — bitta yozuvga ko'p yozuv mos keladi: bitta mijozning bir nechta avtomobili, bitta guruhda ko'p o'quvchi; bu eng ko'p uchraydigan bog'lanish;
+- **ko'pga-ko'p (M:M)** — har ikki tomonda ko'p yozuv: bir o'quvchi ko'p fan o'qiydi, bir fanni ko'p o'quvchi o'qiydi. Bunday bog'lanish to'g'ridan-to'g'ri tuzilmaydi — oraliq (bog'lovchi) jadval yaratilib, ikkita birga-ko'p bog'lanishga ajratiladi: «O'quvchilar» — «Baholar» — «Fanlar».
+
+amaliy: Avtoservis ma'lumotlar bazasining jadvallarini yaratish
+amaqsad: Avtoservis MB uchun «Mijozlar» va «Avtomobillar» jadvallarini loyihalash va yaratish, maydonlarga to'g'ri ma'lumot turi, hajm va xossalarni berish, birlamchi kalitni belgilash va yozuvlar kiritish.
+qadam: Qog'ozda «Mijozlar» jadvali tuzilmasini loyihalang: MijozID (hisoblagich, birlamchi kalit), Familiya (qisqa matn, 30), Ism (qisqa matn, 20), Telefon (qisqa matn, 13, majburiy), Manzil (qisqa matn, 60), RoyxatSanasi (sana, standart qiymat — bugungi sana).
+qadam: MBBT da «Avtoservis» nomli yangi bazani yarating va «Mijozlar» jadvalini konstruktor rejimida yuqoridagi tuzilma bo'yicha tuzing; har bir maydonga izoh yozing.
+qadam: «Avtomobillar» jadvalini yarating: DavlatRaqami (qisqa matn, 8, birlamchi kalit), Marka (qisqa matn, 20), Model (qisqa matn, 20), IshlabChiqarilganYil (butun son), YurganMasofa (butun son, km), Kafolat (ha/yo'q), MijozID (son — keyingi darsda bog'lanish uchun).
+qadam: Jadval rejimiga o'tib, har bir jadvalga kamida 8 ta yozuv kiriting; telefon maydoniga harf yoki son maydoniga matn kiritib ko'ring va MBBT qanday javob berishini yozing.
+qadam: Majburiy maydonni bo'sh qoldirib saqlashga urinib ko'ring, standart qiymat avtomatik qo'yilganini tekshiring.
+qadam: Familiya maydoni bo'yicha saralang va «Marka» maydoni bo'yicha filtrlab, faqat bitta markadagi avtomobillarni ko'rsating.
+qadam: Quyidagi juftliklar uchun bog'lanish turini aniqlab yozing: mijoz — avtomobil; avtomobil — ta'mirlash buyurtmasi; usta — xizmat turi; avtomobil — texnik pasport.
+anatija: Konstruktor rejimida yaratilgan va to'g'ri ma'lumot turlari, hajmlar, kalit va xossalarga ega «Mijozlar» va «Avtomobillar» jadvallari, har birida kamida 8 ta yozuv, sinov natijalari va bog'lanish turlari ro'yxati.
+baho5: Jadval tuzilmalari puxta loyihalangan, barcha maydonlarga mos tur va hajm berilgan, birlamchi kalitlar to'g'ri tanlangan, xossalar ishlaydi, bog'lanish turlari to'g'ri aniqlangan va asoslangan.
+masala: Quyidagi maydonlar uchun ma'lumot turini tanlang: a) mahsulot narxi; b) mijoz telefoni; c) buyurtma sanasi; d) yetkazib berildimi; e) buyurtma raqami (avtomatik); f) sotilgan dona soni.
+yechim: a) pul; b) qisqa matn; c) sana/vaqt; d) ha/yo'q; e) hisoblagich (avtoraqam); f) butun son.
+masala: «Guruhlar», «O'quvchilar» va «Fanlar» jadvallari orasidagi bog'lanish turlarini aniqlang. Ko'pga-ko'p bog'lanish uchun qanday oraliq jadval kerak?
+yechim: Guruh — o'quvchi: birga-ko'p (bir guruhda ko'p o'quvchi). O'quvchi — fan: ko'pga-ko'p, uni «Baholar» (yoki «O'qishlar») oraliq jadvali orqali ikkita birga-ko'p bog'lanishga ajratiladi: o'quvchi — baholar va fan — baholar; oraliq jadvalda O'quvchiID, FanID va Baho maydonlari bo'ladi.
+savol: Ma'lumotlar bazasi elektron jadvaldan qanday afzalliklarga ega?
+savol: Birlamchi kalit nima va unga qanday talablar qo'yiladi?
+savol: Nima uchun telefon raqami son turida emas, matn turida saqlanadi?
+savol: Ko'pga-ko'p bog'lanish qanday hosil qilinadi? Misol keltiring.
+test: Har bir yozuvni boshqalardan ajratib turadigan noyob maydon? | Birlamchi kalit | Tashqi kalit | Indeks emas, format | Izoh
+test: Xizmat narxini saqlash uchun eng mos ma'lumot turi? | Pul | Qisqa matn | Ha/Yo'q | Uzun matn
+test: Bitta mijozning bir nechta avtomobili bo'lishi mumkin. Bu qaysi bog'lanish turi? | Birga-ko'p | Birga-bir | Ko'pga-ko'p | Bog'lanish yo'q
+test: Avtomatik o'suvchi noyob raqam beradigan ma'lumot turi? | Hisoblagich (avtoraqam) | Sana/vaqt | Pul | Ha/Yo'q
+test: Jadval tuzilmasini (maydonlar, turlar, xossalar) yaratish rejimi? | Konstruktor rejimi | Jadval rejimi | Chop etish rejimi | Filtr rejimi
+uyga: Misol va mashqlar: kasbingizga oid kichik ma'lumotlar bazasi uchun (masalan, oshxona — taomlar va mahsulotlar; tikuv sexi — buyurtmalar va gazlamalar) ikkita jadval tuzilmasini qog'ozda loyihalang: maydon nomi, ma'lumot turi, hajmi, kalit va izoh; jadvallar orasidagi bog'lanish turini yozing.
+gloss: Ma'lumotlar bazasi | O'zaro bog'liq ma'lumotlarning kompyuterda tartibli saqlanadigan to'plami.
+gloss: MBBT | Ma'lumotlar bazasini yaratish, to'ldirish, qidirish va boshqarish dasturi (MS Access, LibreOffice Base).
+gloss: Yozuv | Jadvaldagi bitta obyekt haqidagi barcha ma'lumotlar (qator).
+gloss: Maydon | Jadvaldagi obyektning bitta xususiyati (ustun), o'z nomi va ma'lumot turiga ega.
+gloss: Birlamchi kalit | Jadvaldagi har bir yozuvni noyob aniqlaydigan maydon yoki maydonlar birikmasi.
+gloss: Birga-ko'p bog'lanish | Bir jadvaldagi bitta yozuvga ikkinchi jadvalda ko'p yozuv mos keladigan bog'lanish.

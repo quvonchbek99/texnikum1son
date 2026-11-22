@@ -1,0 +1,106 @@
+nomi: Kuzatish va boshqarish
+modul: 1-modul
+ac: 1.8 Sensorlar turlarini va kuzatish hamda boshqarish tizimlarining ishlash tamoyilini tushuntiradi.
+maqsad: O'quvchilarda kompyuter yordamida kuzatish va boshqarish tizimlarining tuzilishini tushuntirish, vazifaga mos sensorni tanlash hamda boshqarish tizimining ishlash algoritmini tuzish ko'nikmasini shakllantirish.
+natija: kuzatish va boshqarish tizimlarining farqini misollar bilan tushuntiradi;
+natija: harorat, namlik, yorug'lik, harakat, bosim, tutun va boshqa sensorlarning vazifasini biladi va tizim uchun mosini tanlaydi;
+natija: analog-raqamli va raqamli-analog o'zgartirgich hamda aktuatorlarning vazifasini tushuntiradi;
+natija: teskari aloqa asosidagi boshqarish tizimining ishlash algoritmini tuzadi;
+natija: kompyuterli kuzatish va boshqarishning afzallik va kamchiliklarini baholaydi.
+reja: Kuzatish va boshqarish tizimlari: tushuncha va misollar
+reja: Sensorlar turlari va ularning qo'llanishi
+reja: Boshqarish tizimining ishlash sikli: ADC, protsessor, aktuator va teskari aloqa
+reja: Kompyuterli kuzatish va boshqarishning afzallik va kamchiliklari
+tayanch: kuzatish tizimi; boshqarish tizimi; sensor; datchik; analog signal; raqamli signal; analog-raqamli o'zgartirgich (ADC); raqamli-analog o'zgartirgich (DAC); aktuator; mikroprotsessor; chegaraviy qiymat; teskari aloqa; ma'lumotlarni qayd etish
+metod: Aqliy hujum | «Uyingizda yoki ko'chada qaysi qurilmalar o'zi «sezib», o'zi ishlaydi?» savoliga javoblar (avtomatik eshik, ko'cha chiroqlari, konditsioner, svetofor) yig'iladi va ularning qaysi biri faqat kuzatadi, qaysi biri boshqaradi — ajratiladi.
+metod: Klaster | Juftliklar «Sensorlar» markazidan har bir sensor turi, u o'lchaydigan kattalik va kasbiy qo'llanishi (avtoservis, oshxona, elektromontaj, yong'in xavfsizligi) shoxlarini chizadi.
+metod: Algoritm tuzish | Guruhlar «aqlli issiqxona» yoki «avtomatik ko'cha yoritgichi» uchun boshqarish siklini qadamlarga bo'lib yozadi va boshqa guruh algoritmdagi xatolarni topadi.
+
+## 1. Kuzatish va boshqarish tizimlari: tushuncha va misollar
+Zamonaviy hayotda ko'plab jarayonlar odam aralashuvisiz, kompyuter yordamida nazorat qilinadi: kasalxonadagi monitor bemorning yurak urishini doimiy o'lchaydi, avtomobil shinadagi bosim pasayganini haydovchiga bildiradi, issiqxonadagi tizim havo isib ketganda darchalarni o'zi ochadi. Bunday tizimlarning asosida **sensorlar** (datchiklar) va ularning ma'lumotlarini qayta ishlaydigan **mikroprotsessor** yoki kompyuter turadi. Ular ikki turga bo'linadi.
+**Kuzatish (monitoring) tizimi** sensorlar yordamida muhit yoki jarayon holatini o'lchaydi, natijalarni saqlaydi, ekranda ko'rsatadi va me'yordan chetga chiqqanda ogohlantiradi, lekin jarayonga o'zi ta'sir qilmaydi. Misollar: bemorning harorati, yurak urishi va qon bosimini kuzatuvchi tibbiy monitor; ob-havo stansiyasi; shahar havosining ifloslanishini o'lchaydigan qurilma; zavod sexidagi shovqin darajasini qayd etuvchi tizim; xonadondagi elektr hisoblagichi. Kuzatish tizimida yakuniy qarorni ko'pincha inson qabul qiladi: shifokor monitor ma'lumoti asosida davolashni o'zgartiradi.
+**Boshqarish tizimi** esa sensor ma'lumotlarini oldindan belgilangan qiymatlar bilan solishtirib, o'zi qaror qabul qiladi va **aktuatorlar** (motor, nasos, isitgich, klapan, chiroq) orqali jarayonni o'zgartiradi. Misollar: issiqxonadagi harorat va namlikni boshqarish; avtomatik kir yuvish mashinasi; markaziy isitish qozoni; svetoforlar; avtomatik ochiladigan eshik; konditsioner; aqlli uy tizimi; avtomobilning dvigatel boshqaruv bloki, u yonilg'i purkash va o't oldirish vaqtini sekundiga ko'p marta o'zgartiradi.
+Ko'pgina tizimlar ikkala vazifani birga bajaradi: masalan, aqlli uy tizimi xonalardagi haroratni telefon ilovasida ko'rsatadi (kuzatish) va belgilangan haroratni ushlab turish uchun konditsionerni yoqib-o'chiradi (boshqarish).
+### Ma'lumotlarni qayd etish
+Kuzatishning muhim usuli — **ma'lumotlarni qayd etish** (data logging): sensor ma'lumotlari belgilangan **interval** bilan (masalan, har 10 daqiqada) belgilangan **muddat** davomida (masalan, 24 soat) avtomatik yozib boriladi. Bu holda 24 · 60 : 10 = 144 ta o'lchov olinadi. Qayd etilgan ma'lumotlar keyin elektron jadvalga o'tkazilib, grafik va o'rtacha qiymatlar hisoblanadi. Odam kecha-kunduz bir xil aniqlikda o'lchov ololmaydi, avtomatik qayd etuvchi esa charchamaydi va xato qilmaydi.
+
+## 2. Sensorlar turlari va ularning qo'llanishi
+**Sensor** — fizik yoki kimyoviy kattalikni (harorat, yorug'lik, bosim va hokazo) elektr signaliga aylantiruvchi qurilma. Sensorning o'zi qaror qabul qilmaydi — u faqat o'lchaydi va natijani protsessorga uzatadi. Shuning uchun «sensor chiroqni yoqdi» degan ibora noto'g'ri: chiroqni protsessor sensor ma'lumotiga asoslanib yoqadi.
+jadval: Sensorlar va ularning qo'llanishi
+| Sensor | Nimani o'lchaydi | Qo'llanish misollari |
+| Harorat | Havo, suyuqlik yoki jism harorati | Issiqxona, konditsioner, duxovka, dvigatel sovutish tizimi |
+| Namlik | Havo yoki tuproq namligi | Issiqxona, ombor, avtomatik sug'orish |
+| Yorug'lik | Yorug'lik darajasi | Ko'cha chiroqlari, telefon ekranining yorqinligi |
+| Harakat (infraqizil, PIR) | Odam yoki hayvon harakati (issiqlik nurlanishi) | Qo'riqlash signalizatsiyasi, yo'lak chiroqlari, avtomatik eshik |
+| Bosim | Gaz yoki suyuqlik bosimi, og'irlik | Shina bosimi nazorati, tarozilar, svetofor oldidagi yo'l datchigi |
+| Tutun va gaz | Tutun, is gazi (CO), tabiiy gaz | Yong'in signalizatsiyasi, oshxona, qozonxona |
+| Ultratovush (masofa) | Obyektgacha masofa | Avtomobil parkovka datchiklari, robotlar |
+| Tovush | Tovush darajasi | Shovqin nazorati, ovozli boshqaruv |
+| pH | Suyuqlikning kislotaliligi | Suv tozalash, oziq-ovqat ishlab chiqarish |
+| Kislorod (lyambda-zond) | Chiqindi gazdagi kislorod miqdori | Avtomobil dvigatelida yonilg'i aralashmasini sozlash |
+Kasblarga ko'ra misollar: avtoservis ustasi diagnostika skaneri orqali dvigatel harorati, shina bosimi, lyambda-zond va boshqa o'nlab sensorlar ma'lumotini o'qiydi; oshpaz ishlatadigan zamonaviy pechlar ichki harorat sensori bilan taom tayyor bo'lganini aniqlaydi; elektromontyor yo'lak va hojatxonalarga harakat sensorli yoritgich o'rnatib, elektr energiyasini tejaydi; o't o'chiruvchilar uchun tutun detektorlari va issiqlik sensorlari yong'inni erta aniqlashning asosiy vositasidir.
+### Sensorlar qanday ishlaydi
+Har bir sensor muayyan fizik hodisaga asoslanadi. **Termistor** (harorat sensori) — qarshiligi harorat o'zgarishi bilan o'zgaradigan yarimo'tkazgichli element: protsessor qarshilikka mos kuchlanishni o'lchab, haroratni hisoblaydi. **Fotorezistorning** qarshiligi yorug'lik tushganda kamayadi, qorong'ida esa ortadi. **Infraqizil harakat sensori** odam tanasidan chiqadigan issiqlik nurlanishining o'zgarishini sezadi, shuning uchun u harakatsiz turgan odamni yoki issiqlik chiqarmaydigan buyumni sezmasligi mumkin. **Bosim sensorlari** ko'pincha bosim ostida egiladigan membrana yoki bosilganda kuchlanish hosil qiladigan kristall (pyezoelement) asosida ishlaydi. **Ultratovush sensori** tovush to'lqinini yuborib, uning qaytib kelish vaqtini o'lchaydi va masofani hisoblaydi: tovush havoda sekundiga taxminan 340 metr tezlikda tarqaladi.
+Sensor tanlashda o'lchash oralig'i (masalan, −40 dan +125 °C gacha), aniqlik, javob berish tezligi, ish sharoiti (namlik, chang, tebranish) va narx hisobga olinadi. Sensorlar vaqti-vaqti bilan tekshirib turiladi (kalibrlanadi), aks holda noto'g'ri ma'lumot berib, butun tizimni xato ishlatadi.
+
+## 3. Boshqarish tizimining ishlash sikli
+Ko'pchilik sensorlar **analog signal** beradi — uzluksiz o'zgaradigan kuchlanish (masalan, harorat oshgan sari kuchlanish ham asta o'zgaradi). Kompyuter esa faqat **raqamli** (ikkilik) ma'lumot bilan ishlaydi. Shuning uchun sensor va protsessor orasida **analog-raqamli o'zgartirgich** (ADC) bo'ladi: u analog signalni sonlarga aylantiradi. Aksincha, ayrim aktuatorlar (masalan, motorning aylanish tezligini silliq o'zgartirish) analog boshqaruvni talab qiladi — bunda **raqamli-analog o'zgartirgich** (DAC) ishlatiladi. Ko'p zamonaviy sensorlarda ADC sensorning ichida bo'ladi va ular protsessorga tayyor raqamli ma'lumot yuboradi.
+Boshqarish tizimi uzluksiz takrorlanadigan sikl bo'yicha ishlaydi:
+#. Sensor kattalikni o'lchaydi va signal yuboradi.
+#. ADC signalni raqamli ko'rinishga o'tkazadi.
+#. Mikroprotsessor qiymatni xotirada saqlangan **chegaraviy (belgilangan) qiymat** bilan solishtiradi.
+#. Agar qiymat me'yordan chetga chiqsa, protsessor aktuatorga buyruq yuboradi (zarur bo'lsa, DAC orqali): isitgich, nasos, motor yoki chiroqni yoqadi yoki o'chiradi.
+#. Aktuator jarayonni o'zgartiradi; sensor yangi holatni o'lchaydi va sikl boshidan takrorlanadi.
+Aktuator ta'siri natijasida o'zgargan holat yana sensor orqali tizimga qaytib kelishi **teskari aloqa** deyiladi. Teskari aloqa tufayli tizim o'z ishini o'zi to'g'rilab boradi: harorat belgilangan darajaga yetgach isitgich o'chadi, pasayganda yana yoqiladi.
+### Misol: aqlli issiqxona
+Issiqxonada harorat 20 °C dan 28 °C gacha, tuproq namligi 40 % dan yuqori bo'lishi kerak. Tizim quyidagicha ishlaydi:
+- harorat 28 °C dan oshsa — darchalarni ochuvchi motor va ventilyator yoqiladi;
+- harorat 20 °C dan pasaysa — darchalar yopiladi va isitgich yoqiladi;
+- harorat 20–28 °C oralig'ida bo'lsa — isitgich va ventilyator o'chiq turadi;
+- tuproq namligi 40 % dan past bo'lsa — sug'orish nasosi yoqiladi, 60 % ga yetganda o'chiriladi;
+- kechqurun yorug'lik sensori qorong'ilikni aniqlasa — qo'shimcha yoritish lampalari yoqiladi.
+Ikki chegara (20 va 28 °C, 40 va 60 %) bo'lishi muhim: agar bitta chegara bo'lsa, qiymat chegara atrofida tebranib, isitgich yoki nasos har daqiqada yoqilib-o'chib, tez ishdan chiqadi.
+### Misol: avtomatik ko'cha yoritgichi va svetofor
+Ko'cha chiroqlari tizimida yorug'lik sensori har bir necha sekundda yorug'lik darajasini o'lchaydi. Qiymat belgilangan darajadan pastga tushsa (kechki g'ira-shira), protsessor relega buyruq beradi va chiroqlar yoqiladi; ertalab yorug'lik oshgach, chiroqlar o'chiriladi. Bulut tufayli kunduzi qisqa vaqt qorong'ilashganda chiroqlar keraksiz yoqilmasligi uchun tizim qiymat bir necha daqiqa davomida past bo'lib turishini kutadi. Aqlli svetoforlarda esa yo'lga o'rnatilgan datchiklar yoki kameralar har bir yo'nalishdagi avtomobillar navbatini aniqlaydi va protsessor yashil chiroq davomiyligini navbat uzunligiga qarab o'zgartiradi; piyodalar tugmasi bosilganda piyoda yo'lagi uchun signal navbatga qo'yiladi.
+Shunga o'xshash tizimlar xonadonlardagi markaziy isitish qozonida, sovutgich va muzlatgichda, avtomobillarning sovutish ventilyatorida ham ishlaydi: sovutish suyuqligi harorati belgilangan darajadan oshganda ventilyator yoqiladi.
+
+## 4. Kompyuterli kuzatish va boshqarishning afzallik va kamchiliklari
+Afzalliklari:
+- kompyuter charchamaydi va kecha-kunduz, dam olish kunlarisiz ishlaydi;
+- o'lchovlar aniq va odam ola olmaydigan tez-tezlikda (sekundiga bir necha marta) olinadi;
+- tizim o'zgarishga darhol javob beradi, odam esa kech qolishi mumkin;
+- xavfli muhitda (yuqori harorat, zaharli gaz, radiatsiya) odam o'rniga ishlaydi;
+- ma'lumotlar avtomatik saqlanadi va keyinchalik tahlil qilinadi; resurslar (elektr, suv, yonilg'i) tejaladi.
+Kamchiliklari:
+- tizimni o'rnatish qimmat, xizmat ko'rsatish uchun mutaxassis kerak;
+- sensor ishdan chiqsa yoki noto'g'ri sozlansa, tizim xato qaror qabul qiladi;
+- elektr energiyasi o'chsa, zaxira manbasiz tizim to'xtaydi;
+- internetga ulangan qurilmalar (aqlli uy, IP-kameralar) buzg'unchilar hujumiga uchrashi mumkin;
+- kutilmagan vaziyatda kompyuter inson kabi moslashuvchan qaror qabul qila olmaydi; ayrim ish o'rinlari qisqaradi, ammo tizimlarni o'rnatish va ta'mirlash bo'yicha yangi kasblar paydo bo'ladi.
+Bugungi kunda ko'plab sensorli qurilmalar internetga ulanadi — bu **buyumlar interneti** (IoT) deyiladi. Masalan, fermer telefonidan issiqxonadagi harorat grafigini ko'radi, ombor egasi muzlatkich harorati oshganda SMS oladi, energetiklar esa aqlli hisoblagichlar orqali tarmoqdagi yuklamani masofadan kuzatadi. Ishlab chiqarishda sensorlar va robotlar birlashtirilgan avtomatlashtirilgan liniyalar mahsulot sifatini har bir bosqichda tekshiradi. Bu imkoniyatlar bilan birga xavfsizlik talablari ham oshadi: qurilma parolini o'zgartirish, dasturiy ta'minotini yangilab turish shart.
+Xulosa: kuzatish tizimi o'lchaydi, qayd etadi va ogohlantiradi; boshqarish tizimi esa sensor ma'lumotlarini belgilangan qiymatlar bilan solishtirib, aktuatorlar orqali jarayonni o'zgartiradi va teskari aloqa yordamida holatni doimiy ushlab turadi. Bunday tizimlarning hammasi «sensor → ADC → protsessor → aktuator» zanjiri asosida ishlaydi.
+
+keys: Shinalar bosimini nazorat qilish
+vaziyat: Avtoservisga kelgan mijoz avtomobilining asboblar panelida shina bosimi ogohlantirish belgisi tez-tez yonib-o'chayotganidan shikoyat qildi. Shinalarni manometr bilan tekshirganda bosim me'yorida ekani aniqlandi. Usta avtomobilda har bir g'ildirak ichida bosim sensori o'rnatilganini va ular ma'lumotni simsiz yuborishini biladi.
+ksavol: Bu tizim kuzatish tizimimi yoki boshqarish tizimi? Nima uchun?
+ksavol: Ogohlantirish belgisining sababsiz yonishiga qanday sabablar bo'lishi mumkin?
+ksavol: Usta qanday tartibda tekshiruv o'tkazishi kerak?
+kjavob: Bu kuzatish tizimi: u bosimni o'lchaydi va haydovchini ogohlantiradi, lekin bosimni o'zi o'zgartirmaydi. Sabablar: sensor batareyasining zaryadi tugagan, sensor shikastlangan yoki noto'g'ri kalibrlangan, sovuq havoda bosim chegaraviy qiymat atrofida tebranayotgan, shinalar almashtirilgach sensorlar tizimga qayta o'rgatilmagan. Tartib: diagnostika skaneri bilan har bir sensor ko'rsatkichi va batareya holatini o'qish → manometr natijasi bilan solishtirish → nosoz sensorni almashtirish yoki qayta o'rgatish → sinov yurishidan keyin xato kodini o'chirish.
+savol: Kuzatish tizimi boshqarish tizimidan nimasi bilan farq qiladi? Har biriga ikki misol keltiring.
+savol: Avtomatik ko'cha chiroqlari tizimida qaysi sensor ishlatiladi va tizim qanday ishlaydi?
+savol: ADC va DAC qanday vazifani bajaradi?
+savol: Teskari aloqa nima? Uni issiqxona misolida tushuntiring.
+savol: Nima uchun boshqarish tizimida ikki chegaraviy qiymat ishlatiladi?
+savol: Kompyuterli boshqarishning uchta afzalligi va uchta kamchiligini ayting.
+test: Qaysi tizim boshqarish tizimiga misol bo'ladi? | Haroratga qarab isitgichni yoqib-o'chiradigan issiqxona tizimi | Bemorning yurak urishini ko'rsatadigan monitor | Ob-havo stansiyasi | Havo ifloslanishini o'lchaydigan qurilma
+test: Avtomatik ko'cha chiroqlari uchun qaysi sensor kerak? | Yorug'lik sensori | Namlik sensori | pH sensori | Bosim sensori
+test: Sensorning analog signalini kompyuter tushunadigan raqamli ko'rinishga nima o'tkazadi? | Analog-raqamli o'zgartirgich (ADC) | Raqamli-analog o'zgartirgich (DAC) | Aktuator | Drayver
+test: Qo'riqlash signalizatsiyasida odam harakatini aniqlash uchun qaysi sensor ishlatiladi? | Infraqizil harakat sensori (PIR) | Namlik sensori | Kislorod sensori | pH sensori
+test: Sensor har 10 daqiqada 24 soat davomida o'lchov olsa, nechta o'lchov qayd etiladi? | 144 | 240 | 24 | 1440 ## 24 · 60 = 1440 daqiqa; 1440 : 10 = 144.
+uyga: Uyingiz, kollej yoki kasbingizdagi bitta avtomatik tizimni tanlang (konditsioner, muzlatgich, avtomobil sovutish tizimi, yong'in signalizatsiyasi). U kuzatish yoki boshqarish tizimi ekanini aniqlang, qaysi sensor va aktuatorlar ishlatilishini yozing va ishlash siklini 5–6 qadamda tasvirlang.
+gloss: Sensor (datchik) | Fizik yoki kimyoviy kattalikni elektr signaliga aylantiruvchi qurilma.
+gloss: Kuzatish tizimi | Sensorlar yordamida jarayonni o'lchaydigan, qayd etadigan va ogohlantiradigan, lekin unga ta'sir qilmaydigan tizim.
+gloss: Boshqarish tizimi | Sensor ma'lumotlari asosida qaror qabul qilib, aktuatorlar orqali jarayonni o'zgartiradigan tizim.
+gloss: Aktuator | Protsessor buyrug'i bilan jismoniy harakat yoki ta'sir hosil qiluvchi qurilma (motor, nasos, isitgich, klapan).
+gloss: Analog-raqamli o'zgartirgich (ADC) | Uzluksiz analog signalni kompyuter tushunadigan raqamli qiymatga aylantiruvchi qurilma.
+gloss: Teskari aloqa | Aktuator ta'sirida o'zgargan holatning sensor orqali qaytadan tizimga kelishi va jarayonni to'g'rilab turishi.
