@@ -10,7 +10,7 @@
   "use strict";
   if (window.__t1Kuvi || window.top !== window.self) return; window.__t1Kuvi = 1;
   var KUVI_JS = "https://kuvonch.uz/ka-kuvi.js?v=20261112d";
-  var KUVI_AI_JS = "https://kuvonch.uz/kuvi-ai/kuvi-ai.js?v=20261121a";
+  var KUVI_AI_JS = "https://kuvonch.uz/kuvi-ai/kuvi-ai.js?v=20261122a";
   var aiP = null;
   // umumiy Kuvi AI moduli (miya, formulalar, eksport) — panel birinchi ochilganda yuklanadi; yuklanmasa null
   function aiYukla() {
