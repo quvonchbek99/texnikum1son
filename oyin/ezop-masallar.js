@@ -1535,5 +1535,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki bug'doy urug'i yomon edi", "Chunki yer nam emas edi va ekin sug'orilmadi", "Chunki bahor juda sovuq keldi"],
     javob: 1,
     izoh: "Ikkala dehqon bir xil urug' ekdi, demak urug' sababchi emas. Farq yerning namligi va sug'orishda edi. Masal shuni ko'rsatadiki, natija ko'pincha ekilgan narsaning o'ziga emas, uni parvarish qilishga bog'liq."
+  },
+  {
+    id: "ez-190", mavzu: "mantiq", sarlavha: "Teshik tom",
+    matn: "Dehqon kuzda o'rib olgan pichanini omborga yig'di. Ombor tomi anchadan beri eskirgan edi, lekin u kichik teshiklarni ko'rib ham, tuzatishni keyinga qoldirdi. Kuz oxirida kuchli yomg'ir yog'di, tomdagi teshiklardan suv tomib, pichanning katta qismi ho'l bo'lib qoldi. Oxiri pichanning yarmi chirib, yaroqsiz bo'lib qoldi.",
+    savol: "Dehqonning pichani nima uchun chirib ketdi?",
+    variantlar: ["Chunki pichan juda ko'p yig'ilgan edi", "Chunki ombor tomidagi teshiklardan suv kirgan edi", "Chunki yomg'ir hech qachon yog'madi"],
+    javob: 1,
+    izoh: "Tomdagi teshiklardan kirgan yomg'ir suvi pichanni namlab, chiritdi. Dehqon kichik nuqsonni vaqtida tuzatmagani uchun katta zarar ko'rdi. Masal shuni o'rgatadiki, kichik kamchilikni kechiktirmay bartaraf etish katta muammolarning oldini oladi."
+  },
+  {
+    id: "ez-191", mavzu: "hamkorlik", sarlavha: "Ikki tegirmon va ariq",
+    matn: "Tog' etagidagi qishloqdan oqib o'tgan ariq ikki tegirmonni suv bilan ta'minlardi. Yuqoridagi tegirmonchi suvni o'ziga ko'proq olish uchun ariqqa katta to'g'on qurdi. Pastdagi tegirmon to'xtab qolgach, u yuqoriga chiqib to'g'onni ko'rdi va ikkala tegirmonchi bu ishning zarari ikkalasiga ham tegishini tushunib yetdi.",
+    savol: "Ikkala tegirmon yana suv bilan ishlashi uchun nima qilish kerak edi?",
+    variantlar: ["Yuqoridagi to'g'onni birgalikda ochish kerak edi", "Pastdagi tegirmonni butunlay yopib qo'yish kerak edi", "Ariqdagi suvni kuniga bir marta olish kerak edi"],
+    javob: 0,
+    izoh: "Suv ikkala tegirmon uchun umumiy edi. Bittasi faqat o'z foydasi uchun to'g'on qurgani sababli, ikkalasi ham zarar ko'rdi. Umumiy resursni birgalikda asrash hammaga foyda keltiradi."
   }
 ];

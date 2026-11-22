@@ -161,7 +161,96 @@
     if (window.__kaKuviFabL) return; window.__kaKuviFabL = 1;
     var me = document.currentScript && document.currentScript.src;
     if (!me) { var ss = document.querySelectorAll('script[src*="statistika.js"],script[src*="ka-fasl.js"]'); me = ss.length ? ss[ss.length - 1].src : ""; }
-    var s = document.createElement("script"); s.src = (me ? me.replace(/[^\/]*(\?.*)?$/, "") : "/") + "ka-kuvi-fab.js?v=20261116b"; s.async = true;
+    var s = document.createElement("script"); s.src = (me ? me.replace(/[^\/]*(\?.*)?$/, "") : "/") + "ka-kuvi-fab.js?v=20261121a"; s.async = true;
     (document.head || document.documentElement).appendChild(s);
   } catch (e) {}
+})();
+
+/* ---------- Rang mavzusi: asl · A yumshoq tungi · B toza kunduzgi · C o'zbek milliy ----------
+ * Tanlash: o'ng yuqoridagi 🎨 tugma (ka-dizayn.js) yoki manzilga ?mavzu=a | b | c | asl. Tanlov shu brauzerda saqlanadi (ka.mavzu).
+ * Sayt standarti — STANDART (hozir «asl» — eski ranglar). Boshqasini standart qilish uchun shu qatorni o'zgartiring.
+ * Qanday ishlaydi: sahifalar umumiy CSS o'zgaruvchilarini (--bg, --card, --text, --accent …) ishlatadi — mavzu ularni almashtiradi.
+ *  B (kunduzgi) eski qorong'i sahifalarda: sahifa ag'dariladi (rasm/video o'z rangida qoladi), o'zgaruvchilar esa shunday tanlanganki,
+ *  ag'darilgandan keyin aynan toza kunduzgi ranglar chiqadi. <meta name="ka-mavzu" content="mos"> bor sahifalar (kuvi-ai, uyga-vazifa)
+ *  ag'darilmaydi — ularga kunduzgi ranglar to'g'ridan-to'g'ri beriladi. Asli och rangli eski sahifalarga mavzu tegmaydi. */
+(function () {
+  "use strict";
+  if (window.kaMavzu) return;
+  var D = document, H = D.documentElement, KEY = "ka.mavzu";
+  var STANDART = "asl";
+  var RO = {
+    asl: { nom: "Asl tungi", izoh: "Hozirgi neon ranglar", r: ["#060a1a", "#35f0c4", "#a27bff"] },
+    a: { nom: "Yumshoq tungi", izoh: "Ko'zga yumshoq, matn tiniq", r: ["#0b1020", "#2dd4bf", "#8b5cf6"] },
+    b: { nom: "Toza kunduzgi", izoh: "Yorug', printerga mos", r: ["#f6f4ef", "#16a34a", "#2563eb"] },
+    c: { nom: "O'zbek milliy", izoh: "Lojuvard, firuza, oltin", r: ["#0f2347", "#14b8a6", "#d4a017"] }
+  };
+  // har mavzu: asosiy ranglar → saytdagi barcha nomdosh o'zgaruvchilarga tarqatiladi
+  function tarqat(o) {
+    var A = { tx: "text", txt: "text", chalk: "text", dim: "text-dim", haze: "text-dim", muted: "text-dim", mut: "text-dim", ac: "accent", acc: "accent",
+      ac2: "accent-2", ok: "good", red: "bad", warn: "amber", night: "bg", "night-2": "card", panel: "card", border: "line", bd: "line" };
+    Object.keys(A).forEach(function (k) { if (o[k] == null) o[k] = o[A[k]]; });
+    return o;
+  }
+  var V = {
+    a: tarqat({ bg: "#0b1020", "bg-soft": "#10162b", card: "#141b33", "panel-2": "#18203d", line: "#243056", text: "#eef1fb", "text-dim": "#9aa6c7",
+      accent: "#2dd4bf", "accent-2": "#8b5cf6", teal: "#2dd4bf", violet: "#8b5cf6", rose: "#f472b6", amber: "#fbbf24", gold: "#fbbf24", good: "#34d399", bad: "#f87171" }),
+    c: tarqat({ bg: "#0f2347", "bg-soft": "#132a55", card: "#16315f", "panel-2": "#1b3a6e", line: "#2a4a82", text: "#f4efe2", "text-dim": "#c9bfa6",
+      accent: "#14b8a6", "accent-2": "#d4a017", teal: "#14b8a6", violet: "#7d9cff", rose: "#e76f51", amber: "#e3b341", gold: "#d4a017", good: "#2ec4a0", bad: "#e76f51" }),
+    // B: ag'darilmaydigan («mos») sahifalar uchun to'g'ridan-to'g'ri kunduzgi ranglar
+    b: tarqat({ bg: "#f6f4ef", "bg-soft": "#efece5", card: "#ffffff", "panel-2": "#f3f1ec", line: "#e2ddd3", text: "#1d2230", "text-dim": "#5b6372",
+      accent: "#16a34a", "accent-2": "#2563eb", teal: "#0d9488", violet: "#7c3aed", rose: "#db2777", amber: "#d97706", gold: "#b7791f", good: "#16a34a", bad: "#dc2626" }),
+    // B: eski qorong'i sahifalar ag'dariladi — bu ranglar ag'darilgach yuqoridagi kunduzgi ranglarga aylanadi (Chrome'da tekshirilgan)
+    bt: tarqat({ bg: "#0d0b06", "bg-soft": "#16130c", card: "#000000", "panel-2": "#100e09", line: "#262117", text: "#d8ddeb", "text-dim": "#959dac",
+      accent: "#18a54c", "accent-2": "#65a3ff", teal: "#1fa69a", violet: "#d18fff", rose: "#ff80d0", amber: "#d16f00", gold: "#b7791f", good: "#18a54c", bad: "#ff8b8b" })
+  };
+  function blok(sel, o) { return sel + "{" + Object.keys(o).map(function (k) { return "--" + k + ":" + o[k]; }).join(";") + "}"; }
+  var INV = "invert(1) hue-rotate(180deg)";
+  var MEDIA = "img,video,canvas,iframe,picture,.ka-kuvi,.ka-ball,.ka-say,.kvtip,.kvfab,.kuvi,.ka-mvm .sw,[data-asl]";
+  var css = blok("html.ka-t-a,html.ka-t-a body", V.a) + blok("html.ka-t-c,html.ka-t-c body", V.c) +
+    blok("html.ka-t-b.ka-mos,html.ka-t-b.ka-mos body", V.b) + blok("html.ka-t-b.ka-yorug,html.ka-t-b.ka-yorug body", V.bt) +
+    "html.ka-t-a,html.ka-t-c{color-scheme:dark}html.ka-t-b.ka-mos{color-scheme:light}" +
+    // ag'darish (B, eski sahifalar): rasm, video va o'yin maydonlari o'z rangida qoladi
+    "html.ka-yorug{filter:" + INV + ";background:#060a1a}" +
+    MEDIA.split(",").map(function (s) { return "html.ka-yorug " + s; }).join(",") + "{filter:" + INV + "}" +
+    "html.ka-yorug [data-asl] img,html.ka-yorug [data-asl] video,html.ka-yorug [data-asl] canvas,html.ka-yorug [data-asl] iframe,html.ka-yorug [data-asl] picture,html.ka-yorug picture img," +
+    "html.ka-yorug .kvfab .kuvi,html.ka-yorug .kvfab img,html.ka-yorug .kvfab canvas,html.ka-yorug .kuvi img{filter:none}" +
+    "@media print{html.ka-yorug{filter:none}" + MEDIA.split(",").map(function (s) { return "html.ka-yorug " + s; }).join(",") + "{filter:none}}";
+  var st = D.createElement("style"); st.id = "ka-mavzu-css"; st.textContent = css; (D.head || H).appendChild(st);
+
+  function ol() { var v = null; try { v = localStorage.getItem(KEY); } catch (e) {} if (v === "yorug") return "b"; if (v === "tun") return "asl"; return RO[v] ? v : STANDART; }
+  function mos() { return H.classList.contains("ka-mos") || !!D.querySelector('meta[name="ka-mavzu"][content="mos"]'); }
+  // asli och rangli eski sahifa (theme-color deyarli oq, masalan ai-ustoz.html) — mavzu unga tegmaydi
+  function ochiq() {
+    var m = D.querySelector('meta[name="theme-color"]'), c = m && /^#([0-9a-f]{6})$/i.exec(String(m.getAttribute("content") || "").trim());
+    if (!c) return false;
+    var n = parseInt(c[1], 16), r = n >> 16 & 255, g = n >> 8 & 255, b = n & 255;
+    // faqat oqish-kulrang (deyarli oq) rang — #5ee6c7 kabi yorqin urg'u rangi qorong'i sahifalarda ham theme-color bo'lib keladi
+    return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 > 0.85 && Math.max(r, g, b) - Math.min(r, g, b) < 40;
+  }
+  var joriy = "asl";
+  function qoy(id) {
+    joriy = RO[id] ? id : STANDART;
+    var M = mos(); if (M) H.classList.add("ka-mos");
+    H.classList.remove("ka-t-a", "ka-t-b", "ka-t-c", "ka-yorug");
+    H.setAttribute("data-mavzu", joriy);
+    if (joriy === "asl" || (!M && ochiq())) return;
+    H.classList.add("ka-t-" + joriy);
+    if (joriy === "b" && !M) H.classList.add("ka-yorug");
+  }
+  try { var q = new URLSearchParams(location.search).get("mavzu"); if (q && RO[q]) localStorage.setItem(KEY, q); } catch (e) {}
+  qoy(ol());
+  // meta teglar skriptdan keyin kelgan bo'lsa — sahifa tayyor bo'lganda yana bir tekshiramiz
+  if (D.readyState === "loading") D.addEventListener("DOMContentLoaded", function () { qoy(joriy); });
+  window.addEventListener("storage", function (e) { if (e.key === KEY) qoy(ol()); }); // boshqa oynada o'zgarsa
+
+  window.kaMavzu = {
+    royxat: RO, standart: STANDART,
+    joriy: function () { return joriy; },
+    tanla: function (id) {
+      if (!RO[id]) return;
+      try { localStorage.setItem(KEY, id); } catch (e) {}
+      qoy(id);
+      try { D.dispatchEvent(new CustomEvent("ka-mavzu", { detail: id })); } catch (e) {}
+    }
+  };
 })();
