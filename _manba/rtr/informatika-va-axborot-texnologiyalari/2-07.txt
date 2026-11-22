@@ -1,0 +1,105 @@
+nomi: Sun'iy intellekt. Boyitilgan reallik. Biometrik axborot. Bulutli texnologiyalar
+tur: NA
+modul: 4-modul
+ac: 4.7 Sun'iy intellekt, boyitilgan reallik, biometrik tizimlar va bulutli texnologiyalarning ishlash tamoyili, qo'llanishi va xavflarini tushuntiradi; SI vositalari va bulutli xizmatlardan mas'uliyatli foydalanib, natijalarni manbalar bilan tekshiradi.
+maqsad: O'quvchilarda sun'iy intellekt va mashinali o'qitish, boyitilgan reallik, biometrik identifikatsiya va bulutli hisoblash tushunchalari, ularning kundalik hayot va kasbdagi qo'llanishi hamda cheklovlari haqida bilim hosil qilish, SI vositalari va bulutli xizmatlardan xavfsiz, halol va tanqidiy foydalanish ko'nikmasini shakllantirish.
+natija: sun'iy intellekt, mashinali o'qitish va generativ SI tushunchalarini tushuntiradi, ularning qo'llanishi va cheklovlariga misollar keltiradi;
+natija: boyitilgan reallikni virtual reallikdan farqlaydi va qo'llanish sohalarini aytadi;
+natija: biometrik tizimlarning ishlash bosqichlarini, afzallik va xavflarini tushuntiradi;
+natija: bulutli xizmat modellarini (IaaS, PaaS, SaaS) va joylashtirish turlarini taqqoslaydi;
+natija: SI javobini manbalar bilan tekshiradi va bulutli hujjatga kirish huquqlarini to'g'ri sozlaydi.
+reja: Sun'iy intellekt va mashinali o'qitish
+reja: Boyitilgan reallik
+reja: Biometrik axborot va identifikatsiya
+reja: Bulutli texnologiyalar
+tayanch: sun'iy intellekt; mashinali o'qitish; o'qitish ma'lumotlari; neyron tarmoq; generativ SI; so'rov (prompt); gallyutsinatsiya; tarafkashlik; deepfake; boyitilgan reallik (AR); biometrika; shablon; verifikatsiya; identifikatsiya; bulutli hisoblash; IaaS; PaaS; SaaS
+metod: Aqliy hujum | «Bugun siz qaysi ilovalarda sun'iy intellektdan foydalandingiz?» savoli bilan misollar to'planadi (tavsiya lentasi, tarjima, ovozli yordamchi, kamera, xarita).
+metod: Tekshiruv mashqi | Guruhlar SI chatbotiga bitta kasbiy savol beradi va javobdagi 3 ta faktni ishonchli manbalar bilan tekshirib, to'g'ri, noto'g'ri va tekshirib bo'lmaydigan qismlarini belgilaydi.
+metod: Taqqoslash jadvali | Juftliklar biometrik usullarni (barmoq izi, yuz, iris, ovoz) aniqlik, qulaylik va xavf bo'yicha jadvalda solishtiradi.
+jihoz: Kompyuter va proyektor; internet; SI chatboti va tarjimon xizmati (ochiq versiyalar); AR ilovasi o'rnatilgan smartfon; bulutli hujjat xizmati (o'quv akkaunti); taqdimot
+
+## 1. Sun'iy intellekt va mashinali o'qitish
+**Sun'iy intellekt** (SI) — odatda inson aqlini talab qiladigan vazifalarni bajara oladigan kompyuter tizimlari: nutqni tushunish, tasvirdagi obyektni tanish, tarjima qilish, bashorat qilish, qaror qabul qilishda yordam berish. Ilgari dasturchilar kompyuterga har bir qoidani qo'lda yozardi (1-kursdagi ekspert tizimlar shunday ishlaydi). Zamonaviy SI ning ko'p qismi **mashinali o'qitish**ga asoslanadi: dasturga qoidalar emas, juda ko'p misollar (**o'qitish ma'lumotlari**) beriladi va u misollardagi qonuniyatlarni o'zi «o'rganadi». Masalan, minglab «spam» va «oddiy» xatlarni ko'rgan model yangi xat spam ekanini taxmin qila oladi.
+Ko'plab SI tizimlari **sun'iy neyron tarmoqlar**dan foydalanadi — bir-biriga bog'langan ko'p qatlamli matematik «neyronlar»; ular rasm, tovush va matndagi murakkab qonuniyatlarni topishda ayniqsa samarali. So'nggi yillarda **generativ SI** keng tarqaldi: u matn, rasm, ovoz, video va dastur kodini yaratadi. Foydalanuvchi unga matnli **so'rov** (prompt) beradi, masalan: «Avtoservis mijozlari uchun qishki shinalar haqida 5 ta qisqa maslahat yoz».
+Bugungi SI tizimlarining deyarli barchasi **tor (zaif) SI** hisoblanadi: ular bitta yoki bir nechta aniq vazifani juda yaxshi bajaradi (shaxmat o'ynash, nutqni tanish, matn yozish), lekin inson kabi har qanday vaziyatda mustaqil fikrlay olmaydi. Inson darajasidagi universal **umumiy SI** hozircha ilmiy izlanishlar va bahslar mavzusi. SI ning sifati ko'p jihatdan o'qitish ma'lumotlariga bog'liq: ma'lumot kam, eskirgan yoki bir tomonlama bo'lsa, model ham shunday xulosalar chiqaradi.
+**Qo'llanish sohalari:** ijtimoiy tarmoq va do'konlardagi tavsiya tizimlari; avtomatik tarjima va nutqni matnga aylantirish; telefon kamerasida yuzni tanish va surat sifatini yaxshilash; navigatsiyada tirbandlikni bashorat qilish; bankda shubhali to'lovlarni aniqlash; tibbiyotda rentgen va boshqa tasvirlarni tahlil qilishda shifokorga yordam; ishlab chiqarishda nuqsonli mahsulotni kamera orqali ajratish; ta'limda shaxsiy mashq tavsiyalari va matn yozishda yordamchi.
+**Cheklovlar va xavflar:**
+- SI ishonchli ohangda, lekin **noto'g'ri** javob berishi mumkin — mavjud bo'lmagan fakt, sana yoki manbani «o'ylab topishi» **gallyutsinatsiya** deyiladi;
+- o'qitish ma'lumotlaridagi xato va bir tomonlama qarashlar natijaga o'tadi — bu **tarafkashlik** deyiladi;
+- maxfiylik: chatbotga kiritilgan shaxsiy ma'lumot, parol yoki ish sirlari xizmat serverlarida saqlanishi mumkin;
+- **deepfake** — haqiqiy odamning yuzi yoki ovozi bilan soxta video va audio; firibgarlik va tuhmat uchun ishlatilishi mumkin;
+- akademik halollik: SI yozgan matnni o'zinikidek topshirish — ko'chirmachilik;
+- mualliflik huquqi va SI yaratgan kontentdan tijoratda foydalanish masalalari hali ko'p mamlakatlarda to'liq hal qilinmagan.
+**Mas'uliyatli foydalanish qoidalari:** SI ni fikrlash o'rniga emas, yordamchi sifatida ishlating; muhim faktlarni kamida ikki ishonchli manbadan tekshiring; shaxsiy va maxfiy ma'lumotlarni kiritmang; SI dan foydalanganingizni o'qituvchi yoki ish beruvchiga ochiq ayting; boshqalarning yuzi va ovozidan ularning roziligisiz foydalanmang.
+
+## 2. Boyitilgan reallik
+**Boyitilgan reallik** (AR — augmented reality) — real dunyo tasviri ustiga kompyuterda yaratilgan obyektlar, matn va belgilarni real vaqtda qo'shib ko'rsatish texnologiyasi. Foydalanuvchi atrofni ko'rishda davom etadi, lekin uning ustida qo'shimcha raqamli ma'lumotni ham ko'radi. **Virtual reallik** (VR) esa foydalanuvchini to'liq sun'iy muhitga olib kiradi va real dunyoni to'sadi (10-darsda batafsil). Ikkalasini birlashtirib, virtual obyektlar real buyumlar bilan o'zaro ta'sirlashadigan **aralash reallik** (MR) ham bor.
+AR ni ko'rish uchun kamerali smartfon yoki planshet, AR ko'zoynaklar yoki shlemlar, avtomobillarda esa old oynaga ma'lumot chiqaruvchi displeylar ishlatiladi. AR ikki xil bo'ladi: **markerli** — kamera maxsus rasm yoki QR-kodni tanib, uning ustida obyekt ko'rsatadi (masalan, darslikdagi rasm ustida aylanadigan 3D yurak modeli); **markersiz** — qurilma sensorlari va SI yordamida pol, devor va stolni o'zi aniqlab, obyektni joylashtiradi.
+Qo'llanishi: mebel yoki maishiy texnikani sotib olishdan oldin xonada ko'rish; kamera orqali yozuvlarni bir zumda tarjima qilish; o'lchov ilovalari (masofa va maydonni o'lchash); navigatsiyada ko'cha tasviri ustida yo'nalish strelkalari; ta'mirlash va servisda uskuna ustida ko'rsatmalar (qaysi boltni qachon burash kerak); tibbiyotda o'qitish va operatsiyani rejalash; ta'limda jonlantirilgan modellar; o'yinlar va reklama. Sanoatda AR ko'zoynak kiygan usta qo'llari bo'sh holda ishlaydi: ko'z oldida chizma, keyingi qadam yoki uzoqdagi tajribali mutaxassisning ko'rsatmasi paydo bo'ladi. AR ilovalarini yaratish uchun maxsus dasturiy platformalar mavjud. AR ning cheklovlari: qurilma quvvati va batareya sarfi, yorug'lik va harakatga sezgirlik, yo'lda ekranga qarab yurish xavfi, kamera orqali atrofdagilar maxfiyligi.
+
+## 3. Biometrik axborot va identifikatsiya
+**Biometrika** — insonni uning noyob jismoniy yoki xulq-atvor belgilariga ko'ra aniqlash. **Jismoniy belgilar:** barmoq izi, yuz tuzilishi, ko'z qorachig'i (iris) naqshi, kaft venalari, DNK. **Xulq-atvor belgilari:** ovoz, imzo, klaviaturada yozish uslubi, yurish.
+Biometrik tizim ikki bosqichda ishlaydi. **Ro'yxatga olish**da skaner belgini o'qiydi va undan raqamli **shablon** (belgining matematik tavsifi) yaratib saqlaydi — ko'pchilik tizimlarda rasmning o'zi emas, faqat shablon saqlanadi. **Tekshirishda** yangi o'qilgan belgi shablon bilan solishtiriladi: **verifikatsiya** (1:1) «bu odam o'zi aytgan shaxsmi?» degan savolga javob beradi (telefonni barmoq izi bilan ochish), **identifikatsiya** (1:N) esa «bu odam bazadagi kim?» degan savolga javob izlaydi (chegara nazorati, qidiruv).
+Qo'llanishi: smartfon va noutbukni qulfdan chiqarish, bank ilovalari va to'lovlarni tasdiqlash, biometrik pasport va ID-kartalar, aeroport va chegara nazorati, korxona va ta'lim muassasalarida kirish hamda davomat tizimlari.
+jadval: Biometrik usullarni taqqoslash
+| Usul | Afzalligi | Kamchiligi yoki xavfi |
+| Barmoq izi | Arzon, tez, telefonlarda keng tarqalgan | Ho'l, kir yoki shikastlangan barmoqda xato beradi |
+| Yuz | Kontaktsiz, qulay | Yorug'lik, ko'zoynak, yosh o'zgarishiga sezgir; kuzatuvda maxfiylik xavfi |
+| Ko'z qorachig'i (iris) | Juda aniq | Maxsus qimmat skaner kerak |
+| Ovoz | Telefon orqali masofadan ishlaydi | Shamollash va shovqinda xato; soxta (SI yaratgan) ovoz xavfi |
+**Afzalliklar:** biometrikani unutib yoki yo'qotib bo'lmaydi, uni boshqaga berish qiyin, tekshirish tez. **Xavflar:** parolni almashtirish mumkin, barmoq izi yoki yuzni esa yo'q — biometrik ma'lumot sizib chiqsa, uni «yangilab» bo'lmaydi; tizim ba'zan begonani qabul qilishi yoki egasini rad etishi mumkin; ommaviy kuzatuvda shaxs erkinligi va maxfiylik masalasi. Shuning uchun biometrik ma'lumotlar shaxsga doir ma'lumot sifatida qonun bilan himoyalanadi, ularni yig'ish uchun asos va rozilik kerak, saqlashda esa shifrlanadi. Muhim tizimlarda biometrika parol yoki SMS-kod bilan birga — **ko'p omilli autentifikatsiya** sifatida ishlatiladi.
+
+## 4. Bulutli texnologiyalar
+**Bulutli hisoblash** — kompyuter resurslarini (serverlar, xotira, dasturlar, ma'lumotlar bazalari) o'z kompyuteringizga o'rnatish o'rniga, internet orqali provayderning ma'lumot markazlaridan ijaraga olish va kerak bo'lganda foydalanish. Foydalanuvchi uchun «bulut» ko'rinmaydi: fayl telefonda tahrirlansa, u avtomatik serverga saqlanadi va kompyuterda ham shu zahoti ochiladi.
+jadval: Bulutli xizmat modellari
+| Model | Nima beriladi | Kim uchun | Misollar |
+| SaaS (dastur xizmat sifatida) | Tayyor dastur brauzer yoki ilova orqali | Oddiy foydalanuvchi, tashkilot | Onlayn pochta, bulutli ofis dasturlari, videokonferensiya, onlayn buxgalteriya |
+| PaaS (platforma xizmat sifatida) | Dastur yaratish va joylash uchun tayyor muhit | Dasturchilar | Veb-ilova hostingi, bulutli ma'lumotlar bazasi xizmati |
+| IaaS (infratuzilma xizmat sifatida) | Virtual serverlar, disk, tarmoq | Tizim administratorlari, kompaniyalar | Virtual server ijarasi, bulutli disk hajmi |
+Joylashtirish turlari: **ommaviy bulut** — resurslar ko'plab mijozlar o'rtasida taqsimlanadi, arzon va qulay; **xususiy bulut** — bitta tashkilot uchun, xavfsizlik nazorati yuqori, lekin qimmat; **gibrid bulut** — maxfiy ma'lumotlar xususiy, qolganlari ommaviy bulutda.
+**Afzalliklar:** istalgan joy va qurilmadan kirish; bir hujjat ustida bir vaqtda birgalikda ishlash; server sotib olmasdan, faqat foydalanilgan resurs uchun to'lash; ehtiyoj ortganda tez kengaytirish; avtomatik yangilanish va zaxira nusxa. **Kamchiliklar va xavflar:** internet bo'lmasa ishlash qiyinlashadi; ma'lumot boshqa tashkilot serverida saqlanadi — maxfiylik va qonunchilik talablarini (masalan, shaxsga doir ma'lumotlar qayerda saqlanishi) hisobga olish kerak; provayder xizmati to'xtasa yoki narxini oshirsa, unga bog'liqlik muammo bo'ladi; akkaunt buzilsa, barcha fayllar xavf ostida qoladi.
+Kichik biznes ham bulutli xizmatlardan keng foydalanadi: kafe va oshxonalarda kassa dasturi savdo ma'lumotlarini bulutga yuboradi va egasi hisobotni telefonda ko'radi; avtoservis mijozlar, buyurtmalar va ehtiyot qismlar hisobini onlayn tizimda yuritadi; tikuv ustaxonasi buyurtmalarni bulutli jadvalda kuzatadi, mijozlarga tayyor mahsulot rasmlarini havola orqali yuboradi. Bunda server sotib olish, uni sozlash va himoyalash bilan provayder shug'ullanadi.
+**Xavfsiz foydalanish:** kuchli parol va ikki bosqichli autentifikatsiya; fayllarga kirish huquqini aniq berish («faqat ko'rish», «izoh», «tahrirlash»; havola orqali hammaga ochiq qilib qo'ymaslik); muhim fayllarning qo'shimcha nusxasini boshqa joyda saqlash; begona kompyuterda ishlagandan keyin akkauntdan chiqish.
+Xulosa: sun'iy intellekt misollardan o'rganib, tanish, tarjima va matn yaratish kabi vazifalarni bajaradi, lekin xato qilishi mumkin va tekshiruv talab qiladi; boyitilgan reallik real dunyo ustiga raqamli ma'lumot qo'shadi; biometrika insonni noyob belgilari bo'yicha aniqlaydi va maxsus himoyani talab qiladi; bulutli texnologiyalar resurslarni internet orqali xizmat sifatida taqdim etadi.
+
+keys: SI yozgan referat
+vaziyat: O'quvchi «Elektr xavfsizligi» mavzusidagi referatni SI chatbotiga yozdirib, o'zgartirmasdan topshirdi. O'qituvchi matnda mavjud bo'lmagan standart raqami, noto'g'ri kuchlanish qiymati va topib bo'lmaydigan ikkita kitob nomini aniqladi. Bundan tashqari, o'quvchi chatbotga sinfdoshlarining ism-familiyasi va telefon raqamlarini «ro'yxatni chiroyli qilish» uchun kiritgan.
+ksavol: Bu vaziyatda qanday xatolarga yo'l qo'yilgan?
+ksavol: Noto'g'ri raqam va mavjud bo'lmagan kitoblar paydo bo'lishining sababi nima?
+ksavol: SI dan bu topshiriqda qanday to'g'ri foydalanish mumkin edi?
+kjavob: Xatolar: SI matni tekshirilmasdan va o'zinikidek topshirilgan (akademik halollik buzilgan); faktlar va manbalar tekshirilmagan; boshqalarning shaxsiy ma'lumotlari ruxsatsiz begona xizmatga kiritilgan. Sabab — SI gallyutsinatsiyasi: model ishonarli ko'rinadigan, lekin haqiqatda yo'q ma'lumotni yaratishi mumkin. To'g'ri yo'l: SI dan reja tuzish, tushunarsiz atamani izohlash yoki matnni tahrirlashda yordam olish; har bir faktni darslik, standart va rasmiy manbalar bilan tekshirish; matnni o'zi yozish va manbalarni haqiqiy ro'yxatda ko'rsatish; SI dan foydalanganini ochiq aytish; shaxsiy ma'lumotlarni kiritmaslik.
+savol: Mashinali o'qitish an'anaviy dasturlashdan nimasi bilan farq qiladi?
+savol: SI gallyutsinatsiyasi va tarafkashligi nima? Misol keltiring.
+savol: Boyitilgan reallik virtual reallikdan qanday farq qiladi?
+savol: Verifikatsiya va identifikatsiyaning farqi nimada?
+savol: Nima uchun biometrik ma'lumotlar sizib chiqishi paroldan xavfliroq?
+savol: SaaS, PaaS va IaaS modellariga bittadan misol keltiring.
+amaliy: SI vositalari va bulutli xizmatlardan mas'uliyatli foydalanish
+amaqsad: SI chatbotidan kasbiy savol bo'yicha yordam olib, javobni manbalar bilan tekshirish; AR ilovasini sinab ko'rish; bulutli hujjat yaratib, kirish huquqlarini sozlash va birgalikda tahrirlash.
+ajihoz: Kompyuter yoki smartfon; internet; SI chatboti (ochiq versiya); kamera orqali tarjima yoki o'lchov qiladigan AR ilovasi; bulutli hujjat xizmati (o'quv akkaunti)
+qadam: SI chatbotiga mutaxassisligingiz bo'yicha aniq so'rov yozing (kim uchun, qanday hajmda, qanday ko'rinishda), masalan: «Oshxona yangi xodimi uchun pichoq bilan xavfsiz ishlashning 7 qoidasini oddiy tilda yoz».
+qadam: Javobdagi kamida 3 ta faktni darslik yoki ishonchli saytlar bilan tekshiring; har birini «to'g'ri», «noto'g'ri», «tekshirib bo'lmadi» deb belgilang va manbasini yozing.
+qadam: So'rovni aniqlashtirib (auditoriya, uslub, cheklovlar qo'shib) qayta yuboring va ikki javobni solishtiring.
+qadam: AR ilovasi bilan kamera orqali chet tilidagi yozuvni tarjima qiling yoki stol uzunligini o'lchang; natijani haqiqiy o'lchov bilan solishtiring.
+qadam: Bulutli xizmatda «SI va AR tajribasi» hujjatini yarating, tekshiruv jadvalini va xulosangizni kiriting.
+qadam: Hujjatni sherigingiz bilan «izoh qoldirish» huquqi bilan, o'qituvchi bilan «tahrirlash» huquqi bilan ulashing; sherigingiz izohiga javob yozing va versiyalar tarixini ko'ring.
+qadam: SI va bulutli xizmatdan foydalanishda qaysi ma'lumotlarni kiritmaslik kerakligi haqida 3 ta qoida yozing.
+anatija: Tekshiruv jadvali bilan bulutli hujjat, ikki so'rov va javoblarni solishtirish, AR tajribasi natijasi, to'g'ri sozlangan kirish huquqlari va xavfsizlik qoidalari.
+baho5: So'rov aniq tuzilgan, faktlar ishonchli manbalar bilan tekshirilib xatolar aniqlangan, AR tajribasi tahlil qilingan, kirish huquqlari talabga mos, xavfsizlik qoidalari to'g'ri.
+masala: Bulutli diskning bepul hajmi 15 GB. Telefoningizda o'rtacha 4 MB lik 2500 ta rasm va o'rtacha 150 MB lik 30 ta video bor. Ularning hammasi bepul hajmga sig'adimi?
+yechim: Rasmlar: 2500 · 4 = 10 000 MB ≈ 9,8 GB; videolar: 30 · 150 = 4500 MB ≈ 4,4 GB; jami ≈ 14,2 GB — sig'adi, lekin deyarli to'liq band bo'ladi (hisob 1 GB = 1024 MB bo'yicha).
+masala: Biometrik tizim 1000 ta urinishdan 20 tasida egasini noto'g'ri rad etdi, 1 tasida esa begonani qabul qildi. Xato rad etish va xato qabul qilish foizlarini toping. Qaysi xato xavfliroq?
+yechim: Xato rad etish: 20 : 1000 · 100 % = 2 %; xato qabul qilish: 1 : 1000 · 100 % = 0,1 %. Xavfsizlik uchun xato qabul qilish xavfliroq (begona kirib oladi), xato rad etish esa noqulaylik tug'diradi.
+test: Dasturga qoidalar emas, ko'plab misollar berib, qonuniyatni o'zi topishga o'rgatish nima deyiladi? | Mashinali o'qitish | Ekspert tizim | Arxivlash | Kodlash
+test: SI ning mavjud bo'lmagan faktni ishonarli tarzda «o'ylab topishi» qanday ataladi? | Gallyutsinatsiya | Tarafkashlik | Shifrlash | Verifikatsiya
+test: Kamera tasviri ustiga raqamli obyektlarni qo'shib ko'rsatuvchi texnologiya? | Boyitilgan reallik (AR) | Virtual reallik (VR) | 3D bosib chiqarish | Videokonferensiya
+test: Telefonni barmoq izi bilan ochish qaysi turdagi tekshiruv? | Verifikatsiya (1:1) | Identifikatsiya (1:N) | Shifrlash | Arxivlash
+test: Brauzer orqali ishlatiladigan tayyor onlayn ofis dasturi qaysi bulutli modelga kiradi? | SaaS | IaaS | PaaS | Xususiy server
+uyga: Sun'iy intellektda ishlash: SI tarjimonidan foydalanib, kasbingizga oid 5 ta atamani ingliz tiliga tarjima qiling va lug'at bilan tekshiring. Telefoningizdagi biometrik va bulutli sozlamalarni ko'rib chiqing: ikki bosqichli autentifikatsiya yoqilganmi, qaysi ilovalar rasmlaringizni bulutga yuklaydi — xulosani yozing (shaxsiy ma'lumotlarsiz).
+gloss: Sun'iy intellekt | Inson aqlini talab qiladigan vazifalarni (tanish, tarjima, bashorat, matn yaratish) bajaradigan kompyuter tizimlari.
+gloss: Mashinali o'qitish | Kompyuter dasturi ko'plab misollar asosida qonuniyatni o'zi o'rganadigan SI usuli.
+gloss: Gallyutsinatsiya (SI) | SI ning mavjud bo'lmagan yoki noto'g'ri ma'lumotni ishonarli shaklda yaratishi.
+gloss: Boyitilgan reallik (AR) | Real dunyo tasviri ustiga raqamli obyekt va ma'lumotlarni real vaqtda qo'shish texnologiyasi.
+gloss: Biometrika | Insonni barmoq izi, yuz, iris, ovoz kabi noyob belgilariga ko'ra aniqlash.
+gloss: Verifikatsiya (biometrik) | Shaxs o'zi da'vo qilgan inson ekanini bitta shablon bilan solishtirib tekshirish (1:1).
+gloss: Bulutli hisoblash | Server, xotira va dasturlardan internet orqali, provayder ma'lumot markazlarida xizmat sifatida foydalanish.

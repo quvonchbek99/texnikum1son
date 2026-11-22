@@ -1,0 +1,81 @@
+nomi: Taqiladigan hisoblash qurilmalari
+modul: 4-modul
+ac: 4.9 Taqiladigan qurilmalar turlari, datchiklari va ma'lumot oqimini tushuntiradi, ular to'plagan ma'lumotlarni elektron jadvalda tahlil qiladi, qurilmalarni tavsiflari bo'yicha taqqoslaydi va maxfiylik sozlamalarini baholaydi.
+maqsad: O'quvchilarda aqlli soat, faollik bilaguzugi, aqlli ko'zoynak va boshqa taqiladigan qurilmalarning ishlash tamoyili, datchiklari, afzallik va cheklovlarini tushunish, ular yig'gan ma'lumotlarni tahlil qilish hamda shaxsiy ma'lumotlarni himoya qilish ko'nikmasini shakllantirish.
+natija: taqiladigan qurilmalar turlari va ularning vazifalarini aytadi;
+natija: akselerometr, giroskop, optik puls datchigi va GPS kabi datchiklar nimani o'lchashini tushuntiradi;
+natija: qurilma ma'lumotlarini elektron jadvalda funksiyalar, shartli formatlash va diagramma yordamida tahlil qiladi;
+natija: qurilmalarni tavsiflar bo'yicha taqqoslaydi va maxfiylik xavflarini baholaydi.
+reja: Taqiladigan qurilmalar va ularning datchiklari
+reja: Ma'lumot oqimi, aniqlik va maxfiylik
+reja: Qurilmani tanlash va ma'lumotlarni tahlil qilish
+tayanch: taqiladigan qurilma; aqlli soat; faollik bilaguzugi; aqlli ko'zoynak; akselerometr; giroskop; optik puls datchigi; GPS; Bluetooth; sinxronlash; sog'liq ma'lumotlari; batareya sig'imi (mA·soat)
+metod: Muammoli savol | «Aqlli soat siz necha qadam yurganingizni qanday biladi va u qanchalik aniq?» savoli bilan datchiklar ishlashi muhokama qilinadi.
+metod: Ma'lumotlar tahlili | O'quvchilar ikki haftalik shartli faollik ma'lumotlarini elektron jadvalda tahlil qilib, xulosa yozadi.
+ajihoz: Kompyuter; elektron jadval dasturi (MS Excel yoki LibreOffice Calc); namunaviy faollik ma'lumotlari (darsdagi jadval yoki CSV fayl); 3 ta qurilmaning texnik tavsiflari (tarqatma yoki sayt); proyektor
+
+## Taqiladigan qurilmalar va ularning datchiklari
+**Taqiladigan hisoblash qurilmalari** — kiyim, bilak, bosh yoki tanaga taqiladigan, datchiklar va kichik protsessorga ega, odatda telefon bilan simsiz bog'lanadigan qurilmalar. Asosiy turlari: **aqlli soat** (bildirishnomalar, qo'ng'iroq, to'lov, navigatsiya, faollik), **faollik bilaguzugi** (qadam, puls, uyqu), **aqlli ko'zoynak** (ko'z oldida ma'lumot, kamera, AR), **simsiz quloqchinlar** (shovqinni so'ndirish, tarjima), **aqlli kiyim va poyabzal**, ishchilar uchun **xavfsizlik qurilmalari** (yiqilish yoki zararli gaz haqida ogohlantirish), **tibbiy qurilmalar** (shifokor tavsiyasi bilan ishlatiladigan monitorlar).
+jadval: Taqiladigan qurilmalar datchiklari
+| Datchik | Nimani o'lchaydi | Qayerda ishlatiladi |
+| Akselerometr | Harakat tezlanishi | Qadamlarni sanash, yiqilishni aniqlash |
+| Giroskop | Aylanish va burilish | Harakat turini aniqlash (suzish, velosiped) |
+| Optik puls datchigi | Teri ostidagi qon oqimi o'zgarishi (yashil yorug'lik) | Yurak urish chastotasi |
+| GPS | Joylashuv va tezlik | Yugurish marshruti, masofa |
+| Barometr | Havo bosimi | Zinadan ko'tarilish, balandlik |
+| Harorat datchigi | Teri yoki muhit harorati | Uyqu va faollik tahlili |
+
+## Ma'lumot oqimi, aniqlik va maxfiylik
+Qurilma ma'lumotni yig'adi, Bluetooth orqali telefon ilovasiga **sinxronlaydi**, ilova esa ko'pincha uni bulutli serverga yuboradi va grafiklar ko'rinishida ko'rsatadi. Bu ma'lumotlar orasida joylashuv, kundalik tartib va sog'liq ko'rsatkichlari bor — ular shaxsga doir, ayrimlari esa alohida himoyalanadigan ma'lumotlar hisoblanadi. Shuning uchun ilova ruxsatlari, ma'lumotlarni kim bilan ulashish va akkaunt xavfsizligi tekshiriladi.
+Taqiladigan qurilmalar ko'rsatkichlari taxminiy: qadam soni qo'l harakatiga, puls esa qurilma bilakka qanchalik zich turganiga bog'liq. Ular tibbiy asbob o'rnini bosmaydi — sog'liq haqida qaror faqat shifokor bilan qabul qilinadi. Batareya ishlash vaqti ekran, GPS va doimiy o'lchovlarga bog'liq: batareya sig'imi (mA·soat) o'rtacha tok sarfiga bo'linsa, ishlash vaqti (soat) chiqadi.
+
+## Qurilmani tanlash va ma'lumotlarni tahlil qilish
+Qurilma tanlashda vazifa (sport, ish xavfsizligi, bildirishnomalar), telefon bilan mosligi, batareya, suvdan himoya darajasi, datchiklar tarkibi, narx va ilovaning maxfiylik siyosati solishtiriladi. Qurilma yig'gan ma'lumotlarni eksport qilib, elektron jadvalda tahlil qilish mumkin: o'rtacha qiymatlar, maqsadga erishilgan kunlar soni, haftalik o'zgarish grafigi.
+jadval: Amaliy ish uchun namunaviy ma'lumotlar (shartli, qadam uzunligi 0,7 m)
+| Kun | Qadamlar | Masofa (km) | O'rtacha puls | Uyqu (soat) | Faol daqiqalar |
+| 1 | 6540 | 4,6 | 74 | 7,5 | 28 |
+| 2 | 8210 | 5,7 | 76 | 7,0 | 41 |
+| 3 | 9870 | 6,9 | 78 | 6,5 | 55 |
+| 4 | 5320 | 3,7 | 72 | 8,0 | 19 |
+| 5 | 7450 | 5,2 | 75 | 7,0 | 33 |
+| 6 | 11200 | 7,8 | 80 | 6,0 | 72 |
+| 7 | 4100 | 2,9 | 70 | 9,0 | 12 |
+| 8 | 8640 | 6,0 | 76 | 7,5 | 44 |
+| 9 | 9120 | 6,4 | 77 | 7,0 | 50 |
+| 10 | 7980 | 5,6 | 75 | 7,5 | 38 |
+| 11 | 10350 | 7,2 | 79 | 6,5 | 63 |
+| 12 | 8800 | 6,2 | 76 | 7,0 | 47 |
+| 13 | 12050 | 8,4 | 81 | 6,5 | 80 |
+| 14 | 6900 | 4,8 | 73 | 8,5 | 30 |
+
+amaliy: Faollik ma'lumotlarini tahlil qilish va qurilmalarni taqqoslash
+amaqsad: Faollik bilaguzugining ikki haftalik shartli ma'lumotlarini elektron jadvalda funksiyalar, shartli formatlash va diagramma yordamida tahlil qilish; uch xil taqiladigan qurilmani tavsiflari bo'yicha taqqoslab, tanlovni asoslash.
+qadam: Nazariy qismdagi namunaviy jadvalni (14 kun) elektron jadvalga kiriting yoki o'qituvchi bergan CSV faylni import qiling; ustun turlarini tekshiring.
+qadam: Har bir ustun uchun o'rtacha, eng katta va eng kichik qiymatlarni AVERAGE, MAX, MIN bilan hisoblang.
+qadam: Kunlik maqsad 8000 qadam deb, maqsadga erishilgan kunlar sonini `=COUNTIF(B2:B15;">=8000")` formulasi bilan toping; IF yordamida har bir kunga «Bajarildi» yoki «Bajarilmadi» belgisini qo'ying.
+qadam: Qadamlar ustuniga shartli formatlash qo'llang (8000 dan kam kunlar qalin shrift yoki chegara bilan ajralsin — oq-qora chop etishda ham ko'rinsin).
+qadam: Qadamlar va uyqu soati bo'yicha sanalar o'qi bilan chiziqli diagramma tuzing; 1-hafta va 2-hafta o'rtacha qiymatlarini solishtiring.
+qadam: Uch xil qurilma (faollik bilaguzugi, aqlli soat, ishchi xavfsizlik qurilmasi) uchun taqqoslash jadvalini tuzing: datchiklar, batareya, suvdan himoya, narx, maxfiylik sozlamalari.
+qadam: Tahlil asosida 5–6 gaplik xulosa yozing: faollik qanday o'zgargan, qaysi qurilma qaysi vazifa uchun mos va ma'lumotlarni himoya qilish uchun nima qilish kerak.
+anatija: Tahlil qilingan jadval (formulalar, shartli formatlash), chiziqli diagramma, qurilmalarni taqqoslash jadvali va asoslangan xulosa.
+baho5: Formulalar to'g'ri, shartli formatlash va diagramma talabga mos, qurilmalar taqqoslash mezonlari to'liq, xulosa ma'lumotlarga asoslangan va maxfiylik masalasi hisobga olingan.
+masala: Qadam uzunligi 0,7 m bo'lgan o'quvchi kuniga 9500 qadam yuradi. U kuniga necha kilometr va haftasiga necha kilometr yuradi?
+yechim: 9500 · 0,7 = 6650 m = 6,65 km kuniga; 6,65 · 7 = 46,55 km haftasiga.
+masala: Aqlli soat batareyasi 300 mA·soat. Oddiy rejimda o'rtacha 12 mA, GPS yoqilganda 40 mA tok sarflaydi. Har bir rejimda soat necha soat ishlaydi?
+yechim: Oddiy rejim: 300 : 12 = 25 soat; GPS bilan: 300 : 40 = 7,5 soat.
+savol: Taqiladigan qurilmalarning qanday turlarini bilasiz? Har biriga misol keltiring.
+savol: Akselerometr va optik puls datchigi qanday ishlaydi?
+savol: Nima uchun taqiladigan qurilma ko'rsatkichlari tibbiy asbob o'rnini bosmaydi?
+savol: Taqiladigan qurilma ma'lumotlarini himoya qilish uchun qanday choralar ko'riladi?
+test: Qadamlarni sanash uchun asosan qaysi datchik ishlatiladi? | Akselerometr | Barometr | Mikrofon | Yorug'lik datchigi
+test: Taqiladigan qurilma telefon bilan odatda qanday bog'lanadi? | Bluetooth orqali | Faqat kabel orqali | Infraqizil port orqali | Faqat Wi-Fi Direct orqali
+test: 300 mA·soat batareya 15 mA tok sarflasa, necha soat ishlaydi? | 20 soat | 15 soat | 45 soat | 4500 soat
+test: Ish xavfsizligi uchun mo'ljallangan taqiladigan qurilma nimani aniqlashi mumkin? | Xodim yiqilganini | Internet tezligini | Printer holatini | Parol mustahkamligini
+test: Taqiladigan qurilma ilovasida birinchi navbatda nimani tekshirish kerak? | Ruxsatlar va ma'lumotlarni ulashish sozlamalarini | Ekran rangini | Qo'ng'iroq ohangini | Shrift o'lchamini
+uyga: Fotosuratni tahrirlash: taqiladigan qurilma yoki uning ilovasi ekranining rasmini (yoki internetdagi litsenziyasi ruxsat beradigan rasmni) kesib, yorqinligini sozlang va unga 3 ta izoh-belgi qo'shib, «Qurilma nimani o'lchaydi?» degan kichik infografika tayyorlang.
+gloss: Taqiladigan qurilma | Tanaga yoki kiyimga taqiladigan, datchik va protsessorli, odatda telefon bilan bog'lanadigan qurilma.
+gloss: Akselerometr | Harakat tezlanishini o'lchaydigan datchik; qadam va yiqilishni aniqlashda ishlatiladi.
+gloss: Giroskop | Qurilmaning aylanishi va burilishini o'lchaydigan datchik.
+gloss: Optik puls datchigi | Teri ostidagi qon oqimi o'zgarishini yorug'lik yordamida o'lchab, yurak urishini hisoblaydigan datchik.
+gloss: Sinxronlash | Qurilma va ilova (yoki bulut) o'rtasida ma'lumotlarni bir xil holatga keltirish.
+gloss: Batareya sig'imi | Batareya saqlaydigan zaryad miqdori, mA·soat bilan o'lchanadi.

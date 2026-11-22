@@ -1,0 +1,103 @@
+nomi: Kanallar va paketlar kommutatsiyasi. Xabarlar kommutatsiyasi. Optik usulda ma'lumot almashish. Simsiz uzatish usullari
+modul: 4-modul
+ac: 4.15 Kanallar, xabarlar va paketlar kommutatsiyasini taqqoslaydi, internetda paketli uzatish qanday ishlashini tushuntiradi, optik tolali va simsiz aloqa usullarining tamoyili, afzallik va cheklovlarini farqlaydi, uzatish ko'rsatkichlarini hisoblaydi.
+maqsad: O'quvchilarda ma'lumotni tarmoq orqali uzatish usullari — kanallar, xabarlar va paketlar kommutatsiyasi, optik tolali aloqa va simsiz uzatish texnologiyalari haqida bilim hosil qilish, ularni tezlik, masofa, ishonchlilik va narx bo'yicha taqqoslab, vazifaga mos aloqa usulini tanlash ko'nikmasini shakllantirish.
+natija: kommutatsiya tushunchasini va uning uch turini tushuntiradi;
+natija: paket tarkibi (sarlavha, ma'lumot, nazorat yig'indisi) va paketlar manzilda qanday yig'ilishini tushuntiradi;
+natija: kanallar, xabarlar va paketlar kommutatsiyasining afzallik va kamchiliklarini taqqoslaydi;
+natija: optik tolada ma'lumot uzatish tamoyilini va uning mis kabelga nisbatan afzalliklarini tushuntiradi;
+natija: Wi-Fi, Bluetooth, NFC, uyali, radiorele va infraqizil aloqani masofa, tezlik va qo'llanish bo'yicha taqqoslaydi.
+reja: Kommutatsiya. Kanallar kommutatsiyasi
+reja: Xabarlar va paketlar kommutatsiyasi
+reja: Optik usulda ma'lumot almashish
+reja: Simsiz uzatish usullari
+tayanch: kommutatsiya; kanallar kommutatsiyasi; xabarlar kommutatsiyasi; saqlab-uzatish; paketlar kommutatsiyasi; paket; sarlavha; nazorat yig'indisi; marshrutlash; optik tola; to'liq ichki qaytish; bir modali va ko'p modali tola; radioto'lqin; Wi-Fi; Bluetooth; NFC; radiorele aloqa; infraqizil aloqa; Li-Fi
+metod: O'xshatish | Kanallar kommutatsiyasi — butun yo'l faqat siz uchun yopib qo'yilgan maxsus kortej; paketlar kommutatsiyasi — yukni ko'p kichik qutilarga bo'lib, har birini turli taksi bilan yuborish; xabarlar kommutatsiyasi — yukni oraliq omborlarda to'xtatib, navbat bilan yuborish.
+metod: Simulyatsiya o'yini | O'quvchilar qisqa xabarni raqamlangan «paket» kartochkalarga bo'lib, «marshrutizator» o'quvchilar orqali turli yo'llar bilan yuboradi; manzilda paketlar tartibga solinadi, yo'qolganlari qayta so'raladi.
+metod: Taqqoslash jadvali | Juftliklar simsiz aloqa usullarini masofa, tezlik, quvvat sarfi va qo'llanish bo'yicha jadvalda taqqoslaydi.
+jihoz: Kompyuter va proyektor; raqamlangan «paket» kartochkalari; optik kabel namunasi yoki rasmlari; Wi-Fi va Bluetooth'li qurilmalar; tezlik o'lchash ilovasi; taqdimot
+
+## 1. Kommutatsiya. Kanallar kommutatsiyasi
+Tarmoqda ikki qurilma odatda to'g'ridan-to'g'ri sim bilan ulanmagan: ular orasida ko'plab oraliq tugunlar — kommutatorlar va marshrutizatorlar turadi. Ma'lumotni manbadan manzilgacha shu tugunlar orqali o'tkazish usuli **kommutatsiya** deyiladi. Uchta asosiy usul bor: kanallar, xabarlar va paketlar kommutatsiyasi.
+**Kanallar kommutatsiyasi**da ma'lumot uzatishdan oldin manba va manzil o'rtasida butun yo'l bo'ylab alohida **kanal** o'rnatiladi va aloqa tugaguncha faqat shu ikki abonentga ajratiladi. Jarayon uch bosqichdan iborat: **ulanish o'rnatish** (raqam terilganda stansiyalar bo'sh liniyalarni bog'laydi), **ma'lumot uzatish** (suhbat), **ulanishni uzish** (go'shak qo'yilganda kanal bo'shaydi). An'anaviy shahar telefon tarmog'i shunday ishlagan.
+Afzalliklari: ulanish o'rnatilgach, tezlik kafolatlangan va kechikish kichik hamda barqaror — ovozli suhbat va jonli translyatsiya uchun qulay; ma'lumot bir xil tartibda keladi. Kamchiliklari: ulanish o'rnatish vaqt oladi; suhbatdagi pauzalarda ham kanal band turadi va boshqalar foydalana olmaydi — resurs isrof bo'ladi; yo'ldagi bitta tugun ishdan chiqsa, aloqa uziladi va qaytadan ulanish kerak; barcha kanallar band bo'lsa, yangi abonent «band» signalini eshitadi.
+
+Bitta jismoniy liniya orqali bir vaqtda ko'plab suhbatlarni uzatish uchun **multipleksirlash** ishlatiladi: vaqt bo'yicha multipleksirlashda liniya juda qisqa vaqt bo'laklariga ajratilib, har bir suhbatga navbat bilan bo'lak beriladi; chastota bo'yicha multipleksirlashda har bir kanal o'z chastota diapazonida uzatiladi; optik tolalarda esa har xil to'lqin uzunligidagi (rangdagi) yorug'lik nurlari bitta tolada birga yuboriladi. Shu tufayli bitta kabel minglab abonentga xizmat qiladi.
+
+## 2. Xabarlar va paketlar kommutatsiyasi
+**Xabarlar kommutatsiyasi**da oldindan kanal o'rnatilmaydi. Butun xabar manzil ko'rsatilgan holda birinchi oraliq tugunga yuboriladi; tugun uni to'liq qabul qilib, xotirasida **saqlaydi**, keyingi tugunga yo'l bo'shaganda esa **uzatadi** — bu tamoyil **saqlab-uzatish** deyiladi. Telegraf tarmoqlari shunday ishlagan; elektron pochta ham shunga o'xshash: xat serverdan serverga to'liq holda o'tadi va qabul qiluvchi uni keyinroq o'qishi mumkin. Afzalliklari: kanal oldindan band qilinmaydi, qabul qiluvchi o'sha paytda tarmoqda bo'lishi shart emas, xabarlarga ustuvorlik berish mumkin. Kamchiliklari: har bir tugunda katta xotira kerak, katta xabarlar uzoq kechikadi — real vaqtdagi suhbat uchun yaroqsiz.
+**Paketlar kommutatsiyasi** — internetning asosi. Ma'lumot (fayl, rasm, xabar) kichik bo'laklarga — **paketlar**ga bo'linadi. Har bir paket uch qismdan iborat: **sarlavha** (yuboruvchi va qabul qiluvchi manzili, paketning tartib raqami, umumiy paketlar soni), **foydali ma'lumot** qismi va xatolarni aniqlash uchun **nazorat yig'indisi**. Paketlar bir-biridan mustaqil ravishda yuboriladi: har bir marshrutizator paket sarlavhasidagi manzilga qarab, o'sha paytdagi eng yaxshi yo'lni tanlaydi (**marshrutlash**). Shuning uchun bitta faylning paketlari turli yo'llar bilan borishi va manzilga boshqa tartibda kelishi mumkin. Qabul qiluvchi qurilma paketlarni tartib raqami bo'yicha yig'adi, nazorat yig'indisi bilan tekshiradi va yo'qolgan yoki buzilgan paketlarni qayta yuborishni so'raydi.
+Afzalliklari: kanal resurslari ko'plab foydalanuvchilar o'rtasida samarali taqsimlanadi — tarmoq faqat ma'lumot bor paytda band bo'ladi; biror tugun yoki liniya ishdan chiqsa, paketlar aylanma yo'l bilan ketadi — tarmoq buzilishga chidamli; buzilgan paket butun fayl emas, faqat o'zi qayta yuboriladi. Kamchiliklari: kechikish o'zgaruvchan (tarmoq yuklamasiga bog'liq), paketlar tartibini tiklash va sarlavhalar qo'shimcha hajm talab qiladi; tarmoq haddan tashqari yuklanganda paketlar yo'qolishi mumkin. Shunga qaramay, zamonaviy texnologiyalar ovozli qo'ng'iroq va videoni ham paketlar orqali yetarli sifatda uzatadi (IP-telefoniya, videokonferensiya). Bugungi telefon operatorlarining tarmoqlari ham ichkarida asosan paketli texnologiyaga o'tgan.
+Paketlarni uzatish qoidalarini **protokollar** belgilaydi. Internetda **IP** protokoli har bir paketga yuboruvchi va qabul qiluvchi manzilini yozadi va uni manzilga yo'naltiradi. **TCP** protokoli ishonchlilikni ta'minlaydi: qabul qiluvchi har bir olingan paket haqida tasdiq yuboradi, tasdiq kelmasa paket qayta jo'natiladi, paketlar esa to'g'ri tartibda yig'iladi — veb-sahifalar, elektron pochta va fayllar shu yo'l bilan uzatiladi. **UDP** protokoli tasdiq kutmasdan tezroq ishlaydi: videoqo'ng'iroq yoki onlayn o'yinda bitta yo'qolgan paketni qayta yuborishdan ko'ra, keyingisini o'z vaqtida yetkazish muhimroq.
+jadval: Kommutatsiya usullarini taqqoslash
+| Ko'rsatkich | Kanallar kommutatsiyasi | Xabarlar kommutatsiyasi | Paketlar kommutatsiyasi |
+| Oldindan ulanish | Kerak | Kerak emas | Kerak emas |
+| Ma'lumot birligi | Uzluksiz oqim | Butun xabar | Kichik paketlar |
+| Kechikish | Kichik va barqaror | Katta | Kichik, lekin o'zgaruvchan |
+| Resursdan foydalanish | Samarasiz (kanal band turadi) | O'rtacha | Samarali |
+| Nosozlikka chidamlilik | Past | O'rtacha | Yuqori (aylanma yo'llar) |
+| Misol | An'anaviy telefon tarmog'i | Telegraf, elektron pochta tamoyili | Internet, IP-telefoniya |
+
+## 3. Optik usulda ma'lumot almashish
+**Optik tolali aloqa**da ma'lumot elektr toki emas, yorug'lik impulslari ko'rinishida uzatiladi: lazer yoki svetodiod «1» va «0» larni yorug'lik chaqnashlari bilan kodlaydi, liniya oxiridagi fotoqabul qilgich ularni yana elektr signaliga aylantiradi. **Optik tola** inson sochidek ingichka shisha (ba'zan plastik) iplardan iborat: markazdagi **yadro** va uni o'rab turgan, sindirish ko'rsatkichi kichikroq **qobiq**. Yorug'lik yadro va qobiq chegarasidan qayta-qayta qaytib (**to'liq ichki qaytish** hodisasi), tola egilgan joylarda ham uning ichida harakatlanadi. Tolalar himoya qatlamlari bilan o'ralib, kabelga birlashtiriladi.
+Tolalar ikki xil bo'ladi: **bir modali** — yadrosi juda ingichka, yorug'lik deyarli to'g'ri chiziq bo'ylab tarqaladi, o'nlab va yuzlab kilometrga uzatish mumkin (shaharlar va davlatlar orasidagi magistral liniyalar, suv osti kabellari); **ko'p modali** — yadrosi kengroq, arzonroq, lekin masofa qisqa (bino ichidagi va ma'lumot markazlaridagi ulanishlar).
+**Afzalliklari:** juda yuqori o'tkazish qobiliyati (bitta tola bo'ylab sekundiga ko'plab gigabit va undan ortiq); signal kam so'nadi, shuning uchun uzoq masofaga kuchaytirgichsiz uzatiladi; elektromagnit xalaqitlar va chaqmoq ta'sir qilmaydi, yonidagi elektr kabellari halaqit bermaydi; kabelga ulanib, ma'lumotni yashirincha o'g'irlash qiyin; kabel yengil va ingichka, korroziyaga uchramaydi. **Kamchiliklari:** tolalarni ulash (payvandlash) va tekshirish uchun maxsus uskuna va malakali mutaxassis kerak; tola keskin bukilsa yoki ezilsa sinadi; qabul qiluvchi-uzatuvchi uskunalar qimmatroq.
+Xonadonga optik tola olib kelinganda, uydagi **optik terminal** (ONT) yorug'lik signalini oddiy tarmoq signaliga aylantiradi va unga marshrutizator ulanadi; bitta magistral tola esa passiv bo'luvchilar (splitterlar) yordamida o'nlab xonadonlar o'rtasida taqsimlanadi. Optik uskunalar bilan ishlaganda xavfsizlik qoidasi: tola uchiga yoki ulagichga hech qachon qaramaslik kerak — ko'rinmas lazer nurlari ko'zni shikastlashi mumkin. Bugun internet provayderlari ko'pincha tolani to'g'ridan-to'g'ri xonadongacha olib keladi; qit'alarni okean tubidagi optik kabellar bog'laydi va xalqaro internet trafigining asosiy qismi aynan ular orqali o'tadi. Optik aloqaning kabelsiz turi ham bor: binolar orasida lazer nuri bilan uzatish, **infraqizil** aloqa (televizor pulti) va yorug'lik chiroqlari orqali uzatiladigan **Li-Fi** texnologiyasi.
+
+## 4. Simsiz uzatish usullari
+Simsiz aloqada ma'lumot **radioto'lqinlar**, mikroto'lqinlar yoki infraqizil nurlar orqali uzatiladi. Umumiy qonuniyat: chastota qanchalik yuqori bo'lsa, shuncha ko'p ma'lumot uzatish mumkin, lekin to'lqinlar to'siqlardan yomonroq o'tadi va masofa qisqaradi.
+jadval: Simsiz uzatish usullarini taqqoslash
+| Usul | Masofa (taxminan) | Tezlik | Qo'llanishi |
+| NFC | Bir necha santimetr | Past | Kontaktsiz to'lov, kirish kartalari, qurilmalarni juftlash |
+| Bluetooth | 10 metr atrofida (ba'zan ko'proq) | Past–o'rta | Quloqchin, soat, klaviatura, fayl almashish |
+| Infraqizil | Bir necha metr, ko'rish chizig'ida | Past | Pultlar, ayrim datchiklar |
+| Wi-Fi | Bino ichida o'nlab metr | Yuqori | Uy, ofis va o'quv xonasi tarmoqlari |
+| Uyali aloqa (4G/5G) | Baza stansiyasidan kilometrlab | Yuqori | Mobil internet va qo'ng'iroqlar |
+| Radiorele (mikroto'lqinli) liniya | O'nlab kilometr, ko'rish chizig'ida | Yuqori | Baza stansiyalari va binolar orasidagi magistral ulanish |
+| Sun'iy yo'ldosh | Global qamrov | O'rta–yuqori | Chekka hududlar, dengiz, aviatsiya (17-dars) |
+Wi-Fi asosan ikki diapazonda ishlaydi: **2,4 GHz** — uzoqroqqa tarqaladi va devorlardan yaxshiroq o'tadi, lekin tezligi pastroq va mikroto'lqinli pech, Bluetooth kabi qurilmalar xalaqit beradi; **5 GHz** (va yangi qurilmalarda 6 GHz) — tezroq va xalaqit kam, lekin masofa qisqaroq. Zamonaviy marshrutizatorlar qurilmani avtomatik ravishda mos diapazonga ulaydi.
+**Simsiz aloqaning afzalliklari:** kabel yotqizish shart emas, foydalanuvchi harakatlanib ishlay oladi, yangi qurilma tez ulanadi, kabel tortib bo'lmaydigan joylarda (tog', daryo ortidagi qishloq) yagona yechim bo'ladi. **Kamchiliklari:** to'siqlar, masofa va boshqa qurilmalar xalaqiti tezlikni pasaytiradi; bir kanalda qurilmalar ko'payganda tezlik bo'linadi; signal havo orqali tarqalgani uchun uni tutib olish oson — shuning uchun shifrlash (WPA2/WPA3) va kuchli parol majburiy; radiochastotalardan foydalanish davlat tomonidan tartibga solinadi.
+Amalda simli va simsiz usullar birga ishlaydi: masalan, telefoningiz Wi-Fi orqali uydagi marshrutizatorga, marshrutizator optik tola orqali provayderga, provayder esa magistral optik kabellar va radiorele liniyalari orqali butun dunyo tarmog'iga ulanadi — va bu yo'lning hammasida ma'lumot paketlar ko'rinishida harakatlanadi.
+Xulosa: kanallar kommutatsiyasi kafolatlangan, lekin isrofgar kanal beradi; xabarlar kommutatsiyasi saqlab-uzatish tamoyilida ishlaydi; paketlar kommutatsiyasi esa ma'lumotni mustaqil paketlarga bo'lib, tarmoq resurslaridan samarali foydalanadi va internetning asosi hisoblanadi; optik tola juda katta tezlik va uzoq masofani ta'minlaydi, simsiz usullar esa harakatchanlik va qulaylik beradi, lekin xalaqit va xavfsizlik masalalarini hal qilishni talab qiladi.
+
+keys: Qishloq maktabini internetga ulash
+vaziyat: Tumandan 18 km uzoqlikdagi qishloqdagi maktab va qishloq vrachlik punktini internetga ulash kerak. Uchta taklif bor: (1) tumandan qishloqqacha optik kabel yotqizish — eng qimmat va uzoq (3–4 oy), lekin tezlik yuqori va barqaror; (2) tuman markazidagi minoradan qishloqdagi binoga radiorele liniya o'rnatish — orada tepalik bor, lekin minorani balandroq qilish mumkin; (3) uyali operatorning 4G modemi — arzon va tez, ammo qishloqda signal kuchsiz va kechqurun tezlik keskin tushadi. Vrachlik punkti videomaslahatlar uchun barqaror aloqaga muhtoj.
+ksavol: Har bir variantning afzallik va kamchiliklari nimada?
+ksavol: Qaysi variantni (yoki ularning birikmasini) tavsiya qilasiz va nima uchun?
+ksavol: Ulanishdan keyin maktab va punkt tarmog'ini qanday himoya qilish kerak?
+kjavob: Optik kabel: eng katta tezlik, xalaqitsiz va uzoq muddatli, lekin qimmat va vaqt talab qiladi. Radiorele: kabel yotqizmasdan tez o'rnatiladi va yuqori tezlik beradi, lekin ko'rish chizig'i kerak (tepalik to'sadi — minora balandligini oshirish lozim), ob-havo ta'sir qilishi mumkin. 4G: arzon va tez, ammo signal kuchsiz va yuklamaga bog'liq — videomaslahat uchun ishonchsiz. Tavsiya: tezkor yechim sifatida radiorele liniya (yoki tashqi antennali 4G zaxira kanal), keyinroq imkon bo'lsa optik kabel; vrachlik punkti uchun zaxira kanal ham bo'lishi kerak. Himoya: marshrutizator va Wi-Fi'da WPA2/WPA3 va kuchli parollar, mehmonlar tarmog'ini alohida qilish, fayervol, tibbiy ma'lumotlar uchun shifrlangan ulanish va kirish huquqlarini cheklash.
+savol: Kommutatsiya nima? Uning uch turini nomlang.
+savol: Kanallar kommutatsiyasi qanday bosqichlardan iborat va u qachon qulay?
+savol: Saqlab-uzatish tamoyili nimani anglatadi?
+savol: Paket sarlavhasida qanday ma'lumotlar bo'ladi va paketlar manzilda qanday yig'iladi?
+savol: Optik tola qanday ishlaydi? Uning mis kabelga nisbatan afzalliklarini ayting.
+savol: NFC, Bluetooth va Wi-Fi ni masofa va qo'llanish bo'yicha taqqoslang.
+amaliy: Paketli uzatishni modellashtirish va aloqa usullarini taqqoslash
+amaqsad: Paketlar kommutatsiyasini kartochkalar yordamida modellashtirish, paketlar soni va uzatish vaqtini hisoblash, Wi-Fi tezligini turli masofalarda o'lchash va simsiz aloqa usullarini taqqoslash jadvalini tuzish.
+ajihoz: Raqamlangan «paket» kartochkalari; kompyuter yoki smartfon; tezlik o'lchash ilovasi; Bluetooth'li qurilmalar; elektron jadval dasturi
+qadam: 40–50 belgili xabarni yozib, uni 8 ta «paket» kartochkaga bo'ling; har bir kartochkaga sarlavha yozing: yuboruvchi, qabul qiluvchi, paket raqami (masalan, 3/8) va paketdagi belgilar soni (nazorat yig'indisi o'rnida).
+qadam: Paketlarni uchta «marshrutizator» o'quvchi orqali turli yo'llar bilan yuboring; o'qituvchi bitta paketni «yo'qotadi» va bittasidagi belgini o'zgartiradi.
+qadam: Qabul qiluvchi paketlarni tartib raqami bo'yicha yig'adi, belgilar sonini tekshiradi, yo'qolgan va buzilgan paketlarni qayta so'raydi; jarayonni bosqichma-bosqich yozing.
+qadam: Xuddi shu xabarni «kanallar kommutatsiyasi» usulida (bitta o'quvchi zanjiri, butun yo'l band) yuborib, ikki usulni vaqt va ishonchlilik bo'yicha solishtiring.
+qadam: Elektron jadvalda turli hajmdagi fayllar (1 MB, 20 MB, 700 MB) uchun 1500 baytli paketlar soni va 10, 50, 100 Mbit/s tezliklarda uzatish vaqtini formulalar bilan hisoblang.
+qadam: Telefon yoki noutbukda Wi-Fi tezligini marshrutizatordan 1 m, 5 m va devor ortida o'lchab, natijalarni jadvalga yozing; Bluetooth orqali fayl yuborish tezligi bilan solishtiring.
+qadam: Simsiz aloqa usullari bo'yicha taqqoslash jadvalini to'ldiring va o'lchov natijalari asosida xulosa yozing.
+anatija: Paketli uzatish modeli bayoni va ikki usulni solishtirish, paketlar soni va uzatish vaqti hisoblangan elektron jadval, Wi-Fi tezligi o'lchovlari va simsiz usullar taqqoslash jadvali, xulosa.
+baho5: Modellashtirish to'g'ri bajarilgan va paketli uzatish bosqichlari aniq tushuntirilgan, hisob-kitob formulalari to'g'ri, o'lchovlar tizimli yozilgan, xulosalar ma'lumotlarga asoslangan.
+masala: 6 000 000 baytli fayl 1500 baytli paketlarga bo'lindi (sarlavhalar hisobga olinmasin). Necha paket hosil bo'ladi? Agar har bir paketga 40 bayt sarlavha qo'shilsa, uzatiladigan umumiy hajm qancha bo'ladi?
+yechim: 6 000 000 : 1500 = 4000 paket. Sarlavhalar: 4000 · 40 = 160 000 bayt. Umumiy hajm: 6 000 000 + 160 000 = 6 160 000 bayt.
+masala: Yorug'lik optik tolada taxminan 200 000 km/s tezlikda tarqaladi. 1000 km uzunlikdagi liniyada signal qancha vaqtda yetib boradi? Bu masofani borib-kelish vaqti qancha?
+yechim: 1000 : 200 000 = 0,005 s = 5 ms; borib-kelish: 10 ms.
+test: Aloqa tugaguncha butun yo'l ikki abonentga ajratiladigan usul? | Kanallar kommutatsiyasi | Paketlar kommutatsiyasi | Xabarlar kommutatsiyasi | Striming
+test: Internet qaysi kommutatsiya usuliga asoslangan? | Paketlar kommutatsiyasi | Kanallar kommutatsiyasi | Qo'lda kommutatsiya | Telegraf usuli
+test: Paket sarlavhasida nima bo'lmaydi? | Faylning to'liq mazmuni | Yuboruvchi manzili | Qabul qiluvchi manzili | Paket tartib raqami
+test: Optik tolada yorug'likni yadro ichida ushlab turadigan hodisa? | To'liq ichki qaytish | Interferensiya | Diskretlash | Kliping
+test: Bir necha santimetr masofada ishlaydigan va kontaktsiz to'lovda ishlatiladigan texnologiya? | NFC | Wi-Fi | Radiorele | Sun'iy yo'ldosh aloqasi
+uyga: Mavzuni konspekt qiling. Telefoningiz yoki kompyuteringiz bilan ishlatadigan barcha simsiz ulanishlar ro'yxatini tuzing (Wi-Fi, Bluetooth, NFC, mobil internet va h.k.), har biri nima uchun ishlatilishini va qanday himoya sozlamasi borligini yozing.
+gloss: Kommutatsiya | Ma'lumotni tarmoqdagi oraliq tugunlar orqali manbadan manzilga o'tkazish usuli.
+gloss: Kanallar kommutatsiyasi | Uzatishdan oldin butun yo'l bo'ylab alohida kanal o'rnatilib, aloqa tugaguncha band qilinadigan usul.
+gloss: Saqlab-uzatish | Oraliq tugun xabarni to'liq qabul qilib saqlaydigan va keyin keyingi tugunga uzatadigan tamoyil.
+gloss: Paket | Sarlavha, foydali ma'lumot va nazorat yig'indisidan iborat ma'lumot bo'lagi.
+gloss: Marshrutlash | Paket uchun manbadan manzilgacha bo'lgan yo'lni tanlash jarayoni.
+gloss: Optik tola | Ma'lumotni yorug'lik impulslari ko'rinishida uzatadigan ingichka shisha yoki plastik ip.
+gloss: NFC | Bir necha santimetr masofada ishlaydigan qisqa masofali simsiz aloqa texnologiyasi.

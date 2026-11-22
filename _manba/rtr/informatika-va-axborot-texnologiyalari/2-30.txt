@@ -1,0 +1,89 @@
+nomi: Funksiyalar. HTML shakllari va boshqaruv hodisalari. Qalqib chiquvchi oynalar. Yakuniy nazorat
+modul: 6-modul
+ac: 6.6 JavaScript'da parametrli va qiymat qaytaruvchi funksiyalar yozadi, HTML shakli elementlarini yaratadi, click, input, change va submit hodisalarini qayta ishlaydi, alert, confirm va prompt oynalaridan o'rinli foydalanib, ma'lumotni tekshiruvchi interaktiv shakl yaratadi; 2-kurs bo'yicha bilimlarini yakuniy nazoratda ko'rsatadi.
+maqsad: O'quvchilarda funksiyalar, HTML shakllari, hodisalar va qalqib chiquvchi oynalar haqida bilim hosil qilish, foydalanuvchi kiritgan ma'lumotni tekshiradigan va natijani sahifada ko'rsatadigan interaktiv veb-shakl yaratish ko'nikmasini shakllantirish; 2-kurs (4–6-modullar) bo'yicha o'zlashtirishni yakuniy nazorat orqali aniqlash.
+natija: funksiya e'lon qiladi, parametr va argumentni farqlaydi, return bilan qiymat qaytaradi;
+natija: input, select, textarea, checkbox va button elementlaridan iborat HTML shakl yaratadi;
+natija: click, input, change va submit hodisalarini qayta ishlovchi kod yozadi, sahifa qayta yuklanishining oldini oladi;
+natija: alert, confirm va prompt oynalarining farqini biladi va ulardan o'rinli foydalanadi;
+natija: 2-kurs mavzulari bo'yicha yakuniy nazorat test va amaliy biletini bajaradi.
+reja: Funksiyalar
+reja: HTML shakllari va hodisalar
+reja: Qalqib chiquvchi oynalar. Yakuniy nazorat
+tayanch: funksiya; parametr; argument; return; funksiyani chaqirish; mahalliy o'zgaruvchi; HTML shakl; input; select; checkbox; label; hodisa; hodisa ishlovchisi; addEventListener; click; input; change; submit; preventDefault; alert; confirm; prompt
+metod: «Retsept» o'xshatishi | Funksiya oshpazning retseptiga qiyoslanadi: retsept bir marta yoziladi (e'lon), ko'p marta tayyorlanadi (chaqirish), masalliqlar — parametrlar, tayyor taom — qaytarilgan qiymat.
+metod: Amaliy loyiha va yakuniy nazorat | Darsning birinchi yarmida o'quvchilar interaktiv shakl yaratadi, ikkinchi yarmida 1–30-darslar bo'yicha 30 savollik test va amaliy bilet («Nazorat» bo'limida) o'tkaziladi.
+ajihoz: Kompyuter; brauzer (dasturchi konsoli); matn muharriri; oldingi darslardagi HTML fayllar; yakuniy nazorat test varaqalari va amaliy biletlar; proyektor
+
+## Funksiyalar
+**Funksiya** — nom berilgan va kerak bo'lganda chaqiriladigan kod bloki. U bir xil amalni dasturning turli joylarida qayta yozmaslik, katta dasturni kichik va tushunarli qismlarga bo'lish imkonini beradi. Funksiya `function` so'zi bilan e'lon qilinadi; qavs ichidagi **parametrlar** — tashqaridan beriladigan qiymatlar uchun «bo'sh joylar», chaqirishda beriladigan haqiqiy qiymatlar esa **argumentlar** deyiladi; `return` natijani qaytaradi va funksiyani tugatadi:
+```
+function narx(xizmat, soat) {
+  let stavka = 0;
+  if (xizmat === "diagnostika") stavka = 80000;
+  else if (xizmat === "tamir") stavka = 120000;
+  return stavka * soat;
+}
+console.log(narx("tamir", 2));   // 240000
+```
+Funksiya ichida `let` bilan e'lon qilingan o'zgaruvchilar **mahalliy** — ular faqat funksiya ichida mavjud. Qisqa funksiyalar strelka ko'rinishida ham yoziladi: `const kvadrat = x => x * x;`.
+
+## HTML shakllari va hodisalar
+**HTML shakli** foydalanuvchidan ma'lumot olish uchun xizmat qiladi. Asosiy elementlar: `<input type="text">` (matn), `type="number"`, `type="email"`, `type="date"` (sana tanlash), `type="checkbox"` (belgilash), `type="radio"` (bittasini tanlash), `<select>` (ochiluvchi ro'yxat), `<textarea>` (ko'p qatorli matn), `<button>`; har bir maydonga `<label>` bilan tushunarli yorliq beriladi. `required`, `min`, `max`, `pattern` atributlari brauzerning o'zida oddiy tekshiruvni yoqadi.
+**Hodisa** — foydalanuvchi yoki brauzer harakati: tugmani bosish (`click`), maydonga yozish (`input`), tanlovni o'zgartirish (`change`), shaklni yuborish (`submit`), sichqonchani olib kelish (`mouseover`), tugma bosish (`keydown`). Hodisaga javob beradigan funksiya **hodisa ishlovchisi** deyiladi. U `onclick="..."` atributi bilan yoki zamonaviyroq usulda `addEventListener` bilan ulanadi:
+```
+const shakl = document.getElementById("yozilish");
+shakl.addEventListener("submit", function (e) {
+  e.preventDefault();               // sahifa qayta yuklanmasin
+  const ism = document.getElementById("ism").value.trim();
+  if (ism.length < 2) {
+    alert("Ismni to'liq kiriting");
+    return;
+  }
+  document.getElementById("natija").textContent = ism + ", siz ro'yxatga olindingiz!";
+});
+```
+Shakl yuborilganda brauzer odatda sahifani qayta yuklaydi; `preventDefault()` buni to'xtatib, ma'lumotni JavaScript'da tekshirish va natijani shu sahifada ko'rsatish imkonini beradi. Belgilash katakchasining holati `.checked` (true yoki false) bilan o'qiladi.
+
+## Qalqib chiquvchi oynalar. Yakuniy nazorat
+Brauzerda uchta oddiy **qalqib chiquvchi oyna** bor: `alert("...")` — xabar ko'rsatadi va faqat «OK» tugmasi bor; `confirm("...")` — tasdiq so'raydi va «OK» bosilsa `true`, «Bekor qilish» bosilsa `false` qaytaradi (masalan, ma'lumotni o'chirishdan oldin); `prompt("...")` — qisqa matn kiritishni so'raydi va kiritilgan satrni yoki bekor qilinganda `null` qaytaradi. Bu oynalar sahifa ishini to'xtatib qo'yadi va foydalanuvchini bezovta qiladi, shuning uchun ulardan kam va faqat muhim holatlarda foydalaniladi; xatolarni sahifaning o'zida, maydon yonida ko'rsatish qulayroq. Brauzerlar foydalanuvchi so'ramagan yangi oynalarni (reklama pop-up'larini) avtomatik bloklaydi.
+### Yakuniy nazorat
+Ushbu dars bilan 2-kurs dasturi (4–6-modullar) yakunlanadi. Darsning ikkinchi yarmida yakuniy nazorat o'tkaziladi: 1–30-darslar bo'yicha 30 savollik test (har bir darsdan bittadan savol) va amaliy bilet (video yoki audio tahrir, loyiha jadvali, tizim tahlili, grafika yoki JavaScript bo'yicha topshiriq). Test va biletlar «Nazorat» bo'limida berilgan.
+
+amaliy: Avtoservisga onlayn yozilish shakli
+amaqsad: HTML shakli va JavaScript funksiyalari yordamida avtoservisga yozilish sahifasini yaratish: maydonlarni tekshirish, xizmat narxini tanlovga qarab avtomatik hisoblash, tasdiq oynasi va natijani sahifada ko'rsatish.
+qadam: `yozilish.html` sahifasida shakl yarating: ism, telefon (`pattern` bilan +998 va 9 raqam), xizmat turi (`select`: diagnostika, moy almashtirish, ta'mir), soatlar soni (number), sana (date), «Shaxsga doir ma'lumotlarimni qayta ishlashga roziman» belgilash katakchasi va «Yozilish» tugmasi; har bir maydonga `label` qo'ying.
+qadam: Nazariy qismdagi kabi `narx(xizmat, soat)` funksiyasini yozing va xizmat turi yoki soat o'zgarganda (`change` va `input` hodisalari) taxminiy narx sahifada darhol yangilansin.
+qadam: `tekshir()` funksiyasini yozing: ism kamida 2 belgi, telefon to'g'ri formatda, sana bugundan oldin emas, rozilik belgilangan bo'lsin; xatolar ro'yxatini qaytarsin.
+qadam: Shaklning `submit` hodisasida `preventDefault()` qo'llang, `tekshir()` ni chaqiring; xato bo'lsa, ularni maydonlar ostida yoki `alert` bilan ko'rsating.
+qadam: Xato bo'lmasa, `confirm()` bilan «Ma'lumotlar to'g'rimi?» deb so'rang; «OK» bosilsa, sahifada yozilish xulosasini (ism, xizmat, sana, taxminiy narx) chiqaring, «Bekor qilish» bosilsa — hech narsa qilmang.
+qadam: Shaklni normal, chegaraviy va noto'g'ri ma'lumotlar bilan sinab, natijalarni jadvalga yozing; kodga izohlar qo'shing.
+qadam: Yakuniy nazoratga tayyorgarlik: 4–6-modullar bo'yicha har biridan 3 tadan asosiy tushunchani yozib, ularning ta'rifini takrorlang.
+anatija: Ishlaydigan `yozilish.html` sahifasi: funksiyalar, hodisalar, tekshiruv, avtomatik narx hisobi, tasdiq oynasi va natija; sinov jadvali; takrorlash uchun tushunchalar ro'yxati.
+baho5: Shakl to'liq va qulay, funksiyalar parametr va return bilan to'g'ri yozilgan, hodisalar ishlaydi va sahifa qayta yuklanmaydi, tekshiruv barcha holatlarni qamraydi, sinov natijalari qayd etilgan, kod izohlangan.
+masala: Quyidagi kod konsolga nimani chiqaradi?
+```
+function kvadrat(x) {
+  return x * x;
+}
+console.log(kvadrat(4) + kvadrat(3));
+```
+yechim: kvadrat(4) = 16, kvadrat(3) = 9, natija: `25`.
+masala: Foydalanuvchi `confirm("O'chirilsinmi?")` oynasida «Bekor qilish» tugmasini, `prompt("Ismingiz?")` oynasida esa ham «Bekor qilish» tugmasini bosdi. Ular qanday qiymat qaytaradi? Bu qiymatlarni qanday tekshirish kerak?
+yechim: `confirm` — `false`, `prompt` — `null`. Tekshirish: `if (confirm("...")) { o'chirish }` va `let ism = prompt("..."); if (ism === null || ism.trim() === "") { ... }` — bekor qilingan yoki bo'sh javobga alohida ishlov beriladi.
+savol: Funksiya nima uchun kerak? Parametr va argument qanday farqlanadi?
+savol: return buyrug'i nima qiladi?
+savol: HTML shaklining asosiy elementlarini va ularning vazifasini aytib bering.
+savol: Hodisa ishlovchisi nima? preventDefault() nima uchun ishlatiladi?
+test: Funksiyadan natijani qaytaradigan kalit so'z? | return | break | const | alert
+test: `function f(a, b) { return a + b; }` uchun `f(2, 3)` chaqiruvidagi 2 va 3 nima deyiladi? | Argumentlar | Parametrlar | Hodisalar | Massivlar
+test: Shakl yuborilganda sodir bo'ladigan hodisa? | submit | click | mouseover | keydown
+test: «OK» yoki «Bekor qilish» tanlanib, true yoki false qaytaradigan oyna? | confirm() | alert() | prompt() | console.log()
+test: Belgilash katakchasi belgilanganini qaysi xossa bilan bilish mumkin? | checked | value | length | type
+uyga: Yakuniy nazoratga tayyorlaning: 2-kursdagi har bir modul bo'yicha 5 tadan asosiy tushunchani yozib, ta'rif bering. Kasbingizga oid kichik interaktiv sahifa yarating (masalan, buyurtma narxi kalkulyatori): kamida bitta funksiya, shakl, tekshiruv va natijani sahifada ko'rsatish bo'lsin.
+gloss: Funksiya | Nomlangan, parametrlar qabul qilib, kerak bo'lganda chaqiriladigan va natija qaytarishi mumkin bo'lgan kod bloki.
+gloss: Parametr | Funksiya e'lonidagi, chaqirishda beriladigan qiymat uchun nom.
+gloss: Argument | Funksiyani chaqirishda parametr o'rniga beriladigan haqiqiy qiymat.
+gloss: Hodisa | Foydalanuvchi yoki brauzer harakati: bosish, yozish, tanlash, shaklni yuborish.
+gloss: Hodisa ishlovchisi | Hodisa sodir bo'lganda bajariladigan funksiya.
+gloss: Qalqib chiquvchi oyna | Sahifa ustida chiqadigan alert, confirm yoki prompt muloqot oynasi.

@@ -1,0 +1,61 @@
+nomi: Elektron tijorat va internet banking. Elektron pul o'tkazmalari. Zaxiralarni avtomatik boshqarish
+modul: 4-modul
+ac: 4.11 Elektron tijorat modellari, internet banking va elektron to'lov usullarini tushuntiradi, onlayn to'lovlarda xavfsizlik qoidalariga amal qiladi, elektron jadvalda qayta buyurtma nuqtasini hisoblaydigan zaxiralarni avtomatik boshqarish modelini tuzadi.
+maqsad: O'quvchilarda elektron tijorat va elektron to'lov tizimlarining ishlashi, ularning afzallik va xavflari, ombor zaxiralarini avtomatik nazorat qilish tamoyillari haqida bilim hosil qilish, elektron jadvalda zaxira hisobini yuritish va avtomatik buyurtma signalini yaratish ko'nikmasini shakllantirish.
+natija: B2C, B2B va C2C elektron tijorat modellarini va marketpleys tushunchasini farqlaydi;
+natija: internet banking, karta, QR-kod va elektron hamyon orqali to'lov usullarini taqqoslaydi;
+natija: onlayn to'lov va xaridda firibgarlik belgilarini aniqlaydi va xavfsizlik qoidalarini qo'llaydi;
+natija: qayta buyurtma nuqtasini hisoblab, elektron jadvalda zaxiralarni avtomatik nazorat qiladigan model tuzadi.
+reja: Elektron tijorat
+reja: Internet banking va elektron pul o'tkazmalari
+reja: Zaxiralarni avtomatik boshqarish
+tayanch: elektron tijorat; B2C; B2B; C2C; marketpleys; internet banking; mobil bank; elektron hamyon; QR-kod orqali to'lov; P2P o'tkazma; bir martalik kod; zaxira (inventar); shtrix-kod; RFID; qayta buyurtma nuqtasi; xavfsizlik zaxirasi
+metod: Vaziyatli savol | «Sizga «yutuq» haqida SMS keldi va kartangizdagi kodni so'rashmoqda — nima qilasiz?» savoli bilan elektron to'lov xavfsizligi muhokama qilinadi.
+metod: Modellashtirish | O'quvchilar kichik do'kon ombori uchun elektron jadval tuzib, sotuvlar kiritilganda qoldiq kamayishi va buyurtma signali chiqishini sinaydi.
+ajihoz: Kompyuter; elektron jadval dasturi; internet (onlayn do'konlarning ochiq sahifalarini ko'rish uchun); proyektor; namunaviy mahsulotlar ro'yxati
+
+## Elektron tijorat
+**Elektron tijorat** — tovar va xizmatlarni internet orqali sotish va sotib olish. Asosiy modellari: **B2C** (biznes — iste'molchi: internet-do'kon fuqaroga sotadi), **B2B** (biznes — biznes: ulgurji yetkazib beruvchi do'konga sotadi), **C2C** (iste'molchi — iste'molchi: e'lonlar sayti orqali fuqarolar o'zaro savdo qiladi). **Marketpleys** — ko'plab sotuvchilarning mahsulotlarini bitta sayt yoki ilovada jamlaydigan va to'lov hamda yetkazib berishni tashkil qiladigan platforma; u sotuvchidan komissiya oladi. Onlayn xarid jarayoni: katalogdan tanlash → savatcha → buyurtma va manzil → to'lov → yetkazib berish → kerak bo'lsa qaytarish. Xaridor uchun afzalliklar — kecha-kunduz xarid, narxlarni solishtirish, sharhlar; sotuvchi uchun — kichik xarajat bilan katta bozorga chiqish. Kamchiliklar — mahsulotni oldindan ushlab ko'rib bo'lmaydi, soxta do'kon va sharhlar, yetkazib berish kechikishi.
+
+## Internet banking va elektron pul o'tkazmalari
+**Internet banking** (mobil bank) — bank hisobi va kartalarini sayt yoki ilova orqali boshqarish: qoldiqni ko'rish, kommunal va boshqa to'lovlar, kartadan kartaga (**P2P**) o'tkazmalar, omonat va kreditlarni boshqarish. Elektron pul o'tkazmasi — pulning naqd pulsiz, bank tizimlari orqali bir hisobdan boshqasiga o'tishi. To'lov usullari: bank kartasi (onlayn kartaning raqami, amal qilish muddati va bir martalik SMS-kod bilan tasdiqlanadi), **QR-kod orqali to'lov** (do'kon kodini ilova bilan skanerlash), **elektron hamyon**, kontaktsiz to'lov (karta yoki telefonni terminalga yaqinlashtirish).
+**Xavfsizlik qoidalari:** SMS-kod, PIN, CVV va parolni hech kimga — hatto «bank xodimi»ga ham aytmaslik; faqat rasmiy ilova va https bilan boshlanadigan to'g'ri manzildagi saytlarda to'lash; «yutuq», «kartangiz bloklandi» kabi xabarlardagi havolalarni ochmaslik; onlayn xaridlar uchun alohida, kam mablag'li karta ishlatish; har bir operatsiya haqida xabarnoma yoqib qo'yish; shubhali holatda kartani ilova orqali darhol bloklab, bankning rasmiy raqamiga qo'ng'iroq qilish.
+
+## Zaxiralarni avtomatik boshqarish
+Do'kon, oshxona, avtoservis yoki dorixona omborida mahsulot tugab qolsa — savdo yo'qotiladi, ortiqcha bo'lsa — pul «muzlaydi» va mahsulot eskiradi. **Zaxiralarni avtomatik boshqarish** tizimida har bir mahsulot kodi (shtrix-kod, QR-kod yoki RFID belgi) bilan hisobga olinadi: kassada sotilganda yoki ishlatilganda qoldiq avtomatik kamayadi, keltirilganda ko'payadi. Qoldiq **qayta buyurtma nuqtasi**ga yetganda tizim ogohlantiradi yoki yetkazib beruvchiga buyurtmani o'zi yuboradi. Qayta buyurtma nuqtasi = o'rtacha kunlik sarf × yetkazib berish muddati (kun) + **xavfsizlik zaxirasi** (kutilmagan talab yoki kechikish uchun qo'shimcha miqdor).
+jadval: Zaxira hisobi namunasi
+| Mahsulot | Qoldiq | Kunlik sarf | Yetkazish (kun) | Xavfsizlik zaxirasi | Qayta buyurtma nuqtasi | Holat |
+| Moy filtri | 35 | 4 | 3 | 8 | 4 · 3 + 8 = 20 | Yetarli |
+| Tormoz kolodkasi | 14 | 2 | 6 | 5 | 2 · 6 + 5 = 17 | Buyurtma berish |
+
+amaliy: Zaxiralarni avtomatik nazorat qiluvchi elektron jadval va xavfsiz onlayn to'lov qoidalari
+amaqsad: Kichik do'kon yoki ustaxona ombori uchun sotuvlar kiritilganda qoldiqni avtomatik hisoblaydigan va qayta buyurtma signalini chiqaradigan elektron jadval yaratish; onlayn to'lov xavfsizligi bo'yicha nazorat varaqasini tuzish.
+qadam: «Ombor» varag'ini yarating: Kod, Mahsulot, Boshlang'ich qoldiq, Kunlik sarf, Yetkazish muddati, Xavfsizlik zaxirasi (kamida 8 ta mahsulot, mutaxassisligingizga oid).
+qadam: «Sotuvlar» varag'ida Sana, Kod va Soni ustunlari bo'lgan kamida 15 ta sotuv yozuvini kiriting; kodlar uchun «Ombor» dagi ro'yxatdan validatsiya qo'ying.
+qadam: «Ombor» da har bir mahsulot uchun sotilgan miqdorni `=SUMIF(Sotuvlar!B:B;A2;Sotuvlar!C:C)`, joriy qoldiqni esa boshlang'ich qoldiqdan ayirib hisoblang.
+qadam: Qayta buyurtma nuqtasini `=D2*E2+F2` formulasi bilan, holatni esa `=IF(H2<=I2;"Buyurtma berish";"Yetarli")` bilan hisoblang (ustun harflarini o'z jadvalingizga moslang).
+qadam: «Buyurtma berish» holatidagi qatorlarni shartli formatlash bilan ajrating (qalin shrift va chegara); buyurtma miqdorini 10 kunlik sarf sifatida hisoblang.
+qadam: Yangi sotuvlar qo'shib, holat avtomatik o'zgarishini tekshiring va natijani izohlang.
+qadam: Alohida varaqda «Xavfsiz onlayn to'lov: 8 qoida» nazorat varaqasini tuzing va uchta marketpleys yoki internet-do'konni to'lov usullari va qaytarish shartlari bo'yicha solishtiring.
+anatija: Avtomatik hisoblanadigan zaxira jadvali (SUMIF, qayta buyurtma nuqtasi, IF, shartli formatlash), sinov natijasi, xavfsiz to'lov qoidalari va solishtirish jadvali.
+baho5: Formulalar to'g'ri va avtomatik yangilanadi, validatsiya va shartli formatlash ishlaydi, qayta buyurtma signali to'g'ri, xavfsizlik qoidalari to'liq va aniq.
+masala: Mahsulotning kunlik sarfi 12 dona, yetkazib berish muddati 5 kun, xavfsizlik zaxirasi 20 dona. Qayta buyurtma nuqtasini toping. Qoldiq 95 dona bo'lsa, necha kundan keyin buyurtma berish kerak?
+yechim: Qayta buyurtma nuqtasi: 12 · 5 + 20 = 80 dona. 95 − 80 = 15 dona ortiqcha; 15 : 12 ≈ 1,25 — ya'ni 2-kuni qoldiq 95 − 24 = 71 ≤ 80 bo'ladi va buyurtma beriladi.
+masala: Marketpleysda mahsulot 250 000 so'mga sotiladi. Platforma komissiyasi 12 %, yetkazib berish xizmati 15 000 so'm. Sotuvchiga qancha pul qoladi?
+yechim: Komissiya: 250 000 · 0,12 = 30 000 so'm. Sotuvchiga: 250 000 − 30 000 − 15 000 = 205 000 so'm.
+savol: B2C, B2B va C2C modellariga misol keltiring.
+savol: Internet bankingda qanday operatsiyalarni bajarish mumkin?
+savol: Onlayn to'lovda firibgarlikning qanday belgilari bor va ulardan qanday himoyalanish mumkin?
+savol: Qayta buyurtma nuqtasi qanday hisoblanadi va xavfsizlik zaxirasi nima uchun kerak?
+test: Ulgurji yetkazib beruvchi do'konga internet orqali sotishi qaysi model? | B2B | B2C | C2C | P2P
+test: Ko'plab sotuvchilar mahsulotlarini jamlab, to'lov va yetkazishni tashkil qiladigan platforma? | Marketpleys | Intranet | Brauzer | Elektron jadval
+test: «Bank xodimi» telefon qilib SMS-kodni so'rasa, nima qilish kerak? | Kodni aytmasdan, bankning rasmiy raqamiga o'zi qo'ng'iroq qilish | Kodni aytish | Kartani boshqaga berish | Havolani ochish
+test: Kunlik sarf 4 dona, yetkazish 3 kun, xavfsizlik zaxirasi 8 dona. Qayta buyurtma nuqtasi? | 20 | 15 | 12 | 32
+test: Mahsulotni radiochastota orqali masofadan aniqlaydigan belgi? | RFID | PIN | HTML | CVV
+uyga: Misol va mashqlar: oilangiz yoki kichik do'kon uchun 5 ta tez-tez sotib olinadigan mahsulot bo'yicha qayta buyurtma nuqtasini hisoblang. Ikki xil to'lov usulini (karta va QR-kod) qulaylik, xavfsizlik va komissiya bo'yicha solishtirib yozing.
+gloss: Elektron tijorat | Tovar va xizmatlarni internet orqali sotish va sotib olish.
+gloss: Marketpleys | Ko'plab sotuvchilar mahsulotlarini jamlab, to'lov va yetkazib berishni tashkil qiluvchi onlayn platforma.
+gloss: Internet banking | Bank hisobi va kartalarini sayt yoki ilova orqali masofadan boshqarish.
+gloss: Elektron pul o'tkazmasi | Pulning naqd pulsiz, bank tizimlari orqali bir hisobdan boshqasiga o'tkazilishi.
+gloss: Qayta buyurtma nuqtasi | Yangi buyurtma berilishi kerak bo'lgan qoldiq darajasi: kunlik sarf × yetkazish muddati + xavfsizlik zaxirasi.
+gloss: Xavfsizlik zaxirasi | Kutilmagan talab yoki yetkazib berishdagi kechikish uchun saqlanadigan qo'shimcha mahsulot miqdori.

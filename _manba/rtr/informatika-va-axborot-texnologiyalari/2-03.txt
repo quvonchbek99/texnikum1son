@@ -1,0 +1,111 @@
+nomi: Audioni tahrirlash dasturlari
+modul: 4-modul
+ac: 4.3 Raqamli tovush tavsiflarini (diskretlash chastotasi, bit chuqurligi, kanallar, bitreyt) va audio formatlarini farqlaydi, audio tahrirlash dasturida ovozni yozib oladi, kesadi, shovqinni kamaytiradi, me'yorlaydi va eksport qiladi.
+maqsad: O'quvchilarda raqamli tovush qanday yozilishi va saqlanishi, audio formatlar va ularning sifat hamda hajmga ta'siri, audio tahrirlash dasturlarining vazifalari va asosiy tahrir amallari haqida bilim hosil qilish, sifatli ovoz yozish va oddiy tahrirni bajarish ko'nikmasini shakllantirish.
+natija: diskretlash chastotasi, bit chuqurligi, kanallar soni va bitreyt tushunchalarini tushuntiradi;
+natija: siqilmagan, yo'qotishsiz va yo'qotishli audio formatlarni farqlaydi va maqsadga mosini tanlaydi;
+natija: siqilmagan audio fayl hajmini hisoblaydi;
+natija: audio tahrirlash dasturida yozib olish, kesish, shovqinni kamaytirish, me'yorlash va fade amallarini bajaradi;
+natija: ovoz yozishda sifat qoidalari va mualliflik huquqiga rioya qiladi.
+reja: Raqamli tovush asoslari
+reja: Audio formatlar va siqish
+reja: Audio tahrirlash dasturlari va ularning interfeysi
+reja: Asosiy tahrir amallari va effektlar
+tayanch: tovush to'lqini; chastota; amplituda; diskretlash chastotasi; bit chuqurligi; mono va stereo; desibel; kliping; WAV; FLAC; MP3; AAC; to'lqin shakli; normalizatsiya; shovqinni kamaytirish; fade in va fade out; ekvalayzer; kompressor
+metod: Eshitib solishtirish | Bitta yozuvning WAV, MP3 128 kbit/s va MP3 32 kbit/s variantlari eshittiriladi; o'quvchilar farqni sezadimi-yo'qmi va fayllar hajmi qanday ekanini muhokama qiladi.
+metod: Namoyish | O'qituvchi Audacity'da ovozni yozib oladi va ekranda to'lqin shakli, kliping, shovqin profili va normalizatsiyani ko'rsatadi.
+metod: Amaliy mashq | Darsning ikkinchi yarmida o'quvchilar qisqa e'lon matnini yozib oladi va asosiy tahrir amallarini bajaradi.
+jihoz: Kompyuter va proyektor; Audacity (bepul) dasturi; mikrofon yoki quloqchinli garnitura; karnaylar; namunaviy audio fayllar; taqdimot
+
+## 1. Raqamli tovush asoslari
+**Tovush** — havo bosimining tebranishi, ya'ni to'lqin. Uning ikki asosiy tavsifi bor: **chastota** — bir sekunddagi tebranishlar soni (gerts, Hz), u tovushning balandligini (ingichka yoki yo'g'onligini) belgilaydi; **amplituda** — tebranish kattaligi, u tovushning kuchini (baland yoki pastligini) belgilaydi. Inson qulog'i taxminan 20 Hz dan 20 000 Hz gacha bo'lgan tovushlarni eshitadi, nutqning asosiy qismi esa 300–3400 Hz oralig'ida.
+Mikrofon havo tebranishini elektr signaliga aylantiradi, kompyuterning ovoz kartasi esa bu uzluksiz (analog) signalni raqamga o'giradi. Buning uchun signal qiymati sekundiga minglab marta o'lchanadi — bu **diskretlash** deyiladi. Bir sekunddagi o'lchovlar soni **diskretlash chastotasi**: musiqa disklari uchun 44 100 Hz (44,1 kHz), video va radio uchun 48 kHz, professional yozuvda 96 kHz. Har bir o'lchov necha bit bilan yozilishi **bit chuqurligi** deyiladi: 16 bit — 65 536 ta daraja, 24 bit — 16,7 milliondan ortiq daraja. Bit chuqurligi qancha katta bo'lsa, eng past va eng baland tovush orasidagi farq (dinamik diapazon) shuncha keng va shovqin shuncha kam bo'ladi.
+Tovush bitta kanalda (**mono**) yoki ikki kanalda (**stereo** — chap va o'ng) yozilishi mumkin. Nutq, podkast va e'lonlar uchun ko'pincha mono yetarli; musiqa va film ovozi uchun stereo ishlatiladi. Stereo fayl monodan ikki marta katta bo'ladi, shuning uchun nutqni keraksiz stereo formatda saqlash joyni behuda sarflaydi. Ko'p kanalli tovush (5.1, 7.1) kinoteatr va uy kinoteatrlarida ishlatiladi.
+Siqilmagan audio fayl hajmi quyidagicha hisoblanadi: hajm (bit) = diskretlash chastotasi × bit chuqurligi × kanallar soni × davomiylik (s). Masalan, 1 daqiqalik stereo yozuv (44 100 Hz, 16 bit): 44 100 · 16 · 2 · 60 = 84 672 000 bit = 10 584 000 bayt ≈ 10,1 MB. Bu juda katta hajm, shuning uchun internetda siqilgan formatlar ishlatiladi.
+Ovoz kuchi **desibelda** (dB) o'lchanadi. Raqamli yozuvda eng yuqori daraja 0 dBFS; signal undan oshib ketsa, to'lqin cho'qqilari «kesiladi» va xirillagan buzilish paydo bo'ladi — bu **kliping** deyiladi va uni keyin tuzatib bo'lmaydi. Shuning uchun yozishda ovoz cho'qqilari taxminan −12 dan −6 dB gacha bo'lishi tavsiya etiladi: bu kliping xavfidan uzoq, shovqin esa sezilmaydi.
+
+## 2. Audio formatlar va siqish
+Audio formatlar uch guruhga bo'linadi:
+- **siqilmagan** — WAV, AIFF: har bir o'lchov to'liq saqlanadi; sifat eng yuqori, hajm katta; yozib olish, tahrir va arxiv uchun;
+- **yo'qotishsiz siqilgan** — FLAC, ALAC: fayl 40–60 % kichrayadi, lekin ochilganda asl yozuv bit-bitigacha tiklanadi; musiqa arxivi uchun;
+- **yo'qotishli siqilgan** — MP3, AAC, OGG Vorbis, Opus: inson qulog'i sezmaydigan yoki kam sezadigan tovushlar olib tashlanadi; hajm 10 baravargacha kichrayadi; internet, telefon, podkast va video uchun.
+Yo'qotishli formatlarda sifat **bitreyt** bilan belgilanadi: 128 kbit/s MP3 ko'pchilik tinglovchilar uchun yaxshi, 192–320 kbit/s — yuqori sifat, 32–64 kbit/s — faqat nutq uchun qabul qilinadi. Masalan, 1 daqiqalik 128 kbit/s MP3: 128 · 60 = 7680 kbit = 960 KB, ya'ni WAV dan taxminan 11 marta kichik. Yo'qotishli faylni qayta-qayta tahrirlab saqlash sifatni har safar pasaytiradi, shuning uchun ish jarayonida WAV, yakuniy nusxada esa MP3 yoki AAC ishlatiladi.
+jadval: Audio formatlarni taqqoslash
+| Format | Siqish turi | 1 daqiqa stereo hajmi (taxminan) | Qachon ishlatiladi |
+| WAV | Siqilmagan | 10 MB (44,1 kHz, 16 bit) | Yozib olish, tahrir, arxiv |
+| FLAC | Yo'qotishsiz | 5–6 MB | Sifatli musiqa arxivi |
+| MP3 320 kbit/s | Yo'qotishli | 2,4 MB | Yuqori sifatli musiqa |
+| MP3 128 kbit/s | Yo'qotishli | 0,96 MB | Internetda tinglash, podkast |
+| AAC 128 kbit/s | Yo'qotishli | 0,96 MB | Video ovozi, telefonlar |
+| Opus 32 kbit/s | Yo'qotishli | 0,24 MB | Ovozli xabarlar, videoqo'ng'iroq |
+
+## 3. Audio tahrirlash dasturlari va ularning interfeysi
+Audio dasturlar vazifasiga ko'ra farqlanadi. **Audio muharrirlar** (Audacity — bepul va ochiq kodli, Ocenaudio, Adobe Audition) bitta yoki bir nechta yozuvni kesish, tozalash va effektlar bilan ishlash uchun mo'ljallangan. **Raqamli audio ish stansiyalari** (DAW — Reaper, FL Studio, GarageBand, Ableton Live) ko'p trekli musiqa yaratish, cholg'ularni yozish va aralashtirish uchun ishlatiladi. Telefonlar uchun oddiy tahrir ilovalari va brauzerda ishlaydigan onlayn muharrirlar ham bor. Ta'lim va kichik loyihalar uchun Audacity yetarli: u Windows, macOS va Linux'da ishlaydi va eng muhim effektlarga ega.
+Audio muharrir interfeysining asosiy qismlari:
+- **transport paneli** — yozish, ijro, pauza, to'xtatish tugmalari;
+- **daraja indikatorlari** — yozish va ijro paytidagi ovoz kuchi (qizilga yetmasligi kerak);
+- **trek va to'lqin shakli** — tovush amplitudasining vaqt bo'yicha grafigi: baland joylar keng, sokin joylar ingichka ko'rinadi, kliping esa yuqori va pastki chegaraga «yopishgan» tekis cho'qqilar ko'rinishida bo'ladi;
+- **vaqt shkalasi** — soniya va daqiqalar; masshtablash orqali bir so'z yoki hatto bir tovushni aniq tanlash mumkin;
+- **asboblar** — tanlash, masshtab, ovoz balandligi chizig'i (konvert);
+- **effektlar menyusi** — kuchaytirish, me'yorlash, shovqinni kamaytirish, ekvalayzer, kompressor va boshqalar.
+Ko'p trekli loyihada nutq, musiqa va tovush effektlari alohida treklarda turadi va har birining ovoz balandligi alohida sozlanadi.
+Yozuv sifati dasturdan ham ko'ra ko'proq uskunaga va joyga bog'liq. **Dinamik mikrofonlar** mustahkam va atrofdagi shovqinni kam yozadi — sahna va shovqinli xonalar uchun qulay. **Kondensator mikrofonlar** sezgir va ovozning nozik tomonlarini yaxshi yozadi, lekin xonadagi aks-sado va shovqinni ham ilg'aydi — studiya va tinch xona uchun. **Petlichka** (kiyimga taqiladigan kichik mikrofon) intervyu va video uchun, **USB mikrofonlar** esa to'g'ridan-to'g'ri kompyuterga ulanadi va podkast uchun qulay. Pop-filtr «p» va «b» tovushlaridagi havo zarbasini to'sadi, yopiq quloqchin esa yozish paytida o'z ovozingizni va fondagi shovqinni nazorat qilishga yordam beradi.
+Audio tahrir ko'nikmasi ko'p sohalarda kerak: podkast va audiokitoblar, radio eshittirishlari, video va taqdimot ovozi, onlayn darslar, ovozli e'lonlar va reklama, telefon ovozli menyusi (IVR). Kasbiy sohalarda ham ishlatiladi: masalan, avtomobil ustasi dvigatel ovozini yozib, nosozlikni tahlil qilish uchun boshqa mutaxassisga yuboradi, oshpaz esa retsept videosiga tushuntirish ovozini qo'shadi.
+
+## 4. Asosiy tahrir amallari va effektlar
+**Yozib olish qoidalari.** Tinch, yumshoq jihozli xonada yozing (bo'sh xonada aks-sado bo'ladi); mikrofonni og'izdan 10–20 sm uzoqlikda va biroz chetroqda ushlang («p», «b» tovushlaridagi havo zarbasi tushmasligi uchun); avval 5–10 soniyalik sinov yozuvi qiling va darajani tekshiring; yozuv boshida 2–3 soniya jim turing — bu shovqin namunasi keyinchalik kerak bo'ladi.
+**Asosiy amallar:**
+- **kesish, nusxalash, joylashtirish va o'chirish** — xato aytilgan so'zlar, uzun pauzalar va keraksiz qismlarni olib tashlash;
+- **shovqinni kamaytirish** — avval faqat shovqin bor qism (jim joy) tanlanib, «shovqin profili» olinadi, so'ng butun yozuvga effekt qo'llanadi; haddan tashqari kuchli sozlash ovozni «metall» qilib qo'yadi;
+- **me'yorlash (normalizatsiya)** — butun yozuvning eng baland cho'qqisini belgilangan darajaga (masalan, −1 dB) keltiradi; bir nechta yozuv bir xil balandlikda eshitiladi;
+- **kuchaytirish** — tanlangan qism ovozini belgilangan desibelga oshirish yoki pasaytirish;
+- **fade in / fade out** — ovozning boshida asta kuchayishi va oxirida asta so'nishi; musiqa va e'lonlar keskin boshlanmaydi va uzilmaydi;
+- **ekvalayzer** — ayrim chastotalarni kuchaytirish yoki susaytirish (masalan, past chastotali g'uvillashni kesish, nutq ravshanligini oshirish);
+- **kompressor** — juda baland va juda past joylar orasidagi farqni kamaytiradi, nutq bir tekis eshitiladi;
+- **tezlik va ton** — tezlik o'zgarishi tonni ham o'zgartiradi; maxsus effekt bilan ularni alohida o'zgartirish mumkin (keyingi darsda batafsil).
+Effektlarni qo'llashda **buzmaydigan tahrir** tamoyiliga amal qilish foydali: asl yozuvning nusxasi saqlab qo'yiladi, har bir effektdan keyin natija eshitib ko'riladi va yoqmasa «Bekor qilish» (Ctrl+Z) bilan qaytariladi. Bitta effektni bir necha marta ketma-ket qo'llash (masalan, shovqinni kamaytirishni uch marta) odatda yaxshi natija bermaydi — ovoz sun'iy bo'lib qoladi. Tahrir oxirida yozuv oddiy karnay va quloqchinda ham tinglab ko'riladi, chunki tinglovchilarning ko'pchiligi telefon karnayida eshitadi.
+Tahrir tartibi odatda quyidagicha: kesish va tozalash → shovqinni kamaytirish → ekvalayzer va kompressor → me'yorlash → fade → musiqa bilan aralashtirish → eksport. Audacity loyihasi alohida loyiha faylida saqlanadi, tayyor natija esa «Eksport» orqali WAV yoki MP3 ga chiqariladi.
+**Mualliflik huquqi.** Boshqalarning musiqasi va yozuvlaridan faqat litsenziya ruxsat bergan holda foydalaniladi: mualliflik huquqisiz yoki Creative Commons litsenziyali kutubxonalardagi musiqa (shartlariga rioya qilib, masalan, muallifni ko'rsatib), video dasturlarining ichki kutubxonalari yoki o'zingiz yaratgan musiqa. Odamning ovozini uning roziligisiz yozib olish va tarqatish mumkin emas.
+Xulosa: raqamli tovush sifati va hajmi diskretlash chastotasi, bit chuqurligi, kanallar soni va siqish turiga bog'liq; tahrirda WAV, tarqatishda MP3 yoki AAC ishlatiladi; audio muharrirda yozuv kesiladi, tozalanadi, me'yorlanadi va maqsadga mos formatda eksport qilinadi.
+
+keys: Texnikum radiosi uchun e'lon
+vaziyat: O'quvchi texnikum radiosi uchun 40 soniyalik e'lonni telefonda, oshxona yonidagi koridorda yozib oldi. Eshittirilganda ovoz juda past, fonda idish-tovoq va gaplashayotgan odamlar eshitiladi, ayrim so'zlarda xirillash bor, e'lon esa keskin boshlanib, keskin uzilib qoladi. O'quvchi ovozni kuchaytirish uchun effektni uch marta qo'lladi, lekin xirillash yanada kuchaydi.
+ksavol: Xirillash va fon shovqinining sababi nima?
+ksavol: Nima uchun bir necha marta kuchaytirish natija bermadi?
+ksavol: E'lonni qanday qilib qayta yozish va tahrirlash kerak?
+kjavob: Xirillash — kliping (yozishda ba'zi so'zlar juda baland aytilgan yoki keyin haddan tashqari kuchaytirilgan); fon shovqini — joy noto'g'ri tanlangan. Kuchaytirish shovqinni ham, buzilishni ham kuchaytiradi, kesilgan cho'qqilarni esa tiklamaydi. Yechim: tinch xonada, mikrofonni 10–20 sm masofada ushlab, darajani −12…−6 dB da qilib qayta yozish; boshida 2–3 soniya jimlik qoldirish; shovqinni kamaytirish, me'yorlash (−1 dB), boshida va oxirida fade qo'llash; WAV da tahrirlab, MP3 128 kbit/s da eksport qilish.
+savol: Diskretlash chastotasi va bit chuqurligi nima? Ular sifatga qanday ta'sir qiladi?
+savol: Kliping nima va undan qanday saqlanish mumkin?
+savol: WAV, FLAC va MP3 formatlarining farqini tushuntiring.
+savol: Siqilmagan audio fayl hajmi qanday hisoblanadi?
+savol: Shovqinni kamaytirish effekti qanday bosqichlarda qo'llanadi?
+savol: Me'yorlash va kuchaytirish o'rtasidagi farq nimada?
+amaliy: Ovozli e'lonni yozib olish va tahrirlash
+amaqsad: Audacity dasturida 30–40 soniyalik e'lonni yozib olish, uni kesish, shovqinni kamaytirish, me'yorlash va fade effektlari bilan tahrirlash, WAV va MP3 formatlarida eksport qilib, hajmlarni taqqoslash.
+ajihoz: Kompyuter; Audacity; mikrofon yoki garnitura; quloqchin; e'lon matni yozilgan varaq
+qadam: Audacity'da yozish qurilmasi (mikrofon), mono kanal va 44 100 Hz loyiha chastotasini tanlang; 5 soniyalik sinov yozuvi qilib, daraja indikatori −12…−6 dB atrofida ekanini tekshiring.
+qadam: Boshida 3 soniya jim turib, 30–40 soniyalik e'lon matnini yozib oling.
+qadam: Xato aytilgan so'zlar va uzun pauzalarni kesib tashlang; ortiqcha joylarni o'chiring.
+qadam: Boshidagi jim qismni tanlab shovqin profilini oling va butun yozuvga shovqinni kamaytirish effektini qo'llang; natijani eshitib, sozlamani me'yorida qoldiring.
+qadam: Yozuvni −1 dB ga me'yorlang; boshiga 1 soniyalik fade in, oxiriga 2 soniyalik fade out qo'llang.
+qadam: Loyihani saqlang, so'ng natijani WAV (16 bit) va MP3 (128 kbit/s) formatlarida eksport qiling.
+qadam: Ikkala fayl hajmini yozing, hisoblangan hajm bilan solishtiring va eshitilish farqi haqida xulosa yozing.
+anatija: Tahrirlangan e'lon (WAV va MP3 fayllar), qo'llangan amallar ro'yxati, hajmlarni taqqoslash va xulosa.
+baho5: Yozuv aniq va kliping yo'q, shovqin sezilarli kamaytirilgan va ovoz buzilmagan, me'yorlash va fade to'g'ri qo'llangan, ikkala eksport bajarilgan va hajmlar to'g'ri tahlil qilingan.
+masala: 2 daqiqalik stereo yozuv 44 100 Hz va 16 bit bilan WAV formatida saqlandi. Fayl hajmini MB da toping.
+yechim: 44 100 · 16 · 2 · 120 = 169 344 000 bit = 21 168 000 bayt ≈ 20,2 MB (1 MB = 1 048 576 bayt).
+masala: Xuddi shu yozuv MP3 128 kbit/s formatida saqlansa, hajmi qancha bo'ladi va WAV dan necha marta kichik?
+yechim: 128 · 120 = 15 360 kbit = 1920 KB ≈ 1,9 MB. 21 168 000 : 1 920 000 ≈ 11 — taxminan 11 marta kichik.
+test: Bir sekunddagi o'lchovlar soni qanday ataladi? | Diskretlash chastotasi | Bit chuqurligi | Bitreyt | Amplituda
+test: Signal 0 dBFS dan oshib, to'lqin cho'qqilari kesilishi nima deyiladi? | Kliping | Me'yorlash | Fade out | Ekvalayzer
+test: Yo'qotishsiz siqilgan audio formatni toping. | FLAC | MP3 | AAC | Opus
+test: Butun yozuvning eng baland cho'qqisini belgilangan darajaga keltiradigan amal? | Me'yorlash (normalizatsiya) | Shovqinni kamaytirish | Teskari ijro | Kompressor
+test: Ish jarayonida (tahrir uchun) qaysi format tavsiya etiladi? | WAV | MP3 32 kbit/s | GIF | Opus 16 kbit/s
+uyga: Mavzuni konspekt qiling. Telefoningizdagi 3 ta audio faylning (ovozli xabar, qo'shiq, diktofon yozuvi) formati, davomiyligi va hajmini aniqlab, bitreytini hisoblang va qaysi biri yo'qotishli siqilganini yozing.
+gloss: Diskretlash chastotasi | Analog signal bir sekundda necha marta o'lchanishi (44,1 kHz, 48 kHz).
+gloss: Bit chuqurligi | Har bir o'lchov qiymatini yozish uchun ishlatiladigan bitlar soni (16, 24 bit).
+gloss: Kliping | Signal ruxsat etilgan eng yuqori darajadan oshib, to'lqin cho'qqilari kesilishi natijasidagi buzilish.
+gloss: Yo'qotishli siqish | Qulog'i sezmaydigan tovush ma'lumotlarini olib tashlab, hajmni kichraytiruvchi siqish (MP3, AAC).
+gloss: Me'yorlash | Yozuv balandligini eng baland cho'qqi belgilangan darajaga yetadigan qilib o'zgartirish.
+gloss: Fade in / fade out | Ovozning boshida asta kuchayishi va oxirida asta so'nishi effekti.
+gloss: To'lqin shakli | Tovush amplitudasining vaqt bo'yicha grafik tasviri.

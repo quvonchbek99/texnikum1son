@@ -1,0 +1,66 @@
+nomi: Vektorli va rastrli tasvirlar. Guruhlash va biriktirish. Aylantirish va joylashtirish. Transformatsiya va tanlash uskunalari
+modul: 6-modul
+ac: 6.1 Rastrli va vektorli tasvirlarni tuzilishi, formati va qo'llanishi bo'yicha farqlaydi; vektorli muharrirda tanlash, transformatsiya (ko'chirish, masshtab, aylantirish, ko'zgu), tekislash, guruhlash va shakllarni biriktirish (birlashtirish, ayirish, kesishma) uskunalaridan foydalanib emblema yaratadi va mos formatda eksport qiladi.
+maqsad: O'quvchilarda rastrli va vektorli grafikaning farqi, grafik fayl formatlari va vektorli muharrirning asosiy uskunalari haqida bilim hosil qilish, obyektlarni tanlash, transformatsiya qilish, tekislash, guruhlash va biriktirish orqali oddiy emblema yaratish ko'nikmasini shakllantirish.
+natija: rastrli va vektorli tasvirlarni tuzilishi, masshtablash, hajm va qo'llanish bo'yicha taqqoslaydi;
+natija: rastrli tasvir hajmini va chop etish uchun kerakli ruxsatni hisoblaydi;
+natija: tanlash va tugunlarni tahrirlash uskunalaridan foydalanadi;
+natija: obyektlarni ko'chiradi, masshtablaydi, aylantiradi, ko'zgu kabi aks ettiradi va aniq qiymatlar bilan joylashtiradi;
+natija: obyektlarni tekislaydi, guruhlaydi va mantiqiy amallar bilan biriktiradi, natijani SVG va PNG formatlarida eksport qiladi.
+reja: Rastrli va vektorli tasvirlar
+reja: Tanlash va transformatsiya uskunalari
+reja: Tekislash, guruhlash va shakllarni biriktirish
+tayanch: rastrli tasvir; piksel; ruxsat; DPI; rang chuqurligi; vektorli tasvir; obyekt; kontur; to'ldirish; Bezye egri chizig'i; tugun; tanlash uskunasi; transformatsiya; masshtablash; aylantirish markazi; ko'zgu aks; tekislash va taqsimlash; guruhlash; birlashtirish; ayirish; kesishma; SVG; PNG
+metod: Kattalashtirish tajribasi | Bitta logotipning PNG (rastrli) va SVG (vektorli) variantlari ekranda 800 % gacha kattalashtiriladi; o'quvchilar qaysi biri «zinapoya» bo'lib qolishini va nima uchunligini tushuntiradi.
+metod: Ko'rsatib-takrorlash | O'qituvchi har bir uskunani qisqa namoyish qiladi, o'quvchilar shu zahoti o'z kompyuterida takrorlaydi va keyingi bosqichga o'tadi.
+ajihoz: Kompyuter; vektorli grafik muharrir (bepul Inkscape); rastrli muharrir (bepul GIMP, ixtiyoriy); namunaviy PNG va SVG fayllar; proyektor
+
+## Rastrli va vektorli tasvirlar
+**Rastrli tasvir** piksellar to'ridan iborat: har bir piksel o'z rangiga ega. Fotosuratlar, skanerlangan hujjatlar va ekran rasmlari rastrli bo'ladi. Uning sifati **ruxsat**ga (piksellar soni) bog'liq: kichik rasm kattalashtirilsa, piksellar ko'rinib, chegaralar «zinapoya» bo'lib qoladi. Chop etishda **DPI** (dyuymdagi nuqtalar) muhim: sifatli chop etish uchun odatda 300 DPI kerak. Hajm = eni (piksel) × bo'yi × bir piksel uchun bayt (24 bitli rangda 3 bayt); siqilgan formatlarda hajm ancha kichik. Formatlar: JPEG (fotosuratlar, yo'qotishli siqish), PNG (sxema va skrinshotlar, shaffof fon, yo'qotishsiz), GIF (oddiy animatsiya, 256 rang), WebP (veb uchun), TIFF (bosmaxona). Dasturlar: GIMP, Krita, Photoshop.
+**Vektorli tasvir** geometrik obyektlar — chiziqlar, egri chiziqlar (Bezye egri chiziqlari), shakllar va matnlar matematik tavsifidan iborat. Har bir obyektning **konturi** (chizig'i) va **to'ldirishi** bor, egri chiziqlar esa **tugunlar** orqali boshqariladi. Kompyuter tasvirni har safar formulalar asosida qayta chizadi, shuning uchun u istalgan o'lchamda sifatini yo'qotmaydi va fayl hajmi odatda kichik. Logotiplar, ikonkalar, sxemalar, chizmalar, banner va yozuvlar uchun ishlatiladi; real fotosuratlarni esa vektor bilan ifodalash qiyin. Formatlar: SVG (veb standarti), PDF, EPS, AI, DXF. Dasturlar: Inkscape, Illustrator, CorelDRAW.
+jadval: Rastrli va vektorli tasvirlarni taqqoslash
+| Ko'rsatkich | Rastrli | Vektorli |
+| Tuzilishi | Piksellar to'ri | Geometrik obyektlar va formulalar |
+| Kattalashtirish | Sifat yo'qoladi | Sifat saqlanadi |
+| Fayl hajmi | Ruxsatga bog'liq, ko'pincha katta | Odatda kichik |
+| Mos keladi | Fotosurat, murakkab ranglar | Logotip, ikonka, sxema, matn |
+| Formatlar | JPEG, PNG, GIF, WebP, TIFF | SVG, PDF, EPS, AI |
+Vektorni rastrga o'tkazish oson (eksport); rastrni vektorga aylantirish (**vektorlash**) esa avtomatik bajarilganda ko'pincha soddalashtirilgan natija beradi.
+
+## Tanlash va transformatsiya uskunalari
+Inkscape misolida: **tanlash uskunasi** (strelka) obyektni bosib tanlaydi; Shift bilan bir nechta obyekt qo'shiladi, sichqoncha bilan ramka chizib bir nechta obyekt birdan tanlanadi; Alt bilan ustma-ust turgan obyektlar orasida tanlanadi. **Tugunlarni tahrirlash uskunasi** shakl tugunlari va egri chiziq «dastaklari»ni o'zgartiradi. Tanlangan obyekt atrofidagi strelkalarni tortish **masshtablash**ga olib keladi (Ctrl bilan proporsiya saqlanadi); obyektni ikkinchi marta bossangiz, strelkalar **aylantirish** va qiyshaytirish rejimiga o'tadi, markazdagi belgi esa **aylantirish markazi** — uni boshqa joyga surish mumkin; Ctrl bilan aylantirish 15° qadam bilan bajariladi. Gorizontal va vertikal **ko'zgu aks** (H va V tugmalari) obyektni teskari aylantiradi. Aniq qiymatlar uchun **Transformatsiya paneli**dan foydalaniladi: ko'chirish (mm), masshtab (%), aylantirish (gradus), qiyshaytirish; yuqori paneldagi X, Y, kenglik va balandlik maydonlari obyektni aniq joylashtiradi.
+
+## Tekislash, guruhlash va shakllarni biriktirish
+**Tekislash va taqsimlash** paneli obyektlarni bir-biriga, sahifaga yoki tanlangan obyektga nisbatan chap, markaz, o'ng, yuqori yoki pastga tekislaydi va ular orasidagi masofani teng taqsimlaydi. **Guruhlash** (Ctrl+G) bir nechta obyektni bitta yaxlit obyekt kabi ko'chirish va o'zgartirish imkonini beradi, guruhdan chiqarish (Shift+Ctrl+G) ularni yana ajratadi; ichidagi bitta obyektni Ctrl bilan bosib tahrirlash mumkin. Obyektlarning qaysi biri oldinda ekanini **z-tartib** belgilaydi (Page Up — oldinga, Page Down — orqaga). **Shakllarni biriktirish** (mantiqiy amallar) yangi shakl yaratadi: **birlashtirish** — ikki shaklning umumiy konturi; **ayirish** — pastki shakldan ustidagisini kesib olish (masalan, doiradan teshik); **kesishma** — faqat umumiy qism qoladi. Guruhlashda obyektlar alohida qoladi, birlashtirishda esa bitta yangi shakl hosil bo'ladi.
+
+amaliy: Vektorli muharrirda emblema yaratish
+amaqsad: Inkscape'da guruh yoki kasb to'garagi uchun emblema yaratish: shakllarni chizish, aniq transformatsiya, aylantirish markazi atrofida takrorlash, tekislash, guruhlash va mantiqiy amallar bilan biriktirish; natijani SVG va PNG formatlarida eksport qilib, rastrli va vektorli variantlarni taqqoslash.
+qadam: Hujjat o'lchamini 100 × 100 mm qiling; markazda 60 mm diametrli doira chizing va Transformatsiya paneli yordamida uni sahifa markaziga aniq joylashtiring.
+qadam: Tishli g'ildirak yasang: kichik to'rtburchak «tish» chizing, aylantirish markazini doira markaziga suring, nusxa olib (Ctrl+D) 30° ga aylantirishni 11 marta takrorlang; barcha tishlar va doirani birlashtiring.
+qadam: Markazda kichikroq doira chizib, ayirish amali bilan g'ildirakda teshik oching; kasbingizga oid oddiy belgi (kalit, olov, igna, chaqmoq) qo'shing va kesishma yoki birlashtirish amalini sinab ko'ring.
+qadam: Emblema ostiga matn (guruh yoki to'garak nomi) yozing, barcha elementlarni Tekislash paneli bilan markazga tekislang va guruhlang.
+qadam: Ranglarni 2–3 ta bilan cheklang va oq-qora variantini ham tayyorlang (faqat qora kontur va to'ldirish).
+qadam: Emblemani SVG va PNG (64 px va 1024 px) formatlarida eksport qiling; fayllar hajmini yozing va 64 px PNG ni 800 % kattalashtirib, SVG bilan taqqoslang.
+qadam: Ishlatilgan uskunalar ro'yxatini va rastrli hamda vektorli variantlar farqi haqida 3–4 gaplik xulosa yozing.
+anatija: Guruhlangan vektorli emblema (rangli va oq-qora), SVG va ikki o'lchamdagi PNG fayllar, hajmlar va sifat taqqoslanishi, uskunalar ro'yxati va xulosa.
+baho5: Shakllar aniq o'lcham va joylashuvda, tishlar teng burchak bilan takrorlangan, mantiqiy amallar to'g'ri qo'llangan, elementlar tekislangan va guruhlangan, eksport talabga mos va taqqoslash asoslangan.
+masala: 1920×1080 pikselli 24 bitli rastrli tasvir siqilmagan holda qancha joy egallaydi?
+yechim: 1920 · 1080 · 3 bayt = 6 220 800 bayt ≈ 5,9 MB (1 MB = 1 048 576 bayt).
+masala: 10 × 15 sm lik fotosuratni 300 DPI sifatda chop etish uchun tasvir necha pikselli bo'lishi kerak? (1 dyuym = 2,54 sm)
+yechim: 10 : 2,54 ≈ 3,94 dyuym · 300 ≈ 1181 piksel; 15 : 2,54 ≈ 5,91 dyuym · 300 ≈ 1772 piksel. Kamida taxminan 1181 × 1772 piksel.
+savol: Rastrli va vektorli tasvirlarning farqi nimada? Har biri qachon ishlatiladi?
+savol: Nima uchun logotipni vektorli formatda saqlash kerak?
+savol: Obyektni aniq burchakka va belgilangan nuqta atrofida qanday aylantirish mumkin?
+savol: Guruhlash va birlashtirish amallarining farqi nimada?
+test: Kattalashtirilganda sifatini yo'qotmaydigan tasvir turi? | Vektorli | Rastrli | Skanerlangan | JPEG fotosurat
+test: Veb uchun vektorli grafika standarti bo'lgan format? | SVG | JPEG | BMP | MP3
+test: Inkscape'da obyektlarni guruhlash tugmalari? | Ctrl+G | Ctrl+P | Ctrl+S | Ctrl+Z
+test: Pastki shakldan ustidagi shaklni kesib olish amali? | Ayirish | Birlashtirish | Kesishma | Guruhlash
+test: Shaffof fonli, sifat yo'qotmasdan siqiladigan rastrli format? | PNG | JPEG | MP4 | DOCX
+uyga: Misol va mashqlar: telefoningizdagi bitta fotosuratning o'lchami (piksel) va hajmini aniqlang, siqilmagan holdagi hajmini hisoblab solishtiring. Inkscape'da 3 ta oddiy ikonka (uy, telefon, xat) yasang — har biri kamida bitta mantiqiy amal bilan.
+gloss: Rastrli tasvir | Har biri o'z rangiga ega piksellar to'ridan iborat tasvir.
+gloss: Vektorli tasvir | Geometrik obyektlarning matematik tavsifidan iborat, sifat yo'qotmasdan masshtablanadigan tasvir.
+gloss: DPI | Chop etishda bir dyuymga to'g'ri keladigan nuqtalar (piksellar) soni.
+gloss: Tugun | Vektorli egri chiziq yoki shaklning shaklini boshqaruvchi nuqta.
+gloss: Guruhlash | Bir nechta obyektni bitta yaxlit obyekt kabi boshqarish uchun birlashtirish (obyektlar alohida qoladi).
+gloss: Shakllarni biriktirish | Birlashtirish, ayirish, kesishma kabi mantiqiy amallar bilan ikki shakldan yangi shakl yasash.

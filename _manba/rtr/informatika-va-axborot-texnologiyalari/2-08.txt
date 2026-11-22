@@ -1,0 +1,104 @@
+nomi: Avtomatlashtirilgan tarjima. Golografik tasvirlash. Robototexnika
+modul: 4-modul
+ac: 4.8 Avtomatlashtirilgan tarjima, golografik tasvirlash va robototexnikaning ishlash tamoyili, qo'llanishi, afzallik va cheklovlarini tushuntiradi; ularning kasb va jamiyatga ta'sirini baholaydi.
+maqsad: O'quvchilarda mashina tarjimasi turlari va undan to'g'ri foydalanish, gologramma va golografik tasvirlash texnologiyalari, robotlarning tuzilishi, turlari va qo'llanishi haqida bilim hosil qilish, yangi texnologiyalarning afzallik va xavflarini tanqidiy baholash ko'nikmasini shakllantirish.
+natija: qoidaga asoslangan, statistik va neyron mashina tarjimasini farqlaydi, tarjima sifatini tekshirish usullarini qo'llaydi;
+natija: gologramma qanday hosil bo'lishini va uning oddiy fotosuratdan farqini tushuntiradi;
+natija: golografik texnologiyalarning himoya belgilari, tibbiyot, ta'lim va reklamadagi qo'llanishiga misollar keltiradi;
+natija: robot tarkibiy qismlarini (datchiklar, boshqaruv tizimi, ijro mexanizmlari) va turlarini tushuntiradi;
+natija: robototexnika va avtomatlashtirishning ishlab chiqarish va mehnat bozoriga ta'sirini baholaydi.
+reja: Avtomatlashtirilgan (mashina) tarjima
+reja: Golografik tasvirlash
+reja: Robototexnika: tuzilishi va turlari
+reja: Robotlar va avtomatlashtirishning jamiyatga ta'siri
+tayanch: mashina tarjimasi; neyron mashina tarjimasi; kontekst; post-tahrir; teskari tarjima; gologramma; lazer; interferensiya; himoya gologrammasi; robot; datchik (sensor); kontroller; ijro mexanizmi (aktuator); manipulyator; kobot; dron; avtomatlashtirish
+metod: Tarjima tajribasi | O'quvchilar o'zbekcha maqol va kasbiy gapni mashina tarjimonida ingliz tiliga, so'ng qaytadan o'zbekchaga o'giradi va ma'no qanday o'zgarganini muhokama qiladi.
+metod: Rasm tahlili | Banknot, bank kartasi yoki hujjatdagi himoya gologrammasi rasmini turli burchakdan ko'rib, oddiy surat bilan farqi aniqlanadi.
+metod: Klaster | «Robot qayerda ishlaydi?» klasteri tuziladi: sanoat, uy, tibbiyot, qishloq xo'jaligi, qutqaruv, transport bo'yicha misollar va har biridagi datchiklar yoziladi.
+jihoz: Kompyuter va proyektor; internet; mashina tarjimoni (ochiq xizmat); himoya gologrammasi namunalari yoki rasmlari; robot va dron videolari; taqdimot
+
+## 1. Avtomatlashtirilgan (mashina) tarjima
+**Mashina tarjimasi** — matn yoki nutqni bir tildan boshqasiga kompyuter dasturi yordamida avtomatik o'girish. Ilgari faqat tarjimon yoki lug'at orqali bajariladigan bu ish bugun telefon ilovasida bir zumda bajariladi: matnni nusxalab joylash, butun veb-sahifani tarjima qilish, kamera orqali menyu yoki ko'rsatkichdagi yozuvni o'girish, gapirilgan nutqni boshqa tilda ovoz chiqarib aytish, video va onlayn darslarga avtomatik subtitr qo'shish mumkin.
+Mashina tarjimasi uch bosqichda rivojlangan:
+jadval: Mashina tarjimasi yondashuvlari
+| Yondashuv | Qanday ishlaydi | Afzalligi | Kamchiligi |
+| Qoidaga asoslangan | Tilshunoslar lug'at va grammatika qoidalarini qo'lda yozadi | Atamalarni bir xil tarjima qiladi | Qoidalar juda ko'p, gaplar «sun'iy» chiqadi |
+| Statistik | Ikki tildagi millionlab parallel matnlardan so'z va iboralar mosligi ehtimoli hisoblanadi | Qoidalarni qo'lda yozish shart emas | Gapni bo'laklab tarjima qiladi, bog'lanish buziladi |
+| Neyron (NMT) | Neyron tarmoq butun gapni va kontekstni hisobga olib tarjima qiladi | Tabiiy va ravon matn | Ba'zan ishonarli, lekin noto'g'ri tarjima; kam resursli tillarda sifat pastroq |
+Bugungi tarjimonlar asosan **neyron mashina tarjimasi**dan foydalanadi: model gapning boshidan oxirigacha bo'lgan bog'lanishni ko'radi va ko'pincha tabiiy matn yaratadi. Shunga qaramay, uning cheklovlari bor:
+- **kontekst va ko'p ma'nolilik**: «kalit» so'zi eshik kaliti, gayka kaliti yoki yechim kaliti bo'lishi mumkin; model har doim to'g'risini tanlamaydi;
+- **maqol, ibora va hazil** so'zma-so'z o'girilsa, ma'nosi yo'qoladi;
+- **kasbiy atamalar** (texnik, tibbiy, huquqiy) noto'g'ri yoki noaniq tarjima qilinishi mumkin;
+- **kam resursli tillar**: internetda matni ko'p bo'lgan tillar (ingliz, rus, xitoy) juftligida sifat yuqori, o'zbek kabi tillarda esa ancha past bo'lishi mumkin; lotin va kirill yozuvlari aralashganda xatolar ko'payadi;
+- **maxfiylik**: tarjimonga kiritilgan shartnoma, tibbiy yoki shaxsiy ma'lumotlar xizmat serverlariga yuboriladi.
+**Nutq tarjimasi** uch bosqichdan iborat: avval nutq matnga aylantiriladi (nutqni tanish), so'ng matn tarjima qilinadi, oxirida tarjima sintez qilingan ovozda aytiladi. Har bir bosqichda xato qo'shilishi mumkin: shovqinli joyda yoki sheva bilan gapirilganda nutq noto'g'ri tanilsa, tarjima ham noto'g'ri chiqadi. Shunga qaramay, sayohatda, xalqaro uchrashuvlarda va chet tilidagi videolarni tushunishda bunday tizimlar juda foydali.
+**To'g'ri foydalanish:** matnni qisqa, aniq va grammatik to'g'ri gaplar bilan yozing; natijani **teskari tarjima** (asl tilga qaytarib o'girish) bilan tekshiring; muhim hujjatlarni (shartnoma, yo'riqnoma, tibbiy ko'rsatma) tarjimon yoki mutaxassis tahririsiz ishlatmang — mashina tarjimasini inson tomonidan tuzatish **post-tahrir** deyiladi; tashkilotlarda atamalar lug'ati (glossariy) tuzilib, tarjimada bir xil atamalar ishlatiladi. Mashina tarjimasi tarjimon kasbini yo'q qilmaydi, balki uning ishini tezlashtiradi: endi tarjimon ko'proq tahrirlovchi va sifat nazoratchisi vazifasini bajaradi.
+
+## 2. Golografik tasvirlash
+Oddiy fotosurat yorug'likning faqat **kuchini** (qaysi nuqta qanchalik yorug') yozadi va tasvir tekis bo'ladi. **Gologramma** esa yorug'lik to'lqinining ham kuchini, ham **fazasini** (to'lqin qaysi holatda kelganini) qayd etadi. Buning uchun **lazer** nuri ikkiga bo'linadi: bir qismi buyumdan qaytib, ikkinchisi to'g'ridan-to'g'ri maxsus plastinkaga tushadi; ikki nurning ustma-ust tushishi (**interferensiya**) natijasida plastinkada mikroskopik naqsh hosil bo'ladi. Bu naqsh yoritilganda kuzatuvchi buyumning hajmli tasvirini ko'radi va bosh harakatlanganda uning yon tomonlarini ham ko'radi — xuddi buyum o'sha yerda turgandek.
+**Qo'llanish sohalari:**
+- **himoya belgilari** — banknotlar, bank kartalari, pasport va ID-kartalar, aksiz markalari, brend mahsulotlar qadog'idagi gologrammalarni qalbakilashtirish juda qiyin, chunki ular maxsus uskunada yaratiladi va burchak o'zgarganda tasvir o'zgaradi;
+- **tibbiyot va ta'lim** — a'zolar, molekulalar va mexanizmlarning hajmli tasvirlari bilan tushuntirish, jarrohlikni rejalash;
+- **muzey va madaniyat** — noyob eksponatlarning golografik nusxalari;
+- **muhandislik** — golografik interferometriya yordamida detallarning juda kichik deformatsiyalarini aniqlash;
+- **ma'lumot saqlash** — golografik xotira (ma'lumotni kristall hajmida yozish) bo'yicha izlanishlar olib borilmoqda;
+- **reklama va ko'ngilochar sohalar** — sahnadagi «gologramma» ko'rinishidagi ijrochilar, do'kon vitrinalaridagi aylanuvchi tasvirlar.
+Shuni bilish kerakki, kundalik hayotda «gologramma» deb ataladigan ko'p narsalar aslida haqiqiy gologramma emas, balki optik illyuziya: sahnada shaffof oyna yoki plyonkaga proyeksiya qilingan tasvir, tez aylanadigan svetodiodli parraklar, smartfon ustiga qo'yiladigan plastik piramida. Ular ham hajm taassurotini beradi, lekin yorug'lik fazasi qayd etilmaydi. Haqiqiy hajmli displeylar va golografik videoqo'ng'iroqlar hozircha qimmat va tajriba bosqichida: ular katta hisoblash quvvati va maxsus uskunani talab qiladi. Ehtimol, yaqin yillarda ular masofaviy ta'lim, tibbiy maslahat va muhandislik loyihalarini muhokama qilishda kengroq qo'llana boshlaydi.
+
+## 3. Robototexnika: tuzilishi va turlari
+**Robot** — atrof-muhit haqida ma'lumot olib, dastur asosida qaror qabul qiladigan va jismoniy harakatni avtomatik bajaradigan qurilma. **Robototexnika** — robotlarni loyihalash, yasash, dasturlash va ishlatish bilan shug'ullanadigan fan va texnika sohasi; u mexanika, elektronika va informatikani birlashtiradi.
+Har qanday robot to'rt asosiy qismdan iborat:
+- **datchiklar (sensorlar)** — «sezgi a'zolari»: kamera, masofa (ultratovush, infraqizil, lazer) datchiklari, harorat, bosim, tegish, yorug'lik datchiklari, giroskop va akselerometr, GPS;
+- **boshqaruv tizimi (kontroller)** — «miya»: mikrokontroller yoki kompyuter datchiklardan kelgan ma'lumotni dastur bo'yicha qayta ishlaydi va buyruq beradi;
+- **ijro mexanizmlari (aktuatorlar)** — «mushaklar»: elektr motorlar, servoprivodlar, gidravlik va pnevmatik silindrlar, **manipulyator** (robot qo'li) va uning ushlagichi (griper);
+- **quvvat manbai** — akkumulyator, elektr tarmog'i yoki siqilgan havo.
+Robot ishlashi doimiy sikldan iborat: datchik o'lchaydi → kontroller qaror qabul qiladi → aktuator harakat qiladi → datchik natijani qayta o'lchaydi. Masalan, robot-changyutgich devorga yaqinlashganini masofa datchigi bilan sezadi va burilish buyrug'ini bajaradi.
+Robotlar turli usulda dasturlanadi. Sanoat robotiga operator maxsus boshqaruv pulti yordamida harakat nuqtalarini birma-bir «o'rgatadi», robot esa ularni keyin aniq takrorlaydi. Murakkab tizimlarda robot dasturi kompyuterda, uning virtual modeli ustida yoziladi va sinab ko'riladi, so'ng haqiqiy robotga yuklanadi. O'quv robotlarida esa bloklar bilan dasturlash muhitlari yoki mikrokontroller uchun oddiy dasturlash tillari ishlatiladi: masalan, «agar old tomondagi masofa 20 sm dan kam bo'lsa — to'xta va o'ngga buril, aks holda — oldinga yur» degan qoida bir necha qator kod bilan yoziladi.
+**Robotlar turlari:**
+- **sanoat robotlari** — avtomobil zavodlarida payvandlash, bo'yash, yig'ish, qadoqlash; ular aniq, charchamaydi va xavfli muhitda ishlaydi, lekin odatda to'siq bilan o'ralgan zonada ishlaydi;
+- **kobotlar** (hamkor robotlar) — inson yonida xavfsiz ishlashga mo'ljallangan, tegish sezilganda to'xtaydigan yengil robotlar; kichik korxonalarda ham qo'llanadi;
+- **xizmat robotlari** — robot-changyutgichlar, restoran va mehmonxonalarda taom tashuvchi, omborlarda yuk tashuvchi robotlar;
+- **tibbiy robotlar** — jarrohning harakatini aniq va kichik masshtabda takrorlaydigan jarrohlik tizimlari, reabilitatsiya ekzoskeletlari, dorixona robotlari;
+- **dronlar** (uchuvchisiz uchish apparatlari) — suratga olish, qishloq xo'jaligida maydonlarni kuzatish va ishlov berish, yetkazib berish, qutqaruv ishlari;
+- **avtonom transport** — o'zi harakatlanadigan avtomobillar va yuk tashuvchi aravachalar;
+- **qidiruv-qutqaruv va tadqiqot robotlari** — vayronalar ostida, suv ostida, boshqa sayyoralarda ishlaydigan qurilmalar;
+- **ta'lim robotlari** — konstruktorlar va mikrokontroller platalari yordamida dasturlashni o'rganish uchun.
+
+## 4. Robotlar va avtomatlashtirishning jamiyatga ta'siri
+**Afzalliklar:** xavfli, og'ir va zerikarli ishlarni insondan oladi; mahsulot sifati va aniqligi bir xil bo'ladi; ishlab chiqarish 24 soat davom etishi mumkin; inson qo'li yetmaydigan joylarda (radiatsiya, chuqur suv, kosmos) ishlaydi; tibbiyotda kamroq jarohat bilan operatsiya qilish imkonini beradi.
+**Kamchiliklar va muammolar:** robotlar va ularni o'rnatish qimmat; texnik xizmat va dasturlash uchun malakali mutaxassislar kerak; nosozlik butun ishlab chiqarishni to'xtatishi mumkin; oddiy takroriy ishlardagi ish o'rinlari qisqaradi; avtonom tizim xato qilganda javobgarlik masalasi murakkab; harbiy maqsadlarda ishlatilishi axloqiy bahslarga sabab bo'lmoqda.
+Avtomatlashtirish natijasida ish o'rinlari yo'qolibgina qolmay, o'zgaradi: robotlarni sozlaydigan, dasturlaydigan, ta'mirlaydigan operator va texniklar, ma'lumotlarni tahlil qiladigan mutaxassislarga talab ortadi. Masalan, payvandchi robotlashgan liniyada robot dasturini va payvand sifatini nazorat qilishni o'rganadi; avtomobil ustasi elektron diagnostika bilan ishlaydi. Shuning uchun texnik bilim, raqamli savodxonlik va doimiy o'qish odati kelajak kasblari uchun asosiy talabga aylanmoqda.
+jadval: Avtomatlashtirish va kasblar: misollar
+| Soha | Avtomatlashtirilgan ish | Yangi talab qilinadigan ko'nikma |
+| Avtomobil servisi | Kompyuter diagnostikasi, g'ildirak muvozanatini avtomatik o'lchash | Diagnostika dasturlari va elektron tizimlar bilan ishlash |
+| Oshxona | Dasturlanadigan pechlar, avtomatik idish yuvish, onlayn buyurtma | Uskunalarni sozlash, retsept va mahsulot hisobini dasturda yuritish |
+| Tikuv | Avtomatik bichish, dasturlanadigan kashta mashinalari | Kompyuterda andoza chizish, uskuna dasturini tayyorlash |
+| Elektr montaj | Aqlli hisoblagichlar, avtomatik himoya va boshqaruv tizimlari | Kontrollerlarni dasturlash, masofaviy monitoring |
+Robot bilan ishlashda xavfsizlik qoidalari: ishlayotgan sanoat robotining zonasiga kirmaslik, favqulodda to'xtatish tugmasi joyini bilish, ta'mirlashdan oldin quvvatni o'chirib, qayta yoqilishdan himoyalash, dronlarni belgilangan qoidalar va ruxsatlar asosida uchirish.
+Xulosa: neyron mashina tarjimasi tez va qulay, lekin muhim matnlarda inson tekshiruvini talab qiladi; gologramma yorug'lik to'lqinining kuchi va fazasini yozib, hajmli tasvir hosil qiladi va himoya belgilaridan tibbiyotgacha qo'llanadi; robot datchiklar, boshqaruv tizimi va ijro mexanizmlari yordamida dastur asosida ishlaydi va ishlab chiqarish hamda xizmat ko'rsatishni o'zgartirmoqda.
+
+keys: Mashina tarjimasidagi yo'riqnoma
+vaziyat: Tikuv sexi chet eldan sanoat tikuv mashinasini sotib oldi. Yo'riqnoma faqat ingliz tilida bo'lgani uchun usta uni mashina tarjimonida o'zbekchaga o'girib, chop etib, xodimlarga tarqatdi. Tarjimada «needle bar» — «igna bar», «thread take-up lever» — «ip olib chiqish dastagi», «disconnect the power supply before servicing» esa «xizmatdan oldin elektr ta'minotini uzib qo'ying» deb chiqdi; bir joyda «do not» so'zi tushib qolgan va ogohlantirish teskari ma'noga ega bo'lib qolgan.
+ksavol: Bu tarjimada qanday xavf bor?
+ksavol: Nima uchun texnik atamalar noto'g'ri tarjima qilingan?
+ksavol: Yo'riqnomani xavfsiz va tushunarli qilish uchun qanday ish tartibini taklif qilasiz?
+kjavob: Eng katta xavf — tushib qolgan inkor tufayli xavfsizlik ogohlantirishi teskari ma'noga ega bo'lgan; xodim jarohat olishi mumkin. Texnik atamalar kontekstsiz, so'zma-so'z o'girilgan, chunki tarjimonda tikuv sohasining atamalar lug'ati yo'q. Ish tartibi: avval atamalar lug'atini tuzish (igna yuritgich, ip tortgich va h.k.); mashina tarjimasini xavfsizlik bo'limlaridan boshlab mutaxassis yoki ingliz tilini biladigan usta bilan post-tahrir qilish; teskari tarjima bilan tekshirish; ogohlantirishlarni asl matn bilan birga chop etish; ishlab chiqaruvchidan rasmiy tarjima so'rash.
+savol: Neyron mashina tarjimasi statistik tarjimadan nimasi bilan ustun?
+savol: Teskari tarjima va post-tahrir nima? Ular qachon kerak?
+savol: Gologramma oddiy fotosuratdan nimasi bilan farq qiladi?
+savol: Nima uchun himoya gologrammalarini qalbakilashtirish qiyin?
+savol: Robotning asosiy qismlari va ularning vazifalarini aytib bering.
+savol: Robototexnika mehnat bozorini qanday o'zgartirmoqda? Kasbingizdan misol keltiring.
+test: Butun gap va kontekstni hisobga olib tarjima qiladigan zamonaviy yondashuv? | Neyron mashina tarjimasi | Qoidaga asoslangan tarjima | So'zma-so'z lug'at | Arxivlash
+test: Mashina tarjimasini inson tomonidan tekshirib tuzatish nima deyiladi? | Post-tahrir | Gallyutsinatsiya | Interferensiya | Slayslash
+test: Gologrammani yozishda yorug'lik to'lqinining qaysi xususiyatlari qayd etiladi? | Kuchi va fazasi | Faqat rangi | Faqat kuchi | Faqat tezligi
+test: Robotning atrof-muhit haqida ma'lumot oladigan qismi? | Datchik (sensor) | Aktuator | Quvvat manbai | Griper
+test: Inson yonida xavfsiz ishlashga mo'ljallangan hamkor robot qanday ataladi? | Kobot | Dron | Manipulyator | Chatbot
+uyga: Mavzuni konspekt qiling. Kasbingizga oid 5 ta texnik gapni mashina tarjimonida ingliz tiliga o'girib, teskari tarjima bilan tekshiring va xatolarni jadvalga yozing. Mutaxassisligingizda ishlatilayotgan yoki ishlatilishi mumkin bo'lgan bitta robot (yoki avtomatlashtirilgan uskuna) haqida qisqa ma'lumot tayyorlang: datchiklari, bajaradigan ishi, afzalligi va xavfsizlik qoidalari.
+gloss: Mashina tarjimasi | Matn yoki nutqni kompyuter dasturi yordamida bir tildan boshqasiga avtomatik o'girish.
+gloss: Post-tahrir | Mashina tarjimasini inson tomonidan tekshirib, xatolarini tuzatish.
+gloss: Teskari tarjima | Tarjima qilingan matnni asl tilga qaytarib o'girib, ma'no saqlanganini tekshirish usuli.
+gloss: Gologramma | Yorug'lik to'lqinining kuchi va fazasini qayd etib, buyumning hajmli tasvirini hosil qiluvchi yozuv.
+gloss: Robot | Datchiklar orqali ma'lumot olib, dastur asosida jismoniy harakatni avtomatik bajaradigan qurilma.
+gloss: Aktuator | Robotning harakatni bajaruvchi qismi: motor, servoprivod, silindr.
+gloss: Kobot | Inson bilan bir ish joyida xavfsiz ishlashga mo'ljallangan hamkor robot.

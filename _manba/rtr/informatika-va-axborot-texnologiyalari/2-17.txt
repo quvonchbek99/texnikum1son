@@ -1,0 +1,88 @@
+nomi: Sun'iy yo'ldosh aloqa tizimlari
+modul: 5-modul
+ac: 5.2 Sun'iy yo'ldosh aloqasining ishlash tamoyili va orbitalar turlarini tushuntiradi, sun'iy yo'ldoshlarning televideniye, internet, navigatsiya va kuzatuvdagi qo'llanishiga misollar keltiradi, GPS (GNSS) qanday joylashuvni aniqlashini va sun'iy yo'ldosh aloqasining afzallik va cheklovlarini baholaydi.
+maqsad: O'quvchilarda sun'iy yo'ldosh aloqa tizimlarining tuzilishi, past, o'rta va geostatsionar orbitalar, global navigatsiya tizimlarining ishlash tamoyili hamda sun'iy yo'ldosh texnologiyalarining kasb va kundalik hayotdagi qo'llanishi haqida bilim hosil qilish, signal kechikishini hisoblash va aloqa usulini vazifaga mos tanlash ko'nikmasini shakllantirish.
+natija: sun'iy yo'ldosh aloqa tizimi tarkibini (sun'iy yo'ldosh, transponder, yer stansiyasi, foydalanuvchi terminali) tushuntiradi;
+natija: past, o'rta va geostatsionar orbitalarni balandlik, qamrov va kechikish bo'yicha taqqoslaydi;
+natija: sun'iy yo'ldoshlarning televideniye, aloqa, navigatsiya, ob-havo va Yerni kuzatishdagi qo'llanishini tushuntiradi;
+natija: GPS va boshqa global navigatsiya tizimlari joylashuvni qanday aniqlashini tushuntiradi;
+natija: sun'iy yo'ldosh aloqasining afzallik va cheklovlarini baholaydi, signal kechikishini hisoblaydi.
+reja: Sun'iy yo'ldosh aloqasi asoslari va orbitalar
+reja: Sun'iy yo'ldoshlarning qo'llanish sohalari
+reja: Global navigatsiya sun'iy yo'ldosh tizimlari (GPS)
+reja: Afzalliklar, cheklovlar va rivojlanish yo'nalishlari
+tayanch: sun'iy yo'ldosh; orbita; past orbita (LEO); o'rta orbita (MEO); geostatsionar orbita (GEO); transponder; yer stansiyasi; yuqoriga va pastga liniya; signal kechikishi; sun'iy yo'ldosh televideniyesi; GNSS; GPS; trilateratsiya; sun'iy yo'ldosh guruhi; masofadan zondlash
+metod: Muammoli savol | «Telefoningiz qanday qilib internetsiz ham xaritada qayerda turganingizni ko'rsatadi?» savoli bilan navigatsiya tizimlari muhokamasi boshlanadi.
+metod: Hisoblash mashqi | Juftliklar turli orbitalardagi sun'iy yo'ldoshlar orqali signal kechikishini hisoblab, nima uchun geostatsionar aloqa orqali videoqo'ng'iroq «kechikib» eshitilishini tushuntiradi.
+metod: Klaster | «Sun'iy yo'ldosh bo'lmasa, nima ishlamay qoladi?» klasterida o'quvchilar kundalik hayot va kasbdan misollar yozadi.
+jihoz: Kompyuter va proyektor; orbitalar sxemasi; GPS ilovasi o'rnatilgan smartfon (joylashuv aniqligini ko'rish uchun); taqdimot
+
+## 1. Sun'iy yo'ldosh aloqasi asoslari va orbitalar
+**Sun'iy yo'ldosh** — raketa yordamida orbitaga chiqarilgan va Yer atrofida aylanadigan kosmik apparat. Aloqa sun'iy yo'ldoshi signalni «osmondagi qayta uzatgich» sifatida bir joydan ikkinchisiga yetkazadi. Tizim uch qismdan iborat: **kosmik qism** — sun'iy yo'ldoshlar (ularda antennalar, quyosh panellari va signalni qabul qilib, kuchaytirib, boshqa chastotada qaytaruvchi **transponderlar** bor); **yer qismi** — katta antennali **yer stansiyalari** va boshqaruv markazlari; **foydalanuvchi qismi** — sun'iy yo'ldosh antennasi (tarelka), navigator, telefon yoki maxsus terminal. Yer stansiyasidan sun'iy yo'ldoshga ketadigan signal **yuqoriga liniya**, sun'iy yo'ldoshdan Yerga keladigani **pastga liniya** deyiladi.
+Sun'iy yo'ldosh energiyani quyosh panellaridan oladi, Yer soyasidan o'tayotganda esa akkumulyatorlardan foydalanadi. Uning holati va orbitasi boshqaruv markazidan doimiy kuzatiladi: kichik dvigatellar yordamida orbita tuzatiladi, antennalar kerakli hududga yo'naltiriladi. Kosmosdagi keskin harorat o'zgarishlari va radiatsiyaga chidash uchun uning barcha qismlari maxsus himoyalanadi.
+Sun'iy yo'ldoshlar turli balandlikdagi orbitalarda joylashadi:
+- **Past orbita** (LEO, taxminan 160–2000 km) — sun'iy yo'ldosh Yerni 1,5–2 soatda bir marta aylanib chiqadi; signal kechikishi kichik, lekin bitta sun'iy yo'ldosh Yerning kichik qismini qamraydi va tez «o'tib ketadi», shuning uchun uzluksiz aloqa uchun yuzlab yoki minglab sun'iy yo'ldoshdan iborat **guruh** kerak. Xalqaro kosmik stansiya, Yerni suratga oluvchi va yangi internet sun'iy yo'ldoshlari shu orbitada.
+- **O'rta orbita** (MEO, taxminan 2000–35 000 km) — navigatsiya tizimlari (GPS sun'iy yo'ldoshlari taxminan 20 200 km balandlikda) va ayrim aloqa tizimlari.
+- **Geostatsionar orbita** (GEO, ekvator ustida 35 786 km) — sun'iy yo'ldosh Yer bilan bir xil tezlikda aylanadi va Yerdan qaraganda osmonning bir nuqtasida «qotib» turadi. Shuning uchun uy antennasini bir marta to'g'rilab qo'yish kifoya; uchta geostatsionar sun'iy yo'ldosh qutblardan tashqari deyarli butun Yerni qamraydi. Kamchiligi — uzoq masofa tufayli signal kechikishi sezilarli.
+Radioto'lqinlar yorug'lik tezligida (taxminan 300 000 km/s) tarqaladi. Geostatsionar sun'iy yo'ldoshgacha borib-kelish: 2 · 35 786 : 300 000 ≈ 0,24 soniya; suhbatda savol va javob uchun bu ikki marta, ya'ni yarim soniyaga yaqin kechikish beradi — videoqo'ng'iroqda suhbatdosh «kechikib» javob berayotgandek tuyuladi. Past orbitada esa kechikish bir necha o'n millisekund, ya'ni oddiy internetga yaqin.
+jadval: Orbitalarni taqqoslash
+| Orbita | Balandlik (taxminan) | Aylanish davri | Bir tomonga kechikish (yer–yo'ldosh–yer) | Qo'llanishi |
+| Past (LEO) | 160–2000 km | 1,5–2 soat | Bir necha ms – o'nlab ms | Internet guruhlari, Yerni suratga olish, kosmik stansiya |
+| O'rta (MEO) | 2000–35 000 km | Bir necha soat (GPS — 12 soatga yaqin) | O'nlab – 100 ms atrofida | Navigatsiya (GPS, Galileo), ayrim aloqa tizimlari |
+| Geostatsionar (GEO) | 35 786 km | 24 soat (Yer bilan birga) | ≈ 0,24 soniya | Televideniye, ob-havo, dengiz va magistral aloqa |
+
+## 2. Sun'iy yo'ldoshlarning qo'llanish sohalari
+- **Televideniye va radio** — geostatsionar sun'iy yo'ldoshlardan yuzlab kanallar bir vaqtda katta hududga uzatiladi; tomoshabin uchun kichik antenna va qabul qilgich (tyuner) yetarli. Telekanallar ham ko'chma studiyalardan sun'iy yo'ldosh orqali jonli efirga ulanadi.
+- **Telefon va internet** — kabel va uyali aloqa yetib bormaydigan joylarda: tog'li va cho'l hududlar, dengizdagi kemalar, samolyotlar, neft va gaz konlari, ekspeditsiyalar. Sun'iy yo'ldosh telefonlari tabiiy ofatlarda yerdagi tarmoqlar ishdan chiqqanda ham ishlaydi. So'nggi yillarda minglab past orbitali sun'iy yo'ldoshdan iborat guruhlar chekka hududlarga ancha tez internet bermoqda; ayrim yangi smartfonlar uyali tarmoq bo'lmagan joyda sun'iy yo'ldosh orqali favqulodda xabar yuborish imkoniga ega.
+- **Navigatsiya** — global navigatsiya sun'iy yo'ldosh tizimlari (keyingi bo'lim).
+Uyda sun'iy yo'ldosh televideniyesini qabul qilish uchun uchta qism kerak: parabolik **antenna** signalni bir nuqtaga yig'adi; uning fokusidagi **konvertor** signalni kuchaytirib, kabel orqali uzatishga qulay chastotaga o'tkazadi; **tyuner** (qabul qilgich) esa kerakli kanalni ajratib, televizorga uzatadi. Antenna aniq ma'lum burchak va yo'nalishda sun'iy yo'ldoshga qaratiladi; uning oldida daraxt yoki bino bo'lmasligi kerak, kuchli shamolda burilib ketmasligi uchun mustahkam o'rnatiladi.
+- **Meteorologiya** — ob-havo sun'iy yo'ldoshlari bulutlar, bo'ronlar, harorat va namlikni kuzatadi; ob-havo prognozi va xavfli hodisalar haqida ogohlantirish ularning ma'lumotlariga asoslanadi.
+- **Yerni masofadan zondlash** — sun'iy yo'ldosh suratlari yordamida ekinlar holati va hosilni baholash, suv omborlari va qor qoplamini kuzatish, yong'in va suv toshqinlarini aniqlash, shaharlar rejasini tuzish, xaritalarni yangilash.
+- **Ilmiy tadqiqotlar** — kosmik teleskoplar, iqlim o'zgarishini kuzatish.
+- **Vaqt sinxronizatsiyasi** — navigatsiya sun'iy yo'ldoshlaridagi atom soatlari signallari bank, energetika va aloqa tarmoqlarida aniq vaqtni moslash uchun ishlatiladi.
+
+## 3. Global navigatsiya sun'iy yo'ldosh tizimlari (GPS)
+**GNSS** — global navigatsiya sun'iy yo'ldosh tizimlarining umumiy nomi. Ular orasida AQShning **GPS**, Rossiyaning GLONASS, Yevropa Ittifoqining Galileo va Xitoyning BeiDou tizimlari bor; zamonaviy telefonlar odatda bir nechta tizim signallaridan birga foydalanadi, bu esa aniqlikni oshiradi.
+**Ishlash tamoyili.** Har bir navigatsiya sun'iy yo'ldoshida juda aniq atom soati bor va u muntazam ravishda o'z joylashuvi hamda signal yuborilgan aniq vaqtni uzatadi. Qabul qilgich (navigator yoki telefon) signal qancha vaqtda yetib kelganini o'lchaydi va sun'iy yo'ldoshgacha masofani hisoblaydi: **masofa = yorug'lik tezligi × signal yo'lda bo'lgan vaqt**. Bitta sun'iy yo'ldoshgacha masofa ma'lum bo'lsa, qabul qilgich o'sha masofadagi «sfera» ustida turadi; uchta sferaning kesishishi nuqtani aniqlaydi — bu usul **trilateratsiya** deyiladi. Qabul qilgichning soati sun'iy yo'ldosh soatlari kabi aniq emas, shuning uchun vaqt xatosini ham hisoblash uchun kamida **to'rtta** sun'iy yo'ldosh signali kerak. Natijada kenglik, uzunlik, balandlik va aniq vaqt topiladi; ochiq joyda oddiy telefon bir necha metr aniqlikka erishadi.
+Navigator o'zi hech narsa uzatmaydi — u faqat signallarni qabul qiladi, shuning uchun joylashuvni aniqlash uchun internet shart emas. Internet esa xaritalarni yuklash, tirbandlik haqidagi ma'lumot va joylashuvni tezroq aniqlash (yordamchi GPS) uchun kerak. Cheklovlar: signal binolar ichida, tunnel va er osti avtoturargohlarida, baland binolar orasidagi tor ko'chalarda kuchsizlanadi yoki aks etib xato beradi; elektron xalaqitlar va qasddan soxta signal yuborish ham xavf tug'diradi.
+**Qo'llanishi:** avtomobil va piyoda navigatsiyasi; taksi va yetkazib berish xizmatlari; yuk va jamoat transportini kuzatish (monitoring); geodeziya va qurilishda yer maydonlarini o'lchash; qishloq xo'jaligida traktorlarni aniq yo'naltirish va o'g'itni maydon bo'ylab teng sepish; aviatsiya va dengiz navigatsiyasi; qutqaruv xizmatlari; sport va sayohat ilovalari; aqlli soatlarda yugurish marshrutini yozish.
+
+## 4. Afzalliklar, cheklovlar va rivojlanish yo'nalishlari
+**Afzalliklar:** juda katta, hatto global qamrov; kabel yotqizib bo'lmaydigan joylarda (tog', okean, cho'l) yagona aloqa vositasi; bitta signal millionlab tomoshabinga bir vaqtda yetadi; yerdagi tabiiy ofatlarga kam bog'liq; yangi hududda aloqani tez tashkil etish mumkin.
+**Cheklovlar:** sun'iy yo'ldoshni yaratish va orbitaga chiqarish juda qimmat, ta'mirlash deyarli mumkin emas, xizmat muddati cheklangan (odatda 5–15 yil); geostatsionar aloqada kechikish sezilarli; kuchli yomg'ir va qor yuqori chastotali signalni so'ndirishi mumkin («yomg'ir so'nishi»); antenna osmonni to'siqsiz «ko'rishi» kerak; foydalanuvchi uchun internet va telefon tariflari ko'pincha yerdagi aloqadan qimmat; orbitalar va radiochastotalar xalqaro darajada tartibga solinadi.
+Sun'iy yo'ldosh aloqasi xavfsizligi ham muhim: signal juda katta hududga tarqalgani uchun uni istalgan kishi qabul qilishi mumkin, shuning uchun pullik telekanallar va ma'lumot kanallari shifrlanadi; navigatsiya signallarini bostirish yoki soxtalashtirish transport uchun xavfli bo'lgani sababli muhim tizimlarda zaxira navigatsiya usullari ham ishlatiladi.
+**Kosmik chiqindilar** muammosi ham jiddiy: ishdan chiqqan sun'iy yo'ldoshlar, raketa bosqichlari va to'qnashuv bo'laklari orbitada katta tezlikda harakatlanib, ishlayotgan apparatlar uchun xavf tug'diradi. Shuning uchun yangi sun'iy yo'ldoshlar xizmat muddati tugagach orbitadan chiqarilishi yoki atmosferada yonib ketishi rejalashtiriladi.
+**Rivojlanish yo'nalishlari:** minglab arzon past orbitali sun'iy yo'ldoshlardan iborat internet guruhlari; smartfonning sun'iy yo'ldosh bilan to'g'ridan-to'g'ri bog'lanishi; sun'iy yo'ldoshlar orasida lazer orqali aloqa; kichik o'quv va ilmiy sun'iy yo'ldoshlar — ularni hatto universitet talabalari ham yaratmoqda; 5G va kelajakdagi 6G tarmoqlarining yerdagi va kosmik qismlarini birlashtirish.
+jadval: Vazifaga mos aloqa usulini tanlash (namuna)
+| Vazifa | Mos usul | Sababi |
+| Shahardagi ofisni internetga ulash | Optik tola yoki uyali aloqa | Tez, arzon, kechikish kichik |
+| Okeandagi kema bilan aloqa | Sun'iy yo'ldosh aloqasi | Yerdagi tarmoqlar yetib bormaydi |
+| Chekka qishloqqa televideniye | Geostatsionar sun'iy yo'ldosh | Bitta signal katta hududni qamraydi |
+| Yuk mashinasini kuzatish | GNSS + uyali aloqa (aloqa yo'q joyda — sun'iy yo'ldosh) | Joylashuv va uni yuborish kanali kerak |
+Xulosa: sun'iy yo'ldosh aloqasi signalni kosmosdagi transponder orqali katta masofaga uzatadi; geostatsionar orbita televideniye uchun qulay, lekin kechikish beradi, past orbitali guruhlar esa kichik kechikishli global internetni ta'minlaydi; GNSS kamida to'rtta sun'iy yo'ldosh signaliga ko'ra joylashuvni aniqlaydi; sun'iy yo'ldosh texnologiyalari chekka hududlar, transport, qishloq xo'jaligi va favqulodda vaziyatlarda ayniqsa muhim, ammo qimmat va o'ziga xos cheklovlarga ega.
+
+keys: Tog' yo'lidagi yuk mashinalari
+vaziyat: Yuk tashish kompaniyasi yuk mashinalarini GPS-trekkerlar bilan jihozladi: trekker joylashuvni aniqlab, uyali aloqa orqali dispetcherga yuboradi. Tekislikdagi yo'llarda tizim yaxshi ishlaydi, lekin tog' dovonidagi 70 km lik qismda mashinalar xaritadan «yo'qolib» qoladi, haydovchilar esa favqulodda vaziyatda dispetcher bilan bog'lana olmaydi. Rahbar haydovchilarning dam olish kunlaridagi shaxsiy joylashuvini ham kuzatishni taklif qilmoqda.
+ksavol: Tog' qismida mashinalar nima uchun xaritadan «yo'qoladi» — GPS ishlamayaptimi yoki boshqa sababmi?
+ksavol: Bu muammoni qanday texnik yechim bilan hal qilish mumkin?
+ksavol: Rahbarning taklifida qanday huquqiy va axloqiy muammo bor?
+kjavob: GPS signallari tog'da ham qabul qilinadi (osmon ochiq bo'lsa), muammo — joylashuvni yuborish uchun uyali aloqa yo'qligi. Yechim: aloqa bo'lmaganda nuqtalarni xotirada saqlab, aloqa tiklanganda yuboradigan trekkerlar; xavfli qism uchun sun'iy yo'ldosh orqali qisqa xabar va SOS yuboradigan terminal yoki sun'iy yo'ldosh telefoni; marshrut va vaqt bo'yicha nazorat nuqtalari. Muammo: ish vaqtidan tashqari shaxsiy joylashuvni kuzatish shaxsga doir ma'lumotni maqsaddan tashqari yig'ish bo'lib, xodimning roziligisiz qonunga zid; kuzatuv faqat ish vaqti va ish transporti bilan cheklanishi, xodimlar oldindan ogohlantirilishi kerak.
+savol: Sun'iy yo'ldosh aloqa tizimi qanday qismlardan iborat?
+savol: Geostatsionar orbitaning afzalligi va kamchiligi nimada?
+savol: Nima uchun past orbitada uzluksiz aloqa uchun ko'plab sun'iy yo'ldosh kerak?
+savol: GPS joylashuvni qanday aniqlaydi? Nima uchun kamida to'rtta sun'iy yo'ldosh kerak?
+savol: Sun'iy yo'ldoshlar qishloq xo'jaligi va favqulodda vaziyatlarda qanday ishlatiladi?
+savol: Kosmik chiqindilar nima va ular qanday xavf tug'diradi?
+test: Yerdan qaraganda osmonning bir nuqtasida «qotib» turadigan sun'iy yo'ldosh orbitasi? | Geostatsionar orbita | Past orbita | Qutb orbitasi | O'rta orbita
+test: Sun'iy yo'ldoshda signalni qabul qilib, kuchaytirib qaytaradigan qurilma? | Transponder | Marshrutizator | Repiter kabeli | Modem
+test: GPS da uch o'lchamli joylashuv va vaqtni aniqlash uchun kamida nechta sun'iy yo'ldosh signali kerak? | 4 ta | 1 ta | 2 ta | 10 ta
+test: Geostatsionar sun'iy yo'ldosh orqali signalning yer–yo'ldosh–yer yo'lidagi taxminiy kechikishi? | 0,24 soniya | 2,4 soniya | 0,0024 soniya | 24 soniya
+test: Sun'iy yo'ldosh suratlari yordamida ekinlar holatini kuzatish qanday ataladi? | Yerni masofadan zondlash | Geodeziya kalkulyatori | Striming | Telemeditsina
+uyga: Misol va mashqlar: telefoningizdagi GPS yoki xarita ilovasida ochiq joyda va bino ichida joylashuv aniqligini (metrda) solishtiring. 550 km balandlikdagi past orbitali sun'iy yo'ldosh orqali signalning yer–yo'ldosh–yer yo'lidagi kechikishini hisoblang va geostatsionar sun'iy yo'ldosh bilan solishtiring.
+gloss: Sun'iy yo'ldosh | Orbitaga chiqarilgan va Yer atrofida aylanadigan kosmik apparat.
+gloss: Geostatsionar orbita | Ekvator ustida 35 786 km balandlikdagi, sun'iy yo'ldosh Yer bilan bir xil tezlikda aylanadigan orbita.
+gloss: Past orbita (LEO) | Taxminan 160–2000 km balandlikdagi, kichik kechikishli, lekin kichik qamrovli orbita.
+gloss: Transponder | Sun'iy yo'ldoshda signalni qabul qilib, kuchaytirib, boshqa chastotada qaytaruvchi qurilma.
+gloss: GNSS | Global navigatsiya sun'iy yo'ldosh tizimlari: GPS, GLONASS, Galileo, BeiDou.
+gloss: Trilateratsiya | Bir nechta ma'lum nuqtagacha bo'lgan masofalar orqali joylashuvni aniqlash usuli.
+gloss: Masofadan zondlash | Yer yuzasini sun'iy yo'ldosh yoki samolyotdan suratga olib, tahlil qilish.

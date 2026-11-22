@@ -243,7 +243,7 @@ def dars_qur(d, tmr_q, kurs, n, fp):
     if tmr_q.get("mustaqil"): t["mustaqil_ish"] = tmr_q["mustaqil"]
     if tmr_q.get("baholash"): t["baholash_shakli"] = tmr_q["baholash"]
     if not tmr_q["tur"]:
-        t["tur_izoh"] = "O'qituvchi TMR'ida dars turi yozilmagan — e-bazada " + TUR[tur].lower() + " deb olindi (tekshirilsin)."
+        t["tur_izoh"] = apostrof("O'qituvchi TMR'ida dars turi yozilmagan — e-bazada " + TUR[tur].lower() + " deb olindi (tekshirilsin).")
     for k in ("maqsad",):
         if not d.get(k): raise Xato(f"{fp}: {k} yo'q")
         t[k] = apostrof(d[k])

@@ -1,0 +1,58 @@
+nomi: Falokatdan keyingi tiklanishni boshqarish. Prototiplash
+modul: 5-modul
+ac: 5.5 Axborot tizimlariga tahdid soluvchi falokat turlarini va tiklanish rejasining tarkibini (xavflar, ustuvorliklar, tiklash vaqti va ma'lumot yo'qotish chegarasi, zaxira strategiyasi, mas'ullar) tushuntiradi, kichik tashkilot uchun tiklanish rejasini tuzadi; prototip turlarini farqlaydi va ekran prototipini yaratib, foydalanuvchi fikri asosida takomillashtiradi.
+maqsad: O'quvchilarda axborot tizimlarida falokatlarga tayyorgarlik ko'rish va ulardan keyin ishni tiklash tamoyillari, zaxira nusxa strategiyalari hamda tizimlarni ishlab chiqishda prototiplash usuli haqida bilim hosil qilish, tiklanish rejasini tuzish va oddiy ekran prototipini sinab ko'rish ko'nikmasini shakllantirish.
+natija: tabiiy, texnik va inson omili bilan bog'liq falokat turlarini aytadi;
+natija: tiklanish rejasi tarkibini, tiklash vaqti (RTO) va ma'lumot yo'qotish chegarasi (RPO) tushunchalarini tushuntiradi;
+natija: to'liq va qo'shimcha zaxira nusxa olishni taqqoslaydi, zaxira jadvalini va hajmini hisoblaydi;
+natija: prototip turlarini (tashlab yuboriladigan va rivojlantiriladigan; past va yuqori aniqlikdagi) farqlaydi;
+natija: ekran prototipini yaratib, foydalanuvchi sinovi asosida o'zgartiradi.
+reja: Falokatlar va tiklanish rejasi
+reja: Zaxira nusxa strategiyasi
+reja: Prototiplash
+tayanch: falokat; biznes uzluksizligi; tiklanish rejasi; xavfni baholash; tiklash vaqti (RTO); ma'lumot yo'qotish chegarasi (RPO); to'liq zaxira; qo'shimcha (inkremental) zaxira; «3-2-1» qoidasi; zaxira ish joyi; prototip; tashlab yuboriladigan prototip; rivojlantiriladigan prototip; karkas (wireframe)
+metod: Vaziyatli savol | «Ertaga ertalab avtoservis serveri yonib ketsa, qaysi ma'lumotlar yo'qoladi va ish necha kun to'xtaydi?» savoli bilan tiklanish rejasi zarurati muhokama qilinadi.
+metod: Qog'oz prototip | Juftliklar onlayn yozilish ekranini qog'ozda chizib, boshqa juftlik «foydalanuvchi» sifatida uni sinaydi; topilgan noqulayliklar asosida eskiz o'zgartiriladi.
+ajihoz: Kompyuter; zaxira nusxa olish uchun fleshka yoki bulutli disk; taqdimot yoki diagramma dasturi (prototip uchun); qog'oz va qalam; proyektor
+
+## Falokatlar va tiklanish rejasi
+**Falokat** — tashkilotning axborot tizimlari ishini to'xtatadigan yoki ma'lumotlarini yo'q qiladigan jiddiy hodisa. Turlari: **tabiiy** (yong'in, suv toshqini, zilzila), **texnik** (disk yoki server buzilishi, uzoq elektr uzilishi, aloqa liniyasining uzilishi), **inson omili** (ma'lumotni xato o'chirish, kiberhujum, fayllarni shifrlab to'lov talab qiluvchi dastur, uskunaning o'g'irlanishi). Tashkilot falokatdan keyin ham asosiy xizmatlarni ko'rsata olishi **biznes uzluksizligi** deyiladi.
+**Falokatdan keyingi tiklanish rejasi** — tizimlar va ma'lumotlarni qanday, qancha vaqtda va kim tiklashini oldindan belgilaydigan hujjat. Uning tarkibi: xavflarni baholash; muhim tizimlar ro'yxati va tiklash tartibi (avval nima ishga tushiriladi); har bir tizim uchun **RTO** — tizim qancha vaqtda qayta ishlashi kerak va **RPO** — qancha vaqtlik ma'lumot yo'qotilishiga yo'l qo'yiladi (masalan, RPO 4 soat bo'lsa, zaxira kamida har 4 soatda olinadi); zaxira nusxa strategiyasi; zaxira uskuna va ish joyi; mas'ul shaxslar va ularning aloqa ma'lumotlari; xodimlar, mijozlar va hamkorlarni xabardor qilish tartibi. Reja yiliga kamida bir marta **mashq** qilib sinab ko'riladi va yangilanadi — sinalmagan reja haqiqiy falokatda ishlamasligi mumkin.
+
+## Zaxira nusxa strategiyasi
+**To'liq zaxira** barcha ma'lumotlarni nusxalaydi — tiklash oson, lekin ko'p vaqt va joy oladi. **Qo'shimcha (inkremental) zaxira** faqat oxirgi zaxiradan keyin o'zgargan fayllarni nusxalaydi — tez va kam joy oladi, ammo tiklash uchun oxirgi to'liq zaxira va undan keyingi barcha qo'shimcha nusxalar kerak. Ko'pincha ikkalasi birlashtiriladi: haftada bir to'liq, har kuni qo'shimcha. **«3-2-1» qoidasi**: ma'lumotning kamida 3 nusxasi, 2 xil saqlovchida, ulardan 1 tasi boshqa joyda (boshqa binoda yoki bulutda). To'lov talab qiluvchi dasturlardan himoyalanish uchun zaxiralardan biri doimiy ulanmagan yoki o'zgartirib bo'lmaydigan bo'lishi kerak. Zaxiradan tiklash muntazam sinab ko'riladi.
+
+## Prototiplash
+**Prototip** — yangi tizim yoki mahsulotning foydalanuvchiga ko'rsatish va sinash uchun tez tayyorlangan dastlabki namunasi. Prototip ko'rgan buyurtmachi talablarini aniqroq aytadi, xatolar esa dastur yozilmasdan oldin, arzon tuzatiladi. Turlari: **tashlab yuboriladigan** prototip faqat talablarni aniqlash uchun yaratiladi va keyin chetga qo'yiladi; **rivojlantiriladigan** (evolyutsion) prototip esa bosqichma-bosqich takomillashtirilib, oxir-oqibat haqiqiy tizimga aylanadi. Aniqligiga ko'ra: **past aniqlikdagi** — qog'oz eskizlar va ekran **karkasi** (wireframe): faqat maydonlar, tugmalar va joylashuv; **yuqori aniqlikdagi** — haqiqiy ko'rinishga yaqin, bosiladigan interaktiv maket. Kamchiliklari: buyurtmachi prototipni tayyor tizim deb o'ylashi, prototipga ko'p vaqt sarflanishi va talablar cheksiz o'zgarib, ko'lam kengayib ketishi mumkin.
+
+amaliy: Kichik tashkilot uchun tiklanish rejasi va ekran prototipi
+amaqsad: Tanlangan kichik tashkilot (avtoservis, oshxona, o'quv markazi) uchun xavflarni baholab, RTO va RPO ni belgilagan holda falokatdan tiklanish rejasini tuzish, zaxiradan tiklashni sinash hamda onlayn yozilish ekranining prototipini yaratib, foydalanuvchi sinovi asosida takomillashtirish.
+qadam: Tashkilotning 4–5 ta muhim tizimi va ma'lumotlarini (mijozlar bazasi, hisob-kitob, ish jadvali, pochta) yozing; har biri uchun RTO va RPO ni belgilab, asoslang.
+qadam: 5 ta falokat ssenariysini (yong'in, disk buzilishi, xato o'chirish, to'lov talab qiluvchi dastur, elektr uzilishi) ehtimollik va ta'sir bo'yicha baholang.
+qadam: Zaxira jadvalini tuzing: nima, qachon (to'liq va qo'shimcha), qayerga («3-2-1» qoidasiga ko'ra), kim mas'ul; bir oylik zaxira hajmini hisoblang.
+qadam: O'quv papkangizdan zaxira nusxa oling, bitta faylni o'chiring va zaxiradan tiklab, tiklashga ketgan vaqtni yozing.
+qadam: Tiklanish rejasini bir sahifada rasmiylashtiring: tiklash tartibi, mas'ullar, xabardor qilish tartibi va rejani sinash muddati.
+qadam: Onlayn yozilish ekranining past aniqlikdagi prototipini qog'ozda yoki diagramma dasturida chizing: maydonlar (ism, telefon, xizmat turi, sana, vaqt), tugmalar, xato xabarlari.
+qadam: Sherigingizga 2 ta vazifa bering (masalan, «ertangi kunga moy almashtirishga yoziling») va u prototipda qanday harakat qilishini kuzating; topilgan 3 ta muammo asosida prototipni o'zgartiring.
+anatija: Muhim tizimlar, RTO va RPO jadvali, xavflarni baholash, zaxira jadvali va hajm hisobi, tiklash sinovi natijasi, bir sahifali tiklanish rejasi, prototipning birinchi va yangilangan varianti hamda sinov xulosalari.
+baho5: RTO va RPO asoslangan, zaxira strategiyasi «3-2-1» qoidasiga mos, tiklash amalda sinalgan, reja aniq va to'liq, prototip foydalanuvchi sinovi asosida asosli o'zgartirilgan.
+masala: Zaxira har kuni soat 22:00 da olinadi. Server ertasi kuni soat 17:00 da buzildi. Qancha vaqtlik ma'lumot yo'qoladi? RPO 4 soat bo'lishi uchun zaxirani qanday olish kerak?
+yechim: 22:00 dan 17:00 gacha — 19 soatlik ma'lumot yo'qoladi. RPO 4 soat uchun zaxira kamida har 4 soatda (masalan, 9:00, 13:00, 17:00, 21:00) yoki uzluksiz olinishi kerak.
+masala: Haftada bir marta 120 GB to'liq zaxira va qolgan 6 kun har kuni 5 GB qo'shimcha zaxira olinadi. 4 haftalik zaxiralarni saqlash uchun qancha joy kerak?
+yechim: Bir hafta: 120 + 6 · 5 = 150 GB; 4 hafta: 4 · 150 = 600 GB.
+savol: Falokatlarning qanday turlari bor? Har biriga misol keltiring.
+savol: RTO va RPO nima va ular zaxira jadvalini qanday belgilaydi?
+savol: To'liq va qo'shimcha zaxiraning afzallik va kamchiliklari nimada?
+savol: Tashlab yuboriladigan va rivojlantiriladigan prototipning farqi nimada?
+test: Tizim qancha vaqtda qayta ishlashi kerakligini bildiruvchi ko'rsatkich? | RTO | RPO | URL | CPU
+test: Faqat oxirgi zaxiradan keyin o'zgargan fayllarni nusxalash? | Qo'shimcha (inkremental) zaxira | To'liq zaxira | Arxivlash | Defragmentatsiya
+test: «3-2-1» qoidasida «1» nimani bildiradi? | Bitta nusxa boshqa joyda saqlanadi | Bitta disk yetarli | Bir kunda bir marta | Bitta parol
+test: Faqat maydonlar, tugmalar va joylashuvni ko'rsatadigan oddiy ekran maketi? | Karkas (wireframe) | Gantt diagrammasi | Dastur kodi | Ma'lumotlar lug'ati
+test: Prototiplashning asosiy afzalligi? | Talablar va xatolar erta, arzon aniqlanadi | Sinov kerak bo'lmaydi | Hujjatlash shart emas | Tizim avtomatik yoziladi
+uyga: Mavzu yuzasidan o'qib o'rganing. Telefoningiz va kompyuteringizdagi muhim ma'lumotlar uchun shaxsiy «tiklanish rejasi» tuzing: qaysi ma'lumot muhim, zaxira qayerda va qanchalik tez-tez olinadi, qurilma yo'qolsa birinchi navbatda nima qilinadi.
+gloss: Falokatdan keyingi tiklanish rejasi | Falokatdan keyin tizim va ma'lumotlarni tiklash tartibi, muddatlari va mas'ullarini belgilaydigan hujjat.
+gloss: RTO | Falokatdan keyin tizim qayta ishga tushishi kerak bo'lgan eng ko'p vaqt.
+gloss: RPO | Yo'qotilishiga yo'l qo'yiladigan eng ko'p ma'lumot hajmi, vaqt bilan o'lchanadi (masalan, 4 soatlik).
+gloss: Qo'shimcha zaxira | Oxirgi zaxiradan keyin o'zgargan fayllarnigina nusxalash.
+gloss: Prototip | Tizim yoki mahsulotning sinash va fikr olish uchun tez tayyorlangan dastlabki namunasi.
+gloss: Karkas (wireframe) | Ekran elementlarining joylashuvini sxematik ko'rsatuvchi past aniqlikdagi maket.

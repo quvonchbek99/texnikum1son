@@ -1,0 +1,99 @@
+nomi: Ultra yuqori aniqlikdagi televideniye. Ko'rish qobiliyatini yaxshilash. Virtual reallik
+modul: 4-modul
+ac: 4.10 Ultra yuqori aniqlikdagi televideniye (4K, 8K, HDR), ko'rish qobiliyatini yaxshilash texnologiyalari (zaif ko'ruvchilar uchun tizimlar, tungi va termal ko'rish) va virtual reallikning ishlash tamoyili, qo'llanishi va cheklovlarini tushuntiradi.
+maqsad: O'quvchilarda UHD televideniyening texnik ko'rsatkichlari, ko'rishni kuchaytiruvchi va tungi ko'rish texnologiyalari, virtual reallik qurilmalari va ularning ta'lim, kasb va sog'liqqa ta'siri haqida bilim hosil qilish, yangi tasvir texnologiyalarini maqsadga mos tanlash va xavfsiz foydalanish ko'nikmasini shakllantirish.
+natija: SD, HD, Full HD, 4K va 8K o'lchamlarini piksellar soni bo'yicha taqqoslaydi, HDR va yuqori kadr tezligi tushunchalarini tushuntiradi;
+natija: UHD tasvirni ko'rsatish uchun ekran, kontent, kodek va internet tezligiga qo'yiladigan talablarni aytadi;
+natija: zaif ko'ruvchilar uchun ko'rishni kuchaytirish tizimlari, tungi ko'rish va termal tasvirlash qanday ishlashini va qayerda qo'llanishini tushuntiradi;
+natija: virtual reallik qurilmalari tarkibi va ishlash tamoyilini, qo'llanish sohalarini tushuntiradi;
+natija: VR dan foydalanishda sog'liq va xavfsizlik qoidalarini aytadi, AR, VR va aralash reallikni taqqoslaydi.
+reja: Ultra yuqori aniqlikdagi televideniye
+reja: Ko'rish qobiliyatini yaxshilash texnologiyalari
+reja: Virtual reallik: qurilmalar va ishlash tamoyili
+reja: VR ning qo'llanishi, xavfsizlik va sog'liq
+tayanch: piksel; ruxsat; UHD; 4K; 8K; HDR; rang gamuti; yuqori kadr tezligi; OLED; striming; ko'rishni kuchaytirish tizimi; elektron lupa; tungi ko'rish; termal tasvirlash; infraqizil nurlanish; virtual reallik; immersivlik; VR shlem; bosh harakatini kuzatish; kinetoz
+metod: Taqqoslash | O'quvchilarga bir xil kadrning HD, Full HD va 4K variantlari kattalashtirilgan holda ko'rsatiladi; ular farqni va qanday masofada u sezilmay qolishini muhokama qiladi.
+metod: Hisoblash mashqi | Juftliklar SD dan 8K gacha o'lchamlarda piksellar sonini hisoblab, ular necha marta farq qilishini topadi.
+metod: Bahs-munozara | «Texnikumda kasbiy mashg'ulotlarni VR trenajyorlarga o'tkazish kerakmi?» mavzusida ikki guruh dalillar keltiradi.
+jihoz: Kompyuter va proyektor; turli o'lchamdagi namunaviy videolar; VR ko'zoynak (smartfon uchun karton yoki plastik) yoki VR videolari; termal kamera tasvirlari namunasi; taqdimot
+
+## 1. Ultra yuqori aniqlikdagi televideniye
+Televizor va monitor tasviri **piksellar** — juda kichik rangli nuqtalardan tashkil topadi. Ekran gorizontal va vertikal bo'yicha nechta pikseldan iborat ekani **ruxsat** deyiladi. Piksellar qancha ko'p bo'lsa, tasvir shuncha aniq va mayda tafsilotlar (matn, yuz chiziqlari, mato to'qimasi) yaxshi ko'rinadi.
+jadval: Tasvir o'lchamlari va piksellar soni
+| Nomi | Ruxsat | Piksellar soni | Full HD ga nisbatan |
+| SD (standart) | 720×576 | ≈ 0,4 mln | ≈ 0,2 marta |
+| HD | 1280×720 | ≈ 0,9 mln | ≈ 0,4 marta |
+| Full HD | 1920×1080 | ≈ 2,1 mln | 1 marta |
+| 4K UHD | 3840×2160 | ≈ 8,3 mln | 4 marta |
+| 8K UHD | 7680×4320 | ≈ 33,2 mln | 16 marta |
+**Ultra yuqori aniqlik** (UHD) — Full HD dan ancha yuqori ruxsatli televideniye: 4K va 8K. Lekin tasvir sifati faqat piksellar soniga bog'liq emas. Zamonaviy UHD standartlari yana bir necha yaxshilanishni o'z ichiga oladi:
+- **HDR** (yuqori dinamik diapazon) — eng qorong'i va eng yorug' joylar orasidagi farq kengayadi: quyosh botishi, chiroqlar va soyalar haqiqiyroq ko'rinadi, qorong'i sahnadagi tafsilotlar yo'qolmaydi;
+- **keng rang gamuti** — ekran ko'proq rang va tuslarni ko'rsata oladi; ranglar to'yinganroq va tabiiyroq bo'ladi;
+- **yuqori kadr tezligi** — 50–120 kadr/s; sport va tez harakatli sahnalar silliqroq ko'rinadi;
+- **yaxshilangan ovoz** — ko'p kanalli va «hajmli» tovush tizimlari.
+Ekran texnologiyalari ham rivojlandi: **LCD** ekranlarda suyuq kristallar orqa yorug'likni to'sib yoki o'tkazib tasvir hosil qiladi (orqa yorug'lik svetodiodlardan — LED); **mini-LED** da minglab kichik svetodiodlar ekran qismlarini alohida yoritadi; **OLED** da har bir piksel o'zi nur chiqaradi va butunlay o'chishi mumkin, shuning uchun qora rang chuqur, kontrast juda yuqori bo'ladi.
+UHD tasvirni ko'rish uchun butun zanjir mos bo'lishi kerak: UHD da suratga olingan **kontent**, uni siqadigan zamonaviy **kodeklar** (H.265/HEVC, AV1), yetarli **internet tezligi** (4K striming uchun odatda sekundiga 15–25 Mbit), UHD ni qo'llab-quvvatlaydigan pleyer yoki ilova, kabel (HDMI ning yangi versiyalari) va ekran. Zanjirdagi bitta bo'g'in eski bo'lsa, tasvir past sifatda ko'rsatiladi.
+Ekran o'lchami va ko'rish masofasi ham muhim: kichik ekranda yoki uzoq masofadan 4K va Full HD farqini inson ko'zi deyarli sezmaydi. Katta ekranli televizor, proyektor, kinoteatr, tibbiy monitor, muhandislik chizmalari va videomontaj uchun yuqori ruxsat ayniqsa foydali. Cheklovlar: kontent hali ko'p emas, fayllar va striming katta hajmli, katta ekranlar ko'proq energiya sarflaydi, uskunalar qimmatroq. Ko'pchilik televizorlar past ruxsatli videoni ekran ruxsatiga «cho'zib» kattalashtiradi (masshtablaydi); zamonaviy modellarda bu jarayon SI yordamida bajariladi va tasvir biroz aniqroq ko'rinadi, lekin haqiqiy 4K tasvir darajasiga yetmaydi.
+
+## 2. Ko'rish qobiliyatini yaxshilash texnologiyalari
+Bu guruhga insonning ko'rish imkoniyatini kengaytiradigan texnologiyalar kiradi: ko'zi zaif odamlarga yordam beradigan tizimlar va oddiy ko'z ko'ra olmaydigan narsalarni (qorong'ida yoki issiqlikni) ko'rsatadigan qurilmalar.
+**Zaif ko'ruvchilar uchun ko'rishni kuchaytirish tizimlari.** Ko'zoynak yoki linza bilan to'liq tuzatib bo'lmaydigan zaif ko'rishda elektron yordamchi qurilmalar ishlatiladi:
+- **elektron lupa** — kamera matn yoki buyumni olib, ekranda katta qilib ko'rsatadi; kattalashtirish darajasi, kontrast va ranglarni (masalan, qora fonda oq harflar) sozlash mumkin;
+- **ko'rishni kuchaytiruvchi shlem va ko'zoynaklar** — boshga taqiladigan kamera va ekranlar tasvirni kattalashtiradi, kontrastini oshiradi va ko'rish maydonining saqlangan qismiga yo'naltiradi;
+- **dasturiy yordamchilar** — ekranni kattalashtirish, kontrastli mavzular, ekrandagi matnni ovoz chiqarib o'qish, smartfon kamerasi orqali matn, banknot, rang va buyumlarni tanib ovozda aytib beradigan SI ilovalari.
+**Tungi ko'rish.** Qorong'ida ko'rishning ikki asosiy usuli bor. **Yorug'likni kuchaytirish** qurilmalari oy, yulduz yoki ko'cha chiroqlarining juda kuchsiz yorug'ligini minglab marta kuchaytirib, odatda yashil tusli tasvir hosil qiladi; to'liq qorong'ilikda esa ular ko'pincha ko'rinmas infraqizil chiroq bilan ishlaydi. **Termal tasvirlash** esa yorug'likka umuman bog'liq emas: har qanday jism haroratiga qarab **infraqizil nurlanish** chiqaradi, termal kamera esa shu nurlanishni qayd etib, issiq va sovuq joylarni har xil rang yoki tusda ko'rsatadi.
+Qo'llanishi: qutqaruvchilar tutun ichida yoki vayronalar ostida odamlarni topadi; avtomobillardagi tungi ko'rish tizimlari faralar yoritmagan masofadagi piyoda yoki hayvonni oldindan ko'rsatadi; elektromontyorlar termal kamera bilan qizib ketgan kontaktlar, kabellar va avtomatlarni yong'in chiqmasidan oldin aniqlaydi; quruvchilar devor va derazalardagi issiqlik yo'qotish joylarini topadi; avtoservisda dvigatel va tormoz tizimidagi notekis qizish aniqlanadi; tibbiyotda tana harorati masofadan o'lchanadi; xavfsizlik va kuzatuv tizimlarida ishlatiladi.
+
+## 3. Virtual reallik: qurilmalar va ishlash tamoyili
+**Virtual reallik** (VR) — foydalanuvchini kompyuterda yaratilgan uch o'lchamli muhitga «olib kiradigan» va unda harakatlanish hamda obyektlar bilan ishlash imkonini beradigan texnologiya. VR ning asosiy xususiyati — **immersivlik**, ya'ni «ichiga sho'ng'ish» hissi: foydalanuvchi real atrofni ko'rmaydi va o'zini virtual muhitda turgandek his qiladi.
+VR tizimining tarkibi:
+- **VR shlem** — ko'z oldida joylashgan bitta yoki ikkita ekran va linzalar; har bir ko'zga biroz boshqacha burchakdagi tasvir ko'rsatiladi, miya ularni birlashtirib, chuqurlik (hajm) hissini hosil qiladi — bu **stereoskopik** tasvir deyiladi;
+- **bosh harakatini kuzatish** — giroskop, akselerometr va kameralar bosh qanday burilganini o'lchaydi va tasvir darhol mos ravishda o'zgaradi; oddiy tizimlar faqat burilishni (3 erkinlik darajasi), rivojlanganlari esa xonada yurish, egilish va o'tirishni ham (6 erkinlik darajasi) kuzatadi;
+- **kontrollerlar va qo'l kuzatuvi** — virtual buyumlarni olish, tugma bosish, asbob bilan ishlash; **haptik** (sezgi) qurilmalar tebranish yoki qarshilik orqali tegish hissini beradi;
+- **hisoblash qurilmasi** — shlemning o'zidagi protsessor (mustaqil shlemlar) yoki kuchli kompyuter;
+- **dasturiy ta'minot** — o'yinlar, trenajyorlar, o'quv ilovalari, 360° videolar.
+VR ning eng oddiy ko'rinishi — **360° video**: maxsus kamera bir vaqtda barcha yo'nalishlarni suratga oladi, tomoshabin esa shlemda yoki telefonda boshini burib atrofga qaraydi, lekin sahnaga ta'sir qila olmaydi. To'liq **interaktiv VR** da esa foydalanuvchi muhitda yuradi, buyumlarni oladi va uning harakatiga qarab voqealar o'zgaradi. Smartfon qo'yiladigan arzon ko'zoynaklar VR bilan tanishish uchun yetarli, kasbiy trenajyorlar esa aniq kuzatuv tizimi va maxsus kontrollerlarni (masalan, payvand tutqichi yoki rul shaklidagi qurilmani) talab qiladi.
+Tasvir silliq bo'lishi uchun har bir ko'z uchun yuqori ruxsat va sekundiga kamida 72–90 kadr kerak, bosh burilganda tasvir kechikmasligi esa ayniqsa muhim: kechikish ko'z va muvozanat a'zosi sezgilarini «kelishmay» qoldiradi.
+
+## 4. VR ning qo'llanishi, xavfsizlik va sog'liq
+**Qo'llanish sohalari:**
+- **kasbiy trenajyorlar** — uchuvchi, haydovchi, kran operatori, payvandchi, bo'yoqchi va elektromontyorlar xavfli yoki qimmat jarayonni material sarflamasdan, xavfsiz sharoitda ko'p marta mashq qiladi; tizim xatolarni yozib, baholaydi;
+- **tibbiyot** — jarrohlarni o'qitish, anatomiyani hajmli o'rganish, reabilitatsiya mashqlari, mutaxassis nazoratida ayrim psixologik muammolarni yengillashtirish;
+- **ta'lim** — virtual laboratoriya va ekskursiyalar, tarixiy joylar, inson tanasi yoki dvigatel ichiga «kirish»;
+- **arxitektura, qurilish va dizayn** — bino yoki xona qurilmasdan oldin uning ichida yurib ko'rish, mebel va jihozlarni joylashtirish;
+- **savdo va turizm** — mehmonxona va ko'chmas mulkni virtual ko'rish;
+- **ko'ngilochar soha** — o'yinlar, 360° filmlar va konsertlar.
+jadval: AR, VR va aralash reallikni taqqoslash
+| Ko'rsatkich | Boyitilgan reallik (AR) | Virtual reallik (VR) | Aralash reallik (MR) |
+| Real dunyo ko'rinadimi | Ha, ustiga raqamli qatlam qo'shiladi | Yo'q, to'liq virtual muhit | Ha, virtual obyektlar real buyumlar bilan o'zaro ta'sirlashadi |
+| Qurilma | Smartfon, AR ko'zoynak | VR shlem va kontrollerlar | Maxsus shlem va kameralar |
+| Misol | Mebelni xonada ko'rish, tarjima | Payvand trenajyori, virtual ekskursiya | Real dvigatel ustida virtual ko'rsatmalar bilan ishlash |
+**Sog'liq va xavfsizlik:** ayrim foydalanuvchilarda **kinetoz** — bosh aylanishi va ko'ngil aynishi paydo bo'ladi, chunki ko'z harakatni ko'radi, tana esa harakatsiz turadi; uzoq foydalanish ko'zni charchatadi. Shuning uchun seanslar qisqa (masalan, 20–30 daqiqa) va tanaffuslar bilan bo'lishi, noqulaylik sezilganda darhol to'xtatilishi kerak. VR da foydalanuvchi atrofni ko'rmaydi: xonada bo'sh xavfsiz zona ajratiladi, mebel va boshqa odamlardan uzoqlashiladi, shlemning chegara ogohlantirish funksiyasi yoqiladi. Ishlab chiqaruvchilar yosh chegarasini belgilaydi va bolalarga kattalar nazoratida qisqa vaqt foydalanishni tavsiya qiladi. Gigiyena (shlem qoplamasini tozalash) va virtual muhitda ham odob qoidalariga rioya qilish zarur.
+**Cheklovlar:** sifatli tizimlar qimmat; kuchli kompyuter yoki shlem talab qilinadi; virtual mashq real ish hissini (og'irlik, issiqlik, hid, material qarshiligi) to'liq bermaydi, shuning uchun trenajyorlar real amaliyotni to'ldiradi, lekin o'rnini bosmaydi; uzoq vaqt virtual muhitda bo'lish ijtimoiy izolyatsiyaga olib kelishi mumkin.
+Xulosa: UHD televideniye yuqori ruxsat, HDR, keng rang gamuti va yuqori kadr tezligi hisobiga aniq va tabiiy tasvir beradi, lekin butun zanjir (kontent, kodek, internet, ekran) mos bo'lishini talab qiladi; ko'rishni kuchaytirish va termal tasvirlash texnologiyalari zaif ko'ruvchilarga va qorong'ida ishlovchi mutaxassislarga yordam beradi; virtual reallik xavfsiz va takroriy mashq qilish imkonini beradi, ammo sog'liq va xavfsizlik qoidalariga rioya qilishni talab qiladi.
+
+keys: Payvandchilar uchun VR trenajyor
+vaziyat: Texnikum payvandchilarni tayyorlash uchun VR payvand trenajyori sotib olishni rejalashtirmoqda. Trenajyor shlem va maxsus «payvand tutqichi»dan iborat bo'lib, chok burchagi, tezligi va masofasini o'lchab baho beradi. Ba'zi ustalar «endi real payvand mashg'ulotlari kerak emas, hammasini VR da o'rganish mumkin» deyishmoqda. Birinchi sinovda ikki o'quvchi 40 daqiqa uzluksiz mashq qilgach, bosh aylanishidan shikoyat qildi.
+ksavol: VR trenajyorning real mashg'ulotga nisbatan qanday afzalliklari bor?
+ksavol: Uni real payvand mashg'ulotlari o'rniga to'liq ishlatish to'g'rimi? Nima uchun?
+ksavol: O'quvchilar sog'lig'i va xavfsizligi uchun qanday tartib joriy etish kerak?
+kjavob: Afzalliklar: elektrod va metall sarflanmaydi, kuyish va ko'z shikastlanishi xavfi yo'q, mashqni cheksiz takrorlash va xatolarni raqamlarda ko'rish mumkin, boshlang'ich ko'nikma tez shakllanadi. To'liq almashtirish noto'g'ri: VR real issiqlik, uchqun, metall erishi va haqiqiy uskunani sozlash tajribasini bermaydi; trenajyor boshlang'ich bosqichda real mashg'ulotdan oldin va uni to'ldiruvchi sifatida ishlatiladi. Tartib: seans 20–30 daqiqa, keyin tanaffus; noqulaylik sezilsa darhol to'xtatish; xavfsiz zona; shlem gigiyenasi; birinchi mashg'ulotlarda o'qituvchi nazorati.
+savol: 4K va 8K tasvirlarda piksellar soni Full HD dan necha marta ko'p?
+savol: HDR nima va u tasvirni qanday yaxshilaydi?
+savol: UHD tasvirni ko'rish uchun zanjirdagi qaysi bo'g'inlar mos bo'lishi kerak?
+savol: Yorug'likni kuchaytirish va termal tasvirlashning farqi nimada?
+savol: VR shlem qanday qilib hajm va «ichida bo'lish» hissini hosil qiladi?
+savol: VR dan foydalanishda qanday sog'liq va xavfsizlik qoidalariga amal qilinadi?
+test: 4K UHD ruxsati qaysi? | 3840×2160 | 1920×1080 | 1280×720 | 7680×4320
+test: Eng qorong'i va eng yorug' joylar orasidagi farqni kengaytiruvchi texnologiya? | HDR | GPS | OCR | SMS
+test: Jismlarning infraqizil nurlanishini qayd etib, issiq joylarni ko'rsatadigan qurilma? | Termal kamera | Elektron lupa | Skaner | Planshet
+test: VR da ko'z harakatni ko'rib, tana harakatsiz turganda paydo bo'ladigan bosh aylanishi? | Kinetoz | Kliping | Gallyutsinatsiya | Interferensiya
+test: Har bir ko'zga biroz boshqacha burchakdagi tasvir ko'rsatish qanday ataladi? | Stereoskopik tasvir | Panorama | Interlacing | Siqish
+uyga: Mavzu yuzasidan o'qib o'rganing. Kasbingizda VR trenajyor, termal kamera yoki ko'rishni kuchaytiruvchi qurilma qanday ishlatilishi mumkinligi haqida bitta misol tayyorlang: qurilma nima qiladi, qanday afzallik beradi, qanday cheklov va xavfsizlik qoidasi bor (8–10 gap).
+gloss: Ruxsat (ekran) | Ekran yoki tasvirning gorizontal va vertikal bo'yicha piksellar soni (masalan, 3840×2160).
+gloss: UHD | Ultra yuqori aniqlik: 4K va 8K ruxsatli tasvir va televideniye.
+gloss: HDR | Yuqori dinamik diapazon: qorong'i va yorug' joylar orasidagi farqni kengaytirib, tabiiyroq tasvir beruvchi texnologiya.
+gloss: Termal tasvirlash | Jismlar chiqaradigan infraqizil nurlanishni qayd etib, harorat farqini tasvirda ko'rsatish.
+gloss: Elektron lupa | Kamera orqali matn va buyumlarni ekranda kattalashtirib ko'rsatadigan yordamchi qurilma.
+gloss: Virtual reallik (VR) | Foydalanuvchini kompyuterda yaratilgan uch o'lchamli muhitga olib kiradigan texnologiya.
+gloss: Kinetoz | VR yoki transportda ko'rish va muvozanat sezgilari mos kelmaganda paydo bo'ladigan bosh aylanishi va ko'ngil aynishi.

@@ -1,0 +1,112 @@
+nomi: Loyiha boshqaruvining bosqichlari. Konsepsiya va boshlash. Loyiha boshqaruvi uchun dasturiy ta'minot turlari
+modul: 5-modul
+ac: 5.3 Loyiha tushunchasi, uning cheklovlari va hayot sikli bosqichlarini tushuntiradi, konsepsiya va boshlash bosqichida SMART maqsad, texnik-iqtisodiy asoslash va loyiha nizomini tuzadi, loyiha boshqaruvi dasturiy ta'minoti turlari va imkoniyatlarini taqqoslaydi.
+maqsad: O'quvchilarda loyiha va uning boshqaruvi, loyiha hayot sikli bosqichlari, loyihani boshlashda bajariladigan tahlil va hujjatlar hamda loyiha boshqaruvi dasturlari haqida bilim hosil qilish, kichik loyiha uchun maqsad, asoslash va nizom tayyorlash ko'nikmasini shakllantirish.
+natija: loyihani oddiy kundalik faoliyatdan farqlaydi, vaqt, xarajat va ko'lam cheklovlarini tushuntiradi;
+natija: loyiha hayot siklining besh bosqichini va har bir bosqich natijasini aytadi;
+natija: loyiha maqsadini SMART mezonlari bo'yicha ifodalaydi va texnik-iqtisodiy asoslash turlarini tushuntiradi;
+natija: loyiha nizomi tarkibini biladi va kichik loyiha uchun nizom tuzadi;
+natija: loyiha boshqaruvi dasturiy ta'minoti funksiyalarini va turlarini taqqoslaydi.
+reja: Loyiha va loyiha boshqaruvi
+reja: Loyiha hayot sikli bosqichlari
+reja: Konsepsiya va boshlash bosqichi
+reja: Loyiha boshqaruvi uchun dasturiy ta'minot
+tayanch: loyiha; loyiha boshqaruvi; loyiha rahbari; manfaatdor tomonlar; uch cheklov (vaqt, xarajat, ko'lam); hayot sikli; konsepsiya; SMART maqsad; texnik-iqtisodiy asoslash; loyiha nizomi; muhim nuqta (milestone); Gantt diagrammasi; Kanban doskasi; resurs; xavflar reyestri
+metod: Aqliy hujum | «Texnikumda kasb ko'rgazmasi o'tkazish — loyihami yoki kundalik ishmi?» savoli bilan loyiha belgilari aniqlanadi; o'quvchilar boshqa misollarni ham ajratadi.
+metod: SMART mashqi | Guruhlarga noaniq maqsadlar beriladi («saytni yaxshilash», «ko'proq mijoz jalb qilish»); ular ularni SMART mezonlari bo'yicha qayta yozadi.
+metod: Taqqoslash jadvali | Juftliklar elektron jadval, Kanban doskasi va maxsus loyiha dasturini imkoniyatlari bo'yicha solishtiradi.
+jihoz: Kompyuter va proyektor; bepul loyiha boshqaruvi dasturi (masalan, ProjectLibre) yoki onlayn Kanban doskasi; elektron jadval dasturi; loyiha nizomi shabloni (tarqatma); taqdimot
+
+## 1. Loyiha va loyiha boshqaruvi
+**Loyiha** — aniq maqsadga erishish va noyob natija (mahsulot, xizmat yoki o'zgarish) yaratish uchun belgilangan muddatda, cheklangan resurslar bilan bajariladigan vaqtinchalik faoliyat. Masalan, avtoservis uchun onlayn yozilish tizimini joriy etish, oshxonada yangi menyuni ishga tushirish, texnikum saytini yangilash, kasb ko'rgazmasi tashkil etish — bular loyihalar. Har kuni takrorlanadigan ishlar (mijozlarga xizmat ko'rsatish, kunlik ovqat tayyorlash, darslar) esa **operatsion faoliyat** hisoblanadi: ularning aniq tugash nuqtasi yo'q.
+Loyihaning asosiy belgilari: aniq maqsad va natija; boshlanish va tugash sanasi; byudjet va resurslar (odamlar, uskunalar, materiallar, vaqt); noyoblik — xuddi shunday loyiha avval bajarilmagan bo'lishi mumkin; noaniqlik va xavflar.
+Har bir loyiha **uch cheklov** ichida boshqariladi: **vaqt** (muddat), **xarajat** (byudjet) va **ko'lam** (nima qilinishi kerak, sifat talablari). Ular bir-biriga bog'liq: ko'lam kengaysa — vaqt yoki pul ko'payadi; muddat qisqartirilsa — xarajat oshadi yoki ko'lamni qisqartirish kerak bo'ladi. Ba'zan bu cheklovlar uchburchak shaklida tasvirlanadi va uning markaziga sifat qo'yiladi.
+**Loyiha boshqaruvi** — loyihani rejalashtirish, tashkil etish, bajarish, nazorat qilish va yakunlash uchun bilim, ko'nikma, vositalar va usullarni qo'llash. Uning ishtirokchilari: **buyurtmachi** (loyihani moliyalaydi va natijani qabul qiladi), **loyiha rahbari** (rejani tuzadi, jamoani boshqaradi, muddat va byudjetni nazorat qiladi, muammolarni hal qiladi), **jamoa a'zolari** (vazifalarni bajaradi) va **manfaatdor tomonlar** — loyihadan ta'sirlanadigan barcha shaxslar (foydalanuvchilar, mijozlar, rahbariyat, hamkorlar).
+
+Tajriba shuni ko'rsatadiki, loyihalar ko'pincha texnik sabablardan ko'ra boshqaruv xatolari tufayli muvaffaqiyatsiz bo'ladi: maqsad noaniq bo'ladi, talablar ish davomida to'xtovsiz o'zgaradi, muddat va byudjet real baholanmaydi, foydalanuvchilar fikri so'ralmaydi, jamoa a'zolari o'rtasida aloqa uziladi, xavflar oldindan o'ylanmaydi. Loyiha boshqaruvi aynan shu xatolarning oldini olishga qaratilgan.
+
+## 2. Loyiha hayot sikli bosqichlari
+Loyiha boshlanishidan tugashigacha bir necha bosqichdan o'tadi — bu **hayot sikli** deyiladi. Ko'pincha besh bosqich ajratiladi:
+#. **Konsepsiya va boshlash** — g'oya va ehtiyoj aniqlanadi, maqsad belgilanadi, loyiha amalga oshirish mumkinligi tekshiriladi, loyiha rahbari tayinlanadi, loyiha rasman boshlanadi.
+#. **Rejalashtirish** — vazifalar ro'yxati, ularning ketma-ketligi va davomiyligi, jadval (Gantt diagrammasi), resurslar, byudjet, xavflar va aloqa rejasi tuziladi; **muhim nuqtalar** (milestone) — oraliq natijalar sanalari belgilanadi.
+#. **Bajarish** — jamoa rejadagi vazifalarni bajaradi: dastur yoziladi, uskuna sotib olinadi va o'rnatiladi, xodimlar o'qitiladi.
+#. **Nazorat va monitoring** — haqiqiy holat reja bilan solishtiriladi: muddatlar, xarajatlar, sifat; chetlanishlar aniqlanib, chora ko'riladi; o'zgarishlar tasdiqlash orqali kiritiladi. Bu bosqich bajarish bilan parallel davom etadi.
+#. **Yakunlash** — natija buyurtmachiga topshiriladi va qabul qilinadi, hujjatlar arxivlanadi, jamoa bo'shatiladi, «nimani yaxshi qildik, nimani o'zgartirish kerak» degan tahlil (o'rganilgan saboqlar) yoziladi.
+Nazorat uchun rejadagi va haqiqiy ko'rsatkichlar muntazam solishtiriladi. Masalan, loyiha muddatining yarmi o'tganda ishlarning faqat 30 % i bajarilgan va byudjetning 60 % i sarflangan bo'lsa, bu jiddiy ogohlantirish: loyiha rahbari sababini aniqlaydi va resurs qo'shish, ishlarni qayta taqsimlash yoki buyurtmachi bilan ko'lam yoki muddatni qayta kelishish kabi chora ko'radi. Muammoni qanchalik erta aniqlansa, uni tuzatish shuncha arzon bo'ladi.
+jadval: Bosqichlar va ularning asosiy natijalari
+| Bosqich | Asosiy savol | Natija (hujjat) |
+| Konsepsiya va boshlash | Nima uchun va nima qilamiz? Arziydimi? | Texnik-iqtisodiy asoslash, loyiha nizomi |
+| Rejalashtirish | Qanday, qachon, kim va qancha pulga? | Vazifalar ro'yxati, Gantt diagrammasi, byudjet, xavflar reyestri |
+| Bajarish | Rejadagi ishlar bajarilyaptimi? | Loyiha mahsuloti, holat hisobotlari |
+| Nazorat va monitoring | Reja bilan farq bormi? Qanday tuzatamiz? | Nazorat hisobotlari, o'zgarishlar jurnali |
+| Yakunlash | Natija qabul qilindimi? Nimani o'rgandik? | Qabul dalolatnomasi, yakuniy hisobot |
+
+Bosqichlarni o'tish usuliga ko'ra loyiha boshqaruvining ikki asosiy yondashuvi bor. **An'anaviy** (sharshara) yondashuvda bosqichlar ketma-ket bajariladi: avval barcha talablar to'liq yoziladi, so'ng loyihalash, keyin ishlab chiqish va sinov; har bosqich tugagach, keyingisi boshlanadi. U talablar aniq va kam o'zgaradigan loyihalarda (qurilish, uskuna o'rnatish) qulay. **Moslashuvchan** (Agile) yondashuvda ish qisqa davrlarga (masalan, ikki haftalik) bo'linadi: har bir davr oxirida mahsulotning ishlaydigan kichik qismi buyurtmachiga ko'rsatiladi, uning fikri asosida keyingi davr rejasi o'zgartiriladi. Bu yondashuv talablar tez o'zgaradigan dasturiy loyihalarda keng qo'llanadi.
+
+## 3. Konsepsiya va boshlash bosqichi
+Bu bosqich eng muhimlaridan biri: noto'g'ri tanlangan maqsad yoki asoslanmagan loyiha keyinchalik katta yo'qotishga olib keladi. Bosqichda quyidagilar bajariladi.
+**Ehtiyoj va muammoni aniqlash.** Masalan: avtoservisga mijozlar telefon orqali yoziladi, qo'ng'iroqlar javobsiz qoladi, ustalar navbati chalkash va mijozlar uzoq kutadi.
+**Maqsadni SMART mezonlari bo'yicha ifodalash:** **aniq** (nima qilinadi), **o'lchanadigan** (natijani raqam bilan tekshirish mumkin), **erishiladigan** (resurslar yetarli), **dolzarb** (tashkilot ehtiyojiga mos) va **muddatli** (qachongacha). Noaniq maqsad: «mijozlarga xizmatni yaxshilash». SMART maqsad: «2027-yil 1-martgacha avtoservis saytida onlayn yozilish tizimini ishga tushirish va javobsiz qo'ng'iroqlarni 3 oy ichida ikki baravar kamaytirish».
+**Texnik-iqtisodiy asoslash** — loyihani amalga oshirish mumkinmi va foydalimi degan savolga javob beruvchi tahlil:
+- **texnik** — kerakli texnologiya, uskuna va mutaxassislar bormi;
+- **iqtisodiy** — xarajatlar va kutilayotgan foyda, loyiha o'zini qancha vaqtda oqlaydi;
+- **huquqiy** — qonun talablariga mosmi (masalan, mijozlarning shaxsga doir ma'lumotlarini qayta ishlash);
+- **operatsion** — xodimlar va mijozlar yangi tizimdan foydalana oladimi, ish tartibi qanday o'zgaradi;
+- **muddat bo'yicha** — loyihani kerakli vaqtda tugatish real mi.
+**Manfaatdor tomonlar va xavflarni dastlabki aniqlash:** kim loyihadan foyda ko'radi, kim qarshilik qilishi mumkin, qanday asosiy xavflar bor (dasturchi kechiksa, xodimlar tizimni ishlatmasa).
+Shu bosqichda **aloqa rejasi** ham o'ylanadi: kim, qanday ma'lumotni, qaysi kanal orqali va qanchalik tez-tez olishi kerak (masalan, buyurtmachiga — haftalik qisqa hisobot, jamoaga — kunlik qisqa yig'ilish, xodimlarga — ishga tushirishdan oldin o'quv mashg'uloti).
+**Loyiha nizomi** — loyihani rasman boshlaydigan va loyiha rahbariga vakolat beradigan qisqa hujjat. Uning tarkibi: loyiha nomi va maqsadi; asoslash (nima uchun kerak); ko'lam — nima kiradi va nima kirmaydi; asosiy natijalar va muhim nuqtalar; taxminiy byudjet va muddat; loyiha rahbari va asosiy ishtirokchilar; asosiy xavflar va cheklovlar; muvaffaqiyat mezonlari; buyurtmachining tasdiqlovchi imzosi.
+
+jadval: Loyiha nizomi namunasi (qisqartirilgan)
+| Band | Mazmuni |
+| Loyiha nomi | Avtoservisda onlayn yozilish tizimi |
+| Maqsad | 2027-yil 1-martgacha onlayn yozilishni ishga tushirish, javobsiz qo'ng'iroqlarni ikki baravar kamaytirish |
+| Ko'lam | Kiradi: saytda yozilish shakli, ustalar jadvali, SMS eslatma. Kirmaydi: onlayn to'lov, mobil ilova |
+| Muddat va byudjet | 3 oy; byudjet buyurtmachi bilan kelishilgan miqdorda |
+| Loyiha rahbari | Servis administratori |
+| Asosiy xavflar | Dasturchining kechikishi; ustalar tizimni ishlatmasligi |
+| Muvaffaqiyat mezoni | 3 oy ichida yozilishlarning kamida 40 % i onlayn |
+
+## 4. Loyiha boshqaruvi uchun dasturiy ta'minot
+Kichik loyihani daftar va elektron jadvalda ham boshqarish mumkin, lekin vazifalar, odamlar va bog'liqliklar ko'paygan sari maxsus dasturlar zarur bo'ladi. Loyiha boshqaruvi dasturlarining asosiy funksiyalari:
+- **rejalashtirish va jadval tuzish** — vazifalar, ularning davomiyligi va bog'liqliklari kiritiladi, dastur avtomatik ravishda Gantt diagrammasi va kritik yo'lni (keyingi darsda) hisoblaydi; bitta vazifa kechiksa, unga bog'liq vazifalar sanalari o'zi suriladi;
+- **resurslarni boshqarish** — kimga qancha vazifa berilgani, xodim ortiqcha yuklanmaganini ko'rsatadi;
+- **byudjet va xarajatlar** — rejadagi va haqiqiy xarajatlarni solishtirish;
+- **hamkorlik va aloqa** — vazifaga izoh yozish, fayl biriktirish, xabarnomalar, umumiy kalendar;
+- **hujjatlarni boshqarish** — barcha loyiha hujjatlari bir joyda, versiyalar tarixi bilan;
+- **nazorat va hisobotlar** — bajarilish foizi, kechikayotgan vazifalar, boshqaruv paneli;
+- **xavflar va muammolar reyestri** — xavflar, ularning ehtimolligi, mas'ul shaxs va choralar.
+Dasturlar turlari: **kompyuterga o'rnatiladigan** (masalan, bepul va ochiq kodli ProjectLibre, tijoriy Microsoft Project) — murakkab jadvallar va resurslar uchun qulay; **bulutli xizmatlar** — brauzer va telefonda ishlaydi, jamoa birgalikda real vaqtda foydalanadi; **Kanban doskalari** — vazifalar kartochkalari «Bajarilishi kerak», «Jarayonda», «Bajarildi» ustunlari bo'ylab suriladi, kichik jamoalar va tez o'zgaruvchan ishlar uchun oddiy va ko'rgazmali; **elektron jadvallar** — kichik loyihalar uchun arzon va moslashuvchan, lekin bog'liqliklarni avtomatik hisoblamaydi.
+jadval: Loyiha boshqaruvi vositalarini taqqoslash
+| Vosita | Kuchli tomoni | Cheklovi | Qachon mos |
+| Elektron jadval | Arzon, tanish, moslashuvchan | Bog'liqliklar va resurslar avtomatik hisoblanmaydi | Kichik, oddiy loyihalar |
+| Kanban doskasi | Oddiy va ko'rgazmali, jamoa uchun qulay | Muddatlar va kritik yo'lni chuqur tahlil qilmaydi | Kichik jamoa, tez o'zgaradigan vazifalar |
+| Maxsus loyiha dasturi | Gantt, kritik yo'l, resurslar, byudjet | O'rganish uchun vaqt kerak, ayrimlari qimmat | Ko'p vazifali va murakkab loyihalar |
+Dastur tanlashda jamoa hajmi, loyiha murakkabligi, narx va litsenziya, bulut yoki mahalliy saqlash (ma'lumotlar maxfiyligi), boshqa dasturlar bilan integratsiya va o'rganish qulayligi solishtiriladi. Eng qimmat dastur ham noto'g'ri reja yoki aloqa yo'qligini tuzatmaydi: dastur — loyiha rahbarining yordamchisi, xolos.
+Xulosa: loyiha — aniq maqsad, muddat va byudjetga ega vaqtinchalik faoliyat bo'lib, vaqt, xarajat va ko'lam cheklovlari ichida boshqariladi; u konsepsiya, rejalashtirish, bajarish, nazorat va yakunlash bosqichlaridan o'tadi; boshlash bosqichida SMART maqsad, texnik-iqtisodiy asoslash va loyiha nizomi tayyorlanadi; loyiha boshqaruvi dasturlari jadval, resurslar, byudjet, hamkorlik va hisobotlarni yagona tizimda yuritishga yordam beradi.
+
+keys: Avtoservisda onlayn yozilish
+vaziyat: Avtoservis rahbari «mijozlar uchun yaxshi bo'ladigan sayt qilaylik» degan g'oya bilan tanish dasturchiga murojaat qildi. Hech qanday hujjat tuzilmadi; ish davomida rahbar saytga onlayn to'lov, ehtiyot qismlar do'koni va mobil ilova qo'shishni ham so'radi. Uch oy o'tib, byudjet ikki baravar oshdi, sayt hali ishga tushmadi, ustalar esa yangi tizimni qanday ishlatishni bilmaydi.
+ksavol: Loyiha qaysi bosqichlarda va qanday xatolarga yo'l qo'yilgan?
+ksavol: «Yaxshi sayt» g'oyasini SMART maqsadga aylantiring.
+ksavol: Loyiha nizomida nimalar yozilishi kerak edi?
+kjavob: Konsepsiya va boshlash bosqichi o'tkazib yuborilgan: aniq maqsad, ko'lam va texnik-iqtisodiy asoslash yo'q; rejalashtirish yo'q (muddat, byudjet, xavflar); nazoratsiz ko'lam kengaygan (onlayn to'lov, do'kon, ilova) — bu muddat va byudjetning oshishiga olib kelgan; ustalarni o'qitish (operatsion jihat) hisobga olinmagan. SMART maqsad: «2027-yil 1-aprelgacha saytda onlayn yozilish bo'limini ishga tushirish; 3 oy ichida yozilishlarning kamida 40 % i onlayn bo'lsin». Nizomda: maqsad va asoslash, ko'lam (faqat onlayn yozilish; to'lov va do'kon — keyingi bosqich), muddat va byudjet, muhim nuqtalar, mas'ul shaxslar, xavflar (dasturchi kechikishi, xodimlarning o'rganishi), muvaffaqiyat mezonlari, rahbar imzosi.
+savol: Loyiha operatsion faoliyatdan nimasi bilan farq qiladi? Misollar keltiring.
+savol: Uch cheklov qanday bog'langan? Bittasi o'zgarsa, qolganlariga nima bo'ladi?
+savol: Loyiha hayot siklining besh bosqichini va ularning natijalarini aytib bering.
+savol: SMART maqsad qanday mezonlarga javob berishi kerak?
+savol: Texnik-iqtisodiy asoslashning qanday turlari bor?
+savol: Loyiha boshqaruvi dasturining asosiy funksiyalarini sanab bering.
+test: Aniq maqsad, muddat va byudjetga ega vaqtinchalik faoliyat? | Loyiha | Operatsion faoliyat | Dastur | Jarayon jurnali
+test: Loyihaning uch cheklovi to'g'ri ko'rsatilgan javob? | Vaqt, xarajat, ko'lam | Rang, shrift, format | Kirish, chiqish, xotira | Kod, test, xato
+test: Loyihani rasman boshlab, loyiha rahbariga vakolat beradigan hujjat? | Loyiha nizomi | Qabul dalolatnomasi | Gantt diagrammasi | Foydalanuvchi qo'llanmasi
+test: Loyiha amalga oshirish mumkinligi va foydaliligini baholovchi tahlil? | Texnik-iqtisodiy asoslash | Normallashtirish | Validatsiya | Arxivlash
+test: Vazifa kartochkalari «Bajarilishi kerak — Jarayonda — Bajarildi» ustunlarida suriladigan vosita? | Kanban doskasi | Ma'lumotlar lug'ati | Ekspert tizim | Ma'lumotlar oqimi diagrammasi
+uyga: Mavzu yuzasidan o'qib o'rganing. Guruhingiz yoki kasbingiz uchun kichik loyiha g'oyasini tanlab (masalan, ustaxona uchun asboblar hisobi tizimi), uning SMART maqsadini va bir sahifali loyiha nizomini tuzing: maqsad, ko'lam (nima kiradi va kirmaydi), muddat, taxminiy byudjet, mas'ullar, 3 ta xavf.
+gloss: Loyiha | Noyob natija yaratish uchun belgilangan muddat va resurslar bilan bajariladigan vaqtinchalik faoliyat.
+gloss: Loyiha rahbari | Loyihani rejalashtirish, jamoani boshqarish, muddat va byudjetni nazorat qilish uchun mas'ul shaxs.
+gloss: Manfaatdor tomonlar | Loyihadan ta'sirlanadigan yoki unga ta'sir ko'rsatadigan barcha shaxs va tashkilotlar.
+gloss: SMART maqsad | Aniq, o'lchanadigan, erishiladigan, dolzarb va muddatli maqsad.
+gloss: Texnik-iqtisodiy asoslash | Loyihaning texnik, iqtisodiy, huquqiy, operatsion va muddat jihatidan bajarilishi mumkinligini baholash.
+gloss: Loyiha nizomi | Loyihani rasman boshlaydigan va asosiy maqsad, ko'lam, muddat hamda vakolatlarni belgilaydigan hujjat.
+gloss: Muhim nuqta (milestone) | Loyihadagi muhim oraliq natija yoki voqea sanasi.

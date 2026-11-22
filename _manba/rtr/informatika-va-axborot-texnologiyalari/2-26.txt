@@ -1,0 +1,120 @@
+nomi: Animatsiyalar
+modul: 6-modul
+ac: 6.2 Animatsiyaning ishlash tamoyili, kalit va oraliq kadrlar, animatsiya turlari, dasturlari va formatlarini tushuntiradi; ssenariy asosida kalit kadrlar va tezlik o'zgarishi (easing) bilan oddiy animatsiya yaratadi va mos formatda eksport qiladi.
+maqsad: O'quvchilarda harakat illyuziyasi qanday hosil bo'lishi, kadr tezligi, kalit kadrlar va interpolyatsiya, animatsiya tamoyillari, turlari, formatlari va dasturlari hamda animatsiyadan xavfsiz va maqsadli foydalanish qoidalari haqida bilim hosil qilish, oddiy 2D animatsiya yaratish ko'nikmasini shakllantirish.
+natija: animatsiyada harakat illyuziyasi va kadr tezligi tushunchalarini tushuntiradi;
+natija: kalit kadr va oraliq kadrlarni, interpolyatsiya va tezlik o'zgarishini (easing) farqlaydi;
+natija: kadrma-kadr, 2D vektorli, 3D, stop-motion va veb-animatsiya turlarini taqqoslaydi;
+natija: animatsiya formatlarini (GIF, WebP, MP4, SVG/CSS) maqsadga mos tanlaydi;
+natija: ssenariy asosida oddiy animatsiya yaratib, eksport qiladi va xavfsizlik qoidalariga rioya qiladi.
+reja: Animatsiya asoslari
+reja: Animatsiya tamoyillari
+reja: Animatsiya turlari, dasturlari va formatlari
+reja: Animatsiyaning qo'llanishi va qoidalari
+tayanch: animatsiya; kadr; kadr tezligi; kalit kadr; oraliq kadr; interpolyatsiya; vaqt shkalasi; qatlam; harakat yo'li; tezlik o'zgarishi (easing); kadrma-kadr animatsiya; stop-motion; 3D animatsiya; skelet (rig); render; GIF; CSS animatsiya; raskadrovka
+metod: Flipbuk tajribasi | O'quvchilar daftar burchagida 10–12 sahifaga ketma-ket o'zgaruvchi chizma (sakrayotgan to'p) chizib, sahifalarni tez varaqlab harakatni ko'radi va kadr tezligi tushunchasini his qiladi.
+metod: Taqqoslash | Bir xil harakatning bir tekis va «sekin boshlanib, sekin tugaydigan» variantlari ko'rsatiladi; o'quvchilar qaysi biri tabiiyroq ekanini va nima uchunligini tushuntiradi.
+metod: Amaliy mashq | Darsning ikkinchi yarmida o'quvchilar oldingi darsdagi emblemani kalit kadrlar yordamida jonlantiradi.
+jihoz: Kompyuter va proyektor; animatsiya dasturi (bepul: Synfig, Pencil2D yoki taqdimot dasturi animatsiyalari), brauzer va matn muharriri (CSS animatsiya uchun), GIMP (GIF uchun); daftar va qalam; namunaviy animatsiyalar
+
+## 1. Animatsiya asoslari
+**Animatsiya** — bir-biridan biroz farq qiladigan tasvirlar (**kadrlar**)ni tez ketma-ket ko'rsatish orqali harakat illyuziyasini hosil qilish. Inson ko'zi va miyasi sekundiga taxminan 10–12 tadan ortiq almashinadigan tasvirlarni alohida rasmlar sifatida emas, uzluksiz harakat sifatida qabul qiladi. Sekunddagi kadrlar soni — **kadr tezligi**: an'anaviy multfilmlarda 12–24, kinoda 24, videoda 25–30, o'yinlarda 60 va undan ortiq kadr. Kadr tezligi yuqori bo'lsa, harakat silliqroq, lekin chizish yoki hisoblash uchun ko'proq ish va fayl hajmi kerak.
+Harakatli tasvirlar tarixi uzoq: XIX asrda ikki tomoniga turli rasm chizilgan va tez aylantirilganda ular birlashib ko'rinadigan disk, aylanuvchi baraban ichidagi ketma-ket rasmlar kabi o'yinchoqlar odamlarni hayratga solgan. Keyin kinoapparat ixtiro qilindi, XX asr boshida esa birinchi qo'lda chizilgan multfilmlar paydo bo'ldi. Asr oxiriga kelib to'liq kompyuterda yaratilgan animatsion filmlar chiqdi, bugun esa animatsiyani telefon ilovasida ham yaratish mumkin.
+Qo'lda chizilgan animatsiyada har bir kadrni rassom chizgan: bir daqiqalik multfilm uchun 24 fps da 1440 ta rasm! Kompyuter animatsiyasi bu ishni ancha yengillashtiradi. Animator faqat **kalit kadrlar**ni — harakatning muhim holatlarini (boshlanishi, burilish nuqtasi, oxiri) belgilaydi, dastur esa ular orasidagi **oraliq kadrlar**ni o'zi hisoblaydi — bu **interpolyatsiya** deyiladi. Masalan, 0-soniyada to'p chap chetda, 2-soniyada o'ng chetda deb ko'rsatilsa, dastur oradagi 48 kadrda (24 fps) to'pni asta surib boradi. Interpolyatsiya qilinadigan xususiyatlar: joylashuv, o'lcham, aylanish burchagi, rang, shaffoflik, shakl.
+Kadr tezligi tejamkor bo'lishi uchun an'anaviy multfilmlarda bitta rasm ko'pincha ikki kadr davomida ko'rsatiladi: 24 kadrli sekund uchun 12 ta rasm chiziladi. Animatsiya dasturlarida ish **vaqt shkalasi**da bajariladi: gorizontal o'q bo'ylab kadrlar yoki soniyalar, vertikal bo'yicha esa **qatlamlar** joylashadi. Har bir harakatlanuvchi obyekt alohida qatlamga qo'yiladi: fon bir qatlamda harakatsiz turadi, qahramon esa boshqa qatlamda harakatlanadi. Obyekt egri chiziq bo'ylab harakatlanishi uchun **harakat yo'li** chiziladi.
+
+## 2. Animatsiya tamoyillari
+Multiplikatorlar ko'p yillik tajribada harakatni tabiiy va ifodali qiladigan qoidalarni ishlab chiqqan. Ulardan eng muhimlari:
+- **Tezlik o'zgarishi (easing)** — real buyumlar bir zumda to'liq tezlikka erishmaydi va birdan to'xtamaydi: harakat sekin boshlanib tezlashadi va oxirida sekinlashadi. Animatsiya dasturlarida bu «sekin kirish — sekin chiqish» deb ataladi. Bir tekis harakat esa «mexanik» ko'rinadi.
+- **Vaqt va oraliq** — bir harakat uchun kadrlar soni uning tezligi va «og'irligini» bildiradi: og'ir buyum sekinroq tezlashadi, yengil buyum tez.
+- **Siqilish va cho'zilish** — yerga tushgan to'p biroz yassilanadi, sakraganda cho'ziladi; bu elastiklik va og'irlik hissini beradi.
+- **Tayyorgarlik harakati** — asosiy harakatdan oldin teskari yo'nalishdagi kichik harakat (sakrashdan oldin cho'qqayish) tomoshabinni ogohlantiradi.
+- **Davom etuvchi harakat** — asosiy tana to'xtagach ham soch, kiyim yoki dum biroz harakatda davom etadi.
+- **Yoy bo'ylab harakat** — tirik mavjudotlar va otilgan buyumlar odatda egri chiziq bo'ylab harakatlanadi.
+- **Soddalik va aniqlik** — tomoshabin diqqati bitta asosiy harakatga qaratiladi.
+Tezlik o'zgarishini raqamlarda ko'rish mumkin. Aytaylik, to'p 1 soniyada (24 kadr) 120 piksel surilishi kerak. Bir tekis harakatda har kadrda 5 pikseldan suriladi. «Sekin kirish — sekin chiqish» rejimida esa birinchi kadrlarda 1–2 piksel, o'rtadagi kadrlarda 8–9 piksel, oxirgi kadrlarda yana 1–2 pikseldan suriladi — umumiy masofa va vaqt bir xil, lekin harakat ancha tabiiy ko'rinadi. Kadrlar orasidagi masofa katta bo'lsa — harakat tez, kichik bo'lsa — sekin tuyuladi.
+Animatsiya yaratishdan oldin **raskadrovka** (storyboard) tuziladi: asosiy kadrlar eskizlari, ularning davomiyligi, harakat va ovoz haqida izohlar. Bu keyinchalik ko'p vaqtni tejaydi.
+
+## 3. Animatsiya turlari, dasturlari va formatlari
+- **Kadrma-kadr animatsiya** — har bir kadr alohida chiziladi; eng erkin, lekin eng ko'p mehnat talab qiladigan usul (Pencil2D, Krita, OpenToonz).
+- **Stop-motion** — plastilin qahramonlar, o'yinchoqlar yoki buyumlar har kadrda biroz surilib suratga olinadi; telefon ilovalari bilan ham yasash mumkin.
+- **2D vektorli animatsiya** — vektorli obyektlar kalit kadrlar va interpolyatsiya bilan harakatlanadi; qahramonlar qismlarga (bosh, qo'l, oyoq) bo'linib, bo'g'inlarda aylantiriladi (Synfig, Adobe Animate).
+- **3D animatsiya** — uch o'lchamli modellar yaratiladi, ularga «skelet» (**rig**) o'rnatiladi, kalit holatlar beriladi, so'ng kompyuter har bir kadrni yorug'lik va soyalar bilan hisoblaydi (**render**); bepul Blender dasturi keng tarqalgan. Kino, o'yinlar, me'morchilik vizualizatsiyasi va reklamada ishlatiladi.
+- **Motion grafika** — matn, diagramma, belgilar va infografikani harakatlantirish: reklama, telekanal bezaklari, tushuntiruvchi videolar.
+- **Veb va interfeys animatsiyalari** — sahifadagi tugma effektlari, yuklanish indikatorlari, menyu ochilishi; CSS, SVG va JavaScript yordamida yoziladi.
+- **Taqdimot animatsiyalari** — slayd elementlarining paydo bo'lishi, harakatlanishi va slaydlar orasidagi o'tishlar.
+3D animatsiya bir necha bosqichdan o'tadi: obyekt va qahramonlarning uch o'lchamli **modeli** yaratiladi; sirtiga rang, naqsh va material (metall, mato, teri) beriladi; qahramonga harakatlanuvchi «skelet» o'rnatiladi; kalit holatlar bilan harakat beriladi; yorug'lik manbalari va kamera joylashtiriladi; so'ng render qilinadi. Murakkab sahnaning bitta kadrini render qilish kuchli kompyuterda ham bir necha daqiqa yoki soat davom etishi mumkin, shuning uchun studiyalar yuzlab kompyuterdan iborat «render fermalari»dan foydalanadi.
+Taqdimot dasturlarida animatsiyalar to'rt turga bo'linadi: **kirish** (element slaydda paydo bo'ladi), **ta'kidlash** (element ko'zga tashlanishi uchun o'zgaradi), **chiqish** (element yo'qoladi) va **harakat yo'li** (element belgilangan chiziq bo'ylab harakatlanadi); ularning tartibi, davomiyligi va boshlanish vaqti alohida sozlanadi.
+jadval: Animatsiya formatlari
+| Format | Xususiyati | Qachon ishlatiladi |
+| GIF | 256 rang, ovozsiz, cheksiz takrorlanadi; hajmi katta bo'lishi mumkin | Qisqa oddiy animatsiyalar, xabarlar |
+| WebP / APNG | Ko'proq rang va shaffoflik, GIF dan kichik | Veb-sahifalar |
+| MP4 (video) | Ovozli, yuqori sifat, yaxshi siqiladi | Uzun animatsiya, ijtimoiy tarmoqlar |
+| SVG / CSS animatsiya | Matn ko'rinishidagi kod, istalgan o'lchamda aniq, juda kichik hajm | Veb-interfeys, ikonkalar, logotiplar |
+| Loyiha fayli | Qatlamlar va kalit kadrlar saqlanadi | Keyin tahrirlash uchun |
+CSS animatsiyada kalit kadrlar to'g'ridan-to'g'ri kodda yoziladi. Masalan, tishli g'ildirakni cheksiz aylantirish:
+```
+@keyframes aylan {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.gildirak { animation: aylan 4s linear infinite; }
+```
+Kalit kadrlar ikkitadan ko'p ham bo'lishi mumkin: masalan, `0%`, `50%` va `100%` nuqtalarida obyektning holati alohida yoziladi. CSS animatsiya brauzerning o'zida bajariladi, shuning uchun uning uchun alohida video fayl kerak emas, sahifa esa tez yuklanadi. Bu yerda `from` va `to` — ikki kalit kadr, `4s` — davomiylik, `linear` — bir tekis tezlik (o'rniga `ease-in-out` yozilsa, harakat sekin boshlanib sekin tugaydi), `infinite` — cheksiz takrorlash.
+
+## 4. Animatsiyaning qo'llanishi va qoidalari
+Animatsiya ta'limda (ko'rinmas jarayonlarni ko'rsatish: dvigatel ichidagi porshenlar, elektr toki, qon aylanishi), reklama va marketingda, veb-sayt va ilovalar interfeysida (foydalanuvchiga harakat natijasini ko'rsatish), kompyuter o'yinlari va kinoda, muhandislikda (mexanizm ishlashini simulyatsiya qilish), shuningdek kasbiy yo'riqnomalarda (asbob bilan xavfsiz ishlash bosqichlari) keng qo'llanadi.
+Kasbiy sohalarda ham animatsiya foydali: oshpaz retsept bosqichlarini qisqa animatsiya bilan tushuntiradi, avtomobil ustasi mijozga dvigatel yoki tormoz tizimi qanday ishlashini animatsion sxemada ko'rsatadi, tikuv ustasi andozaning yig'ilish tartibini, elektromontyor esa sxemadagi tok yo'lini jonlantiradi. Animatsiya bilan bog'liq kasblar ham ko'paymoqda: multiplikator, motion-dizayner, 3D vizualizator, o'yin animatori.
+Animatsiya yaratishning umumiy tartibi quyidagicha:
+#. G'oya va maqsad: kim uchun, nima haqida, qancha davom etadi.
+#. Ssenariy va raskadrovka.
+#. Animatik — raskadrovka kadrlaridan vaqt bo'yicha yig'ilgan qo'pol versiya.
+#. Asosiy animatsiya: kalit kadrlar, interpolyatsiya, tezlik o'zgarishi.
+#. Ovoz, musiqa va matn qo'shish.
+#. Render yoki eksport, so'ng tomoshabinlarda sinab ko'rish.
+**Yaxshi animatsiya qoidalari:** har bir harakat maqsadga xizmat qilsin — e'tiborni tortish, jarayonni tushuntirish yoki natijani ko'rsatish; animatsiya qisqa va me'yorida bo'lsin — bir ekranda juda ko'p harakat diqqatni chalg'itadi; tezlik o'zgarishi bilan tabiiy harakat yarating; interfeysda animatsiya 0,2–0,5 soniyadan uzun bo'lmasin, aks holda foydalanuvchini kuttiradi; fayl hajmini nazorat qiling.
+Fayl hajmi ham sifatning bir qismi: GIF formatida uzun va rangli animatsiya o'nlab megabayt bo'lib ketishi mumkin, xuddi shu animatsiya MP4 videoda bir necha megabayt, CSS kodda esa bir necha kilobayt bo'ladi. Shuning uchun animatsiyaning davomiyligi, o'lchami va kadr tezligi maqsadga qarab oqilona tanlanadi.
+**Xavfsizlik va qulaylik:** sekundiga uch martadan ko'p keskin chaqnaydigan yorug'lik yoki qizil rang almashinuvlaridan saqlaning — ular ayrim odamlarda tutqanoq xurujini qo'zg'atishi mumkin; operatsion tizimdagi «harakatni kamaytirish» sozlamasini hurmat qiling (ayrim foydalanuvchilarda harakat bosh aylanishiga sabab bo'ladi); muhim ma'lumotni faqat animatsiya orqali bermang. Boshqalarning qahramonlari, musiqasi va animatsiyalaridan ruxsatsiz foydalanmang.
+Xulosa: animatsiya kadrlarni tez almashtirish orqali harakat illyuziyasini yaratadi; kompyuter kalit kadrlar orasidagi oraliq kadrlarni interpolyatsiya qiladi; tezlik o'zgarishi va boshqa tamoyillar harakatni tabiiy qiladi; maqsadga qarab kadrma-kadr, 2D, 3D, stop-motion yoki veb-animatsiya va GIF, MP4, SVG/CSS kabi formatlar tanlanadi.
+
+keys: Ustaxona xavfsizligi bo'yicha animatsion yo'riqnoma
+vaziyat: Texnikum ustaxonasi uchun «Charxda xavfsiz ishlash» mavzusida 30 soniyalik animatsion yo'riqnoma tayyorlash kerak. Birinchi variantda har bir kadrda turli rangli chaqnovchi yozuvlar, 15 xil o'tish effekti va tez almashinuvchi rasmlar bor; ustaxona ekranida ko'rsatilganda o'quvchilar asosiy qoidalarni eslab qolmadi, bitta o'quvchi esa ko'zi og'riganini aytdi. Fayl GIF formatida 48 MB bo'lib chiqdi va guruh chatiga yuklanmadi.
+ksavol: Birinchi variantdagi xatolar nimalardan iborat?
+ksavol: Yo'riqnoma qanday tuzilsa, tushunarli va xavfsiz bo'ladi?
+ksavol: Qaysi format va sozlamalarni tanlash kerak?
+kjavob: Xatolar: animatsiya maqsadga xizmat qilmagan — ortiqcha effektlar diqqatni chalg'itgan; keskin chaqnashlar ko'zni charchatgan va ayrim odamlar uchun xavfli; GIF uzun va rangli animatsiya uchun mos emas. To'g'ri yo'l: raskadrovka tuzish (5–6 qoida — har biriga bitta sahna); har sahnada bitta asosiy harakat (masalan, ko'zoynak taqish, himoya to'sig'ini tushirish), tezlik o'zgarishi bilan silliq harakat, yirik va kontrastli matn, chaqnashsiz bir xil uslub; har bir qoida ekranda yetarli vaqt (3–5 soniya) tursin. Format: MP4 (H.264), 1080p, 30 fps — hajmi bir necha megabayt bo'ladi; qisqa takrorlanuvchi parchalar uchun WebP.
+savol: Animatsiyada harakat illyuziyasi qanday hosil bo'ladi?
+savol: Kalit kadr va oraliq kadrning farqi nimada? Interpolyatsiya nima?
+savol: Tezlik o'zgarishi (easing) nima uchun harakatni tabiiy qiladi?
+savol: 2D vektorli va 3D animatsiyaning yaratilish jarayoni qanday farq qiladi?
+savol: GIF, MP4 va CSS animatsiyani qaysi holatlarda tanlash kerak?
+savol: Animatsiyada qanday xavfsizlik va qulaylik qoidalariga amal qilinadi?
+amaliy: Emblemani jonlantirish: kalit kadrlar va tezlik o'zgarishi
+amaqsad: Oldingi darsda yaratilgan emblema (yoki oddiy shakl) uchun raskadrovka tuzib, kalit kadrlar, interpolyatsiya va tezlik o'zgarishi yordamida 3–5 soniyalik animatsiya yaratish va uni mos formatda eksport qilish.
+ajihoz: Kompyuter; Synfig yoki taqdimot dasturi (yoki brauzer va matn muharriri — CSS uchun); GIMP (GIF uchun); oldingi darsdagi SVG emblema
+qadam: 4–6 kadrli raskadrovka tuzing: emblema qanday paydo bo'ladi, g'ildirak qanday aylanadi, matn qachon chiqadi; har bir kadr davomiyligini yozing (jami 3–5 soniya).
+qadam: Animatsiya loyihasini yarating (o'lcham 1080 × 1080, 24 yoki 30 fps); emblemaning qismlarini alohida qatlamlarga joylang: fon, g'ildirak, belgi, matn.
+qadam: G'ildirak uchun ikki kalit kadr qo'ying (0 va 360 gradus) va interpolyatsiya natijasini ko'ring; so'ng bir tekis va «sekin boshlanib sekin tugaydigan» tezlikni solishtiring.
+qadam: Belgi uchun paydo bo'lish animatsiyasini yarating: o'lcham 0 dan 100 % gacha va shaffoflik 0 dan 100 % gacha; matnni 1 soniya kechiktirib chiqaring.
+qadam: CSS variantini sinab ko'ring: SVG emblemani HTML sahifaga qo'yib, nazariy qismdagi `@keyframes` kodi bilan g'ildirakni aylantiring va `linear` o'rniga `ease-in-out` qo'yib farqni kuzating.
+qadam: Animatsiyani MP4 va GIF (yoki WebP) formatlarida eksport qiling; fayllar hajmini va sifatini taqqoslang.
+qadam: Animatsiyani chaqnashlar va harakat me'yori bo'yicha tekshiring va ishlatilgan kalit kadrlar sonini, kadr tezligini va formatlar xulosasini yozing.
+anatija: Raskadrovka, animatsiya loyihasi, CSS animatsiyali HTML sahifa, MP4 va GIF (yoki WebP) fayllar, hajm va sifat taqqoslanishi va xulosa.
+baho5: Raskadrovka aniq, kalit kadrlar to'g'ri, tezlik o'zgarishi qo'llangan va harakat tabiiy, CSS varianti ishlaydi, eksport formatlari to'g'ri tanlangan va taqqoslangan, xavfsizlik qoidalari hisobga olingan.
+masala: 3 soniyalik animatsiya 12 fps da yaratilmoqda va unda 4 ta kalit kadr bor. Jami nechta kadr bo'ladi va ulardan nechtasini dastur interpolyatsiya qiladi?
+yechim: 3 · 12 = 36 kadr; 36 − 4 = 32 ta oraliq kadrni dastur hisoblaydi.
+masala: 300 × 300 pikselli 36 kadrli GIF animatsiyada har bir piksel 1 bayt (256 rang) bilan yozilsa, siqilmagan hajm qancha bo'ladi? Xuddi shu animatsiya 600 × 600 o'lchamda bo'lsa-chi?
+yechim: 300 · 300 · 36 = 3 240 000 bayt ≈ 3,1 MB. 600 × 600 da piksellar 4 marta ko'p: 12 960 000 bayt ≈ 12,4 MB — o'lcham 2 marta oshsa, hajm 4 marta oshadi.
+test: Harakatning muhim holatlarini belgilaydigan kadrlar qanday ataladi? | Kalit kadrlar | Oraliq kadrlar | Bo'sh kadrlar | Render kadrlar
+test: Dastur kalit kadrlar orasidagi kadrlarni avtomatik hisoblashi? | Interpolyatsiya | Rasterlash | Kompressiya | Normallashtirish
+test: Harakat sekin boshlanib, tezlashib, oxirida sekinlashishi qanday ataladi? | Tezlik o'zgarishi (easing) | Siqilish | Render | Raskadrovka
+test: Ovozsiz, 256 rangli, cheksiz takrorlanadigan animatsiya formati? | GIF | MP4 | WAV | DOCX
+test: 2 soniyalik animatsiya 24 fps da nechta kadrdan iborat? | 48 | 24 | 12 | 2
+uyga: Mavzu yuzasidan o'qib o'rganing. Telefoningizda stop-motion ilovasi yoki oddiy suratlar bilan 3–5 soniyalik stop-motion animatsiya yarating (masalan, o'z-o'zidan yig'ilayotgan asboblar to'plami) va kadr tezligi hamda kadrlar sonini yozing.
+gloss: Animatsiya | Biroz farq qiluvchi kadrlarni tez ketma-ket ko'rsatib harakat illyuziyasini yaratish.
+gloss: Kalit kadr | Animatsiyada obyektning muhim holatini belgilovchi kadr.
+gloss: Interpolyatsiya | Kalit kadrlar orasidagi oraliq kadrlarni dastur tomonidan avtomatik hisoblash.
+gloss: Tezlik o'zgarishi (easing) | Harakatning sekin boshlanib tezlashishi va oxirida sekinlashishi.
+gloss: Raskadrovka | Animatsiya yoki videoning asosiy kadrlari eskizlari va izohlari ketma-ketligi.
+gloss: Render | Kompyuterning 3D sahnadan yorug'lik va soyalar bilan tayyor kadrlarni hisoblab chiqishi.
+gloss: Stop-motion | Buyumlarni har kadrda biroz surib suratga olish orqali yaratiladigan animatsiya.

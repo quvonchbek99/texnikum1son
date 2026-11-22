@@ -1,0 +1,103 @@
+nomi: Texnologiya va bizning turmush tarzimiz
+modul: 4-modul
+ac: 4.5 Axborot texnologiyalarining kundalik hayot, ish, ta'lim va dam olishga ta'sirini tahlil qiladi, ularning ijobiy va salbiy oqibatlarini baholaydi, raqamli farovonlik va mas'uliyatli foydalanish qoidalariga amal qiladi.
+maqsad: O'quvchilarda axborot texnologiyalari turmush tarzini qanday o'zgartirganini tushunish, ularning afzalliklari va xavflarini dalillar asosida baholash, raqamli muhitda sog'lom, xavfsiz va mas'uliyatli yashash odatlarini shakllantirish.
+natija: AT ning aloqa, xarid, to'lov, transport, sog'liq, ta'lim va dam olishdagi qo'llanishiga misollar keltiradi;
+natija: «aqlli uy» va narsalar interneti tushunchalarini tushuntiradi;
+natija: texnologiyalarning ijobiy va salbiy ta'sirlarini shaxs, jamiyat va atrof-muhit darajasida taqqoslaydi;
+natija: raqamli qaramlik, axborot shovqini va soxta xabarlar xavfini tushuntiradi va ulardan himoyalanish yo'llarini aytadi;
+natija: o'zining raqamli odatlarini tahlil qilib, raqamli farovonlik rejasini tuzadi.
+reja: Texnologiyalar kundalik hayotimizda
+reja: Texnologiyalarning ijobiy ta'siri
+reja: Salbiy ta'sirlar va xavflar
+reja: Raqamli farovonlik va mas'uliyatli foydalanish
+tayanch: axborot jamiyati; raqamli xizmat; narsalar interneti (IoT); aqlli uy; yordamchi texnologiyalar; raqamli qaramlik; ekran vaqti; axborot shovqini; soxta xabar; raqamli iz; raqamli farovonlik; elektron chiqindi
+metod: «Bir kun texnologiyasiz» | O'quvchilar ertalabdan kechgacha qaysi ishlarida raqamli qurilma va xizmatlardan foydalanishini ro'yxat qiladi va ularsiz bu ishlarni qanday bajarishini muhokama qiladi.
+metod: Ikki tomonlama jadval | Guruhlar bitta sohani (savdo, sog'liq, ta'lim, transport, dam olish) olib, texnologiyaning ijobiy va salbiy ta'sirlarini jadvalga yozadi va taqdim etadi.
+metod: O'z-o'zini tahlil | Har bir o'quvchi telefonidagi ekran vaqti statistikasini ko'rib (shaxsiy ma'lumotlarini oshkor qilmasdan), eng ko'p vaqt olgan uch ilova turini yozadi va xulosa chiqaradi.
+jihoz: Kompyuter va proyektor; taqdimot; «ijobiy — salbiy» jadvali yozilgan tarqatma varaq; o'quvchilarning telefonlari (ekran vaqti statistikasini ko'rish uchun, ixtiyoriy)
+
+## 1. Texnologiyalar kundalik hayotimizda
+Yigirma-o'ttiz yil oldin bank hisobini ko'rish uchun bankka borish, poyezd chiptasi uchun kassada navbat turish, xat yuborish uchun pochtaga borish kerak edi. Bugun bu ishlarning ko'pchiligi telefonda bir necha daqiqada bajariladi. Axborot texnologiyalari hayotning deyarli barcha sohalariga kirib borgan jamiyat **axborot jamiyati** deyiladi: unda axborotni yaratish, uzatish va undan foydalanish iqtisodiyot va kundalik hayotning asosiy qismiga aylanadi.
+Texnologiyalar turmush tarzimizni o'zgartirgan asosiy sohalar:
+- **aloqa** — messenjerlar, ovozli va videoqo'ng'iroqlar, ijtimoiy tarmoqlar orqali boshqa shahar va davlatdagi yaqinlar bilan bir zumda bog'lanish;
+- **xarid va to'lovlar** — onlayn do'konlar va marketpleyslar, QR-kod orqali to'lov, kommunal xizmatlar, telefon va internet uchun to'lov ilovalari, bank kartalarini masofadan boshqarish;
+- **davlat xizmatlari** — ariza berish, ma'lumotnoma olish, navbatga yozilish kabi xizmatlarning onlayn ko'rsatilishi (masalan, yagona interaktiv davlat xizmatlari portali);
+- **transport** — navigatsiya xaritalari, tirbandlik haqida ma'lumot, taksi va yetkazib berish ilovalari, jamoat transportining harakatini kuzatish, elektron chiptalar;
+- **sog'liq** — shifokorga onlayn yozilish, elektron tibbiy kartalar, masofaviy maslahat, qadam va yurak urishini o'lchaydigan qurilmalar;
+- **ta'lim** — elektron darsliklar, onlayn kurslar, videodarslar, elektron jurnal va kundaliklar, masofaviy o'qish;
+- **ish** — elektron hujjat aylanishi, masofadan ishlash, bulutli hujjatlar ustida birgalikda ishlash;
+- **dam olish** — musiqa va film xizmatlari, kompyuter o'yinlari, elektron kitoblar, sayohatni onlayn rejalashtirish.
+Yangi bosqich — **narsalar interneti** (IoT): internetga ulangan va bir-biri bilan ma'lumot almashadigan kundalik buyumlar. **Aqlli uy**da chiroq, isitish, konditsioner, kamera, eshik qulfi va maishiy texnikani telefondan boshqarish yoki jadval asosida avtomatik ishlatish mumkin: masalan, hamma uydan chiqqanda isitish pasayadi, harakat sezilsa chiroq yonadi, suv oqib ketsa datchik xabar beradi. Bunday tizimlar qulaylik va energiya tejashni beradi, lekin internetga ulangan har bir qurilma himoyalanishi kerak bo'lgan yangi «eshik» hamdir.
+Texnologiyalar kasblarni ham o'zgartirmoqda. Oshxona va restoranlarda buyurtmalar planshet orqali qabul qilinadi va to'g'ridan-to'g'ri oshxona ekraniga tushadi, mahsulot qoldig'i dastur yordamida hisoblanadi. Avtoservisda diagnostika skaneri avtomobil kompyuteridagi xato kodlarini o'qiydi, mijozlar esa ta'mirga onlayn yoziladi. Tikuv ishlab chiqarishida andozalar kompyuterda chiziladi va avtomatik bichish uskunasiga uzatiladi, tayyor mahsulot internet-do'kon orqali sotiladi. Elektromontyor elektr hisoblagichlarni masofadan o'qiydigan va nosozlikni o'zi xabar qiladigan tizimlar bilan ishlaydi. Demak, bugun deyarli har bir mutaxassisga o'z sohasidagi raqamli vositalardan foydalanish ko'nikmasi kerak.
+Shahar miqyosida ham shunday o'zgarishlar bor: «aqlli shahar» tizimlarida svetoforlar transport oqimiga qarab ishlaydi, ko'cha chiroqlari odamlar bo'lmaganda xiralashadi, avtobuslar qachon kelishini bekatdagi tablo yoki telefon ko'rsatadi, kommunal xizmatlarga murojaatlar ilova orqali qabul qilinadi.
+
+## 2. Texnologiyalarning ijobiy ta'siri
+- **Vaqt va pulni tejash**: navbatsiz xizmatlar, onlayn xaridlar, yo'lga sarflanadigan vaqtning kamayishi.
+- **Axborotga erkin kirish**: istalgan savolga javob, bepul o'quv kurslari, kutubxonalar va arxivlarning elektron nusxalari.
+- **Yangi imkoniyatlar**: masofadan ishlash va o'qish, onlayn biznes, chekka hududlardagi odamlarning katta bozorga chiqishi; hunarmand o'z mahsulotini internet orqali boshqa viloyat va davlatlarga sotishi mumkin.
+- **Xavfsizlik**: favqulodda vaziyatlarda tez xabar berish, navigatsiya, kuzatuv tizimlari, bank operatsiyalari haqida darhol xabar olish.
+- **Inklyuziya**: **yordamchi texnologiyalar** — ekrandagi matnni ovoz chiqarib o'qish, nutqni matnga aylantirish, ekranni kattalashtirish, ko'z harakati bilan boshqarish — nogironligi bor insonlarga o'qish, ishlash va muloqot qilish imkonini beradi.
+- **Sog'liq va ekologiya**: tibbiy uskunalar, kasalliklarni erta aniqlash, aqlli tizimlar yordamida elektr va suvni tejash; elektron hujjatlar qog'oz sarfini, onlayn uchrashuvlar esa yo'l va yoqilg'i sarfini kamaytiradi.
+- **Ijod va o'zini namoyon qilish**: har kim o'z videosi, musiqasi, maqolasi yoki loyihasini katta auditoriyaga ko'rsatishi, hamfikrlar bilan jamoa tuzishi mumkin.
+
+Ijobiy ta'sirlar o'z-o'zidan kelmaydi: ulardan foydalanish uchun qurilma, internet, ko'nikma va ishonch kerak. Masalan, davlat xizmatlari portali vaqtni tejaydi, lekin uni ishlata olmaydigan keksa odam uchun foydasiz; bepul onlayn kurs bilim beradi, lekin o'zini boshqara olmaydigan o'quvchi uni oxiriga yetkazmaydi. Shuning uchun texnologiyaning foydasi jamiyatda raqamli savodxonlik darajasiga bevosita bog'liq.
+
+## 3. Salbiy ta'sirlar va xavflar
+Har qanday kuchli vosita singari, texnologiya ham noto'g'ri yoki me'yoridan ortiq ishlatilganda zarar keltiradi.
+- **Raqamli qaramlik**: bildirishnomalarni tez-tez tekshirish ehtiyoji, cheksiz lentani «aylantirish», o'yinlarga haddan tashqari berilish. Ilovalarning ko'pchiligi foydalanuvchini iloji boricha uzoq ushlab turishga mo'ljallab yaratilgan.
+- **Jismoniy sog'liq**: kam harakat, noto'g'ri o'tirish tufayli bel va bo'yin og'rig'i, ko'z charchashi, kechasi ekranga qarash natijasida uyqu buzilishi.
+- **Ijtimoiy ta'sir**: jonli muloqotning kamayishi, yolg'izlik hissi, boshqalarning «chiroyli» hayoti bilan o'zini solishtirish, kiberbulling (internetda kamsitish va ta'qib qilish).
+- **Maxfiylik**: ilovalar va saytlar joylashuv, qidiruvlar, xaridlar va kontaktlar haqida ma'lumot to'playdi; internetda qoldirilgan har bir post, rasm va izoh **raqamli iz** bo'lib, yillar o'tib ham topilishi mumkin.
+- **Firibgarlik va soxta xabarlar**: soxta yutuq va «tezkor daromad» takliflari, SMS-kodni so'rash, tekshirilmagan yangiliklar va mish-mishlarning tez tarqalishi; ko'p ma'lumot orasida to'g'risini ajratish qiyinlashadi — bu **axborot shovqini** deyiladi.
+- **Ish o'rinlari o'zgarishi**: avtomatlashtirish ayrim kasblardagi oddiy, takroriy ishlarni kamaytiradi va yangi ko'nikmalarni talab qiladi. Masalan, o'z-o'ziga xizmat ko'rsatish kassalari va onlayn buyurtmalar kassirlar sonini kamaytiradi, lekin uskunalarni sozlaydigan, ta'mirlaydigan va ma'lumotlarni tahlil qiladigan mutaxassislarga talab ortadi; butun umr o'qish odatiy holga aylanadi.
+- **Axborot «pufagi»**: tavsiya algoritmlari foydalanuvchiga u avval yoqtirgan narsalarga o'xshash kontentni ko'rsatadi; natijada odam faqat o'z fikrini tasdiqlaydigan xabarlarni ko'radi va boshqa nuqtai nazarlardan uzoqlashadi.
+- **Kiberxavfsizlik tahdidlari**: zararli dasturlar, akkauntlarni buzish, shaxsiy ma'lumotlarning sizib chiqishi; texnologiyaga bog'liqlik ortgani sari bunday hujumlarning zarari ham kattalashadi.
+- **Raqamli tengsizlik**: qurilma, internet yoki ko'nikmaga ega bo'lmaganlar xizmatlardan chetda qolishi (1-kursda o'rganilgan).
+- **Atrof-muhit**: ma'lumot markazlari va qurilmalar katta energiya sarflaydi, eskirgan telefonlar, batareyalar va kompyuterlar **elektron chiqindi**ga aylanadi; ulardagi og'ir metallar noto'g'ri tashlansa tuproq va suvni ifloslantiradi.
+jadval: Texnologiyalarning ta'siri: misollar
+| Soha | Ijobiy ta'sir | Salbiy ta'sir yoki xavf |
+| Xarid | Uydan chiqmasdan xarid, narxlarni solishtirish | Ortiqcha xarid, soxta do'konlar, karta ma'lumotlarini o'g'irlash |
+| Ta'lim | Bepul kurslar, videodarslar, masofaviy o'qish | Diqqat tarqalishi, tayyor javobni ko'chirish |
+| Sog'liq | Onlayn navbat, masofaviy maslahat, faollik o'lchagichlar | Internetdagi noto'g'ri tibbiy maslahatlar, kam harakat |
+| Aloqa | Uzoqdagi yaqinlar bilan bog'lanish | Jonli muloqotning kamayishi, kiberbulling |
+| Ish | Masofadan ishlash, avtomatlashtirish | Ish va dam olish chegarasining yo'qolishi, ayrim kasblarning qisqarishi |
+
+## 4. Raqamli farovonlik va mas'uliyatli foydalanish
+**Raqamli farovonlik** — texnologiyalardan sog'liq, o'qish, ish va munosabatlarga zarar yetkazmasdan, ongli va muvozanatli foydalanish. U texnologiyadan voz kechish emas, balki uni boshqarishni o'rganishdir. Bir necha amaliy qoida:
+#. **Ekran vaqtini kuzating**: telefondagi ekran vaqti statistikasini haftada bir marta ko'ring; ko'p vaqt olgan ilovalarga kunlik cheklov qo'ying.
+#. **Bildirishnomalarni tartibga soling**: faqat muhim ilovalar (qo'ng'iroq, ish va o'qish xabarlari) bildirishnoma yuborsin; o'qish va ish paytida «Bezovta qilmang» rejimini yoqing.
+#. **Uyqu va harakatni himoya qiling**: uxlashdan 1 soat oldin ekrandan uzoqlashing, telefonni karavotdan uzoqroqqa qo'ying; har 45–60 daqiqada qisqa tanaffus qiling va harakatlaning, «20-20-20» qoidasiga amal qiling (har 20 daqiqada 20 soniya davomida 6 metr uzoqlikka qarang).
+#. **Axborotni tekshiring**: xabarni tarqatishdan oldin manbasini, sanasini va boshqa ishonchli manbalarda borligini tekshiring; his-tuyg'uni kuchli qo'zg'aydigan sarlavhalarga shubha bilan qarang.
+#. **Raqamli izingizni boshqaring**: maxfiylik sozlamalarini tekshiring, joylashuvni faqat kerakli ilovalarga bering, shaxsiy ma'lumotlar va boshqalarning rasmlarini ruxsatsiz joylamang.
+#. **Odobli bo'ling**: internetda ham hurmat bilan muloqot qiling; kiberbullingga duch kelsangiz, javob qaytarmang, dalilni saqlang, platformaga shikoyat qiling va kattalarga ayting.
+#. **Ekologik mas'uliyat**: qurilmalardan uzoq foydalaning, ta'mirlang, eskilarini maxsus qabul punktlariga topshiring, keraksiz zaryadlovchilarni rozetkada qoldirmang.
+Ish va o'qishda ham muvozanat kerak: dars yoki ish vaqti tugagach, xabarlarga darhol javob berish majburiyati yo'q; muhim bo'lmagan guruh chatlarini ovozsiz qilib qo'yish mumkin. Oilada ham umumiy qoidalar foydali: ovqatlanish paytida telefonsiz o'tirish, kichik bolalar uchun yoshiga mos ilovalar va vaqt cheklovlari, oila a'zolarining rasmlarini ularning roziligisiz internetga joylamaslik. Ekran oldida o'tkazilgan vaqtning sifati ham muhim: yangi bilim olish, ijod qilish va yaqinlar bilan muloqot uchun ishlatilgan vaqt maqsadsiz «aylantirib» o'tkazilgan vaqt bilan bir xil emas.
+Texnologiyaning ta'siri ko'p jihatdan foydalanuvchiga bog'liq: bir xil telefon kimgadir yangi kasb o'rganish, kimgadir esa kun bo'yi vaqtni behuda o'tkazish vositasi bo'ladi. Shuning uchun o'z odatlarini vaqti-vaqti bilan tahlil qilib turish muhim.
+Xulosa: axborot texnologiyalari aloqa, xarid, xizmatlar, ta'lim va ishni qulay va tez qildi, yangi imkoniyatlar yaratdi; ayni paytda ular sog'liq, maxfiylik, munosabatlar va atrof-muhit uchun xavflarni ham olib keldi; raqamli farovonlik qoidalari texnologiyadan foydani oshirib, zararni kamaytirishga yordam beradi.
+
+keys: Kuniga 7 soat ekranda
+vaziyat: 2-kurs o'quvchisi Sardor so'nggi oylarda darslarda tez charchab qolmoqda, ertalab uyg'onishi qiyinlashgan, baholari pasaygan. Telefonidagi statistikaga ko'ra, u kuniga o'rtacha 7 soat ekranga qaraydi: shundan 4 soati qisqa videolar va o'yinlarga, 1 soati yarim tundan keyin to'g'ri keladi. Telefon kuniga 150 martadan ko'p qulfdan chiqariladi. Sardor «telefon menga dam olish uchun kerak, usiz zerikaman» deydi.
+ksavol: Sardorning holatida raqamli qaramlikning qaysi belgilari bor?
+ksavol: Bu odatlar uning sog'lig'i va o'qishiga qanday ta'sir qilmoqda?
+ksavol: Sardor uchun bir haftalik raqamli farovonlik rejasini tuzing.
+kjavob: Belgilar: ko'p ekran vaqti, tunda foydalanish, telefonni tez-tez tekshirish, telefonsiz zerikish hissi. Ta'siri: uyqu kamligi va sifatsizligi, charchoq, diqqatning pasayishi, harakatsizlik. Reja: qisqa video va o'yin ilovalariga kunlik 1 soat cheklov; 22:30 dan keyin «Uyqu» rejimi va telefonni boshqa xonada zaryadlash; dars va uy vazifasi vaqtida «Bezovta qilmang»; keraksiz bildirishnomalarni o'chirish; har kuni kamida 30 daqiqa jismoniy faollik yoki do'stlar bilan jonli uchrashuv; bo'sh vaqt uchun telefonsiz mashg'ulot (sport, kitob, to'garak); hafta oxirida ekran vaqtini solishtirib, natijani yozish.
+savol: Axborot jamiyati deganda nimani tushunasiz? Kundalik hayotingizdan 5 ta misol keltiring.
+savol: Narsalar interneti va aqlli uy nima? Ularning afzalligi va xavfi nimada?
+savol: Yordamchi texnologiyalar kimlarga va qanday yordam beradi?
+savol: Raqamli iz nima va nima uchun u haqida o'ylash kerak?
+savol: Soxta xabarlarni qanday aniqlash mumkin?
+savol: Elektron chiqindilar atrof-muhitga qanday zarar yetkazadi va bunga qarshi nima qilish mumkin?
+test: Internetga ulangan va o'zaro ma'lumot almashadigan kundalik buyumlar tizimi? | Narsalar interneti (IoT) | Intranet | Ekspert tizim | Bulutli ombor
+test: Internetda qoldirilgan postlar, rasmlar va izohlar majmui qanday ataladi? | Raqamli iz | Raqamli tengsizlik | Elektron chiqindi | Axborot shovqini
+test: Ekrandagi matnni ovoz chiqarib o'qiydigan dastur qaysi guruhga kiradi? | Yordamchi texnologiyalar | O'yin dasturlari | Utilitlar | Antiviruslar
+test: «20-20-20» qoidasi nimaga xizmat qiladi? | Ko'z charchashini kamaytirishga | Batareyani tejashga | Parolni mustahkamlashga | Internet tezligini oshirishga
+test: Quyidagilardan qaysi biri texnologiyaning atrof-muhitga salbiy ta'siri? | Elektron chiqindilar ko'payishi | Onlayn navbatga yozilish | Elektron darsliklar | Masofaviy maslahat
+uyga: Takrorlash: bir hafta davomida ekran vaqtingizni kuzatib, eng ko'p vaqt olgan 3 ilova turini va kunlik o'rtacha vaqtni yozing (shaxsiy ma'lumotlarsiz). O'zingiz uchun 5 bandli raqamli farovonlik rejasini tuzing va keyingi hafta natijasini solishtiring.
+gloss: Axborot jamiyati | Axborotni yaratish, uzatish va undan foydalanish iqtisodiyot va hayotning asosiy qismiga aylangan jamiyat.
+gloss: Narsalar interneti (IoT) | Internetga ulangan, datchik va boshqaruv vositalariga ega, o'zaro ma'lumot almashadigan buyumlar tarmog'i.
+gloss: Aqlli uy | Yoritish, isitish, xavfsizlik va maishiy texnikani masofadan yoki avtomatik boshqarish tizimi.
+gloss: Yordamchi texnologiyalar | Nogironligi bor insonlarga qurilma va axborotdan foydalanishda yordam beradigan vositalar.
+gloss: Raqamli qaramlik | Raqamli qurilma va ilovalardan me'yordan ortiq, nazoratsiz foydalanish odati.
+gloss: Raqamli farovonlik | Texnologiyalardan sog'liq va munosabatlarga zarar yetkazmasdan, ongli va muvozanatli foydalanish.
+gloss: Elektron chiqindi | Eskirgan yoki buzilgan elektron qurilmalar va ularning qismlari.

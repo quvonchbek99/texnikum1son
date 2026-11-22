@@ -1,0 +1,73 @@
+nomi: Kritik bosqichlarni tahlil qilish. Gantt diagrammalari
+modul: 5-modul
+ac: 5.4 Loyiha vazifalarining davomiyligi va bog'liqliklari asosida eng erta va eng kech muddatlarni, zaxira vaqtni va kritik yo'lni hisoblaydi, elektron jadvalda Gantt diagrammasini tuzadi va kechikishlarning loyiha muddatiga ta'sirini tahlil qiladi.
+maqsad: O'quvchilarda kritik yo'l usuli, zaxira vaqt, PERT bahosi va Gantt diagrammasi haqida bilim hosil qilish, loyiha jadvalini hisoblash, elektron jadvalda Gantt diagrammasini yaratish va «agar kechiksa» tahlilini o'tkazish ko'nikmasini shakllantirish.
+natija: vazifalar, davomiylik va oldingi vazifalar asosida eng erta boshlanish va tugash sanalarini hisoblaydi;
+natija: eng kech muddatlar va zaxira vaqtni topadi, kritik yo'lni aniqlaydi;
+natija: PERT usulida uch baho asosida kutilayotgan davomiylikni hisoblaydi;
+natija: elektron jadvalda Gantt diagrammasini tuzadi va kritik vazifalarni belgilaydi;
+natija: vazifa kechikishining loyiha muddatiga ta'sirini tahlil qiladi.
+reja: Kritik yo'l usuli
+reja: PERT bahosi
+reja: Gantt diagrammasi
+tayanch: vazifa; davomiylik; oldingi vazifa (bog'liqlik); eng erta boshlanish; eng erta tugash; eng kech boshlanish; eng kech tugash; zaxira vaqt; kritik yo'l; kritik vazifa; PERT; Gantt diagrammasi; muhim nuqta
+metod: Doskada hisoblash | O'qituvchi «Guruh videorolikini tayyorlash» loyihasi misolida eng erta va eng kech muddatlarni doskada bosqichma-bosqich hisoblaydi; o'quvchilar har qadamda keyingi qiymatni taxmin qiladi.
+metod: «Agar kechiksa?» | Juftliklar tayyor jadvalda bitta vazifa davomiyligini o'zgartirib, loyiha muddati o'zgaradimi yoki yo'qligini tekshiradi va sababini tushuntiradi.
+ajihoz: Kompyuter; elektron jadval dasturi (MS Excel yoki LibreOffice Calc); ixtiyoriy — ProjectLibre (bepul loyiha dasturi); tarqatma: vazifalar jadvali; proyektor
+
+## Kritik yo'l usuli
+Loyiha vazifalari ko'pincha bir-biriga bog'liq: suratga olishni ssenariy tayyor bo'lmaguncha boshlab bo'lmaydi, montajni esa suratga olish tugamaguncha. Ayrim vazifalar esa parallel bajariladi. **Kritik yo'l usuli** loyihaning eng qisqa umumiy davomiyligini va uni belgilaydigan vazifalarni topadi.
+Hisoblash tartibi:
+#. Har bir vazifa uchun davomiylik va oldingi vazifalar yoziladi.
+#. **Oldinga hisob**: boshlang'ich vazifalar 0-kuni boshlanadi; vazifaning **eng erta boshlanishi** — barcha oldingi vazifalarning eng erta tugashlaridan eng kattasi; **eng erta tugash** = eng erta boshlanish + davomiylik. Oxirgi vazifaning eng erta tugashi — loyiha davomiyligi.
+#. **Orqaga hisob**: oxirgi vazifaning eng kech tugashi loyiha davomiyligiga teng; vazifaning **eng kech tugashi** — undan keyingi vazifalarning eng kech boshlanishlaridan eng kichigi; eng kech boshlanish = eng kech tugash − davomiylik.
+#. **Zaxira vaqt** = eng kech boshlanish − eng erta boshlanish: vazifa loyiha muddatini buzmasdan shuncha kunga kechikishi mumkin.
+#. Zaxirasi 0 bo'lgan vazifalar — **kritik vazifalar**, ular zanjiri — **kritik yo'l**. Kritik vazifa bir kun kechiksa, butun loyiha bir kun kechikadi.
+jadval: «Guruh videorolikini tayyorlash» loyihasi (kunlarda)
+| Vazifa | Davomiylik | Oldingi | Eng erta boshlanish | Eng erta tugash | Eng kech boshlanish | Zaxira |
+| A. G'oya va talablar | 2 | — | 0 | 2 | 0 | 0 |
+| B. Ssenariy | 3 | A | 2 | 5 | 2 | 0 |
+| C. Joy va jihozlarni tayyorlash | 2 | A | 2 | 4 | 3 | 1 |
+| D. Suratga olish | 4 | B, C | 5 | 9 | 5 | 0 |
+| E. Musiqa tanlash | 1 | B | 5 | 6 | 8 | 3 |
+| F. Montaj | 3 | D, E | 9 | 12 | 9 | 0 |
+| G. Namoyish | 1 | F | 12 | 13 | 12 | 0 |
+Loyiha davomiyligi 13 kun, kritik yo'l: A → B → D → F → G (2 + 3 + 4 + 3 + 1 = 13). C vazifasi 1 kun, E vazifasi 3 kun kechiksa ham loyiha muddati o'zgarmaydi.
+
+## PERT bahosi
+Davomiylik har doim ham aniq ma'lum emas. **PERT** usulida har bir vazifa uchun uch baho beriladi: optimistik (a), eng ehtimoliy (m) va pessimistik (b); kutilayotgan davomiylik = (a + 4m + b) : 6. Masalan, a = 2, m = 4, b = 12 kun bo'lsa: (2 + 16 + 12) : 6 = 5 kun.
+
+## Gantt diagrammasi
+**Gantt diagrammasi** — loyiha jadvalining grafik ko'rinishi: chapda vazifalar ro'yxati, yuqorida vaqt o'qi (kunlar yoki haftalar), har bir vazifa uning boshlanishidan tugashigacha cho'zilgan gorizontal ustun bilan ko'rsatiladi. Unda bog'liqliklar strelka bilan, muhim nuqtalar romb belgisi bilan, bajarilish foizi ustun ichidagi to'ldirish bilan, kritik vazifalar esa alohida ajratib ko'rsatiladi. Diagramma loyihaning umumiy manzarasini tez tushunish va jamoaga ko'rsatish uchun qulay, lekin juda ko'p vazifali loyihada o'qish qiyinlashadi va bog'liqliklar ko'rinmay qolishi mumkin — shuning uchun u kritik yo'l hisobi bilan birga ishlatiladi.
+
+amaliy: Loyiha jadvalini hisoblash va elektron jadvalda Gantt diagrammasini tuzish
+amaqsad: Kichik loyiha vazifalari uchun eng erta va eng kech muddatlarni, zaxira vaqtni va kritik yo'lni elektron jadvalda hisoblash, shartli formatlash yordamida Gantt diagrammasini tuzish va kechikish ssenariylarini tahlil qilish.
+qadam: Elektron jadvalda ustunlar yarating: Vazifa, Davomiylik, Oldingi vazifalar, Eng erta boshlanish, Eng erta tugash, Eng kech boshlanish, Eng kech tugash, Zaxira; nazariy qismdagi A–G vazifalarni kiriting.
+qadam: Eng erta boshlanishni formulalar bilan hisoblang: boshlang'ich vazifa uchun 0, boshqalari uchun oldingi vazifalar eng erta tugashlarining eng kattasi (masalan, D uchun `=MAX(E3;E4)`); eng erta tugash = boshlanish + davomiylik.
+qadam: Orqaga hisobni bajaring: oxirgi vazifa eng kech tugashi = loyiha davomiyligi; boshqalari uchun keyingi vazifalar eng kech boshlanishlarining eng kichigi (`=MIN(...)`); zaxirani ayirma bilan toping.
+qadam: Zaxirasi 0 bo'lgan qatorlar uchun `=IF(H2=0;"Kritik";"")` ustunini qo'shing va natijani nazariy jadval bilan solishtiring.
+qadam: Jadvalning o'ng tomonida 0 dan 14 gacha kunlar ustunlarini yarating va kataklarga `=AND(J$1>=$D2;J$1<$E2)` shartli formatlash qoidasini qo'llab Gantt diagrammasini hosil qiling; kritik vazifalar uchun alohida qoida (qalin chegara yoki shtrix) qo'ying — oq-qora chop etishda ham ajralib tursin.
+qadam: «Agar kechiksa?» tahlili: C vazifasini 2 kunga, so'ng E vazifasini 2 kunga uzaytiring; har safar loyiha davomiyligi va kritik yo'l qanday o'zgarishini yozing.
+qadam: O'zingiz tanlagan kichik loyiha (6–8 vazifa) uchun xuddi shunday jadval va Gantt diagrammasini tuzing; muhim nuqtalarni belgilang.
+anatija: Formulalar bilan hisoblangan loyiha jadvali, kritik yo'l, shartli formatlashdagi Gantt diagrammasi, kechikish ssenariylari tahlili va o'z loyihangiz jadvali.
+baho5: Oldinga va orqaga hisob formulalari to'g'ri, zaxira va kritik yo'l to'g'ri aniqlangan, Gantt diagrammasi aniq va kritik vazifalar ajratilgan, ssenariylar to'g'ri tahlil qilingan.
+masala: Vazifa uchun baholar: optimistik 3 kun, eng ehtimoliy 5 kun, pessimistik 13 kun. PERT bo'yicha kutilayotgan davomiylikni toping.
+yechim: (3 + 4 · 5 + 13) : 6 = (3 + 20 + 13) : 6 = 36 : 6 = 6 kun.
+masala: Nazariy qismdagi loyihada C vazifasi 2 kunga kechikdi (davomiyligi 4 kun bo'ldi). Loyiha davomiyligi qanday o'zgaradi va nima uchun?
+yechim: C eng erta tugashi 2 + 4 = 6 kun bo'ladi; D endi 6-kuni boshlanadi (B tugashi 5 dan katta): D 6–10, F 10–13, G 13–14. Loyiha 14 kun bo'ladi — 1 kunga uzayadi, chunki C ning zaxirasi faqat 1 kun edi; endi kritik yo'l A → C → D → F → G.
+savol: Kritik yo'l nima va u nima uchun muhim?
+savol: Zaxira vaqt qanday hisoblanadi? Zaxirasi bor vazifa kechiksa nima bo'ladi?
+savol: PERT bahosi qachon ishlatiladi?
+savol: Gantt diagrammasida qanday ma'lumotlar ko'rsatiladi? Uning cheklovi nimada?
+test: Zaxirasi 0 bo'lgan vazifalar zanjiri qanday ataladi? | Kritik yo'l | Muhim nuqta | Gantt ustuni | Resurs
+test: Vazifaning eng erta tugashi qanday hisoblanadi? | Eng erta boshlanish + davomiylik | Davomiylik − zaxira | Eng kech tugash − davomiylik | Oldingi vazifalar soni
+test: PERT da a = 1, m = 3, b = 11 bo'lsa, kutilayotgan davomiylik? | 4 | 3 | 5 | 6
+test: Gantt diagrammasida vazifa qanday ko'rsatiladi? | Vaqt o'qi bo'ylab gorizontal ustun bilan | Doiraviy sektor bilan | Jadval katagidagi formula bilan | Faqat raqam bilan
+test: Zaxirasi 3 kun bo'lgan vazifa 2 kun kechiksa, loyiha muddati qanday o'zgaradi? | O'zgarmaydi | 2 kunga uzayadi | 3 kunga uzayadi | 1 kunga qisqaradi
+uyga: Mavzuni konspekt qiling. Oilaviy tadbir yoki ta'mirlash ishini (6–8 vazifa) rejalashtiring: davomiylik va oldingi vazifalarni yozing, qo'lda kritik yo'lni toping va qog'ozda Gantt diagrammasini chizing.
+gloss: Kritik yo'l | Loyiha boshidan oxirigacha zaxirasi nolga teng vazifalar zanjiri; u loyiha davomiyligini belgilaydi.
+gloss: Zaxira vaqt | Vazifa loyiha muddatini buzmasdan kechikishi mumkin bo'lgan vaqt: eng kech boshlanish − eng erta boshlanish.
+gloss: Eng erta boshlanish | Barcha oldingi vazifalar tugaganidan keyin vazifa boshlanishi mumkin bo'lgan eng erta vaqt.
+gloss: PERT | Optimistik, ehtimoliy va pessimistik baholar asosida vazifa davomiyligini hisoblash usuli: (a + 4m + b) : 6.
+gloss: Gantt diagrammasi | Vazifalarni vaqt o'qi bo'ylab gorizontal ustunlar bilan ko'rsatuvchi loyiha jadvali.
+gloss: Kritik vazifa | Kechikishi butun loyiha muddatini kechiktiradigan, zaxirasi nol bo'lgan vazifa.

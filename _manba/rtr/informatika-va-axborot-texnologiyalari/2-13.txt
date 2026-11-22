@@ -1,0 +1,65 @@
+nomi: Masofadan ishlash. Sport va tibbiyotda texnologiyalar. Ishlab chiqarish va ta'limda texnologiyalar
+modul: 4-modul
+ac: 4.13 Masofadan ishlash shakllari va vositalarini, sport, tibbiyot, ishlab chiqarish va ta'limda qo'llanadigan axborot texnologiyalarini taqqoslaydi; masofaviy jamoa uchun ish rejasi va aloqa qoidalarini tuzadi.
+maqsad: O'quvchilarda masofadan ishlashning afzallik va qiyinchiliklari, unga kerakli raqamli vositalar, shuningdek sport, tibbiyot, ishlab chiqarish va ta'limdagi zamonaviy texnologiyalar haqida bilim hosil qilish, texnologiyalarni sohalar bo'yicha tahlil qilish va masofaviy hamkorlikni tashkil etish ko'nikmasini shakllantirish.
+natija: masofadan ishlash shakllari va vositalarini, xodim va ish beruvchi uchun afzallik va kamchiliklarini tushuntiradi;
+natija: sport va tibbiyotda qo'llanadigan texnologiyalarga misollar keltiradi;
+natija: ishlab chiqarishda CAD/CAM, CNC, robotlar va narsalar interneti, ta'limda LMS va virtual laboratoriyalar vazifasini tushuntiradi;
+natija: masofaviy jamoa uchun ish rejasi, vositalar va aloqa qoidalarini tuzadi.
+reja: Masofadan ishlash
+reja: Sport va tibbiyotda texnologiyalar
+reja: Ishlab chiqarish va ta'limda texnologiyalar
+tayanch: masofadan ishlash; gibrid ish; frilans; vazifalarni boshqarish tizimi; telemeditsina; elektron tibbiy karta; sport tahlili; CAD/CAM; CNC dastgoh; Sanoat 4.0; raqamli egizak; LMS (o'quv boshqaruv tizimi); virtual laboratoriya; adaptiv ta'lim
+metod: Klaster | «Texnologiya qayerda?» klasterida to'rt soha (sport, tibbiyot, ishlab chiqarish, ta'lim) bo'yicha o'quvchilar bilgan texnologiyalarni yozadi va ular qanday muammoni hal qilishini aytadi.
+metod: Guruhlarda loyiha | Har bir guruh bitta sohani tahlil qilib, bulutli hujjatda umumiy jadvalni to'ldiradi va masofaviy jamoa sifatida qisqa onlayn uchrashuv o'tkazadi.
+ajihoz: Kompyuter va internet; bulutli hujjat yoki jadval xizmati; videokonferensiya xizmati; quloqchin; proyektor
+
+## Masofadan ishlash
+**Masofadan ishlash** — xodim ishni ofis yoki korxonadan tashqarida (uyda, boshqa shaharda) axborot-kommunikatsiya texnologiyalari yordamida bajarishi. Shakllari: **to'liq masofaviy** ish; **gibrid** ish — haftaning bir qismi ofisda, bir qismi uyda; **frilans** — buyurtmachilar bilan loyiha bo'yicha internet orqali ishlash. Asosiy vositalar: bulutli hujjatlar va disklar, messenjer va korporativ chat, videokonferensiya, vazifalarni boshqarish tizimlari (kim, nima, qachongacha), masofaviy kirish va VPN, elektron imzo.
+Xodim uchun afzalliklar — yo'lga vaqt va pul sarflanmaydi, moslashuvchan jadval, boshqa shahardagi ish beruvchi bilan ishlash imkoni; kamchiliklar — ish va dam olish chegarasining yo'qolishi, yolg'izlik, uy sharoitida diqqatni jamlash qiyinligi. Ish beruvchi uchun — ofis xarajatlari kamayadi va istalgan hududdan mutaxassis topiladi, lekin nazorat, axborot xavfsizligi va jamoa ruhini saqlash qiyinlashadi. Ko'p kasblar (oshpaz, avtomobil ustasi, elektromontyor, tikuvchi) asosan joyida bajariladi, ammo ularda ham buyurtma qabul qilish, maslahat, hisob va o'qish masofadan tashkil etiladi.
+
+## Sport va tibbiyotda texnologiyalar
+**Sportda:** taqiladigan datchiklar va GPS-jiletlar sportchining tezligi, yurgan masofasi va yuklamasini o'lchaydi; yuqori tezlikdagi kameralar va video tahlil texnika xatolarini ko'rsatadi; hakamlarga yordam beruvchi videotizimlar va to'pning chiziqdan o'tganini aniqlovchi tizimlar ishlatiladi; mashg'ulot ilovalari va virtual trenajyorlar, chipli vaqt o'lchash tizimlari keng tarqalgan.
+**Tibbiyotda:** **elektron tibbiy karta** bemor ma'lumotlarini turli shifokorlar uchun bir joyda saqlaydi; **telemeditsina** — masofaviy maslahat va monitoring; kompyuter tomografiyasi va MRT kabi tasvirli diagnostika; SI tasvirlarni tahlil qilishda shifokorga yordam beradi; jarrohlik robotlari, 3D bosib chiqarilgan protez va implantlar, dori-darmonlarni hisobga olish tizimlari. Tibbiy ma'lumotlar alohida himoyalanadigan shaxsga doir ma'lumot hisoblanadi.
+
+## Ishlab chiqarish va ta'limda texnologiyalar
+**Ishlab chiqarishda:** **CAD** dasturlarida detal va mahsulot chiziladi, **CAM** dasturlari esa undan **CNC** (raqamli dastur bilan boshqariladigan) dastgohlar uchun dastur tayyorlaydi; robotlashtirilgan liniyalar, omborlarni avtomatlashtirish, uskunalardagi datchiklar (narsalar interneti) va ishlab chiqarishni real vaqtda kuzatish birgalikda **Sanoat 4.0** deb ataladi. **Raqamli egizak** — real uskuna yoki liniyaning kompyuterdagi aniq modeli: o'zgarishlar avval unda sinab ko'riladi.
+**Ta'limda:** **LMS** (o'quv boshqaruv tizimlari) — onlayn kurslar, topshiriqlar, testlar va baholar bir joyda; elektron jurnal va kundaliklar; interaktiv doskalar; virtual laboratoriyalar va trenajyorlar; videodarslar va ochiq onlayn kurslar; **adaptiv ta'lim** — o'quvchining natijasiga qarab mashqlar qiyinligini avtomatik moslaydigan tizimlar.
+jadval: Sohalardagi texnologiyalar (namuna)
+| Soha | Texnologiya | Qanday muammoni hal qiladi |
+| Sport | GPS-jilet, video tahlil | Yuklamani nazorat qilish, texnik xatolarni aniqlash |
+| Tibbiyot | Telemeditsina, elektron tibbiy karta | Uzoqdagi bemorga maslahat, ma'lumotlarning bir joyda bo'lishi |
+| Ishlab chiqarish | CAD/CAM, CNC dastgoh | Aniq va tez detal tayyorlash, inson xatosini kamaytirish |
+| Ta'lim | LMS, virtual laboratoriya | Materiallarga istalgan vaqtda kirish, xavfsiz tajriba |
+
+amaliy: Sohalardagi texnologiyalar xaritasi va masofaviy jamoa ish rejasi
+amaqsad: Guruhda masofaviy jamoa sifatida ishlab, bitta soha bo'yicha texnologiyalar jadvalini bulutli hujjatda tuzish, onlayn uchrashuv o'tkazish va masofaviy ish qoidalarini ishlab chiqish.
+qadam: Guruhlarga soha taqsimlanadi (sport, tibbiyot, ishlab chiqarish, ta'lim); guruh rahbari bulutli jadval yaratib, a'zolarga tahrirlash huquqini beradi.
+qadam: Har bir a'zo o'z sohasidagi 2 ta texnologiyani topib, jadvalga yozadi: nomi, qanday ishlaydi, qanday muammoni hal qiladi, afzalligi, xavfi yoki cheklovi, manba.
+qadam: Mutaxassisligingizga eng yaqin bitta texnologiyani tanlab, u kasbingizda qanday ishlatilishi mumkinligini 3–4 gapda yozing.
+qadam: Guruh 10 daqiqalik onlayn uchrashuv o'tkazadi: rahbar ekranni ulashib jadvalni ko'rsatadi, har bir a'zo 1 daqiqada o'z qismini tushuntiradi, bitta a'zo qisqa bayonnoma yozadi.
+qadam: Masofaviy jamoa uchun ish rejasini tuzing: qaysi vositalar (chat, hujjat, videoaloqa, vazifalar ro'yxati), aloqa vaqtlari, javob berish muddati, fayllarni nomlash va saqlash qoidasi.
+qadam: Masofadan ishlashning xodim va ish beruvchi uchun 3 tadan afzallik va kamchiligini jadvalda yozing.
+qadam: Barcha natijalarni bitta bulutli hujjatda jamlab, o'qituvchiga «izoh qoldirish» huquqi bilan havola yuboring.
+anatija: Soha bo'yicha texnologiyalar jadvali (manbalari bilan), kasbga tatbiq etish g'oyasi, onlayn uchrashuv bayonnomasi, masofaviy ish rejasi va afzallik-kamchiliklar jadvali.
+baho5: Jadval to'liq, faktlar manbalar bilan tasdiqlangan, uchrashuv tartibli o'tkazilgan, ish rejasi aniq va amaliy, kirish huquqlari to'g'ri berilgan.
+masala: Xodim ishga borib-kelishga kuniga 2 soat va 6000 so'm sarflaydi. Oyiga 22 ish kunidan 12 kunini masofadan ishlasa, oyiga qancha vaqt va pul tejaydi?
+yechim: Vaqt: 12 · 2 = 24 soat; pul: 12 · 6000 = 72 000 so'm.
+masala: Uyda uch kishi bir vaqtda videokonferensiyada qatnashadi, har biri 2,5 Mbit/s oladi; boshqa qurilmalar uchun yana 5 Mbit/s kerak. Internet tezligi kamida qancha bo'lishi kerak?
+yechim: 3 · 2,5 + 5 = 12,5 Mbit/s; zaxira bilan kamida 15 Mbit/s tavsiya etiladi.
+savol: Masofadan ishlashning qanday shakllari bor? Ularga qanday vositalar kerak?
+savol: Telemeditsina va elektron tibbiy karta qanday afzallik beradi?
+savol: CAD, CAM va CNC qanday bog'langan?
+savol: LMS va adaptiv ta'lim tizimlari o'quvchiga qanday yordam beradi?
+test: Haftaning bir qismi ofisda, bir qismi uyda ishlash shakli? | Gibrid ish | Frilans | Smenali ish | Vaxta usuli
+test: Shifokorning bemorga internet orqali masofaviy maslahat berishi? | Telemeditsina | Telemetriya | Telemarketing | Teleport
+test: Kompyuterda chizilgan detal asosida dastgoh uchun dastur tayyorlaydigan tizim? | CAM | LMS | CRM | OCR
+test: Real uskunaning kompyuterdagi aniq modeli qanday ataladi? | Raqamli egizak | Prototip | Arxiv nusxa | Ekspert tizim
+test: Onlayn kurslar, topshiriqlar va baholarni bir joyda yuritadigan tizim? | LMS | CNC | GPS | VPN
+uyga: Mavzu yuzasidan o'qib o'rganing. Mutaxassisligingizga oid kasbda masofadan bajarilishi mumkin bo'lgan va mumkin bo'lmagan ishlar ro'yxatini tuzing (kamida 5 tadan) va har biri uchun sababini yozing.
+gloss: Masofadan ishlash | Xodimning ishni korxonadan tashqarida AKT yordamida bajarishi.
+gloss: Gibrid ish | Ish vaqtining bir qismini ofisda, bir qismini masofadan o'tkazish shakli.
+gloss: Telemeditsina | Tibbiy maslahat, kuzatuv va diagnostikani masofadan, aloqa texnologiyalari orqali amalga oshirish.
+gloss: CNC dastgoh | Raqamli dastur asosida avtomatik boshqariladigan metall yoki yog'ochga ishlov berish dastgohi.
+gloss: Sanoat 4.0 | Robotlar, narsalar interneti, ma'lumotlar tahlili va avtomatlashtirishni birlashtirgan zamonaviy ishlab chiqarish.
+gloss: LMS | O'quv kurslari, materiallar, topshiriqlar va baholarni boshqaradigan onlayn tizim.

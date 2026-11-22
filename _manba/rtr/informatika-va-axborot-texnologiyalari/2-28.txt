@@ -1,0 +1,84 @@
+nomi: JavaScript
+modul: 6-modul
+ac: 6.4 JavaScript tilining veb-sahifadagi o'rnini tushuntiradi, skriptni HTML sahifaga ulaydi, o'zgaruvchilar, ma'lumot turlari va operatorlardan foydalanadi, natijani konsol va sahifaga chiqaradi, kiritish maydonidan ma'lumot olib hisob-kitob qiladigan oddiy dastur yaratadi va xatolarni konsol yordamida topadi.
+maqsad: O'quvchilarda JavaScript dasturlash tilining vazifasi, sintaksisi asoslari, o'zgaruvchilar, ma'lumot turlari va operatorlar haqida bilim hosil qilish, HTML sahifada ishlaydigan oddiy hisob-kitob dasturini yozish va dasturchi konsolidan foydalanib xatolarni tuzatish ko'nikmasini shakllantirish.
+natija: HTML, CSS va JavaScript'ning veb-sahifadagi vazifalarini farqlaydi;
+natija: skriptni `<script>` tegi yoki alohida .js fayl orqali ulaydi;
+natija: let va const bilan o'zgaruvchilar e'lon qiladi, son, satr va mantiqiy turlarni farqlaydi;
+natija: arifmetik, birlashtirish va solishtirish operatorlarini qo'llaydi, satrni songa o'tkazadi;
+natija: kiritish maydonidan qiymat olib hisoblaydi va natijani sahifaga chiqaradi; konsol orqali xatoni topadi.
+reja: JavaScript nima va u qanday ulanadi
+reja: O'zgaruvchilar, ma'lumot turlari va operatorlar
+reja: Ma'lumot kiritish va natijani chiqarish
+tayanch: JavaScript; skript; brauzer; `<script>` tegi; konsol; o'zgaruvchi; let; const; son (number); satr (string); mantiqiy tur (boolean); typeof; operator; satrlarni birlashtirish; Number(); console.log(); getElementById; value; textContent; sintaksis xatosi
+metod: Uchlik o'xshatish | Veb-sahifa uy bilan taqqoslanadi: HTML — devorlar va xonalar (tuzilma), CSS — bo'yoq va jihozlar (ko'rinish), JavaScript — elektr va suv (ishlash, harakat).
+metod: Kod bilan tajriba | O'quvchilar konsolda bir necha qatorli kodni bajarib, natijani oldindan taxmin qiladi va solishtiradi (masalan, "5" + 5 nimaga teng?).
+ajihoz: Kompyuter; brauzer (dasturchi konsoli — F12); matn muharriri (Notepad++ yoki VS Code, bepul); proyektor
+
+## JavaScript nima va u qanday ulanadi
+**JavaScript** — veb-sahifalarni interaktiv qiladigan dasturlash tili: tugma bosilganda hisob-kitob qilish, shakldagi ma'lumotni tekshirish, sahifa mazmunini yangilash, o'yin va animatsiyalar. Veb-sahifada uch til birga ishlaydi: **HTML** tuzilmani (sarlavha, matn, tugma), **CSS** ko'rinishni (rang, shrift, joylashuv), **JavaScript** esa xatti-harakatni belgilaydi. JavaScript dasturi (**skript**) brauzerning o'zida bajariladi, shuning uchun uni o'rganish uchun faqat brauzer va matn muharriri kerak. Skript HTML sahifaga `<script>` tegi ichida yoziladi yoki alohida fayl sifatida ulanadi: `<script src="dastur.js"></script>`. Brauzerdagi **dasturchi konsoli** (F12 tugmasi → «Console») xato xabarlarini ko'rsatadi va unda kodni bevosita sinab ko'rish mumkin.
+```
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Birinchi skript</h1>
+  <p id="natija"></p>
+  <script>
+    // bu izoh — dastur uni bajarmaydi
+    console.log("Salom, konsol!");
+    document.getElementById("natija").textContent = "Salom, sahifa!";
+  </script>
+</body>
+</html>
+```
+
+## O'zgaruvchilar, ma'lumot turlari va operatorlar
+**O'zgaruvchi** — ma'lumot saqlanadigan nomlangan joy. `let` bilan qiymati o'zgarishi mumkin bo'lgan, `const` bilan o'zgarmas o'zgaruvchi e'lon qilinadi (eski kodlarda `var` ham uchraydi). Nomlar lotin harflari bilan, ma'noli yoziladi va katta-kichik harf farqlanadi (`narx` va `Narx` — ikki xil o'zgaruvchi). Asosiy **ma'lumot turlari**: son (`let soni = 12;`, `let narx = 2.5;` — o'nli kasr nuqta bilan), satr (`let ism = "Dilnoza";`), mantiqiy (`let tolandi = true;`); qiymat berilmagan o'zgaruvchi `undefined` bo'ladi. Turini `typeof` aniqlaydi.
+**Operatorlar**: arifmetik `+ - * / %` (`%` — bo'lishdagi qoldiq); solishtirish `> < >= <= === !==` (natija true yoki false); `+` satrlar bilan ishlatilsa ularni **birlashtiradi**: `"Avto" + "servis"` → `"Avtoservis"`. Muhim tuzoq: kiritish maydonidan olingan qiymat doim satr bo'ladi, shuning uchun `"5" + 5` natijasi `"55"`; hisoblashdan oldin `Number("5")` bilan songa o'tkazish kerak. `===` qiymat bilan birga turni ham solishtiradi, shuning uchun u `==` dan ishonchliroq.
+
+## Ma'lumot kiritish va natijani chiqarish
+Foydalanuvchidan ma'lumot olish uchun HTML'da kiritish maydoni yaratiladi: `<input id="masofa" type="number">`. JavaScript uni `document.getElementById("masofa").value` orqali o'qiydi. Natija `console.log()` bilan konsolga yoki elementning `textContent` xossasiga yozilib, sahifaga chiqariladi; `alert()` qisqa xabar oynasini ko'rsatadi. Kasr sonlarni chiroyli chiqarish uchun `toFixed(2)` ishlatiladi. Xato bo'lsa, konsol uni qator raqami bilan ko'rsatadi: masalan, yopilmagan qavs yoki qo'shtirnoq — **sintaksis xatosi**, noto'g'ri yozilgan o'zgaruvchi nomi — «is not defined» xatosi.
+
+amaliy: Yoqilg'i xarajati kalkulyatori
+amaqsad: HTML sahifada masofa, yoqilg'i sarfi va narxini kiritib, tugma bosilganda yo'l xarajatini hisoblaydigan JavaScript dasturini yaratish, o'zgaruvchilar, turlar va operatorlar bilan tajriba o'tkazish hamda konsol yordamida xatolarni topish.
+qadam: Matn muharririda `kalkulyator.html` faylini yarating, nazariy qismdagi namunani yozib, brauzerda oching; konsolda va sahifada xabar chiqqanini tekshiring.
+qadam: Konsolda tajriba qiling: `typeof 5`, `typeof "5"`, `"5" + 5`, `"5" * 2`, `Number("5") + 5`, `7 % 3`, `5 === "5"` — natijalarni oldindan taxmin qilib, so'ng solishtiring va jadvalga yozing.
+qadam: Sahifaga uchta kiritish maydoni qo'shing: masofa (km), sarf (l/100 km), yoqilg'i narxi (so'm/l), «Hisoblash» tugmasi va natija uchun bo'sh `<p id="natija">`.
+qadam: `hisobla()` nomli kod yozing: maydon qiymatlarini `Number()` bilan songa o'tkazing, `litr = masofa * sarf / 100` va `summa = litr * narx` ni hisoblang; tugmaga `onclick="hisobla()"` qo'shing.
+qadam: Natijani sahifaga chiqaring: «Kerakli yoqilg'i: ... l, xarajat: ... so'm»; litrni `toFixed(1)` bilan formatlang.
+qadam: Kodga ataylab bitta xato kiriting (masalan, o'zgaruvchi nomini noto'g'ri yozing), konsolda xato xabarini o'qing, qator raqami bo'yicha topib tuzating.
+qadam: Dasturni 3 xil qiymatlar to'plami bilan sinab, natijalarni qo'lda hisob bilan solishtiring va kodga izohlar yozing.
+anatija: Ishlaydigan `kalkulyator.html` fayli (izohlar bilan), konsol tajribalari jadvali, xato topish va tuzatish tavsifi, sinov natijalari.
+baho5: Dastur to'g'ri hisoblaydi va natijani sahifaga chiqaradi, satrlar songa o'tkazilgan, kod tartibli va izohlangan, konsol tajribalari to'g'ri tushuntirilgan, xato mustaqil topilib tuzatilgan.
+masala: Quyidagi kod konsolga nimani chiqaradi?
+```
+let a = "7";
+let b = 3;
+console.log(a + b);
+console.log(a * b);
+console.log(Number(a) + b);
+```
+yechim: `73` (satrlar birlashdi), `21` (`*` operatori satrni avtomatik songa o'tkazadi), `10`.
+masala: Masofa 250 km, sarf 8 l/100 km, narx 11 000 so'm/l. Yo'l xarajatini hisoblaydigan JavaScript ifodasini yozing va natijani toping.
+yechim:
+```
+let litr = 250 * 8 / 100;    // 20 litr
+let summa = litr * 11000;     // 220000 so'm
+```
+Natija: 20 litr, 220 000 so'm.
+savol: Veb-sahifada HTML, CSS va JavaScript qanday vazifalarni bajaradi?
+savol: let va const ning farqi nimada?
+savol: Nima uchun `"5" + 5` natijasi 55 bo'ladi va buni qanday tuzatish mumkin?
+savol: Kiritish maydonidagi qiymatni qanday o'qish va natijani sahifaga qanday chiqarish mumkin?
+test: Veb-sahifaning xatti-harakatini (interaktivligini) belgilaydigan til? | JavaScript | HTML | CSS | SQL
+test: Qiymati o'zgarmaydigan o'zgaruvchi qaysi so'z bilan e'lon qilinadi? | const | let | var | typeof
+test: `"5" + 5` ifodasining natijasi? | "55" | 10 | 25 | Xato
+test: Satrni songa o'tkazadigan funksiya? | Number() | String() | alert() | console.log()
+test: Brauzerda dasturchi konsolini ochadigan odatiy tugma? | F12 | F1 | Esc | F5
+uyga: Mavzuni konspekt qiling. Kasbingizga oid oddiy kalkulyator yozing (masalan, retsept uchun mahsulot miqdorini porsiyalar soniga ko'paytirish, mato sarfini hisoblash yoki elektr energiyasi narxini topish): kamida 2 ta kiritish maydoni, tugma va natija.
+gloss: JavaScript | Veb-sahifalarni interaktiv qiladigan, brauzerda bajariladigan dasturlash tili.
+gloss: O'zgaruvchi | Dasturda ma'lumot saqlanadigan nomlangan joy (let, const bilan e'lon qilinadi).
+gloss: Satr (string) | Qo'shtirnoq ichida yozilgan matnli ma'lumot turi.
+gloss: Konsol | Brauzerdagi dasturchi vositasi: xato xabarlari va kodni sinash joyi.
+gloss: Satrlarni birlashtirish | `+` operatori bilan ikki yoki undan ortiq satrni bitta satrga ulash.
+gloss: Sintaksis xatosi | Til qoidalari buzilgani (yopilmagan qavs, qo'shtirnoq) sababli kod bajarilmasligi.

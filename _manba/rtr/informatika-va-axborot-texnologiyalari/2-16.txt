@@ -1,0 +1,72 @@
+nomi: Tarmoq xavfsizligi. Ma'lumotlarni himoya qilish haqidagi qonun tamoyillari
+modul: 5-modul
+ac: 5.1 Tarmoqqa tahdid turlarini va himoya usullarini (autentifikatsiya, kirish huquqlari, fayervol, shifrlash, yangilash, zaxira) tushuntiradi, kichik tashkilot tarmog'i xavfsizligini baholaydi va shaxsga doir ma'lumotlarni himoya qilish tamoyillariga muvofiq himoya rejasini tuzadi.
+maqsad: O'quvchilarda tarmoq xavfsizligiga tahdidlar va ularni bartaraf etish usullari, shaxsga doir ma'lumotlarni qayta ishlashning huquqiy tamoyillari haqida bilim hosil qilish, parol mustahkamligini baholash, fishingni aniqlash, fayllarni shifrlash va kirish huquqlarini rejalashtirish ko'nikmasini shakllantirish.
+natija: tarmoqqa asosiy tahdidlarni (zararli dastur, fishing, parolni tanlash, ochiq Wi-Fi xavfi, xodim xatosi) tushuntiradi;
+natija: texnik va tashkiliy himoya choralarini tanlaydi va asoslaydi;
+natija: parol mustahkamligini hisoblab baholaydi va faylni parol bilan shifrlaydi;
+natija: shaxsga doir ma'lumotlarni himoya qilish tamoyillarini tushuntiradi va ularni tashkilot misolida qo'llaydi.
+reja: Tarmoqqa tahdidlar
+reja: Himoya usullari
+reja: Ma'lumotlarni himoya qilish qonunlari tamoyillari
+tayanch: tahdid; zaiflik; zararli dastur; to'lov talab qiluvchi dastur; fishing; parolni tanlash hujumi; ikki bosqichli autentifikatsiya; eng kam imtiyoz tamoyili; fayervol; shifrlash; VPN; zaxira nusxa; shaxsga doir ma'lumot; rozilik; ma'lumotlarni minimallashtirish
+metod: Fishingni top | Guruhlarga 6 ta xat va SMS namunasi beriladi; ular qaysi biri firibgarlik ekanini belgilari bilan aniqlaydi.
+metod: Xavf jadvali | O'quvchilar kichik tashkilot uchun xavflarni «ehtimollik × ta'sir» bo'yicha baholab, eng muhim uchtasiga chora taklif qiladi.
+ajihoz: Kompyuter; 7-Zip arxivatori; brauzer; xat va SMS namunalari yozilgan tarqatma; elektron jadval dasturi; proyektor
+
+## Tarmoqqa tahdidlar
+**Tahdid** — ma'lumot yoki tizimga zarar yetkazishi mumkin bo'lgan har qanday hodisa yoki harakat, **zaiflik** esa tahdid amalga oshishiga imkon beradigan kamchilik (eski dastur, oddiy parol, ochiq port). Asosiy tahdidlar:
+- **zararli dasturlar** — viruslar, troyanlar, josus dasturlar, fayllarni shifrlab qo'yib «to'lov» talab qiladigan dasturlar;
+- **fishing** — bank, pochta yoki davlat xizmati nomidan soxta xat, SMS yoki sayt orqali parol va karta ma'lumotlarini aldab olish;
+- **parolni tanlash hujumi** — dastur yordamida millionlab parollarni ketma-ket sinash; oddiy va takroriy parollar tez topiladi;
+- **ochiq Wi-Fi xavfi** — himoyalanmagan tarmoqda trafikni tutib olish yoki soxta ulanish nuqtasi orqali ma'lumot o'g'irlash;
+- **xizmatni ishdan chiqarish hujumi** — saytni so'rovlar bilan to'ldirib, foydalanuvchilar uchun ishlamaydigan qilish;
+- **ichki tahdidlar** — xodimning xatosi (noto'g'ri xat yuborish, fleshkani yo'qotish) yoki yomon niyati.
+
+## Himoya usullari
+**Texnik choralar:** kuchli va takrorlanmaydigan parollar, parol menejeri, **ikki bosqichli autentifikatsiya**; foydalanuvchilarga faqat ishi uchun zarur huquqlarni berish (**eng kam imtiyoz** tamoyili); fayervol va antivirus; operatsion tizim va dasturlarni muntazam yangilash; ma'lumotlarni **shifrlash** — saytlarda HTTPS, Wi-Fi'da WPA2/WPA3, noutbuk diski va fleshkalarda shifrlash, ochiq tarmoqda **VPN**; muntazam **zaxira nusxa** va uni tiklashni sinash; voqealar jurnalini (log) yuritish. **Tashkiliy choralar:** xavfsizlik qoidalari, xodimlarni o'qitish, xodim ishdan ketganda akkauntini darhol yopish, qurilmalarni hisobga olish, voqea yuz berganda nima qilish rejasi.
+Parol mustahkamligi belgilar soni va turlariga bog'liq: mumkin bo'lgan kombinatsiyalar soni = (belgilar to'plami)^(parol uzunligi). Faqat kichik lotin harflaridan (26 ta) 8 belgili parolda 26⁸ ≈ 2,1 · 10¹¹ variant bo'lsa, katta-kichik harf va raqamlardan (62 ta) 12 belgili parolda 62¹² ≈ 3,2 · 10²¹ variant bor — farq milliardlab marta.
+
+## Ma'lumotlarni himoya qilish qonunlari tamoyillari
+**Shaxsga doir ma'lumot** — shaxsni bevosita yoki bilvosita aniqlash imkonini beradigan har qanday ma'lumot: ism-familiya, telefon, manzil, pasport ma'lumotlari, rasm, joylashuv, biometrik va tibbiy ma'lumotlar. Ko'pchilik mamlakatlar qonunlarida, jumladan O'zbekiston Respublikasining «Shaxsga doir ma'lumotlar to'g'risida»gi Qonunida (2019) ularni qayta ishlashga oid talablar belgilangan. Asosiy tamoyillar:
+#. **Qonuniylik va shaffoflik** — ma'lumot qonuniy asosda (ko'pincha shaxsning roziligi bilan) yig'iladi, shaxs nima uchun va qanday ishlatilishini biladi.
+#. **Maqsadga muvofiqlik** — ma'lumot faqat e'lon qilingan maqsadda ishlatiladi; masalan, kafolat uchun olingan telefon raqami ruxsatsiz reklamaga berilmaydi.
+#. **Minimallashtirish** — faqat zarur ma'lumot yig'iladi.
+#. **Aniqlik** — ma'lumot to'g'ri va dolzarb saqlanadi, xatolar tuzatiladi.
+#. **Saqlash muddatini cheklash** — maqsad bajarilgach, ma'lumot o'chiriladi yoki anonimlashtiriladi.
+#. **Xavfsizlik va maxfiylik** — ruxsatsiz kirish, o'zgartirish va yo'qotishdan himoya qilinadi.
+#. **Shaxsning huquqlari** — o'z ma'lumotlari haqida bilish, ularni tuzattirish, o'chirishni talab qilish va rozilikni qaytarib olish.
+Qonun talablari vaqti-vaqti bilan o'zgaradi, shuning uchun aniq talablar qonunning lex.uz dagi amaldagi tahriridan tekshiriladi.
+
+amaliy: Kichik tashkilot tarmog'i xavfsizligini baholash va ma'lumotlarni himoya qilish rejasi
+amaqsad: Kichik tashkilot (avtoservis, o'quv markazi yoki oshxona) uchun tahdidlarni aniqlash, parol mustahkamligini hisoblash, fishingni aniqlash, faylni shifrlash, kirish huquqlari jadvalini va shaxsga doir ma'lumotlarni himoya qilish rejasini tuzish.
+xavf: Faqat o'quv kompyuterida va o'zingizning fayllaringiz bilan ishlang; boshqalarning akkaunti, paroli va tarmog'ini sinamang — bu qonunga zid.
+qadam: Tarqatmadagi 6 ta xat va SMS namunasini tahlil qilib, firibgarlik belgilarini (shoshiltirish, notanish havola, kod so'rash, xatolar, soxta manzil) jadvalga yozing.
+qadam: Elektron jadvalda turli parol variantlari (uzunligi 6, 8, 12, 16; belgilar to'plami 10, 26, 62, 94) uchun kombinatsiyalar sonini `=POWER(to'plam;uzunlik)` va sekundiga 10¹⁰ urinishda tanlash vaqtini hisoblang; xulosa chiqaring.
+qadam: Brauzerda bitta HTTPS saytning sertifikat ma'lumotini oching (manzil satridagi belgi orqali) va kim tomonidan berilganini yozing.
+qadam: 7-Zip yordamida namunaviy hujjatni AES-256 shifrlash va kuchli parol bilan arxivlang; parolsiz ochib bo'lmasligini tekshiring.
+qadam: Tanlangan tashkilot uchun kirish huquqlari jadvalini tuzing: lavozimlar (rahbar, buxgalter, usta, administrator) × resurslar (mijozlar bazasi, moliyaviy hisobot, ish jadvali, Wi-Fi boshqaruvi) — «o'qish», «tahrirlash», «ruxsat yo'q».
+qadam: 5 ta xavfni «ehtimollik (1–3) × ta'sir (1–3)» bo'yicha baholab, eng yuqori ballilarga texnik va tashkiliy chora yozing.
+qadam: Mijozlar uchun 4–5 gaplik shaxsga doir ma'lumotlarni qayta ishlashga rozilik matnini tayyorlang: qanday ma'lumot, nima maqsadda, qancha muddat saqlanadi, mijoz qanday huquqlarga ega.
+anatija: Fishing belgilari jadvali, parol mustahkamligi hisob-kitobi va xulosa, shifrlangan arxiv, kirish huquqlari jadvali, xavflarni baholash jadvali va rozilik matni.
+baho5: Firibgarlik belgilari to'g'ri aniqlangan, hisob-kitoblar to'g'ri va xulosa asoslangan, shifrlash bajarilgan, kirish huquqlari eng kam imtiyoz tamoyiliga mos, rozilik matni tamoyillarni to'liq aks ettiradi.
+masala: Faqat kichik lotin harflaridan iborat 8 belgili parol va katta-kichik harf hamda raqamlardan iborat 12 belgili parol uchun kombinatsiyalar sonini toping. Hujumchi sekundiga 10¹⁰ ta parol sinasa, har birini to'liq tanlab chiqishga qancha vaqt ketadi?
+yechim: 26⁸ ≈ 2,09 · 10¹¹; 2,09 · 10¹¹ : 10¹⁰ ≈ 21 soniya. 62¹² ≈ 3,23 · 10²¹; 3,23 · 10²¹ : 10¹⁰ ≈ 3,2 · 10¹¹ soniya ≈ 10 000 yil.
+masala: Xavflar baholandi (ehtimollik × ta'sir): fishing xati — 3 × 2; noutbukning yo'qolishi — 1 × 3; eski dasturdagi zaiflik — 2 × 3; zaxira yo'qligi — 2 × 2. Qaysi xavf birinchi navbatda bartaraf etilishi kerak?
+yechim: Ballar: fishing 6, noutbuk 3, eski dastur 6, zaxira 4. Birinchi navbatda fishing (xodimlarni o'qitish, filtrlar, 2FA) va eski dastur (yangilash) — ikkalasi 6 ball; keyin zaxira, so'ng noutbuk shifrlash.
+savol: Tahdid va zaiflikning farqi nimada? Misol keltiring.
+savol: Eng kam imtiyoz tamoyili nima va u nima uchun muhim?
+savol: Ochiq Wi-Fi tarmog'ida ishlashda qanday xavf bor va undan qanday himoyalanish mumkin?
+savol: Shaxsga doir ma'lumotlarni himoya qilishning asosiy tamoyillarini aytib bering.
+test: Bank nomidan soxta xat yuborib, parol va karta ma'lumotlarini aldab olish? | Fishing | Shifrlash | Zaxiralash | Marshrutlash
+test: Foydalanuvchiga faqat ishi uchun zarur huquqlarni berish tamoyili? | Eng kam imtiyoz | Maksimal kirish | Ochiq kirish | Ma'lumotlar ombori
+test: Ochiq Wi-Fi tarmog'ida trafikni himoya qilish uchun qaysi vosita ishlatiladi? | VPN | Klaviatura | Printer | Ekran saqlovchi
+test: Faqat zarur ma'lumotni yig'ish tamoyili qanday ataladi? | Ma'lumotlarni minimallashtirish | Normallashtirish | Arxivlash | Klasterlash
+test: 4 xonali faqat raqamlardan iborat PIN-kodda nechta variant bor? | 10 000 | 4 000 | 1 000 | 40
+uyga: Mavzu yuzasidan o'qib o'rganing. O'zingiz foydalanadigan 3 ta onlayn xizmatning maxfiylik siyosatini ko'rib chiqib, ular qanday ma'lumot to'plashini va uni qanday maqsadda ishlatishini qisqacha yozing; barcha muhim akkauntlaringizda ikki bosqichli autentifikatsiyani yoqing.
+gloss: Tahdid | Ma'lumot yoki tizimga zarar yetkazishi mumkin bo'lgan hodisa yoki harakat.
+gloss: Zaiflik | Tahdid amalga oshishiga imkon beradigan kamchilik (eski dastur, oddiy parol).
+gloss: Fishing | Soxta xat, SMS yoki sayt orqali parol va moliyaviy ma'lumotlarni aldab olish.
+gloss: Eng kam imtiyoz tamoyili | Foydalanuvchiga faqat vazifasi uchun zarur bo'lgan kirish huquqlarini berish.
+gloss: VPN | Ochiq tarmoq orqali shifrlangan, himoyalangan ulanish yaratadigan texnologiya.
+gloss: Shaxsga doir ma'lumot | Shaxsni bevosita yoki bilvosita aniqlash imkonini beradigan har qanday ma'lumot.

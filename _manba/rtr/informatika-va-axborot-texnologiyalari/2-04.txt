@@ -1,0 +1,62 @@
+nomi: Audiokliplarning tezligi va ovoz balandligi
+modul: 4-modul
+ac: 4.4 Audioklip tezligi, tempi va tonini alohida o'zgartiradi, ovoz balandligini kuchaytirish, konvert va me'yorlash yordamida boshqaradi, nutq va musiqani muvozanatlab aralashtiradi.
+maqsad: O'quvchilarda audioklip tezligi, tempi va tonini o'zgartirish usullarini farqlash, ovoz balandligini butun klip yoki uning qismlari bo'yicha boshqarish, nutq ostida musiqani pasaytirish va tayyor yozuvni bir xil eshitiladigan darajaga keltirish ko'nikmasini shakllantirish.
+natija: tezlik, temp va ton o'zgarishining farqini tushuntiradi va mos effektni tanlaydi;
+natija: kuchaytirish, me'yorlash va ovoz balandligi konvertini qo'llaydi;
+natija: nutq ostida musiqani avtomatik yoki konvert yordamida pasaytiradi;
+natija: ko'p trekli loyihani aralashtirib, maqsadga mos formatda eksport qiladi.
+reja: Tezlik, temp va ton
+reja: Ovoz balandligini boshqarish
+reja: Nutq va musiqani aralashtirish
+tayanch: tezlik; temp (BPM); ton (balandlik); kuchaytirish (gain); desibel; me'yorlash; ovoz balandligi konverti; pasaytirish (ducking); panorama; aralashtirish (miks); qabul qilinadigan balandlik (LUFS)
+metod: Eshitib aniqlash | Bitta musiqa parchasining tezlik, temp va ton o'zgartirilgan uch varianti eshittiriladi; o'quvchilar har birida nima o'zgarganini aniqlaydi.
+metod: Amaliy mashq | O'quvchilar nutq va musiqadan iborat 30 soniyalik audio e'lonni aralashtirib, ovoz balandligini konvert yordamida boshqaradi.
+ajihoz: Kompyuter; Audacity; quloqchin; oldingi darsda yozilgan nutq fayli; litsenziyasi ruxsat beradigan fon musiqasi; proyektor
+
+## Tezlik, temp va ton
+Audio muharrirlarda uch xil o'zgartirish bor va ularni farqlash muhim:
+- **tezlikni o'zgartirish** — yozuv tezroq yoki sekinroq ijro etiladi, bunda ton ham birga o'zgaradi (tezlashganda ovoz ingichkalashadi, sekinlashganda yo'g'onlashadi), xuddi magnitofon lentasini tez aylantirgandek;
+- **tempni o'zgartirish** — davomiylik o'zgaradi, ton esa saqlanadi; masalan, 33 soniyalik musiqani video uchun 30 soniyaga sig'dirish yoki nutqni biroz tezlashtirish;
+- **tonni o'zgartirish** — balandlik o'zgaradi, davomiylik esa o'zgarmaydi; ovozni tanib bo'lmaydigan qilish yoki qo'shiqni boshqa tonallikka o'tkazish uchun.
+Musiqa tempi daqiqadagi zarblar soni (BPM) bilan o'lchanadi. Temp 120 BPM dan 132 BPM ga o'zgartirilsa, bu 10 % tezlashtirish bo'ladi. Temp va tonni 10–15 % dan ortiq o'zgartirish ovozda sezilarli buzilish («robot» ovozi, aks-sado) paydo qiladi.
+
+## Ovoz balandligini boshqarish
+**Kuchaytirish** (gain, amplify) tanlangan qismni berilgan desibelga kuchaytiradi yoki susaytiradi: +6 dB amplitudani taxminan 2 marta oshiradi, −6 dB esa 2 marta kamaytiradi. **Me'yorlash** butun yozuvning eng baland cho'qqisini belgilangan darajaga keltiradi. **Ovoz balandligi konverti** (envelope) — trek ustidagi chiziq: unga nuqtalar qo'yib, ovozni vaqt bo'yicha silliq ko'tarish yoki pasaytirish mumkin. Fade in va fade out ham aslida konvertning xususiy holi.
+Turli yozuvlarning eng baland cho'qqisi bir xil bo'lsa ham, ular har xil «qattiq» eshitilishi mumkin, chunki quloq o'rtacha balandlikni sezadi. Shuning uchun internet platformalari **qabul qilinadigan balandlik** me'yorini LUFS birligida belgilaydi: podkastlar uchun taxminan −16 LUFS, video platformalari uchun −14 LUFS atrofida. Audacity'da buning uchun «Loudness normalization» effekti bor.
+**Panorama** (pan) ovozni stereo maydonda chapga yoki o'ngga suradi: ikki kishilik suhbatda har birini biroz chap va o'ngga joylash tinglashni osonlashtiradi.
+
+## Nutq va musiqani aralashtirish
+E'lon, podkast va video ovozida nutq doim asosiy: musiqa uni bosib ketmasligi kerak. Odatda musiqa nutqdan 12–20 dB past bo'ladi. Musiqa nutq boshlanishidan oldin to'liq balandlikda eshitiladi, nutq boshlanganda pasayadi va nutq tugagach yana ko'tariladi — bu **pasaytirish** (ducking) deyiladi. Uni konvert nuqtalari bilan qo'lda yoki Audacity'dagi «Auto Duck» effekti bilan avtomatik bajarish mumkin. Aralashtirilgan loyiha quloqchinda va telefon karnayida tinglab tekshiriladi, so'ng bitta faylga eksport qilinadi.
+
+amaliy: Nutq va fon musiqasini aralashtirib audio e'lon tayyorlash
+amaqsad: Nutq va musiqa treklaridan iborat 30 soniyalik audio e'lonni yaratish: musiqa tempini davomiylikka moslash, ovoz balandligini konvert va pasaytirish yordamida boshqarish, balandlikni me'yorlab eksport qilish.
+qadam: Audacity'da oldingi darsdagi nutq faylini va fon musiqasini ikki alohida trekka import qiling; har birining davomiyligini yozing.
+qadam: Musiqa e'londan uzun yoki qisqa bo'lsa, «Tempni o'zgartirish» effekti bilan uni kerakli davomiylikka moslang (o'zgarish 10 % dan oshmasin) yoki ortiqcha qismini kesing.
+qadam: Nutq trekini musiqaga nisbatan 2 soniya kechiktirib joylang (musiqali kirish).
+qadam: Musiqa trekida konvert nuqtalari qo'yib, nutq paytida uni 15 dB atrofida pasaytiring, nutq tugagach yana ko'taring; yoki «Auto Duck» effektini qo'llang.
+qadam: Musiqa oxiriga 3 soniyalik fade out qo'llang; nutqning eng baland va eng past joylarini tinglab, kerak bo'lsa kuchaytirish bilan tekislang.
+qadam: Ikkala trekni aralashtirib (miks), loyihaning umumiy balandligini −16 LUFS ga me'yorlang.
+qadam: Natijani quloqchin va telefon karnayida tinglang, MP3 (128 kbit/s) formatida eksport qiling va qanday sozlamalar ishlatilganini yozing.
+anatija: 30 soniyalik aralashtirilgan audio e'lon (MP3), qo'llangan effektlar va sozlamalar ro'yxati.
+baho5: Nutq aniq va musiqa uni bosmaydi, pasaytirish silliq, temp o'zgarishi buzilishsiz, fade va me'yorlash to'g'ri qo'llangan, eksport talabga mos.
+masala: Fon musiqasi 33 soniya, e'lon esa 30 soniyalik bo'lishi kerak. Tempni necha foizga o'zgartirish kerak? Musiqa 100 BPM bo'lsa, yangi temp qancha bo'ladi?
+yechim: 33 : 30 = 1,1 — temp 10 % ga oshiriladi. Yangi temp: 100 · 1,1 = 110 BPM.
+masala: Musiqa treki nutqdan 6 dB baland eshitilmoqda, lekin u nutqdan 15 dB past bo'lishi kerak. Musiqani necha desibelga susaytirish kerak?
+yechim: Hozir musiqa nutqdan +6 dB, kerak −15 dB: 6 + 15 = 21 dB ga susaytirish kerak.
+savol: Tezlik, temp va tonni o'zgartirishning farqi nimada?
+savol: Ovoz balandligi konverti nima uchun kerak?
+savol: Pasaytirish (ducking) qanday ishlaydi va qayerda qo'llanadi?
+savol: Nima uchun platformalar LUFS bo'yicha balandlik me'yorini belgilaydi?
+test: Davomiylik o'zgarib, ton saqlanadigan o'zgartirish? | Tempni o'zgartirish | Tezlikni o'zgartirish | Tonni o'zgartirish | Me'yorlash
+test: +6 dB kuchaytirish amplitudani taxminan qanday o'zgartiradi? | 2 marta oshiradi | 6 marta oshiradi | O'zgartirmaydi | 2 marta kamaytiradi
+test: Nutq paytida musiqani avtomatik pasaytirish nima deyiladi? | Pasaytirish (ducking) | Kliping | Panorama | Diskretlash
+test: Temp 120 BPM dan 132 BPM ga o'zgarsa, bu necha foiz tezlashtirish? | 10 % | 12 % | 20 % | 1,2 %
+test: Ovozni stereo maydonda chap yoki o'ngga suradigan sozlama? | Panorama (pan) | Ekvalayzer | Konvert | Bitreyt
+uyga: Audioklipning ovoz sozlamalarini tahrirlash: sevimli musiqangizdan 20 soniyalik parchani (shaxsiy mashq uchun) olib, uning tempini ±5 %, tonini ±2 yarim tonga o'zgartiring va natijalarni eshitib, qaysi o'zgarish sezilarliroq ekanini yozing.
+gloss: Temp | Musiqa ijro tezligi, daqiqadagi zarblar soni (BPM) bilan o'lchanadi.
+gloss: Ton | Tovush balandligi (ingichka yoki yo'g'onligi), chastotaga bog'liq.
+gloss: Ovoz balandligi konverti | Trekdagi ovoz balandligini vaqt bo'yicha nuqtalar bilan boshqaruvchi chiziq.
+gloss: Pasaytirish (ducking) | Nutq paytida fon musiqasi balandligini avtomatik yoki qo'lda pasaytirish.
+gloss: LUFS | Inson qulog'i sezadigan o'rtacha balandlikni o'lchash birligi; platformalar balandlik me'yorida ishlatadi.
+gloss: Aralashtirish (miks) | Bir nechta trekni balandligi va panoramasini muvozanatlab bitta yozuvga birlashtirish.

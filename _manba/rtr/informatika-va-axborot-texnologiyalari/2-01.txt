@@ -1,0 +1,99 @@
+nomi: Videoni tahrirlash dasturi. Mutanosiblikni belgilash. Videoklipni montaj qilish va kliplarni birlashtirish
+modul: 4-modul
+ac: 4.1 Raqamli video tavsiflarini (o'lcham, kadr tezligi, mutanosiblik, bitreyt, format) tushuntiradi, video tahrirlash dasturi interfeysi bilan ishlaydi, loyiha mutanosibligini maqsadga mos belgilaydi va kliplarni montaj qilib birlashtiradi.
+maqsad: O'quvchilarda raqamli videoning asosiy tavsiflari, nochiziqli montaj tamoyillari va video tahrirlash dasturi interfeysi haqida tushuncha hosil qilish, loyiha mutanosibligini nashr qilinadigan platformaga mos tanlash hamda kliplarni kesish, tartiblash va birlashtirish tartibini o'rgatish.
+natija: kadr, kadr tezligi, ruxsat (o'lcham), mutanosiblik, bitreyt, kodek va konteyner tushunchalarini tushuntiradi;
+natija: chiziqli va nochiziqli montajni farqlaydi, video tahrirlash dasturlarini vazifasiga ko'ra taqqoslaydi;
+natija: dastur interfeysi qismlarini (media kutubxona, ko'rish oynasi, vaqt shkalasi, treklar, xususiyatlar paneli) nomlaydi va vazifasini aytadi;
+natija: loyiha mutanosibligini nashr qilinadigan joyga (YouTube, Reels, taqdimot) mos belgilaydi;
+natija: kliplarni import qilish, kesish, tartiblash, o'tishlar bilan birlashtirish bosqichlarini tushuntiradi.
+reja: Raqamli video: asosiy tavsiflar
+reja: Video tahrirlash dasturlari va ularning interfeysi
+reja: Mutanosiblikni belgilash va loyiha sozlamalari
+reja: Montaj qilish va kliplarni birlashtirish
+tayanch: kadr; kadr tezligi (fps); ruxsat (o'lcham); mutanosiblik (tomonlar nisbati); bitreyt; kodek; konteyner; nochiziqli montaj; vaqt shkalasi; trek; kesish (trim, split); o'tish effekti; titr; eksport
+metod: Aqliy hujum | «Telefoningizda suratga olingan video YouTube'da yaxshi ko'rinadi, lekin Reels'ga yuklanganda chetlari qirqilib qoladi — nima uchun?» savoli bilan mutanosiblik muammosi muhokama qilinadi.
+metod: Namoyish | O'qituvchi proyektorda bepul dasturda (Shotcut yoki CapCut) 3 ta klipni import qilib, loyiha sozlamalarini belgilaydi, kesadi, tartiblaydi va o'tish qo'shadi; o'quvchilar bosqichlarni ketma-ket yozib boradi.
+metod: Juftlikda tahlil | Juftliklar ikki xil videoni (gorizontal va vertikal) ko'rib, ularning o'lchami, kadr tezligi va mutanosibligini fayl xususiyatlaridan aniqlaydi va jadvalga yozadi.
+jihoz: Kompyuter va proyektor; video tahrirlash dasturi (Shotcut, CapCut yoki DaVinci Resolve bepul versiyasi); namunaviy videokliplar (gorizontal va vertikal); taqdimot
+
+## 1. Raqamli video: asosiy tavsiflar
+**Raqamli video** — tez almashinib turadigan tasvirlar (kadrlar) ketma-ketligi va ularga hamroh audio. Har bir kadr — oddiy rastrli rasm. Kadrlar sekundiga 24–30 marta almashganda inson ko'zi ularni uzluksiz harakat sifatida qabul qiladi. Videoning sifati, hajmi va qayerda ko'rsatilishi bir nechta tavsifga bog'liq.
+**Kadr tezligi** (fps — frames per second) — bir sekunddagi kadrlar soni. Kino uchun an'anaviy 24 fps, televideniye va internet videolari uchun 25 yoki 30 fps, sport va o'yinlar uchun 50–60 fps ishlatiladi. Kadr tezligi yuqori bo'lsa, harakat silliqroq ko'rinadi va keyinchalik sekinlashtirish (slow motion) uchun ko'proq kadr bo'ladi, lekin fayl hajmi ham ortadi. Bitta loyihada turli kadr tezligidagi kliplarni aralashtirish harakatning «sakrab» ko'rinishiga olib kelishi mumkin, shuning uchun loyiha kadr tezligi oldindan belgilanadi.
+**Ruxsat (o'lcham)** — kadrning pikseldagi eni va bo'yi. Keng tarqalgan o'lchamlar: HD (1280×720), Full HD (1920×1080), 4K UHD (3840×2160). Vertikal videoda eni va bo'yi o'rin almashadi: 1080×1920.
+**Mutanosiblik** (tomonlar nisbati) — kadr enining bo'yiga nisbati: 16:9 (gorizontal, YouTube va televizor), 9:16 (vertikal, Reels, TikTok, Shorts), 1:1 (kvadrat), 4:5 (Instagram lentasi), 4:3 (eski televizor va ayrim taqdimotlar). Masalan, 1920:1080 = 16:9, chunki ikkala son 120 ga bo'linadi: 1920 : 120 = 16, 1080 : 120 = 9.
+**Bitreyt** — bir sekund videoni saqlash uchun ishlatiladigan ma'lumot hajmi (Mbit/s). Bitreyt qanchalik katta bo'lsa, sifat yuqori va fayl katta bo'ladi. Full HD video uchun internetga joylashda odatda 8–12 Mbit/s yetarli. Fayl hajmini taxminan hisoblash mumkin: hajm = bitreyt × davomiylik. Masalan, 8 Mbit/s bitreytli 60 soniyalik video ≈ 480 Mbit = 60 MB.
+**Kodek** — videoni siqish va ochish usuli (H.264/AVC, H.265/HEVC, VP9, AV1). **Konteyner** — video, audio, subtitr va boshqa ma'lumotlarni bitta faylda saqlaydigan format (MP4, MOV, MKV, AVI, WebM). Kodek va konteynerni farqlash muhim: MP4 fayl ichida H.264 ham, H.265 ham bo'lishi mumkin; eski qurilma H.265 ni ocha olmasa, fayl MP4 bo'lsa ham ijro etilmaydi.
+Siqishsiz video juda katta bo'lardi: bitta Full HD kadr taxminan 6 MB, sekundiga 25 kadr esa 150 MB ni tashkil qiladi. Kodeklar ikki xil siqishdan foydalanadi: **kadr ichidagi** siqishda har bir kadrning bir xil rangli sohalari ixcham yoziladi; **kadrlar orasidagi** siqishda esa to'liq kadr faqat vaqti-vaqti bilan saqlanadi, oradagi kadrlar uchun faqat o'zgargan qismlar yoziladi. Shu sababli harakat kam bo'lgan video (ma'ruza, intervyu) ancha kichik, harakat ko'p bo'lgan video (sport, olomon, yomg'ir) esa bir xil bitreytda sifatsizroq ko'rinadi.
+jadval: Video o'lchamlari va qo'llanishi
+| Nomi | O'lcham (piksel) | Mutanosiblik | Qayerda ishlatiladi |
+| HD | 1280×720 | 16:9 | Onlayn dars, sekin internet uchun |
+| Full HD | 1920×1080 | 16:9 | YouTube, taqdimot, televizor |
+| Vertikal Full HD | 1080×1920 | 9:16 | Reels, TikTok, YouTube Shorts |
+| Kvadrat | 1080×1080 | 1:1 | Ijtimoiy tarmoq lentasi |
+| 4K UHD | 3840×2160 | 16:9 | Professional suratga olish, katta ekranlar |
+
+## 2. Video tahrirlash dasturlari va ularning interfeysi
+Ilgari video lentadan lentaga ketma-ket ko'chirib montaj qilinardi — bu **chiziqli montaj** deyiladi: o'rtadagi bitta sahnani o'zgartirish uchun undan keyingi hamma qismni qaytadan yozish kerak edi. Hozir kompyuterda **nochiziqli montaj** qo'llanadi: barcha kliplar diskda saqlanadi, istalgan qismni istalgan vaqtda kesish, joyini almashtirish yoki o'chirish mumkin, asl fayllar esa o'zgarmaydi — dastur faqat «qaysi klipning qaysi qismi, qachon va qanday ko'rsatilishi» haqidagi loyiha faylini saqlaydi.
+Video tahrirlash dasturlari vazifasi va murakkabligiga ko'ra farqlanadi:
+- **boshlang'ich va mobil** — CapCut, iMovie, Clipchamp: tayyor shablonlar, avtomatik subtitrlar, telefonda ishlash qulay;
+- **bepul ochiq kodli** — Shotcut, Kdenlive, OpenShot: o'quv va kichik loyihalar uchun yetarli imkoniyatlar, har xil operatsion tizimlarda ishlaydi;
+- **professional** — Adobe Premiere Pro, Final Cut Pro, DaVinci Resolve: ko'p trekli montaj, rang bilan ishlash (color grading), ovoz va effektlarni chuqur sozlash; DaVinci Resolve'ning bepul versiyasi ham bor.
+Dastur tanlashda kompyuter quvvati (4K montaj kuchli protsessor va video karta talab qiladi), qo'llab-quvvatlanadigan formatlar, litsenziya narxi va o'rganish qulayligi hisobga olinadi.
+Ko'pchilik dasturlar interfeysi o'xshash qismlardan iborat:
+- **media kutubxona** (bin) — loyihaga import qilingan video, audio va rasm fayllari ro'yxati;
+- **manba ko'rish oynasi** — tanlangan klipni ko'rish va undan kerakli qismni belgilash (kirish va chiqish nuqtalari);
+- **dastur (natija) ko'rish oynasi** — montaj qilinayotgan videoning ayni paytdagi ko'rinishi;
+- **vaqt shkalasi** (timeline) — kliplar chapdan o'ngga vaqt bo'yicha joylashadigan asosiy ish maydoni; **o'ynatish boshi** (playhead) joriy vaqtni ko'rsatadi;
+- **treklar** — vaqt shkalasidagi qatorlar: yuqoridagi video trek pastdagisini qoplaydi (masalan, logotip yoki titr), audio treklar esa birga yangraydi;
+- **xususiyatlar va filtrlar paneli** — tanlangan klipning o'lchami, joylashuvi, shaffofligi, rangi, ovozi va effektlarini sozlash.
+
+## 3. Mutanosiblikni belgilash va loyiha sozlamalari
+Montajni boshlashdan oldin **loyiha sozlamalari** belgilanadi: o'lcham, mutanosiblik va kadr tezligi. Ular video qayerda ko'rsatilishiga qarab tanlanadi: YouTube va taqdimot uchun 1920×1080 (16:9), Reels, TikTok va Shorts uchun 1080×1920 (9:16), ijtimoiy tarmoq lentasi uchun 1080×1080 (1:1) yoki 1080×1350 (4:5). Kadr tezligi asosiy kliplar bilan bir xil olinadi (ko'pincha 25 yoki 30 fps).
+Agar klip mutanosibligi loyiha mutanosibligiga to'g'ri kelmasa, dastur uchta yo'lni taklif qiladi:
+- **sig'dirish** — klip to'liq ko'rinadi, lekin chetlarida qora chiziqlar paydo bo'ladi (gorizontal videoni vertikal loyihaga qo'yganda tepada va pastda);
+- **to'ldirish (kesish)** — klip kattalashtirilib kadrni to'liq egallaydi, lekin chetlari qirqiladi; muhim obyekt (odam, mahsulot) kadr markazida qolishiga e'tibor berish kerak;
+- **xira fon** — klipning kattalashtirilgan va xiralashtirilgan nusxasi fonga qo'yiladi, ustida esa asl klip to'liq ko'rinadi; ijtimoiy tarmoqlarda keng tarqalgan usul.
+Shuning uchun video qayerga joylanishini **suratga olishdan oldin** bilish yaxshi: vertikal video uchun telefon tik ushlanadi, gorizontal uchun yotqiziladi. Matn va logotiplarni kadr chetiga juda yaqin qo'ymaslik kerak — ijtimoiy tarmoq tugmalari va izohlar ularni yopib qo'yishi mumkin; buning uchun ko'pchilik dasturlarda **xavfsiz zona** chiziqlari bor.
+
+## 4. Montaj qilish va kliplarni birlashtirish
+Oddiy montajning ish tartibi quyidagicha:
+#. **Rejalashtirish**: videoning maqsadi, tomoshabini va davomiyligi aniqlanadi; qisqa ssenariy yoki kadrlar ro'yxati (raskadrovka) tuziladi.
+#. **Import va tartib**: barcha fayllar bitta papkaga yig'iladi va loyihaga import qilinadi; fayllar ma'noli nomlanadi.
+#. **Qo'pol montaj**: kliplar vaqt shkalasiga ssenariy tartibida joylanadi, ortiqcha boshlanish va oxirlari kesiladi (**trim**), kerak bo'lsa klip ikkiga bo'linadi (**split**) va keraksiz qismi o'chiriladi.
+#. **Aniq montaj**: kesish nuqtalari harakat yoki gap tugagan joyga to'g'rilanadi, bo'sh joylar olib tashlanadi, kliplar davomiyligi muvozanatlanadi.
+#. **O'tishlar va titrlar**: kliplar orasiga kerakli joyda o'tish effekti, boshiga nom titri, oxiriga muallif va manbalar titri qo'shiladi.
+#. **Ovoz**: tabiiy ovoz, nutq va musiqa balandligi muvozanatlanadi.
+#. **Eksport**: video maqsadga mos format va sifatda saqlanadi (keyingi darsda batafsil).
+Kliplarni birlashtirishda eng ko'p ishlatiladigan o'tish — oddiy **kesish** (cut): bir kadr darhol ikkinchisiga almashadi. **Aralashtirish** (dissolve, crossfade) vaqt o'tganini yoki joy almashganini bildiradi, **qorong'ilashish** (fade to black) esa qism yoki videoning tugaganini ko'rsatadi. Har bir kesishga turli effektli o'tish qo'yish videoni havaskorona qiladi — o'tishlar faqat ma'noli joyda ishlatiladi.
+Yaxshi montaj qoidalari: har bir kadr tomoshabinga yangi ma'lumot bersin; bitta kadr juda uzoq turmasin (ijtimoiy tarmoq videolarida odatda 2–5 soniya); harakatni harakat davomida kesish uzluksizlik taassurotini beradi; bir xil burchakdagi juda o'xshash ikki kadrni ketma-ket qo'ymaslik kerak, aks holda tasvir «sakraydi». Montaj davomida loyiha muntazam saqlanadi, asl fayllar ko'chirilmaydi va o'chirilmaydi, aks holda dastur ularni topa olmaydi.
+Katta hajmli (masalan, 4K) kliplar kuchsiz kompyuterda sekin ishlaydi: ko'rish oynasida tasvir to'xtab-to'xtab ko'rinadi. Bunday holda ko'pchilik dasturlar **proksi fayllar** yaratadi — kliplarning kichik o'lchamli nusxalari. Montaj ular bilan tez bajariladi, eksport paytida esa dastur avtomatik ravishda asl sifatli fayllardan foydalanadi. Telefon videolarida kadr tezligi ba'zan o'zgaruvchan bo'ladi; ovoz va tasvir bir-biridan orqada qolsa, klip avval doimiy kadr tezligiga o'tkaziladi.
+Nutqli videolarda ovoz va tasvirni birga kesish shart emas: keyingi kadr ovozi tasvirdan biroz oldin eshitila boshlasa yoki oldingi kadr ovozi yangi tasvir ustida davom etsa, o'tish ancha tabiiy bo'ladi. Intervyu va reportajlarda gapirayotgan odam kadri ustiga u gapirayotgan narsani ko'rsatuvchi qo'shimcha kadrlar (masalan, ustaxonadagi jarayon) qo'yiladi — bu tomoshabinni zeriktirmaydi va montaj xatolarini yashiradi.
+Mualliflik huquqi va axloq ham montajning bir qismi: boshqa birovning videosi, musiqasi yoki suratidan faqat litsenziya ruxsat bergan holda foydalaniladi; odamlarni ularning roziligisiz suratga olish va e'lon qilish mumkin emas, ayniqsa voyaga yetmaganlarni.
+Xulosa: videoning sifati va qayerda ko'rsatilishi uning o'lchami, mutanosibligi, kadr tezligi va bitreytiga bog'liq; nochiziqli montaj dasturlarida kliplar vaqt shkalasida kesiladi, tartiblanadi va birlashtiriladi; loyiha mutanosibligi esa ishni boshlashdan oldin nashr qilinadigan platformaga qarab belgilanadi.
+
+keys: Oshxona uchun vertikal reklama videosi
+vaziyat: Oshxona oshpazi yangi taom haqida Reels uchun video tayyorladi. U telefonni yotqizib (gorizontal) 4K, 60 fps da suratga oldi va montajni 1920×1080 loyihada qildi. Reels'ga yuklangan videoning tepasi va pastida keng qora chiziqlar paydo bo'ldi, taom kichkina ko'rindi, pastdagi matn esa ilovaning izoh tugmalari ostida qolib ketdi. Bundan tashqari, 40 soniyalik fayl 450 MB bo'lib, mobil internetda uzoq yuklandi.
+ksavol: Qora chiziqlar va kichik tasvir muammosining sababi nima?
+ksavol: Matn nima uchun ko'rinmay qoldi?
+ksavol: Videoni qayta tayyorlash uchun qanday loyiha sozlamalari va suratga olish qoidalarini taklif qilasiz?
+kjavob: Loyiha 16:9 gorizontal, Reels esa 9:16 vertikal — video «sig'dirish» rejimida joylangani uchun qora chiziqlar paydo bo'lgan. Matn xavfsiz zonadan tashqarida, ilova tugmalari ostida qolgan. Taklif: 1080×1920, 30 fps loyiha; mavjud gorizontal kliplarni «to'ldirish» (kesish) rejimida taom markazda qoladigan qilib joylash yoki keyingi safar telefonni tik ushlab suratga olish; matnni xavfsiz zona ichiga ko'chirish; eksportni H.264, 1080p, 8–10 Mbit/s bitreytda qilish — shunda 40 soniyalik video taxminan 40–50 MB bo'ladi.
+savol: Kadr tezligi nima? 24, 30 va 60 fps qayerda ishlatiladi?
+savol: Mutanosiblik qanday aniqlanadi? 1080×1920 videoning mutanosibligi qanday?
+savol: Kodek va konteyner o'rtasidagi farq nimada? Misol keltiring.
+savol: Chiziqli va nochiziqli montaj qanday farqlanadi?
+savol: Video tahrirlash dasturi interfeysining asosiy qismlarini va vazifalarini aytib bering.
+savol: Klip mutanosibligi loyihaga to'g'ri kelmasa, qanday yo'llar bor? Har birining kamchiligi nimada?
+test: Bir sekunddagi kadrlar sonini bildiruvchi tavsif? | Kadr tezligi (fps) | Bitreyt | Ruxsat | Mutanosiblik
+test: Reels va TikTok uchun qaysi mutanosiblik mos? | 9:16 | 16:9 | 4:3 | 1:1
+test: MP4, MOV va MKV nimaga misol bo'ladi? | Konteyner formatlariga | Kodeklarga | Kadr tezligiga | Video o'lchamlariga
+test: Kliplar vaqt bo'yicha joylashadigan asosiy ish maydoni qanday ataladi? | Vaqt shkalasi (timeline) | Media kutubxona | Xususiyatlar paneli | Eksport oynasi
+test: 8 Mbit/s bitreytli 60 soniyalik videoning taxminiy hajmi qancha? | 60 MB | 8 MB | 480 MB | 6 MB
+uyga: Mavzu yuzasidan o'qib o'rganing. Telefoningizdagi 3 ta videoning o'lchami, kadr tezligi, davomiyligi va fayl hajmini aniqlang (fayl xususiyatlari orqali), mutanosibligini hisoblang va har biri qaysi platformaga mosligini yozing. «Mening kasbim» videoroligi uchun 6–8 kadrli raskadrovka tuzing.
+gloss: Kadr tezligi (fps) | Bir sekundda ko'rsatiladigan kadrlar soni (24, 25, 30, 60 fps).
+gloss: Mutanosiblik | Kadr enining bo'yiga nisbati (16:9, 9:16, 1:1, 4:5).
+gloss: Bitreyt | Bir sekund videoni saqlash uchun sarflanadigan ma'lumot hajmi (Mbit/s).
+gloss: Kodek | Video yoki audioni siqish va ochish usuli (H.264, H.265, AV1).
+gloss: Konteyner | Video, audio va subtitrlarni bitta faylda saqlovchi format (MP4, MOV, MKV).
+gloss: Nochiziqli montaj | Asl fayllarni o'zgartirmasdan, kliplarning istalgan qismini istalgan tartibda kesish va birlashtirish usuli.
+gloss: Vaqt shkalasi | Montaj dasturida kliplar treklarda vaqt bo'yicha joylashadigan ish maydoni.

@@ -1,0 +1,65 @@
+nomi: Tarmoq komponentlari. Simsiz ulanish nuqtasi. Shlyuz, ko'prik va fayervol. Bit oqimini uzatish
+modul: 4-modul
+ac: 4.14 Tarmoq komponentlari (tarmoq adapteri, kommutator, marshrutizator, simsiz ulanish nuqtasi, shlyuz, ko'prik, fayervol) vazifasini tushuntiradi, kompyuterning tarmoq sozlamalarini aniqlaydi va tekshiradi, bit oqimini uzatish (striming) uchun tezlik va hajmni hisoblaydi.
+maqsad: O'quvchilarda kompyuter tarmog'ining apparat tarkibiy qismlari va ularning vazifalari, fayervol yordamida tarmoqni himoyalash, bit oqimini uzatish tamoyili haqida bilim hosil qilish, tarmoq sozlamalarini buyruqlar yordamida tekshirish va uzatish vaqtini hisoblash ko'nikmasini shakllantirish.
+natija: tarmoq adapteri, kommutator, marshrutizator, modem va simsiz ulanish nuqtasining vazifalarini farqlaydi;
+natija: shlyuz, ko'prik va fayervolning vazifasini tushuntiradi;
+natija: kompyuterning IP manzili, MAC manzili, asosiy shlyuz va DNS sozlamalarini aniqlaydi, ping buyrug'i bilan ulanishni tekshiradi;
+natija: bit oqimini uzatish tamoyilini tushuntiradi, fayl uzatish vaqti va striming hajmini hisoblaydi.
+reja: Tarmoqning asosiy komponentlari
+reja: Shlyuz, ko'prik va fayervol
+reja: Bit oqimini uzatish
+tayanch: tarmoq adapteri; MAC manzil; IP manzil; kommutator; marshrutizator; modem; simsiz ulanish nuqtasi; asosiy shlyuz; ko'prik; fayervol; DNS; ping; bit oqimi; striming; bufer; o'tkazish qobiliyati
+metod: Tarmoq «yo'li» | O'qituvchi sinf kompyuteridan veb-saytgacha bo'lgan yo'lni doskada chizadi (adapter → kommutator → marshrutizator → provayder → server); o'quvchilar har bir qurilmaning vazifasini aytadi.
+metod: Amaliy tekshiruv | O'quvchilar buyruqlar qatorida o'z kompyuterining tarmoq sozlamalarini aniqlab, ulanishni tekshiradi va natijani jadvalga yozadi.
+ajihoz: Kompyuterlar (tarmoqqa ulangan); buyruqlar qatori (cmd yoki terminal); kommutator, marshrutizator va kabel namunalari (yoki rasmlari); proyektor
+
+## Tarmoqning asosiy komponentlari
+jadval: Tarmoq qurilmalari va ularning vazifalari
+| Qurilma | Vazifasi |
+| Tarmoq adapteri (NIC) | Kompyuterni simli yoki simsiz tarmoqqa ulaydi; har biri noyob **MAC manzil**ga ega |
+| Kommutator (switch) | Bitta lokal tarmoqdagi qurilmalarni bog'laydi va ma'lumotni faqat kerakli qurilmaga (MAC manzil bo'yicha) yuboradi |
+| Marshrutizator (router) | Turli tarmoqlarni bog'laydi, paketlar uchun eng yaxshi yo'lni **IP manzil** bo'yicha tanlaydi; uydagi tarmoqni internetga ulaydi |
+| Modem | Raqamli signalni aloqa liniyasiga mos signalga (va aksincha) o'giradi |
+| Simsiz ulanish nuqtasi (WAP) | Simsiz qurilmalarni (Wi-Fi) simli tarmoqqa ulaydi |
+| Takrorlagich (repiter) | Kuchsizlangan signalni kuchaytirib, uzoqroqqa uzatadi |
+Uy va kichik ofislarda ko'pincha bitta qurilmada marshrutizator, kommutator, simsiz ulanish nuqtasi, fayervol va ba'zan modem birlashtirilgan bo'ladi. **Simsiz ulanish nuqtasi** tarmoq nomi (SSID) va parolini e'lon qiladi; uni xavfsiz sozlash uchun WPA2 yoki WPA3 shifrlash, kuchli parol, mehmonlar uchun alohida tarmoq va qurilma boshqaruv parolini almashtirish zarur. Katta binolarda bir nechta ulanish nuqtasi o'rnatilib, qurilma xonadan xonaga o'tganda eng yaqiniga ulanadi.
+
+## Shlyuz, ko'prik va fayervol
+**Shlyuz** (gateway) — turli tarmoqlar yoki turli protokollardan foydalanuvchi tizimlar orasida «darvoza» vazifasini bajaruvchi qurilma yoki dastur. Kompyuter sozlamalaridagi **asosiy shlyuz** — lokal tarmoqdan tashqariga (masalan, internetga) ketadigan barcha paketlar yuboriladigan qurilma manzili, odatda marshrutizator manzili (masalan, 192.168.1.1). **Ko'prik** (bridge) — bir xil turdagi ikki tarmoq segmentini birlashtirib, bitta tarmoqdek ishlashini ta'minlaydi va trafikni segmentlar o'rtasida filtrlaydi. **Fayervol** (tarmoq ekrani) — oldindan belgilangan qoidalar asosida kiruvchi va chiquvchi trafikni tekshirib, ruxsat beradigan yoki bloklaydigan apparat yoki dasturiy vosita: masalan, internetdan kompyuterning ochiq portlariga ruxsatsiz ulanishni to'sadi, ayrim dasturlarning tarmoqqa chiqishini cheklaydi. Fayervol antivirus o'rnini bosmaydi, ular birgalikda ishlaydi.
+
+## Bit oqimini uzatish
+Video yoki audioni internetdan ko'rish uchun faylni oldin to'liq yuklab olish shart emas: server ma'lumotni uzluksiz **bit oqimi** ko'rinishida yuboradi, pleyer esa kelgan qismni darhol ijro etadi — bu **striming** deyiladi. Uzilishlar bo'lmasligi uchun pleyer bir necha soniyalik ma'lumotni oldindan **bufer**ga yuklab qo'yadi. Agar internet tezligi videoning bitreytidan past bo'lsa, bufer tugaydi va tasvir to'xtab qoladi; shuning uchun ko'pchilik xizmatlar tezlikka qarab sifatni avtomatik pasaytiradi yoki oshiradi. Jonli efirda (to'g'ridan-to'g'ri translyatsiya) kechikish kichik bo'lishi kerak, talab bo'yicha videoda esa bufer kattaroq bo'lishi mumkin. Ma'lumot uzatish tezligi bit/s da o'lchanadi: fayl uzatish vaqti = fayl hajmi (bit) : tezlik (bit/s); 1 bayt = 8 bit.
+
+amaliy: Kompyuterning tarmoq sozlamalarini tekshirish va tarmoq sxemasini chizish
+amaqsad: Buyruqlar qatori yordamida kompyuterning IP manzili, MAC manzili, asosiy shlyuz va DNS sozlamalarini aniqlash, ulanishni ping va marshrutni kuzatish buyruqlari bilan tekshirish, fayervol sozlamalarini ko'rib chiqish va o'quv xonasi tarmog'i sxemasini chizish.
+xavf: Tarmoq qurilmalarining sozlamalarini, kabellarni va boshqa kompyuterlarni faqat o'qituvchi ruxsati bilan o'zgartiring; begona tarmoqlarni skanerlamang.
+qadam: Buyruqlar qatorini oching va `ipconfig /all` (Windows) yoki `ip a` va `ip route` (Linux) buyrug'ini bajaring; IP manzil, maska, asosiy shlyuz, DNS server va MAC manzilni jadvalga yozing.
+qadam: `ping` buyrug'i bilan avval asosiy shlyuzni, so'ng sinfdoshingiz kompyuterini va bitta veb-saytni tekshiring; javob vaqtini (ms) solishtiring.
+qadam: `tracert` (Windows) yoki `traceroute` (Linux) bilan saytgacha bo'lgan yo'lni kuzating; birinchi qadam qaysi qurilma ekanini aniqlang.
+qadam: Fayervol sozlamalarini oching: u yoqilganmi, qaysi tarmoq profili (umumiy yoki xususiy) tanlangan va qaysi dasturlarga ruxsat berilganini yozing (o'zgartirmasdan).
+qadam: O'quv xonasi tarmog'i sxemasini chizing: kompyuterlar, kommutator, marshrutizator, simsiz ulanish nuqtasi, printer va internetga chiqish; har bir qurilma vazifasini yozing.
+qadam: Fayl uzatish vaqtini hisoblang (masala 1) va striming xizmatida video sifati sozlamasini o'zgartirib, bufer va sifat qanday o'zgarishini kuzating.
+qadam: Natijalar asosida xulosa yozing: kompyuteringiz internetga qaysi qurilmalar orqali chiqadi va tarmoqni qanday himoyalash mumkin.
+anatija: Tarmoq sozlamalari jadvali, ping va marshrut natijalari, fayervol holati, o'quv xonasi tarmog'i sxemasi, hisob-kitoblar va xulosa.
+baho5: Barcha sozlamalar to'g'ri aniqlangan, buyruqlar natijasi tushuntirilgan, sxema to'liq va qurilmalar vazifasi to'g'ri ko'rsatilgan, hisob-kitob to'g'ri.
+masala: 700 MB hajmli fayl 20 Mbit/s tezlikda necha soniya (daqiqa) yuklanadi? (1 MB = 8 Mbit deb oling)
+yechim: 700 · 8 = 5600 Mbit; 5600 : 20 = 280 soniya ≈ 4,7 daqiqa.
+masala: Film 1 soat 30 daqiqa davom etadi va 5 Mbit/s bitreytli striming bilan ko'riladi. Qancha internet trafigi sarflanadi?
+yechim: 1,5 soat = 5400 s; 5 · 5400 = 27 000 Mbit = 3375 MB ≈ 3,3 GB.
+savol: Kommutator va marshrutizatorning farqi nimada?
+savol: Asosiy shlyuz nima va u kompyuter sozlamalarida nima uchun kerak?
+savol: Fayervol qanday ishlaydi? U antivirusdan nimasi bilan farq qiladi?
+savol: Striming paytida video nima uchun to'xtab qoladi va bufer qanday yordam beradi?
+test: Bitta lokal tarmoqdagi qurilmalarni bog'lab, ma'lumotni faqat kerakli qurilmaga yuboradigan qurilma? | Kommutator | Modem | Repiter | Proyektor
+test: Lokal tarmoqdan tashqariga chiqadigan paketlar yuboriladigan qurilma manzili? | Asosiy shlyuz | MAC manzil | SSID | DNS nomi
+test: Qoidalar asosida trafikni tekshirib, ruxsat beradigan yoki bloklaydigan vosita? | Fayervol | Kommutator | Bufer | Arxivator
+test: Videoni to'liq yuklamasdan, kelgan qismini darhol ijro etish nima deyiladi? | Striming | Arxivlash | Sinxronlash | Formatlash
+test: 400 MB fayl 40 Mbit/s tezlikda necha soniyada yuklanadi? | 80 soniya | 10 soniya | 160 soniya | 40 soniya
+uyga: Misol va mashqlar: uyingizdagi (yoki tanishingizning) internet tarmog'i sxemasini chizing: qaysi qurilmalar bor, qaysilari simsiz ulangan. Telefon sozlamalaridan Wi-Fi tarmog'idagi IP manzil va shlyuz manzilini toping (shaxsiy ma'lumotlarsiz yozing) va 3 ta xavfsizlik sozlamasini tekshiring.
+gloss: MAC manzil | Tarmoq adapterining ishlab chiqaruvchi tomonidan berilgan noyob apparat manzili.
+gloss: Kommutator | Lokal tarmoq qurilmalarini bog'lab, ma'lumotni MAC manzil bo'yicha kerakli qurilmaga yo'naltiruvchi qurilma.
+gloss: Marshrutizator | Turli tarmoqlarni bog'lab, paketlarni IP manzil bo'yicha yo'naltiruvchi qurilma.
+gloss: Shlyuz | Turli tarmoqlar yoki protokollar orasida bog'lovchi «darvoza» vazifasini bajaruvchi qurilma yoki dastur.
+gloss: Fayervol | Kiruvchi va chiquvchi trafikni qoidalar asosida filtrlovchi himoya vositasi.
+gloss: Striming | Audio yoki videoni bit oqimi ko'rinishida uzatib, yuklanishi bilan ijro etish.

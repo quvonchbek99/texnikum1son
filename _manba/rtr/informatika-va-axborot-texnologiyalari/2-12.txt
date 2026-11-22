@@ -1,0 +1,90 @@
+nomi: Ma'lumotlarni intellektual tahlil qilish. Ijtimoiy tarmoqlar va videokonferensiyalar
+modul: 4-modul
+ac: 4.12 Ma'lumotlarni intellektual tahlil qilish jarayoni va usullarini (klassifikatsiya, klasterlash, assotsiatsiya, bashorat) tushuntiradi, ularning qo'llanishi va axloqiy muammolarini baholaydi; ijtimoiy tarmoqlar va videokonferensiyalardan xavfsiz va samarali foydalanadi.
+maqsad: O'quvchilarda katta hajmdagi ma'lumotlardan foydali qonuniyatlarni topish texnologiyasi, uning savdo, bank, tibbiyot va ta'limdagi qo'llanishi, maxfiylik va axloq masalalari, shuningdek ijtimoiy tarmoqlar va videokonferensiyalarning imkoniyatlari, xavflari va odob qoidalari haqida bilim hosil qilish.
+natija: ma'lumotlarni intellektual tahlil qilish va katta ma'lumotlar tushunchalarini tushuntiradi;
+natija: tahlil jarayoni bosqichlarini va asosiy usullarini misollar bilan tushuntiradi;
+natija: ma'lumotlar tahlilida maxfiylik, rozilik, tarafkashlik va «bog'liqlik — sabab emas» muammolarini baholaydi;
+natija: ijtimoiy tarmoqlar turlarini, ularning shaxsiy va kasbiy maqsadlarda qo'llanishi hamda xavflarini tushuntiradi;
+natija: videokonferensiya uchun texnik talablar, asosiy funksiyalar va odob qoidalarini aytadi.
+reja: Ma'lumotlarni intellektual tahlil qilish va katta ma'lumotlar
+reja: Tahlil usullari, qo'llanishi va axloqiy masalalar
+reja: Ijtimoiy tarmoqlar
+reja: Videokonferensiyalar
+tayanch: ma'lumotlarni intellektual tahlil qilish; katta ma'lumotlar; ma'lumotlarni tozalash; klassifikatsiya; klasterlash; assotsiatsiya qoidalari; bashorat; anomaliya; anonimlashtirish; ijtimoiy tarmoq; algoritmik lenta; raqamli obro'; videokonferensiya; ekran ulashish; vebinar
+metod: Muammoli savol | «Do'kon nima uchun non yoniga sut, sut yoniga esa pechenye qo'yadi? Buni kim va qanday aniqlagan?» savoli bilan savatcha tahlili misolida intellektual tahlil tushuntiriladi.
+metod: Guruhlarda tahlil | Guruhlar soddalashtirilgan sotuvlar jadvalidan qaysi mahsulotlar birga sotib olinishini qo'lda topadi va do'kon uchun tavsiya beradi.
+metod: Rolli o'yin | O'quvchilar qisqa videokonferensiyada «tashkilotchi», «ishtirokchi» va «kuzatuvchi» rollarini bajarib, odob qoidalari bo'yicha nazorat varaqasini to'ldiradi.
+jihoz: Kompyuter va proyektor; videokonferensiya xizmati (o'quv akkaunti); kamera, mikrofon va quloqchin; soddalashtirilgan sotuvlar jadvali (tarqatma); taqdimot
+
+## 1. Ma'lumotlarni intellektual tahlil qilish va katta ma'lumotlar
+Har kuni kassalar, bank kartalari, saytlar, telefonlar, datchiklar va ijtimoiy tarmoqlar juda katta hajmda ma'lumot yaratadi. Oddiy hisobot (masalan, oylik jami savdo) bu ma'lumotning faqat yuzasini ko'rsatadi. **Ma'lumotlarni intellektual tahlil qilish** (data mining) — katta hajmdagi ma'lumotlardan oldindan ma'lum bo'lmagan, foydali va amalda qo'llash mumkin bo'lgan qonuniyat va bog'liqliklarni kompyuter yordamida avtomatik topish jarayoni. U statistika, ma'lumotlar bazalari va mashinali o'qitish usullarini birlashtiradi.
+**Katta ma'lumotlar** (big data) deb shunday ma'lumotlar to'plamiga aytiladiki, ularni oddiy dasturlar bilan saqlash va qayta ishlash qiyin. Ular uchta xususiyat bilan tavsiflanadi: **hajm** — terabayt va petabaytlab ma'lumot; **tezlik** — ma'lumot uzluksiz va juda tez kelib turadi (masalan, har soniyada minglab to'lovlar); **xilma-xillik** — jadvallar, matn, rasm, video, joylashuv va datchik ko'rsatkichlari aralash keladi. Ko'pincha yana ikki xususiyat qo'shiladi: ma'lumotning **ishonchliligi** (xato va takrorlar bo'lishi mumkin) va uning **qiymati** (tahlildan haqiqiy foyda olish).
+Intellektual tahlil jarayoni quyidagi bosqichlardan iborat:
+#. **Maqsadni aniqlash** — qanday savolga javob izlanmoqda: «qaysi mijozlar ketib qolishi mumkin?», «qaysi mahsulotlar birga sotiladi?».
+#. **Ma'lumotlarni yig'ish** — turli manbalardan (MB, kassa, sayt, datchiklar) ma'lumotlarni bir joyga jamlash.
+#. **Tozalash va tayyorlash** — takrorlarni o'chirish, xatolarni tuzatish, bo'sh qiymatlarni to'ldirish, formatlarni bir xil qilish; bu bosqich ko'pincha eng ko'p vaqtni oladi (1-kursda o'rganilgan validatsiya va verifikatsiya shu yerda juda muhim).
+#. **Tahlil (modellash)** — mos usul tanlanadi va kompyuter qonuniyatlarni izlaydi.
+#. **Natijalarni baholash va talqin qilish** — topilgan qonuniyat haqiqatan to'g'ri va foydalimi, tasodif emasmi — mutaxassis tekshiradi.
+#. **Qo'llash** — natija asosida qaror qabul qilinadi: aksiya, mahsulot joylashuvi, xavfli operatsiyani to'xtatish va hokazo; keyin natija kuzatiladi.
+
+Yirik tashkilotlarda tahlil uchun turli tizimlardan kelgan ma'lumotlar maxsus **ma'lumotlar omboriga** (data warehouse) yig'iladi: u kundalik ishlaydigan bazalardan alohida turadi, tarixiy ma'lumotlarni yillar davomida saqlaydi va tahlil so'rovlari uchun moslashtiriladi. Tahlil natijalari rahbarlarga odatda **vizualizatsiya** — diagramma, xarita va boshqaruv panellari (dashbord) ko'rinishida beriladi, chunki ming qatorli jadvaldan ko'ra bitta yaxshi grafik tezroq tushuniladi.
+
+## 2. Tahlil usullari, qo'llanishi va axloqiy masalalar
+jadval: Intellektual tahlilning asosiy usullari
+| Usul | Nima qiladi | Misol |
+| Klassifikatsiya | Obyektni oldindan ma'lum guruhlardan biriga ajratadi | Xatni «spam» yoki «oddiy»ga, kredit arizasini «xavfli» yoki «xavfsiz»ga ajratish |
+| Klasterlash | Oldindan berilmagan, o'xshash obyektlar guruhlarini o'zi topadi | Mijozlarni xarid odatlariga ko'ra guruhlarga bo'lish |
+| Assotsiatsiya qoidalari | Qaysi hodisalar birga uchrashini topadi | «Non olganlarning 60 % i sut ham oladi» — savatcha tahlili |
+| Bashorat (regressiya) | Kelajakdagi qiymatni oldingi ma'lumotlar asosida taxmin qiladi | Keyingi oyda qancha ehtiyot qism sotilishini bashorat qilish |
+| Anomaliyalarni aniqlash | Odatdagidan keskin farq qiladigan holatlarni topadi | Kartadan tunda boshqa davlatda katta xarid — shubhali operatsiya |
+Assotsiatsiya qoidasining kuchi ikki ko'rsatkich bilan baholanadi. Aytaylik, do'konda 1000 ta chek bor: 400 tasida non, 200 tasida ham non, ham sut bor. **Qo'llab-quvvatlash** — ikkala mahsulot birga uchragan cheklar ulushi: 200 : 1000 = 20 %. **Ishonch** — non olganlar orasida sut ham olganlar ulushi: 200 : 400 = 50 %. Qoida faqat ikkala ko'rsatkich yetarlicha katta bo'lgandagina foydali hisoblanadi; kam uchraydigan bog'liqliklar tasodif bo'lishi mumkin.
+**Qo'llanish sohalari:** savdoda — shaxsiy tavsiyalar («bu mahsulotni olganlar yana ... ham olgan»), aksiyalarni rejalash, mahsulotlarni javonlarda joylashtirish, zaxirani bashorat qilish; bankda — firibgarlikni aniqlash va kredit xavfini baholash; tibbiyotda — kasallik xavfi omillarini aniqlash va resurslarni rejalash; transportda — tirbandlik va yo'lovchilar oqimini bashorat qilish; ishlab chiqarishda — uskuna buzilishidan oldin uning belgilarini topish (oldindan texnik xizmat); ta'limda — o'zlashtirishda qiynalayotgan o'quvchilarni erta aniqlab, yordam ko'rsatish; sportda — o'yinchilar ko'rsatkichlarini tahlil qilish.
+**Axloqiy va huquqiy masalalar:**
+- **maxfiylik va rozilik** — shaxsga doir ma'lumotlar faqat qonuniy asosda va e'lon qilingan maqsadda ishlatilishi kerak; insonlar o'z ma'lumotlari qanday ishlatilishini bilish huquqiga ega;
+- **anonimlashtirish** — tahlil uchun ism, telefon va manzil olib tashlanadi yoki kodlanadi; lekin bir nechta ma'lumotni birlashtirib, «anonim» odamni qayta aniqlash mumkinligi ham xavf;
+- **tarafkashlik** — tarixiy ma'lumotdagi adolatsizlik modelga o'tib, ayrim guruhlarga nisbatan noto'g'ri qarorlarga olib kelishi mumkin;
+- **bog'liqlik sabab emas** — ikki ko'rsatkich birga o'zgarishi biri ikkinchisiga sabab ekanini isbotlamaydi: yozda muzqaymoq ham, suzishda jarohatlanish ham ko'payadi, lekin muzqaymoq jarohatga sabab emas — ikkalasiga issiq havo ta'sir qiladi;
+- **xavfsizlik** — katta ma'lumotlar bazalari xakerlar uchun nishon, shuning uchun ular shifrlanadi va kirish huquqlari cheklanadi.
+
+## 3. Ijtimoiy tarmoqlar
+**Ijtimoiy tarmoq** — foydalanuvchilar profil yaratib, o'zaro bog'lanadigan, xabar, rasm, video va fikr almashadigan onlayn platforma. Turlari: **messenjerlar** va ularning kanal hamda guruhlari; **foto va video platformalari**; **qisqa xabarlar** platformalari; **professional tarmoqlar** (rezyume, ish qidirish, kasbiy aloqalar); **forumlar va jamoalar** (qiziqishlar bo'yicha savol-javob).
+Ijtimoiy tarmoqlarning asosiy elementlari: profil, obunachilar va do'stlar ro'yxati, lenta, izoh va reaksiyalar, xeshteglar, shaxsiy xabarlar. Ko'pchilik platformalarda lenta **algoritmik**: foydalanuvchiga nima ko'rsatilishini intellektual tahlil asosida tavsiya tizimi hal qiladi — u odam ko'proq vaqt sarflaydigan kontentni tanlaydi. Shuning uchun ijtimoiy tarmoqlar ham ma'lumotlarni intellektual tahlil qilishning eng katta qo'llanish sohasi hisoblanadi.
+**Foydali qo'llanish:** yaqinlar bilan aloqa; tezkor yangiliklar va rasmiy e'lonlar (rasmiy kanallar orqali); ta'limda — guruh kanallari, o'quv materiallari, savol-javob; kichik biznesda — mahsulotni ko'rsatish, mijozlar bilan muloqot va buyurtma qabul qilish; kasbiy rivojlanishda — portfolio, ish e'lonlari, mutaxassislar jamoalari. Ish beruvchilar nomzodning ochiq profilini ko'rishi mumkin, shuning uchun internetdagi **raqamli obro'** ham muhim.
+Ijtimoiy tarmoqda kontent joylashda mualliflik huquqiga ham amal qilinadi: boshqa birovning rasmi, videosi yoki musiqasini ruxsatsiz o'zinikidek joylash mumkin emas; iqtibos keltirilsa, muallif ko'rsatiladi. Tashkilot nomidan yuritiladigan sahifalarda esa rasmiy uslub, aniq ma'lumot va mijozlar savollariga o'z vaqtida javob berish muhim.
+**Xavflar:** shaxsiy ma'lumot va joylashuvni ochiq qoldirish; soxta akkauntlar va firibgarlik; kiberbulling; tekshirilmagan va soxta xabarlar; vaqtni nazoratsiz sarflash; boshqalarning rasm va videolarini ruxsatsiz tarqatish. Himoya: maxfiylik sozlamalari, ikki bosqichli autentifikatsiya, notanish havolalarni ochmaslik, ma'lumotni tarqatishdan oldin tekshirish, haqoratli kontentga shikoyat qilish, boshqalarni hurmat qilish.
+
+## 4. Videokonferensiyalar
+**Videokonferensiya** — ikki yoki undan ortiq ishtirokchining internet orqali real vaqtda tasvir va ovoz almashib muloqot qilishi. Bitta ma'ruzachi ko'p tinglovchiga taqdimot qiladigan onlayn tadbir **vebinar** deyiladi. Videokonferensiyalar masofaviy ta'lim, ish yig'ilishlari, ish suhbati (intervyu), shifokor maslahati, xalqaro hamkorlik va oilaviy muloqotda keng ishlatiladi.
+**Texnik talablar:** kamera (noutbuk yoki telefon kamerasi yetarli), mikrofon va quloqchin (aks-sado bo'lmasligi uchun), barqaror internet (sifatli video uchun odatda sekundiga bir necha megabit; sust internetda kamerani o'chirib, faqat ovoz bilan ishtirok etish mumkin), yangilangan dastur yoki brauzer.
+**Asosiy funksiyalar:** ekran yoki alohida oynani ulashish; chat va fayl yuborish; qo'l ko'tarish va reaksiyalar; so'rovnoma; ishtirokchilarni kichik xonalarga bo'lish; uchrashuvni yozib olish (ishtirokchilarni ogohlantirib); avtomatik subtitrlar; virtual yoki xiralashtirilgan fon; kutish xonasi va parol bilan kirishni boshqarish.
+Platformani tanlashda ishtirokchilar soni va uchrashuv davomiyligi cheklovlari, ekran ulashish va yozib olish imkoniyati, telefonda ishlashi, ma'lumotlar xavfsizligi va narxi solishtiriladi. Ta'lim muassasalari va tashkilotlar odatda bitta platformani tanlab, xodim va o'quvchilarga uni ishlatishni o'rgatadi — har darsda boshqa dasturga o'tish vaqtni behuda sarflaydi.
+**Afzalliklar:** yo'l va vaqt tejaladi; turli shahar va davlatlardagi odamlar uchrashadi; yozib olingan dars yoki yig'ilishni keyin ko'rish mumkin. Onlayn darsda o'qituvchi uchun qo'shimcha imkoniyatlar bor: test va so'rovnomalarni bevosita uchrashuvda o'tkazish, o'quvchilarni kichik xonalarda guruh ishiga bo'lish, doskani ulashish, davomatni avtomatik hisobot sifatida olish. **Kamchiliklar:** internet va texnikaga bog'liqlik; ekran oldida uzoq o'tirishdan charchash; imo-ishora va his-tuyg'ularni sezish qiyinlashadi; begonalar havola orqali kirib, uchrashuvni buzishi mumkin.
+**Odob va xavfsizlik qoidalari:** uchrashuvga oldindan, texnikani tekshirib kiring; gapirmayotganda mikrofonni o'chiring; kamerani ko'z darajasida joylashtiring, yuzingiz yaxshi yoritilsin, fon toza va tinch bo'lsin; ism-familiyangizni to'g'ri yozing; gapni bo'lmang, so'z olish uchun «qo'l ko'tarish»dan foydalaning; uchrashuv havolasi va parolini ijtimoiy tarmoqlarda ommaga joylamang; boshqalarni ularning roziligisiz yozib olmang va skrinshotlarini tarqatmang.
+Xulosa: ma'lumotlarni intellektual tahlil qilish katta ma'lumotlardan klassifikatsiya, klasterlash, assotsiatsiya va bashorat usullari bilan foydali qonuniyatlarni topadi, lekin maxfiylik, rozilik va to'g'ri talqinni talab qiladi; ijtimoiy tarmoqlar va videokonferensiyalar aloqa, ta'lim va ishni o'zgartirdi — ulardan samarali foydalanish uchun xavfsizlik va odob qoidalariga amal qilish kerak.
+
+keys: Avtoservis tarmog'i ma'lumotlari
+vaziyat: Shahardagi beshta filialli avtoservis tarmog'i uch yillik buyurtmalar bazasini tahlil qildi. Natijada quyidagilar aniqlandi: kuzda akkumulyator almashtirish buyurtmalari keskin ortadi; moy almashtirgan mijozlarning katta qismi bir vaqtda havo filtrini ham almashtiradi; mijozlarni tashrif chastotasi va xizmat turiga ko'ra to'rt guruhga ajratish mumkin; bitta filialda bir kunda bir xil karta bilan o'n marta qaytarilgan to'lov kuzatilgan. Marketing bo'limi barcha mijozlarning telefon raqamlarini reklama agentligiga «aksiya SMS'lari uchun» berishni taklif qilmoqda.
+ksavol: Har bir natija qaysi tahlil usuliga misol bo'ladi?
+ksavol: Bu natijalar asosida servis qanday qarorlar qabul qilishi mumkin?
+ksavol: Marketing bo'limi taklifida qanday muammo bor?
+kjavob: Kuzgi o'sish — bashorat (mavsumiy qonuniyat); moy va havo filtri — assotsiatsiya qoidasi; to'rt guruh — klasterlash; o'n marta qaytarilgan to'lov — anomaliyalarni aniqlash. Qarorlar: kuzdan oldin akkumulyatorlar zaxirasini oshirish va xodimlarni rejalash; moy almashtirishda havo filtrini taklif qilish (to'plam narxi); har bir mijoz guruhi uchun mos xizmat; shubhali to'lovni tekshirish va xodimlar nazoratini kuchaytirish. Muammo: mijozlar roziligisiz shaxsga doir ma'lumotni uchinchi tomonga berish qonunga zid va ishonchni yo'qotadi; to'g'ri yo'l — faqat reklama xabarlariga rozilik bergan mijozlarga servisning o'zi xabar yuborishi.
+savol: Ma'lumotlarni intellektual tahlil qilish oddiy hisobotdan nimasi bilan farq qiladi?
+savol: Katta ma'lumotlarning asosiy xususiyatlarini aytib bering.
+savol: Klassifikatsiya va klasterlashning farqi nimada?
+savol: Nima uchun «bog'liqlik sabab emas»? Misol keltiring.
+savol: Ijtimoiy tarmoqlarning kasbiy rivojlanishda qanday foydasi va xavfi bor?
+savol: Videokonferensiyada qanday odob va xavfsizlik qoidalariga amal qilish kerak?
+test: Katta ma'lumotlardan oldindan noma'lum foydali qonuniyatlarni topish jarayoni? | Ma'lumotlarni intellektual tahlil qilish | Arxivlash | Shifrlash | Normallashtirish
+test: Mijozlarni oldindan berilmagan, o'xshash guruhlarga ajratish usuli? | Klasterlash | Klassifikatsiya | Regressiya | Validatsiya
+test: «Non olganlarning ko'pi sut ham oladi» kabi qoidalarni topish usuli? | Assotsiatsiya qoidalari | Anomaliyalarni aniqlash | Klasterlash | Bashorat
+test: Bitta ma'ruzachi ko'p tinglovchiga onlayn taqdimot qiladigan tadbir? | Vebinar | Forum | Intranet | Blog
+test: Videokonferensiyada gapirmayotganda nima qilish tavsiya etiladi? | Mikrofonni o'chirish | Kamerani shiftga qaratish | Chatga takroriy xabar yozish | Ekranni doim ulashib turish
+uyga: Mavzuni konspekt qiling. Kundalik hayotingizda intellektual tahlil ishlatilayotgan 3 ta holatni (tavsiyalar, bank xabarlari, navigatsiya) yozib, har birida qaysi usul qo'llanayotganini taxmin qiling. Professional ijtimoiy tarmoq profili uchun o'zingiz haqingizda 5–6 gaplik kasbiy ma'lumot matnini tayyorlang (shaxsiy telefon va manzilsiz).
+gloss: Ma'lumotlarni intellektual tahlil qilish | Katta hajmdagi ma'lumotlardan oldindan noma'lum, foydali qonuniyatlarni kompyuter yordamida topish.
+gloss: Katta ma'lumotlar | Hajmi, kelish tezligi va xilma-xilligi tufayli oddiy vositalar bilan qayta ishlash qiyin bo'lgan ma'lumotlar.
+gloss: Klassifikatsiya | Obyektni oldindan ma'lum bo'lgan guruhlardan biriga ajratish usuli.
+gloss: Klasterlash | O'xshash obyektlarni oldindan berilmagan guruhlarga avtomatik ajratish usuli.
+gloss: Assotsiatsiya qoidalari | Qaysi hodisa yoki mahsulotlar birga uchrashini ko'rsatadigan qonuniyatlar.
+gloss: Anonimlashtirish | Tahlil uchun ma'lumotdan shaxsni aniqlaydigan belgilarni olib tashlash yoki kodlash.
+gloss: Videokonferensiya | Ishtirokchilarning internet orqali real vaqtda tasvir va ovoz almashib muloqot qilishi.

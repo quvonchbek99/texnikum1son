@@ -1,0 +1,69 @@
+nomi: Ishlab chiqish va sinovdan o'tkazish. Qora quti va oq quti sinovlari. Alfa va beta sinov
+modul: 5-modul
+ac: 5.8 Sinov turlarini (modul, integratsiya, tizim, qabul) va strategiyalarini (qora quti, oq quti, alfa, beta) farqlaydi, normal, chegaraviy va noto'g'ri test ma'lumotlari bilan sinov rejasini tuzadi, sinovni o'tkazib, natijalarni qayd etadi va xatolarni tuzatadi.
+maqsad: O'quvchilarda tizimni ishlab chiqish va sinovdan o'tkazish bosqichi, sinov turlari va strategiyalari, test ma'lumotlarini tanlash qoidalari haqida bilim hosil qilish, sinov rejasini tuzish, uni bajarish va topilgan xatolarni hujjatlashtirish ko'nikmasini shakllantirish.
+natija: modul, integratsiya, tizim va qabul sinovlarini farqlaydi;
+natija: normal, chegaraviy va noto'g'ri test ma'lumotlarini tanlaydi;
+natija: qora quti va oq quti sinovlarini taqqoslaydi va har biri uchun test holatlari tuzadi;
+natija: alfa va beta sinovning maqsadi va ishtirokchilarini tushuntiradi;
+natija: sinov rejasini bajarib, kutilgan va haqiqiy natijalarni solishtiradi, xatolarni qayd etadi va tuzatadi.
+reja: Ishlab chiqish va sinov turlari
+reja: Test ma'lumotlari va sinov rejasi
+reja: Qora quti, oq quti, alfa va beta sinov
+tayanch: ishlab chiqish; xato (bag); modul sinovi; integratsiya sinovi; tizim sinovi; qabul sinovi; test ma'lumotlari; normal ma'lumot; chegaraviy ma'lumot; noto'g'ri ma'lumot; sinov rejasi; kutilgan natija; qora quti sinovi; oq quti sinovi; alfa sinov; beta sinov
+metod: «Sindirib ko'r» | O'qituvchi oddiy formani ko'rsatadi; o'quvchilar uni «buzadigan» qiymatlar (bo'sh, juda katta, harf, manfiy son) taklif qiladi va ular qaysi turdagi test ma'lumoti ekanini aniqlaydi.
+metod: Juftlikda sinov | Juftliklar bir-birining elektron jadvalini qora quti usulida sinab, xato hisobotlarini yozadi, so'ng o'z formulalarini oq quti usulida tekshiradi.
+ajihoz: Kompyuter; elektron jadval dasturi; oldingi darslarda tayyorlangan forma yoki jadval; sinov rejasi shabloni; proyektor
+
+## Ishlab chiqish va sinov turlari
+**Ishlab chiqish** bosqichida loyiha hujjatlari asosida tizim yaratiladi: ma'lumotlar bazasi jadvallari va bog'lanishlari, formalar, so'rovlar, hisobotlar va dastur kodi yoziladi. Hech bir dastur birinchi urinishda xatosiz bo'lmaydi, shuning uchun **sinov** — tizim talablarga javob berishini va xatolarni (**bag**) topish jarayoni ishlab chiqish bilan birga olib boriladi. Xato qanchalik erta topilsa, uni tuzatish shuncha arzon.
+Sinov darajalari: **modul sinovi** — har bir kichik qism (bitta forma, formula, funksiya) alohida tekshiriladi; **integratsiya sinovi** — qismlar birgalikda to'g'ri ishlashi tekshiriladi (forma ma'lumotni bazaga to'g'ri yozadimi, hisobot uni to'g'ri o'qiydimi); **tizim sinovi** — butun tizim real sharoitga yaqin holda, katta hajmdagi ma'lumot bilan tekshiriladi; **qabul sinovi** — buyurtmachi va foydalanuvchilar tizim talablarga javob berishini tasdiqlaydi.
+
+## Test ma'lumotlari va sinov rejasi
+Har bir kiritiladigan maydon uch xil ma'lumot bilan sinaladi. Masalan, «Yoshi» maydoni 16 dan 60 gacha butun sonlarni qabul qilishi kerak bo'lsa:
+- **normal ma'lumot** — ruxsat etilgan oraliq ichidagi oddiy qiymat: 25, 40 — qabul qilinishi kerak;
+- **chegaraviy ma'lumot** — oraliq chetidagi qiymatlar: 16 va 60 — qabul qilinishi kerak; 15 va 61 — rad etilishi kerak (chegaradagi xatolar eng ko'p uchraydi: «<» o'rniga «<=» yozilgan bo'lishi mumkin);
+- **noto'g'ri ma'lumot** — umuman yaroqsiz qiymatlar: −5, «o'n sakkiz», 25,5, bo'sh maydon — rad etilishi va tushunarli xato xabari chiqishi kerak.
+**Sinov rejasi** — barcha sinovlar ro'yxati: test raqami, nima sinaladi, test ma'lumoti, uning turi, **kutilgan natija**, haqiqiy natija va izoh. Sinovdan keyin farqlar xato sifatida qayd etiladi, tuzatiladi va sinov qayta o'tkaziladi.
+jadval: Sinov rejasi namunasi
+| № | Nima sinaladi | Test ma'lumoti | Turi | Kutilgan natija | Haqiqiy natija |
+| 1 | Yoshi | 25 | Normal | Qabul qilinadi | Qabul qilindi |
+| 2 | Yoshi | 60 | Chegaraviy | Qabul qilinadi | Rad etildi — xato |
+| 3 | Yoshi | 61 | Chegaraviy | Xato xabari | Xato xabari |
+| 4 | Yoshi | «abc» | Noto'g'ri | Xato xabari | Xato xabari |
+
+## Qora quti, oq quti, alfa va beta sinov
+**Qora quti sinovi**da sinovchi dastur ichini (kod va formulalarni) bilmaydi: u faqat kirish ma'lumotini beradi va chiqish talabda yozilgan kutilgan natijaga mosligini tekshiradi. U foydalanuvchi nuqtai nazaridan sinaydi va mustaqil sinovchilar tomonidan bajarilishi mumkin, lekin kodning ayrim qismlari umuman tekshirilmay qolishi mumkin. **Oq quti sinovi**da sinovchi (odatda dasturchi) kodni ko'radi va test holatlarini shunday tanlaydiki, har bir shart, shox va yo'l kamida bir marta bajarilsin; bu yashirin mantiqiy xatolarni topadi, lekin dasturlash bilimini talab qiladi va «talabda bor, lekin kodda yo'q» funksiyani sezmaydi. Shuning uchun ikkala usul birgalikda qo'llanadi.
+**Alfa sinov** — tizim tashqariga chiqarilishidan oldin ishlab chiquvchi tashkilot ichida, dasturchilar va xodimlar tomonidan nazorat ostida o'tkaziladi. **Beta sinov** — deyarli tayyor tizim cheklangan miqdordagi haqiqiy foydalanuvchilarga real sharoitda ishlatish uchun beriladi; ular xatolar va noqulayliklar haqida xabar beradi. Beta sinov dasturchilar o'ylab ko'rmagan holatlarni ochib beradi, ammo foydalanuvchilar hali xatolar bo'lishi mumkinligini bilishi kerak.
+
+amaliy: Sinov rejasini tuzish va bajarish
+amaqsad: Validatsiyali elektron jadval (yoki forma) va chegirma formulasi uchun normal, chegaraviy va noto'g'ri test ma'lumotlari bilan sinov rejasini tuzish, qora va oq quti sinovlarini o'tkazish, xatolarni qayd etib tuzatish.
+qadam: Elektron jadvalda «Mijozlar» varag'ini yarating: Ism (majburiy, 2–30 belgi), Yoshi (16–60 butun son), Telefon (13 belgi, «+998» bilan boshlanadi), Xarid summasi (musbat son); har bir ustunga validatsiya va xato xabarini qo'ying.
+qadam: Chegirma ustuniga formulani yozing: `=IF(D2>=1000000;D2*0,1;IF(D2>=500000;D2*0,05;0))` (summa 1 mln va undan ko'p — 10 %, 500 ming va undan ko'p — 5 %, aks holda chegirma yo'q).
+qadam: Har bir maydon uchun kamida 3 tadan (normal, chegaraviy, noto'g'ri) test holatini sinov rejasiga yozing; kutilgan natijani oldindan ko'rsating.
+qadam: Oq quti usulida chegirma formulasining har uchala shoxini va chegaralarni (1 000 000; 999 999; 500 000; 499 999) tekshiradigan test holatlarini qo'shing.
+qadam: Sinovlarni bajaring, haqiqiy natijalarni yozing va farqlarni xato sifatida qayd eting (masalan, chegarada noto'g'ri belgi).
+qadam: Sherigingizning jadvalini qora quti usulida sinang: faqat talablarni bilgan holda 5 ta test o'tkazib, xato hisobotini yozing (nima qilindi, nima kutildi, nima bo'ldi).
+qadam: Topilgan xatolarni tuzating, sinovlarni qayta o'tkazing va alfa hamda beta sinov qanday tashkil etilishini 3–4 gapda yozing.
+anatija: Validatsiyali jadval va formula, to'liq sinov rejasi (normal, chegaraviy, noto'g'ri va oq quti testlari), bajarilgan sinov natijalari, xato hisobotlari, tuzatilgan va qayta sinalgan jadval.
+baho5: Test ma'lumotlari uch turda to'liq va to'g'ri tanlangan, formula shoxlari va chegaralari tekshirilgan, natijalar aniq qayd etilgan, xatolar tuzatilib qayta sinalgan, xato hisobotlari tushunarli.
+masala: «Baho» maydoni faqat 2 dan 5 gacha butun sonlarni qabul qiladi. Har bir turdan ikkitadan test ma'lumoti keltiring va kutilgan natijani yozing.
+yechim: Normal: 3, 4 — qabul qilinadi. Chegaraviy: 2, 5 — qabul qilinadi; 1, 6 — rad etiladi. Noto'g'ri: «besh», 4,5 (yoki bo'sh maydon) — rad etiladi va xato xabari chiqadi.
+masala: Chegirma formulasi `=IF(D2>=1000000;D2*0,1;IF(D2>=500000;D2*0,05;0))`. 1 000 000, 750 000 va 499 999 so'mlik xaridlar uchun chegirmani toping. Formulaning barcha shoxlarini tekshirish uchun kamida nechta test kerak?
+yechim: 1 000 000 · 0,1 = 100 000 so'm; 750 000 · 0,05 = 37 500 so'm; 499 999 — 0. Uchta shox bor, shuning uchun kamida 3 ta test kerak (har bir shoxga bittadan); chegaralarni ham tekshirish uchun 999 999 va 500 000 qiymatlari qo'shiladi.
+savol: Modul, integratsiya, tizim va qabul sinovlari qanday farqlanadi?
+savol: Chegaraviy ma'lumot nima va nima uchun u alohida sinaladi?
+savol: Qora quti va oq quti sinovlarining afzallik va kamchiliklarini ayting.
+savol: Alfa va beta sinovni kim, qayerda va qachon o'tkazadi?
+test: Oraliq chetidagi qiymatlar bilan sinash uchun ishlatiladigan ma'lumot? | Chegaraviy ma'lumot | Normal ma'lumot | Noto'g'ri ma'lumot | Arxiv ma'lumot
+test: Kodni bilmasdan, faqat kirish va kutilgan chiqishni tekshiradigan sinov? | Qora quti sinovi | Oq quti sinovi | Modul kodi tahlili | Integratsiya kodi
+test: Haqiqiy foydalanuvchilarning cheklangan guruhi real sharoitda o'tkazadigan sinov? | Beta sinov | Alfa sinov | Modul sinovi | Oq quti sinovi
+test: 16–60 oralig'idagi maydon uchun qaysi qiymat noto'g'ri ma'lumot? | «yigirma» | 16 | 60 | 35
+test: Qismlarning birgalikda to'g'ri ishlashini tekshiradigan sinov? | Integratsiya sinovi | Modul sinovi | Alfa sinov | Hujjatlar tahlili
+uyga: Mavzuni konspekt qiling. Telefoningizdagi biror ilovaning ro'yxatdan o'tish formasini qora quti usulida sinab ko'ring (shaxsiy ma'lumotlarsiz, test qiymatlar bilan): 5 ta test holatini va natijalarini jadvalga yozing.
+gloss: Bag (xato) | Dasturning kutilgan natijadan farqli ishlashiga sabab bo'luvchi xato.
+gloss: Chegaraviy ma'lumot | Ruxsat etilgan oraliqning chetidagi va undan bir qadam tashqaridagi test qiymatlari.
+gloss: Noto'g'ri ma'lumot | Tizim rad etishi kerak bo'lgan yaroqsiz test qiymatlari (noto'g'ri tur, oraliqdan tashqari, bo'sh).
+gloss: Qora quti sinovi | Ichki kodni bilmasdan, kirish va kutilgan chiqishni solishtirib sinash.
+gloss: Oq quti sinovi | Kod tuzilmasini bilgan holda barcha shart va yo'llarni tekshiruvchi sinov.
+gloss: Beta sinov | Tayyorga yaqin tizimni cheklangan haqiqiy foydalanuvchilar real sharoitda sinashi.

@@ -1,0 +1,70 @@
+nomi: Videoklip tezligini o'zgartirish. Videoklipni turli fayl formatlarida eksport qilish
+modul: 4-modul
+ac: 4.2 Videoklip tezligini o'zgartiradi (tezlashtirish, sekinlashtirish, teskari ijro, to'xtatilgan kadr), videoni maqsadga mos format, o'lcham va bitreytda eksport qiladi va natijalarni taqqoslaydi.
+maqsad: O'quvchilarda videoklip tezligini o'zgartirish usullari va ularning ovoz hamda tasvir sifatiga ta'sirini tushunish, eksport sozlamalarini (konteyner, kodek, o'lcham, kadr tezligi, bitreyt, audio) maqsadga mos tanlash va fayl hajmini oldindan baholash ko'nikmasini shakllantirish.
+natija: klip tezligini foizda o'zgartiradi va yangi davomiylikni hisoblaydi;
+natija: sekinlashtirish sifati kadr tezligiga bog'liqligini tushuntiradi;
+natija: teskari ijro va to'xtatilgan kadr effektlarini qo'llaydi;
+natija: videoni turli formatlarda va sifat sozlamalarida eksport qilib, hajmi va sifatini taqqoslaydi.
+reja: Klip tezligini o'zgartirish
+reja: Eksport sozlamalari va formatlar
+reja: Eksportdan oldin va keyin tekshirish
+tayanch: tezlik (%); tezlashtirish; sekinlashtirish (slow motion); teskari ijro; to'xtatilgan kadr; ovoz balandligini saqlash; eksport; shablon (preset); bitreyt; CBR va VBR; AAC; GIF
+metod: Muammoli savol | «20 soniyalik klip 4 marta tezlashtirilsa, necha soniya bo'ladi va ovozi qanday eshitiladi?» savoliga o'quvchilar avval taxmin qilib, so'ng dasturda tekshiradi.
+metod: Tajriba va taqqoslash | Juftliklar bitta loyihani uch xil sozlamada eksport qiladi va fayl hajmi hamda sifatini jadvalda taqqoslaydi.
+ajihoz: Kompyuter (har bir o'quvchi yoki juftlikka); video tahrirlash dasturi (Shotcut, CapCut yoki DaVinci Resolve); namunaviy kliplar (30 va 60 fps); quloqchin; proyektor
+
+## Klip tezligini o'zgartirish
+Klip tezligi foizda yoki koeffitsiyentda beriladi: 100 % — asl tezlik, 200 % — 2 marta tez, 50 % — 2 marta sekin. Yangi davomiylik = asl davomiylik : tezlik koeffitsiyenti. Masalan, 20 soniyalik klip 400 % da 5 soniya, 12 soniyalik klip 50 % da 24 soniya davom etadi.
+- **Tezlashtirish** uzoq jarayonni qisqa ko'rsatadi: xamir qorish, avtomobil g'ildiragini almashtirish, kiyim bichish. Juda katta tezlashtirish (10–100 marta) «time-lapse» effekti deyiladi.
+- **Sekinlashtirish** tez harakatni batafsil ko'rsatadi: payvand uchqunlari, to'pning zarbasi, suyuqlik quyilishi. Sifatli sekinlashtirish uchun klip yuqori kadr tezligida suratga olingan bo'lishi kerak: 60 fps klipni 30 fps loyihada 50 % ga sekinlashtirsa, harakat silliq qoladi; 30 fps klipni xuddi shunday sekinlashtirsa, har bir kadr ikki marta takrorlanib, harakat «tutiladi».
+- **Teskari ijro** (reverse) klipni oxiridan boshiga qarab ko'rsatadi — kulgili yoki ta'sirli effektlar uchun.
+- **To'xtatilgan kadr** (freeze frame) bitta kadrni bir necha soniya ushlab turadi — muhim lahzaga e'tibor qaratish va ustiga izoh yozish uchun.
+Tezlik o'zgarganda ovoz ham o'zgaradi: tezlashtirilgan nutq ingichka, sekinlashtirilgani esa yo'g'on eshitiladi. Ko'pchilik dasturlarda «ovoz balandligini (tonini) saqlash» belgisi bor; aks holda bunday kliplar ovozi o'chirilib, ustiga musiqa qo'yiladi.
+
+## Eksport sozlamalari va formatlar
+**Eksport** — montaj qilingan loyihani bitta tayyor video faylga aylantirish. Loyiha fayli faqat montaj dasturida ochiladi, eksport qilingan fayl esa istalgan pleyer, telefon yoki saytda ko'riladi. Asosiy sozlamalar: konteyner va kodek, o'lcham, kadr tezligi, bitreyt va audio parametrlari. Ko'pchilik dasturlarda tayyor **shablonlar** (YouTube 1080p, Instagram, Telegram) bor.
+Bitreyt ikki xil boshqariladi: **doimiy** (CBR) — har bir sekundga bir xil hajm, **o'zgaruvchan** (VBR) — murakkab sahnalarga ko'proq, oddiylariga kamroq hajm beriladi; VBR odatda bir xil hajmda yaxshiroq sifat beradi. Audio uchun ko'pincha AAC kodeki, 128–192 kbit/s, 48 kHz ishlatiladi.
+jadval: Maqsadga ko'ra eksport sozlamalari
+| Maqsad | Format va kodek | O'lcham | Bitreyt (taxminan) |
+| YouTube, taqdimot | MP4, H.264 + AAC | 1920×1080 | 8–12 Mbit/s |
+| Reels, TikTok, Shorts | MP4, H.264 + AAC | 1080×1920 | 6–10 Mbit/s |
+| Telegram, sekin internet | MP4, H.264 + AAC | 1280×720 | 2–4 Mbit/s |
+| Veb-sahifa | WebM (VP9) yoki MP4 | 1280×720 | 2–4 Mbit/s |
+| Ovozsiz qisqa animatsiya | GIF | 480–600 piksel eni | — (hajmi katta bo'ladi) |
+| Keyingi montaj uchun oraliq nusxa | MOV yoki MP4, yuqori bitreyt | Asl o'lcham | 30–50 Mbit/s |
+
+## Eksportdan oldin va keyin tekshirish
+Eksportdan oldin videoni boshidan oxirigacha ko'rib chiqing: titrlarda imlo xatolari, kliplar orasida bo'sh (qora) joylar, ovoz sakrashlari, xavfsiz zonadan chiqqan matnlar bormi. Eksportdan keyin faylni boshqa pleyerda yoki telefonda ochib, ovoz va tasvir mos kelishini, hajmi va davomiyligini tekshiring. Fayl nomi mazmunni bildirsin: `2026-11_kasbim_reels_1080x1920.mp4`.
+
+amaliy: Klip tezligini o'zgartirish va videoni turli formatlarda eksport qilish
+amaqsad: Bitta loyihada tezlashtirish, sekinlashtirish, teskari ijro va to'xtatilgan kadr effektlarini qo'llash, videoni uch xil sozlamada eksport qilib, hajm va sifatni taqqoslash.
+qadam: Yangi loyiha yarating (1920×1080, 30 fps) yoki oldingi darsdagi loyihani oching; 4 ta namunaviy klipni import qilib, vaqt shkalasiga joylang.
+qadam: Bitta jarayon klipini 400 % ga tezlashtiring; davomiylik qanday o'zgarganini yozing va ovozini o'chiring yoki tonini saqlash sozlamasini yoqing.
+qadam: 60 fps va 30 fps kliplarni 50 % ga sekinlashtirib, harakat silliqligini taqqoslang; farqni bir gap bilan yozing.
+qadam: Qisqa klipga teskari ijro effektini qo'llang; muhim lahzada 2 soniyalik to'xtatilgan kadr yarating va ustiga izoh titrini qo'shing.
+qadam: Fon musiqasini qo'shib, tezlashtirilgan qism ostida ovoz balandligini muvozanatlang; videoni boshidan oxirigacha ko'rib, xatolarni tuzating.
+qadam: Videoni uch xil sozlamada eksport qiling: a) MP4, 1080p, 8 Mbit/s; b) MP4, 720p, 3 Mbit/s; c) 5 soniyalik qismini GIF yoki WebM ko'rinishida.
+qadam: Uchala fayl hajmi, o'lchami va sifatini jadvalga yozing; YouTube, Telegram va veb-sahifa uchun qaysi biri mosligini asoslab xulosa qiling.
+anatija: Tezlik effektlari qo'llangan loyiha, uch xil formatdagi eksport fayllari, hajm va sifatni taqqoslash jadvali va xulosa.
+baho5: Barcha tezlik effektlari to'g'ri qo'llangan, ovoz muvozanatlangan, uchala eksport bajarilgan, jadval to'liq va xulosa asoslangan.
+masala: Loyihada uchta klip bor: 20 soniyalik klip 400 % tezlikda, 12 soniyalik klip 50 % tezlikda va 8 soniyalik klip asl tezlikda. Videoning umumiy davomiyligi qancha?
+yechim: 20 : 4 = 5 s; 12 : 0,5 = 24 s; 8 s. Jami: 5 + 24 + 8 = 37 soniya.
+masala: 3 daqiqalik video 8 Mbit/s video va 128 kbit/s audio bitreyt bilan eksport qilindi. Fayl hajmi taxminan qancha? Video bitreyti 4 Mbit/s qilinsa-chi?
+yechim: (8 + 0,128) Mbit/s · 180 s ≈ 1463 Mbit ≈ 183 MB. 4 Mbit/s da: (4 + 0,128) · 180 ≈ 743 Mbit ≈ 93 MB — hajm deyarli ikki marta kamayadi.
+savol: Klip tezligi 250 % qilinsa, uning davomiyligi qanday o'zgaradi?
+savol: Nima uchun sekinlashtirish uchun 60 fps da suratga olish yaxshiroq?
+savol: Eksportda qanday asosiy sozlamalar belgilanadi?
+savol: CBR va VBR bitreytning farqi nimada?
+test: 12 soniyalik klip 50 % tezlikka o'tkazilsa, necha soniya davom etadi? | 24 soniya | 6 soniya | 12 soniya | 50 soniya
+test: Bitta kadrni bir necha soniya ushlab turadigan effekt? | To'xtatilgan kadr (freeze frame) | Teskari ijro | Time-lapse | Aralashtirish
+test: Ko'pchilik qurilma va saytlarda ochiladigan eng universal video formati? | MP4 (H.264 + AAC) | GIF | Loyiha fayli | WAV
+test: Bir xil hajmda yaxshiroq sifat beradigan bitreyt boshqaruvi? | O'zgaruvchan (VBR) | Doimiy (CBR) | Nol bitreyt | Audio bitreyt
+test: Montaj dasturi loyiha fayli haqida qaysi gap to'g'ri? | U faqat montaj dasturida ochiladi, tomoshabinga eksport qilingan fayl yuboriladi | U istalgan pleyerda ochiladi | U eksport qilingan videodan kichik sifatli | U ovozni saqlamaydi
+uyga: Misol va mashqlar: telefoningizda 10–15 soniyalik jarayonni (masalan, choy damlash) suratga oling, uni tezlashtirilgan va sekinlashtirilgan ikki variantda montaj qiling. Har birini Telegram uchun (720p) eksport qilib, fayl hajmini oldindan hisoblang va haqiqiy hajm bilan solishtiring.
+gloss: Tezlashtirish | Klipni asl tezligidan tez ijro etish; davomiylik tezlik koeffitsiyentiga teskari proporsional qisqaradi.
+gloss: Sekinlashtirish (slow motion) | Klipni asl tezligidan sekin ijro etish; sifatli bo'lishi uchun yuqori kadr tezligida suratga olinadi.
+gloss: Teskari ijro | Klipni oxiridan boshiga qarab ko'rsatish effekti.
+gloss: To'xtatilgan kadr | Videoning bitta kadrini bir necha soniya harakatsiz ko'rsatish.
+gloss: Eksport | Montaj loyihasini tanlangan format va sozlamalardagi tayyor video faylga aylantirish.
+gloss: VBR | O'zgaruvchan bitreyt: murakkab sahnalarga ko'proq, oddiylariga kamroq ma'lumot ajratiladi.

@@ -1,0 +1,70 @@
+nomi: Elektron xatlarni birlashtirish
+modul: 6-modul
+ac: 6.3 Hujjatlarni birlashtirish (mail merge) tamoyilini tushuntiradi, ma'lumotlar manbasini tayyorlaydi, asosiy hujjatga birlashtirish maydonlari va shartli qoidalarni qo'shadi, yozuvlarni filtrlab, shaxsiylashtirilgan xatlar, sertifikatlar va yorliqlarni yaratadi.
+maqsad: O'quvchilarda bitta shablon va ma'lumotlar jadvali asosida ko'plab shaxsiylashtirilgan hujjatlar yaratish texnologiyasi haqida bilim hosil qilish, ma'lumotlar manbasini to'g'ri tayyorlash, birlashtirish maydonlari, shartli qoidalar va filtrlar bilan ishlash hamda shaxsga doir ma'lumotlarni himoya qilish ko'nikmasini shakllantirish.
+natija: asosiy hujjat, ma'lumotlar manbai va birlashtirish maydoni tushunchalarini tushuntiradi;
+natija: birlashtirish uchun ma'lumotlar jadvalini to'g'ri tayyorlaydi;
+natija: matn muharririda birlashtirish maydonlari va «Agar... u holda... aks holda» qoidasini qo'shadi;
+natija: yozuvlarni filtrlab, birlashtirish natijasini ko'rib chiqadi va yangi hujjatga, PDF ga yoki chop etishga chiqaradi.
+reja: Hujjatlarni birlashtirish tamoyili
+reja: Ma'lumotlar manbasini tayyorlash
+reja: Birlashtirish bosqichlari, shartli maydonlar va filtrlar
+tayanch: hujjatlarni birlashtirish (mail merge); asosiy hujjat (shablon); ma'lumotlar manbai; yozuv; maydon; birlashtirish maydoni; shartli maydon; filtr; oldindan ko'rish; yorliq; konvert; shaxsiylashtirish
+metod: Muammoli savol | «Texnikum 300 nafar o'quvchiga ism-familiyasi yozilgan sertifikat berishi kerak. Har birini qo'lda yozsak qancha vaqt ketadi va qancha xato bo'ladi?» savoli bilan birlashtirish zarurati muhokama qilinadi.
+metod: Namoyish va takrorlash | O'qituvchi birlashtirishning har bir bosqichini proyektorda ko'rsatadi, o'quvchilar shu zahoti o'z kompyuterida takrorlaydi.
+ajihoz: Kompyuter; matn muharriri (MS Word yoki LibreOffice Writer); elektron jadval dasturi; printer (ixtiyoriy) yoki PDF ga chop etish; proyektor
+
+## Hujjatlarni birlashtirish tamoyili
+**Hujjatlarni birlashtirish** (mail merge) — bitta **asosiy hujjat** (shablon) va **ma'lumotlar manbai** (elektron jadval, ma'lumotlar bazasi yoki kontaktlar ro'yxati) asosida ko'plab shaxsiylashtirilgan hujjatlarni avtomatik yaratish. Asosiy hujjatda barcha xatlar uchun umumiy matn va **birlashtirish maydonlari** — o'zgaruvchan ma'lumot o'rnini bildiruvchi belgilar bo'ladi, masalan «Hurmatli «Ism» «Familiya»!». Birlashtirishda dastur jadvalning har bir **yozuvi** (qatori) uchun maydonlar o'rniga shu qatordagi qiymatlarni qo'yadi: 300 qatorli jadvaldan 300 ta tayyor xat hosil bo'ladi.
+Qo'llanishi: taklifnomalar, tabriknomalar, sertifikat va diplomlar, ota-onalarga xabarnomalar, hisob-fakturalar va to'lov eslatmalari, ish haqi varaqalari, konvert va pochta yorliqlari, mahsulot yorliqlari, ommaviy elektron xatlar. Afzalliklari: vaqt tejaladi, qo'lda ko'chirish xatolari bo'lmaydi, barcha hujjatlar bir xil ko'rinishda bo'ladi, ma'lumot o'zgarsa hujjatlarni qayta yaratish oson.
+
+## Ma'lumotlar manbasini tayyorlash
+Birlashtirish sifati ma'lumotlar manbasiga bog'liq. Qoidalar: birinchi qatorda qisqa, bo'sh joysiz va takrorlanmaydigan ustun sarlavhalari (Familiya, Ism, Guruh); har bir qator — bitta yozuv; jadvalda bo'sh qator va birlashtirilgan kataklar bo'lmasin; bir ustunda bir xil turdagi ma'lumot; sanalar va sonlar bir xil formatda; takroriy yozuvlar va imlo xatolari tozalangan bo'lsin. Shaxsga doir ma'lumotlar (telefon, manzil) faqat kerak bo'lsa ishlatiladi va jadval xavfsiz saqlanadi.
+jadval: Ma'lumotlar manbai namunasi (shartli ma'lumotlar)
+| Familiya | Ism | Guruh | Kurs | Ball |
+| Aliyev | Sardor | 05-25 | Kompyuter savodxonligi | 92 |
+| Karimova | Dilnoza | 08-26 | Kompyuter savodxonligi | 78 |
+| Rustamov | Jasur | 04-26 | Kompyuter savodxonligi | 61 |
+| Nazarova | Madina | 03-26 | Kompyuter savodxonligi | 49 |
+
+## Birlashtirish bosqichlari, shartli maydonlar va filtrlar
+#. Asosiy hujjatni yarating va hujjat turini tanlang (xat, konvert, yorliq yoki elektron xat). MS Word'da: «Mailings» yorlig'i (ruscha interfeysda «Рассылки») → «Start Mail Merge»; LibreOffice Writer'da: «Tools» («Сервис») → «Mail Merge Wizard» yoki ma'lumotlar manbasini ulab, maydonlarni qo'shish.
+#. Ma'lumotlar manbasini tanlang (elektron jadval faylining kerakli varag'i).
+#. Matnning kerakli joylariga birlashtirish maydonlarini qo'ying: «Familiya», «Ism», «Guruh».
+#. Kerak bo'lsa **shartli maydon** qo'shing: «Agar... u holda... aks holda» qoidasi bilan, masalan, ball 86 va undan yuqori bo'lsa «a'lo», aks holda «yaxshi» so'zi chiqadi.
+#. **Filtr** va saralash bilan faqat kerakli yozuvlarni tanlang (masalan, ball 56 dan yuqori bo'lganlar yoki faqat bitta guruh).
+#. Natijani oldindan ko'rib chiqing: maydonlar to'g'ri, bo'sh joy va tinish belgilari joyida.
+#. Birlashtirishni yakunlang: yangi hujjatga (tekshirib tahrirlash uchun), to'g'ridan-to'g'ri chop etishga, PDF ga yoki elektron pochta orqali yuborish.
+Ommaviy elektron xat yuborishda xat qabul qiluvchilar xabardor bo'lishi va obunadan chiqish imkoniga ega bo'lishi, xat avval o'zingizga sinov tariqasida yuborilishi kerak.
+
+amaliy: Shaxsiylashtirilgan sertifikatlar va yorliqlar tayyorlash
+amaqsad: Elektron jadvalda ma'lumotlar manbasini tayyorlab, matn muharririda sertifikat shabloniga birlashtirish maydonlari va shartli qoida qo'shish, filtr bilan yozuvlarni tanlash, natijani PDF ga chiqarish hamda shu ma'lumotlar asosida yorliqlar yaratish.
+qadam: Elektron jadvalda kamida 10 ta yozuvli (shartli ism-familiyalar bilan) «Sertifikat» varag'ini yarating: Familiya, Ism, Guruh, Kurs, Ball, Sana; ma'lumotlarni manba qoidalariga ko'ra tozalang va saqlang.
+qadam: Matn muharririda albom yo'nalishidagi sertifikat shablonini tayyorlang: sarlavha, umumiy matn, imzo va sana joylari; oq-qora chop etishga mos ramka qo'ying.
+qadam: Ma'lumotlar manbasini ulang va matnga «Familiya», «Ism», «Guruh», «Kurs» va «Ball» maydonlarini qo'ying.
+qadam: Shartli maydon qo'shing: ball 86 va undan yuqori bo'lsa «a'lo natija bilan», aks holda «muvaffaqiyatli» degan so'zlar chiqsin.
+qadam: Filtr bilan faqat balli 56 va undan yuqori bo'lgan yozuvlarni tanlang; natijalarni oldindan ko'rib, xatolarni tuzating.
+qadam: Birlashtirishni yangi hujjatga yakunlang va PDF formatida saqlang; nechta sertifikat hosil bo'lganini jadval bilan solishtiring.
+qadam: Xuddi shu ma'lumotlar manbasidan papkalar uchun yorliqlar (familiya, ism, guruh) yarating va sahifaga nechta yorliq sig'ishini yozing.
+anatija: Tozalangan ma'lumotlar jadvali, birlashtirish maydonli va shartli qoidali sertifikat shabloni, filtrlangan sertifikatlar PDF fayli, yorliqlar sahifasi.
+baho5: Ma'lumotlar manbai qoidalarga mos, maydonlar va shartli qoida to'g'ri ishlaydi, filtr natijasi jadval bilan mos, sertifikatlar va yorliqlar xatosiz va ko'rinishi tartibli.
+masala: Ota-onalar majlisiga 120 ta taklifnoma kerak, har biri 1 sahifa. Qo'lda to'ldirishga har biriga 3 daqiqa, birlashtirishni sozlashga esa jami 20 daqiqa ketadi. Qancha vaqt tejaladi?
+yechim: Qo'lda: 120 · 3 = 360 daqiqa = 6 soat. Birlashtirish bilan: 20 daqiqa (chop etish vaqtidan tashqari). Tejash: 360 − 20 = 340 daqiqa ≈ 5 soat 40 daqiqa.
+masala: Nazariy qismdagi namunaviy jadvalda ball 56 va undan yuqori bo'lganlarga sertifikat beriladi, 86 va undan yuqorilarga «a'lo natija bilan» yoziladi. Nechta sertifikat hosil bo'ladi va ulardan nechtasida «a'lo natija bilan» so'zlari chiqadi?
+yechim: Ballar: 92, 78, 61, 49. 56 dan yuqori — 3 ta (92, 78, 61) sertifikat; ulardan 86 dan yuqori — 1 ta (92), unda «a'lo natija bilan» chiqadi.
+savol: Hujjatlarni birlashtirishning uch asosiy tarkibiy qismini aytib bering.
+savol: Ma'lumotlar manbai qanday talablarga javob berishi kerak?
+savol: Shartli maydon nima uchun kerak? Misol keltiring.
+savol: Birlashtirish natijasini qaysi usullarda chiqarish mumkin va nima uchun avval yangi hujjatga chiqarish foydali?
+test: Bitta shablon va ma'lumotlar jadvalidan ko'plab shaxsiylashtirilgan hujjatlar yaratish? | Hujjatlarni birlashtirish (mail merge) | Arxivlash | Normallashtirish | Rasterlash
+test: Asosiy hujjatda o'zgaruvchan ma'lumot o'rnini bildiruvchi belgi? | Birlashtirish maydoni | Sarlavha | Kolontitul | Gipermurojaat
+test: Ma'lumotlar manbasining birinchi qatorida nima bo'lishi kerak? | Ustun sarlavhalari | Bo'sh qator | Birlashtirilgan kataklar | Rasm
+test: Faqat bitta guruh o'quvchilariga xat chiqarish uchun nima ishlatiladi? | Filtr | Shrift | Ramka | Kolontitul
+test: 50 qatorli ma'lumotlar manbasidan filtrsiz birlashtirishda nechta xat hosil bo'ladi? | 50 | 1 | 49 | 51
+uyga: Misol va mashqlar: guruhingiz tadbiri uchun taklifnoma shablonini tuzing va 5 ta shartli yozuvli jadval bilan birlashtiring; jadvalga «Kim» ustunini (o'quvchi yoki ota-ona) qo'shib, shartli maydon yordamida murojaatni «Aziz o'quvchi» yoki «Hurmatli ota-ona» ko'rinishida o'zgartiring va natijani PDF ga saqlang.
+gloss: Hujjatlarni birlashtirish | Shablon va ma'lumotlar manbai asosida ko'plab shaxsiylashtirilgan hujjatlarni avtomatik yaratish.
+gloss: Asosiy hujjat | Umumiy matn va birlashtirish maydonlaridan iborat shablon hujjat.
+gloss: Ma'lumotlar manbai | Har bir qatori bitta qabul qiluvchiga mos keladigan jadval yoki ro'yxat.
+gloss: Birlashtirish maydoni | Birlashtirishda ma'lumotlar manbasidagi qiymat bilan almashtiriladigan belgi.
+gloss: Shartli maydon | Shartga qarab turli matn chiqaradigan «Agar... u holda... aks holda» maydoni.
+gloss: Yorliq | Birlashtirish yordamida sahifaga ko'plab chiqariladigan kichik ma'lumot kartochkasi (manzil, nom).

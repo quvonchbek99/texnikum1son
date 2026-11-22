@@ -1,0 +1,97 @@
+nomi: Massivlar. Shartli buyruqlar. Sikllar
+modul: 6-modul
+ac: 6.5 JavaScript'da massiv yaratadi va uning elementlari bilan ishlaydi, if, else if, else shartli buyruqlari va mantiqiy operatorlardan foydalanadi, for, while va for...of sikllari yordamida massivni qayta ishlab, yig'indi, o'rtacha, eng katta qiymat va shartga mos elementlar sonini topadi.
+maqsad: O'quvchilarda massivlar, shartli buyruqlar va sikllar — dasturlashning asosiy tuzilmalari haqida bilim hosil qilish, ularni birgalikda qo'llab ma'lumotlar ro'yxatini tahlil qiladigan dastur yozish va dastur bajarilishini qadamba-qadam kuzatish ko'nikmasini shakllantirish.
+natija: massiv yaratadi, element indeksi va uzunligi bilan ishlaydi, push bilan element qo'shadi;
+natija: if, else if, else buyruqlari va &&, ||, ! mantiqiy operatorlari bilan shart tuzadi;
+natija: for, while va for...of sikllarini qo'llaydi va cheksiz sikldan saqlanadi;
+natija: sikl va shart yordamida yig'indi, o'rtacha, eng katta qiymat va shartga mos elementlar sonini hisoblaydi;
+natija: dastur bajarilishini qadamba-qadam kuzatib, natijani oldindan aniqlaydi.
+reja: Massivlar
+reja: Shartli buyruqlar
+reja: Sikllar
+tayanch: massiv; element; indeks; length; push; shartli buyruq; if; else if; else; mantiqiy operatorlar (&&, ||, !); sikl; for; while; for...of; hisoblagich; yig'indi; cheksiz sikl; break
+metod: Qadamba-qadam kuzatish | O'qituvchi doskada kichik siklni yozadi; o'quvchilar har bir aylanishda o'zgaruvchilar qiymatini jadvalga yozib boradi va natijani dastur bilan solishtiradi.
+metod: Juftlikda dasturlash | Bir o'quvchi kod yozadi, ikkinchisi kuzatib, xatolarni ko'rsatadi; har 10 daqiqada rollar almashadi.
+ajihoz: Kompyuter; brauzer (dasturchi konsoli); matn muharriri; oldingi darsdagi HTML sahifa; proyektor
+
+## Massivlar
+**Massiv** — bir nechta qiymatni bitta nom ostida tartib bilan saqlaydigan tuzilma. U kvadrat qavslarda yoziladi: `let narxlar = [12000, 8500, 15000];`, `let ustalar = ["Anvar", "Bekzod", "Sanjar"];`. Har bir **element**ning tartib raqami — **indeks**i bor va u **0 dan** boshlanadi: `narxlar[0]` → 12000, `narxlar[2]` → 15000. Elementlar soni `narxlar.length` bilan topiladi (3), oxirgi element indeksi esa `length − 1`. Elementni o'zgartirish: `narxlar[1] = 9000;`; oxiriga qo'shish: `narxlar.push(20000);`; oxirgisini olib tashlash: `narxlar.pop();`; element bor-yo'qligini tekshirish: `ustalar.includes("Bekzod")` → true. Mavjud bo'lmagan indeksga murojaat `undefined` qaytaradi.
+
+## Shartli buyruqlar
+**Shartli buyruq** dastur qaysi yo'ldan borishini shartga qarab hal qiladi:
+```
+let ball = 78;
+if (ball >= 86) {
+  console.log("A'lo (5)");
+} else if (ball >= 71) {
+  console.log("Yaxshi (4)");
+} else if (ball >= 56) {
+  console.log("Qoniqarli (3)");
+} else {
+  console.log("Qoniqarsiz (2)");
+}
+```
+Shartlar yuqoridan pastga tekshiriladi va birinchi to'g'ri kelgan blok bajariladi (78 uchun «Yaxshi (4)»). **Mantiqiy operatorlar** shartlarni birlashtiradi: `&&` (va) — ikkala shart ham rost bo'lsa; `||` (yoki) — kamida bittasi rost bo'lsa; `!` (emas) — shartni teskarisiga aylantiradi. Masalan: `if (qoldiq < 10 && buyurtmaBor === false)` — qoldiq kam va buyurtma berilmagan bo'lsa.
+
+## Sikllar
+**Sikl** bir xil amallarni ko'p marta takrorlaydi. **for** sikli takrorlash soni ma'lum bo'lganda qulay: `for (let i = 0; i < narxlar.length; i++) { ... }` — `i` hisoblagich 0 dan boshlanadi, shart rost ekan sikl davom etadi, har aylanishda `i` bittaga oshadi. **while** sikli shart rost bo'lgunicha ishlaydi: `while (qoldiq > 0) { qoldiq = qoldiq - 3; }`. **for...of** massiv elementlarini bevosita aylanib chiqadi: `for (let narx of narxlar) { jami = jami + narx; }`. Agar shart hech qachon yolg'on bo'lmasa, **cheksiz sikl** hosil bo'ladi va sahifa «qotib» qoladi — hisoblagich o'zgarishini doim tekshiring; sikldan muddatidan oldin chiqish uchun `break` ishlatiladi. Massiv, shart va sikl birgalikda eng ko'p uchraydigan vazifalarni hal qiladi: yig'indi va o'rtacha qiymatni topish, eng katta yoki eng kichik elementni aniqlash, shartga mos elementlarni sanash yoki ajratib olish.
+```
+let baholar = [92, 78, 61, 49, 85];
+let jami = 0, eng = baholar[0], otdi = 0;
+for (let b of baholar) {
+  jami += b;
+  if (b > eng) eng = b;
+  if (b >= 56) otdi++;
+}
+console.log("O'rtacha:", jami / baholar.length);  // 73
+console.log("Eng yuqori:", eng, "O'tganlar:", otdi); // 92, 4
+```
+
+amaliy: Guruh baholari statistikasi
+amaqsad: Massivlarda saqlangan o'quvchilar ismlari va ballari asosida o'rtacha, eng yuqori ball, o'tganlar sonini hisoblaydigan, har bir ballni baho tizimiga o'giradigan va natijani sahifaga ro'yxat qilib chiqaradigan JavaScript dasturini yaratish; yangi ball qo'shish imkoniyatini qo'shish.
+qadam: `statistika.html` sahifasini yarating; skriptda ikki massiv e'lon qiling: `ismlar` (8 ta shartli ism) va `ballar` (8 ta ball, 0–100).
+qadam: for sikli bilan barcha ballar yig'indisini va o'rtachani hisoblang; `toFixed(1)` bilan sahifaga chiqaring.
+qadam: Eng yuqori va eng past ballni hamda ularning egasini sikl va shart yordamida toping.
+qadam: else if zanjiri bilan har bir ballni bahoga o'giring (86–100 → 5, 71–85 → 4, 56–70 → 3, 0–55 → 2) va «Ism — ball — baho» ko'rinishida ro'yxat tuzing.
+qadam: Shart bilan o'tganlar (ball ≥ 56) va «a'lochilar» (ball ≥ 86) sonini hisoblang.
+qadam: Sahifaga ism va ball kiritish maydonlari hamda «Qo'shish» tugmasini qo'shing: tugma bosilganda `push` bilan massivlarga yangi qiymat qo'shilsin va statistika qayta hisoblansin; ball 0–100 oralig'ida bo'lmasa, `alert()` bilan ogohlantiring.
+qadam: Dasturni chegaraviy qiymatlar (0, 55, 56, 85, 86, 100) bilan sinab, natijalarni jadvalga yozing.
+anatija: Ishlaydigan `statistika.html` sahifasi: o'rtacha, eng yuqori va eng past ball, baholar ro'yxati, o'tganlar va a'lochilar soni, yangi ball qo'shish va tekshirish; chegaraviy sinovlar jadvali.
+baho5: Massivlar, shartlar va sikllar to'g'ri ishlatilgan, barcha ko'rsatkichlar to'g'ri hisoblanadi, chegaraviy qiymatlarda baho to'g'ri, yangi ma'lumot qo'shish va tekshirish ishlaydi, kod tartibli va izohlangan.
+masala: Quyidagi kod bajarilgandan keyin `s` nimaga teng bo'ladi? Har bir aylanishni kuzating.
+```
+let s = 0;
+for (let i = 1; i <= 5; i++) {
+  if (i % 2 === 0) {
+    s = s + i;
+  }
+}
+```
+yechim: Faqat juft `i` larda qo'shiladi: i = 2 da s = 2, i = 4 da s = 6. Natija: `s = 6`.
+masala: Ombordagi qoldiqlar massivi `[25, 8, 14, 3, 10]`. Qoldig'i 10 dan kam bo'lgan mahsulotlar sonini hisoblaydigan kod yozing. Natija qancha?
+yechim:
+```
+let qoldiq = [25, 8, 14, 3, 10];
+let kam = 0;
+for (let q of qoldiq) {
+  if (q < 10) kam++;
+}
+console.log(kam);   // 2 (8 va 3)
+```
+savol: Massiv nima? Indeks qayerdan boshlanadi va oxirgi element indeksi qanday topiladi?
+savol: if, else if va else qanday tartibda tekshiriladi?
+savol: for, while va for...of sikllarining farqi nimada?
+savol: Cheksiz sikl qanday hosil bo'ladi va undan qanday saqlanish mumkin?
+test: `let a = [5, 9, 2];` bo'lsa, `a[1]` nimaga teng? | 9 | 5 | 2 | undefined
+test: Massiv oxiriga element qo'shadigan metod? | push() | pop() | length | includes()
+test: Ikkala shart ham rost bo'lganda rost bo'ladigan operator? | && («va») | «yoki» operatori | ! («emas») | === (qat'iy tenglik)
+test: `for (let i = 0; i < 4; i++)` sikli necha marta bajariladi? | 4 | 3 | 5 | Cheksiz
+test: `let x = 72;` uchun nazariy qismdagi else if zanjiri qaysi xabarni chiqaradi? | Yaxshi (4) | A'lo (5) | Qoniqarli (3) | Qoniqarsiz (2)
+uyga: Mavzu yuzasidan o'qib o'rganing. Kasbingizga oid massiv tuzing (masalan, 7 kunlik buyurtmalar soni yoki ehtiyot qismlar narxlari) va sikl hamda shart yordamida jami, o'rtacha, eng katta qiymat va belgilangan chegaradan oshgan kunlar (yoki mahsulotlar) sonini hisoblovchi dastur yozing.
+gloss: Massiv | Bir nechta qiymatni bitta nom ostida tartib bilan saqlaydigan tuzilma.
+gloss: Indeks | Massiv elementining 0 dan boshlanadigan tartib raqami.
+gloss: Shartli buyruq | Shartga qarab dasturning turli qismlarini bajaradigan buyruq (if, else if, else).
+gloss: Sikl | Amallarni shart bajarilguncha yoki belgilangan marta takrorlaydigan tuzilma (for, while).
+gloss: Hisoblagich | Sikl aylanishlari sonini nazorat qiluvchi o'zgaruvchi (odatda i).
+gloss: Cheksiz sikl | Sharti hech qachon yolg'on bo'lmagani uchun to'xtamaydigan sikl.

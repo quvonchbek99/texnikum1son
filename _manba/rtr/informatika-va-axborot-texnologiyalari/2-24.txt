@@ -1,0 +1,73 @@
+nomi: Joriy etish va hujjatlashtirish. Tizimni baholash va texnik xizmat ko'rsatish
+modul: 5-modul
+ac: 5.9 Yangi tizimni joriy etish usullarini (to'g'ridan-to'g'ri, parallel, bosqichma-bosqich, pilot) taqqoslab, vaziyatga mosini tanlaydi; texnik hujjat va foydalanuvchi qo'llanmasini tayyorlaydi; tizimni talablar asosida baholaydi va texnik xizmat turlarini farqlaydi.
+maqsad: O'quvchilarda yangi axborot tizimini ishga tushirish usullari, ularning xavf va xarajatlari, texnik va foydalanuvchi hujjatlarining tarkibi, tizimni baholash va texnik xizmat ko'rsatish turlari haqida bilim hosil qilish, foydalanuvchi qo'llanmasini yozish va xizmat so'rovlarini tasniflash ko'nikmasini shakllantirish.
+natija: joriy etishning to'rt usulini afzallik, kamchilik va qo'llanish holatlari bo'yicha taqqoslaydi;
+natija: ma'lumotlarni yangi tizimga ko'chirish va xodimlarni o'qitish zaruratini tushuntiradi;
+natija: texnik hujjat va foydalanuvchi qo'llanmasi tarkibini farqlaydi va qo'llanma bo'limlarini yozadi;
+natija: tizimni dastlabki talablar va foydalanuvchilar fikri asosida baholaydi;
+natija: tuzatuvchi, moslashtiruvchi, takomillashtiruvchi va oldini oluvchi texnik xizmatni farqlaydi.
+reja: Yangi tizimni joriy etish usullari
+reja: Hujjatlashtirish
+reja: Baholash va texnik xizmat ko'rsatish
+tayanch: joriy etish; to'g'ridan-to'g'ri o'tish; parallel ishlash; bosqichma-bosqich joriy etish; pilot joriy etish; ma'lumotlarni ko'chirish; texnik hujjat; foydalanuvchi qo'llanmasi; baholash; tuzatuvchi xizmat; moslashtiruvchi xizmat; takomillashtiruvchi xizmat; oldini oluvchi xizmat
+metod: Vaziyatlar tahlili | Guruhlarga to'rt xil tashkilot (kichik do'kon, bank filiallari tarmog'i, shifoxona, texnikum) beriladi; har biri uchun joriy etish usuli tanlanib asoslanadi.
+metod: Qo'llanma yozish | O'quvchilar oldingi darsda yaratilgan jadval yoki forma uchun qisqa foydalanuvchi qo'llanmasini yozadi va sherigi uni faqat qo'llanma bo'yicha ishlatib ko'radi.
+ajihoz: Kompyuter; matn muharriri yoki hujjat xizmati; skrinshot olish vositasi; oldingi darslardagi «Mijozlar» jadvali yoki forma; proyektor
+
+## Yangi tizimni joriy etish usullari
+Sinovdan o'tgan tizim ish joyiga o'rnatiladi, eski tizimdagi **ma'lumotlar ko'chiriladi** (qog'oz yozuvlar kiritiladi yoki eski fayllar import qilinadi va tekshiriladi), xodimlar o'qitiladi. Eski tizimdan yangisiga o'tishning to'rt usuli bor:
+jadval: Joriy etish usullarini taqqoslash
+| Usul | Qanday | Afzalligi | Kamchiligi | Qachon mos |
+| To'g'ridan-to'g'ri | Belgilangan kuni eski tizim to'xtatiladi, yangisi ishga tushadi | Tez va arzon | Yangi tizimda xato chiqsa, zaxira yo'q — xavf eng yuqori | Kichik, oddiy tizim; eski tizim umuman ishlamaganda |
+| Parallel | Bir muddat ikkala tizim birga ishlaydi, natijalar solishtiriladi | Xavfsiz, natijalarni tekshirish mumkin | Ikki baravar ish va xarajat | Xato qimmatga tushadigan tizimlar (moliya, ish haqi) |
+| Bosqichma-bosqich | Tizim qism-qism (modul-modul) joriy etiladi | Xavf kichik qismlarga bo'linadi, o'qitish oson | Uzoq davom etadi, eski va yangi qismlar bog'lanishi qiyin | Katta, modulli tizimlar |
+| Pilot | Avval bitta filial yoki bo'limda sinab ko'riladi, so'ng hammasiga | Real sharoitda kichik xavf bilan sinash | Joriy etish sekin; pilot joy boshqalardan farq qilishi mumkin | Ko'p filialli tashkilotlar |
+
+## Hujjatlashtirish
+**Texnik hujjat** tizimni keyinchalik o'zgartiradigan va xizmat ko'rsatadigan dasturchilar uchun: tizim maqsadi va cheklovlari; texnik va dasturiy ta'minot talablari; ma'lumotlar bazasi tuzilmasi va ma'lumotlar lug'ati; ma'lumotlar oqimi diagrammalari va blok-sxemalar; algoritmlar, formulalar va izohlangan kod; validatsiya qoidalari; sinov rejasi va natijalari; ma'lum muammolar. **Foydalanuvchi qo'llanmasi** esa oddiy foydalanuvchi uchun, sodda tilda va skrinshotlar bilan: tizimni o'rnatish va ishga tushirish; tizimga kirish; ma'lumot kiritish, saqlash, tahrirlash va o'chirish; qidirish va saralash; hisobot chiqarish va chop etish; zaxira nusxa olish; xato xabarlari va ularni bartaraf etish; ko'p beriladigan savollar; atamalar lug'ati.
+
+## Baholash va texnik xizmat ko'rsatish
+Tizim ishga tushgach bir muddat o'tib **baholanadi**: tahlil bosqichidagi talablar va maqsadlar bajarildimi (masalan, buyurtma rasmiylashtirish vaqti qisqardimi), foydalanuvchilar fikri qanday (so'rovnoma, suhbat), xatolar va ish tezligi, xarajatlar o'zini oqladimi. Baholash natijasi texnik xizmat va keyingi o'zgarishlar rejasiga asos bo'ladi.
+**Texnik xizmat ko'rsatish turlari:** **tuzatuvchi** — foydalanish paytida topilgan xatolarni tuzatish; **moslashtiruvchi** — tashqi o'zgarishlarga moslash (yangi soliq stavkasi, qonun talabi, yangi operatsion tizim yoki printer); **takomillashtiruvchi** — foydalanuvchilar so'ragan yangi imkoniyatlar qo'shish yoki tezlikni oshirish; **oldini oluvchi** — kelajakdagi muammolarning oldini olish (eski yozuvlarni arxivlash, disk to'lishidan oldin joy ajratish, xavfsizlik yangilanishlari).
+Amaliy ish uchun texnik xizmat so'rovlari:
+#. Hisobotda dekabr oyi savdosi ikki marta qo'shilib ko'rsatilmoqda.
+#. Rahbar ustalar bo'yicha haftalik hisobot qo'shishni so'radi.
+#. Yangi operatsion tizimga o'tilgach, chek printeri chop etmay qoldi.
+#. Mijozlar bazasi tez o'smoqda — qidiruv sekinlashmasidan oldin indeks qo'shish kerak.
+#. Telefon raqami maydoni «+998» bilan boshlanadigan to'g'ri raqamlarni ham rad etmoqda.
+#. Qonun o'zgarishi sababli chekka qo'shimcha rekvizit qo'shish talab qilindi.
+#. Mijozlar onlayn to'lov qilish imkonini so'ramoqda.
+#. Uch yildan eski buyurtmalarni arxivga o'tkazish rejalashtirildi.
+
+amaliy: Joriy etish rejasi, foydalanuvchi qo'llanmasi va texnik xizmat so'rovlari
+amaqsad: Avtoservis tizimi uchun joriy etish usulini tanlab, qisqa joriy etish rejasini tuzish; oldingi darsdagi «Mijozlar» jadvali (yoki forma) uchun skrinshotli foydalanuvchi qo'llanmasini yozish va sinash; texnik xizmat so'rovlarini tasniflash.
+qadam: Avtoservisning ikki varianti uchun joriy etish usulini tanlang va asoslang: (a) bitta ustaxona, hozir qog'oz daftarda ishlaydi; (b) shahar bo'ylab 5 ta filial, eski dastur hali ishlayapti.
+qadam: (b) variant uchun joriy etish rejasini tuzing: ma'lumotlarni ko'chirish, xodimlarni o'qitish, muddatlar va mas'ullar, muammo chiqsa nima qilinadi.
+qadam: «Mijozlar» jadvali (2-23-dars) uchun foydalanuvchi qo'llanmasini yozing: maqsad, faylni ochish, yangi mijoz kiritish, xato xabarlari va ularni tuzatish, qidirish va saralash, zaxira nusxa olish; kamida 3 ta skrinshot qo'shing.
+qadam: Qo'llanmaga «Ko'p beriladigan savollar» bo'limini (3 ta savol-javob) qo'shing.
+qadam: Sherigingiz faqat qo'llanmaga qarab 3 ta vazifani bajarsin (mijoz qo'shish, xatoni tuzatish, qidirish); qayerda qiynalganini yozing va qo'llanmani yangilang.
+qadam: Texnik hujjatning bir sahifasini tayyorlang: jadval tuzilmasi, validatsiya qoidalari va chegirma formulasi izohi, sinov natijalari qisqacha.
+qadam: Nazariy qismdagi 8 ta texnik xizmat so'rovini tuzatuvchi, moslashtiruvchi, takomillashtiruvchi va oldini oluvchi turlarga ajrating va har biriga qisqa asos yozing.
+anatija: Asoslangan joriy etish usullari, joriy etish rejasi, skrinshotli va sinalgan foydalanuvchi qo'llanmasi, texnik hujjat sahifasi va texnik xizmat so'rovlari tasnifi.
+baho5: Joriy etish usullari vaziyatga mos va asoslangan, reja aniq, qo'llanma sodda, to'liq va sinov asosida takomillashtirilgan, texnik hujjat va tasnif to'g'ri.
+masala: Yangi tizim parallel usulda 20 ish kuni joriy etiladi: 4 xodim har kuni eski tizimda qo'shimcha 1,5 soat ishlaydi. Bir soat ish 25 000 so'm turadi (shartli). Parallel ishlashning qo'shimcha xarajati qancha?
+yechim: 1,5 · 4 · 20 = 120 soat; 120 · 25 000 = 3 000 000 so'm.
+masala: Texnik xizmat turini aniqlang: (a) yangi soliq stavkasi bo'yicha chek formulasi o'zgartirildi; (b) chekda summa noto'g'ri hisoblanayotgani tuzatildi; (c) mijozlarga SMS eslatma funksiyasi qo'shildi; (d) disk 85 % to'lgani uchun eski yozuvlar arxivlandi.
+yechim: (a) moslashtiruvchi; (b) tuzatuvchi; (c) takomillashtiruvchi; (d) oldini oluvchi.
+savol: Joriy etishning to'rt usulini va ularning qachon qo'llanishini tushuntiring.
+savol: Texnik hujjat va foydalanuvchi qo'llanmasi kim uchun yoziladi va tarkibi qanday farq qiladi?
+savol: Tizim qanday mezonlar asosida baholanadi?
+savol: Texnik xizmat ko'rsatishning to'rt turiga misol keltiring.
+test: Bir muddat eski va yangi tizim birga ishlaydigan joriy etish usuli? | Parallel | To'g'ridan-to'g'ri | Pilot | Bosqichma-bosqich
+test: Avval bitta filialda sinab, keyin boshqalariga joriy etish usuli? | Pilot | Parallel | To'g'ridan-to'g'ri | Arxivlash
+test: Ma'lumotlar lug'ati va algoritmlar qaysi hujjatda bo'ladi? | Texnik hujjatda | Foydalanuvchi qo'llanmasida | Reklama bukletida | Chekda
+test: Yangi qonun talabiga ko'ra tizimni o'zgartirish qaysi xizmat turi? | Moslashtiruvchi | Tuzatuvchi | Takomillashtiruvchi | Oldini oluvchi
+test: Eng xavfli, lekin eng tez va arzon joriy etish usuli? | To'g'ridan-to'g'ri | Parallel | Pilot | Bosqichma-bosqich
+uyga: Misol va mashqlar: siz yaxshi biladigan bitta ilova yoki uskuna (masalan, kofe mashinasi, telefon ilovasi) uchun bir sahifali foydalanuvchi qo'llanmasini yozing: maqsad, ishga tushirish, asosiy amallar, 3 ta muammo va ularning yechimi.
+gloss: Joriy etish | Yangi tizimni o'rnatish, ma'lumotlarni ko'chirish, xodimlarni o'qitish va ishga tushirish.
+gloss: Parallel joriy etish | Yangi tizimni eski tizim bilan bir muddat birga ishlatib, natijalarni solishtirish usuli.
+gloss: Pilot joriy etish | Yangi tizimni avval bitta bo'lim yoki filialda sinab, so'ng hammasiga tarqatish.
+gloss: Texnik hujjat | Tizim tuzilmasi, ma'lumotlari, algoritmlari va sinovlari tavsifi; dasturchilar uchun.
+gloss: Foydalanuvchi qo'llanmasi | Tizimdan foydalanish bo'yicha sodda tilda, skrinshotlar bilan yozilgan yo'riqnoma.
+gloss: Moslashtiruvchi texnik xizmat | Tizimni qonun, uskuna yoki dasturiy muhitdagi tashqi o'zgarishlarga moslash.

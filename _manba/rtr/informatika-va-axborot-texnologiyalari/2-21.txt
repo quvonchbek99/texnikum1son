@@ -1,0 +1,65 @@
+nomi: Kompyuter yordamida loyihalash va ishlab chiqarish. Tizim tahlili. Hujjatlar tahlili usuli
+modul: 5-modul
+ac: 5.6 CAD, CAM va CAE tizimlarining vazifasi va qo'llanishini tushuntiradi, oddiy detal chizmasini o'lchamlari bilan yaratadi; tizimni ishlab chiqish sikli bosqichlarini aytadi, mavjud tizimni o'rganish usullarini taqqoslaydi va hujjatlar tahlili usulida kirish, chiqish ma'lumotlari va muammolarni aniqlaydi.
+maqsad: O'quvchilarda kompyuter yordamida loyihalash va ishlab chiqarish texnologiyalari, axborot tizimini ishlab chiqish sikli hamda tahlil bosqichida ma'lumot to'plash usullari haqida bilim hosil qilish, oddiy chizma yaratish va mavjud hujjatlarni tahlil qilib, yangi tizim uchun talablarni aniqlash ko'nikmasini shakllantirish.
+natija: CAD, CAM va CAE tizimlarining vazifasi va qo'llanish sohalarini tushuntiradi;
+natija: CAD dasturida o'lchamlari ko'rsatilgan oddiy chizma yaratadi va mos formatda saqlaydi;
+natija: tizimni ishlab chiqish sikli bosqichlarini ketma-ket aytadi;
+natija: kuzatish, suhbat, so'rovnoma va hujjatlar tahlili usullarini afzallik va kamchiliklari bo'yicha taqqoslaydi;
+natija: mavjud hujjatlar asosida ma'lumot maydonlari, kirish va chiqish ma'lumotlari hamda muammolarni aniqlaydi.
+reja: Kompyuter yordamida loyihalash va ishlab chiqarish
+reja: Tizimni ishlab chiqish sikli va tahlil bosqichi
+reja: Ma'lumot to'plash usullari. Hujjatlar tahlili
+tayanch: CAD; CAM; CAE; chizma; 3D model; masshtab; CNC; G-kod; tizimni ishlab chiqish sikli; tizim tahlili; tizim tahlilchisi; kuzatish; suhbat (intervyu); so'rovnoma; hujjatlar tahlili; kirish ma'lumotlari; chiqish ma'lumotlari; talablar
+metod: Muammoli savol | «Avtoservis hozir hamma narsani daftarga yozadi. Unga dastur yaratishdan oldin nimalarni bilishimiz kerak va buni qayerdan bilamiz?» savoli bilan tahlil bosqichi zarurati muhokama qilinadi.
+metod: Hujjat «tergovi» | Guruhlarga real hujjatlar namunalari (buyurtma varaqasi, chek, ish jurnali) beriladi; ular hujjatlardagi barcha maydonlar va ma'lumot qayerdan kelib, qayerga ketishini aniqlaydi.
+ajihoz: Kompyuter; CAD dasturi (bepul: FreeCAD, LibreOffice Draw yoki onlayn Tinkercad); namunaviy hujjatlar (buyurtma varaqasi, chek, ish jurnali — shaxsiy ma'lumotlarsiz); elektron jadval dasturi; proyektor
+
+## Kompyuter yordamida loyihalash va ishlab chiqarish
+**CAD** (kompyuter yordamida loyihalash) — detal, mahsulot, bino yoki sxemani kompyuterda chizish va modellashtirish: aniq o'lchamli 2D chizmalar, 3D modellar, tayyor elementlar kutubxonalari, qatlamlar, o'lcham va izohlar. Bitta o'zgarish butun chizmada avtomatik yangilanadi, nusxa olish va o'zgartirish oson. **CAM** (kompyuter yordamida ishlab chiqarish) CAD modeli asosida dastgohlar uchun boshqaruv dasturini (CNC dastgohlar uchun G-kod) tayyorlaydi: frezalash, tokarlik, lazer yoki plazma bilan kesish, 3D bosib chiqarish. **CAE** (kompyuter yordamida muhandislik tahlili) modelni sinaydi: mustahkamlik, qizish, havo yoki suyuqlik oqimi simulyatsiyasi.
+Qo'llanishi: mashinasozlik va avtomobilsozlik detallari; qurilishda bino loyihasi va uning axborot modeli; elektr va elektron sxemalar; mebel; tikuv sanoatida kiyim andozalari va matoni tejamli joylashtirish; zargarlikda 3D modellar. Afzalliklari: aniqlik, tezlik, oson o'zgartirish va nusxalash, virtual sinov, ishlab chiqarishga bevosita uzatish. Kamchiliklari: dasturlar va kuchli kompyuterlar qimmat, o'rganish vaqt talab qiladi, kiritilgan xato butun partiyaga o'tadi. Chizmalar odatda DWG, DXF (2D), STEP va STL (3D), chop etish va almashish uchun PDF formatlarida saqlanadi.
+
+## Tizimni ishlab chiqish sikli va tahlil bosqichi
+Yangi axborot tizimi (masalan, avtoservis uchun buyurtmalar dasturi) bir necha bosqichda yaratiladi — bu **tizimni ishlab chiqish sikli** deyiladi: **tahlil** (mavjud tizim va talablarni o'rganish) → **loyihalash** (dizayn: ma'lumotlar, ekranlar, hisobotlar, algoritmlar) → **ishlab chiqish va sinov** → **joriy etish** → **hujjatlashtirish** → **baholash va texnik xizmat**. Keyingi darslarda har bir bosqich alohida o'rganiladi.
+**Tahlil** bosqichida **tizim tahlilchisi** mavjud ish qanday bajarilayotganini, qanday ma'lumotlar kiritilishi (kirish) va qanday natijalar olinishi (chiqish) kerakligini, qayerda muammolar borligini va foydalanuvchilar yangi tizimdan nimani kutishini aniqlaydi. Natijada **talablar** ro'yxati tuziladi: tizim nima qilishi kerak (funksional talablar) va qanday sharoitda ishlashi kerak (tezlik, xavfsizlik, qulaylik).
+
+## Ma'lumot to'plash usullari. Hujjatlar tahlili
+jadval: Mavjud tizimni o'rganish usullari
+| Usul | Afzalligi | Kamchiligi |
+| Kuzatish | Ish haqiqatda qanday bajarilishini ko'rsatadi | Ko'p vaqt oladi; kuzatilayotgan xodim odatdagidan boshqacha ishlashi mumkin |
+| Suhbat (intervyu) | Chuqur, batafsil ma'lumot; aniqlashtiruvchi savollar berish mumkin | Ko'p vaqt; javob suhbatdoshning fikriga bog'liq |
+| So'rovnoma | Ko'p odamdan tez va arzon ma'lumot; anonim bo'lishi mumkin | Savollar oldindan belgilangan, aniqlashtirib bo'lmaydi; ayrimlar javob bermaydi |
+| Hujjatlar tahlili | Aniq ma'lumot maydonlari va hajmlarini ko'rsatadi; xodimlarni chalg'itmaydi | Hujjatlar eskirgan yoki to'liq bo'lmasligi mumkin; norasmiy jarayonlar ko'rinmaydi |
+**Hujjatlar tahlili** — tashkilotda ishlatilayotgan blankalar, varaqalar, cheklar, jurnallar, hisobotlar va yo'riqnomalarni o'rganish orqali tizim haqida ma'lumot to'plash. Tahlilchi har bir hujjat uchun aniqlaydi: hujjatni kim va qachon to'ldiradi; qanday maydonlar bor va ular qanday turdagi ma'lumot (bu kelajakdagi ma'lumotlar bazasi maydonlari va ma'lumotlar lug'atiga asos bo'ladi); hujjat keyin kimga va qayerga boradi; qaysi ma'lumot bir necha hujjatda takrorlanadi; qanday xato va kechikishlar uchraydi; bir oyda nechta hujjat yaratiladi (hajm). Odatda bir nechta usul birga qo'llanadi: hujjatlar tahlili asosida suhbat savollari tuziladi, kuzatish esa hujjatlarda ko'rinmaydigan ishlarni ochib beradi.
+
+amaliy: CAD chizma yaratish va avtoservis hujjatlarini tahlil qilish
+amaqsad: CAD dasturida o'lchamlari ko'rsatilgan oddiy detal chizmasini yaratish; avtoservisning qog'oz hujjatlarini tahlil qilib, ma'lumot maydonlari, kirish va chiqish ma'lumotlari hamda muammolarni aniqlash, suhbat va so'rovnoma savollarini tuzish.
+qadam: CAD dasturida ustaxona javoni uchun metall kronshteyn (L shaklidagi plastina, ikki teshikli) chizmasini yarating: o'lchamlarni (mm) va teshiklar markazlarini ko'rsating.
+qadam: Chizmaga sarlavha, masshtab, material va muallif yozilgan burchak shtampini qo'shing; faylni asl formatda va PDF ko'rinishida saqlang.
+qadam: Namunaviy hujjatlarni (buyurtma varaqasi, chek, ustalar ish jurnali) o'rganing va «Hujjatlar tahlili» jadvalini tuzing: hujjat nomi, kim to'ldiradi, maydonlar, ma'lumot qayerga boradi, bir oydagi soni.
+qadam: Barcha hujjatlardagi maydonlarni bitta ro'yxatga jamlang, takrorlanayotganlarini belgilang va har bir maydon uchun ma'lumot turini taklif qiling (matn, son, sana, pul).
+qadam: Tizimning kirish ma'lumotlari (mijoz, avtomobil, xizmat, ehtiyot qism) va chiqish ma'lumotlari (chek, ustaning ish hisoboti, oylik hisobot)ni ajratib yozing.
+qadam: Hujjatlarda ko'ringan 4 ta muammoni yozing (takror yozish, xato hisob, yo'qolgan varaqlar, sekin qidiruv) va ularni yangi tizim qanday hal qilishini taklif qiling.
+qadam: Rahbar bilan suhbat uchun 5 ta va mijozlar uchun 5 ta so'rovnoma savolini tuzing; qaysi ma'lumotni hujjatlardan, qaysinisini faqat suhbat yoki kuzatishdan olish mumkinligini yozing.
+anatija: O'lchamli CAD chizma (asl fayl va PDF), hujjatlar tahlili jadvali, maydonlar ro'yxati va turlari, kirish va chiqish ma'lumotlari, muammolar va takliflar, suhbat va so'rovnoma savollari.
+baho5: Chizma aniq, o'lchamlar va shtamp to'liq; hujjatlar tizimli tahlil qilingan, maydonlar va takrorlar to'g'ri aniqlangan, kirish va chiqish ajratilgan, muammolar va savollar asosli.
+masala: Chizma 1:5 masshtabda chizilgan. Chizmada detal uzunligi 48 mm. Haqiqiy uzunlik qancha? 300 mm lik detal 1:2 masshtabda chizmada qanday uzunlikda bo'ladi?
+yechim: 48 · 5 = 240 mm. 300 : 2 = 150 mm.
+masala: Qo'lda belgilab kesishda bitta detalga 12 daqiqa, CAD/CAM va CNC dastgohda 8 daqiqa ketadi. 300 ta detal uchun qancha vaqt tejaladi?
+yechim: (12 − 8) · 300 = 1200 daqiqa = 20 soat.
+savol: CAD, CAM va CAE ning farqi nimada? Har biriga misol keltiring.
+savol: Tizimni ishlab chiqish sikli qanday bosqichlardan iborat?
+savol: Tahlil bosqichida qanday savollarga javob topiladi?
+savol: Hujjatlar tahlili usulining afzallik va kamchiliklarini ayting. Uni qaysi usullar bilan birga qo'llash kerak?
+test: Detal chizmasidan CNC dastgoh uchun boshqaruv dasturini tayyorlaydigan tizim? | CAM | CAD | LMS | CRM
+test: Modelning mustahkamligi va qizishini kompyuterda sinash qanday ataladi? | CAE | OCR | GPS | VPN
+test: Tizimni ishlab chiqish siklining birinchi bosqichi? | Tahlil | Sinov | Joriy etish | Texnik xizmat
+test: Ko'p odamdan tez va arzon ma'lumot olish, lekin aniqlashtirib bo'lmaydigan usul? | So'rovnoma | Suhbat | Kuzatish | Prototip
+test: Mavjud blankalar, cheklar va hisobotlarni o'rganish usuli? | Hujjatlar tahlili | Klasterlash | Beta-sinov | Normallashtirish
+uyga: Misol va mashqlar: uyingizdagi yoki texnikumdagi bitta qog'oz hujjatni (kvitansiya, ariza, davomat jurnali — shaxsiy ma'lumotlarsiz) tahlil qiling: maydonlari, kim to'ldiradi, qayerga boradi va uni elektron tizimga o'tkazish qanday foyda berishini yozing.
+gloss: CAD | Kompyuter yordamida chizma va 3D modellar yaratish (loyihalash) tizimi.
+gloss: CAM | CAD modeli asosida dastgohlar uchun boshqaruv dasturini tayyorlaydigan ishlab chiqarish tizimi.
+gloss: CAE | Modellarni mustahkamlik, issiqlik va oqim bo'yicha kompyuterda sinash tizimi.
+gloss: Tizimni ishlab chiqish sikli | Tahlil, loyihalash, ishlab chiqish va sinov, joriy etish, hujjatlashtirish va texnik xizmat bosqichlari.
+gloss: Hujjatlar tahlili | Tashkilotdagi blankalar, jurnallar va hisobotlarni o'rganib, tizim haqida ma'lumot to'plash usuli.
+gloss: Funksional talab | Yangi tizim bajarishi kerak bo'lgan aniq vazifa (masalan, buyurtmani ro'yxatga olish).

@@ -1,0 +1,66 @@
+nomi: Tizimni loyihalash. Ma'lumotlar oqimi diagrammasi. Tizim blok-sxemasi. Ekran formasi. Yangi tizim uchun texnik va dasturiy ta'minot
+modul: 5-modul
+ac: 5.7 Tahlil natijalari asosida yangi tizimni loyihalaydi: ma'lumotlar oqimi diagrammasi va tizim blok-sxemasini chizadi, validatsiya qoidalari bilan ekran formasini loyihalaydi, yangi tizim uchun texnik va dasturiy ta'minotni tanlab asoslaydi.
+maqsad: O'quvchilarda tizimni loyihalash bosqichining vazifalari, ma'lumotlar oqimi diagrammasi va tizim blok-sxemasi belgilari, foydalanuvchi uchun qulay ekran formasini loyihalash qoidalari hamda texnik va dasturiy ta'minotni tanlash mezonlari haqida bilim hosil qilish, kichik tashkilot tizimining loyiha hujjatlarini tayyorlash ko'nikmasini shakllantirish.
+natija: loyihalash bosqichida nimalar ishlab chiqilishini aytadi;
+natija: ma'lumotlar oqimi diagrammasi belgilarini va qoidalarini qo'llab, 0- va 1-darajali diagrammalarni chizadi;
+natija: tizim blok-sxemasini kirish, jarayon, saqlash va chiqish belgilari bilan chizadi;
+natija: qulay va validatsiyali ekran formasini loyihalaydi;
+natija: yangi tizim uchun texnik va dasturiy ta'minot ro'yxatini tuzib, asoslaydi.
+reja: Loyihalash bosqichi
+reja: Ma'lumotlar oqimi diagrammasi va tizim blok-sxemasi
+reja: Ekran formasi. Texnik va dasturiy ta'minotni tanlash
+tayanch: loyihalash (dizayn); ma'lumotlar oqimi diagrammasi; tashqi obyekt; jarayon; ma'lumotlar ombori; ma'lumot oqimi; kontekst diagramma; tizim blok-sxemasi; ekran formasi; boshqaruv elementi; validatsiya; xato xabari; texnik ta'minot; dasturiy ta'minot; tizim talablari
+metod: Xatoni top | O'qituvchi xatoli ma'lumotlar oqimi diagrammasini ko'rsatadi (mijozdan to'g'ridan-to'g'ri omborga oqim, nomsiz strelkalar); o'quvchilar qoidalarni buzgan joylarni topadi.
+metod: Foydalanuvchi sinovi | Juftliklar bir-birining ekran formasi eskizini «foydalanuvchi» sifatida ko'rib, qaysi maydon tushunarsiz, qayerda xato kiritish mumkinligini aytadi.
+ajihoz: Kompyuter; diagramma chizish dasturi (draw.io, LibreOffice Draw) yoki qog'oz va qalam; MBBT (shakl yaratish uchun, ixtiyoriy); oldingi darsdagi hujjatlar tahlili natijalari; proyektor
+
+## Loyihalash bosqichi
+Tahlil bosqichida «nima qilish kerak?» degan savolga javob topilgan bo'lsa, **loyihalash** (dizayn) bosqichida «qanday qilinadi?» degan savolga javob beriladi. Bu bosqichda quyidagilar ishlab chiqiladi: tizim bo'ylab ma'lumot oqimlari; kirish ma'lumotlari va ularni kiritish **ekran formalari**; chiqish — hisobotlar, cheklar va ekran ko'rinishlari; ma'lumotlar bazasi tuzilmasi (jadvallar, maydonlar, kalitlar — 1-kursda o'rganilgan); har bir maydon uchun **validatsiya qoidalari**; jarayonlar va algoritmlar; foydalanuvchilar huquqlari va xavfsizlik; kerakli texnik va dasturiy ta'minot; sinov rejasi. Loyiha hujjatlari dasturchi uchun «chizma» vazifasini bajaradi.
+
+## Ma'lumotlar oqimi diagrammasi va tizim blok-sxemasi
+**Ma'lumotlar oqimi diagrammasi** (MOD) ma'lumot tizimga qayerdan kirishi, qanday qayta ishlanishi, qayerda saqlanishi va qayerga chiqishini ko'rsatadi. U to'rt belgidan foydalanadi:
+jadval: Ma'lumotlar oqimi diagrammasi belgilari
+| Belgi | Ma'nosi | Misol |
+| To'rtburchak | Tashqi obyekt — tizimdan tashqaridagi ma'lumot manbai yoki qabul qiluvchisi | Mijoz, Yetkazib beruvchi, Rahbar |
+| Doira yoki yumaloq burchakli to'rtburchak | Jarayon — ma'lumotni o'zgartiradigan harakat (fe'l bilan nomlanadi) | Buyurtmani qabul qilish, Chek tayyorlash |
+| Bir tomoni ochiq to'rtburchak | Ma'lumotlar ombori — saqlangan ma'lumot | Mijozlar, Buyurtmalar, Ehtiyot qismlar |
+| Nomlangan strelka | Ma'lumot oqimi | Buyurtma ma'lumotlari, To'lov cheki |
+Qoidalar: har bir oqim nomlanadi; ma'lumot tashqi obyektdan omborga yoki ombordan omborga to'g'ridan-to'g'ri o'tmaydi — doim jarayon orqali o'tadi; har bir jarayonda kamida bitta kiruvchi va bitta chiquvchi oqim bo'ladi. **0-darajali (kontekst) diagrammada** butun tizim bitta jarayon sifatida, uning atrofida tashqi obyektlar bilan ko'rsatiladi; **1-darajali diagrammada** tizim asosiy jarayonlarga bo'linadi va omborlar ko'rsatiladi.
+**Tizim blok-sxemasi** esa tizimning umumiy ishlash ketma-ketligini va ishlatiladigan vositalarni ko'rsatadi: qo'lda kiritish (klaviatura), hujjat (qog'oz blanka yoki chek), jarayon (dastur bajaradigan ish), ma'lumotlar bazasi yoki fayl, displey, printer kabi maxsus shakllar strelkalar bilan bog'lanadi. Masalan: mijoz ma'lumotlari klaviaturadan kiritiladi → validatsiya jarayoni → «Buyurtmalar» bazasiga yoziladi → ustaga displeyda vazifa chiqadi → ish tugagach chek printerda chop etiladi.
+
+## Ekran formasi. Texnik va dasturiy ta'minotni tanlash
+**Ekran formasi** — foydalanuvchi ma'lumot kiritadigan oyna. Yaxshi formaning qoidalari: maydonlar mantiqiy tartibda (qog'oz hujjatdagi tartibga yaqin) va guruhlangan; har bir maydonning aniq yorlig'i bor; mos **boshqaruv elementlari** — tanlov uchun ochiluvchi ro'yxat, sana uchun kalendar, ha/yo'q uchun belgilash katakchasi; majburiy maydonlar belgilangan; standart qiymatlar (bugungi sana) avtomatik qo'yiladi; validatsiya noto'g'ri ma'lumotni qabul qilmaydi va **xato xabari** nima noto'g'ri ekanini va qanday tuzatishni aniq aytadi («Telefon raqami +998 XX XXX XX XX ko'rinishida bo'lsin»); «Saqlash» va «Bekor qilish» tugmalari doim bir joyda; Tab tugmasi bilan maydonlar ketma-ket o'tadi; shrift o'qilishi oson, ranglar kontrastli va bir xil uslubda.
+**Texnik ta'minotni tanlash** tizim vazifalari va hajmiga bog'liq: ish joylari soni va kompyuter tavsiflari, ma'lumotlar saqlanadigan server yoki bulut, tarmoq qurilmalari, maxsus qurilmalar (chek printeri, shtrix-kod skaneri, planshetlar), zaxira nusxa uchun saqlovchi, uzluksiz quvvat manbai. **Dasturiy ta'minot**: operatsion tizim, MBBT yoki tayyor dastur, buyurtma asosida yoziladigan dastur (1-kursda solishtirilgan), antivirus va zaxira dasturi; litsenziyalar narxi va qo'llab-quvvatlash muddati hisobga olinadi. Har bir tanlov talablar bilan asoslanadi: masalan, «buyurtmalar bazasi bir vaqtda 3 ta ish joyidan ishlatiladi — tarmoqli MBBT kerak».
+
+amaliy: Avtoservis tizimi uchun loyiha hujjatlarini tayyorlash
+amaqsad: Oldingi darsdagi tahlil natijalari asosida avtoservis buyurtmalar tizimining 0- va 1-darajali ma'lumotlar oqimi diagrammasi, tizim blok-sxemasi, buyurtma kiritish ekran formasi va validatsiya jadvali hamda texnik va dasturiy ta'minot ro'yxatini tayyorlash.
+qadam: Tizimning tashqi obyektlarini aniqlang (Mijoz, Usta, Yetkazib beruvchi, Rahbar) va 0-darajali (kontekst) diagrammani chizing: tizim — bitta jarayon, barcha kiruvchi va chiquvchi oqimlar nomlangan.
+qadam: 1-darajali diagrammani chizing: 3–4 jarayon (Buyurtmani qabul qilish, Ishni rejalashtirish, Ehtiyot qismni hisobdan chiqarish, To'lov va chek), omborlar (Mijozlar, Buyurtmalar, Ehtiyot qismlar) va oqimlar; qoidalarga mosligini tekshiring.
+qadam: Buyurtma jarayoni uchun tizim blok-sxemasini chizing: qo'lda kiritish, validatsiya, ma'lumotlar bazasi, displey va chek printeri belgilari bilan.
+qadam: «Yangi buyurtma» ekran formasini loyihalang (qog'ozda, diagramma dasturida yoki MBBT shaklida): mijoz, telefon, avtomobil raqami, xizmat turi (ro'yxat), sana (kalendar), usta (ro'yxat), izoh, «Saqlash» va «Bekor qilish» tugmalari.
+qadam: Validatsiya jadvalini tuzing: maydon, validatsiya turi (mavjudlik, format, oraliq, ro'yxat), qoida, xato xabari matni.
+qadam: Sherigingiz formani «foydalanuvchi» sifatida sinab, ikki taklif bersin; formani yangilang.
+qadam: Texnik va dasturiy ta'minot jadvalini tuzing: nomi, soni, asosiy tavsifi, taxminiy narxi, nima uchun kerakligi (talab bilan bog'lab).
+anatija: 0- va 1-darajali ma'lumotlar oqimi diagrammalari, tizim blok-sxemasi, ekran formasi (dastlabki va yangilangan), validatsiya jadvali, texnik va dasturiy ta'minot jadvali.
+baho5: Diagrammalar belgilar va qoidalarga to'liq mos, oqimlar nomlangan, blok-sxema mantiqiy, forma qulay va validatsiya qoidalari hamda xato xabarlari aniq, ta'minot tanlovi talablar bilan asoslangan.
+masala: Diagrammada quyidagi oqimlar bor: (1) Mijoz → «Buyurtmani qabul qilish»; (2) Mijoz → «Buyurtmalar» ombori; (3) «Buyurtmalar» ombori → «Ishni rejalashtirish»; (4) «Mijozlar» ombori → «Buyurtmalar» ombori. Qaysi oqimlar qoidaga zid va ularni qanday tuzatish kerak?
+yechim: (2) va (4) noto'g'ri: ma'lumot tashqi obyektdan omborga va ombordan omborga to'g'ridan-to'g'ri o'tmaydi. Tuzatish: Mijoz → «Buyurtmani qabul qilish» → «Buyurtmalar» ombori; «Mijozlar» ombori → «Buyurtmani qabul qilish» (mijozni topish) → «Buyurtmalar» ombori.
+masala: Yangi tizim uchun 3 ta ish joyi kompyuteri (har biri 6,5 mln so'm), 1 ta chek printeri (1,2 mln), 2 ta shtrix-kod skaneri (har biri 0,8 mln) va marshrutizator (0,9 mln) kerak (narxlar shartli). Texnik ta'minot qancha turadi?
+yechim: 3 · 6,5 + 1,2 + 2 · 0,8 + 0,9 = 19,5 + 1,2 + 1,6 + 0,9 = 23,2 mln so'm.
+savol: Loyihalash bosqichida qanday hujjatlar va qarorlar ishlab chiqiladi?
+savol: Ma'lumotlar oqimi diagrammasining to'rt belgisini va asosiy qoidalarini ayting.
+savol: Tizim blok-sxemasi ma'lumotlar oqimi diagrammasidan nimasi bilan farq qiladi?
+savol: Yaxshi ekran formasi qanday talablarga javob berishi kerak?
+test: Ma'lumotlar oqimi diagrammasida bir tomoni ochiq to'rtburchak nimani bildiradi? | Ma'lumotlar ombori | Tashqi obyekt | Jarayon | Qaror
+test: Butun tizim bitta jarayon sifatida ko'rsatiladigan diagramma? | 0-darajali (kontekst) diagramma | 1-darajali diagramma | Gantt diagrammasi | ER sxema
+test: Ma'lumotlar oqimi diagrammasida qaysi oqim qoidaga zid? | Tashqi obyektdan to'g'ridan-to'g'ri omborga | Jarayondan omborga | Ombordan jarayonga | Tashqi obyektdan jarayonga
+test: Sana kiritish uchun eng qulay boshqaruv elementi? | Kalendar | Ko'p qatorli matn maydoni | Belgilash katakchasi | Rasm
+test: Yaxshi xato xabari qanday bo'lishi kerak? | Nima noto'g'ri va qanday tuzatishni aniq aytadi | Faqat «Xato!» deb chiqadi | Dasturdan chiqib ketadi | Xato kodini raqamda ko'rsatadi
+uyga: Misol va mashqlar: texnikum kutubxonasi uchun kitob berish tizimining 0-darajali ma'lumotlar oqimi diagrammasini va «Kitob berish» ekran formasi eskizini chizing; formaning har bir maydoni uchun validatsiya qoidasini yozing.
+gloss: Loyihalash (dizayn) | Tizim qanday ishlashini — ma'lumotlar, ekranlar, hisobotlar, jarayonlar va ta'minotni ishlab chiqish bosqichi.
+gloss: Ma'lumotlar oqimi diagrammasi | Ma'lumotning tizimdagi manbalari, jarayonlari, saqlanishi va oqimlarini ko'rsatuvchi diagramma.
+gloss: Tashqi obyekt | Tizimdan tashqarida joylashgan ma'lumot manbai yoki qabul qiluvchisi.
+gloss: Ma'lumotlar ombori | Ma'lumotlar oqimi diagrammasida saqlanadigan ma'lumot (fayl yoki jadval).
+gloss: Tizim blok-sxemasi | Tizimning ishlash ketma-ketligini va kiritish, saqlash, chiqarish vositalarini ko'rsatuvchi sxema.
+gloss: Ekran formasi | Foydalanuvchi ma'lumot kiritadigan va ko'radigan dastur oynasi.

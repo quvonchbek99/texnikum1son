@@ -1,0 +1,101 @@
+nomi: Uch o'lchamli printer. To'rtinchi va beshinchi avlod uyali aloqasi
+modul: 4-modul
+ac: 4.6 3D bosib chiqarish texnologiyalari, ish jarayoni va qo'llanish sohalarini tushuntiradi, uning afzallik va cheklovlarini baholaydi; uyali aloqa avlodlarini (1G–5G) taqqoslaydi, 4G va 5G ning imkoniyatlari va muammolarini tahlil qiladi.
+maqsad: O'quvchilarda additiv ishlab chiqarish (3D bosib chiqarish) tamoyili, texnologiyalari va qo'llanishi haqida hamda uyali aloqa avlodlarining rivojlanishi, 4G va 5G tarmoqlarining texnik xususiyatlari, imkoniyatlari va cheklovlari haqida bilim hosil qilish, yangi texnologiyalarni o'z kasbiga tatbiq etish imkoniyatini baholash ko'nikmasini shakllantirish.
+natija: 3D bosib chiqarish bosqichlarini (model, STL fayl, slayser, bosib chiqarish, ishlov berish) tushuntiradi;
+natija: FDM, SLA, SLS va metall 3D bosib chiqarish texnologiyalarini taqqoslaydi;
+natija: 3D printerlarning tibbiyot, ishlab chiqarish, qurilish va ta'limdagi qo'llanishiga misollar keltiradi, afzallik va cheklovlarini baholaydi;
+natija: 1G dan 5G gacha uyali aloqa avlodlarini tezlik, kechikish va imkoniyatlar bo'yicha taqqoslaydi;
+natija: 5G ning qo'llanish sohalari va joriy etishdagi muammolarini tushuntiradi.
+reja: 3D bosib chiqarish: tamoyil va texnologiyalar
+reja: 3D printerlarning qo'llanishi, afzallik va cheklovlari
+reja: Uyali aloqa avlodlari: 1G dan 4G gacha
+reja: Beshinchi avlod (5G) aloqasi: imkoniyatlar va muammolar
+tayanch: additiv ishlab chiqarish; 3D model; STL fayl; slayser; G-kod; FDM; SLA; SLS; filament; prototip; uyali aloqa; baza stansiyasi; avlod (G); LTE; 5G; kechikish (latentlik); o'tkazish qobiliyati; narsalar interneti
+metod: Muammoli savol | «Avtomobilning singan plastik qisqichini 3D printerda chiqarish mumkinmi? Tormoz qismi-chi?» savoli bilan 3D bosib chiqarishning imkoniyat va cheklovlari muhokama qilinadi.
+metod: Taqqoslash jadvali | Juftliklar 2G, 3G, 4G va 5G ni tezlik, kechikish va imkoniyatlar bo'yicha jadvalga yozadi, so'ng telefonidagi tarmoq turini va tezlik o'lchash ilovasi natijasini solishtiradi.
+metod: Klaster | «5G qayerda kerak?» klasteri tuziladi: transport, sanoat, tibbiyot, ta'lim, ko'ngilochar sohalar bo'yicha misollar yoziladi.
+jihoz: Kompyuter va proyektor; 3D bosib chiqarilgan namunaviy buyumlar yoki ularning rasmlari; 3D model ko'rish dasturi yoki onlayn slayser; taqdimot
+
+## 1. 3D bosib chiqarish: tamoyil va texnologiyalar
+An'anaviy ishlab chiqarishda buyum ko'pincha katta bo'lak materialdan ortiqcha qismini olib tashlash (kesish, frezalash, tokarlik) yoki qolipga quyish orqali yasaladi. **3D bosib chiqarish** esa **additiv ishlab chiqarish** usuli: buyum material qatlamlarini birin-ketin qo'shib, pastdan yuqoriga «o'stiriladi». Bitta qatlam qalinligi odatda 0,05–0,3 mm, shuning uchun kichik buyum ham yuzlab qatlamdan iborat bo'ladi va bir necha soatda tayyor bo'ladi.
+3D bosib chiqarish jarayoni quyidagi bosqichlardan iborat:
+#. **3D model yaratish** — kompyuter yordamida loyihalash (CAD) dasturida (Tinkercad, Fusion 360, FreeCAD, Blender) chiziladi yoki 3D skaner yordamida mavjud buyumdan olinadi. Tayyor modellarni maxsus kutubxonalardan ham yuklab olish mumkin (litsenziyasiga rioya qilgan holda).
+#. **Faylni eksport qilish** — model ko'pincha STL yoki 3MF formatida saqlanadi: bunda buyum sirti minglab kichik uchburchaklar bilan tasvirlanadi.
+#. **Slayslash** — **slayser** dasturi (Cura, PrusaSlicer) modelni yupqa qatlamlarga «kesadi» va printer uchun buyruqlar faylini (**G-kod**) tuzadi: bosh qayerga, qanday tezlikda harakatlanishi, qancha material chiqarishi, qanday haroratda ishlashi. Shu bosqichda qatlam qalinligi, ichki to'ldirish zichligi (masalan, 20 %), tayanch (support) va asos sozlanadi, bosib chiqarish vaqti va material sarfi hisoblanadi.
+#. **Bosib chiqarish** — printer qatlamlarni birin-ketin hosil qiladi; birinchi qatlamning stolga yaxshi yopishishi ayniqsa muhim.
+#. **Yakuniy ishlov** — tayanchlarni olib tashlash, silliqlash, bo'yash, qatronli printerlarda esa yuvish va ultrabinafsha nurda qotirish.
+3D printerlar material va uni qotirish usuliga ko'ra bir necha turga bo'linadi:
+jadval: 3D bosib chiqarish texnologiyalari
+| Texnologiya | Material | Ishlash tamoyili | Xususiyati va qo'llanishi |
+| FDM (eritib qatlamlash) | Plastik ip — filament (PLA, PETG, ABS) | Qizdirilgan bosh ipni eritib, qatlam-qatlam yotqizadi | Arzon va keng tarqalgan; prototiplar, qisqichlar, o'quv modellari |
+| SLA / DLP (fotopolimerlash) | Suyuq fotopolimer qatron | Lazer yoki ekran nuri qatronni qatlam-qatlam qotiradi | Juda aniq va silliq sirt; stomatologiya, zargarlik qoliplari, miniatyuralar |
+| SLS (lazer bilan pishirish) | Plastik kukun (neylon) | Lazer kukun zarralarini bir-biriga pishiradi | Mustahkam, tayanchsiz murakkab shakllar; sanoat detallari |
+| Metall (DMLS, SLM) | Metall kukuni | Kuchli lazer metall kukunini eritib qatlamlaydi | Aviatsiya, tibbiy implantlar, murakkab sanoat qismlari; juda qimmat |
+| Qurilish printerlari | Maxsus beton aralashmasi | Katta portal printer devorlarni qatlamlab quyadi | Uy va kichik inshootlar devorlari |
+Model yaratishning yana bir yo'li — **3D skanerlash**: maxsus skaner yoki telefon kamerasi buyumni turli tomondan suratga olib, uning raqamli nusxasini yaratadi. Bu usul singan detalni qayta tiklash, bemor tanasiga mos protez tayyorlash, muzey eksponatlarining raqamli nusxasini olish uchun ishlatiladi. Skanerlangan model odatda CAD dasturida tozalanadi va aniq o'lchamlarga keltiriladi.
+FDM printerda eng ko'p ishlatiladigan materiallar: **PLA** — oson bosiladi, hidsiz, lekin issiqqa chidamsiz (taxminan 55–60 °C da yumshaydi); **PETG** — mustahkamroq va issiqqa chidamliroq; **ABS** — issiqqa chidamli, lekin bosib chiqarishda hid chiqaradi va yaxshi shamollatish talab qiladi.
+
+## 2. 3D printerlarning qo'llanishi, afzallik va cheklovlari
+**Qo'llanish sohalari:**
+- **tibbiyot va stomatologiya** — har bir bemorga moslab tayyorlanadigan protezlar, ortezlar va eshitish apparatlari korpuslari, tish qoliplari va kapalar, operatsiyani rejalash uchun organ va suyak modellari; metall printerlarda implantlar;
+- **ishlab chiqarish** — yangi mahsulot **prototip**ini tez tayyorlash va sinab ko'rish, ishlab chiqarilmay qo'ygan ehtiyot qismlar, ishchi moslamalar va qoliplar;
+- **avtomobil va aviatsiya** — yengil va murakkab shaklli detallar, sinov modellari;
+- **qurilish va arxitektura** — bino maketlari, 3D bosib chiqarilgan devorlar;
+- **ta'lim** — molekula, mexanizm va geometrik jismlar modellari, o'quvchilar loyihalari;
+- **dizayn, moda va zargarlik** — aksessuarlar, poyabzal tagliklari, quyma uchun mum modellar;
+- **oziq-ovqat** — shokolad va xamirdan murakkab bezaklar chiqaruvchi maxsus printerlar.
+**Afzalliklar:** har bir buyumni alohida (individual) tayyorlash narxi deyarli bir xil; murakkab ichki shakllarni yasash mumkin; prototipni bir necha kunda emas, bir necha soatda olish; ortiqcha material kam, chiqindi oz; ehtiyot qismni omborda saqlash o'rniga kerak bo'lganda chop etish; model faylini internet orqali boshqa shaharga yuborib, o'sha yerda chop etish.
+**Cheklovlar:** katta partiyada an'anaviy usullardan sekin va qimmat; uy va o'quv printerlarida buyum mustahkamligi cheklangan, qatlamlar orasida bo'linishi mumkin; materiallar tanlovi cheklangan; aniqlik va sirt sifati texnologiyaga bog'liq; sanoat printerlari va materiallari qimmat. Shuning uchun xavfsizlikka bevosita ta'sir qiladigan qismlar (tormoz, rul tizimi, yuk ko'taruvchi detallar) havaskor printerda chop etilmaydi.
+**Huquqiy va axloqiy masalalar:** boshqa kompaniya mahsulotini ruxsatsiz nusxalash mualliflik va patent huquqini buzadi; xavfli buyumlar yasash qonun bilan taqiqlanadi; FDM printerda ishlaganda qizigan bosh va stoldan kuyish, plastik bug'lari xavfi bor, shuning uchun xona shamollatiladi va printer nazoratsiz qoldirilmaydi.
+
+## 3. Uyali aloqa avlodlari: 1G dan 4G gacha
+**Uyali aloqa** — hudud ko'plab kichik zonalarga (yacheykalarga) bo'linib, har biriga o'z **baza stansiyasi** xizmat ko'rsatadigan simsiz aloqa tizimi. Telefon bir zonadan ikkinchisiga o'tganda aloqa uzilmasdan keyingi stansiyaga «uzatiladi». Uyali aloqa texnologiyalari taxminan har o'n yilda yangilanib, **avlodlar** (G — inglizcha generation) deb ataladi.
+- **1G** (1980-yillar) — analog ovozli aloqa: faqat qo'ng'iroq, sifat past, tinglab olish oson edi.
+- **2G** (1990-yillar, GSM standarti) — raqamli aloqa: ovoz sifati yaxshilandi, **SMS** paydo bo'ldi, keyinroq sekin mobil internet (GPRS, EDGE) qo'shildi.
+- **3G** (2000-yillar) — haqiqiy mobil internet: veb-sahifalarni ochish, elektron pochta, video qo'ng'iroq; smartfonlar davri boshlandi.
+- **4G** (2010-yillar, **LTE** texnologiyasi) — yuqori tezlikdagi keng polosali mobil internet: yuqori sifatli video tomosha qilish, onlayn o'yinlar, mobil bank va taksi ilovalari, videokonferensiyalar; ovozli qo'ng'iroqlar ham internet orqali (VoLTE) uzatila boshladi.
+Telefon tarmoqqa **SIM-karta** orqali ulanadi: unda abonentni aniqlaydigan ma'lumot va shifrlash kalitlari saqlanadi; hozir ko'plab telefonlarda o'rnatilgan elektron SIM (eSIM) ham ishlatiladi. Har bir operator davlat tomonidan ajratilgan radiochastota diapazonlarida ishlaydi: past chastotalar uzoq masofaga tarqaladi va binolar ichiga yaxshi kiradi, yuqori chastotalar esa ko'proq ma'lumot tashiydi, lekin qamrovi kichik. Uyali aloqani Wi-Fi bilan adashtirmaslik kerak: Wi-Fi — bir necha o'n metrga mo'ljallangan mahalliy simsiz tarmoq, uyali aloqa esa butun mamlakat bo'ylab harakatlanayotganda ham ishlaydigan operator tarmog'i.
+Har bir yangi avlod uch ko'rsatkichni yaxshilaydi: **o'tkazish qobiliyati** (tezlik), **kechikish** (signal borib-kelish vaqti, latentlik) va bir vaqtda ulanadigan qurilmalar soni.
+
+## 4. Beshinchi avlod (5G) aloqasi: imkoniyatlar va muammolar
+**5G** 2019-yildan boshlab joriy etila boshlagan. Uning uch asosiy imkoniyati bor:
+- **juda yuqori tezlik** — nazariy jihatdan sekundiga bir necha gigabitgacha; to'liq metrajli filmni bir necha soniyada yuklab olish mumkin;
+- **juda kichik kechikish** — bir necha millisekund; bu masofadan boshqariladigan uskunalar, avtonom transport va real vaqt rejimidagi tizimlar uchun muhim;
+- **juda ko'p qurilma ulanishi** — bir kvadrat kilometrda milliontagacha datchik va qurilma: narsalar interneti va «aqlli shahar»lar uchun.
+5G yuqori chastotali radioto'lqinlardan ham foydalanadi: ular ko'p ma'lumot tashiydi, lekin qisqa masofaga tarqaladi va devor hamda daraxtlardan yomon o'tadi. Shuning uchun 5G tarmog'i uchun ancha ko'p, zich joylashgan kichik baza stansiyalari kerak. Shuningdek, 5G bitta fizik tarmoqni turli vazifalar uchun alohida «virtual tarmoqlar»ga bo'lish imkonini beradi: masalan, kasalxona yoki zavod uchun ishonchli va tez, oddiy foydalanuvchilar uchun esa umumiy kanal.
+jadval: Uyali aloqa avlodlarini taqqoslash (taxminiy ko'rsatkichlar)
+| Avlod | Davr | Asosiy imkoniyat | Tezlik | Kechikish |
+| 2G | 1990-yillar | Raqamli ovoz, SMS | O'nlab kbit/s | Yuzlab ms |
+| 3G | 2000-yillar | Mobil internet, video qo'ng'iroq | Bir necha Mbit/s | 100 ms atrofida |
+| 4G (LTE) | 2010-yillar | Keng polosali internet, video striming | O'nlab–yuzlab Mbit/s | 30–50 ms |
+| 5G | 2020-yillar | Juda yuqori tezlik, kichik kechikish, IoT | Yuzlab Mbit/s – bir necha Gbit/s | 1–10 ms |
+**5G ning qo'llanish sohalari:** avtonom va bir-biri bilan «gaplashadigan» avtomobillar; zavodlarda simsiz boshqariladigan robotlar va datchiklar; masofaviy tibbiy maslahat va monitoring; stadion va konsertlarda minglab odamlarning bir vaqtda sifatli internetga ulanishi; boyitilgan va virtual reallik ilovalari; aqlli shahar tizimlari (svetoforlar, transport, energetika).
+**Muammolar va cheklovlar:** tarmoqni qurish juda qimmat va ko'p vaqt talab qiladi, shuning uchun 5G avval yirik shaharlarda paydo bo'ladi; eski telefonlar 5G ni qo'llab-quvvatlamaydi; yuqori chastotalar qamrovi kichik; qurilmalar ko'payishi bilan kiberxavfsizlik talablari ortadi; 5G haqida ijtimoiy tarmoqlarda tarqalgan ko'plab mish-mishlar ilmiy asosga ega emas — xalqaro sog'liqni saqlash tashkilotlari belgilangan me'yorlar doirasidagi radiochastota nurlanishining sog'liqqa zarari isbotlanmaganini ta'kidlaydi, ma'lumotni esa ishonchli manbalardan tekshirish kerak. Olimlar allaqachon keyingi avlod — 6G tarmoqlari ustida izlanish olib bormoqda.
+Xulosa: 3D bosib chiqarish buyumni qatlam-qatlam qo'shib yasaydi va individual mahsulot, prototip va murakkab shakllar uchun qulay, lekin katta partiya va yuqori mustahkamlik talab qilinadigan qismlarda cheklovlarga ega; uyali aloqa 1G dan 5G gacha analog ovozdan gigabitli tezlik, millisekundli kechikish va milliardlab qurilmalarni bog'laydigan tarmoqqacha rivojlandi.
+
+keys: Avtoservis uchun 3D printer
+vaziyat: Kichik avtoservis rahbari ehtiyot qismlarni kutishga ko'p vaqt ketayotgani uchun FDM 3D printer sotib olmoqchi. U printerda quyidagilarni chop etishni rejalashtiryapti: salon panellarining singan plastik qisqichlari, eski avtomobil uchun ishlab chiqarilmay qo'ygan ventilyatsiya tutqichi, tormoz kolodkasi ushlagichi va mijozlar uchun firma logotipli brelok. Usta PLA plastikdan foydalanmoqchi.
+ksavol: Ro'yxatdagi qaysi buyumlarni printerda chop etish maqsadga muvofiq, qaysi birini mumkin emas va nima uchun?
+ksavol: PLA plastik bu vazifalar uchun mosmi? Qaysi material yaxshiroq?
+ksavol: Printerni ishga tushirishda qanday xavfsizlik va huquqiy qoidalarga e'tibor berish kerak?
+kjavob: Qisqichlar, ventilyatsiya tutqichi va brelokni chop etish mumkin — ular yuk ko'tarmaydi va xavfsizlikka ta'sir qilmaydi. Tormoz tizimi qismi chop etilmaydi: u katta yuk va issiqlikka chidashi, sertifikatlangan bo'lishi kerak. Salon yozda qattiq qiziydi, PLA esa 55–60 °C da yumshaydi — PETG yoki ABS ma'qul (ABS uchun yaxshi shamollatish kerak). Xavfsizlik: printerni nazoratsiz qoldirmaslik, qizigan qismlarga tegmaslik, xonani shamollatish. Huquqiy: boshqa kompaniyalarning patentlangan detallari va logotiplarini ruxsatsiz nusxalamaslik, mijozga chop etilgan detal haqida ochiq aytish.
+savol: Additiv ishlab chiqarish an'anaviy usullardan nimasi bilan farq qiladi?
+savol: Slayser dasturi qanday vazifani bajaradi?
+savol: FDM va SLA texnologiyalarini taqqoslang.
+savol: 3D printerlar tibbiyotda qanday qo'llanadi?
+savol: Uyali aloqaning har bir avlodi qanday yangi imkoniyat olib keldi?
+savol: 5G ning uch asosiy imkoniyati va joriy etishdagi muammolari nimalardan iborat?
+test: Buyumni material qatlamlarini qo'shib yasash usuli qanday ataladi? | Additiv ishlab chiqarish | Frezalash | Quyish | Shtamplash
+test: 3D modelni qatlamlarga bo'lib, printer uchun G-kod tuzadigan dastur? | Slayser | Antivirus | Brauzer | Arxivator
+test: Suyuq qatronni nur yordamida qotiradigan texnologiya? | SLA | FDM | SLS | GSM
+test: SMS xizmati qaysi avlodda paydo bo'lgan? | 2G | 1G | 4G | 5G
+test: 5G ning qaysi xususiyati avtonom transport va masofadan boshqarish uchun ayniqsa muhim? | Juda kichik kechikish | Analog ovoz | Faqat SMS | Katta antenna
+uyga: Misol va mashqlar: Tinkercad onlayn muharririda kasbingizga oid oddiy buyum (kalitlar osgichi, asbob ushlagichi, nom tablichkasi) modelini yarating va STL formatida saqlang. Telefoningiz qaysi avlod tarmog'ida ishlayotganini va tezlik o'lchash ilovasidagi natijani yozing.
+gloss: Additiv ishlab chiqarish | Buyumni material qatlamlarini ketma-ket qo'shib yasash usuli (3D bosib chiqarish).
+gloss: Slayser | 3D modelni qatlamlarga ajratib, printer uchun buyruqlar (G-kod) tuzadigan dastur.
+gloss: Filament | FDM printerda ishlatiladigan g'altakka o'ralgan plastik ip (PLA, PETG, ABS).
+gloss: Prototip | Yangi mahsulotni sinash uchun tayyorlangan dastlabki namuna.
+gloss: Baza stansiyasi | Uyali aloqa zonasida telefonlar bilan radio orqali bog'lanadigan qurilmalar majmui.
+gloss: Kechikish (latentlik) | Ma'lumot jo'natilgandan javob kelguncha o'tadigan vaqt, millisekundda o'lchanadi.
+gloss: 5G | Juda yuqori tezlik, kichik kechikish va ko'p qurilma ulanishini ta'minlovchi beshinchi avlod uyali aloqa.
