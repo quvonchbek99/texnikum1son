@@ -130,7 +130,7 @@ footer a{color:var(--text-dim)}
 <section class="card" id="cJoin">
 <h2>📱 O'quvchi: o'yinga kirish</h2>
 <p class="sub">O'qituvchi ekranidagi 5 harfli kodni yozing — viktorina, Oltin sandiq, Mol ur yoki Moslashtir xonasi o'zi topiladi.</p>
-<div class="pinrow"><input class="field pin" id="pin" maxlength="5" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABCDE" aria-label="Xona kodi"><button type="button" class="btn primary" id="pinGo">Kirish ▶</button></div>
+<div class="pinrow"><input class="field pin" id="pin" maxlength="5" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="ABCDE" aria-label="Xona kodi" enterkeyhint="go"><button type="button" class="btn primary" id="pinGo">Kirish ▶</button></div>
 <div class="jerr" id="pinErr" role="alert"></div>
 </section>
 
@@ -170,6 +170,7 @@ footer a{color:var(--text-dim)}
 <div><a href="https://kuvonch.uz/oyinlar.html">Barcha o'yinlar</a> · <a href="https://kuvonch.uz/mashqlar.html">Mavzular</a> · <a href="https://kuvonch.uz/donat.html">💛 Qo'llab-quvvatlash</a></div>
 </footer>
 </div>
+<script src="ka-kirish.js?v=20261122a"></script>
 <script>
 (function () {
   "use strict";
@@ -196,7 +197,8 @@ footer a{color:var(--text-dim)}
     });
   });
   var pin = document.getElementById("pin");
-  pin.addEventListener("input", function () { var v = pin.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 5); if (pin.value !== v) pin.value = v; });
+  if (window.kaKirish) kaKirish.kodMaydon(pin); // kirillcha harflar lotinga, klaviatura so'z tuzayotganda tegilmaydi
+  else pin.addEventListener("input", function () { var v = pin.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 5); if (pin.value !== v) pin.value = v; });
   function go() {
     if (pin.value.length !== 5) { document.getElementById("pinErr").textContent = "Kod 5 ta belgidan iborat bo'lishi kerak"; pin.focus(); return; }
     location.href = "live/?kod=" + pin.value;

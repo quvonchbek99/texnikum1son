@@ -1519,5 +1519,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u yo'lda hech kimni uchratmadi", "Chunki u suvni birdan sarflab, zaxirasini tejamadi", "Chunki u mashkni noto'g'ri ko'tarib ketdi"],
     javob: 1,
     izoh: "Zaxirani bir zumda sarflagan sayohatchi yo'l oxirida suvsiz qoldi. Masal shuni o'rgatadiki, cheklangan narsani rejali ishlatish kerak."
+  },
+  {
+    id: "ez-188", mavzu: "ehtiyotkorlik", sarlavha: "Gil qozon va mis qozon",
+    matn: "Bir daryo oqimida gil qozon bilan mis qozon birga suzib ketardi. Gil qozon mis qozondan uzoqroq yurishni so'radi, chunki yonma-yon ketsa, mis qozon uni urib sindirishi mumkin edi. Mis qozon esa o'zini kuchli deb bilib, \"Sendan zarar ko'rmayman\", deb unga yaqinlashaverdi. Oqim ularni bir-biriga urdi va gil qozon chilpar-chilpar bo'lib sinib ketdi.",
+    savol: "Gil qozon nima uchun sinib ketdi?",
+    variantlar: ["Chunki u mis qozondan uzoqda oqardi", "Chunki u kuchliroq qozon bilan to'qnashib, mo'rtligi tufayli sindi", "Chunki daryo juda sayoz edi"],
+    javob: 1,
+    izoh: "Gil qozon mo'rt edi, mis qozon esa kuchli. Ular yonma-yon bo'lganda kuchli qozon zaifni ezib yubordi. Masal shuni o'rgatadiki, o'zingdan kuchliroq va zaif tomoningni tushunmaydigan kishi bilan ehtiyot bo'lib munosabatda bo'lish kerak."
+  },
+  {
+    id: "ez-189", mavzu: "mantiq", sarlavha: "Ikki dehqon va urug'",
+    matn: "Ikki dehqon bir xil bug'doy urug'ini ekdi. Birinchisi urug'ni nam, yaxshi haydalgan yerga sepdi va har kuni ekinni sug'orib turdi. Ikkinchisi esa urug'ni toshloq, quyoshda qotgan yerga tashladi va sug'orishni unutib qo'ydi. Bahorda birinchi dehqonning dalasi yashil bo'lib unib chiqdi, ikkinchisining ekinlari esa bir necha kundan so'ng qurib qoldi.",
+    savol: "Ikkinchi dehqonning ekini nima uchun qurib qoldi?",
+    variantlar: ["Chunki bug'doy urug'i yomon edi", "Chunki yer nam emas edi va ekin sug'orilmadi", "Chunki bahor juda sovuq keldi"],
+    javob: 1,
+    izoh: "Ikkala dehqon bir xil urug' ekdi, demak urug' sababchi emas. Farq yerning namligi va sug'orishda edi. Masal shuni ko'rsatadiki, natija ko'pincha ekilgan narsaning o'ziga emas, uni parvarish qilishga bog'liq."
   }
 ];

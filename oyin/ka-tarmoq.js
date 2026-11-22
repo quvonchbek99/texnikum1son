@@ -204,7 +204,10 @@
     return s;
   }
   // eski (raqamli) kodlar ham qabul qilinadi — tok o'chib qayta ochilgan eski xonalar uchun
-  function normCode(c) { return String(c || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 5); }
+  // kod kirillcha klaviaturada yozilsa ham (А→A, Р→P, Н→H …) ishlaydi — ka-kirish.js bilan bir xil jadval
+  var KYR = { "А": "A", "Б": "B", "В": "B", "Г": "G", "Ғ": "G", "Д": "D", "Е": "E", "Ё": "E", "Ж": "J", "З": "Z", "И": "N", "Й": "Y", "К": "K", "Қ": "Q", "Л": "L", "М": "M",
+    "Н": "H", "О": "O", "П": "P", "Р": "P", "С": "C", "Т": "T", "У": "Y", "Ў": "Y", "Ф": "F", "Х": "X", "Ҳ": "X", "Э": "E" };
+  function normCode(c) { return String(c || "").toUpperCase().replace(/[А-ЯЁЎҚҒҲ]/g, function (x) { return KYR[x] || ""; }).replace(/[^A-Z0-9]/g, "").slice(0, 5); }
   // xona qaysi sahifada ochilgani (live kirish sahifasi kodni shu sahifaga yo'naltiradi)
   function pageKind() { return ((location.pathname.match(/([\w-]+)\.html?$/) || [])[1] || "viktorina").toLowerCase(); }
   function rid(n) { var a = "abcdefghijkmnpqrstuvwxyz23456789", s = "", r = new Uint8Array(n); crypto.getRandomValues(r); for (var i = 0; i < n; i++) s += a[r[i] % a.length]; return s; }

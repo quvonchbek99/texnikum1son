@@ -698,7 +698,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
 <p class="sub">O'qituvchi ekranidagi 5 ta katta lotin harfidan iborat kodni yozing. Boshqa telefondan ham <b>kuvonch.uz/live</b> orqali kirish mumkin.</p>
 <div class="sgrow" id="jSg" role="radiogroup" aria-label="Siz kimsiz?"><span class="sgl">Siz:</span><button type="button" role="radio" data-sg="boy" aria-checked="false">👦 O'g'il bola</button><button type="button" role="radio" data-sg="girl" aria-checked="false">👧 Qiz bola</button><small>Kuvi sizga shunga mos so'zlar bilan murojaat qiladi</small></div>
 <div class="join">
-<label>Kod<input class="field pin" id="jPin" maxlength="5" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABCDE" inputmode="text"></label>
+<label>Kod<input class="field pin" id="jPin" maxlength="5" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="ABCDE" inputmode="text" enterkeyhint="next"></label>
 <label>Ismingiz <small style="font-weight:600">(guruh ro'yxati bo'lsa — keyin tanlaysiz)</small><input class="field" id="jName" maxlength="20" autocomplete="nickname" placeholder="Ism Familiya"></label>
 <button type="button" class="btn primary" id="jGo" style="min-height:48px">Kirish ▶</button>
 </div>
@@ -878,7 +878,8 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
 </div>
 <div class="toast" id="toast"></div>
 
-<script src="ka-tarmoq.js?v=20261116a"></script>
+<script src="ka-tarmoq.js?v=20261122a"></script>
+<script src="ka-kirish.js?v=20261122a"></script>
 <script src="ka-karta.js?v=20261117b"></script>
 <script src="ka-sertifikat.js?v=20261110a"></script>
 <script src="ka-kuvi.js?v=20261116a"></script>
@@ -1593,13 +1594,15 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
         '<button type="button" class="btn primary" id="dvGo" style="min-height:48px">Kirish</button></div><div class="msg err" id="dvMsg">' + esc(errText || "") + "</div>";
       var go = function () {
         var m = $("#dvMsg"), b = $("#dvGo"); m.className = "msg"; m.textContent = "⏳ Kirilmoqda…"; b.disabled = true;
-        dv("login", { login: $("#dvL").value.trim(), parol: $("#dvP").value }).then(function (j) {
+        (window.kaKirish ? kaKirish.davomat(dv, $("#dvL").value, $("#dvP").value) : dv("login", { login: $("#dvL").value.trim(), parol: $("#dvP").value })).then(function (j) {
           try { localStorage.setItem(LS_DVT, j.token); } catch (e) {}
           dvRender();
         }).catch(function (e) { b.disabled = false; m.className = "msg err"; m.textContent = e.message; });
       };
       $("#dvGo").onclick = go;
-      $("#dvP").addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
+      // telefonda katta harf/avtotuzatish o'chiq, 👁 parol, kirill/Caps Lock ogohlantirishi, Enter: login → parol → Kirish
+      if (window.kaKirish) kaKirish.maydonlar($("#dvL"), $("#dvP"), go, $("#dvMsg"));
+      else $("#dvP").addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
       return;
     }
     box.innerHTML = '<div class="row"><label>Guruh<select id="dvG"><option>⏳ Guruhlar yuklanmoqda…</option></select></label>' +
@@ -4206,7 +4209,9 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
   renderTopics(); bindSetup(); bindRoster(); summary();
   $("#go").addEventListener("click", function () { snd("tick"); openRoom(); });
   var pin = $("#jPin"), nm = $("#jName");
-  pin.addEventListener("input", function () { var v = pin.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 5); if (pin.value !== v) pin.value = v; });
+  // kod: kirillcha harflar lotinga o'giriladi, telefon klaviaturasi so'z tuzayotganda maydonga tegilmaydi (ka-kirish.js)
+  if (window.kaKirish) kaKirish.kodMaydon(pin);
+  else pin.addEventListener("input", function () { var v = pin.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 5); if (pin.value !== v) pin.value = v; });
   try { var last = JSON.parse(localStorage.getItem(LS_P) || "null"); if (last && last.name) nm.value = last.name; } catch (e) {}
   if (!nm.value && N) nm.value = N.identity().name || "";
   sgDraw();
