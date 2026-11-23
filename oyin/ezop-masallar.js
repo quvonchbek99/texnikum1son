@@ -1551,5 +1551,13 @@ window.EZOP_MASALLAR = [
     variantlar: ["Yuqoridagi to'g'onni birgalikda ochish kerak edi", "Pastdagi tegirmonni butunlay yopib qo'yish kerak edi", "Ariqdagi suvni kuniga bir marta olish kerak edi"],
     javob: 0,
     izoh: "Suv ikkala tegirmon uchun umumiy edi. Bittasi faqat o'z foydasi uchun to'g'on qurgani sababli, ikkalasi ham zarar ko'rdi. Umumiy resursni birgalikda asrash hammaga foyda keltiradi."
+  },
+  {
+    id: "ez-192", mavzu: "ehtiyotkorlik", sarlavha: "Ehtiyotkor kemachi",
+    matn: "Ikki kemachi kemalarini portda bog'lab, savdo qilish uchun shaharga ketishdi. Birinchisi arqonlarni tekshirib, langarni chuqurroq qoqdi va kemaning har bir bo'g'inini mustahkamladi. Ikkinchisi esa \"Bo'ron kelmas\" deb o'ylab, butun kunni bozorda behuda o'tkazdi. Kechqurun kuchli bo'ron ko'tarildi va faqat oldindan mustahkamlangan kema omon qoldi.",
+    savol: "Bo'ron kelganda birinchi kema nima uchun omon qoldi?",
+    variantlar: ["Chunki u oldindan arqon va langarni tekshirib, mustahkamlab qo'ygan edi", "Chunki bo'ron faqat ikkinchi kemaga urilgan edi", "Chunki dengiz o'sha kuni juda sokin edi"],
+    javob: 0,
+    izoh: "Birinchi kemachi xavfni oldindan o'ylab, arqon va langarni tekshirgan edi, shuning uchun bo'ron uni yengolmadi. Masal shuni o'rgatadiki, xavf kelishidan oldin tayyorgarlik ko'rish omon qolishni ta'minlaydi."
   }
 ];
