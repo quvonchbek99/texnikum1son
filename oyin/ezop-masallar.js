@@ -1575,5 +1575,29 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki kuz kelishi bilan barcha olmalar chirib ketadi", "Chunki olma daraxti uni o'zi tashlab yubordi", "Chunki u olmani asta-sekin o'zi yeb, uni ichidan bo'shatib qo'ydi"],
     javob: 2,
     izoh: "Qurt o'z uyining ichini yeb, uni mustahkam emas qilib qo'ydi. Masal shuni ko'rsatadiki, o'z foydasini ko'zlab, o'zi yashayotgan joyga zarar yetkazish oxirida o'ziga ham zarar keltiradi."
+  },
+  {
+    id: "ez-195", mavzu: "ehtiyotkorlik", sarlavha: "Maqtanchoq ot",
+    matn: "Ot har kuni o'zini eng tez jonzot deb maqtardi va sekin yuradigan eshakni masxara qilardi. Bir kuni u yo'lda tor ko'prikka shoshilib yugurdi. Tezlikni hech kim unga yetkazmasligini o'ylab, qadamlarini ehtiyot qilmadi. Ko'prikning silliq taxtasida oyog'i sirg'anib, ot daryoga tushib ketdi. Shu payt orqadan kelayotgan eshak esa bosiq qadam tashlab, xavfsiz o'tib ketdi.",
+    savol: "Eshak nega ko'prikdan xavfsiz o'tdi?",
+    variantlar: ["Chunki u ehtiyotkor va vazmin yurdi", "Chunki ko'prik faqat eshak uchun qurilgan edi", "Chunki ot uni daryoga itarib yubordi"],
+    javob: 0,
+    izoh: "Eshak shoshilmasdan, ehtiyotkorlik bilan yurgani uchun sirg'anmadi. Tezlik har doim ustunlik bermaydi; ehtiyotkorlik ko'pincha xavfdan saqlaydi."
+  },
+  {
+    id: "ez-196", mavzu: "o'zlik", sarlavha: "Qarg'a va kaptarlar",
+    matn: "Qarg'a kaptarlarning oppoq patlarini ko'rib, o'zi ham ularga o'xshashni xohladi. U oq bo'yoq topib, qora patlarini bo'yadi va kaptarlar suruviga qo'shildi. Kaptarlar uni o'z qatorida ko'rib, bir muddat do'st sifatida qabul qilishdi. Lekin qarg'a ovqat yeyayotganda ovozi va odatlari uni fosh qildi, kaptarlar esa uni haydab yuborishdi.",
+    savol: "Qarg'a nega na kaptarlar, na qarg'alar orasida o'z o'rnini topa olmadi?",
+    variantlar: ["Chunki u o'z haqiqiy tabiatini yashirib, boshqaga o'xshashga urindi", "Chunki kaptarlar oq rangdan qo'rqardi", "Chunki u juda sekin uchardi va suruvga yetolmasdi"],
+    javob: 0,
+    izoh: "Qarg'a o'zligini inkor qilib, boshqalarga o'xshashga urindi. Bu bilan u na eski guruhida, na yangi guruhda ishonch topdi. Masal shuni o'rgatadiki, o'zligini yashirish bilan hech kimning chin ishonchini qozonib bo'lmaydi."
+  },
+  {
+    id: "ez-197", mavzu: "himoya", sarlavha: "Tovuq va burgut",
+    matn: "Burgut bir tovuqning cho'jalarini ko'rib, ulardan birini olib ketish uchun osmonda aylana boshladi. Tovuq esa cho'jalarini tezda yig'ib, qanotlari ostiga oldi va sokin turdi. Burgut bir necha marta hujum qilmoqchi bo'ldi, lekin hech bir cho'jani topa olmadi.",
+    savol: "Burgut nega cho'jalarni ola olmadi?",
+    variantlar: ["Chunki tovuq cho'jalarini birlashtirib, qanotlari ostida himoya qildi", "Chunki burgut ochlikdan juda kuchsiz edi", "Chunki cho'jalar allaqachon uchib ketgan edi"],
+    javob: 0,
+    izoh: "Tovuq cho'jalarini bir joyga yig'ib himoya qildi, shu sababli burgut hujum qila olmadi. Birlashish va ehtiyotkorlik ko'pincha katta xavfdan saqlaydi."
   }
 ];
