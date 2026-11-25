@@ -54,9 +54,9 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px;text-align:center}
 <header class="hero"><div class="wrap">
   <div class="top"><a href="../../">← texnikum1son.uz</a><span style="opacity:.4">/</span><a href="../">Avtotest</a></div>
   <h1>AvtoTest24 — kompyuter sinfi uchun imtihon dasturi</h1>
-  <p>Hamma kompyuterga bitta fayl — <b>AvtoTest24.exe</b>. O‘qituvchi kompyuteri server bo‘ladi, qolganlari uni o‘zi topadi. O‘quvchi ismini yozib testni o‘zi boshlaydi. Server bo‘lmasa ham ishlaydi. Internet kerak emas.</p>
+  <p>Hamma kompyuterga bitta fayl — <b>AvtoTest24.exe</b>. O‘qituvchi kompyuteri server bo‘ladi, qolganlari uni o‘zi topadi. O‘qituvchi sinovni boshlasa, hamma kompyuterda o‘zi ochiladi. Server bo‘lmasa ham ishlaydi. Internet kerak emas.</p>
   <a class="dl" href="../yuklab/AvtoTest24.zip" download>⬇ AvtoTest24 yuklab olish (Windows, 4 MB)</a>
-  <div class="meta">Versiya 1.5 · Windows 10 / 11 · bitta AvtoTest24.exe + qo‘llanma · bepul</div>
+  <div class="meta">Versiya 1.6 · Windows 10 / 11 · bitta AvtoTest24.exe + qo‘llanma · bepul · o‘zi yangilanadi</div>
   <img class="shot" src="img/imtihon.jpg" alt="O‘quvchi imtihon ekrani" width="1366" height="768">
 </div></header>
 
@@ -74,14 +74,16 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px;text-align:center}
 <section>
   <h2>Imkoniyatlar</h2>
   <div class="grid">
-    <div class="card"><b>🚦 1272 ta savol</b><p>YHQ (VM 2022-yil 172-son qarori), belgilar, chiziqlar, vaziyat rasmlari, birinchi tibbiy yordam.</p></div>
-    <div class="card"><b>⏱ Rasmiy imtihon tartibi</b><p>20 savol, 25 daqiqa, 2 tagacha xato; javob F1–F4 bilan, 3-xatoda imtihon to‘xtaydi.</p></div>
-    <div class="card"><b>✅ Ruxsat bilan boshlash</b><p>O‘quvchi kiradi va kutadi — o‘qituvchi «Ruxsat» bosgandagina test va vaqt boshlanadi.</p></div>
-    <div class="card"><b>📡 Jonli kuzatuv</b><p>Kim qaysi savolda, nechta xato, qancha vaqt qoldi. +5 daqiqa, qayta topshirish.</p></div>
-    <div class="card"><b>📝 O‘z savollaringiz</b><p>«Testlar» bo‘limida savol qo‘shish (rasm bilan), keraksizini imtihondan olish.</p></div>
-    <div class="card"><b>📊 Natijalar</b><p>Excel‘ga yuklab olish va chop etish. Ma’lumotlar har kuni zaxiraga ko‘chiriladi.</p></div>
-    <div class="card"><b>🤖 AI xulosa</b><p>Har bir natijaga va butun guruhga: zaif mavzular, YHQ bandlari, reja. Internetsiz ham ishlaydi; Gemini kaliti bilan — haqiqiy AI.</p></div>
-    <div class="card"><b>📚 To‘liq avtotest</b><p>«Mashq»: 40 bilet, mavzular, marafon, xatolar ustida ishlash, avtodrom — hammasi exe ichida.</p></div>
+    <div class="card"><b>🖥 Server paneli</b><p>«Sinovni boshlash», «Sinovni to‘xtatish», «Kompyuterlarni o‘chirish», «Tozalash», «Guruhlar», «Hisobotlar» — tanish tartibda.</p></div>
+    <div class="card"><b>📝 20 / 50 / 75 / 100 talik sinovlar</b><p>20 talik — rasmiy tartib (3-xatoda tugaydi). 50 va undan ko‘pi — xatolardan qat’i nazar oxirigacha, 90% — o‘tish.</p></div>
+    <div class="card"><b>📡 Hammasi serverda ko‘rinadi</b><p>Kim kirdi, qaysi savolda, nechta to‘g‘ri/xato, qancha vaqt qoldi — har bir kompyuter alohida kartada.</p></div>
+    <div class="card"><b>▶ Sinov o‘zi ochiladi</b><p>O‘qituvchi boshlasa, o‘quvchi kompyuterlarida sinov avtomatik boshlanadi. O‘quvchi mustaqil test ham topshira oladi.</p></div>
+    <div class="card"><b>🚗 Vaziyat animatsiyasi</b><p>Chorraha savollarida javobdan keyin mashinalar qoida bo‘yicha to‘g‘ri tartibda harakatlanadi.</p></div>
+    <div class="card"><b>👥 Guruhlar</b><p>Avtomaktab, guruh, til, F.I.Sh., toifa, sana, ID. Excel‘dan nusxalab qo‘yish va Excel‘ga saqlash.</p></div>
+    <div class="card"><b>📊 Hisobotlar</b><p>Sana, imtihon turi va guruh bo‘yicha natijalar; Excel, chop etish.</p></div>
+    <div class="card"><b>🤖 AI xulosa</b><p>Har bir natija va guruh bo‘yicha: zaif mavzular, YHQ bandlari, tavsiyalar. Internetsiz ham ishlaydi.</p></div>
+    <div class="card"><b>📚 To‘liq avtotest</b><p>«Mashq»: 1272 savol, 40 bilet, mavzular, marafon, xatolar ustida ishlash, avtodrom.</p></div>
+    <div class="card"><b>⬆ Avtomatik yangilanish</b><p>Dastur yangi versiyani o‘zi yuklaydi: internetdan yoki o‘qituvchi serveridan.</p></div>
   </div>
 </section>
 
@@ -89,21 +91,21 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px;text-align:center}
   <h2>Ishlatish</h2>
   <ol class="steps">
     <li>ZIP‘ni oching. <b>AvtoTest24.exe</b> ni barcha kompyuterlarga ko‘chiring (bitta fayl).</li>
-    <li><b>O‘qituvchi kompyuterida</b> AvtoTest24.exe ni oching → <b>«O‘QITUVCHI SERVERI»</b>. «Разрешить вносить изменения?» chiqsa — <b>«Да»</b>. Panel parolsiz ochiladi, keyingi safar shu kompyuter o‘zi server bo‘ladi.</li>
-    <li><b>O‘quvchi kompyuterida</b> AvtoTest24.exe ni oching — server o‘zi topiladi. Ism-familiyani yozib <b>«TESTNI BOSHLASH»</b>.</li>
-    <li>O‘quvchilar va ularning kompyuterlari o‘qituvchi panelida <b>avtomatik</b> ko‘rinadi: kim qaysi savolda, nechta xato, qancha vaqt qoldi.</li>
-    <li>Server bo‘lmasa: <b>«TESTNI SHU KOMPYUTERDA TOPSHIRISH»</b> — test mustaqil ishlaydi.</li>
+    <li><b>O‘qituvchi kompyuterida</b> oching → <b>«O‘QITUVCHI SERVERI»</b>. «Разрешить вносить изменения?» chiqsa — <b>«Да»</b>. Keyingi safar o‘zi server bo‘lib ochiladi.</li>
+    <li><b>O‘quvchi kompyuterlarida</b> oching — server o‘zi topiladi. O‘quvchi ism-familiyasini yozadi.</li>
+    <li>Panelda «Imtihon turi» va «Savollar» sonini tanlab <b>«Sinovni boshlash»</b> ni bosing — sinov hamma kompyuterda o‘zi ochiladi.</li>
+    <li>Natijalar bosh ekranda va <b>«Hisobotlar»</b>da. Server bo‘lmasa: «TESTNI SHU KOMPYUTERDA TOPSHIRISH».</li>
   </ol>
-  <p class="note">Ruxsat bilan imtihon kerak bo‘lsa: panelda «Imtihonlar» → «+ Yangi imtihon» — o‘quvchi kirgach «Ruxsat» bosilgandagina boshlanadi.</p>
+  <p class="note">Eski versiya o‘rnatilgan bo‘lsa, faylni bir marta qo‘lda almashtiring — 1.6 dan boshlab dastur o‘zi yangilanadi.</p>
 </section>
 
 <section>
   <h2>Ekranlar</h2>
   <div class="pics">
-    <figure><img src="img/ruxsat.jpg" alt="Ruxsat kutish" loading="lazy"><figcaption>O‘quvchi: o‘qituvchi ruxsatini kutish</figcaption></figure>
-    <figure><img src="img/kuzatuv.jpg" alt="Jonli kuzatuv" loading="lazy"><figcaption>Server: jonli kuzatuv va «Ruxsat» tugmasi</figcaption></figure>
-    <figure><img src="img/testlar.jpg" alt="Testlar" loading="lazy"><figcaption>Server: testlarni boshqarish</figcaption></figure>
-    <figure><img src="img/imtihon.jpg" alt="Imtihon" loading="lazy"><figcaption>O‘quvchi: imtihon ekrani (F1–F4)</figcaption></figure>
+    <figure><img src="img/ruxsat.jpg" alt="Guruhlar" loading="lazy"><figcaption>Server: «Guruhlar» — o‘quvchilar ro‘yxati</figcaption></figure>
+    <figure><img src="img/kuzatuv.jpg" alt="Jonli kuzatuv" loading="lazy"><figcaption>Server: bosh ekran — ulangan kompyuterlar va natijalar</figcaption></figure>
+    <figure><img src="img/testlar.jpg" alt="Hisobotlar" loading="lazy"><figcaption>Server: «Hisobotlar»</figcaption></figure>
+    <figure><img src="img/imtihon.jpg" alt="Imtihon" loading="lazy"><figcaption>O‘quvchi: 100 talik sinov, vaziyat animatsiyasi</figcaption></figure>
   </div>
 </section>
 
