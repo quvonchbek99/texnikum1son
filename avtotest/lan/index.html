@@ -56,7 +56,7 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px;text-align:center}
   <h1>AvtoTest LAN — kompyuter sinfi uchun imtihon dasturi</h1>
   <p>Bitta o‘qituvchi kompyuteri — server, qolgan kompyuterlar Wi-Fi yoki kabel orqali ulanadi. Internet kerak emas. Imtihon faqat server ruxsat bergandan keyin boshlanadi.</p>
   <a class="dl" href="../yuklab/AvtoTest_LAN.zip" download>⬇ Yuklab olish (Windows, 6 MB)</a>
-  <div class="meta">Versiya 1.0 · Windows 10 / 11 · Oqituvchi.exe + Oquvchi.exe + qo‘llanma · bepul</div>
+  <div class="meta">Versiya 1.1 · Windows 10 / 11 · Oqituvchi.exe + Oquvchi.exe + qo‘llanma · bepul</div>
   <img class="shot" src="img/imtihon.jpg" alt="O‘quvchi imtihon ekrani" width="1366" height="768">
 </div></header>
 
@@ -87,7 +87,7 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px;text-align:center}
   <h2>O‘rnatish</h2>
   <ol class="steps">
     <li>ZIP‘ni <b>server (o‘qituvchi) kompyuteriga</b> yuklab oling va papkaga oching, masalan <code>D:\AvtoTest_LAN</code>.</li>
-    <li><b>Oqituvchi.exe</b> ni ishga tushiring. Windows Firewall oynasida «Частные сети / Private» ni belgilab, <b>«Разрешить / Allow»</b> ni bosing.</li>
+    <li><b>Oqituvchi.exe</b> ni ishga tushiring. «Разрешить вносить изменения?» oynasida <b>«Да / Yes»</b> ni bosing — dastur Windows Firewall‘ni o‘zi sozlaydi.</li>
     <li>Ochilgan panelga <code>admin</code> paroli bilan kiring va parolni «Sozlamalar»da o‘zgartiring. Guruh va o‘quvchilarni qo‘shing (Excel‘dan nusxalab qo‘yish mumkin).</li>
     <li>«Imtihonlar» → «+ Yangi imtihon» → <b>«Boshlash»</b>.</li>
     <li>O‘quvchi kompyuterlariga <b>Oquvchi.exe</b> ni ko‘chiring va ishga tushiring — u serverni o‘zi topadi. O‘quvchi guruhi va ismini tanlaydi.</li>
@@ -109,7 +109,7 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px;text-align:center}
 <section>
   <h2>Muammo bo‘lsa</h2>
   <div class="grid">
-    <div class="card"><b>Server topilmadi</b><p>Kompyuterlar bitta tarmoqdami? Server kompyuterida Firewall ruxsati berilganmi? Oquvchi ekranida server IP‘sini qo‘lda kiriting.</p></div>
+    <div class="card"><b>Server topilmadi</b><p>Kompyuterlar bitta tarmoqdami? Oqituvchi.exe ni bir marta «Запуск от имени администратора» bilan oching. <code>127.0.0.1</code> faqat server kompyuterining o‘zida ishlaydi — boshqalar uchun panel tepasidagi IP manzil.</p></div>
     <div class="card"><b>Wi-Fi «Public» tarmoq</b><p>Windows sozlamalarida tarmoq turini «Частная / Private» qiling.</p></div>
     <div class="card"><b>To‘liq ekrandan chiqish</b><p>Alt+F4. Oddiy oynada ochish uchun <code>oquvchi.ini</code> faylida <code>kiosk=0</code> qiling.</p></div>
   </div>
