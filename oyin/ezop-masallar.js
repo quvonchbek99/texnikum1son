@@ -1647,5 +1647,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki bog'da hamma uxlab yotgan edi", "Chunki u o'z tabiiy ovozini hisobga olmay, boshqaning kuyini taqlid qildi", "Chunki bulbul uni bog'dan haydab yubordi"],
     javob: 1,
     izoh: "Qo'ng'iz bulbulga taqlid qilishga urindi, lekin o'z tabiatiga mos ovozni ishlatmadi. Har kim o'z kuchini bilib ish qilganda natija yaxshi bo'ladi."
+  },
+  {
+    id: "ez-204", mavzu: "ehtiyotkorlik", sarlavha: "Chumchuq va don",
+    matn: "Kuz oxirida bir chumchuq hali yig'ilmagan donga to'la dalani ko'rib qoldi. U ertalabdan kechgacha don terib, uyasiga qaytishni ham unutdi. Kech tushib, osmon bulutga to'lganda ham u tinmay ishlardi. Shu payt sovuq shamol esib, qor yog'a boshladi va chumchuq uyasiga yetolmay qoldi.",
+    savol: "Chumchuq nima uchun qor ichida qolib ketdi?",
+    variantlar: ["Chunki dalada hech qanday don qolmagan edi", "Chunki u donni ko'p terib, uchishga kuchi qolmadi", "Chunki u kun botishi va ob-havoning o'zgarishini hisobga olmay, uyasiga qaytishni kechiktirdi"],
+    javob: 2,
+    izoh: "Chumchuq ishga shunchalik berilib ketdiki, vaqtni va ob-havo belgilarini e'tibordan chetda qoldirdi. Ishni rejalashtirish va xavfni oldindan hisobga olish muhim."
+  },
+  {
+    id: "ez-205", mavzu: "mehnat", sarlavha: "Ari va qish",
+    matn: "Yoz bo'yi bir ari gul bog'lari atrofida uchib yurdi, lekin asal yig'ishni keyinga qoldirdi. Kuz kelib sovuq tushganda, uning uyasida tayyor ozuqa yo'q edi. Qo'shni ari esa yozda har kuni asal yig'ib, uyasini to'ldirib qo'ygan edi. Qish kelganda birinchi ari ochlikdan holsizlanib, qo'shnisidan yordam so'radi.",
+    savol: "Ari nega qishda ochlikka duchor bo'ldi?",
+    variantlar: ["Chunki u yoz bo'yi gul bog'larini kezib, zarur ishni vaqtida bajarmadi", "Chunki uning uyasi kuchli shamolda buzilgan edi", "Chunki qo'shnisi unga asal berishni rad etgan edi"],
+    javob: 0,
+    izoh: "Qulay paytda tayyorgarlik ko'rilmasa, qiyin kunlarda oqibati o'ziga qaytadi. Kelajakka tayyorgarlik yozda, ya'ni vaqt bor paytda boshlanadi."
   }
 ];
