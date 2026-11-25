@@ -609,7 +609,7 @@
       '<p style="margin:.4em 0">' + H('Savollar va vaziyat rasmlari shu manbalar asosida mustaqil tuzilgan. Rasmiy imtihon savollari bazasi ochiq eʼlon qilinmagan, shuning uchun bu savollar imtihondagilar bilan soʻzma-soʻz bir xil emas. Tibbiy yordam savollari xalqaro birinchi yordam tavsiyalariga asoslangan.') + '</p>' +
       '<p style="margin:.4em 0">' + H('Jarimalar BHM boʻyicha hisoblanadi (standart: ' + fmt(B.bhm) + ' soʻm). BHM oʻzgarsa, sozlamalarda yangilang.') + '</p></div>' +
       (WEB ? '<div class="card small"><b>' + H('Yuklab olish') + '</b><p style="margin:.4em 0">' + H('Telefonga oʻrnatsangiz, internetsiz ishlaydi (Android 7.0 va undan yangi, 1,7 MB).') + '</p><a class="btn" href="yuklab/YHQ-Test-2026.apk" download>' + H('Android (APK) yuklab olish') + '</a></div>' +
-        '<div class="card small"><b>' + H('Kompyuter sinfi uchun (Windows)') + '</b><p style="margin:.4em 0">' + H('Bitta oʻqituvchi serveri va oʻquvchi kompyuterlari — lokal tarmoqda, internetsiz imtihon. Ruxsat bilan boshlash, jonli kuzatuv, Excel natijalar.') + '</p><a class="btn" href="lan/">' + H('AvtoTest LAN — batafsil va yuklab olish') + '</a></div>' : '') +
+        '<div class="card small"><b>' + H('Kompyuter sinfi uchun (Windows)') + '</b><p style="margin:.4em 0">' + H('Bitta oʻqituvchi serveri va oʻquvchi kompyuterlari — lokal tarmoqda, internetsiz imtihon. Ruxsat bilan boshlash, jonli kuzatuv, Excel natijalar.') + '</p><a class="btn" href="lan/">' + H('AvtoTest24 — batafsil va yuklab olish') + '</a></div>' : '') +
       '<p class="disclaimer">' + H('Toshkent tuman 1-son texnikumi · 2026') + '</p>');
   }
 
