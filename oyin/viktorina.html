@@ -885,6 +885,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
 <script src="ka-kuvi.js?v=20261116a"></script>
 <script src="ka-xato.js?v=20261110a"></script>
 <script src="ka-ai.js?v=20261112d"></script>
+<script src="ka-bolimlar.js?v=20261125a"></script>
 <script>
 /*! Kuvonch Academy — Jonli viktorina (Kahoot uslubida): o'qituvchi ekrani + o'quvchi telefoni, PeerJS xona kodi orqali */
 (function () {
@@ -923,6 +924,8 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
   var GROUPS = ["🧮 Asosiy amallar", "📘 Mavzular (1–50)", "🎓 Algebra · Milliy sertifikat (51–70)", "📐 Geometriya (71–88)", "🎲 Kombinatorika va ehtimollik (89–96)", "⚛️ Fizika uchun matematika (97–98)", "📊 SAT statistika (99–102)", "🎯 Sinflar bo'yicha — daraja testi (1–11-sinf)", "🏫 1–9-sinf modullari", "🧠 Mantiq", "🇬🇧 Ingliz tili", "🇷🇺 Rus tili", "⚛️ Fizika", "🧪 Kimyo", "🧬 Biologiya", "🌍 Geografiya", "📜 Tarix", "💻 Informatika va robototexnika", "📝 Ona tili", "📈 Grafiklar (chizmali savollar)", "🚗 Avtotest (prava imtihoni)", "📖 Adabiyot", "⚖️ Huquq", "💰 Iqtisodiyot", "🔭 Astronomiya", "✏️ Chizmachilik", "🌱 Ekologiya", "🤝 Tarbiya", "🎖️ ChQBT (chaqiruvgacha tayyorgarlik)", "🏃 Jismoniy tarbiya", "🦉 Zakovat (bilimdonlar savollari)"];
   // fanlar: qaysi guruhlar qaysi fanga tegishli (filtr tugmalari)
   var FANS = [["all", "🌐 Hammasi", null], ["mat", "📐 Matematika", [19, 0, 1, 2, 3, 4, 5, 6, 7, 8]], ["mantiq", "🧠 Mantiq", [9]], ["zakovat", "🦉 Zakovat", [30]], ["ingliz", "🇬🇧 Ingliz tili", [10]], ["rus", "🇷🇺 Rus tili", [11]], ["fizika", "⚛️ Fizika", [12, 5]], ["kimyo", "🧪 Kimyo", [13]], ["biologiya", "🧬 Biologiya", [14]], ["geografiya", "🌍 Geografiya", [15]], ["tarix", "📜 Tarix", [16]], ["informatika", "💻 Informatika", [17]], ["ona", "📝 Ona tili", [18]], ["adabiyot", "📖 Adabiyot", [21]], ["huquq", "⚖️ Huquq", [22]], ["iqtisod", "💰 Iqtisodiyot", [23]], ["astronomiya", "🔭 Astronomiya", [24]], ["chizma", "✏️ Chizmachilik", [25]], ["ekologiya", "🌱 Ekologiya", [26]], ["tarbiya", "🤝 Tarbiya", [27]], ["chqbt", "🎖️ ChQBT", [28]], ["sport", "🏃 Jismoniy tarbiya", [29]], ["avto", "🚗 Avtotest", [20]]];
+  // 🔌 saytdagi alohida fan bo'limlari (Ibrohim tarix, 10-sinf tarbiya, Umida huquq …) — ka-bolimlar.js MANIFEST dan o'zi qo'shiladi
+  if (window.KA_BOLIM) window.KA_BOLIM.apply(TOPICS, GROUPS, FANS);
   var fanParam = (/[?&]fan=([a-z]+)/i.exec(location.search) || [])[1];
   var curFan = fanParam && FANS.some(function (f) { return f[0] === fanParam; }) ? fanParam : "all";
   var TITLE = {}; TOPICS.forEach(function (t) { TITLE[t[0]] = t[1]; });
@@ -1282,6 +1285,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
   var atLoading = null;
   function atImg(r) {
     if (!r) return "";
+    if (typeof r === "string" && window.KA_BOLIM && window.KA_BOLIM.okImg(r)) return window.KA_BOLIM.img(r); // fan bo'limi rasmi
     if (typeof r === "string") return /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(r) ? '<img class="qimg" src="' + r + '" alt="Savol rasmi">' : ""; // o'qituvchi qo'ygan rasm
     var h = window.kaAvto ? window.kaAvto.img(r) : "";
     if (h) return h;
@@ -1631,7 +1635,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
   /* ---------------- savollar generatori (faqat o'qituvchida yuklanadi) ---------------- */
   var genReady = null;
   function loadGens() {
-    if (window.kaSavol && ["t102", "s11", "m1", "f1", "b1", "gf1", "ad1", "zk1"].every(function (id) { return window.kaSavol.has(id); })) return Promise.resolve();
+    if (window.kaSavol && ["t102", "s11", "m1", "f1", "b1", "gf1", "ad1", "zk1"].every(function (id) { return window.kaSavol.has(id); }) && (!window.KA_BOLIM || window.KA_BOLIM.done())) return Promise.resolve();
     if (genReady) return genReady;
     var mark = { "ka-savollar-fanlar.js": "m1", "ka-fan-tabiiy.js": "f1", "ka-fan-ijtimoiy.js": "b1", "ka-fan-maktab.js": "ad1", "ka-grafik.js": "gf1", "ka-fan-zakovat.js": "zk1" };
     genReady = GEN_FILES.reduce(function (p, f) {
@@ -1640,7 +1644,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
         // internet sekin bo'lsa ham bitta fayl hammasini to'xtatib qo'ymasin (15 soniyadan keyin keyingisiga o'tamiz)
         return new Promise(function (res) { var s = document.createElement("script"); s.src = f + "?v=20261107b"; s.onload = res; s.onerror = res; setTimeout(res, 15000); document.head.appendChild(s); });
       });
-    }, Promise.resolve());
+    }, Promise.resolve()).then(function () { return window.KA_BOLIM ? window.KA_BOLIM.prep() : null; }); // 🔌 fan bo'limlari savollari
     return genReady;
   }
   // generatorlar + tanlangan fanlarning lug'at fayllari (ingliz/rus tili) — faqat kerak bo'lganda
