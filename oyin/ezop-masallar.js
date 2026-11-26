@@ -1663,5 +1663,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u yoz bo'yi gul bog'larini kezib, zarur ishni vaqtida bajarmadi", "Chunki uning uyasi kuchli shamolda buzilgan edi", "Chunki qo'shnisi unga asal berishni rad etgan edi"],
     javob: 0,
     izoh: "Qulay paytda tayyorgarlik ko'rilmasa, qiyin kunlarda oqibati o'ziga qaytadi. Kelajakka tayyorgarlik yozda, ya'ni vaqt bor paytda boshlanadi."
+  },
+  {
+    id: "ez-206", mavzu: "hamkorlik", sarlavha: "Ikki dehqon va ariq",
+    matn: "Ikki qo'shni dehqonning dalasi bitta ariq bo'yida edi. Quruqchilik kelib, ariq loyga to'lib qoldi va suv o'tmay qoldi. Birinchi dehqon \"Bu ariq mening emas\" deb qarab turdi, ikkinchisi esa qo'shnisi bilan bir kun birga ariqni tozaladi. Oqib kelgan suv ikkinchi dehqonning ekinini sug'ordi, birinchisining dalasi esa qurib qoldi.",
+    savol: "Ikkinchi dehqonning ekini nega sug'orildi?",
+    variantlar: ["Chunki u qo'shnisi bilan birga ariqni tozalab, suvning oqishini ta'minladi", "Chunki birinchi dehqon unga o'z suvini bergan edi", "Chunki quruqchilik faqat uning dalasiga tegmagan edi"],
+    javob: 0,
+    izoh: "Umumiy muammoni birgalikda hal qilish hammaning foydasiga xizmat qiladi. Birinchi dehqon esa \"bu mening ishim emas\" deb, o'zi ham suvsiz qoldi."
+  },
+  {
+    id: "ez-207", mavzu: "ehtiyotkorlik", sarlavha: "Qurbaqalar va tulki",
+    matn: "Ko'l bo'yida yashaydigan qurbaqalar har kuni quyoshda cho'milib o'tirardi. Bir kuni tulki ko'l yoniga kelib, ularni ovlamoqchi bo'ldi. Qurbaqalar uni ko'rishi bilanoq tezda suvga sakrab tushib, ko'l tubidagi loyga yashirinishdi. Tulki suvga uzoq qarab turdi, lekin hech kimni ko'rmadi va bo'sh qo'l bilan ketib qoldi.",
+    savol: "Qurbaqalar tulkidan nima uchun omon qolishdi?",
+    variantlar: ["Chunki ular tezda suv tubiga yashirinib, tulkining ko'zidan g'oyib bo'lishdi", "Chunki tulki qurbaqalarga achinib, ularni ovlamadi", "Chunki tulki uyquga ketib qolgan edi"],
+    javob: 0,
+    izoh: "Xavf tug'ilganda qurbaqalar tezda o'zlarini yashirishdi va tulki ularni ko'ra olmadi. Ba'zan qochish va yashirinish eng oqilona yechim bo'ladi."
   }
 ];
