@@ -1679,5 +1679,29 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki ular tezda suv tubiga yashirinib, tulkining ko'zidan g'oyib bo'lishdi", "Chunki tulki qurbaqalarga achinib, ularni ovlamadi", "Chunki tulki uyquga ketib qolgan edi"],
     javob: 0,
     izoh: "Xavf tug'ilganda qurbaqalar tezda o'zlarini yashirishdi va tulki ularni ko'ra olmadi. Ba'zan qochish va yashirinish eng oqilona yechim bo'ladi."
+  },
+  {
+    id: "ez-208", mavzu: "mehnat", sarlavha: "Bog'bonning ikki shogirdi",
+    matn: "Bog'bon ikki shogirdiga bir xil ko'chat berib, uni bog'ning ikki chetiga ekishni buyurdi. Birinchi shogird ko'chatni tezda ekib qo'ydi-yu, keyin uni butunlay unutdi, chunki ish tugadi deb o'yladi. Ikkinchi shogird esa har kuni ko'chat yoniga borib, suv quyib, quyosh tig'idan soya qildi. Bir yil o'tgach, birinchi ko'chat qurib qoldi, ikkinchisi esa baquvvat, mevali daraxtga aylandi.",
+    savol: "Ikkinchi ko'chat nima uchun baquvvat daraxtga aylandi?",
+    variantlar: ["Chunki uni har kuni parvarish qilib, suv va soya berib turishdi", "Chunki u boshqa ko'chatdan balandroq joyga ekilgan edi", "Chunki bog'bon uni faqat qishda sug'orishni buyurgan edi"],
+    javob: 0,
+    izoh: "Doimiy parvarish va e'tibor ko'chat omon qolishi va o'sishi uchun zarur. Ish bir marta bajarilgani bilan tugamaydi, uni davom ettirish kerak."
+  },
+  {
+    id: "ez-209", mavzu: "mantiq", sarlavha: "Laylak va qurbaqa",
+    matn: "Laylak ko'l bo'yida qurbaqalarni ovlab yurardi. Qurbaqalar uni qo'rqitish uchun bir ovozdan qattiq qurillay boshladi. Laylak esa shovqinga quloq solib, eng baland ovoz qayerdan kelayotganini darhol topdi. U to'g'ri o'sha tomonga borib, qurillayotgan qurbaqani tutib oldi.",
+    savol: "Qurbaqalar qurillab laylakni nega qo'rqita olmadi?",
+    variantlar: ["Chunki laylakning qulog'i yo'q edi", "Chunki qurillash laylakka qurbaqalarning joyini ko'rsatib berdi", "Chunki qurbaqalar juda kichik edi"],
+    javob: 1,
+    izoh: "Shovqin laylakka qurbaqalarning qayerdaligini oshkor qilib qo'ydi. Xavf paytida o'zingni oshkor qiladigan harakat foydasiz bo'ladi."
+  },
+  {
+    id: "ez-210", mavzu: "mantiq", sarlavha: "Yelkanli kema va shamol",
+    matn: "Ikki dengizchi bir xil kemada qarshi shamolga qarab yo'lga chiqdi. Birinchisi kuch bilan eshkak eshib, kemani zo'rlab oldinga itarishga urindi, ammo charchab, kema deyarli o'rnidan siljimadi. Ikkinchisi esa yelkanni shamol yo'nalishiga qarab sozladi va kemani zigzag yo'l bilan sekin-sekin manzil tomon yetaklab bordi.",
+    savol: "Ikkinchi dengizchi nega manzilga yetib bordi?",
+    variantlar: ["Chunki u ko'proq kuch sarflab, eshkakni tezroq urdi", "Chunki u yelkanni vaziyatga mos sozlab, kuchni to'g'ri yo'nalishda ishlatdi", "Chunki u shamol to'xtaguncha kemada kutib o'tirdi"],
+    javob: 1,
+    izoh: "Natijaga olib boradigan narsa ko'p kuch emas, vaziyatga mos to'g'ri usul. Kuchni noto'g'ri yo'nalishda sarflash foyda bermaydi."
   }
 ];
