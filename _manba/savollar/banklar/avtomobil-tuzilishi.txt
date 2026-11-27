@@ -21,3 +21,108 @@ Avtomobil harakat yo'nalishini o'zgartirishga xizmat qiladigan tizim? | Rul bosh
 Gidravlik tormoz yuritmasida pedal kuchini suyuqlik bosimiga aylantiruvchi qism? | Bosh tormoz silindri | Termostat | Karburator | Starter
 ABS tizimi nimaga xizmat qiladi? | Keskin tormozlashda g'ildiraklar blokirovkalanishining oldini oladi | Dvigatel quvvatini oshiradi | Yoqilg'i sarfini o'lchaydi | Shinalarga havo beradi
 Shina belgisi 205/55 R16 da "16" raqami nimani bildiradi? | Disk (g'ildirak) diametrini, dyuymda | Shina kengligini, mm da | Profil balandligini, % da | Tezlik indeksini
+@ 1-mavzu. Ustaxonada xavfsizlik texnikasi
+Ish boshlashdan oldin o'quvchi qaysi jurnalga imzo qo'yadi? | Xavfsizlik texnikasi bo'yicha yo'riqnoma jurnaliga | Davomat jurnaliga | Ombor jurnaliga | Sinf jurnaliga
+Ko'targichdagi avtomobil ostida ishlaganda nimaga yo'l qo'yilmaydi? | Faqat gidravlikaga tayanib, qulflarsiz ishlashga | Himoya ko'zoynagi taqishga | Qo'lqop kiyishga | Yoritgich ishlatishga
+Elektr simining izolyatsiyasi shikastlangan asbob bilan ishlash mumkinmi? | Yo'q, darhol almashtirish yoki ta'mirlash kerak | Ha, ehtiyot bo'lib ishlasa bo'ladi | Faqat quruq kunda mumkin | Faqat qisqa vaqt mumkin
+Moy va yonilg'iga bo'yalgan latta qayerga tashlanadi? | Qopqoqli metall qutiga | Oddiy savatga | Pol ustiga | Avtomobil ichiga
+Ustaxonada dvigatelni yopiq xonada uzoq ishlatish nega xavfli? | Chiqindi gazlardagi is gazidan zaharlanish mumkin | Dvigatel sovib qoladi | Akkumulyator zaryadlanadi | Moy bosimi oshadi
+Jarohat olganda birinchi navbatda nima qilinadi? | Birinchi tibbiy yordam ko'rsatiladi va ustaga xabar beriladi | Ish davom ettiriladi | Uyga ketib qolinadi | Hech kimga aytilmaydi
+@ 2-mavzu. Krivoship-shatun mexanizmi
+Krivoship-shatun mexanizmining qo'zg'almas detallariga qaysilar kiradi? | Silindrlar bloki, silindrlar kallagi va karter | Porshen va shatun | Tirsakli val va maxovik | Porshen halqalari
+Moy sidirgich halqasining vazifasi nima? | Silindr devoridagi ortiqcha moyni sidirib karterga qaytarish | Gazlarni zichlash | Porshenni sovutish | Maxovikni aylantirish
+Shatunning pastki kallagi qaysi detalga biriktiriladi? | Tirsakli valning shatun bo'yniga | Taqsimlash valiga | Porshen barmog'iga | Maxovikka
+Silindrlar kallagi qistirmasi (prokladka) kuyib ketsa qanday belgi bo'ladi? | Antifriz kamayadi, chiqindi gazda oq bug' paydo bo'ladi | Rul og'irlashadi | Tormoz ishlamaydi | Fara xiralashadi
+Silindrdagi siqish bosimini qaysi asbob bilan o'lchanadi? | Kompressometr | Areometr | Lyuftomer | Ampermetr
+Tirsakli val vkladishlari yeyilsa qanday belgi bo'ladi? | Dvigatelda taqillash va moy bosimining pasayishi | Fara yonmaydi | Rul titraydi | Shinalar tez yeyiladi
+@ 3-mavzu. Gaz taqsimlash mexanizmi
+Klapanlar orasidagi issiqlik tirqishi nima uchun qoldiriladi? | Qizishda klapan uzayib, to'liq yopilmay qolmasligi uchun | Moy o'tishi uchun | Havo kirishi uchun | Shovqinni oshirish uchun
+Gidrokompensatorlar nimani avtomatik rostlaydi? | Klapanlardagi issiqlik tirqishini | Moy bosimini | Yonilg'i sarfini | Tasma tarangligini
+Tishli tasma almashtirilganda nimaga albatta e'tibor beriladi? | Taqsimlash va tirsakli vallarning belgilar (metkalar) mos tushishiga | Shina bosimiga | Akkumulyator zaryadiga | Fara yo'nalishiga
+Bitta silindrda 4 ta klapan bo'lishining afzalligi nima? | Silindr havo bilan yaxshiroq to'ladi, quvvat oshadi | Dvigatel og'irlashadi | Moy sarfi kamayadi | Tasma kerak bo'lmaydi
+Klapanlarni ochish uchun taqsimlash validagi qaysi qism ishlaydi? | Kulachoklar | Shponka | Shlitslar | Tishli gardish
+Gaz taqsimlash mexanizmi zanjir bilan yuritilsa uni nima taranglaydi? | Zanjir taranglagichi (natyajitel) | Termostat | Rele | Separator
+@ 4-mavzu. Sovutish tizimi
+Dvigatelning normal ish harorati taxminan qancha? | 85–95 °C | 30–40 °C | 150–160 °C | 0–10 °C
+Radiator qopqog'idagi klapanlarning vazifasi nima? | Tizimdagi bosimni ushlab turish va ortiqchasini chiqarish | Antifrizni filtrlash | Ventilyatorni yoqish | Moyni sovutish
+Elektr ventilyatorni qaysi qurilma yoqadi? | Harorat datchigi (termovyklyuchatel) yoki boshqaruv bloki | Moy nasosi | Startyor | Generator
+Antifriz o'rniga oddiy suv quyishning zarari nima? | Qishda muzlab blokni yorishi va zang hosil qilishi | Dvigatel quvvati oshadi | Moy kamayadi | Shovqin yo'qoladi
+Suyuqlik nasosi (pompa) odatda nima bilan yuritiladi? | Tirsakli valdan tasma orqali | Akkumulyator tokidan | Rul validan | Kardan validan
+Dvigatel qizib ketishining ehtimoliy sababi qaysi? | Termostat yopiq holda qotib qolgan | Shina bosimi past | Fara kuygan | Akkumulyator yangi
+@ 5-mavzu. Moylash tizimi
+Moylash tizimidagi redukson klapanning vazifasi nima? | Moy bosimi juda oshib ketsa ortiqchasini chiqarib yuborish | Moyni isitish | Moy sathini o'lchash | Moyni filtrlash
+Motor moyidagi 5W-30 belgisida "W" harfi nimani bildiradi? | Qishki (winter) ishlatish ko'rsatkichini | Moy rangini | Ishlab chiqaruvchini | Moy hajmini
+Dvigatel moyini almashtirish qachon qulay? | Dvigatel iliq holatda, moy suyuq bo'lganda | Dvigatel juda sovuq bo'lganda | Dvigatel ishlab turganda | Faqat qishda
+Ishqalanuvchi detallarga moy qanday usullarda yetkaziladi? | Bosim ostida va sachratish orqali | Faqat qo'lda | Faqat havo bilan | Faqat suv bilan
+Chiqindi gazdan ko'k tutun chiqishi nimani bildiradi? | Moy yonish kamerasiga tushib yonmoqda | Antifriz kam | Yonilg'i sifatli | Tormoz nosoz
+Ishlatilgan motor moyi qanday utilizatsiya qilinadi? | Maxsus idishda yig'ilib, qayta ishlashga topshiriladi | Yerga to'kiladi | Kanalizatsiyaga quyiladi | Yondiriladi
+@ 6-mavzu. Karburatorli ta'minlash tizimi
+Benzin va havoning stexiometrik (normal) nisbati taxminan qancha? | 1 : 14,7 | 1 : 2 | 1 : 50 | 1 : 100
+Karburatorning bo'sh yurish tizimi qachon ishlaydi? | Drossel deyarli yopiq, dvigatel salt ishlaganda | To'liq gaz berilganda | Dvigatel o'chganda | Tormozlashda
+Tezlatuvchi nasos (uskoritelniy nasos) nimaga kerak? | Gaz pedali keskin bosilganda qo'shimcha yonilg'i berish uchun | Moyni haydash uchun | Suyuqlikni sovutish uchun | Havoni filtrlash uchun
+Karburatorli dvigatelda yonilg'i nasosi odatda qanday ishlaydi? | Mexanik, taqsimlash validagi ekssentrikdan | Elektr bilan bakda | Gidravlik | Pnevmatik
+Havo filtri ifloslansa qanday oqibat bo'ladi? | Aralashma boyib, yonilg'i sarfi oshadi va quvvat pasayadi | Dvigatel tejamkor bo'ladi | Moy bosimi oshadi | Rul yengillashadi
+Jiklyorlar tiqilib qolsa nima bilan tozalanadi? | Siqilgan havo bilan puflab va maxsus suyuqlik bilan | Sim yoki igna bilan teshib | Qum qog'oz bilan | Bolg'a bilan urib
+@ 7-mavzu. Injektorli ta'minlash tizimi
+Lyambda-zond (kislorod datchigi) qayerda o'rnatiladi? | Chiqarish quvurida | Yonilg'i bakida | Radiatorda | Uzatmalar qutisida
+Drossel holati datchigi (DPDZ) nimani o'lchaydi? | Drossel zaslonkasining ochilish burchagini | Moy haroratini | Tormoz bosimini | Shina bosimini
+Havo sarfi datchigi (DMRV) nima haqida ma'lumot beradi? | Dvigatelga kirayotgan havo miqdori haqida | Yonilg'i bakidagi sath haqida | Tezlik haqida | Akkumulyator zaryadi haqida
+Injektorli dvigatelda "Check Engine" chirog'i yonsa nima qilinadi? | Diagnostika skaneri bilan xato kodlari o'qiladi | Chiroq uziladi | Moy qo'shiladi | Shina almashtiriladi
+Injektorli tizimning karburatorga nisbatan afzalligi nima? | Yonilg'i aniq dozalanadi, sarf va zaharli chiqindilar kamayadi | Tuzilishi oddiyroq | Elektr kerak emas | Ta'mirlash shart emas
+Yonilg'i tizimida ishlashdan oldin nima qilinadi? | Yonilg'i bosimi tushiriladi (nasos saqlagichi chiqarib olinadi) | Dvigatel to'liq gazda ishlatiladi | Bak to'ldiriladi | Yong'in signalizatsiyasi o'chiriladi
+@ 8-mavzu. Akkumulyator batareyasi
+Akkumulyator elektroliti nimadan iborat? | Sulfat kislotaning distillangan suvdagi eritmasi | Toza suv | Tuz eritmasi | Ishqor eritmasi
+To'liq zaryadlangan akkumulyatorda elektrolit zichligi taxminan qancha? | 1,27–1,28 g/sm³ | 1,00 g/sm³ | 1,50 g/sm³ | 0,80 g/sm³
+Akkumulyatorga elektrolit sathi kamaysa nima quyiladi? | Distillangan suv | Sulfat kislota | Vodoprovod suvi | Antifriz
+Akkumulyatorni zaryadlashda nega olov yaqinlashtirilmaydi? | Ajralib chiqadigan vodorod portlashi mumkin | Elektrolit muzlaydi | Zaryad tezlashadi | Klemmalar eriydi
+Akkumulyator sig'imi qanday birlikda o'lchanadi? | Amper-soat (A·s) | Volt | Vatt | Om
+Akkumulyator indikatori (ko'zcha) yashil bo'lsa nimani bildiradi? | Akkumulyator yetarli darajada zaryadlangan | Zaryadsizlangan | Elektrolit kam | Akkumulyator yaroqsiz
+@ 9-mavzu. Startyor
+Startyor qanday turdagi elektr dvigatel hisoblanadi? | O'zgarmas tok elektr dvigateli | O'zgaruvchan tok generatori | Transformator | Qadamli dvigatel
+Kalit burilganda startyordan faqat "chiq" degan ovoz chiqib aylanmasa ehtimoliy sabab? | Akkumulyator zaryadsiz yoki tortish relesi kontaktlari kuygan | Antifriz kam | Shina teshik | Tormoz suyuqligi ko'p
+Startyor cho'tkalari yeyilganda nima qilinadi? | Yangisiga almashtiriladi | Moylanadi | Qayta bo'yaladi | Qisqartiriladi
+Startyor yakori kollektori kuygan bo'lsa qanday tozalanadi? | Mayda jilvir qog'oz bilan va tokarlik dastgohida yo'niladi | Suv bilan yuviladi | Moy surtiladi | Bolg'a bilan to'g'rilanadi
+Startyor zanjiriga tokni qaysi elementlar ulaydi? | O't oldirish kaliti va tortish relesi | Termostat | Generator regulyatori | Lyambda-zond
+Startyorni sinashdan oldin nima tekshiriladi? | Akkumulyator zaryadi va simlar ulanishi | Shina bosimi | Antifriz rangi | Tormoz kolodkalari
+@ 10-mavzu. Ilashish muftasi
+Ilashish muftasi yuritmasi qanday turlarga bo'linadi? | Mexanik (trosli) va gidravlik | Faqat elektr | Faqat pnevmatik | Faqat magnitli
+Ilashish muftasi "sirpanishi"ning belgisi qaysi? | Tezlanishda dvigatel aylanishi oshadi, avtomobil tezligi oshmaydi | Rul titraydi | Fara xiralashadi | Moy bosimi oshadi
+Mufta to'liq ajralmasa ("vedyot") qanday belgi bo'ladi? | Uzatmalar qiyin ulanadi va g'ijirlaydi | Avtomobil tezroq yuradi | Yonilg'i tejaladi | Tormoz kuchayadi
+Gidravlik muftada pedal "yumshoq" bo'lsa nima qilinadi? | Yuritmadan havo chiqariladi (prokachka) | Antifriz qo'shiladi | Shina almashtiriladi | Moy filtri almashtiriladi
+Yetaklanuvchi disk qoplamasi moylanib qolsa nima sodir bo'ladi? | Mufta sirpanadi | Mufta yaxshiroq ishlaydi | Dvigatel sovuydi | Rul yengillashadi
+Maxovik bilan bosim diski orasida qaysi disk joylashadi? | Yetaklanuvchi disk | Tormoz diski | Ventilyator | Shkiv
+@ 11-mavzu. Uzatmalar qutisi
+Uzatishlar soni (peredatochnoe chislo) qanday aniqlanadi? | Yetaklanuvchi shesternya tishlari sonini yetakchi shesternya tishlari soniga bo'lib | Tishlarni qo'shib | Diametrlarni ko'paytirib | Tezlikni vaqtga bo'lib
+Birinchi uzatmada uzatishlar soni qanday bo'ladi? | Eng katta — tortish kuchi eng yuqori | Eng kichik | 1 ga teng | Nolga teng
+Orqaga yurish uchun qaysi qo'shimcha detal ishlatiladi? | Oraliq (parazit) shesternya | Krestovina | Termostat | Diafragma
+Uzatmalar qutisi qaysi moy bilan moylanadi? | Transmissiya moyi | Motor moyi | Tormoz suyuqligi | Antifriz
+Uzatma ulashda g'ijirlash ovozi ko'pincha qaysi detal yeyilganidan? | Sinxronizator halqalari | Termostat | Startyor cho'tkasi | Shina
+Avtomatik uzatmalar qutisida "P" holati nimani bildiradi? | To'xtab turish (parking) — val qulflanadi | Orqaga yurish | Neytral | Harakatlanish
+@ 12-mavzu. Kardanli uzatma
+Kardan vali muvozanatsiz bo'lsa qanday belgi bo'ladi? | Ma'lum tezlikda kuzov titraydi | Fara yonmaydi | Dvigatel o'chadi | Moy kamayadi
+Krestovina yeyilganda qanday ovoz eshitiladi? | Jo'nab ketishda va tezlik o'zgarganda taqillash | Hushtak | Shitirlash faqat tormozda | Hech qanday ovoz
+Bosh uzatmaning vazifasi nima? | Burovchi momentni oshirib, uni 90° ga burib g'ildiraklarga uzatish | Dvigatelni sovutish | Uzatmalarni almashtirish | Tormozlash
+Yarim o'q (polu os) qayerdan qayerga momentni uzatadi? | Differensialdan g'ildirakka | Dvigateldan qutiga | Rulga | Generatorga
+Kardan sharnirlari qanday moylanadi? | Maxsus surkov (shprits orqali) bilan | Antifriz bilan | Tormoz suyuqligi bilan | Moylanmaydi
+Oraliq tayanch nima uchun o'rnatiladi? | Uzun kardan valini ushlab, tebranishni kamaytirish uchun | Moyni sovutish uchun | Tormozlash uchun | Tezlikni o'lchash uchun
+@ 13-mavzu. Oldingi yetakchi g'ildiraklar yuritmasi
+Old yetakchi avtomobilda nechta SHRUS bo'ladi? | To'rtta (har yarim o'qda ichki va tashqi) | Bitta | Ikkita | Sakkizta
+Ichki SHRUS qanday vazifani ham bajaradi? | Yarim o'q uzunligi o'zgarishini kompensatsiyalaydi | G'ildirakni tormozlaydi | Rulni buradi | Moyni haydaydi
+G'ildirak gupchagi podshipnigi yeyilsa qanday belgi bo'ladi? | Tezlikka bog'liq g'uvillash ovozi | Dvigatel o'chishi | Fara xiralashishi | Moy bosimining oshishi
+SHRUS ichiga qanday moy solinadi? | Maxsus SHRUS surkovi | Motor moyi | Tormoz suyuqligi | Suv
+Shar tayanch (sharovaya opora) qaysi detallarni bog'laydi? | Pastki richag va burilish mushtini | Dvigatel va qutini | Kardan va ko'prikni | Rul va kolonkani
+Old yetakchi avtomobilning orqa yetakchiga nisbatan afzalligi nima? | Sirpanchiq yo'lda barqarorroq, kardan vali kerak emas | Kuzov og'irroq | Burilish radiusi kichikroq | Ta'mirlash umuman kerak emas
+@ 14-mavzu. Rul boshqarmasi
+Gidrokuchaytirgich (GUR) nimaga xizmat qiladi? | Rulni burish uchun kerakli kuchni kamaytiradi | Tezlikni oshiradi | Yonilg'i tejaydi | Tormozlaydi
+Elektr kuchaytirgich (EUR) gidrokuchaytirgichdan nimasi bilan farq qiladi? | Moy va nasos o'rniga elektr dvigatel ishlatadi | Faqat yuk mashinalarda bo'ladi | Rulni og'irlashtiradi | Yonilg'i bilan ishlaydi
+Gidrokuchaytirgich bachogida nima tekshiriladi? | Suyuqlik sathi va tozaligi | Antifriz zichligi | Elektrolit zichligi | Tormoz kolodkasi
+Rul g'ildiragi to'g'ri harakatda qiyshiq tursa nima qilinadi? | G'ildiraklar o'rnatish burchaklari (razval-shaxta) tekshiriladi va sozlanadi | Dvigatel moyi almashtiriladi | Akkumulyator zaryadlanadi | Fara sozlanadi
+Rul mexanizmi g'ilofi (pilnik) yirtilsa nima bo'ladi? | Ichiga chang-suv kirib reyka zanglaydi va yeyiladi | Dvigatel qiziydi | Tormoz kuchayadi | Hech narsa bo'lmaydi
+Burilish mushtiga rul tortqisi uchi qanday mahkamlanadi? | Gayka va shplint bilan | Payvandlab | Yelim bilan | Mahkamlanmaydi
+@ 15-mavzu. Tormoz tizimi (nazorat)
+Tormoz kolodkalari yeyilganini qanday bilish mumkin? | Tormozlashda g'ijirlash va qoplama qalinligi 2–3 mm dan kam | Dvigatel qizishi | Fara yonmasligi | Moy bosimi oshishi
+Qo'l (to'xtash) tormozi odatda qaysi g'ildiraklarga ta'sir qiladi? | Orqa g'ildiraklarga | Faqat oldingi chapga | Rulga | Kardanga
+Tormoz tizimidan havo chiqarish qaysi g'ildirakdan boshlanadi? | Bosh silindrdan eng uzoqdagi g'ildirakdan | Eng yaqindagidan | Istalganidan | Faqat oldingilardan
+Tormoz suyuqligi DOT 4 belgisi nimani ko'rsatadi? | Suyuqlik standartini (qaynash harorati sinfi) | Hajmini | Rangini | Narxini
+Tormozlashda avtomobil bir tomonga tortsa ehtimoliy sabab qaysi? | Bir tomondagi tormoz mexanizmi nosoz yoki shina bosimi turlicha | Yonilg'i kam | Akkumulyator eski | Antifriz ko'p
+Tormoz tizimi samaradorligi qaysi uskunada tekshiriladi? | Rolikli yoki platformali tormoz stendida | Areometrda | Kompressometrda | Osiloskopda
