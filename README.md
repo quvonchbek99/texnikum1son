@@ -56,6 +56,10 @@ Statik sayt (GitHub Pages) + Firebase (login, Firestore) + Google Drive (asl fay
    mutaxassisliklar sahifasiga ham ulaydi (`indeks_yangila` har biri uchun `agent/index.json` ga kalit yozadi; PDF, `agent/k`, `agent/t` —
    bitta nusxa; viktorina va savollar soni majmuani bir marta sanaydi). Elektrotexnika va elektronika asoslari: Elektromontyor (asosiy),
    Kompyuter tarmoqlari va IT-servis, Grafik va dizayn texnologiyasi, Kompyuter grafikasi va dizayn operatori.
+   Gemini chizmalari bilan majmua: `avtomobil-tuzilishi-2026` (Avtomobillar servisi, Avtomobil ta’mirlash OR0005/OR0006 → Avtomobil
+   tuzilishi, 1-semestr, Abdullayeva Sh., 170 bet, 59 qism; 27.11.2026) — Paxtaobod 1-son KHM o‘quv amaliyoti materiallari asosida:
+   yangi titul va TMR, muallif sahifasi olib tashlangan, internetdan olingan rasm galereyalari o‘rniga har mavzuga Gemini’da chizilgan
+   oq-qora texnik chizma (raqamli izohlari bilan) mavzu bayonidan keyin qo‘yilgan; 60 ta test savoli `agent/t/` da.
 6. Bosh sahifa `agent/index.json` dagi fanlarni ham «material bor» deb belgilaydi (`fanlar.js`); `build.py` qayta yig'ishda agent
    majmualarining ma'ruza/amaliy mavzularini qidiruvga (`data/qidiruv.json`, havola `?sem=` bilan) qo'shadi.
 
