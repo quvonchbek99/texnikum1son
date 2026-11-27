@@ -52,6 +52,7 @@ h1 span{background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit
 .mini p{margin:0;color:var(--text-dim);font-size:14px}
 .mini .meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
 .mini .meta span{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
+.tt-l{display:flex;flex-wrap:wrap;gap:6px}.tt-l a{padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);color:var(--text);text-decoration:none;font-weight:800;font-size:14px}.tt-l a:hover{background:#ffd479;color:#2b1d00}.tt-k a{padding:4px 10px;font-size:12px;font-weight:700;opacity:.85}@media(max-width:560px){.tt-card{grid-column:auto!important}}
 .mini .like{position:absolute;top:12px;right:12px;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#2b1d00;background:#ffd479;border-radius:999px;padding:2px 7px}
 .sec-h{margin:22px 0 4px;font-size:22px}
 .trow .btn.nw{border-color:rgba(255,212,121,.45)}
@@ -119,8 +120,7 @@ footer a{color:var(--text-dim)}
 <h2 class="sec-h">🆕 Yangi sinf o'yinlari</h2>
 <p class="sub" style="margin:0 0 10px">Mashhur platformalar uslubida — o'zbek tilida, ro'yxatdan o'tmasdan, savollar avtomatik.</p>
 <div class="more">
-<a class="mini" href="https://kuvonch.uz/ibrohim-tarix.html" style="--g1:#3a2610"><span class="like">6-sinf tarix</span><span class="ic">📜</span><h3>Ibrohim tarix</h3><p>Tarix (43 mavzu) + bayroq, poytaxt, ixtiro, avtomobil, hayvon, meva — 700+ savol. Xaritali dars, «bir vaqtda» 2–3 jamoa rejimi!</p><span class="meta"><span>2–6 jamoa</span><span>telefonsiz</span><span>🗺️ xarita</span></span></a>
-<a class="mini" href="https://kuvonch.uz/tarbiya-10.html" style="--g1:#0f4a3a"><span class="like">10-sinf tarbiya</span><span class="ic">🌱</span><h3>10-sinf Tarbiya</h3><p>«Baxt va muvaffaqiyat sirlari»: 19 mavzu, 400+ savol, darslik rasmlari bilan. Kalit so‘zli aqliy xarita, yashirib-topish o‘yini, «bir vaqtda» 2–3 jamoa rejimi!</p><span class="meta"><span>2–6 jamoa</span><span>telefonsiz</span><span>🧠 aqliy xarita</span></span></a>
+<div class="mini tt-card" style="--g1:#3a2610;grid-column:span 2"><span class="like">tarix · tarbiya</span><span class="ic">📚</span><h3>Tarix va Tarbiya</h3><p>Bitta menyuda: 6-sinf tarix (Ibrohim tarix, 700+ savol, xaritali dars) va 9, 10, 11-sinf «Tarbiya» — aqliy xarita, rasmli savollar, «bir vaqtda» 2–3 jamoa rejimi.</p><div class="tt-l"><a href="https://kuvonch.uz/ibrohim-tarix.html">📜 Tarix · 6-sinf</a><a href="https://kuvonch.uz/tarbiya-9.html">🌱 9-sinf tarbiya</a><a href="https://kuvonch.uz/tarbiya-10.html">🌱 10-sinf tarbiya</a><a href="https://kuvonch.uz/tarbiya-11.html">🌱 11-sinf tarbiya</a></div><div class="tt-l tt-k"><a href="https://kuvonch.uz/tarbiya-1.html">1-sinf</a><a href="https://kuvonch.uz/tarbiya-3.html">3-sinf</a><a href="https://kuvonch.uz/tarbiya-5.html">5-sinf</a><a href="https://kuvonch.uz/tarbiya-6.html">6-sinf</a><a href="https://kuvonch.uz/tarbiya-7.html">7-sinf</a><a href="https://kuvonch.uz/tarbiya-8.html">8-sinf</a></div><span class="meta"><span>2–6 jamoa</span><span>telefonsiz</span><span>🗺️ xarita</span><span>🧠 aqliy xarita</span></span></div>
 <a class="mini" href="https://kuvonch.uz/umida-huquq.html" style="--g1:#1d2c6b"><span class="like">8-sinf huquq</span><span class="ic">⚖️</span><h3>Umida huquq</h3><p>«Davlat va huquq asoslari»: 19 mavzu, 300+ savol. Kalit so‘zli aqliy xarita, yashirib-topish o‘yini, «bir vaqtda» 2–3 jamoa rejimi!</p><span class="meta"><span>2–6 jamoa</span><span>telefonsiz</span><span>🧠 aqliy xarita</span></span></a>
 <a class="mini" href="https://kuvonch.uz/kataklar.html" style="--g1:#3a1d2e"><span class="like">Baamboozle</span><span class="ic">🎁</span><h3>Sirli kataklar</h3><p>Jamoalar raqamli katak ochadi: savol yoki syurpriz — 💣 bomba, ✖️2, 🦊 o'g'irlash, 🔄 almashtirish.</p><span class="meta"><span>2–8 jamoa</span><span>telefonsiz</span></span></a>
 <a class="mini" href="https://kuvonch.uz/shoh-savol.html" style="--g1:#1b2a6b"><span class="like">Jeopardy</span><span class="ic">👑</span><h3>Shoh savol doskasi</h3><p>Mavzular × 100–500 ball. ⚡ Ikki karra kataklar, javobni o'g'irlash va tikish bilan final savol.</p><span class="meta"><span>2–6 jamoa</span><span>televizion viktorina</span></span></a>
@@ -140,7 +140,7 @@ footer a{color:var(--text-dim)}
 <section class="card">
 <h2>🌐 Fanlar bo'yicha jonli viktorina</h2>
 <p class="sub">Fanni tanlang — viktorina shu fan mavzulari bilan ochiladi, o'qituvchi mavzuni belgilab xona ochadi.</p>
-<div style="display:flex;flex-wrap:wrap;gap:8px">
+<div data-bolim-fanlar style="display:flex;flex-wrap:wrap;gap:8px">
 <a class="btn vk" href="viktorina.html?fan=mantiq">🧠 Mantiq</a><a class="btn vk" href="viktorina.html?fan=ingliz">🇬🇧 Ingliz tili</a><a class="btn vk" href="viktorina.html?fan=rus">🇷🇺 Rus tili</a><a class="btn vk" href="viktorina.html?fan=fizika">⚛️ Fizika</a><a class="btn vk" href="viktorina.html?fan=kimyo">🧪 Kimyo</a><a class="btn vk" href="viktorina.html?fan=biologiya">🧬 Biologiya</a><a class="btn vk" href="viktorina.html?fan=geografiya">🌍 Geografiya</a><a class="btn vk" href="viktorina.html?fan=tarix">📜 Tarix</a><a class="btn vk" href="viktorina.html?fan=informatika">💻 Informatika</a><a class="btn vk" href="viktorina.html?fan=ona">📝 Ona tili</a><a class="btn vk" href="viktorina.html?fan=adabiyot">📖 Adabiyot</a><a class="btn vk" href="viktorina.html?fan=huquq">⚖️ Huquq</a><a class="btn vk" href="viktorina.html?fan=iqtisod">💰 Iqtisodiyot</a><a class="btn vk" href="viktorina.html?fan=astronomiya">🔭 Astronomiya</a><a class="btn vk" href="viktorina.html?fan=chizma">✏️ Chizmachilik</a><a class="btn vk" href="viktorina.html?fan=ekologiya">🌱 Ekologiya</a><a class="btn vk" href="viktorina.html?fan=tarbiya">🤝 Tarbiya</a><a class="btn vk" href="viktorina.html?fan=chqbt">🎖️ ChQBT</a><a class="btn vk" href="viktorina.html?fan=sport">🏃 Jismoniy tarbiya</a><a class="btn vk" href="viktorina.html?aralash=1" style="font-weight:800">🔀 Hamma fandan aralash</a>
 </div>
 </section>
@@ -213,5 +213,6 @@ footer a{color:var(--text-dim)}
 </script>
 <script src="akkount.js"></script>
 <script src="ka-til.js"></script>
+<script src="ka-bolimlar.js?v=20261127a" defer></script>
 </body>
 </html>

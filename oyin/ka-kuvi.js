@@ -223,7 +223,8 @@
       "Bu safar chiqmadi, lekin sen albatta uddalaysan!", "Shoshilmagin, {p}!", "Hech qisi yo'q! Xato qilmagan odam o'rganmaydi."],
     cry: ["Uhu-uhu... yig'lab yubordim-ku! Burnim ham oqib ketdi. Yechimga qara, {p}!", "Voy-voy, ko'z yoshlarim to'kildi! Mayli, keyingisini birga topamiz, {p}."],
     tease: ["Voy qovoq kalla-ey!", "Ey oshqovoq, shuni ham bilmaysanmi?", "Qovunjon, bir o'ylab ko'r-chi!", "Hay qovoq kallajonim...", "Oshqovoqcha, bunisi oson-ku!",
-      "Voy qovun-ey, shunga ham-a?", "Ey xumpar, qayoqqa qarayapsan?", "Voy eshakvoy-ey!", "Voy poponam-ey, shuni ham bilmaysanmi?", "Tarvuz kalla, bunisi oson-ku!", "Xumparvoy, miyangni ishlat-chi!"],
+      "Voy qovun-ey, shunga ham-a?", "Ey xumpar, qayoqqa qarayapsan?", "Voy eshakvoy-ey!", "Voy poponam-ey, shuni ham bilmaysanmi?", "Tarvuz kalla, bunisi oson-ku!", "Xumparvoy, miyangni ishlat-chi!",
+      "Hoy uyquchi, uyg'on-chi!", "Voy landovur-ey, savolni oxirigacha o'qidingmi?", "Laqmajonim, shoshma-da!", "Qovunjon, miyangda qovun pishyaptimi?", "Mijg'ovvoy, tezroq o'yla!"],
     timeout: ["Vaqt tugadi-ku! Keyingisida tezroq bo'l.", "Soatga qara, do'stim! Ulgurmay qolding.", "Vaqt uchib ketdi-ya! Keyingisida chaqqonroq bo'l.", "Tik-tak, tik-tak… vaqt tugadi! Keyingisida ulgurasan."],
     timeoutT: ["Voy uyquchi-ey, vaqt tugadi-ku!", "Poponam, tezroq bo'l-da!", "Xumpar, soatga qara!", "Qovoq kalla, uxlab qoldingmi?"],
     cGood: ["Barakalla, sinf! Deyarli hamma topdi!", "Zo'r sinf! Ofarin hammangizga!", "Qoyil! Bu sinf — chempionlar sinfi!", "Ha-ha! Ajoyib, poponlarim! Deyarli hammangiz topdingiz!", "Voy-bo'y, sinf! Hammangiz daho ekansiz!", "Ofarin! Bunday sinfga ustoz bo'lish — baxt!"],
@@ -250,6 +251,45 @@
     "Mehnatning tagi — rohat, yana bir urinib ko'r.", "Bilim — bitmas boylik, yechimni daftaringga yozib ol.", "Ming eshitgandan bir ko'rgan yaxshi — yechimga bir qara.",
     "Tomchi-tomchi ko'l bo'lur — har kuni ozgina mashq qil.", "Harakatda — barakat, yana bir urin!", "Avval o'yla, keyin so'yla.", "Kitob — bilim bulog'i, ko'proq o'qi.",
     "Ilm olish — igna bilan quduq qazishdek, sabr qil.", "Bir yigitga yetmish hunar oz — o'rganishdan to'xtama."];
+  /* 📚 MAQOLLAR — o'zbek xalq maqollari (o'qish, mehnat, sabr, do'stlik, vaqt haqida). Xato, vaqt tugashi va sinf natijasida ishlatiladi */
+  var MAQOL = ["Ilm — baxt keltirar, bilim — taxt keltirar.", "Ilmli ming yashar, ilmsiz bir yashar.", "Bilagi zo'r birni yiqar, bilimi zo'r — mingni.",
+    "Olim bo'lsang, olam seniki.", "Hunarli kishi och qolmas.", "Hunar — hunardan unar.", "Yetti o'lchab, bir kes.",
+    "Ko'p o'qigan ko'p bilar, ko'p yurgan ko'p ko'rar.", "Daryo suvi bilan, odam bilimi bilan.", "Ishlagan tishlar.", "Erta turganning rizqi butun.",
+    "Bugungi ishni ertaga qo'yma.", "Til bilgan — el biladi.", "Yaxshi gap bilan ilon inidan chiqar.", "Birlashgan o'zar, birlashmagan to'zar.",
+    "Aql yoshda emas, boshda.", "Oz-oz o'rganib dono bo'lur, qatra-qatra yig'ilib daryo bo'lur.", "Ko'z qo'rqoq, qo'l botir.", "Dangasaning ertasi bitmas.",
+    "Ko'rpangga qarab oyoq uzat.", "Ustoz — otangdek ulug'.", "Ikki tarvuz bir qo'ltiqqa sig'mas.", "Qo'rqqanga qo'sh ko'rinar.", "Mard maydonda sinalar.",
+    "Yaxshidan bog' qoladi, yomondan dog'.", "Nima eksang, shuni o'rasan.", "Bo'lar bola boshidan.", "Mehnatsiz rohat yo'q.", "Tomchi tosh teshar.",
+    "Ayrilganni ayiq yer.", "Ko'p gapirgan ko'p yanglishar.", "Kulgi — dardga davo.", "Til — dil kaliti.", "O'qigan o'zar, o'qimagan to'zar.",
+    "Sabr tagi — sariq oltin.", "Avval o'yla, keyin so'yla.", "Shoshgan ish — chala ish.", "Harakatda — barakat.", "Ilm olish — igna bilan quduq qazish.",
+    "Kitob — bilim bulog'i.", "Ming eshitgandan bir ko'rgan yaxshi.", "Bir yigitga yetmish hunar oz.", "Suv keltirgan xor, ko'za sindirgan aziz.",
+    "Maqtanchoqning qo'yi egiz tug'ibdi.", "Qo'li ochiqning yo'li ochiq.", "Do'st achitib gapirar, dushman kuldirib.", "Har narsaning o'z vaqti bor.",
+    "Vaqt — g'animat.", "Yiqilib turgan — yigit.", "O'zingga ishonsang — tog'ni yiqasan."];
+  /* 😏 KINOYA — mehrli, kulgili kinoya (hech qachon haqorat emas). {p} — erkalash so'zi */
+  var KIN = {
+    bad: ["Voy, javobing shunchalik ijodiy ediki, hatto matematika ham hayron qoldi!", "Ajoyib javob! Faqat... boshqa savolga ekan.", "Ha, albatta, ikki karra ikki — besh. Kalkulyatorlar ertaga shunday deyishadi.",
+      "Qoyil, juda tez javob berding! Endi to'g'risini ham shunday tez topsak — chempionsan.", "Mantiq bugun dam olish kunida ekan-da, {p}?", "Voy, kalkulyatorim qo'rqib o'chib qoldi-ku!",
+      "Bu javobni ko'rib Pifagor ham boshini qashib qoldi.", "Ishonching zo'r! Endi unga ozgina bilim ham qo'shsak...", "Shuncha o'yladingu... javob qayerda adashib qoldi?",
+      "Javobing chiroyli, faqat to'g'ri emas — xuddi tuzsiz palovdek.", "Voy, bu javob bilan Kuvi buvam ham uyqusidan uyg'onib ketdi!", "Taxmin qilish ham san'at. Lekin bugun san'at yutqazdi.",
+      "Bilasanmi, xato ham kerak — aks holda men ishsiz qolardim!", "Hmm, juda dadil javob. Afsus, savol bunchalik dadil emas edi."],
+    ok: ["Qoyil! Shunday davom etsang, men ishsiz qolaman-ku!", "To'g'ri! Kim senga bunchalik aqlli bo'l dedi?", "Voy, men senga savol beraman deb o'ylagan edim, sen esa meni imtihon qilyapsan!",
+      "To'ppa-to'g'ri! Ehtiyot bo'l, miyang qizib ketmasin.", "Barakalla! Kalkulyator ham sendan uyalib qoldi."],
+    timeout: ["Savol seni kutdi, kutdi... oxiri xafa bo'lib ketdi.", "Vaqt tugadi. Soat sendan xafa emas, u shunchaki aylanaveradi.", "Uxlab qolganingni sezmadim desam, yolg'on bo'ladi, {p}.",
+      "Sen o'ylayotganingda men choy ichib, bir uxlab ham oldim."],
+    cls: ["Butun sinf bir xil xato qildi — hech bo'lmasa jamoaviy ruh zo'r!", "Hammangiz bir xil javob berdingiz. Do'stlik — zo'r, javob — yo'q.", "Bugun sinfda mantiq ta'tilga chiqibdi shekilli!",
+      "Bu savol sizni yengdi... hozircha! Keyingisida qasos olamiz."]
+  };
+  /* 🗂 SO'ZLAR — Kuvi ishlatadigan so'zlar ro'yxati (AI ustoz, Kuvi AI va viktorina uchun bitta joyda) */
+  var SOZ = {
+    maqtov: ["barakalla", "ofarin", "qoyil", "ajoyib", "zo'r", "yashavor", "mukammal", "a'lo", "daho", "bilimdon", "chempion", "aqlli", "chaqqon", "zehnli", "uddaburon"],
+    erkalash: ["poponam", "jonim", "asalim", "yulduzim", "chempionim", "qo'zichog'im", "do'mbog'im", "akam", "ukam", "polvonim", "botirim", "opajon", "singlim", "kampirim", "malikam", "gulim", "toychog'im", "shunqorim"],
+    tegajoq: ["qovoq kalla", "oshqovoq", "qovun", "tarvuz kalla", "xumpar", "eshakvoy", "tentakvoy", "uyquchi", "qovunjon", "laqma", "mijg'ov", "landovur"],
+    dalda: ["xafa bo'lma", "hech qisi yo'q", "qo'rqma", "keyingisini topasan", "birga topamiz", "yana bir urin", "sen uddalaysan", "xato — bilimning birinchi qadami"],
+    undov: ["Voy!", "Voy-bo'y!", "Ha-ha!", "Hay-hay!", "Ey!", "Uhu-uhu!", "Ana!", "Qarang-a!", "Ie!", "Oho!"]
+  };
+  // xato/vaqt tugaganda — faqat o'qish, sabr, mehnat, diqqat haqidagi maqollar (mavzudan tashqarisi chiqmasin)
+  var MAQOL_R = MAQOL.filter(function (m) { return /ilm|bilim|o'q|sabr|shosh|o'yla|o'lchab|qatra|tomchi|mehnat|harakat|qo'rq|dangasa|ertaga|aql|mard|yiqil|ishon|hunar|kitob|ko'rgan|olim/i.test(m); });
+  function maqol(n) { if (!n) return pick(MAQOL_R); var a = MAQOL.slice(), o = []; while (o.length < n && a.length) o.push(a.splice(Math.floor(Math.random() * a.length), 1)[0]); return o; }
+  function kinoya(k, n) { var a = KIN[k] || KIN.bad; if (!n) return pick(a); return a.slice().sort(function () { return Math.random() - .5; }).slice(0, n); }
   function tease() { try { var c = JSON.parse(localStorage.getItem("ka.ustoz.cfg") || "{}"); return c.tease !== false; } catch (e) { return true; } }
   var esc = function (s) { return String(s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); };
   function react(kind, o) {
@@ -257,23 +297,28 @@
     if (kind === "ok") {
       if (n >= 5 && Math.random() < .5) { t = L.streak[3]; mood = "laugh"; }
       else if (n >= 3) { t = pick(L.streak.slice(0, 3).concat(L.streak.slice(4))); mood = "love"; }
+      else if (tz && Math.random() < .2) { t = pick(KIN.ok); mood = Math.random() < .5 ? "wink" : "laugh"; } // 😏 kinoyali maqtov
       else { t = G && Math.random() < .55 ? pick(G.ok) : pick(L.ok); mood = Math.random() < .2 ? "wink" : "happy"; }
     }
     else if (kind === "bad") {
       if (G) { // qiz yoki o'g'il — mehrli hazil (sozlama yoqiq bo'lsa) + pand-nasihat
-        if (tz && Math.random() < .7) { t = pick(G.tease) + " " + pick(NAS); mood = Math.random() < .5 ? "jealous" : "strict"; }
+        if (tz && Math.random() < .35) { t = pick(KIN.bad) + " " + maqol(); mood = Math.random() < .5 ? "wink" : "laugh"; }
+        else if (tz && Math.random() < .8) { t = pick(G.tease) + " " + (Math.random() < .5 ? pick(NAS) : maqol()); mood = Math.random() < .5 ? "jealous" : "strict"; }
         else if (Math.random() < .25) { t = pick(L.cry); mood = "cry"; }
         else { t = pick(L.bad) + " " + pick(NAS); mood = "sad"; }
       }
-      else if (tz && Math.random() < .6) { t = pick(L.tease) + " " + pick(L.bad); mood = Math.random() < .5 ? "jealous" : "strict"; }
+      else if (tz && Math.random() < .35) { t = pick(KIN.bad) + " " + (Math.random() < .5 ? pick(L.bad) : maqol()); mood = Math.random() < .5 ? "wink" : "laugh"; }
+      else if (tz && Math.random() < .75) { t = pick(L.tease) + " " + pick(L.bad); mood = Math.random() < .5 ? "jealous" : "strict"; }
       else if (Math.random() < .3) { t = pick(L.cry); mood = "cry"; }
       else { t = pick(L.bad); mood = "sad"; }
     }
+    else if (kind === "timeout" && tz && Math.random() < .35) { t = pick(KIN.timeout) + " " + maqol(); mood = "sleepy"; }
     else if (kind === "timeout") { t = G ? pick(tz ? G.timeout : L.timeout) + " " + pick(NAS) : pick(tz ? L.timeoutT : L.timeout); mood = Math.random() < .3 ? "sleepy" : "wow"; }
     else if (kind === "cGood") { t = pick(L.cGood); mood = Math.random() < .35 ? "laugh" : Math.random() < .5 ? "love" : "happy"; }
     else if (kind === "cMid") { t = pick(L.cMid); mood = "think"; }
+    else if (tz && Math.random() < .4) { t = pick(KIN.cls); mood = "wink"; }
     else { t = pick(tz ? L.cBadT : L.cBad); mood = tz ? "jealous" : /Uhu/.test(t) ? "cry" : "strict"; }
-    if (kind === "cBad" || kind === "cMid") t += " " + pick(NAS); // butun sinfga ham pand-nasihat
+    if (kind === "cBad" || kind === "cMid") t += " " + (Math.random() < .5 ? pick(NAS) : maqol()); // butun sinfga ham pand-nasihat yoki maqol
     t = t.replace(/\{n\}/g, n).replace(/\{p\}/g, pet(o.sg));
     return { mood: mood, text: t, html: '<div class="kvr kvr-' + mood + '">' + svg(mood, "", { outfit: o.outfit, sg: o.sg }) + '<div class="kvq">' + esc(t) + "</div></div>" };
   }
@@ -470,5 +515,5 @@
     "@media (prefers-reduced-motion:reduce){.kuvi .kvo,.kuvi .kvb,.kuvi .kvf path{animation:none}}" + ARTCSS + poseCss() + outCss();
   try { var st = document.createElement("style"); st.id = "ka-kuvi-css"; st.appendChild(document.createTextNode(css)); (document.head || document.documentElement).appendChild(st); } catch (e) {}
 
-  window.kaYuz = { svg: svg, react: react, tease: tease, lines: L, glines: LG, nasihat: NAS, moods: M, art: art, outfitFor: outfitFor, pet: pet, teaseW: teaseW, actOf: actOf, voice: voice, pros: pros, say: say, gender: gOf, nameG: nameG, voiceFor: voiceFor, stop: function () { try { if (window.kaAI) kaAI.stop(); if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) {} } };
+  window.kaYuz = { svg: svg, react: react, tease: tease, lines: L, glines: LG, nasihat: NAS, maqollar: MAQOL, maqol: maqol, kinoya: kinoya, kin: KIN, soz: SOZ, moods: M, art: art, outfitFor: outfitFor, pet: pet, teaseW: teaseW, actOf: actOf, voice: voice, pros: pros, say: say, gender: gOf, nameG: nameG, voiceFor: voiceFor, stop: function () { try { if (window.kaAI) kaAI.stop(); if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) {} } };
 })();

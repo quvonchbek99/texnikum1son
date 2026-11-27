@@ -268,6 +268,9 @@
     return loadMqtt().then(function () { return room(code); }).then(function (R) {
       return new Promise(function (res, rej) {
         var clients = [], conns = {}, peers = {}, seqs = {}, whoT = {}, settled = false, closed = false, timers = [], bseq = Date.now(), pubB = bseq, state = "";
+        // 📲 navbat (epoch): o'qituvchi chiqib ketsa xonani navbatchi o'quvchi telefoni davom ettiradi — uning ep raqami kattaroq.
+        // Shu kodli xonada kattaroq ep li boshqa boshqaruvchi paydo bo'lsa, bu nusxa jimgina o'rin bo'shatadi (opts.onYield).
+        var ep = Math.max(0, Math.floor(+(opts && opts.ep) || 0)), hid = rid(8), infoT = 0;
         // tartib raqamlari vaqtdan boshlanadi: xona qayta ochilganda ham telefon yangi xabarlarni «eski» deb tashlab yubormaydi
         var seq0 = Date.now();
         var outQ = queue(), inQ = queue(), seen = lru(4000), backlog = [];
@@ -324,8 +327,15 @@
           status: function () { return { up: upCount(), all: BROKERS.length }; },
           // o'quvchidan oxirgi marta qachon xabar kelgan (ms); -1 — bunday o'quvchi tarmoqda yo'q
           seen: function (id) { var p = peers[id], m = 0; if (!p || !p.lb) return -1; for (var b in p.lb) if (p.lb[b] > m) m = p.lb[b]; return m; },
-          close: function () {
+          close: function (quiet) { // quiet: o'quvchilarga «xona yopildi» demaymiz — boshqaruv navbatchiga o'tdi
             if (closed) return;
+            if (quiet) {
+              outQ(function () {
+                closed = true; timers.forEach(clearInterval);
+                clients.forEach(function (c) { if (c) setTimeout(function () { try { c.end(true); } catch (e) {} }, 600); });
+              });
+              return;
+            }
             outQ(function () {
               closed = true; timers.forEach(clearInterval);
               clients.forEach(function (c, bi) {
@@ -342,7 +352,19 @@
           if (conns[id]) { delete conns[id]; if (opts.onLeave) opts.onLeave(id); }
         }
         // "~on <vaqt> <sahifa>" — o'quvchilar faqat "~on " boshini tekshiradi; sahifa nomi live kirish sahifasi uchun
-        function info(c, bi) { pub(c, BROKERS[bi], TI, "~on " + Date.now() + " " + kind, true); }
+        function info(c, bi) { pub(c, BROKERS[bi], TI, "~on " + Date.now() + " " + kind + " e" + ep + " " + hid, true); }
+        function onInfo(s) { // xona ma'lumoti: "~on <vaqt> <sahifa> e<navbat> <id>"
+          if (closed) return;
+          // yozuv o'chirildi (masalan, uzilgan eski boshqaruvchining «vasiyati») yoki kichik navbatli boshqa nusxa yozdi —
+          // o'z yozuvimizni qayta tiklaymiz: u ham buni ko'rib, o'rin bo'shatadi
+          var reassert = function () { clearTimeout(infoT); infoT = setTimeout(function () { if (!closed) clients.forEach(function (c, bi) { if (c && c.connected) info(c, bi); }); }, 1200); };
+          if (s.slice(0, 4) !== "~on ") { if (!s) reassert(); return; }
+          var a = s.split(" "), e2 = /^e(\d+)$/.exec(a[3] || "");
+          if (!e2 || !a[4] || a[4] === hid) return;
+          var oe = +e2[1]; if (oe < ep || (oe === ep && !(a[4] > hid))) { reassert(); return; } // teng navbatda — bittasi qoladi
+          api.close(true);
+          if (opts.onYield) try { opts.onYield(+e2[1]); } catch (e) {}
+        }
         function hb() { return "~hb " + pubB + (state ? " " + state : ""); }
         function flush() { // aloqa uzilgan paytda yuborilmay qolgan xabarlar (1 daqiqadan eskilari emas)
           if (!backlog.length || !upCount()) return;
@@ -419,11 +441,13 @@
           clients[bi] = c;
           c.on("connect", function () {
             if (closed) return;
-            c.subscribe(TH, { qos: 0 });
-            info(c, bi); flush();
+            c.subscribe(TH, { qos: 0 }); c.subscribe(TI, { qos: 0 });
+            // xona ma'lumotini biroz kutib yozamiz: avval brokerdagi mavjud yozuv (boshqa navbatli boshqaruvchi bormi?) kelib ulgursin
+            setTimeout(function () { if (!closed && c.connected) info(c, bi); }, 1500);
+            flush();
             if (!settled) { settled = true; clearTimeout(to); res(api); }
           });
-          c.on("message", function (topic, payload) { handle(bi, payload.toString()); });
+          c.on("message", function (topic, payload) { if (topic === TI) onInfo(payload.toString()); else handle(bi, payload.toString()); });
           c.on("error", function () {});
         });
         // o'quvchilarga "o'qituvchi ekrani ochiq" signali va xona ma'lumotini yangilab turish
@@ -438,7 +462,8 @@
             if (!Object.keys(p.lb).length) inQ(function () { if (peers[id] === p) leave(id); });
           });
         }, 5000));
-        window.addEventListener("pagehide", function () { api.close(); });
+        // sahifa yopilyapti: opts.onHide() true qaytarsa — boshqaruv navbatchiga topshirildi, «xona yopildi» yuborilmaydi
+        window.addEventListener("pagehide", function () { var q = false; try { q = !!(opts.onHide && opts.onHide() === true); } catch (e) {} api.close(q); });
       });
     });
   }
@@ -459,7 +484,7 @@
       return new Promise(function (res, rej) {
         var id = selfId(code), n = rid(8), settled = false, dead = false, found = false;
         var cl = [], st = []; // st: 0 ulanmoqda, 1 ulangan (xona qidirilmoqda), 2 xona shu brokerda — ishlatiladi, 3 ulanib bo'lmadi
-        var lastHost = Date.now(), downSince = 0, watch = 0, probe = 0, ping = 0, hiT = 0, outQ = queue(), inQ = queue();
+        var hostTO = 45000, lastHost = Date.now(), downSince = 0, watch = 0, probe = 0, ping = 0, hiT = 0, outQ = queue(), inQ = queue();
         var seen = lru(600), lastS = 0, lastB = -1, helloStr = "", whoAt = 0, syncAt = 0, outbox = [], needSync = false; // needSync: holatni qayta olguncha salom berib turamiz
         var hi = Object.assign({ type: "hello" }, hello);
         var TP = R.t + "/p/" + id, TA = R.t + "/a", TI = R.t + "/i", TH = R.t + "/h";
@@ -542,13 +567,15 @@
                   id: id, send: function (m) { send(m); },
                   status: function () { return { up: live().length, all: BROKERS.length }; },
                   resync: resync,
+                  // navbatchi telefon o'qituvchi sukutini tezroq sezadi (ms, 15–45 s)
+                  fast: function (ms) { hostTO = Math.max(15000, Math.min(45000, +ms || 45000)); },
                   close: function () { bye(); dead = true; setTimeout(kill, 300); }
                 });
                 watch = setInterval(function () {
                   if (dead) return;
                   var t = Date.now();
                   if (!live().length) { if (!downSince) downSince = t; if (t - downSince > 40000) lost(); }
-                  else { downSince = 0; if (t - lastHost > 45000) lost(); } // o'qituvchi ekrani javob bermayapti
+                  else { downSince = 0; if (t - lastHost > hostTO) lost(); } // o'qituvchi ekrani javob bermayapti
                   status();
                 }, 3000);
                 ping = setInterval(function () { if (needSync) sayHello(true); else send({ type: "~p" }); }, 15000);

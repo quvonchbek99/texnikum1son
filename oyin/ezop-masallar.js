@@ -1719,5 +1719,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u pishloqni yoqtirmasdi", "Chunki u pishloq atrofidagi xavfni oldindan ko'rib, ehtiyot bo'ldi", "Chunki pishloq juda uzoqda edi va u charchagan edi"],
     javob: 1,
     izoh: "Kulrang sichqon xavfli belgilarni payqab, atrofni avval tekshirdi. Ba'zan tezkor harakat emas, avval vaziyatni kuzatish omon qolishga yordam beradi."
+  },
+  {
+    id: "ez-213", mavzu: "mantiq", sarlavha: "Sichqonlar va mushuk qo'ng'irog'i",
+    matn: "Sichqonlar mushukdan doim qo'rqib yashardi, chunki u jim yurib kelib, birdan hujum qilardi. Bir kuni ular yig'ilib, mushukning bo'yniga qo'ng'iroq osishni taklif qilishdi. Qo'ng'iroq jiringlasa, yaqinlashayotgan xavfni darhol bilish mumkin bo'lardi. Hamma bu g'oyadan xursand bo'lib, uni maqtab ketdi. Shunda keksa sichqon so'radi: \"Xo'sh, qo'ng'iroqni mushukning bo'yniga kim bog'laydi?\" Majlisda hech kim javob bera olmadi.",
+    savol: "Sichqonlarning rejasi nima uchun foyda bermadi?",
+    variantlar: ["Chunki mushuk qo'ng'iroqdan qo'rqmasdi", "Chunki g'oya yaxshi bo'lsa ham, uni amalga oshiradigan aniq kishi topilmagan edi", "Chunki qo'ng'iroq juda og'ir edi va sichqonlar uni ko'tara olmasdi"],
+    javob: 1,
+    izoh: "G'oya qanchalik ajoyib bo'lmasin, kim va qanday bajarishi aniq belgilanmasa, u amalga oshmaydi. Reja tuzishda uni bajaradigan aniq mas'ulni ham ko'rsatish kerak."
+  },
+  {
+    id: "ez-214", mavzu: "mantiq", sarlavha: "Maymun va yong'oq",
+    matn: "Bir maymun daraxt ostida katta yong'oq topdi. U yong'oqni tishlab chaqmoqchi bo'ldi, ammo qattiq po'choq tishlarini og'ritdi. G'azablangan maymun yong'oqni yerga bir necha marta urdi, lekin u sinmadi. Shu payt yonidan o'tayotgan dehqon unga qarab dedi: \"Yong'oqni tishing bilan emas, tosh bilan ur, shunda sinadi.\"",
+    savol: "Maymun yong'oqni nima uchun ochishga muvaffaq bo'ldi?",
+    variantlar: ["Chunki u yong'oqni tishlab, kuch bilan chaqdi", "Chunki u yong'oqni ochish uchun to'g'ri vositani tanladi", "Chunki yong'oq o'zi yerga tushib sinib ketdi"],
+    javob: 1,
+    izoh: "Maymun kuchini oshirish o'rniga muammoga mos vositani tanladi. Biror ishni hal qilishda avval qanday vosita kerakligini o'ylash ko'pincha samaraliroq bo'ladi."
   }
 ];
