@@ -44,3 +44,39 @@ html[lang=ru] .knav a.new::after{content:"новое"}
 html[lang=en] .knav a.new::after{content:"new"}
 html[lang=kk] .knav a.new::after{content:"жаңа"}
 html[lang=ky] .knav a.new::after{content:"жаңы"}
+
+/* ===== Menyu dizayni (yengil, shisha uslubida) ===== */
+.knav-head{padding:20px 0 14px;gap:16px}
+.knav-head .brand{letter-spacing:.2px}
+.knav-head .brand-badge{box-shadow:0 6px 18px -8px rgba(162,123,255,.8)}
+.knav{gap:4px;padding:4px;border-radius:999px;background:rgba(124,155,255,.06);border:1px solid rgba(124,155,255,.14)}
+.knav a{font-size:14px;padding:8px 14px;border-radius:999px}
+.knav a:hover{transform:translateY(-1px)}
+.knav a[aria-current="page"]{font-weight:800}
+/* "yangi" belgisi — katta yozuv o'rniga kichik nuqta */
+.knav a.new::after{content:"";margin-left:6px;width:7px;height:7px;padding:0;border-radius:50%;display:inline-block;vertical-align:middle;background:#ffd479;box-shadow:0 0 0 3px rgba(255,212,121,.18)}
+html[lang=ru] .knav a.new::after,html[lang=en] .knav a.new::after,html[lang=kk] .knav a.new::after,html[lang=ky] .knav a.new::after{content:""}
+@media (max-width:760px){.knav{border-radius:16px}.knav a{padding:8px 12px}}
+@media (prefers-reduced-motion:reduce){.knav a:hover{transform:none}}
+
+/* ===== Belgilar (emoji) va «Fanlar» paneli ===== */
+.knav{overflow:visible;flex-wrap:nowrap}
+.knav a,.knav summary{display:inline-flex;align-items:center;gap:8px}
+.knav .ni{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:9px;font-size:16px;line-height:1;background:rgba(124,155,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);transition:transform .2s}
+.knav .ni.rd{background:rgba(255,94,110,.2)}.knav .ni.bl{background:rgba(124,155,255,.22)}.knav .ni.pr{background:rgba(162,123,255,.22)}.knav .ni.rs{background:rgba(94,230,199,.18)}.knav .ni.gd{background:rgba(255,212,121,.22)}
+.knav a:hover .ni,.knav summary:hover .ni{transform:scale(1.12) rotate(-4deg)}
+.knav a[aria-current="page"] .ni{background:rgba(8,16,25,.18)}
+.knav details.kdd{position:static}
+.knav summary{list-style:none;cursor:pointer;flex:0 0 auto;color:var(--text-dim,#9fb0d0);font-size:14px;font-weight:600;padding:8px 12px 8px 14px;border-radius:999px;border:1px solid transparent;white-space:nowrap;transition:background .2s,color .2s}
+.knav summary::-webkit-details-marker{display:none}
+.knav summary b{font-size:11px;opacity:.7;transition:transform .2s}
+.knav summary:hover,.knav details[open] summary{color:var(--text,#eef2ff);background:rgba(124,155,255,.12)}
+.knav details[open] summary b{transform:rotate(180deg)}
+.kdd-p{position:fixed;z-index:1200;max-height:min(70vh,520px);overflow:auto;padding:14px;border-radius:20px;background:rgba(14,23,43,.97);border:1px solid #2b3d6b;box-shadow:0 30px 70px -20px rgba(0,0,0,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.kdd-h{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim,#9fb0d0);margin:2px 4px 8px}
+.kdd-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin-bottom:12px}
+.kdd-g:last-child{margin-bottom:0}
+.kdd-g a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;font-size:14px;font-weight:600;color:var(--text,#eef2ff);text-decoration:none;border:1px solid transparent;background:rgba(255,255,255,.03)}
+.kdd-g a:hover{background:rgba(124,155,255,.14);border-color:rgba(124,155,255,.3)}
+.kdd-g a .ni{width:30px;height:30px;font-size:18px}
+@media (max-width:760px){.knav{overflow:visible;flex-wrap:wrap;justify-content:flex-start;border-radius:18px;-webkit-mask-image:none;mask-image:none}.knav a,.knav summary{padding:6px 10px 6px 7px;font-size:13.5px;gap:6px}.knav .ni{width:24px;height:24px;font-size:15px}}

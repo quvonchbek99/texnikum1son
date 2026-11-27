@@ -1911,6 +1911,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
   function joinFree(id, hello, force) {
     var tok = tokOf(hello), name = cleanName(hello.name), key = name.toLowerCase(), p = H.players[key];
     if (p && !force && p.online && p.id !== id && !(tok && p.tok === tok) && !holderGone(p)) return askTeacher(id, { kind: "name", key: key, name: p.name, hello: hello });
+    if (!p && allPlayers().length >= MAX_PL) { try { H.api.kick(id, "Xona to'ldi — eng ko'pi bilan " + MAX_PL + " kishi qatnasha oladi"); } catch (e) {} hLive("Xona to'ldi: " + MAX_PL + " kishi"); return; }
     var sg = hello && (hello.sg === "boy" || hello.sg === "girl") ? hello.sg : "";
     if (p) { replaceOld(p.id, id); p.online = true; p.id = id; p.isAway = false; p.man = false; if (tok) p.tok = tok; if (sg) p.sg = sg; }
     else p = H.players[key] = { key: key, name: name, sg: sg, id: id, tok: tok, online: true, score: 0, correct: 0, wrong: 0, none: 0, streak: 0, best: 0, ans: {}, last: null, gain: 0 };
@@ -2000,7 +2001,13 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
   function joinUrl() { return N.joinUrl("viktorina.html", H.code || ""); }
   // ekranda ko'rsatiladigan qisqa manzil: kuvonch.uz/live — o'quvchi telefonda yozib, kodni kiritadi
   function shortUrl() { return (location.host || "kuvonch.uz") + location.pathname.replace(/[^/]*$/, "") + "live"; }
+  var MAX_PL = 500, rlT = 0;
+  // 60 tadan ko'p o'quvchi bo'lsa lobbi har qo'shilishda emas, 0,3 soniyada bir marta chiziladi (500 kishilik xonada qotib qolmasligi uchun)
   function renderLobby() {
+    if (allPlayers().length <= 60) return renderLobby0();
+    if (rlT) return; rlT = setTimeout(function () { rlT = 0; renderLobby0(); }, 300);
+  }
+  function renderLobby0() {
     if (!H || H.phase !== "lobby") return;
     var body = hEl(), ps = allPlayers();
     if (!$(".lob", body)) {

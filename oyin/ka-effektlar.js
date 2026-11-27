@@ -147,7 +147,9 @@
   var kst = document.createElement("style"); kst.textContent = kcss; document.head.appendChild(kst);
 
   window.kaKuvi = { react: function () {}, say: function () {} }; // kuvi o'chiq bo'lsa ham xato bermasin
-  if (store("ka.kuvi.off") === "1") { backBtn(); return; }
+  // Yuruvchi Kuvi standart holatda o'chiq: o'ng pastdagi Kuvi AI tugmasi bilan ikkita robot aralashib ketmasligi uchun.
+  // Qaytarish uchun: localStorage.setItem("ka.kuvi.on","1")
+  if (store("ka.kuvi.on") !== "1") return;
   startKuvi();
 
   function backBtn() {

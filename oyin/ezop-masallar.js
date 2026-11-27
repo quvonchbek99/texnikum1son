@@ -1703,5 +1703,21 @@ window.EZOP_MASALLAR = [
     variantlar: ["Chunki u ko'proq kuch sarflab, eshkakni tezroq urdi", "Chunki u yelkanni vaziyatga mos sozlab, kuchni to'g'ri yo'nalishda ishlatdi", "Chunki u shamol to'xtaguncha kemada kutib o'tirdi"],
     javob: 1,
     izoh: "Natijaga olib boradigan narsa ko'p kuch emas, vaziyatga mos to'g'ri usul. Kuchni noto'g'ri yo'nalishda sarflash foyda bermaydi."
+  },
+  {
+    id: "ez-211", mavzu: "vaqt", sarlavha: "Temirchi va sovigan temir",
+    matn: "Bir temirchi ustaxonasida ikki bo'lak temirni o'choqqa solib qo'ydi. Shogirdi temir qizarib turganda uni olishga ulgurmay, tashqarida sovib ketayotgan bo'lakni sandonga qo'yib urishga kirishdi. Bolg'a zarbalari qanchalik kuchli bo'lmasin, temir egilmadi va unda hech qanday shakl paydo bo'lmadi. Ustoz kelib, qolgan bo'lakni yana o'choqqa tiqdi va temir yorug' qizarguncha kutdi. Shundan keyin u tez olib, bir necha zarb bilan kerakli shaklni berdi.",
+    savol: "Temirchi nima uchun temirni faqat qizigan paytda urdi?",
+    variantlar: ["Chunki sovigan temirni urish umuman mumkin emas", "Chunki temir shunchaki sayqallanishi uchun o'choqda kerak edi", "Chunki qizigan temir osonlik bilan shaklga kiradi, sovigan temir esa qattiq bo'ladi"],
+    javob: 2,
+    izoh: "Temir faqat qizigan holatida oson egiladi; sovigan temirga qancha urilmasin, natija bo'lmaydi. Ishni boshlashdan oldin eng qulay vaqtni tanlash muhim."
+  },
+  {
+    id: "ez-212", mavzu: "ehtiyotkorlik", sarlavha: "Ikki sichqon va pishloq",
+    matn: "Ikki sichqon omborxona burchagida bir parcha pishloqni topdi. Oq sichqon darhol unga yugurdi, lekin kulrang sichqon sekin yaqinlashib, pishloq atrofini diqqat bilan kuzatdi. U pishloq ostida ingichka ipni va yashirin qopqoqni ko'rdi, shuning uchun shoshilmadi. Oq sichqon pishloqni tishlagan zahoti qopqoq yopilib, tuzoqqa tushib qoldi. Kulrang sichqon esa tuzoqqa tegmasdan, pishloqni chetdan sekin surib, omon qoldi.",
+    savol: "Kulrang sichqon nima uchun darhol pishloqqa yugurmadi?",
+    variantlar: ["Chunki u pishloqni yoqtirmasdi", "Chunki u pishloq atrofidagi xavfni oldindan ko'rib, ehtiyot bo'ldi", "Chunki pishloq juda uzoqda edi va u charchagan edi"],
+    javob: 1,
+    izoh: "Kulrang sichqon xavfli belgilarni payqab, atrofni avval tekshirdi. Ba'zan tezkor harakat emas, avval vaziyatni kuzatish omon qolishga yordam beradi."
   }
 ];
