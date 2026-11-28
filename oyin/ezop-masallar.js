@@ -1785,5 +1785,29 @@ window.EZOP_MASALLAR = [
     ],
     javob: 1,
     izoh: "Ba'zan o'z kamchiligini boshqalarga ham taqib, yengil his qilishga urinamiz. Haqiqiy foyda bo'lmasa, bunday maslahat ko'pincha o'zini oqlash uchun aytiladi."
+  },
+  {
+    id: "ez-219", mavzu: "ishonch", sarlavha: "Ovchi va o'tinchi",
+    matn: "Bir ovchi sherni ov qilish uchun o'rmonga kirdi. Yo'lda o'tinchi ko'rinib, ovchi undan sher qayerdaligini so'radi. O'tinchi sherning qayerdaligini bilardi, ammo uni o'ldirilishidan asrash uchun ovchiga teskari yo'l ko'rsatdi. Ovchi shu yo'ldan bir kun yurdi, lekin sherni topolmay, qaytib ketdi.",
+    savol: "Ovchi nega sherni topolmadi?",
+    variantlar: [
+      "Chunki ovchi kech qolib, o'rmondan chiqib ketgan edi",
+      "Chunki o'tinchi unga sherning yo'lini teskari ko'rsatgan edi",
+      "Chunki o'rmonda sher umuman yo'q edi"
+    ],
+    javob: 1,
+    izoh: "O'tinchi haqiqiy yo'lni yashirib, noto'g'ri yo'l ko'rsatgani uchun ovchi maqsadiga yetolmadi. Noto'g'ri ma'lumot natijani ham noto'g'ri qiladi."
+  },
+  {
+    id: "ez-220", mavzu: "mantiq", sarlavha: "It va quyon",
+    matn: "Ochko'z it bir quyonni ko'rib qoldi va uni tutish uchun ketidan quvib ketdi. Quyon itdan tezroq yugurardi, lekin yo'lda ikki yo'l ayriliga yetib keldi. U bir yo'lga burilib, teshik tomon qochdi, it esa quyon qaysi tomonga ketganini ko'rmagan edi. It tasodifan boshqa yo'lni tanlab, uzoqqa ketib qoldi va quyon shu tufayli qutulib qoldi.",
+    savol: "Quyon nima uchun itdan qutulib qoldi?",
+    variantlar: [
+      "Chunki quyon itdan ham tezroq yugurgan edi",
+      "Chunki it quyonni ko'rishdan oldin charchab qolgan edi",
+      "Chunki it quyon qaysi yo'ldan ketganini bilmay, noto'g'ri yo'lni tanlagan edi"
+    ],
+    javob: 2,
+    izoh: "It quyonning yo'nalishini ko'rmagani uchun taxminan yo'l tanladi va adashdi. Ma'lumot yetishmasa, eng tez yurgan ham g'alaba qozonmasligi mumkin."
   }
 ];

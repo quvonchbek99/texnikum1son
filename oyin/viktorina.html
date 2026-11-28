@@ -777,12 +777,12 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
 <div class="perlist" id="perList" aria-label="Mavzular bo'yicha savollar soni"></div>
 <p class="mixnote pernote" id="perNote"></p>
 </div>
-<span class="lbl">➕ Qo'shimcha savollar (boshqa fanlardan aralashtirish)</span>
+<div hidden data-faqat-mavzu><span class="lbl">➕ Qo'shimcha savollar (boshqa fanlardan aralashtirish)</span>
 <div class="mixrow"><div class="fans" id="mixFans" role="group" aria-label="Qo'shimcha fanlar"></div>
 <label class="sl">Ulushi <select id="mixPct"><option value="0">qo'shilmasin</option><option value="10">10%</option><option value="20">20%</option><option value="30">30%</option><option value="40">40%</option><option value="50">50%</option><option value="60">60%</option><option value="70">70%</option><option value="80">80%</option></select></label></div>
 <p class="mixnote" id="mixNote">Masalan: matematika viktorinasiga 20% mantiqiy savollar qo'shiladi — har 5 savoldan biri mantiq.</p>
-<span class="lbl">🧃 Juice — boshqa fanlardan «sharbat»</span>
-<div class="juice" id="jcBox">
+<span class="lbl">🧃 Juice — boshqa fanlardan «sharbat»</span></div>
+<div class="juice" id="jcBox" hidden>
 <label class="tog"><input type="checkbox" id="jcOn"><span><b>Har 10 savoldan 2 tasi — 2 xil boshqa fandan</b> (test qisqa bo'lsa ham kamida 1 ta). Matematika tanlansa — fizika, tarix, ingliz tili, kimyo… navbat bilan, har safar boshqa fanlar.</span></label>
 <div class="fans wrap" id="jcFans" role="group" aria-label="Juice uchun fanlar"></div>
 <p class="mixnote" id="jcNote"></p>
@@ -1136,7 +1136,9 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     return FANS.filter(function (f) { return f[2] && f[2].some(function (g) { return gs[g]; }); }).map(function (f) { return f[0]; });
   }
   function juiceBlocked() { return cfg.topics.length > 0 && cfg.topics.every(function (id) { var g = tGrp(id); return g === 7 || g === 20; }); }
+  var FAQAT_MAVZU = true; // 🎯 savollar faqat tanlangan mavzulardan — boshqa fan/mavzu aralashmaydi
   function juiceFans() {
+    if (FAQAT_MAVZU) return [];
     if (!cfg.juice || !cfg.juice.on || !cfg.topics.length || juiceBlocked()) return [];
     var mine = selFans();
     return FANS.filter(function (f) { return f[2] && !JUICE_SKIP[f[0]] && mine.indexOf(f[0]) < 0 && cfg.juice.off.indexOf(f[0]) < 0; }).map(function (f) { return f[0]; });
@@ -1811,6 +1813,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
   }
   /* ---- aralashtirish: boshqa fanlardan qo'shimcha savollar ---- */
   function mixTopics() {
+    if (FAQAT_MAVZU) return [];
     if (!cfg.mix || !cfg.mix.pct || !cfg.mix.fans || !cfg.mix.fans.length) return [];
     var gs = []; cfg.mix.fans.forEach(function (fk) { var f = FANS.filter(function (x) { return x[0] === fk; })[0]; if (f && f[2]) gs = gs.concat(f[2]); });
     // daraja testi va katta lug'atlar (B1+…C1) aralashmaga kirmaydi
