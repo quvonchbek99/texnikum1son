@@ -1757,5 +1757,33 @@ window.EZOP_MASALLAR = [
     ],
     javob: 1,
     izoh: "Ovoz bo'sh joyda kuchayishi mumkin. Lekin baland ovoz har doim ichki mazmun katta degani emas."
+  },
+  {
+    id: "ez-217",
+    mavzu: "hamkorlik",
+    sarlavha: "Sher va to'ng'iz",
+    matn: "Bir sher va bir to'ng'iz quduq yoniga suv ichgani kelishdi. Kim avval ichishi kerakligi haqida bahslashib, ikkalasi ham bir-biriga tashlanib jang qilishdi. Jang uzoq davom etib, ikkisi ham charchadi va jarohat oldi. Shu payt yaqin atrofda pistirmada yotgan ovchi chiqib, ikkovini ham qo'lga oldi.",
+    savol: "Sher va to'ng'iz nega ovchining qo'liga tushib qoldi?",
+    variantlar: [
+      "Chunki ular suvni ko'p ichib, uxlab qolishgan edi",
+      "Chunki ular o'zaro janjallashib, charchab va jarohat olishgan edi",
+      "Chunki ular ovchidan yordam so'ragan edi"
+    ],
+    javob: 1,
+    izoh: "Ichki janjal kuchni yeydi, uchinchi tomon esa bunga kutib yuradi. Kelishib olish o'rniga urushish dushmanga yo'l ochib beradi."
+  },
+  {
+    id: "ez-218",
+    mavzu: "o'zlik",
+    sarlavha: "Dumsiz tulki",
+    matn: "Bir tulki tuzoqqa tushib, qochib chiqqanida dumidan ajralib qoldi. Dumsiz yurishdan uyalgan tulki o'rtoqlariga duch kelganda ko'zini yerdan olmasdi. Bir kun u tulkilarni yig'ib, dum faqat ortiqcha yuk va xunuk narsa ekanini aytdi hamda hammasini kesib tashlashni maslahat berdi.",
+    savol: "Dumsiz tulki nega boshqa tulkilarni ham dumini kesishga undadi?",
+    variantlar: [
+      "Chunki dum haqiqatan ham foydasiz va zararli ekanini aniq bilgani uchun",
+      "Chunki o'zining kamchiligi boshqalar orasida sezilmasin, u yolg'iz qolmasin deb",
+      "Chunki tuzoqdan qutulish uchun dumlarni kesish shart ekanini o'rgatmoqchi bo'lgani uchun"
+    ],
+    javob: 1,
+    izoh: "Ba'zan o'z kamchiligini boshqalarga ham taqib, yengil his qilishga urinamiz. Haqiqiy foyda bo'lmasa, bunday maslahat ko'pincha o'zini oqlash uchun aytiladi."
   }
 ];

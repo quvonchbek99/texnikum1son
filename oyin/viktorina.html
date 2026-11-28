@@ -124,6 +124,8 @@ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-
 .rev .vt{opacity:.32;filter:saturate(.6)}
 .rev .vt.right{opacity:1;filter:none;outline:5px solid #fff;outline-offset:-5px}
 .rev .vt .cnt,.rev .vt.right .ok{display:block}
+.vt.kalit{box-shadow:0 0 0 4px #ffd479 inset}.vt.kalit::after{content:"🔑";position:absolute;left:8px;bottom:6px;font-size:clamp(14px,2.4vmin,24px)}
+.kalitb.on{background:#ffd479;color:#1b1400;border-color:#ffd479}
 /* o'qituvchi: kutish xonasi */
 .lob{flex:1;min-height:0;display:grid;grid-template-rows:auto 1fr auto;gap:12px}
 /* QR kod katta va o'rtada: chapda havola, o'rtada QR, o'ngda kod */
@@ -1071,8 +1073,10 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
 
   /* ---------------- sozlamalar ---------------- */
   // cmode: "jami" — jami count ta savol (mavzulardan teng bo'lib); "har" — har mavzudan per ta (perT — mavzu bo'yicha alohida son)
-  var cfg = { topics: [], count: 10, cmode: "jami", per: 5, perT: {}, juice: { on: true, off: [] }, box: true, lvl: "prog", time: 20, limit: 0, auto: 8, showQ: true, sound: true, tease: true, xtime: true, guard: true, full: true, d3: true, rmode: "free", rkey: "", fan: "all", mix: { fans: ["mantiq"], pct: 0 } };
+  var cfg = { topics: [], count: 10, cmode: "jami", per: 5, perT: {}, juice: { on: false, off: [] }, box: true, lvl: "prog", time: 20, limit: 0, auto: 8, showQ: true, sound: true, tease: true, xtime: true, guard: true, full: true, d3: true, rmode: "free", rkey: "", fan: "all", mix: { fans: ["mantiq"], pct: 0 }, mixV: 0 };
   try { var sv = JSON.parse(localStorage.getItem(LS) || "null"); if (sv) for (var k in sv) if (k in cfg) cfg[k] = sv[k]; } catch (e) {}
+  // 2026-11-28: tanlangan mavzu aralashmasin — «boshqa fandan» (Juice) va «+% mantiq» standart o'chiq; eski saqlangan sozlamalar bir marta o'chiriladi
+  if (cfg.mixV !== 2) { cfg.mixV = 2; if (cfg.juice && typeof cfg.juice === "object") cfg.juice.on = false; if (cfg.mix) cfg.mix.pct = 0; }
   var qp = /[?&]mavzu=([a-z0-9,]+)/i.exec(location.search);
   if (qp) cfg.topics = qp[1].split(",");
   // havola orqali: ?soni=25 — jami 25 ta; ?har=3 — har mavzudan 3 ta
@@ -1093,7 +1097,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     cfg.per = clampN(cfg.per, 1, PER_MAX, 5);
     if (cfg.cmode !== "har") cfg.cmode = "jami";
     if (!cfg.perT || typeof cfg.perT !== "object") cfg.perT = {};
-    if (!cfg.juice || typeof cfg.juice !== "object") cfg.juice = { on: true, off: [] };
+    if (!cfg.juice || typeof cfg.juice !== "object") cfg.juice = { on: false, off: [] };
     if (!Array.isArray(cfg.juice.off)) cfg.juice.off = [];
     for (var id in cfg.perT) { var v = clampN(cfg.perT[id], 1, PER_MAX, 0); if (!v || v === cfg.per) delete cfg.perT[id]; else cfg.perT[id] = v; }
   }
@@ -1881,7 +1885,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     if (har) plan.forEach(function (p) { fill([p[0]], p[1]); }); // har mavzudan o'z soni
     else fill(tps, n - nX);
     if (nX) fill(xt, Math.min(nX, n - out.length));
-    if (out.length < n) fill(fb ? tps : tps.concat(xt), n - out.length); // biror mavzu generatori yetmasa — qolganlaridan
+    if (out.length < n) fill(fb || !nX ? tps : tps.concat(xt), n - out.length); // qo'shimcha fan tanlanmagan bo'lsa — faqat tanlangan mavzulardan (savol takrorlansa ham) // biror mavzu generatori yetmasa — qolganlaridan
     // har doim osondan qiyinga: daraja, keyin shu daraja ichida murakkablik (sonlar kattaligi, amallar soni)
     out.forEach(function (o) { o.cx = kaSavol.cx ? kaSavol.cx({ q: o.q, steps: o.steps }) : 0; });
     out.sort(function (a, b) { return (a.grade - b.grade) || (a.L - b.L) || (a.cx - b.cx); }); // daraja testida sinf bo'yicha, keyin osondan qiyinga
@@ -2409,6 +2413,23 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
       if (left <= 0) reveal();
     }, 200);
   }
+  /* 🔑 Admin (FOUDER199): to'g'ri javob oldindan — faqat bulutda tasdiqlangan admin yoki tasdiqlangan o'qituvchi FOUDER199 akkaunti uchun */
+  var kalitOn = (function () { try { return localStorage.getItem("ka.vk.kalit") === "1"; } catch (e) { return false; } })();
+  function isFounder() {
+    try {
+      var A = window.kaAccount, u = A && A.me && A.me(); if (!u) return false;
+      var st = u.st || {};
+      if (st.admin) return true;
+      return !!u.cloud && !!st.teacher && /^foun?der199$/i.test(String(u.name || "").replace(/\s+/g, ""));
+    } catch (e) { return false; }
+  }
+  function kalitSync() {
+    var b = $("#hKalit"); if (!b || !H) return;
+    var q = H.qs[H.i], on = kalitOn && isFounder() && H.phase === "q";
+    b.classList.toggle("on", on);
+    b.textContent = on ? "🔑 " + (q && q.t !== "in" && q.ci != null ? "ABCDEF"[q.ci] : (q && q.a != null ? String(q.a).slice(0, 18) : "—")) : "🔑 Javob";
+    $$("#hTiles .vt").forEach(function (t) { t.classList.toggle("kalit", on && +t.dataset.j === q.ci); });
+  }
   function renderQuestion() {
     var q = H.qs[H.i], body = hEl();
     body.innerHTML = '<div class="hq' + (q.g ? " g" : q.og ? " og" : "") + '" id="hq"><div class="hq-bar"><span class="num" id="hNum">' + (H.i + 1) + "/" + H.qs.length + '</span><span class="tp">' + (boxDue(H.i) ? '<span class="jcb bxq">🎁 Sirli quti savoli</span>' : "") + (q.jc ? '<span class="jcb">🧃 Juice</span>' : "") + esc(TITLE[q.tid] || "") + (q.own ? "" : " · " + "★★★".slice(0, q.L)) + '</span><span class="ans" id="hAns"></span>' +
@@ -2417,8 +2438,10 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
       (q.t === "in" ? '<div class="tiles intile" id="hTiles"><div class="inbox"><span class="in-ic">✍️</span><b>Javobni telefoningizga yozing</b><small>' + (q.num ? "son bilan" : "so'z yoki son bilan") + "</small></div></div>"
         : '<div class="tiles' + (q.opts.length <= 2 ? " n2" : "") + '" id="hTiles">' + tilesHtml(q.opts, true, q.og) + "</div>") +
       '<div class="hq-x" id="hX"><div class="fitq"></div></div>' +
-      '<div class="hq-nav"><span class="st" id="hSt">Javoblar kutilmoqda…</span><button type="button" class="btn edb" data-a="man" title="Telefoni yo\'q o\'quvchilar javobini kiritish (M)">📝 Qo\'lda kiritish' + (manList().length ? " (" + manList().length + ")" : "") + '</button><button type="button" class="btn finb" data-a="finish" title="Testni hozir yakunlash (E)">🏁 Testni yakunlash</button><button type="button" class="btn" id="hSkip">⏭ Javobni ko\'rsatish</button></div></div>';
+      '<div class="hq-nav"><span class="st" id="hSt">Javoblar kutilmoqda…</span><button type="button" class="btn edb" data-a="man" title="Telefoni yo\'q o\'quvchilar javobini kiritish (M)">📝 Qo\'lda kiritish' + (manList().length ? " (" + manList().length + ")" : "") + '</button><button type="button" class="btn finb" data-a="finish" title="Testni hozir yakunlash (E)">🏁 Testni yakunlash</button><button type="button" class="btn" id="hSkip">⏭ Javobni ko\'rsatish</button>' + (isFounder() ? '<button type="button" class="btn kalitb" id="hKalit" title="Faqat admin: to\'g\'ri javobni oldindan ko\'rsatish (J)">🔑 Javob</button>' : "") + '</div></div>';
     $("#hSkip").onclick = function () { reveal(); };
+    if ($("#hKalit")) $("#hKalit").onclick = function () { kalitOn = !kalitOn; try { localStorage.setItem("ka.vk.kalit", kalitOn ? "1" : ""); } catch (e) {} kalitSync(); };
+    kalitSync();
     renderAnswered(); renderRing(qSec());
     refitFn = fitHost; fitHost();
     hLive("Savol " + (H.i + 1) + ": " + plain(q.q));
@@ -4666,6 +4689,7 @@ body{background:radial-gradient(1100px 620px at 8% -12%,rgba(124,155,255,.24),tr
     else if (k === "e" || k === "E") finishNow();
     else if (k === "t" || k === "T") openEditor();
     else if (k === "m" || k === "M") manOpen();
+    else if ((k === "j" || k === "J") && H.phase === "q" && $("#hKalit")) $("#hKalit").click();
     else if ((k === "k" || k === "K") && H.phase === "reveal") { var ax = $("#hAix"); if (ax && !ax.disabled) aiExplain(ax); }
   });
 
